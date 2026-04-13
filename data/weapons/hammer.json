@@ -1,0 +1,318 @@
+[
+  {
+    "id": "hm-iron-hammer",
+    "name": "鐵製錘",
+    "nameEn": "Iron Hammer",
+    "type": "hammer",
+    "rarity": 1,
+    "attack": 312,
+    "element": null,
+    "affinity": 0,
+    "skills": [],
+    "materials": [
+      {
+        "materialId": "iron-ore",
+        "quantity": 3
+      }
+    ],
+    "image": "",
+    "setName": null
+  },
+  {
+    "id": "hm-barroth-hammer",
+    "name": "土砂龍錘",
+    "nameEn": "Barroth Breaker",
+    "type": "hammer",
+    "rarity": 4,
+    "attack": 468,
+    "element": null,
+    "affinity": -10,
+    "skills": [
+      {
+        "skillId": "slugger",
+        "level": 1
+      }
+    ],
+    "materials": [
+      {
+        "materialId": "barroth-ridge",
+        "quantity": 4
+      },
+      {
+        "materialId": "barroth-scalp",
+        "quantity": 2
+      }
+    ],
+    "image": "",
+    "setName": null
+  },
+  {
+    "id": "hm-anjanath-hammer",
+    "name": "蠻顎龍錘",
+    "nameEn": "Anjanath Hammer",
+    "type": "hammer",
+    "rarity": 5,
+    "attack": 546,
+    "element": {
+      "type": "fire",
+      "value": 270
+    },
+    "affinity": -15,
+    "skills": [
+      {
+        "skillId": "attack-boost",
+        "level": 1
+      }
+    ],
+    "materials": [
+      {
+        "materialId": "anjanath-pelt",
+        "quantity": 4
+      },
+      {
+        "materialId": "anjanath-nosebone",
+        "quantity": 1
+      }
+    ],
+    "image": "",
+    "setName": null
+  },
+  {
+    "id": "hm-diablos-hammer",
+    "name": "角龍錘",
+    "nameEn": "Diablos Hammer",
+    "type": "hammer",
+    "rarity": 6,
+    "attack": 624,
+    "element": null,
+    "affinity": -20,
+    "skills": [
+      {
+        "skillId": "slugger",
+        "level": 1
+      },
+      {
+        "skillId": "partbreaker",
+        "level": 1
+      }
+    ],
+    "materials": [
+      {
+        "materialId": "diablos-ridge",
+        "quantity": 4
+      },
+      {
+        "materialId": "twisted-horn",
+        "quantity": 1
+      }
+    ],
+    "image": "",
+    "setName": null
+  },
+  {
+    "id": "hm-zinogre-hammer",
+    "name": "雷狼龍錘",
+    "nameEn": "Zinogre Hammer",
+    "type": "hammer",
+    "rarity": 6,
+    "attack": 572,
+    "element": {
+      "type": "thunder",
+      "value": 330
+    },
+    "affinity": 0,
+    "skills": [
+      {
+        "skillId": "thunder-attack",
+        "level": 1
+      },
+      {
+        "skillId": "slugger",
+        "level": 1
+      }
+    ],
+    "materials": [
+      {
+        "materialId": "zinogre-horn",
+        "quantity": 3
+      },
+      {
+        "materialId": "zinogre-shocker",
+        "quantity": 2
+      }
+    ],
+    "image": "",
+    "setName": null
+  },
+  {
+    "id": "hm-deviljho-hammer",
+    "name": "恐暴龍錘",
+    "nameEn": "Deviljho Hammer",
+    "type": "hammer",
+    "rarity": 7,
+    "attack": 676,
+    "element": {
+      "type": "dragon",
+      "value": 360
+    },
+    "affinity": -20,
+    "skills": [
+      {
+        "skillId": "attack-boost",
+        "level": 2
+      }
+    ],
+    "materials": [
+      {
+        "materialId": "deviljho-fang",
+        "quantity": 4
+      },
+      {
+        "materialId": "deviljho-talon",
+        "quantity": 2
+      }
+    ],
+    "image": "",
+    "setName": null
+  },
+  {
+    "id": "hm-kushala-hammer",
+    "name": "鋼龍錘",
+    "nameEn": "Kushala Hammer",
+    "type": "hammer",
+    "rarity": 8,
+    "attack": 598,
+    "element": {
+      "type": "ice",
+      "value": 420
+    },
+    "affinity": 0,
+    "skills": [
+      {
+        "skillId": "ice-attack",
+        "level": 1
+      },
+      {
+        "skillId": "kushala-frostwind",
+        "level": 1
+      }
+    ],
+    "materials": [
+      {
+        "materialId": "kushala-horn",
+        "quantity": 2
+      },
+      {
+        "materialId": "kushala-shell",
+        "quantity": 4
+      }
+    ],
+    "image": "",
+    "setName": null
+  },
+  {
+    "id": "hm-kaiser-hammer",
+    "name": "炎王龍錘",
+    "nameEn": "Kaiser Hammer",
+    "type": "hammer",
+    "rarity": 8,
+    "attack": 624,
+    "element": {
+      "type": "blast",
+      "value": 360
+    },
+    "affinity": 0,
+    "skills": [
+      {
+        "skillId": "teostra-blastpowder",
+        "level": 1
+      },
+      {
+        "skillId": "blast-attack",
+        "level": 1
+      }
+    ],
+    "materials": [
+      {
+        "materialId": "teostra-horn",
+        "quantity": 2
+      },
+      {
+        "materialId": "teostra-shell",
+        "quantity": 4
+      }
+    ],
+    "image": "",
+    "setName": null
+  },
+  {
+    "id": "hm-sinister-hammer",
+    "name": "怨虎龍錘",
+    "nameEn": "Sinister Hammer",
+    "type": "hammer",
+    "rarity": 8,
+    "attack": 650,
+    "element": {
+      "type": "blast",
+      "value": 300
+    },
+    "affinity": 0,
+    "skills": [
+      {
+        "skillId": "attack-boost",
+        "level": 1
+      },
+      {
+        "skillId": "slugger",
+        "level": 1
+      }
+    ],
+    "materials": [
+      {
+        "materialId": "magnamalo-horn",
+        "quantity": 2
+      },
+      {
+        "materialId": "magnamalo-shell",
+        "quantity": 4
+      }
+    ],
+    "image": "",
+    "setName": null
+  },
+  {
+    "id": "hm-malzeno-hammer",
+    "name": "爵銀龍錘",
+    "nameEn": "Malzeno Hammer",
+    "type": "hammer",
+    "rarity": 9,
+    "attack": 702,
+    "element": {
+      "type": "dragon",
+      "value": 450
+    },
+    "affinity": 10,
+    "skills": [
+      {
+        "skillId": "critical-boost",
+        "level": 1
+      },
+      {
+        "skillId": "coalescence",
+        "level": 1
+      }
+    ],
+    "materials": [
+      {
+        "materialId": "malzeno-horn",
+        "quantity": 3
+      },
+      {
+        "materialId": "malzeno-wing",
+        "quantity": 2
+      }
+    ],
+    "image": "",
+    "setName": null
+  }
+]

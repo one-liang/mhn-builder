@@ -1,0 +1,2952 @@
+[
+  {
+    "id": "attack-boost",
+    "name": "攻擊",
+    "nameEn": "Attack Boost",
+    "description": "提升攻擊力。",
+    "maxLevel": 5,
+    "category": "attack",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "攻擊力+50"
+      },
+      {
+        "level": 2,
+        "effect": "攻擊力+100"
+      },
+      {
+        "level": 3,
+        "effect": "攻擊力+150"
+      },
+      {
+        "level": 4,
+        "effect": "攻擊力+200"
+      },
+      {
+        "level": 5,
+        "effect": "攻擊力+300"
+      }
+    ]
+  },
+  {
+    "id": "critical-eye",
+    "name": "看破",
+    "nameEn": "Critical Eye",
+    "description": "提升會心率。",
+    "maxLevel": 5,
+    "category": "attack",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "會心率+10%"
+      },
+      {
+        "level": 2,
+        "effect": "會心率+15%"
+      },
+      {
+        "level": 3,
+        "effect": "會心率+20%"
+      },
+      {
+        "level": 4,
+        "effect": "會心率+30%"
+      },
+      {
+        "level": 5,
+        "effect": "會心率+40%"
+      }
+    ]
+  },
+  {
+    "id": "critical-boost",
+    "name": "超會心",
+    "nameEn": "Critical Boost",
+    "description": "提升會心攻擊的傷害倍率。",
+    "maxLevel": 5,
+    "category": "attack",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "會心攻擊的傷害倍率提升至130%"
+      },
+      {
+        "level": 2,
+        "effect": "會心攻擊的傷害倍率提升至135%"
+      },
+      {
+        "level": 3,
+        "effect": "會心攻擊的傷害倍率提升至140%"
+      },
+      {
+        "level": 4,
+        "effect": "會心攻擊的傷害倍率提升至145%"
+      },
+      {
+        "level": 5,
+        "effect": "會心攻擊的傷害倍率提升至150%"
+      }
+    ]
+  },
+  {
+    "id": "weakness-exploit",
+    "name": "弱點特效",
+    "nameEn": "Weakness Exploit",
+    "description": "攻擊魔物弱點部位時，提升會心率。",
+    "maxLevel": 5,
+    "category": "attack",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "攻擊魔物的弱點部位時，會心率+20%"
+      },
+      {
+        "level": 2,
+        "effect": "攻擊魔物的弱點部位時，會心率+25%"
+      },
+      {
+        "level": 3,
+        "effect": "攻擊魔物的弱點部位時，會心率+30%"
+      },
+      {
+        "level": 4,
+        "effect": "攻擊魔物的弱點部位時，會心率+40%"
+      },
+      {
+        "level": 5,
+        "effect": "攻擊魔物的弱點部位時，會心率+50%"
+      }
+    ]
+  },
+  {
+    "id": "peak-performance",
+    "name": "無傷",
+    "nameEn": "Peak Performance",
+    "description": "體力全滿時，提升攻擊力。",
+    "maxLevel": 5,
+    "category": "attack",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "體力全滿時，攻擊力+100"
+      },
+      {
+        "level": 2,
+        "effect": "體力全滿時，攻擊力+200"
+      },
+      {
+        "level": 3,
+        "effect": "體力全滿時，攻擊力+300"
+      },
+      {
+        "level": 4,
+        "effect": "體力全滿時，攻擊力+400"
+      },
+      {
+        "level": 5,
+        "effect": "體力全滿時，攻擊力+500"
+      }
+    ]
+  },
+  {
+    "id": "resentment",
+    "name": "怨恨",
+    "nameEn": "Resentment",
+    "description": "受到傷害後，一定時間內攻擊力提升。",
+    "maxLevel": 5,
+    "category": "attack",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "獵人受到傷害時，攻擊力15秒內上升10%"
+      },
+      {
+        "level": 2,
+        "effect": "獵人受到傷害時，攻擊力15秒內上升15%"
+      },
+      {
+        "level": 3,
+        "effect": "獵人受到傷害時，攻擊力15秒內上升20%"
+      },
+      {
+        "level": 4,
+        "effect": "獵人受到傷害時，攻擊力15秒內上升30%"
+      },
+      {
+        "level": 5,
+        "effect": "獵人受到傷害時，攻擊力15秒內上升40%"
+      }
+    ]
+  },
+  {
+    "id": "heroics",
+    "name": "火場怪力",
+    "nameEn": "Heroics",
+    "description": "體力降到一定值以下時，提升攻擊力。",
+    "maxLevel": 5,
+    "category": "attack",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "當體力降至29%以下時，攻擊力提升10%"
+      },
+      {
+        "level": 2,
+        "effect": "當體力降至29%以下時，攻擊力提升20%"
+      },
+      {
+        "level": 3,
+        "effect": "當體力降至29%以下時，攻擊力提升30%"
+      },
+      {
+        "level": 4,
+        "effect": "當體力降至29%以下時，攻擊力提升40%"
+      },
+      {
+        "level": 5,
+        "effect": "當體力降至29%以下時，攻擊力提升50%"
+      }
+    ]
+  },
+  {
+    "id": "fortify",
+    "name": "不屈",
+    "nameEn": "Fortify",
+    "description": "每次力盡復活後，一定時間內攻擊力提升。",
+    "maxLevel": 5,
+    "category": "attack",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "獵人的體力降為0之後再復活時，攻擊力於40秒內提升10％"
+      },
+      {
+        "level": 2,
+        "effect": "獵人的體力降為0之後再復活時，攻擊力於40秒內提升20％"
+      },
+      {
+        "level": 3,
+        "effect": "獵人的體力降為0之後再復活時，攻擊力於40秒內提升30％"
+      },
+      {
+        "level": 4,
+        "effect": "獵人的體力降為0之後再復活時，攻擊力於40秒內提升40％"
+      },
+      {
+        "level": 5,
+        "effect": "獵人的體力降為0之後再復活時，攻擊力於40秒內提升50％"
+      }
+    ]
+  },
+  {
+    "id": "offensive-guard",
+    "name": "攻擊守勢",
+    "nameEn": "Offensive Guard",
+    "description": "成功進行精準防禦後，一定時間內攻擊力提升。",
+    "maxLevel": 5,
+    "category": "attack",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "抓準時機防禦魔物攻擊時，攻擊力於10秒內提升10％。"
+      },
+      {
+        "level": 2,
+        "effect": "抓準時機防禦魔物攻擊時，攻擊力於10秒內提升15％。"
+      },
+      {
+        "level": 3,
+        "effect": "抓準時機防禦魔物攻擊時，攻擊力於10秒內提升20％。"
+      },
+      {
+        "level": 4,
+        "effect": "抓準時機防禦魔物攻擊時，攻擊力於10秒內提升30％。"
+      },
+      {
+        "level": 5,
+        "effect": "抓準時機防禦魔物攻擊時，攻擊力於10秒內提升40％。"
+      }
+    ]
+  },
+  {
+    "id": "sneak-attack",
+    "name": "奇襲",
+    "nameEn": "Sneak Attack",
+    "description": "從魔物背後攻擊時，提升傷害。",
+    "maxLevel": 5,
+    "category": "attack",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "從魔物背後攻擊時，傷害增加10％"
+      },
+      {
+        "level": 2,
+        "effect": "從魔物背後攻擊時，傷害增加15％"
+      },
+      {
+        "level": 3,
+        "effect": "從魔物背後攻擊時，傷害增加20％"
+      },
+      {
+        "level": 4,
+        "effect": "從魔物背後攻擊時，傷害增加25％"
+      },
+      {
+        "level": 5,
+        "effect": "從魔物背後攻擊時，傷害增加30％"
+      }
+    ]
+  },
+  {
+    "id": "burst",
+    "name": "連擊",
+    "nameEn": "Burst",
+    "description": "短時間內連續命中時，攻擊力提升。",
+    "maxLevel": 5,
+    "category": "attack",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "短時間內連續擊中魔物時，攻擊力於4秒內提升5％。"
+      },
+      {
+        "level": 2,
+        "effect": "短時間內連續擊中魔物時，攻擊力於4秒內提升10％。"
+      },
+      {
+        "level": 3,
+        "effect": "短時間內連續擊中魔物時，攻擊力於4秒內提升15％。"
+      },
+      {
+        "level": 4,
+        "effect": "短時間內連續擊中魔物時，攻擊力於4秒內提升20％。"
+      },
+      {
+        "level": 5,
+        "effect": "短時間內連續擊中魔物時，攻擊力於4秒內提升30％。"
+      }
+    ]
+  },
+  {
+    "id": "special-boost",
+    "name": "SP技能威力提升",
+    "nameEn": "Special Boost",
+    "description": "提升特殊技能的傷害。",
+    "maxLevel": 5,
+    "category": "attack",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "SP技能的對魔物造成的傷害增加10%"
+      },
+      {
+        "level": 2,
+        "effect": "SP技能的對魔物造成的傷害增加20%"
+      },
+      {
+        "level": 3,
+        "effect": "SP技能的對魔物造成的傷害增加30%"
+      },
+      {
+        "level": 4,
+        "effect": "SP技能的對魔物造成的傷害增加45%"
+      },
+      {
+        "level": 5,
+        "effect": "SP技能的對魔物造成的傷害增加60%"
+      }
+    ]
+  },
+  {
+    "id": "latent-power",
+    "name": "力量解放",
+    "nameEn": "Latent Power",
+    "description": "滿足特定條件時，會心率與特殊計量槽填充率提升。",
+    "maxLevel": 5,
+    "category": "attack",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "達到特定的條件後，會心率+20%、SP計量表增加量+10%"
+      },
+      {
+        "level": 2,
+        "effect": "達到特定的條件後，會心率+30%、SP計量表增加量+20%"
+      },
+      {
+        "level": 3,
+        "effect": "達到特定的條件後，會心率+40%、SP計量表增加量+30%"
+      },
+      {
+        "level": 4,
+        "effect": "達到特定的條件後，會心率+50%、SP計量表增加量+40%"
+      },
+      {
+        "level": 5,
+        "effect": "達到特定的條件後，會心率+60%、SP計量表增加量+50%"
+      }
+    ]
+  },
+  {
+    "id": "resuscitate",
+    "name": "死裡逃生",
+    "nameEn": "Resuscitate",
+    "description": "受到異常狀態時，提升傷害。",
+    "maxLevel": 5,
+    "category": "attack",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "獵人在異常狀態時對魔物造成的傷害增加5％"
+      },
+      {
+        "level": 2,
+        "effect": "獵人在異常狀態時對魔物造成的傷害增加10％"
+      },
+      {
+        "level": 3,
+        "effect": "獵人在異常狀態時對魔物造成的傷害增加20％"
+      },
+      {
+        "level": 4,
+        "effect": "獵人在異常狀態時對魔物造成的傷害增加30％"
+      },
+      {
+        "level": 5,
+        "effect": "獵人在異常狀態時對魔物造成的傷害增加40％"
+      }
+    ]
+  },
+  {
+    "id": "skyward-striker",
+    "name": "輕巧",
+    "nameEn": "Skyward Striker",
+    "description": "提升空中攻擊的傷害。",
+    "maxLevel": 5,
+    "category": "attack",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "透過空中攻擊對魔物造成的傷害增加15%"
+      },
+      {
+        "level": 2,
+        "effect": "透過空中攻擊對魔物造成的傷害增加20%"
+      },
+      {
+        "level": 3,
+        "effect": "透過空中攻擊對魔物造成的傷害增加25%"
+      },
+      {
+        "level": 4,
+        "effect": "透過空中攻擊對魔物造成的傷害增加30%"
+      },
+      {
+        "level": 5,
+        "effect": "透過空中攻擊對魔物造成的傷害增加40%"
+      }
+    ]
+  },
+  {
+    "id": "power-prolonger",
+    "name": "強化持續",
+    "nameEn": "Power Prolonger",
+    "description": "延長雙劍、太刀、充能斧的強化狀態持續時間。",
+    "maxLevel": 3,
+    "category": "attack",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "極小幅延長雙劍、太刀、狩獵笛、長槍、銃槍、斬擊斧、充能斧、操蟲棍的強化狀態持續時間"
+      },
+      {
+        "level": 2,
+        "effect": "延長雙劍、太刀、狩獵笛、長槍、銃槍、斬擊斧、充能斧、操蟲棍的強化狀態持續時間"
+      },
+      {
+        "level": 3,
+        "effect": "極大幅延長雙劍、太刀、狩獵笛、長槍、銃槍、斬擊斧、充能斧、操蟲棍的強化狀態持續時間"
+      }
+    ]
+  },
+  {
+    "id": "artillery",
+    "name": "砲術",
+    "nameEn": "Artillery",
+    "description": "提升銃槍的砲擊/龍擊砲、充能斧的瓶攻擊、黏彈的傷害。",
+    "maxLevel": 5,
+    "category": "attack",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "銃槍的砲擊和龍擊砲、充能斧的瓶攻擊、徹甲榴彈、龍擊彈傷害增加10％"
+      },
+      {
+        "level": 2,
+        "effect": "銃槍的砲擊和龍擊砲、充能斧的瓶攻擊、徹甲榴彈、龍擊彈傷害增加15％"
+      },
+      {
+        "level": 3,
+        "effect": "銃槍的砲擊和龍擊砲、充能斧的瓶攻擊、徹甲榴彈、龍擊彈傷害增加20％；銃槍的砲彈、充能斧的瓶數量增加1個"
+      },
+      {
+        "level": 4,
+        "effect": "銃槍的砲擊和龍擊砲、充能斧的瓶攻擊、徹甲榴彈、龍擊彈傷害增加30％；銃槍的砲彈、充能斧的瓶數量增加1個"
+      },
+      {
+        "level": 5,
+        "effect": "銃槍的砲擊和龍擊砲、充能斧的瓶攻擊、徹甲榴彈、龍擊彈傷害增加40％；銃槍的砲彈、充能斧的瓶數量增加1個"
+      }
+    ]
+  },
+  {
+    "id": "fire-attack",
+    "name": "火屬性攻擊強化",
+    "nameEn": "Fire Attack",
+    "description": "提升武器的火屬性值。",
+    "maxLevel": 5,
+    "category": "element",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "武器的火屬性+50"
+      },
+      {
+        "level": 2,
+        "effect": "武器的火屬性+100"
+      },
+      {
+        "level": 3,
+        "effect": "武器的火屬性+200"
+      },
+      {
+        "level": 4,
+        "effect": "武器的火屬性+350"
+      },
+      {
+        "level": 5,
+        "effect": "武器的火屬性+500"
+      }
+    ]
+  },
+  {
+    "id": "water-attack",
+    "name": "水屬性攻擊強化",
+    "nameEn": "Water Attack",
+    "description": "提升武器的水屬性值。",
+    "maxLevel": 5,
+    "category": "element",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "武器的水屬性+50"
+      },
+      {
+        "level": 2,
+        "effect": "武器的水屬性+100"
+      },
+      {
+        "level": 3,
+        "effect": "武器的水屬性+200"
+      },
+      {
+        "level": 4,
+        "effect": "武器的水屬性+350"
+      },
+      {
+        "level": 5,
+        "effect": "武器的水屬性+500"
+      }
+    ]
+  },
+  {
+    "id": "thunder-attack",
+    "name": "雷屬性攻擊強化",
+    "nameEn": "Thunder Attack",
+    "description": "提升武器的雷屬性值。",
+    "maxLevel": 5,
+    "category": "element",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "武器的雷屬性+50"
+      },
+      {
+        "level": 2,
+        "effect": "武器的雷屬性+100"
+      },
+      {
+        "level": 3,
+        "effect": "武器的雷屬性+200"
+      },
+      {
+        "level": 4,
+        "effect": "武器的雷屬性+350"
+      },
+      {
+        "level": 5,
+        "effect": "武器的雷屬性+500"
+      }
+    ]
+  },
+  {
+    "id": "ice-attack",
+    "name": "冰屬性攻擊強化",
+    "nameEn": "Ice Attack",
+    "description": "提升武器的冰屬性值。",
+    "maxLevel": 5,
+    "category": "element",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "武器的冰屬性+50"
+      },
+      {
+        "level": 2,
+        "effect": "武器的冰屬性+100"
+      },
+      {
+        "level": 3,
+        "effect": "武器的冰屬性+200"
+      },
+      {
+        "level": 4,
+        "effect": "武器的冰屬性+350"
+      },
+      {
+        "level": 5,
+        "effect": "武器的冰屬性+500"
+      }
+    ]
+  },
+  {
+    "id": "dragon-attack",
+    "name": "龍屬性攻擊強化",
+    "nameEn": "Dragon Attack",
+    "description": "提升武器的龍屬性值。",
+    "maxLevel": 5,
+    "category": "element",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "武器的龍屬性+50"
+      },
+      {
+        "level": 2,
+        "effect": "武器的龍屬性+100"
+      },
+      {
+        "level": 3,
+        "effect": "武器的龍屬性+200"
+      },
+      {
+        "level": 4,
+        "effect": "武器的龍屬性+350"
+      },
+      {
+        "level": 5,
+        "effect": "武器的龍屬性+500"
+      }
+    ]
+  },
+  {
+    "id": "poison-attack",
+    "name": "毒屬性強化",
+    "nameEn": "Poison Attack",
+    "description": "提升武器的毒蓄積值。",
+    "maxLevel": 5,
+    "category": "element",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "武器的毒累積值+50"
+      },
+      {
+        "level": 2,
+        "effect": "武器的毒累積值+75"
+      },
+      {
+        "level": 3,
+        "effect": "武器的毒累積值+100"
+      },
+      {
+        "level": 4,
+        "effect": "武器的毒累積值+125"
+      },
+      {
+        "level": 5,
+        "effect": "武器的毒累積值+150"
+      }
+    ]
+  },
+  {
+    "id": "paralysis-attack",
+    "name": "麻痺屬性強化",
+    "nameEn": "Paralysis Attack",
+    "description": "提升武器的麻痺蓄積值。",
+    "maxLevel": 5,
+    "category": "element",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "武器的麻痺累積值+50"
+      },
+      {
+        "level": 2,
+        "effect": "武器的麻痺累積值+75"
+      },
+      {
+        "level": 3,
+        "effect": "武器的麻痺累積值+100"
+      },
+      {
+        "level": 4,
+        "effect": "武器的麻痺累積值+125"
+      },
+      {
+        "level": 5,
+        "effect": "武器的麻痺累積值+150"
+      }
+    ]
+  },
+  {
+    "id": "sleep-attack",
+    "name": "睡眠攻擊強化",
+    "nameEn": "Sleep Attack",
+    "description": "提升武器的睡眠蓄積值。",
+    "maxLevel": 5,
+    "category": "element",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "武器的睡眠累積值+50"
+      },
+      {
+        "level": 2,
+        "effect": "武器的睡眠累積值+75"
+      },
+      {
+        "level": 3,
+        "effect": "武器的睡眠累積值+100"
+      },
+      {
+        "level": 4,
+        "effect": "武器的睡眠累積值+125"
+      },
+      {
+        "level": 5,
+        "effect": "武器的睡眠累積值+150"
+      }
+    ]
+  },
+  {
+    "id": "blast-attack",
+    "name": "爆破屬性強化",
+    "nameEn": "Blast Attack",
+    "description": "提升武器的爆破蓄積值。",
+    "maxLevel": 5,
+    "category": "element",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "武器的爆破累積值+50"
+      },
+      {
+        "level": 2,
+        "effect": "武器的爆破累積值+75"
+      },
+      {
+        "level": 3,
+        "effect": "武器的爆破累積值+100"
+      },
+      {
+        "level": 4,
+        "effect": "武器的爆破累積值+125"
+      },
+      {
+        "level": 5,
+        "effect": "武器的爆破累積值+150"
+      }
+    ]
+  },
+  {
+    "id": "status-sneak-attack",
+    "name": "奇襲【狀態異常】",
+    "nameEn": "Status Sneak Attack",
+    "description": "從魔物背後攻擊時，更容易觸發異常狀態蓄積。",
+    "maxLevel": 5,
+    "category": "element",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "從魔物背後攻擊時，異常狀態累積的觸發機率極小幅上升"
+      },
+      {
+        "level": 2,
+        "effect": "從魔物背後攻擊時，異常狀態累積的觸發機率小幅上升"
+      },
+      {
+        "level": 3,
+        "effect": "從魔物背後攻擊時，異常狀態累積的觸發機率上升"
+      },
+      {
+        "level": 4,
+        "effect": "從魔物背後攻擊時，異常狀態累積的觸發機率大幅上升"
+      },
+      {
+        "level": 5,
+        "effect": "從魔物背後攻擊時，必定觸發異常狀態累積"
+      }
+    ]
+  },
+  {
+    "id": "coalescence",
+    "name": "轉禍為福",
+    "nameEn": "Coalescence",
+    "description": "從異常狀態恢復後，一定時間內提升攻擊力。",
+    "maxLevel": 5,
+    "category": "element",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "解除狀態異常後，20秒內給予魔物的傷害+15%"
+      },
+      {
+        "level": 2,
+        "effect": "解除狀態異常後，20秒內給予魔物的傷害+20%"
+      },
+      {
+        "level": 3,
+        "effect": "解除狀態異常後，20秒內給予魔物的傷害+25%"
+      },
+      {
+        "level": 4,
+        "effect": "解除狀態異常後，20秒內給予魔物的傷害+30%"
+      },
+      {
+        "level": 5,
+        "effect": "解除狀態異常後，20秒內給予魔物的傷害+35%"
+      }
+    ]
+  },
+  {
+    "id": "health-boost",
+    "name": "體力增強",
+    "nameEn": "Health Boost",
+    "description": "提升體力上限。",
+    "maxLevel": 5,
+    "category": "defense",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "體力+10"
+      },
+      {
+        "level": 2,
+        "effect": "體力+20"
+      },
+      {
+        "level": 3,
+        "effect": "體力+30"
+      },
+      {
+        "level": 4,
+        "effect": "體力+40"
+      },
+      {
+        "level": 5,
+        "effect": "體力+50"
+      }
+    ]
+  },
+  {
+    "id": "defense-boost",
+    "name": "防禦",
+    "nameEn": "Defense Boost",
+    "description": "提升防禦力。",
+    "maxLevel": 5,
+    "category": "defense",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "防禦力+20"
+      },
+      {
+        "level": 2,
+        "effect": "防禦力+40"
+      },
+      {
+        "level": 3,
+        "effect": "防禦力+60"
+      },
+      {
+        "level": 4,
+        "effect": "防禦力+80"
+      },
+      {
+        "level": 5,
+        "effect": "防禦力+100"
+      }
+    ]
+  },
+  {
+    "id": "divine-blessing",
+    "name": "精靈加護",
+    "nameEn": "Divine Blessing",
+    "description": "一定機率減輕受到的傷害。",
+    "maxLevel": 5,
+    "category": "defense",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "受到魔物攻擊的傷害時，有30%的機率減少50%傷害"
+      },
+      {
+        "level": 2,
+        "effect": "受到魔物攻擊的傷害時，有40%的機率減少50%傷害"
+      },
+      {
+        "level": 3,
+        "effect": "受到魔物攻擊的傷害時，有50%的機率減少50%傷害"
+      },
+      {
+        "level": 4,
+        "effect": "受到魔物攻擊的傷害時，有50%的機率減少60%傷害"
+      },
+      {
+        "level": 5,
+        "effect": "受到魔物攻擊的傷害時，有50%的機率減少80%傷害"
+      }
+    ]
+  },
+  {
+    "id": "guard",
+    "name": "防禦性能",
+    "nameEn": "Guard",
+    "description": "防禦時減少傷害與後退距離。",
+    "maxLevel": 5,
+    "category": "defense",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "防禦魔物攻擊時，極小幅減輕傷害和後仰"
+      },
+      {
+        "level": 2,
+        "effect": "防禦魔物攻擊時，小幅減輕傷害和後仰"
+      },
+      {
+        "level": 3,
+        "effect": "防禦魔物攻擊時，減輕傷害和後仰"
+      },
+      {
+        "level": 4,
+        "effect": "防禦魔物攻擊時，大幅減輕傷害和後仰"
+      },
+      {
+        "level": 5,
+        "effect": "防禦魔物攻擊時，極大幅減輕傷害和後仰"
+      }
+    ]
+  },
+  {
+    "id": "guts",
+    "name": "毅力",
+    "nameEn": "Guts",
+    "description": "體力在一定值以上時，可承受致命傷害而存活。",
+    "maxLevel": 5,
+    "category": "defense",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "當體力在70以上時，受到超過該數值的傷害也不會力竭倒下（狩獵中僅限1次）"
+      },
+      {
+        "level": 2,
+        "effect": "當體力在60以上時，受到超過該數值的傷害也不會力竭倒下（狩獵中僅限1次）"
+      },
+      {
+        "level": 3,
+        "effect": "當體力在50以上時，受到超過該數值的傷害也不會力竭倒下（狩獵中僅限1次）"
+      },
+      {
+        "level": 4,
+        "effect": "當體力在40以上時，受到超過該數值的傷害也不會力竭倒下（狩獵中僅限1次）"
+      },
+      {
+        "level": 5,
+        "effect": "當體力在30以上時，受到超過該數值的傷害也不會力竭倒下（狩獵中僅限1次）"
+      }
+    ]
+  },
+  {
+    "id": "special-insurance",
+    "name": "SP計量表保險",
+    "nameEn": "Special Insurance",
+    "description": "狩獵中力盡時，特殊計量槽增加。",
+    "maxLevel": 3,
+    "category": "defense",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "不會被奪取SP計量表，當獵人的體力降為0時；SP計量表不會減少"
+      },
+      {
+        "level": 2,
+        "effect": "不會被奪取SP計量表，當獵人的體力降為0時；SP計量表增加50%"
+      },
+      {
+        "level": 3,
+        "effect": "不會被奪取SP計量表，當獵人的體力降為0時；SP計量表增加100%"
+      }
+    ]
+  },
+  {
+    "id": "fire-resistance",
+    "name": "火耐性",
+    "nameEn": "Fire Resistance",
+    "description": "減少來自火屬性魔物的傷害。",
+    "maxLevel": 3,
+    "category": "resistance",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "減少15%魔物造成的火屬性傷害"
+      },
+      {
+        "level": 2,
+        "effect": "減少30%魔物造成的火屬性傷害"
+      },
+      {
+        "level": 3,
+        "effect": "減少50%魔物造成的火屬性傷害"
+      }
+    ]
+  },
+  {
+    "id": "water-resistance",
+    "name": "水耐性",
+    "nameEn": "Water Resistance",
+    "description": "減少來自水屬性魔物的傷害。",
+    "maxLevel": 3,
+    "category": "resistance",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "減少15%魔物造成的水屬性傷害"
+      },
+      {
+        "level": 2,
+        "effect": "減少30%魔物造成的水屬性傷害"
+      },
+      {
+        "level": 3,
+        "effect": "減少50%魔物造成的水屬性傷害"
+      }
+    ]
+  },
+  {
+    "id": "thunder-resistance",
+    "name": "雷耐性",
+    "nameEn": "Thunder Resistance",
+    "description": "減少來自雷屬性魔物的傷害。",
+    "maxLevel": 3,
+    "category": "resistance",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "減少15%魔物造成的雷屬性傷害"
+      },
+      {
+        "level": 2,
+        "effect": "減少30%魔物造成的雷屬性傷害"
+      },
+      {
+        "level": 3,
+        "effect": "減少50%魔物造成的雷屬性傷害"
+      }
+    ]
+  },
+  {
+    "id": "ice-resistance",
+    "name": "冰耐性",
+    "nameEn": "Ice Resistance",
+    "description": "減少來自冰屬性魔物的傷害。",
+    "maxLevel": 3,
+    "category": "resistance",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "減少15%魔物造成的冰屬性傷害"
+      },
+      {
+        "level": 2,
+        "effect": "減少30%魔物造成的冰屬性傷害"
+      },
+      {
+        "level": 3,
+        "effect": "減少50%魔物造成的冰屬性傷害"
+      }
+    ]
+  },
+  {
+    "id": "poison-resistance",
+    "name": "毒耐性",
+    "nameEn": "Poison Resistance",
+    "description": "降低中毒狀態的機率。",
+    "maxLevel": 3,
+    "category": "resistance",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "遭到毒、猛毒屬性攻擊命中時，有30%的機率不會陷入中毒、猛毒狀態"
+      },
+      {
+        "level": 2,
+        "effect": "遭到毒、猛毒屬性攻擊命中時，有60%的機率不會陷入中毒、猛毒狀態"
+      },
+      {
+        "level": 3,
+        "effect": "不會陷入中毒、猛毒狀態"
+      }
+    ]
+  },
+  {
+    "id": "paralysis-resistance",
+    "name": "麻痺耐性",
+    "nameEn": "Paralysis Resistance",
+    "description": "降低麻痺狀態的機率。",
+    "maxLevel": 3,
+    "category": "resistance",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "遭到麻痺屬性攻擊命中時，有30%的機率不會陷入麻痺狀態"
+      },
+      {
+        "level": 2,
+        "effect": "遭到麻痺屬性攻擊命中時，有60%的機率不會陷入麻痺狀態"
+      },
+      {
+        "level": 3,
+        "effect": "不會陷入麻痺狀態"
+      }
+    ]
+  },
+  {
+    "id": "sleep-resistance",
+    "name": "睡眠耐性",
+    "nameEn": "Sleep Resistance",
+    "description": "降低睡眠狀態的機率。",
+    "maxLevel": 3,
+    "category": "resistance",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "遭到睡眠屬性攻擊命中時，有30%的機率不會陷入睡眠狀態"
+      },
+      {
+        "level": 2,
+        "effect": "遭到睡眠屬性攻擊命中時，有60%的機率不會陷入睡眠狀態"
+      },
+      {
+        "level": 3,
+        "effect": "不會陷入睡眠狀態"
+      }
+    ]
+  },
+  {
+    "id": "bleeding-resistance",
+    "name": "裂傷耐性",
+    "nameEn": "Bleeding Resistance",
+    "description": "降低裂傷狀態的機率。",
+    "maxLevel": 3,
+    "category": "resistance",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "遭到會引發裂傷的攻擊命中時，有30%的機率不會陷入裂傷狀態"
+      },
+      {
+        "level": 2,
+        "effect": "遭到會引發裂傷的攻擊命中時，有60%的機率不會陷入裂傷狀態"
+      },
+      {
+        "level": 3,
+        "effect": "遭到會引發裂傷的攻擊命中時，不會陷入裂傷狀態"
+      }
+    ]
+  },
+  {
+    "id": "tremor-resistance",
+    "name": "耐震",
+    "nameEn": "Tremor Resistance",
+    "description": "減輕地面震動的影響。",
+    "maxLevel": 3,
+    "category": "resistance",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "使魔物的震動【小】無效"
+      },
+      {
+        "level": 2,
+        "effect": "使魔物的震動【小】無效，減輕魔物的震動【大】造成的影響"
+      },
+      {
+        "level": 3,
+        "effect": "使魔物的震動【小】與魔物的震動【大】無效"
+      }
+    ]
+  },
+  {
+    "id": "earplugs",
+    "name": "耳塞",
+    "nameEn": "Earplugs",
+    "description": "減輕或無效化魔物咆哮的影響。",
+    "maxLevel": 3,
+    "category": "resistance",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "使魔物咆哮【小】無效，並小幅減輕魔物咆哮【大】的影響"
+      },
+      {
+        "level": 2,
+        "effect": "使魔物咆哮【小】無效， 減輕魔物咆哮【大】的影響"
+      },
+      {
+        "level": 3,
+        "effect": "使魔物咆哮【小】與魔物咆哮【大】無效"
+      }
+    ]
+  },
+  {
+    "id": "windproof",
+    "name": "風壓耐性",
+    "nameEn": "Windproof",
+    "description": "減輕或無效化風壓的影響。",
+    "maxLevel": 3,
+    "category": "resistance",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "使風壓【小】無效，小幅減輕風壓【大】"
+      },
+      {
+        "level": 2,
+        "effect": "使風壓【小】無效，減輕風壓【大】"
+      },
+      {
+        "level": 3,
+        "effect": "使風壓【大】無效"
+      }
+    ]
+  },
+  {
+    "id": "focus",
+    "name": "集中",
+    "nameEn": "Focus",
+    "description": "縮短蓄力攻擊的時間，提升氣刃量計的填充率。",
+    "maxLevel": 5,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "蓄力攻擊的蓄力時間縮短5%，且雙劍、太刀、充能斧、斬擊斧、操蟲棍的計量表上升率增加5%"
+      },
+      {
+        "level": 2,
+        "effect": "蓄力攻擊的蓄力時間縮短10%，且雙劍、太刀、充能斧、斬擊斧、操蟲棍的計量表上升率增加10%"
+      },
+      {
+        "level": 3,
+        "effect": "蓄力攻擊的蓄力時間縮短15%，且雙劍、太刀、充能斧、斬擊斧、操蟲棍的計量表上升率增加15%"
+      },
+      {
+        "level": 4,
+        "effect": "蓄力攻擊的蓄力時間縮短20%，且雙劍、太刀、充能斧、斬擊斧、操蟲棍的計量表上升率增加20%"
+      },
+      {
+        "level": 5,
+        "effect": "蓄力攻擊的蓄力時間縮短30%，且雙劍、太刀、充能斧、斬擊斧、操蟲棍的計量表上升率增加30%"
+      }
+    ]
+  },
+  {
+    "id": "evade-extender",
+    "name": "迴避距離UP",
+    "nameEn": "Evade Extender",
+    "description": "延長迴避的移動距離。",
+    "maxLevel": 3,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "極小幅延長迴避距離"
+      },
+      {
+        "level": 2,
+        "effect": "延長迴避距離"
+      },
+      {
+        "level": 3,
+        "effect": "極大幅延長迴避距離"
+      }
+    ]
+  },
+  {
+    "id": "partbreaker",
+    "name": "破壞王",
+    "nameEn": "Partbreaker",
+    "description": "增加對可破壞部位的傷害。",
+    "maxLevel": 5,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "攻擊可破壞的部位時，累積傷害+5%"
+      },
+      {
+        "level": 2,
+        "effect": "攻擊可破壞的部位時，累積傷害+10%"
+      },
+      {
+        "level": 3,
+        "effect": "攻擊可破壞的部位時，累積傷害+20%"
+      },
+      {
+        "level": 4,
+        "effect": "攻擊可破壞的部位時，累積傷害+30%"
+      },
+      {
+        "level": 5,
+        "effect": "攻擊可破壞的部位時，累積傷害+40%"
+      }
+    ]
+  },
+  {
+    "id": "slugger",
+    "name": "KO術",
+    "nameEn": "Slugger",
+    "description": "增加昏厥值。",
+    "maxLevel": 5,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "昏厥威力+10%"
+      },
+      {
+        "level": 2,
+        "effect": "昏厥威力+20%"
+      },
+      {
+        "level": 3,
+        "effect": "昏厥威力+30%"
+      },
+      {
+        "level": 4,
+        "effect": "昏厥威力+40%"
+      },
+      {
+        "level": 5,
+        "effect": "昏厥威力+50%"
+      }
+    ]
+  },
+  {
+    "id": "lock-on",
+    "name": "鎖定",
+    "nameEn": "Lock On",
+    "description": "近戰武器時顯示鎖定按鈕，可瞄準特定部位。",
+    "maxLevel": 1,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "使用近身武器狩獵時會顯示鎖定按鈕，可藉此鎖定魔物的特定部位"
+      }
+    ]
+  },
+  {
+    "id": "quick-work",
+    "name": "行雲流水",
+    "nameEn": "Quick Work",
+    "description": "加快收刀或武器變形的速度。",
+    "maxLevel": 3,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "收起武器的動作和變換武器型態動作的速度些微上升"
+      },
+      {
+        "level": 2,
+        "effect": "收起武器的動作和變換武器型態動作的速度小幅上升"
+      },
+      {
+        "level": 3,
+        "effect": "收起武器的動作和變換武器型態動作的速度大幅上升"
+      }
+    ]
+  },
+  {
+    "id": "artful-dodger",
+    "name": "完美迴避強化",
+    "nameEn": "Artful Dodger",
+    "description": "更容易成功進行完美迴避。",
+    "maxLevel": 3,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "極小幅延長完美迴避的輸入容許時間"
+      },
+      {
+        "level": 2,
+        "effect": "延長完美迴避的輸入容許時間"
+      },
+      {
+        "level": 3,
+        "effect": "極大幅延長完美迴避的輸入容許時間"
+      }
+    ]
+  },
+  {
+    "id": "firm-foothold",
+    "name": "屹立不倒",
+    "nameEn": "Firm Foothold",
+    "description": "受到攻擊時減少後退距離。",
+    "maxLevel": 3,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "極小幅減輕受傷害時的後仰"
+      },
+      {
+        "level": 2,
+        "effect": "小幅減輕受傷害時的後仰"
+      },
+      {
+        "level": 3,
+        "effect": "減輕受傷害時的後仰"
+      }
+    ]
+  },
+  {
+    "id": "evasive-concentration",
+    "name": "勇往直前",
+    "nameEn": "Evasive Concentration",
+    "description": "成功進行完美迴避後，特殊計量槽填充。",
+    "maxLevel": 5,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "每當向前方施展迴避動作，10秒之內造成的傷害增加5%"
+      },
+      {
+        "level": 2,
+        "effect": "每當向前方施展迴避動作，10秒之內造成的傷害增加10%"
+      },
+      {
+        "level": 3,
+        "effect": "每當向前方施展迴避動作，10秒之內造成的傷害增加15%"
+      },
+      {
+        "level": 4,
+        "effect": "每當向前方施展迴避動作，10秒之內造成的傷害增加20%"
+      },
+      {
+        "level": 5,
+        "effect": "每當向前方施展迴避動作，10秒之內造成的傷害增加30%"
+      }
+    ]
+  },
+  {
+    "id": "recoil-down",
+    "name": "後座力減輕",
+    "nameEn": "Recoil Down",
+    "description": "減輕弩槍的後座力。",
+    "maxLevel": 3,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "小幅減輕弩槍發射時的後座力"
+      },
+      {
+        "level": 2,
+        "effect": "減輕弩槍發射時的後座力"
+      },
+      {
+        "level": 3,
+        "effect": "大幅減輕弩槍發射時的後座力"
+      }
+    ]
+  },
+  {
+    "id": "reload-speed",
+    "name": "裝填速度",
+    "nameEn": "Reload Speed",
+    "description": "加快弩槍的裝填速度。",
+    "maxLevel": 3,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "小幅縮短弩槍裝填時間"
+      },
+      {
+        "level": 2,
+        "effect": "縮短弩槍裝填時間"
+      },
+      {
+        "level": 3,
+        "effect": "大幅縮短弩槍裝填時間"
+      }
+    ]
+  },
+  {
+    "id": "bubbly-dance",
+    "name": "泡沫之舞",
+    "nameEn": "Bubbly Dance",
+    "description": "減輕泡沫異常的影響。",
+    "maxLevel": 3,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "減輕泡沫纏身的影響"
+      },
+      {
+        "level": 2,
+        "effect": "減輕泡沫纏身的影響，延長完美迴避的輸入容許時間"
+      },
+      {
+        "level": 3,
+        "effect": "發動Lv2效果，且多次迴避動作後會變成泡沫纏身狀態"
+      }
+    ]
+  },
+  {
+    "id": "kushala-frostwind",
+    "name": "鋼龍的凍風",
+    "nameEn": "Kushala Frostwind",
+    "description": "減輕風壓的影響，並提升冰屬性攻擊力。",
+    "maxLevel": 3,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "減輕龍風壓和風壓，並增加冰屬性攻擊力10％"
+      },
+      {
+        "level": 2,
+        "effect": "減輕龍風壓和風壓，並增加冰屬性攻擊力15％"
+      },
+      {
+        "level": 3,
+        "effect": "減輕龍風壓和風壓，並增加冰屬性攻擊力25％"
+      }
+    ]
+  },
+  {
+    "id": "teostra-blastpowder",
+    "name": "炎王龍的爆塵",
+    "nameEn": "Teostra Blastpowder",
+    "description": "更容易擺脫爆破異常，且更容易觸發爆破蓄積。",
+    "maxLevel": 3,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "爆破異常變得較容易解除，對魔物的爆破屬性累積觸發機率小幅上升"
+      },
+      {
+        "level": 2,
+        "effect": "爆破異常變得較容易解除，對魔物的爆破屬性累積觸發機率上升"
+      },
+      {
+        "level": 3,
+        "effect": "爆破異常變得較容易解除，對魔物的爆破屬性累積觸發機率大幅上升"
+      }
+    ]
+  },
+  {
+    "id": "aggressive-dodger",
+    "name": "完美巧擊",
+    "nameEn": "Aggressive Dodger",
+    "description": "完美迴避後，一定時間內攻擊力提升。",
+    "maxLevel": 5,
+    "category": "attack",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "完美迴避後，接著使出的攻擊傷害增加20%"
+      },
+      {
+        "level": 2,
+        "effect": "完美迴避後，接著使出的攻擊傷害增加30%"
+      },
+      {
+        "level": 3,
+        "effect": "完美迴避後，接著使出的攻擊傷害增加40%"
+      },
+      {
+        "level": 4,
+        "effect": "完美迴避後，接著使出的攻擊傷害增加50%"
+      },
+      {
+        "level": 5,
+        "effect": "完美迴避後，接著使出的攻擊傷害增加60%"
+      }
+    ]
+  },
+  {
+    "id": "special-partbreaker",
+    "name": "破壞王【SP技能】",
+    "nameEn": "Special Partbreaker",
+    "description": "特殊技能對可破壞部位的傷害增加。",
+    "maxLevel": 5,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "對SP技能可破壞部位的累積傷害+20%，每當部位破壞，SP計量表+5%"
+      },
+      {
+        "level": 2,
+        "effect": "對SP技能可破壞部位的累積傷害+50%，每當部位破壞，SP計量表+10%"
+      },
+      {
+        "level": 3,
+        "effect": "對SP技能可破壞部位的累積傷害+80%，每當部位破壞，SP計量表+15%"
+      },
+      {
+        "level": 4,
+        "effect": "對SP技能可破壞部位的累積傷害+120%，每當部位破壞，SP計量表+20%"
+      },
+      {
+        "level": 5,
+        "effect": "對SP技能可破壞部位的累積傷害+160%，每當部位破壞，SP計量表+30%"
+      }
+    ]
+  },
+  {
+    "id": "fighting-spirit",
+    "name": "鬥氣活性",
+    "nameEn": "Fighting Spirit",
+    "description": "狩獵持續時，攻擊力逐漸提升。",
+    "maxLevel": 5,
+    "category": "attack",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "SP計量表累積至全滿時，20秒之內造成的傷害增加10％"
+      },
+      {
+        "level": 2,
+        "effect": "SP計量表累積至全滿時，20秒之內造成的傷害增加15％"
+      },
+      {
+        "level": 3,
+        "effect": "SP計量表累積至全滿時，20秒之內造成的傷害增加20％"
+      },
+      {
+        "level": 4,
+        "effect": "SP計量表累積至全滿時，20秒之內造成的傷害增加25％"
+      },
+      {
+        "level": 5,
+        "effect": "SP計量表累積至全滿時，20秒之內造成的傷害增加35％"
+      }
+    ]
+  },
+  {
+    "id": "offensive-dodger",
+    "name": "完美巧擊【持續】",
+    "nameEn": "Offensive Dodger",
+    "description": "完美迴避後數秒內，傷害增加。",
+    "maxLevel": 5,
+    "category": "attack",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "完美迴避後，15秒內造成的傷害+10%"
+      },
+      {
+        "level": 2,
+        "effect": "完美迴避後，15秒內造成的傷害+15%"
+      },
+      {
+        "level": 3,
+        "effect": "完美迴避後，15秒內造成的傷害+20%"
+      },
+      {
+        "level": 4,
+        "effect": "完美迴避後，15秒內造成的傷害+25%"
+      },
+      {
+        "level": 5,
+        "effect": "完美迴避後，15秒內造成的傷害+35%"
+      }
+    ]
+  },
+  {
+    "id": "charge-master",
+    "name": "蓄力大師",
+    "nameEn": "Charge Master",
+    "description": "蓄力攻擊時屬性值提升。",
+    "maxLevel": 5,
+    "category": "element",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "蓄力攻擊時武器的屬性攻擊力+10%、狀態異常的累積值+5%"
+      },
+      {
+        "level": 2,
+        "effect": "蓄力攻擊時武器的屬性攻擊力+25%、狀態異常的累積值+10%"
+      },
+      {
+        "level": 3,
+        "effect": "蓄力攻擊時武器的屬性攻擊力+40%、狀態異常的累積值+15%"
+      },
+      {
+        "level": 4,
+        "effect": "蓄力攻擊時武器的屬性攻擊力+55%、狀態異常的累積值+25%"
+      },
+      {
+        "level": 5,
+        "effect": "蓄力攻擊時武器的屬性攻擊力+70%、狀態異常的累積值+40%"
+      }
+    ]
+  },
+  {
+    "id": "critical-range-boost",
+    "name": "最有效距離威力UP",
+    "nameEn": "Critical Range Boost",
+    "description": "在適正距離內攻擊時傷害增加。",
+    "maxLevel": 5,
+    "category": "attack",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "在最有效距離下造成的彈藥、箭矢傷害增加10%"
+      },
+      {
+        "level": 2,
+        "effect": "在最有效距離下造成的彈藥、箭矢傷害增加15%"
+      },
+      {
+        "level": 3,
+        "effect": "在最有效距離下造成的彈藥、箭矢傷害增加25%"
+      },
+      {
+        "level": 4,
+        "effect": "在最有效距離下造成的彈藥、箭矢傷害增加30%"
+      },
+      {
+        "level": 5,
+        "effect": "在最有效距離下造成的彈藥、箭矢傷害增加40%"
+      }
+    ]
+  },
+  {
+    "id": "morph-boost",
+    "name": "變形強化",
+    "nameEn": "Morph Boost",
+    "description": "武器變形攻擊的傷害增加。",
+    "maxLevel": 5,
+    "category": "attack",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "雙劍鬼人化或鬼人化解除後以及斬擊斧、充能斧變換型態後的15秒之內，造成的傷害增加5%"
+      },
+      {
+        "level": 2,
+        "effect": "雙劍鬼人化或鬼人化解除後以及斬擊斧、充能斧變換型態後的15秒之內，造成的傷害增加10%"
+      },
+      {
+        "level": 3,
+        "effect": "雙劍鬼人化或鬼人化解除後以及斬擊斧、充能斧變換型態後的15秒之內，造成的傷害增加15%"
+      },
+      {
+        "level": 4,
+        "effect": "雙劍鬼人化或鬼人化解除後以及斬擊斧、充能斧變換型態後的15秒之內，造成的傷害增加20%"
+      },
+      {
+        "level": 5,
+        "effect": "雙劍鬼人化或鬼人化解除後以及斬擊斧、充能斧變換型態後的15秒之內，造成的傷害增加30%"
+      }
+    ]
+  },
+  {
+    "id": "attack-boost-peak",
+    "name": "攻擊．境界",
+    "nameEn": "Attack Boost: Peak",
+    "description": "發動Lv5或以上的技能「攻擊」時，攻擊力+150。",
+    "maxLevel": 2,
+    "category": "attack",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "發動Lv5或以上的技能「攻擊」時，攻擊力+150"
+      },
+      {
+        "level": 2,
+        "effect": "發動Lv5或以上的技能「攻擊」時，攻擊力+350"
+      }
+    ]
+  },
+  {
+    "id": "foxfire-veil",
+    "name": "鬼火纏身",
+    "nameEn": "Foxfire Veil",
+    "description": "狩獵開始時或對魔物造成一定程度傷害後，會陷入鬼火纏身狀態。",
+    "maxLevel": 3,
+    "category": "attack",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "狩獵開始時或對魔物造成一定程度傷害後，會陷入鬼火纏身狀態"
+      },
+      {
+        "level": 2,
+        "effect": "發動Lv1的效果，並於陷入鬼火纏身時防禦力-50、攻擊力+150"
+      },
+      {
+        "level": 3,
+        "effect": "發動Lv1的效果，並於陷入鬼火纏身時防禦力-100、攻擊力+250"
+      }
+    ]
+  },
+  {
+    "id": "battle-temper",
+    "name": "愈戰愈勇",
+    "nameEn": "Battle Temper",
+    "description": "狩獵中每經過一段時間，極小幅提升攻擊力和防禦力。",
+    "maxLevel": 5,
+    "category": "attack",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "狩獵中每經過一段時間，極小幅提升攻擊力和防禦力"
+      },
+      {
+        "level": 2,
+        "effect": "狩獵中每經過一段時間，小幅提升攻擊力和防禦力"
+      },
+      {
+        "level": 3,
+        "effect": "狩獵中每經過一段時間，提升攻擊力和防禦力"
+      },
+      {
+        "level": 4,
+        "effect": "狩獵中每經過一段時間，大幅提升攻擊力和防禦力"
+      },
+      {
+        "level": 5,
+        "effect": "狩獵中每經過一段時間，極大幅提升攻擊力和防禦力"
+      }
+    ]
+  },
+  {
+    "id": "burst-peak",
+    "name": "連擊．境界",
+    "nameEn": "Burst: Peak",
+    "description": "發動Lv5以上的技能「連擊」時，攻擊力增加5%。",
+    "maxLevel": 2,
+    "category": "attack",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "發動Lv5以上的技能「連擊」時，攻擊力增加5%"
+      },
+      {
+        "level": 2,
+        "effect": "發動Lv5以上的技能「連擊」時，攻擊力增加10%"
+      }
+    ]
+  },
+  {
+    "id": "valor",
+    "name": "勇猛",
+    "nameEn": "Valor",
+    "description": "魔物首次咆哮時攻擊力+400、SP計量表+50%。",
+    "maxLevel": 5,
+    "category": "attack",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "魔物首次咆哮時攻擊力+400、SP計量表+50%"
+      },
+      {
+        "level": 2,
+        "effect": "魔物首次咆哮時攻擊力+550、SP計量表+60%"
+      },
+      {
+        "level": 3,
+        "effect": "魔物首次咆哮時攻擊力+700、SP計量表+70%"
+      },
+      {
+        "level": 4,
+        "effect": "魔物首次咆哮時攻擊力+850、SP計量表+80%"
+      },
+      {
+        "level": 5,
+        "effect": "魔物首次咆哮時攻擊力+1000、SP計量表+100%"
+      }
+    ]
+  },
+  {
+    "id": "group-hunt-attack",
+    "name": "團體狩獵強化【攻擊】",
+    "nameEn": "Group Hunt Boost: Attack",
+    "description": "團體狩獵時攻擊力上升。",
+    "maxLevel": 5,
+    "category": "attack",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "團體狩獵時攻擊+80"
+      },
+      {
+        "level": 2,
+        "effect": "團體狩獵時攻擊+160"
+      },
+      {
+        "level": 3,
+        "effect": "團體狩獵時攻擊+240"
+      },
+      {
+        "level": 4,
+        "effect": "團體狩獵時攻擊+320"
+      },
+      {
+        "level": 5,
+        "effect": "團體狩獵時攻擊+400"
+      }
+    ]
+  },
+  {
+    "id": "brute-force",
+    "name": "蠻力",
+    "nameEn": "Brute Force",
+    "description": "犧牲會心率換取攻擊力。",
+    "maxLevel": 5,
+    "category": "attack",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "會心率-5%、攻擊力+100"
+      },
+      {
+        "level": 2,
+        "effect": "會心率-10%、攻擊力+200"
+      },
+      {
+        "level": 3,
+        "effect": "會心率-15%、攻擊力+300"
+      },
+      {
+        "level": 4,
+        "effect": "會心率-20%、攻擊力+400"
+      },
+      {
+        "level": 5,
+        "effect": "會心率-30%、攻擊力+500"
+      }
+    ]
+  },
+  {
+    "id": "attack-activation",
+    "name": "攻擊活化",
+    "nameEn": "Attack Activation",
+    "description": "整體攻擊力提升。",
+    "maxLevel": 3,
+    "category": "attack",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "攻擊力增加10%"
+      },
+      {
+        "level": 2,
+        "effect": "攻擊力增加15%"
+      },
+      {
+        "level": 3,
+        "effect": "攻擊力增加25%"
+      }
+    ]
+  },
+  {
+    "id": "attack-crit",
+    "name": "攻擊增強【會心】",
+    "nameEn": "Attack Boost: Crit",
+    "description": "攻擊力按武器會心率每1%增加8。",
+    "maxLevel": 1,
+    "category": "attack",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "攻擊力按武器會心率每1%增加8"
+      }
+    ]
+  },
+  {
+    "id": "resolute",
+    "name": "果敢",
+    "nameEn": "Resolute",
+    "description": "無法進行完美迴避，但造成的傷害+5%。",
+    "maxLevel": 3,
+    "category": "attack",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "無法進行完美迴避，但造成的傷害+5%"
+      },
+      {
+        "level": 2,
+        "effect": "無法進行完美迴避，但造成的傷害+10%"
+      },
+      {
+        "level": 3,
+        "effect": "無法進行完美迴避，但造成的傷害+20%"
+      }
+    ]
+  },
+  {
+    "id": "follow-up",
+    "name": "追擊",
+    "nameEn": "Follow-up",
+    "description": "對受到部位破壞的魔物造成的傷害增加。",
+    "maxLevel": 5,
+    "category": "attack",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "對受到部位破壞的魔物造成的傷害增加10%"
+      },
+      {
+        "level": 2,
+        "effect": "對受到部位破壞的魔物造成的傷害增加15%"
+      },
+      {
+        "level": 3,
+        "effect": "對受到部位破壞的魔物造成的傷害增加20%"
+      },
+      {
+        "level": 4,
+        "effect": "對受到部位破壞的魔物造成的傷害增加30%"
+      },
+      {
+        "level": 5,
+        "effect": "對受到部位破壞的魔物造成的傷害增加45%"
+      }
+    ]
+  },
+  {
+    "id": "bloody-shroud",
+    "name": "劫血纏身",
+    "nameEn": "Bloody Shroud",
+    "description": "戰鬥開始時或對魔物造成一定程度傷害後，會陷入劫血異常狀態。",
+    "maxLevel": 3,
+    "category": "attack",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "戰鬥開始時或對魔物造成一定程度傷害後，會陷入劫血異常狀態"
+      },
+      {
+        "level": 2,
+        "effect": "除了Lv1的效果外，首次陷入劫血異常時最大體力增加5，陷入劫血異常中造成的傷害增加5%"
+      },
+      {
+        "level": 3,
+        "effect": "除了Lv1的效果外，首次陷入劫血異常時最大體力增加15，陷入劫血異常中造成的傷害增加10%"
+      }
+    ]
+  },
+  {
+    "id": "true-ability",
+    "name": "真本領",
+    "nameEn": "True Ability",
+    "description": "施展多次動作後，造成的傷害增加。",
+    "maxLevel": 3,
+    "category": "attack",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "施展多次動作後，造成的傷害增加10%"
+      },
+      {
+        "level": 2,
+        "effect": "施展多次動作後，造成的傷害增加20%"
+      },
+      {
+        "level": 3,
+        "effect": "施展多次動作後，造成的傷害增加35%"
+      }
+    ]
+  },
+  {
+    "id": "awakening-strike",
+    "name": "覺醒一擊",
+    "nameEn": "Awakening Strike",
+    "description": "對睡眠狀態的魔物最初造成的傷害小幅增加。",
+    "maxLevel": 3,
+    "category": "attack",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "對睡眠狀態的魔物最初造成的傷害小幅增加"
+      },
+      {
+        "level": 2,
+        "effect": "對睡眠狀態的魔物最初造成的傷害增加"
+      },
+      {
+        "level": 3,
+        "effect": "對睡眠狀態的魔物最初造成的傷害大幅增加"
+      }
+    ]
+  },
+  {
+    "id": "follow-up-poison",
+    "name": "追擊【毒】",
+    "nameEn": "Follow-up: Poison",
+    "description": "對陷入中毒狀態的魔物造成的傷害增加。",
+    "maxLevel": 5,
+    "category": "attack",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "對陷入中毒狀態的魔物造成的傷害增加30％"
+      },
+      {
+        "level": 2,
+        "effect": "對陷入中毒狀態的魔物造成的傷害增加45％"
+      },
+      {
+        "level": 3,
+        "effect": "對陷入中毒狀態的魔物造成的傷害增加60％"
+      },
+      {
+        "level": 4,
+        "effect": "對陷入中毒狀態的魔物造成的傷害增加80％"
+      },
+      {
+        "level": 5,
+        "effect": "對陷入中毒狀態的魔物造成的傷害增加100％"
+      }
+    ]
+  },
+  {
+    "id": "follow-up-paralysis",
+    "name": "追擊【麻痺】",
+    "nameEn": "Follow-up: Paralysis",
+    "description": "對陷入麻痺狀態的魔物造成的傷害增加。",
+    "maxLevel": 5,
+    "category": "attack",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "對陷入麻痺狀態的魔物造成的傷害增加50％"
+      },
+      {
+        "level": 2,
+        "effect": "對陷入麻痺狀態的魔物造成的傷害增加75％"
+      },
+      {
+        "level": 3,
+        "effect": "對陷入麻痺狀態的魔物造成的傷害增加100％"
+      },
+      {
+        "level": 4,
+        "effect": "對陷入麻痺狀態的魔物造成的傷害增加130％"
+      },
+      {
+        "level": 5,
+        "effect": "對陷入麻痺狀態的魔物造成的傷害增加160％"
+      }
+    ]
+  },
+  {
+    "id": "status-hit-boost",
+    "name": "累積狀態異常時威力UP",
+    "nameEn": "Status Hit Boost",
+    "description": "攻擊擊中時，若魔物有累積毒、麻痺、睡眠、爆破的其中一種狀態，該攻擊傷害提升。",
+    "maxLevel": 5,
+    "category": "attack",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "攻擊擊中時，若魔物有累積毒、麻痺、睡眠、爆破的其中一種狀態，該攻擊傷害+10%"
+      },
+      {
+        "level": 2,
+        "effect": "攻擊擊中時，若魔物有累積毒、麻痺、睡眠、爆破的其中一種狀態，該攻擊傷害+20%"
+      },
+      {
+        "level": 3,
+        "effect": "攻擊擊中時，若魔物有累積毒、麻痺、睡眠、爆破的其中一種狀態，該攻擊傷害+30%"
+      },
+      {
+        "level": 4,
+        "effect": "攻擊擊中時，若魔物有累積毒、麻痺、睡眠、爆破的其中一種狀態，該攻擊傷害+40%"
+      },
+      {
+        "level": 5,
+        "effect": "攻擊擊中時，若魔物有累積毒、麻痺、睡眠、爆破的其中一種狀態，該攻擊傷害+50%"
+      }
+    ]
+  },
+  {
+    "id": "nergigante-hunger",
+    "name": "滅盡龍的渴望",
+    "nameEn": "Nergigante's Hunger",
+    "description": "造成的傷害增加，但SP計量表不會因獵人的攻擊而上升。",
+    "maxLevel": 3,
+    "category": "attack",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "造成的傷害增加10％，但SP計量表不會因獵人的攻擊而上升"
+      },
+      {
+        "level": 2,
+        "effect": "造成的傷害增加15％，但SP計量表不會因獵人的攻擊而上升"
+      },
+      {
+        "level": 3,
+        "effect": "造成的傷害增加20％，但SP計量表不會因獵人的攻擊而上升"
+      }
+    ]
+  },
+  {
+    "id": "morph-attack-boost",
+    "name": "變形攻擊強化",
+    "nameEn": "Morph Attack Boost",
+    "description": "變形攻擊時，會心率與傷害增加。",
+    "maxLevel": 3,
+    "category": "attack",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "變形攻擊時，會心率增加60%，造成的傷害增加30%"
+      },
+      {
+        "level": 2,
+        "effect": "變形攻擊時，會心率增加70%，造成的傷害增加50%"
+      },
+      {
+        "level": 3,
+        "effect": "變形攻擊時，會心率增加80%，造成的傷害增加80%"
+      }
+    ]
+  },
+  {
+    "id": "final-shot",
+    "name": "最後一擊",
+    "nameEn": "Final Shot",
+    "description": "裝備銃槍、充能斧、輕弩槍或重弩槍時，裝填的最後1發瓶/彈藥/砲彈給予魔物的傷害提升。",
+    "maxLevel": 5,
+    "category": "attack",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "裝備銃槍、充能斧、輕弩槍或重弩槍時，裝填的最後1發瓶/彈藥/砲彈給予魔物的傷害+10%"
+      },
+      {
+        "level": 2,
+        "effect": "裝備銃槍、充能斧、輕弩槍或重弩槍時，裝填的最後1發瓶/彈藥/砲彈給予魔物的傷害+20%"
+      },
+      {
+        "level": 3,
+        "effect": "裝備銃槍、充能斧、輕弩槍或重弩槍時，裝填的最後1發瓶/彈藥/砲彈給予魔物的傷害+35%"
+      },
+      {
+        "level": 4,
+        "effect": "裝備銃槍、充能斧、輕弩槍或重弩槍時，裝填的最後1發瓶/彈藥/砲彈給予魔物的傷害+45%"
+      },
+      {
+        "level": 5,
+        "effect": "裝備銃槍、充能斧、輕弩槍或重弩槍時，裝填的最後1發瓶/彈藥/砲彈給予魔物的傷害+60%"
+      }
+    ]
+  },
+  {
+    "id": "normal-shots-boost",
+    "name": "通常彈．屬性通常彈強化",
+    "nameEn": "Normal Shots Boost",
+    "description": "通常彈、火炎彈、水冷彈、電擊彈、冰結彈、滅龍彈造成的傷害增加。",
+    "maxLevel": 3,
+    "category": "attack",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "通常彈、火炎彈、水冷彈、電擊彈、冰結彈、滅龍彈造成的傷害增加60%"
+      },
+      {
+        "level": 2,
+        "effect": "通常彈、火炎彈、水冷彈、電擊彈、冰結彈、滅龍彈造成的傷害增加120%"
+      },
+      {
+        "level": 3,
+        "effect": "通常彈、火炎彈、水冷彈、電擊彈、冰結彈、滅龍彈造成的傷害增加200%"
+      }
+    ]
+  },
+  {
+    "id": "charge-shockwave-boost",
+    "name": "蓄攻、響音強化",
+    "nameEn": "Charge & Shockwave Boost",
+    "description": "大錘的蓄力攻擊、狩獵笛的響音攻擊給予魔物的傷害增加。",
+    "maxLevel": 5,
+    "category": "attack",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "大錘的蓄力攻擊、狩獵笛的響音攻擊給予魔物的傷害+15%"
+      },
+      {
+        "level": 2,
+        "effect": "大錘的蓄力攻擊、狩獵笛的響音攻擊給予魔物的傷害+25%"
+      },
+      {
+        "level": 3,
+        "effect": "大錘的蓄力攻擊、狩獵笛的響音攻擊給予魔物的傷害+40%"
+      },
+      {
+        "level": 4,
+        "effect": "大錘的蓄力攻擊、狩獵笛的響音攻擊給予魔物的傷害+55%"
+      },
+      {
+        "level": 5,
+        "effect": "大錘的蓄力攻擊、狩獵笛的響音攻擊給予魔物的傷害+70%"
+      }
+    ]
+  },
+  {
+    "id": "maximum-might",
+    "name": "凶會心",
+    "nameEn": "Maximum Might",
+    "description": "武器的會心率減少，處於負會心時的傷害倍率低機率增強。",
+    "maxLevel": 5,
+    "category": "attack",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "武器的會心率減少10%，處於負會心時的傷害倍率低機率增強至150%"
+      },
+      {
+        "level": 2,
+        "effect": "武器的會心率減少15%，處於負會心時的傷害倍率低機率增強至175%"
+      },
+      {
+        "level": 3,
+        "effect": "武器的會心率減少20%，處於負會心時的傷害倍率低機率增強至200%"
+      },
+      {
+        "level": 4,
+        "effect": "武器的會心率減少25%，處於負會心時的傷害倍率低機率增強至225%"
+      },
+      {
+        "level": 5,
+        "effect": "武器的會心率減少30%，處於負會心時的傷害倍率低機率增強至250%"
+      }
+    ]
+  },
+  {
+    "id": "steadfast",
+    "name": "堅忍不拔",
+    "nameEn": "Steadfast",
+    "description": "減輕裂傷狀態時受到的裂傷傷害。",
+    "maxLevel": 3,
+    "category": "defense",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "減輕裂傷狀態時受到的裂傷傷害"
+      },
+      {
+        "level": 2,
+        "effect": "除了Lv1的效果外，處於裂傷狀態時會心率+50%"
+      },
+      {
+        "level": 3,
+        "effect": "除了Lv2的效果外，狩獵開始時或執行數次動作後，會陷入裂傷狀態"
+      }
+    ]
+  },
+  {
+    "id": "water-attack-peak",
+    "name": "水屬性攻擊強化．境界",
+    "nameEn": "Water Attack: Peak",
+    "description": "發動Lv5以上的技能「水屬性攻擊強化」時，水屬性攻擊力增加。",
+    "maxLevel": 2,
+    "category": "element",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "發動Lv5以上的技能「水屬性攻擊強化」時，水屬性攻擊力增加200"
+      },
+      {
+        "level": 2,
+        "effect": "發動Lv5以上的技能「水屬性攻擊強化」時，水屬性攻擊力增加400"
+      }
+    ]
+  },
+  {
+    "id": "thunder-attack-peak",
+    "name": "雷屬性攻擊強化．境界",
+    "nameEn": "Thunder Attack: Peak",
+    "description": "發動Lv5以上的技能「雷屬性攻擊強化」時，雷屬性攻擊力增加。",
+    "maxLevel": 2,
+    "category": "element",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "發動Lv5以上的技能「雷屬性攻擊強化」時，雷屬性攻擊力增加200"
+      },
+      {
+        "level": 2,
+        "effect": "發動Lv5以上的技能「雷屬性攻擊強化」時，雷屬性攻擊力增加400"
+      }
+    ]
+  },
+  {
+    "id": "ice-attack-peak",
+    "name": "冰屬性攻擊強化．境界",
+    "nameEn": "Ice Attack: Peak",
+    "description": "發動Lv5以上的技能「冰屬性攻擊強化」時，冰屬性攻擊力增加。",
+    "maxLevel": 2,
+    "category": "element",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "發動Lv5以上的技能「冰屬性攻擊強化」時，冰屬性攻擊力增加200"
+      },
+      {
+        "level": 2,
+        "effect": "發動Lv5以上的技能「冰屬性攻擊強化」時，冰屬性攻擊力增加400"
+      }
+    ]
+  },
+  {
+    "id": "hi-fire",
+    "name": "高能強化【火】",
+    "nameEn": "Hi-Boost: Fire",
+    "description": "火屬性攻擊力增加，增加量為剩餘體力計量表的2倍。",
+    "maxLevel": 3,
+    "category": "element",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "火屬性攻擊力增加，增加量為剩餘體力計量表的2倍"
+      },
+      {
+        "level": 2,
+        "effect": "火屬性攻擊力增加，增加量為剩餘體力計量表的4倍"
+      },
+      {
+        "level": 3,
+        "effect": "火屬性攻擊力增加，增加量為剩餘體力計量表的8倍"
+      }
+    ]
+  },
+  {
+    "id": "hi-thunder",
+    "name": "高能強化【雷】",
+    "nameEn": "Hi-Boost: Thunder",
+    "description": "雷屬性攻擊力增加，增加量為剩餘體力計量表的2倍。",
+    "maxLevel": 3,
+    "category": "element",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "雷屬性攻擊力增加，增加量為剩餘體力計量表的2倍"
+      },
+      {
+        "level": 2,
+        "effect": "雷屬性攻擊力增加，增加量為剩餘體力計量表的4倍"
+      },
+      {
+        "level": 3,
+        "effect": "雷屬性攻擊力增加，增加量為剩餘體力計量表的8倍"
+      }
+    ]
+  },
+  {
+    "id": "hi-ice",
+    "name": "高能強化【冰】",
+    "nameEn": "Hi-Boost: Ice",
+    "description": "冰屬性攻擊力增加，增加量為剩餘體力計量表的2倍。",
+    "maxLevel": 3,
+    "category": "element",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "冰屬性攻擊力增加，增加量為剩餘體力計量表的2倍"
+      },
+      {
+        "level": 2,
+        "effect": "冰屬性攻擊力增加，增加量為剩餘體力計量表的4倍"
+      },
+      {
+        "level": 3,
+        "effect": "冰屬性攻擊力增加，增加量為剩餘體力計量表的8倍"
+      }
+    ]
+  },
+  {
+    "id": "hi-dragon",
+    "name": "高能強化【龍】",
+    "nameEn": "Hi-Boost: Dragon",
+    "description": "龍屬性攻擊力增加，增加量為剩餘體力計量表的2倍。",
+    "maxLevel": 3,
+    "category": "element",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "龍屬性攻擊力增加，增加量為剩餘體力計量表的2倍"
+      },
+      {
+        "level": 2,
+        "effect": "龍屬性攻擊力增加，增加量為剩餘體力計量表的4倍"
+      },
+      {
+        "level": 3,
+        "effect": "龍屬性攻擊力增加，增加量為剩餘體力計量表的8倍"
+      }
+    ]
+  },
+  {
+    "id": "critical-element",
+    "name": "會心擊【屬性】",
+    "nameEn": "Critical Element",
+    "description": "會心攻擊時的武器屬性攻擊力增加。",
+    "maxLevel": 5,
+    "category": "element",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "會心攻擊時的武器屬性攻擊力增加30％"
+      },
+      {
+        "level": 2,
+        "effect": "會心攻擊時的武器屬性攻擊力增加40％"
+      },
+      {
+        "level": 3,
+        "effect": "會心攻擊時的武器屬性攻擊力增加50％"
+      },
+      {
+        "level": 4,
+        "effect": "會心攻擊時的武器屬性攻擊力增加60％"
+      },
+      {
+        "level": 5,
+        "effect": "會心攻擊時的武器屬性攻擊力增加80％"
+      }
+    ]
+  },
+  {
+    "id": "rajang-thunderclap",
+    "name": "幻獸疾雷",
+    "nameEn": "Rajang's Thunderclap",
+    "description": "麻痺狀態變得較容易解除，雷屬性攻擊力增加。",
+    "maxLevel": 3,
+    "category": "element",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "麻痺狀態變得較容易解除，雷屬性攻擊力增加10%"
+      },
+      {
+        "level": 2,
+        "effect": "麻痺狀態變得較容易解除，雷屬性攻擊力增加15%"
+      },
+      {
+        "level": 3,
+        "effect": "麻痺狀態變得較容易解除，雷屬性攻擊力增加25%"
+      }
+    ]
+  },
+  {
+    "id": "namielle-thunderwave",
+    "name": "溟波龍的雷浪",
+    "nameEn": "Namielle's Thunderwave",
+    "description": "減少魔物造成的雷屬性傷害，並增加水屬性攻擊力。",
+    "maxLevel": 3,
+    "category": "element",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "減少10%魔物造成的雷屬性傷害，增加10%水屬性攻擊力"
+      },
+      {
+        "level": 2,
+        "effect": "減少10%魔物造成的雷屬性傷害，增加15%水屬性攻擊力"
+      },
+      {
+        "level": 3,
+        "effect": "減少10%魔物造成的雷屬性傷害，增加25%水屬性攻擊力"
+      }
+    ]
+  },
+  {
+    "id": "valstrax-bloodspray",
+    "name": "爵銀龍的紅血",
+    "nameEn": "Valstrax's Bloodspray",
+    "description": "減少魔物造成的龍屬性傷害，並增加龍屬性攻擊力。",
+    "maxLevel": 3,
+    "category": "element",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "減少10%魔物造成的龍屬性傷害，增加10%龍屬性攻擊力"
+      },
+      {
+        "level": 2,
+        "effect": "減少10%魔物造成的龍屬性傷害，增加15%龍屬性攻擊力"
+      },
+      {
+        "level": 3,
+        "effect": "減少10%魔物造成的龍屬性傷害，增加25%龍屬性攻擊力"
+      }
+    ]
+  },
+  {
+    "id": "chameleos-miasma",
+    "name": "霞龍的毒霧",
+    "nameEn": "Chameleos's Miasma",
+    "description": "獵人的中毒狀態持續時間減半，對魔物造成的中毒累積觸發機率上升。",
+    "maxLevel": 3,
+    "category": "element",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "獵人的中毒、猛毒狀態持續時間減半，對魔物造成的中毒狀態累積的觸發機率小幅提升"
+      },
+      {
+        "level": 2,
+        "effect": "獵人的中毒、猛毒狀態持續時間減半，對魔物造成的中毒狀態累積的觸發機率提升"
+      },
+      {
+        "level": 3,
+        "effect": "獵人的中毒、猛毒狀態持續時間減半，對魔物造成的中毒狀態累積的觸發機率大幅提升"
+      }
+    ]
+  },
+  {
+    "id": "absolute-evasion-sp",
+    "name": "絕對迴避【SP】",
+    "nameEn": "Absolute Evasion: SP",
+    "description": "遭受攻擊時不會受到傷害，而是消耗100%SP計量表進行完美迴避。",
+    "maxLevel": 3,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "遭受攻擊時不會受到傷害，而是消耗100%SP計量表進行完美迴避"
+      },
+      {
+        "level": 2,
+        "effect": "遭受攻擊時不會受到傷害，而是消耗85%SP計量表進行完美迴避"
+      },
+      {
+        "level": 3,
+        "effect": "遭受攻擊時不會受到傷害，而是消耗70%SP計量表進行完美迴避"
+      }
+    ]
+  },
+  {
+    "id": "load-guard",
+    "name": "裝填防禦",
+    "nameEn": "Load Guard",
+    "description": "成功防禦魔物的攻擊時，充能斧、銃槍、重弩槍的瓶數或彈數補充1個。",
+    "maxLevel": 3,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "成功防禦魔物的攻擊時，充能斧、銃槍、重弩槍的瓶數或彈數補充1個"
+      },
+      {
+        "level": 2,
+        "effect": "成功防禦魔物的攻擊時，充能斧、銃槍、重弩槍的瓶數或彈數補充2個"
+      },
+      {
+        "level": 3,
+        "effect": "成功防禦魔物的攻擊時，充能斧、銃槍、重弩槍的瓶數或彈數補充3個"
+      }
+    ]
+  },
+  {
+    "id": "dodge-load",
+    "name": "迴避裝填",
+    "nameEn": "Dodge Load",
+    "description": "裝備銃槍、充能斧、輕弩槍或重弩槍時，每次迴避均有機率補充1發砲彈/瓶/彈藥。",
+    "maxLevel": 5,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "裝備銃槍、充能斧、輕弩槍或重弩槍時，每次迴避均會有30%的機率補充1發砲彈/瓶/彈藥"
+      },
+      {
+        "level": 2,
+        "effect": "裝備銃槍、充能斧、輕弩槍或重弩槍時，每次迴避均會有50%的機率補充1發砲彈/瓶/彈藥"
+      },
+      {
+        "level": 3,
+        "effect": "裝備銃槍、充能斧、輕弩槍或重弩槍時，每次迴避均會有50%的機率補充2發砲彈/瓶/彈藥"
+      },
+      {
+        "level": 4,
+        "effect": "裝備銃槍、充能斧、輕弩槍或重弩槍時，每次迴避均會有70%的機率補充2發砲彈/瓶/彈藥"
+      },
+      {
+        "level": 5,
+        "effect": "裝備銃槍、充能斧、輕弩槍或重弩槍時，每次迴避均會有70%的機率補充3發砲彈/瓶/彈藥"
+      }
+    ]
+  },
+  {
+    "id": "ballistics",
+    "name": "彈道強化",
+    "nameEn": "Ballistics",
+    "description": "些微延長彈藥、箭矢的適合距離。",
+    "maxLevel": 3,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "些微延長彈藥、箭矢的適合距離"
+      },
+      {
+        "level": 2,
+        "effect": "延長彈藥、箭矢的適合距離"
+      },
+      {
+        "level": 3,
+        "effect": "大幅延長彈藥、箭矢的適合距離"
+      }
+    ]
+  },
+  {
+    "id": "ammo-saver",
+    "name": "彈藥節約",
+    "nameEn": "Ammo Saver",
+    "description": "使用輕弩槍、重弩槍的彈藥攻擊時，有機率不會消耗彈數。",
+    "maxLevel": 3,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "使用輕弩槍、重弩槍的彈藥攻擊時，有10%的機率不會消耗彈數"
+      },
+      {
+        "level": 2,
+        "effect": "使用輕弩槍、重弩槍的彈藥攻擊時，有20%的機率不會消耗彈數"
+      },
+      {
+        "level": 3,
+        "effect": "使用輕弩槍、重弩槍的彈藥攻擊時，有30%的機率不會消耗彈數"
+      }
+    ]
+  },
+  {
+    "id": "sp-meter-boost",
+    "name": "SP計量表加速",
+    "nameEn": "SP Meter Boost",
+    "description": "SP計量表的增加量提升。",
+    "maxLevel": 3,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "SP計量表的增加量提升5％"
+      },
+      {
+        "level": 2,
+        "effect": "SP計量表的增加量提升15％"
+      },
+      {
+        "level": 3,
+        "effect": "SP計量表的增加量提升30％"
+      }
+    ]
+  },
+  {
+    "id": "sp-meter-boost-dodge",
+    "name": "SP計量表加速【完美迴避】",
+    "nameEn": "SP Meter Boost: Dodge",
+    "description": "完美迴避後，SP計量表增加。",
+    "maxLevel": 3,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "完美迴避後，SP計量表增加7%"
+      },
+      {
+        "level": 2,
+        "effect": "完美迴避後，SP計量表增加12%"
+      },
+      {
+        "level": 3,
+        "effect": "完美迴避後，SP計量表增加20%"
+      }
+    ]
+  },
+  {
+    "id": "last-stand-guard",
+    "name": "背水防禦",
+    "nameEn": "Last Stand Guard",
+    "description": "當體力計量表降至29%以下時，防禦力大幅上升。",
+    "maxLevel": 5,
+    "category": "defense",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "當體力計量表降至29%以下時，防禦力+50"
+      },
+      {
+        "level": 2,
+        "effect": "當體力計量表降至29%以下時，防禦力+100"
+      },
+      {
+        "level": 3,
+        "effect": "當體力計量表降至29%以下時，防禦力+150"
+      },
+      {
+        "level": 4,
+        "effect": "當體力計量表降至29%以下時，防禦力+200"
+      },
+      {
+        "level": 5,
+        "effect": "當體力計量表降至29%以下時，防禦力+300"
+      }
+    ]
+  },
+  {
+    "id": "group-hunt-defense",
+    "name": "團體狩獵強化【防禦】",
+    "nameEn": "Group Hunt Boost: Defense",
+    "description": "團體狩獵時防禦力上升。",
+    "maxLevel": 5,
+    "category": "defense",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "團體狩獵時防禦力+30"
+      },
+      {
+        "level": 2,
+        "effect": "團體狩獵時防禦力+60"
+      },
+      {
+        "level": 3,
+        "effect": "團體狩獵時防禦力+90"
+      },
+      {
+        "level": 4,
+        "effect": "團體狩獵時防禦力+120"
+      },
+      {
+        "level": 5,
+        "effect": "團體狩獵時防禦力+150"
+      }
+    ]
+  },
+  {
+    "id": "defense-ready",
+    "name": "防禦準備",
+    "nameEn": "Defense Ready",
+    "description": "每次迴避後，下次受到傷害時的傷害減少率增加。",
+    "maxLevel": 3,
+    "category": "defense",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "每次迴避後，下次受到傷害時的傷害減少率增加20%（最多發動3次）"
+      },
+      {
+        "level": 2,
+        "effect": "每次迴避後，下次受到傷害時的傷害減少率增加25%（最多發動3次）"
+      },
+      {
+        "level": 3,
+        "effect": "每次迴避後，下次受到傷害時的傷害減少率增加30%（最多發動3次）"
+      }
+    ]
+  },
+  {
+    "id": "guard-up",
+    "name": "防禦強化",
+    "nameEn": "Guard Up",
+    "description": "平時無法防禦的攻擊也變得可以防禦。",
+    "maxLevel": 1,
+    "category": "defense",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "平時無法防禦的攻擊也變得可以防禦"
+      }
+    ]
+  },
+  {
+    "id": "dragon-resistance",
+    "name": "龍耐性",
+    "nameEn": "Dragon Resistance",
+    "description": "減少魔物造成的龍屬性傷害。",
+    "maxLevel": 3,
+    "category": "resistance",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "減少15%魔物造成的龍屬性傷害"
+      },
+      {
+        "level": 2,
+        "effect": "減少30%魔物造成的龍屬性傷害"
+      },
+      {
+        "level": 3,
+        "effect": "減少50%魔物造成的龍屬性傷害"
+      }
+    ]
+  },
+  {
+    "id": "blastblight-resistance",
+    "name": "爆破異常耐性",
+    "nameEn": "Blastblight Resistance",
+    "description": "降低爆破異常狀態的機率。",
+    "maxLevel": 3,
+    "category": "resistance",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "遭到爆破屬性攻擊命中時，有30%的機率不會陷入爆破異常狀態"
+      },
+      {
+        "level": 2,
+        "effect": "遭到爆破屬性攻擊命中時，有60%的機率不會陷入爆破異常狀態"
+      },
+      {
+        "level": 3,
+        "effect": "不會陷入爆破異常狀態"
+      }
+    ]
+  }
+]

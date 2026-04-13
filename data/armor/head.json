@@ -1,0 +1,1348 @@
+[
+  {
+    "id": "leather-head",
+    "name": "皮製頭飾",
+    "nameEn": "",
+    "setName": "皮製",
+    "setNameEn": "Leather",
+    "part": "head",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "critical-eye",
+        "level": 1
+      },
+      {
+        "skillId": "ice-resistance",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "alloy-head",
+    "name": "合金頭盔",
+    "nameEn": "",
+    "setName": "合金",
+    "setNameEn": "Alloy",
+    "part": "head",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "earplugs",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "jagras-head",
+    "name": "凶豺龍頭盔",
+    "nameEn": "",
+    "setName": "凶豺龍",
+    "setNameEn": "Great Jagras",
+    "part": "head",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "firm-foothold",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 2,
+    "image": ""
+  },
+  {
+    "id": "kulu-head",
+    "name": "搔鳥頭盔",
+    "nameEn": "",
+    "setName": "搔鳥",
+    "setNameEn": "Kulu-Ya-Ku",
+    "part": "head",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "lock-on",
+        "level": 1
+      },
+      {
+        "skillId": "critical-eye",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "pukei-head",
+    "name": "毒妖鳥頭盔",
+    "nameEn": "",
+    "setName": "毒妖鳥",
+    "setNameEn": "Pukei-Pukei",
+    "part": "head",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "focus",
+        "level": 1
+      },
+      {
+        "skillId": "health-boost",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "coral-pukei-head",
+    "name": "妖水頭盔",
+    "nameEn": "",
+    "setName": "妖水",
+    "setNameEn": "Coral Pukei-Pukei",
+    "part": "head",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "weakness-exploit",
+        "level": 1
+      },
+      {
+        "skillId": "lock-on",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "barroth-head",
+    "name": "土砂龍頭盔",
+    "nameEn": "",
+    "setName": "土砂龍",
+    "setNameEn": "Barroth",
+    "part": "head",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "defense-boost",
+        "level": 1
+      },
+      {
+        "skillId": "offensive-guard",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "girros-head",
+    "name": "凶顎龍頭盔",
+    "nameEn": "",
+    "setName": "凶顎龍",
+    "setNameEn": "Great Girros",
+    "part": "head",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "paralysis-resistance",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 2,
+    "image": ""
+  },
+  {
+    "id": "kadachi-head",
+    "name": "飛雷龍頭盔",
+    "nameEn": "",
+    "setName": "飛雷龍",
+    "setNameEn": "Tobi-Kadachi",
+    "part": "head",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "reload-speed",
+        "level": 1
+      },
+      {
+        "skillId": "artful-dodger",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "viper-kadachi-head",
+    "name": "朱毒頭盔",
+    "nameEn": "",
+    "setName": "朱毒",
+    "setNameEn": "Viper Tobi-Kadachi",
+    "part": "head",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "burst-peak",
+        "level": 1
+      },
+      {
+        "skillId": "artful-dodger",
+        "level": 1
+      },
+      {
+        "skillId": "true-ability",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "paolumu-head",
+    "name": "浮空龍頭盔",
+    "nameEn": "",
+    "setName": "浮空龍",
+    "setNameEn": "Paolumu",
+    "part": "head",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "sp-meter-boost",
+        "level": 1
+      },
+      {
+        "skillId": "windproof",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "nightshade-paolumu-head",
+    "name": "浮夢頭盔",
+    "nameEn": "",
+    "setName": "浮夢",
+    "setNameEn": "Nightshade Paolumu",
+    "part": "head",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "awakening-strike",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "jyuratodus-head",
+    "name": "泥魚龍頭盔",
+    "nameEn": "",
+    "setName": "泥魚龍",
+    "setNameEn": "Jyuratodus",
+    "part": "head",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "water-resistance",
+        "level": 1
+      },
+      {
+        "skillId": "last-stand-guard",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 2,
+    "image": ""
+  },
+  {
+    "id": "anjanath-head",
+    "name": "蠻顎龍頭盔",
+    "nameEn": "",
+    "setName": "蠻顎龍",
+    "setNameEn": "Anjanath",
+    "part": "head",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "fire-attack",
+        "level": 2
+      },
+      {
+        "skillId": "fire-resistance",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "fulgur-anjanath-head",
+    "name": "雷顎頭盔",
+    "nameEn": "",
+    "setName": "雷顎",
+    "setNameEn": "Fulgur Anjanath",
+    "part": "head",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "special-partbreaker",
+        "level": 1
+      },
+      {
+        "skillId": "special-boost",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "rathian-head",
+    "name": "雌火龍頭盔",
+    "nameEn": "",
+    "setName": "雌火龍",
+    "setNameEn": "Rathian",
+    "part": "head",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "health-boost",
+        "level": 2
+      },
+      {
+        "skillId": "poison-attack",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "pink-rathian-head",
+    "name": "火龍心頭盔",
+    "nameEn": "",
+    "setName": "火龍心",
+    "setNameEn": "Pink Rathian",
+    "part": "head",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "special-boost",
+        "level": 1
+      },
+      {
+        "skillId": "windproof",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "gold-rathian-head",
+    "name": "金黃澄月頭盔",
+    "nameEn": "",
+    "setName": "金黃澄月",
+    "setNameEn": "Gold Rathian",
+    "part": "head",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "resentment",
+        "level": 1
+      },
+      {
+        "skillId": "divine-blessing",
+        "level": 2
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "legiana-head",
+    "name": "風漂龍頭盔",
+    "nameEn": "",
+    "setName": "風漂龍",
+    "setNameEn": "Legiana",
+    "part": "head",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "divine-blessing",
+        "level": 1
+      },
+      {
+        "skillId": "ice-attack",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "diablos-head",
+    "name": "角龍頭盔",
+    "nameEn": "",
+    "setName": "角龍",
+    "setNameEn": "Diablos",
+    "part": "head",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "heroics",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "black-diablos-head",
+    "name": "暴君角龍頭盔",
+    "nameEn": "",
+    "setName": "暴君角龍",
+    "setNameEn": "Black Diablos",
+    "part": "head",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "partbreaker",
+        "level": 2
+      },
+      {
+        "skillId": "resentment",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "rathalos-head",
+    "name": "火龍頭盔",
+    "nameEn": "",
+    "setName": "火龍",
+    "setNameEn": "Rathalos",
+    "part": "head",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "attack-boost",
+        "level": 2
+      },
+      {
+        "skillId": "fire-attack",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "azure-rathalos-head",
+    "name": "火龍魂頭盔",
+    "nameEn": "",
+    "setName": "火龍魂",
+    "setNameEn": "Azure Rathalos",
+    "part": "head",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "focus",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "silver-rathalos-head",
+    "name": "銀白耀日頭盔",
+    "nameEn": "",
+    "setName": "銀白耀日",
+    "setNameEn": "Silver Rathalos",
+    "part": "head",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "critical-element",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "zinogre-head",
+    "name": "雷狼龍頭盔",
+    "nameEn": "",
+    "setName": "雷狼龍",
+    "setNameEn": "Zinogre",
+    "part": "head",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "sp-meter-boost-dodge",
+        "level": 1
+      },
+      {
+        "skillId": "burst",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "tzitzi-head",
+    "name": "眩鳥頭盔",
+    "nameEn": "",
+    "setName": "眩鳥",
+    "setNameEn": "Tzitzi-Ya-Ku",
+    "part": "head",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "thunder-attack",
+        "level": 1
+      },
+      {
+        "skillId": "evade-extender",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "odogaron-head",
+    "name": "慘爪龍頭盔",
+    "nameEn": "",
+    "setName": "慘爪龍",
+    "setNameEn": "Odogaron",
+    "part": "head",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "quick-work",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "ebony-odogaron-head",
+    "name": "亡爪頭盔",
+    "nameEn": "",
+    "setName": "亡爪",
+    "setNameEn": "Ebony Odogaron",
+    "part": "head",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "steadfast",
+        "level": 1
+      },
+      {
+        "skillId": "resuscitate",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "vangis-head",
+    "name": "恐暴龍頭盔",
+    "nameEn": "",
+    "setName": "恐暴龍",
+    "setNameEn": "Deviljho",
+    "part": "head",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "slugger",
+        "level": 1
+      },
+      {
+        "skillId": "dragon-attack",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "basarios-head",
+    "name": "岩龍頭盔",
+    "nameEn": "",
+    "setName": "岩龍",
+    "setNameEn": "Basarios",
+    "part": "head",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "sleep-resistance",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 2,
+    "image": ""
+  },
+  {
+    "id": "khezu-head",
+    "name": "奇怪龍頭盔",
+    "nameEn": "",
+    "setName": "奇怪龍",
+    "setNameEn": "Khezu",
+    "part": "head",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "paralysis-attack",
+        "level": 1
+      },
+      {
+        "skillId": "special-insurance",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "kushala-head",
+    "name": "鋼龍強力",
+    "nameEn": "",
+    "setName": "鋼龍",
+    "setNameEn": "Kushala Daora",
+    "part": "head",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "kushala-frostwind",
+        "level": 1
+      },
+      {
+        "skillId": "reload-speed",
+        "level": 1
+      },
+      {
+        "skillId": "earplugs",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "mizutsune-head",
+    "name": "泡狐龍頭盔",
+    "nameEn": "",
+    "setName": "泡狐龍",
+    "setNameEn": "Mizutsune",
+    "part": "head",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "water-attack",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "kaiser-head",
+    "name": "帝王冠",
+    "nameEn": "",
+    "setName": "帝王",
+    "setNameEn": "Teostra",
+    "part": "head",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "teostra-blastpowder",
+        "level": 1
+      },
+      {
+        "skillId": "latent-power",
+        "level": 1
+      },
+      {
+        "skillId": "guts",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "aknosom-head",
+    "name": "傘鳥頭盔",
+    "nameEn": "",
+    "setName": "傘鳥",
+    "setNameEn": "Aknosom",
+    "part": "head",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "load-guard",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "sinister-head",
+    "name": "禍鎧【武士盔】",
+    "nameEn": "",
+    "setName": "禍鎧",
+    "setNameEn": "Magnamalo",
+    "part": "head",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "foxfire-veil",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "rajang-head",
+    "name": "金色毛髮",
+    "nameEn": "",
+    "setName": "金色",
+    "setNameEn": "Rajang",
+    "part": "head",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "thunder-resistance",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 2,
+    "image": ""
+  },
+  {
+    "id": "nergigante-head",
+    "name": "戰紋頭盔",
+    "nameEn": "",
+    "setName": "戰紋",
+    "setNameEn": "Nergigante",
+    "part": "head",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "nergigante-hunger",
+        "level": 1
+      },
+      {
+        "skillId": "critical-eye",
+        "level": 1
+      },
+      {
+        "skillId": "artful-dodger",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "lagombi-head",
+    "name": "白兔獸頭盔",
+    "nameEn": "",
+    "setName": "白兔獸",
+    "setNameEn": "Lagombi",
+    "part": "head",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "special-boost",
+        "level": 1
+      },
+      {
+        "skillId": "evade-extender",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "volvidon-head",
+    "name": "赤甲獸頭盔",
+    "nameEn": "",
+    "setName": "赤甲獸",
+    "setNameEn": "Volvidon",
+    "part": "head",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "morph-boost",
+        "level": 1
+      },
+      {
+        "skillId": "power-prolonger",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "somnacanth-head",
+    "name": "人魚龍頭盔",
+    "nameEn": "",
+    "setName": "人魚龍",
+    "setNameEn": "Somnacanth",
+    "part": "head",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "dodge-load",
+        "level": 1
+      },
+      {
+        "skillId": "evade-extender",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "tigrex-head",
+    "name": "轟龍頭盔",
+    "nameEn": "",
+    "setName": "轟龍",
+    "setNameEn": "Tigrex",
+    "part": "head",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "maximum-might",
+        "level": 1
+      },
+      {
+        "skillId": "sp-meter-boost",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "brute-tigrex-head",
+    "name": "轟吼頭盔",
+    "nameEn": "",
+    "setName": "轟吼",
+    "setNameEn": "Brute Tigrex",
+    "part": "head",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "attack-boost-peak",
+        "level": 1
+      },
+      {
+        "skillId": "resolute",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "kirin-head",
+    "name": "麒麟角",
+    "nameEn": "",
+    "setName": "麒麟",
+    "setNameEn": "Kirin",
+    "part": "head",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "rajang-thunderclap",
+        "level": 1
+      },
+      {
+        "skillId": "lock-on",
+        "level": 1
+      },
+      {
+        "skillId": "fighting-spirit",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "bazelgeuse-head",
+    "name": "爆鱗龍頭盔",
+    "nameEn": "",
+    "setName": "爆鱗龍",
+    "setNameEn": "Bazelgeuse",
+    "part": "head",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "reload-speed",
+        "level": 1
+      },
+      {
+        "skillId": "artillery",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "chatacabra-head",
+    "name": "纏蛙頭盔",
+    "nameEn": "",
+    "setName": "纏蛙",
+    "setNameEn": "Chatacabra",
+    "part": "head",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "defense-ready",
+        "level": 1
+      },
+      {
+        "skillId": "sneak-attack",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "arzuros-head",
+    "name": "青熊獸頭盔",
+    "nameEn": "",
+    "setName": "青熊獸",
+    "setNameEn": "Arzuros",
+    "part": "head",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "group-hunt-attack",
+        "level": 1
+      },
+      {
+        "skillId": "group-hunt-defense",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "glavenus-head",
+    "name": "斬龍頭盔",
+    "nameEn": "",
+    "setName": "斬龍",
+    "setNameEn": "Glavenus",
+    "part": "head",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "brute-force",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "chameleos-head",
+    "name": "霞龍劍裝【烏帽子】",
+    "nameEn": "",
+    "setName": "霞龍",
+    "setNameEn": "Chameleos",
+    "part": "head",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "chameleos-miasma",
+        "level": 1
+      },
+      {
+        "skillId": "follow-up-poison",
+        "level": 1
+      },
+      {
+        "skillId": "status-sneak-attack",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "wroggi-head",
+    "name": "毒狗龍頭盔",
+    "nameEn": "",
+    "setName": "毒狗龍",
+    "setNameEn": "Great Wroggi",
+    "part": "head",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "power-prolonger",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 2,
+    "image": ""
+  },
+  {
+    "id": "bishaten-head",
+    "name": "天狗獸頭盔",
+    "nameEn": "",
+    "setName": "天狗獸",
+    "setNameEn": "Bishaten",
+    "part": "head",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "follow-up-paralysis",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "beotodus-head",
+    "name": "冰魚龍頭盔",
+    "nameEn": "",
+    "setName": "冰魚龍",
+    "setNameEn": "Beotodus",
+    "part": "head",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "peak-performance",
+        "level": 2
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "nargacuga-head",
+    "name": "迅龍頭盔",
+    "nameEn": "",
+    "setName": "迅龍",
+    "setNameEn": "Nargacuga",
+    "part": "head",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "fighting-spirit",
+        "level": 1
+      },
+      {
+        "skillId": "focus",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "namielle-head",
+    "name": "觸角頭盔",
+    "nameEn": "",
+    "setName": "觸角",
+    "setNameEn": "Namielle",
+    "part": "head",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "namielle-thunderwave",
+        "level": 1
+      },
+      {
+        "skillId": "reload-speed",
+        "level": 1
+      },
+      {
+        "skillId": "recoil-down",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "garangolm-head",
+    "name": "剛纏獸頭盔",
+    "nameEn": "",
+    "setName": "剛纏獸",
+    "setNameEn": "Garangolm",
+    "part": "head",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "maximum-might",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "lunagaron-head",
+    "name": "冰狼龍頭盔",
+    "nameEn": "",
+    "setName": "冰狼龍",
+    "setNameEn": "Lunagaron",
+    "part": "head",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "recoil-down",
+        "level": 1
+      },
+      {
+        "skillId": "ballistics",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "espinas-head",
+    "name": "棘龍首腦",
+    "nameEn": "",
+    "setName": "棘龍",
+    "setNameEn": "Espinas",
+    "part": "head",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "hi-fire",
+        "level": 1
+      },
+      {
+        "skillId": "health-boost",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "malzeno-head",
+    "name": "爵銀龍頭盔",
+    "nameEn": "",
+    "setName": "爵銀龍",
+    "setNameEn": "Malzeno",
+    "part": "head",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "valstrax-bloodspray",
+        "level": 1
+      },
+      {
+        "skillId": "hi-dragon",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "quematrice-head",
+    "name": "炎尾龍頭盔",
+    "nameEn": "",
+    "setName": "炎尾龍",
+    "setNameEn": "Quematrice",
+    "part": "head",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "artillery",
+        "level": 1
+      },
+      {
+        "skillId": "lock-on",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "gossharag-head",
+    "name": "雪鬼獸頭盔",
+    "nameEn": "",
+    "setName": "雪鬼獸",
+    "setNameEn": "Gossharag",
+    "part": "head",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "morph-attack-boost",
+        "level": 1
+      },
+      {
+        "skillId": "morph-boost",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "astalos-head",
+    "name": "電龍頭盔",
+    "nameEn": "",
+    "setName": "電龍",
+    "setNameEn": "Astalos",
+    "part": "head",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "thunder-attack-peak",
+        "level": 1
+      },
+      {
+        "skillId": "reload-speed",
+        "level": 1
+      },
+      {
+        "skillId": "thunder-attack",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "almudron-head",
+    "name": "泥翁龍頭盔",
+    "nameEn": "",
+    "setName": "泥翁龍",
+    "setNameEn": "Almudron",
+    "part": "head",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "water-attack-peak",
+        "level": 1
+      },
+      {
+        "skillId": "water-attack",
+        "level": 1
+      },
+      {
+        "skillId": "sneak-attack",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "seregios-head",
+    "name": "千刃龍頭盔",
+    "nameEn": "",
+    "setName": "千刃龍",
+    "setNameEn": "Seregios",
+    "part": "head",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "attack-activation",
+        "level": 1
+      },
+      {
+        "skillId": "attack-crit",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "radobaan-head",
+    "name": "骨鎚龍頭盔",
+    "nameEn": "",
+    "setName": "骨鎚龍",
+    "setNameEn": "Radobaan",
+    "part": "head",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "guard",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "banbaro-head",
+    "name": "猛牛龍頭盔",
+    "nameEn": "",
+    "setName": "猛牛龍",
+    "setNameEn": "Banbaro",
+    "part": "head",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "tremor-resistance",
+        "level": 1
+      },
+      {
+        "skillId": "recoil-down",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "barioth-head",
+    "name": "冰牙龍頭盔",
+    "nameEn": "",
+    "setName": "冰牙龍",
+    "setNameEn": "Barioth",
+    "part": "head",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "evade-extender",
+        "level": 1
+      },
+      {
+        "skillId": "skyward-striker",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  }
+]

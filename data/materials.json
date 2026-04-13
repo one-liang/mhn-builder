@@ -1,0 +1,1031 @@
+[
+  {
+    "id": "iron-ore",
+    "name": "鐵礦石",
+    "nameEn": "Iron Ore",
+    "source": "採集",
+    "rarity": 1
+  },
+  {
+    "id": "machalite-ore",
+    "name": "大地結晶",
+    "nameEn": "Machalite Ore",
+    "source": "採集",
+    "rarity": 2
+  },
+  {
+    "id": "dragonite-ore",
+    "name": "輝龍石",
+    "nameEn": "Dragonite Ore",
+    "source": "採集",
+    "rarity": 3
+  },
+  {
+    "id": "monster-bone-s",
+    "name": "獸骨【小】",
+    "nameEn": "Monster Bone S",
+    "source": "小型魔物",
+    "rarity": 1
+  },
+  {
+    "id": "monster-bone-m",
+    "name": "獸骨【中】",
+    "nameEn": "Monster Bone M",
+    "source": "大型魔物",
+    "rarity": 2
+  },
+  {
+    "id": "monster-bone-l",
+    "name": "獸骨【大】",
+    "nameEn": "Monster Bone L",
+    "source": "大型魔物",
+    "rarity": 3
+  },
+  {
+    "id": "monster-hardbone",
+    "name": "堅硬獸骨",
+    "nameEn": "Monster Hardbone",
+    "source": "大型魔物",
+    "rarity": 4
+  },
+  {
+    "id": "jagras-scale",
+    "name": "大凶豺龍鱗",
+    "nameEn": "Jagras Scale",
+    "source": "大凶豺龍",
+    "rarity": 2
+  },
+  {
+    "id": "jagras-hide",
+    "name": "大凶豺龍皮",
+    "nameEn": "Jagras Hide",
+    "source": "大凶豺龍",
+    "rarity": 2
+  },
+  {
+    "id": "jagras-claw",
+    "name": "大凶豺龍爪",
+    "nameEn": "Jagras Claw",
+    "source": "大凶豺龍",
+    "rarity": 2
+  },
+  {
+    "id": "jagras-mane",
+    "name": "大凶豺龍鬃毛",
+    "nameEn": "Jagras Mane",
+    "source": "大凶豺龍",
+    "rarity": 3
+  },
+  {
+    "id": "kulu-scale",
+    "name": "搔鳥鱗",
+    "nameEn": "Kulu-Ya-Ku Scale",
+    "source": "搔鳥",
+    "rarity": 2
+  },
+  {
+    "id": "kulu-plume",
+    "name": "搔鳥羽",
+    "nameEn": "Kulu-Ya-Ku Plume",
+    "source": "搔鳥",
+    "rarity": 2
+  },
+  {
+    "id": "kulu-beak",
+    "name": "搔鳥嘴",
+    "nameEn": "Kulu-Ya-Ku Beak",
+    "source": "搔鳥",
+    "rarity": 3
+  },
+  {
+    "id": "pukei-scale",
+    "name": "毒妖鳥鱗",
+    "nameEn": "Pukei-Pukei Scale",
+    "source": "毒妖鳥",
+    "rarity": 3
+  },
+  {
+    "id": "pukei-shell",
+    "name": "毒妖鳥甲殼",
+    "nameEn": "Pukei-Pukei Shell",
+    "source": "毒妖鳥",
+    "rarity": 3
+  },
+  {
+    "id": "pukei-quill",
+    "name": "毒妖鳥羽",
+    "nameEn": "Pukei-Pukei Quill",
+    "source": "毒妖鳥",
+    "rarity": 3
+  },
+  {
+    "id": "pukei-tail",
+    "name": "毒妖鳥尾",
+    "nameEn": "Pukei-Pukei Tail",
+    "source": "毒妖鳥",
+    "rarity": 4
+  },
+  {
+    "id": "pukei-sac",
+    "name": "毒妖鳥毒囊",
+    "nameEn": "Pukei-Pukei Sac",
+    "source": "毒妖鳥",
+    "rarity": 3
+  },
+  {
+    "id": "barroth-shell",
+    "name": "土砂龍甲殼",
+    "nameEn": "Barroth Shell",
+    "source": "土砂龍",
+    "rarity": 3
+  },
+  {
+    "id": "barroth-ridge",
+    "name": "土砂龍頭殼",
+    "nameEn": "Barroth Ridge",
+    "source": "土砂龍",
+    "rarity": 3
+  },
+  {
+    "id": "barroth-claw",
+    "name": "土砂龍爪",
+    "nameEn": "Barroth Claw",
+    "source": "土砂龍",
+    "rarity": 3
+  },
+  {
+    "id": "barroth-tail",
+    "name": "土砂龍尾",
+    "nameEn": "Barroth Tail",
+    "source": "土砂龍",
+    "rarity": 4
+  },
+  {
+    "id": "barroth-scalp",
+    "name": "土砂龍頭蓋骨",
+    "nameEn": "Barroth Scalp",
+    "source": "土砂龍",
+    "rarity": 4
+  },
+  {
+    "id": "girros-scale",
+    "name": "痺毒龍鱗",
+    "nameEn": "Girros Scale",
+    "source": "痺毒龍",
+    "rarity": 3
+  },
+  {
+    "id": "girros-fang",
+    "name": "痺毒龍牙",
+    "nameEn": "Girros Fang",
+    "source": "痺毒龍",
+    "rarity": 3
+  },
+  {
+    "id": "girros-hood",
+    "name": "痺毒龍頭巾",
+    "nameEn": "Girros Hood",
+    "source": "痺毒龍",
+    "rarity": 3
+  },
+  {
+    "id": "girros-tail",
+    "name": "痺毒龍尾",
+    "nameEn": "Girros Tail",
+    "source": "痺毒龍",
+    "rarity": 4
+  },
+  {
+    "id": "kadachi-scale",
+    "name": "飛雷龍鱗",
+    "nameEn": "Tobi-Kadachi Scale",
+    "source": "飛雷龍",
+    "rarity": 3
+  },
+  {
+    "id": "kadachi-pelt",
+    "name": "飛雷龍毛皮",
+    "nameEn": "Tobi-Kadachi Pelt",
+    "source": "飛雷龍",
+    "rarity": 3
+  },
+  {
+    "id": "kadachi-membrane",
+    "name": "飛雷龍膜",
+    "nameEn": "Tobi-Kadachi Membrane",
+    "source": "飛雷龍",
+    "rarity": 3
+  },
+  {
+    "id": "kadachi-electrode",
+    "name": "飛雷龍電極",
+    "nameEn": "Tobi-Kadachi Electrode",
+    "source": "飛雷龍",
+    "rarity": 4
+  },
+  {
+    "id": "kadachi-claw",
+    "name": "飛雷龍爪",
+    "nameEn": "Tobi-Kadachi Claw",
+    "source": "飛雷龍",
+    "rarity": 4
+  },
+  {
+    "id": "paolumu-scale",
+    "name": "浮空龍鱗",
+    "nameEn": "Paolumu Scale",
+    "source": "浮空龍",
+    "rarity": 3
+  },
+  {
+    "id": "paolumu-shell",
+    "name": "浮空龍甲殼",
+    "nameEn": "Paolumu Shell",
+    "source": "浮空龍",
+    "rarity": 3
+  },
+  {
+    "id": "paolumu-pelt",
+    "name": "浮空龍毛皮",
+    "nameEn": "Paolumu Pelt",
+    "source": "浮空龍",
+    "rarity": 3
+  },
+  {
+    "id": "paolumu-wing",
+    "name": "浮空龍翼膜",
+    "nameEn": "Paolumu Wing",
+    "source": "浮空龍",
+    "rarity": 4
+  },
+  {
+    "id": "jyuratodus-scale",
+    "name": "泥魚龍鱗",
+    "nameEn": "Jyuratodus Scale",
+    "source": "泥魚龍",
+    "rarity": 3
+  },
+  {
+    "id": "jyuratodus-shell",
+    "name": "泥魚龍甲殼",
+    "nameEn": "Jyuratodus Shell",
+    "source": "泥魚龍",
+    "rarity": 3
+  },
+  {
+    "id": "jyuratodus-fin",
+    "name": "泥魚龍鰭",
+    "nameEn": "Jyuratodus Fin",
+    "source": "泥魚龍",
+    "rarity": 3
+  },
+  {
+    "id": "jyuratodus-fang",
+    "name": "泥魚龍銳牙",
+    "nameEn": "Jyuratodus Fang",
+    "source": "泥魚龍",
+    "rarity": 4
+  },
+  {
+    "id": "anjanath-scale",
+    "name": "蠻顎龍鱗",
+    "nameEn": "Anjanath Scale",
+    "source": "蠻顎龍",
+    "rarity": 4
+  },
+  {
+    "id": "anjanath-pelt",
+    "name": "蠻顎龍毛皮",
+    "nameEn": "Anjanath Pelt",
+    "source": "蠻顎龍",
+    "rarity": 4
+  },
+  {
+    "id": "anjanath-fang",
+    "name": "蠻顎龍銳牙",
+    "nameEn": "Anjanath Fang",
+    "source": "蠻顎龍",
+    "rarity": 4
+  },
+  {
+    "id": "anjanath-nosebone",
+    "name": "蠻顎龍鼻骨",
+    "nameEn": "Anjanath Nosebone",
+    "source": "蠻顎龍",
+    "rarity": 5
+  },
+  {
+    "id": "anjanath-tail",
+    "name": "蠻顎龍尾",
+    "nameEn": "Anjanath Tail",
+    "source": "蠻顎龍",
+    "rarity": 5
+  },
+  {
+    "id": "rathian-scale",
+    "name": "雌火龍鱗",
+    "nameEn": "Rathian Scale",
+    "source": "雌火龍",
+    "rarity": 4
+  },
+  {
+    "id": "rathian-shell",
+    "name": "雌火龍甲殼",
+    "nameEn": "Rathian Shell",
+    "source": "雌火龍",
+    "rarity": 4
+  },
+  {
+    "id": "rathian-spike",
+    "name": "雌火龍棘",
+    "nameEn": "Rathian Spike",
+    "source": "雌火龍",
+    "rarity": 5
+  },
+  {
+    "id": "rathian-webbing",
+    "name": "雌火龍翼膜",
+    "nameEn": "Rathian Webbing",
+    "source": "雌火龍",
+    "rarity": 4
+  },
+  {
+    "id": "rathalos-scale",
+    "name": "火龍鱗",
+    "nameEn": "Rathalos Scale",
+    "source": "火龍",
+    "rarity": 5
+  },
+  {
+    "id": "rathalos-shell",
+    "name": "火龍甲殼",
+    "nameEn": "Rathalos Shell",
+    "source": "火龍",
+    "rarity": 5
+  },
+  {
+    "id": "rathalos-wingtalon",
+    "name": "火龍翼爪",
+    "nameEn": "Rathalos Wingtalon",
+    "source": "火龍",
+    "rarity": 5
+  },
+  {
+    "id": "rathalos-marrow",
+    "name": "火龍骨髓",
+    "nameEn": "Rathalos Marrow",
+    "source": "火龍",
+    "rarity": 6
+  },
+  {
+    "id": "rathalos-tail",
+    "name": "火龍尾",
+    "nameEn": "Rathalos Tail",
+    "source": "火龍",
+    "rarity": 5
+  },
+  {
+    "id": "rathalos-plate",
+    "name": "火龍逆鱗",
+    "nameEn": "Rathalos Plate",
+    "source": "火龍",
+    "rarity": 7
+  },
+  {
+    "id": "diablos-shell",
+    "name": "角龍甲殼",
+    "nameEn": "Diablos Shell",
+    "source": "角龍",
+    "rarity": 5
+  },
+  {
+    "id": "diablos-fang",
+    "name": "角龍牙",
+    "nameEn": "Diablos Fang",
+    "source": "角龍",
+    "rarity": 5
+  },
+  {
+    "id": "diablos-ridge",
+    "name": "角龍背甲",
+    "nameEn": "Diablos Ridge",
+    "source": "角龍",
+    "rarity": 5
+  },
+  {
+    "id": "diablos-tailcase",
+    "name": "角龍尾甲",
+    "nameEn": "Diablos Tailcase",
+    "source": "角龍",
+    "rarity": 5
+  },
+  {
+    "id": "diablos-marrow",
+    "name": "角龍骨髓",
+    "nameEn": "Diablos Marrow",
+    "source": "角龍",
+    "rarity": 6
+  },
+  {
+    "id": "twisted-horn",
+    "name": "扭曲的角",
+    "nameEn": "Twisted Horn",
+    "source": "角龍",
+    "rarity": 6
+  },
+  {
+    "id": "legiana-scale",
+    "name": "風漂龍鱗",
+    "nameEn": "Legiana Scale",
+    "source": "風漂龍",
+    "rarity": 4
+  },
+  {
+    "id": "legiana-hide",
+    "name": "風漂龍皮",
+    "nameEn": "Legiana Hide",
+    "source": "風漂龍",
+    "rarity": 4
+  },
+  {
+    "id": "legiana-claw",
+    "name": "風漂龍爪",
+    "nameEn": "Legiana Claw",
+    "source": "風漂龍",
+    "rarity": 5
+  },
+  {
+    "id": "legiana-webbing",
+    "name": "風漂龍翼膜",
+    "nameEn": "Legiana Webbing",
+    "source": "風漂龍",
+    "rarity": 4
+  },
+  {
+    "id": "legiana-plate",
+    "name": "風漂龍逆鱗",
+    "nameEn": "Legiana Plate",
+    "source": "風漂龍",
+    "rarity": 7
+  },
+  {
+    "id": "black-diablos-shell",
+    "name": "黑角龍甲殼",
+    "nameEn": "Black Diablos Shell",
+    "source": "黑角龍",
+    "rarity": 6
+  },
+  {
+    "id": "black-diablos-ridge",
+    "name": "黑角龍背甲",
+    "nameEn": "Black Diablos Ridge",
+    "source": "黑角龍",
+    "rarity": 6
+  },
+  {
+    "id": "black-spiral-horn",
+    "name": "黑蝕螺旋角",
+    "nameEn": "Black Spiral Horn",
+    "source": "黑角龍",
+    "rarity": 7
+  },
+  {
+    "id": "pink-rathian-scale",
+    "name": "櫻火龍鱗",
+    "nameEn": "Pink Rathian Scale",
+    "source": "櫻火龍",
+    "rarity": 5
+  },
+  {
+    "id": "pink-rathian-shell",
+    "name": "櫻火龍甲殼",
+    "nameEn": "Pink Rathian Shell",
+    "source": "櫻火龍",
+    "rarity": 5
+  },
+  {
+    "id": "azure-rathalos-scale",
+    "name": "蒼火龍鱗",
+    "nameEn": "Azure Rathalos Scale",
+    "source": "蒼火龍",
+    "rarity": 6
+  },
+  {
+    "id": "azure-rathalos-shell",
+    "name": "蒼火龍甲殼",
+    "nameEn": "Azure Rathalos Shell",
+    "source": "蒼火龍",
+    "rarity": 6
+  },
+  {
+    "id": "azure-rathalos-marrow",
+    "name": "蒼火龍骨髓",
+    "nameEn": "Azure Rathalos Marrow",
+    "source": "蒼火龍",
+    "rarity": 7
+  },
+  {
+    "id": "radobaan-scale",
+    "name": "骨鎚龍鱗",
+    "nameEn": "Radobaan Scale",
+    "source": "骨鎚龍",
+    "rarity": 4
+  },
+  {
+    "id": "radobaan-shell",
+    "name": "骨鎚龍甲殼",
+    "nameEn": "Radobaan Shell",
+    "source": "骨鎚龍",
+    "rarity": 4
+  },
+  {
+    "id": "radobaan-oilshell",
+    "name": "骨鎚龍油殼",
+    "nameEn": "Radobaan Oilshell",
+    "source": "骨鎚龍",
+    "rarity": 5
+  },
+  {
+    "id": "radobaan-marrow",
+    "name": "骨鎚龍骨髓",
+    "nameEn": "Radobaan Marrow",
+    "source": "骨鎚龍",
+    "rarity": 5
+  },
+  {
+    "id": "banbaro-horn",
+    "name": "猛牛龍角",
+    "nameEn": "Banbaro Horn",
+    "source": "猛牛龍",
+    "rarity": 4
+  },
+  {
+    "id": "banbaro-pelt",
+    "name": "猛牛龍毛皮",
+    "nameEn": "Banbaro Pelt",
+    "source": "猛牛龍",
+    "rarity": 4
+  },
+  {
+    "id": "banbaro-chine",
+    "name": "猛牛龍背甲",
+    "nameEn": "Banbaro Chine",
+    "source": "猛牛龍",
+    "rarity": 5
+  },
+  {
+    "id": "banbaro-tail",
+    "name": "猛牛龍尾",
+    "nameEn": "Banbaro Tail",
+    "source": "猛牛龍",
+    "rarity": 5
+  },
+  {
+    "id": "barioth-shell",
+    "name": "冰牙龍甲殼",
+    "nameEn": "Barioth Shell",
+    "source": "冰牙龍",
+    "rarity": 5
+  },
+  {
+    "id": "barioth-claw",
+    "name": "冰牙龍爪",
+    "nameEn": "Barioth Claw",
+    "source": "冰牙龍",
+    "rarity": 5
+  },
+  {
+    "id": "barioth-spike",
+    "name": "冰牙龍棘",
+    "nameEn": "Barioth Spike",
+    "source": "冰牙龍",
+    "rarity": 6
+  },
+  {
+    "id": "barioth-tail",
+    "name": "冰牙龍尾",
+    "nameEn": "Barioth Tail",
+    "source": "冰牙龍",
+    "rarity": 5
+  },
+  {
+    "id": "zinogre-shell",
+    "name": "雷狼龍甲殼",
+    "nameEn": "Zinogre Shell",
+    "source": "雷狼龍",
+    "rarity": 5
+  },
+  {
+    "id": "zinogre-horn",
+    "name": "雷狼龍角",
+    "nameEn": "Zinogre Horn",
+    "source": "雷狼龍",
+    "rarity": 6
+  },
+  {
+    "id": "zinogre-claw",
+    "name": "雷狼龍爪",
+    "nameEn": "Zinogre Claw",
+    "source": "雷狼龍",
+    "rarity": 5
+  },
+  {
+    "id": "zinogre-shocker",
+    "name": "雷狼龍電殼",
+    "nameEn": "Zinogre Shocker",
+    "source": "雷狼龍",
+    "rarity": 6
+  },
+  {
+    "id": "zinogre-tail",
+    "name": "雷狼龍尾",
+    "nameEn": "Zinogre Tail",
+    "source": "雷狼龍",
+    "rarity": 5
+  },
+  {
+    "id": "zinogre-plate",
+    "name": "雷狼龍逆鱗",
+    "nameEn": "Zinogre Plate",
+    "source": "雷狼龍",
+    "rarity": 7
+  },
+  {
+    "id": "tzitzi-scale",
+    "name": "眩鳥鱗",
+    "nameEn": "Tzitzi-Ya-Ku Scale",
+    "source": "眩鳥",
+    "rarity": 3
+  },
+  {
+    "id": "tzitzi-hide",
+    "name": "眩鳥皮",
+    "nameEn": "Tzitzi-Ya-Ku Hide",
+    "source": "眩鳥",
+    "rarity": 3
+  },
+  {
+    "id": "tzitzi-claw",
+    "name": "眩鳥爪",
+    "nameEn": "Tzitzi-Ya-Ku Claw",
+    "source": "眩鳥",
+    "rarity": 3
+  },
+  {
+    "id": "odogaron-scale",
+    "name": "兇爪龍鱗",
+    "nameEn": "Odogaron Scale",
+    "source": "兇爪龍",
+    "rarity": 5
+  },
+  {
+    "id": "odogaron-claw",
+    "name": "兇爪龍爪",
+    "nameEn": "Odogaron Claw",
+    "source": "兇爪龍",
+    "rarity": 5
+  },
+  {
+    "id": "odogaron-fang",
+    "name": "兇爪龍銳牙",
+    "nameEn": "Odogaron Fang",
+    "source": "兇爪龍",
+    "rarity": 5
+  },
+  {
+    "id": "odogaron-sinew",
+    "name": "兇爪龍腱",
+    "nameEn": "Odogaron Sinew",
+    "source": "兇爪龍",
+    "rarity": 6
+  },
+  {
+    "id": "deviljho-scale",
+    "name": "恐暴龍鱗",
+    "nameEn": "Deviljho Scale",
+    "source": "恐暴龍",
+    "rarity": 6
+  },
+  {
+    "id": "deviljho-hide",
+    "name": "恐暴龍皮",
+    "nameEn": "Deviljho Hide",
+    "source": "恐暴龍",
+    "rarity": 6
+  },
+  {
+    "id": "deviljho-fang",
+    "name": "恐暴龍銳牙",
+    "nameEn": "Deviljho Fang",
+    "source": "恐暴龍",
+    "rarity": 6
+  },
+  {
+    "id": "deviljho-talon",
+    "name": "恐暴龍大爪",
+    "nameEn": "Deviljho Talon",
+    "source": "恐暴龍",
+    "rarity": 7
+  },
+  {
+    "id": "deviljho-saliva",
+    "name": "恐暴龍唾液",
+    "nameEn": "Deviljho Saliva",
+    "source": "恐暴龍",
+    "rarity": 6
+  },
+  {
+    "id": "basarios-shell",
+    "name": "岩龍甲殼",
+    "nameEn": "Basarios Shell",
+    "source": "岩龍",
+    "rarity": 4
+  },
+  {
+    "id": "basarios-wing",
+    "name": "岩龍翼",
+    "nameEn": "Basarios Wing",
+    "source": "岩龍",
+    "rarity": 4
+  },
+  {
+    "id": "basarios-tears",
+    "name": "岩龍淚",
+    "nameEn": "Basarios Tears",
+    "source": "岩龍",
+    "rarity": 5
+  },
+  {
+    "id": "khezu-hide",
+    "name": "電龍皮",
+    "nameEn": "Khezu Hide",
+    "source": "電龍",
+    "rarity": 4
+  },
+  {
+    "id": "khezu-steak",
+    "name": "電龍電袋",
+    "nameEn": "Khezu Steak",
+    "source": "電龍",
+    "rarity": 5
+  },
+  {
+    "id": "khezu-wing",
+    "name": "電龍翼膜",
+    "nameEn": "Khezu Wing",
+    "source": "電龍",
+    "rarity": 4
+  },
+  {
+    "id": "kushala-scale",
+    "name": "鋼龍鱗",
+    "nameEn": "Kushala Daora Scale",
+    "source": "鋼龍",
+    "rarity": 7
+  },
+  {
+    "id": "kushala-shell",
+    "name": "鋼龍甲殼",
+    "nameEn": "Kushala Daora Shell",
+    "source": "鋼龍",
+    "rarity": 7
+  },
+  {
+    "id": "kushala-wing",
+    "name": "鋼龍翼",
+    "nameEn": "Kushala Daora Wing",
+    "source": "鋼龍",
+    "rarity": 7
+  },
+  {
+    "id": "kushala-horn",
+    "name": "鋼龍角",
+    "nameEn": "Kushala Daora Horn",
+    "source": "鋼龍",
+    "rarity": 8
+  },
+  {
+    "id": "kushala-tail",
+    "name": "鋼龍尾",
+    "nameEn": "Kushala Daora Tail",
+    "source": "鋼龍",
+    "rarity": 7
+  },
+  {
+    "id": "kushala-gem",
+    "name": "鋼龍寶玉",
+    "nameEn": "Kushala Daora Gem",
+    "source": "鋼龍",
+    "rarity": 9
+  },
+  {
+    "id": "mizutsune-scale",
+    "name": "泡狐龍鱗",
+    "nameEn": "Mizutsune Scale",
+    "source": "泡狐龍",
+    "rarity": 6
+  },
+  {
+    "id": "mizutsune-claw",
+    "name": "泡狐龍爪",
+    "nameEn": "Mizutsune Claw",
+    "source": "泡狐龍",
+    "rarity": 6
+  },
+  {
+    "id": "mizutsune-fin",
+    "name": "泡狐龍鰭",
+    "nameEn": "Mizutsune Fin",
+    "source": "泡狐龍",
+    "rarity": 6
+  },
+  {
+    "id": "mizutsune-tail",
+    "name": "泡狐龍尾",
+    "nameEn": "Mizutsune Tail",
+    "source": "泡狐龍",
+    "rarity": 7
+  },
+  {
+    "id": "mizutsune-plate",
+    "name": "泡狐龍逆鱗",
+    "nameEn": "Mizutsune Plate",
+    "source": "泡狐龍",
+    "rarity": 8
+  },
+  {
+    "id": "teostra-scale",
+    "name": "炎王龍鱗",
+    "nameEn": "Teostra Scale",
+    "source": "炎王龍",
+    "rarity": 7
+  },
+  {
+    "id": "teostra-shell",
+    "name": "炎王龍甲殼",
+    "nameEn": "Teostra Shell",
+    "source": "炎王龍",
+    "rarity": 7
+  },
+  {
+    "id": "teostra-mane",
+    "name": "炎王龍鬃毛",
+    "nameEn": "Teostra Mane",
+    "source": "炎王龍",
+    "rarity": 7
+  },
+  {
+    "id": "teostra-horn",
+    "name": "炎王龍角",
+    "nameEn": "Teostra Horn",
+    "source": "炎王龍",
+    "rarity": 8
+  },
+  {
+    "id": "teostra-tail",
+    "name": "炎王龍尾",
+    "nameEn": "Teostra Tail",
+    "source": "炎王龍",
+    "rarity": 7
+  },
+  {
+    "id": "teostra-gem",
+    "name": "炎王龍寶玉",
+    "nameEn": "Teostra Gem",
+    "source": "炎王龍",
+    "rarity": 9
+  },
+  {
+    "id": "aknosom-scale",
+    "name": "傘鳥鱗",
+    "nameEn": "Aknosom Scale",
+    "source": "傘鳥",
+    "rarity": 4
+  },
+  {
+    "id": "aknosom-crest",
+    "name": "傘鳥冠",
+    "nameEn": "Aknosom Crest",
+    "source": "傘鳥",
+    "rarity": 5
+  },
+  {
+    "id": "aknosom-feather",
+    "name": "傘鳥羽",
+    "nameEn": "Aknosom Feather",
+    "source": "傘鳥",
+    "rarity": 4
+  },
+  {
+    "id": "magnamalo-scale",
+    "name": "怨虎龍鱗",
+    "nameEn": "Magnamalo Scale",
+    "source": "怨虎龍",
+    "rarity": 7
+  },
+  {
+    "id": "magnamalo-shell",
+    "name": "怨虎龍甲殼",
+    "nameEn": "Magnamalo Shell",
+    "source": "怨虎龍",
+    "rarity": 7
+  },
+  {
+    "id": "magnamalo-blade",
+    "name": "怨虎龍刃",
+    "nameEn": "Magnamalo Blade",
+    "source": "怨虎龍",
+    "rarity": 7
+  },
+  {
+    "id": "magnamalo-horn",
+    "name": "怨虎龍角",
+    "nameEn": "Magnamalo Horn",
+    "source": "怨虎龍",
+    "rarity": 8
+  },
+  {
+    "id": "magnamalo-plate",
+    "name": "怨虎龍逆鱗",
+    "nameEn": "Magnamalo Plate",
+    "source": "怨虎龍",
+    "rarity": 9
+  },
+  {
+    "id": "seregios-scale",
+    "name": "千刃龍鱗",
+    "nameEn": "Seregios Scale",
+    "source": "千刃龍",
+    "rarity": 6
+  },
+  {
+    "id": "seregios-bladescale",
+    "name": "千刃龍刃鱗",
+    "nameEn": "Seregios Bladescale",
+    "source": "千刃龍",
+    "rarity": 7
+  },
+  {
+    "id": "malzeno-scale",
+    "name": "爵銀龍鱗",
+    "nameEn": "Malzeno Scale",
+    "source": "爵銀龍",
+    "rarity": 8
+  },
+  {
+    "id": "malzeno-wing",
+    "name": "爵銀龍翼",
+    "nameEn": "Malzeno Wing",
+    "source": "爵銀龍",
+    "rarity": 8
+  },
+  {
+    "id": "malzeno-horn",
+    "name": "爵銀龍角",
+    "nameEn": "Malzeno Horn",
+    "source": "爵銀龍",
+    "rarity": 9
+  },
+  {
+    "id": "somnacanth-scale",
+    "name": "人魚龍鱗",
+    "nameEn": "Somnacanth Scale",
+    "source": "人魚龍",
+    "rarity": 5
+  },
+  {
+    "id": "somnacanth-fin",
+    "name": "人魚龍鰭",
+    "nameEn": "Somnacanth Fin",
+    "source": "人魚龍",
+    "rarity": 6
+  },
+  {
+    "id": "somnacanth-claw",
+    "name": "人魚龍爪",
+    "nameEn": "Somnacanth Claw",
+    "source": "人魚龍",
+    "rarity": 6
+  },
+  {
+    "id": "almudron-scale",
+    "name": "泥翁龍鱗",
+    "nameEn": "Almudron Scale",
+    "source": "泥翁龍",
+    "rarity": 6
+  },
+  {
+    "id": "almudron-fin",
+    "name": "泥翁龍鰭",
+    "nameEn": "Almudron Fin",
+    "source": "泥翁龍",
+    "rarity": 6
+  },
+  {
+    "id": "almudron-tail",
+    "name": "泥翁龍尾",
+    "nameEn": "Almudron Tail",
+    "source": "泥翁龍",
+    "rarity": 7
+  }
+]

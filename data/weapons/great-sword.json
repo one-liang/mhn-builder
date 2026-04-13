@@ -1,0 +1,369 @@
+[
+  {
+    "id": "gs-iron-sword",
+    "name": "鐵之大劍",
+    "nameEn": "Iron Sword",
+    "type": "great-sword",
+    "rarity": 1,
+    "attack": 384,
+    "element": null,
+    "affinity": 0,
+    "skills": [],
+    "materials": [
+      {
+        "materialId": "iron-ore",
+        "quantity": 3
+      }
+    ],
+    "image": "",
+    "setName": null
+  },
+  {
+    "id": "gs-jagras-blade",
+    "name": "大凶豺龍大劍",
+    "nameEn": "Jagras Blade",
+    "type": "great-sword",
+    "rarity": 3,
+    "attack": 528,
+    "element": null,
+    "affinity": 0,
+    "skills": [
+      {
+        "skillId": "health-boost",
+        "level": 1
+      }
+    ],
+    "materials": [
+      {
+        "materialId": "jagras-scale",
+        "quantity": 4
+      },
+      {
+        "materialId": "jagras-claw",
+        "quantity": 2
+      }
+    ],
+    "image": "",
+    "setName": null
+  },
+  {
+    "id": "gs-barroth-shredder",
+    "name": "土砂龍大劍",
+    "nameEn": "Barroth Shredder",
+    "type": "great-sword",
+    "rarity": 4,
+    "attack": 624,
+    "element": null,
+    "affinity": -10,
+    "skills": [
+      {
+        "skillId": "defense-boost",
+        "level": 1
+      }
+    ],
+    "materials": [
+      {
+        "materialId": "barroth-shell",
+        "quantity": 4
+      },
+      {
+        "materialId": "barroth-scalp",
+        "quantity": 2
+      }
+    ],
+    "image": "",
+    "setName": null
+  },
+  {
+    "id": "gs-anjanath-blade",
+    "name": "蠻顎龍大劍",
+    "nameEn": "Anjanath Blade",
+    "type": "great-sword",
+    "rarity": 5,
+    "attack": 720,
+    "element": {
+      "type": "fire",
+      "value": 300
+    },
+    "affinity": -15,
+    "skills": [
+      {
+        "skillId": "attack-boost",
+        "level": 1
+      }
+    ],
+    "materials": [
+      {
+        "materialId": "anjanath-scale",
+        "quantity": 4
+      },
+      {
+        "materialId": "anjanath-fang",
+        "quantity": 2
+      }
+    ],
+    "image": "",
+    "setName": null
+  },
+  {
+    "id": "gs-rathalos-smasher",
+    "name": "火龍大劍",
+    "nameEn": "Rathalos Smasher",
+    "type": "great-sword",
+    "rarity": 6,
+    "attack": 768,
+    "element": {
+      "type": "fire",
+      "value": 360
+    },
+    "affinity": 0,
+    "skills": [
+      {
+        "skillId": "attack-boost",
+        "level": 1
+      },
+      {
+        "skillId": "fire-attack",
+        "level": 1
+      }
+    ],
+    "materials": [
+      {
+        "materialId": "rathalos-scale",
+        "quantity": 4
+      },
+      {
+        "materialId": "rathalos-marrow",
+        "quantity": 1
+      }
+    ],
+    "image": "",
+    "setName": null
+  },
+  {
+    "id": "gs-diablos-shatterer",
+    "name": "角龍大劍",
+    "nameEn": "Diablos Shatterer",
+    "type": "great-sword",
+    "rarity": 6,
+    "attack": 864,
+    "element": null,
+    "affinity": -20,
+    "skills": [
+      {
+        "skillId": "slugger",
+        "level": 1
+      }
+    ],
+    "materials": [
+      {
+        "materialId": "diablos-shell",
+        "quantity": 4
+      },
+      {
+        "materialId": "twisted-horn",
+        "quantity": 1
+      }
+    ],
+    "image": "",
+    "setName": null
+  },
+  {
+    "id": "gs-deviljho-blade",
+    "name": "恐暴龍大劍",
+    "nameEn": "Deviljho Blade",
+    "type": "great-sword",
+    "rarity": 7,
+    "attack": 912,
+    "element": {
+      "type": "dragon",
+      "value": 420
+    },
+    "affinity": -20,
+    "skills": [
+      {
+        "skillId": "attack-boost",
+        "level": 2
+      }
+    ],
+    "materials": [
+      {
+        "materialId": "deviljho-fang",
+        "quantity": 4
+      },
+      {
+        "materialId": "deviljho-talon",
+        "quantity": 2
+      }
+    ],
+    "image": "",
+    "setName": null
+  },
+  {
+    "id": "gs-zinogre-blade",
+    "name": "雷狼龍大劍",
+    "nameEn": "Zinogre Blade",
+    "type": "great-sword",
+    "rarity": 6,
+    "attack": 768,
+    "element": {
+      "type": "thunder",
+      "value": 330
+    },
+    "affinity": 0,
+    "skills": [
+      {
+        "skillId": "thunder-attack",
+        "level": 1
+      }
+    ],
+    "materials": [
+      {
+        "materialId": "zinogre-shell",
+        "quantity": 4
+      },
+      {
+        "materialId": "zinogre-horn",
+        "quantity": 2
+      }
+    ],
+    "image": "",
+    "setName": null
+  },
+  {
+    "id": "gs-barioth-blade",
+    "name": "冰牙龍大劍",
+    "nameEn": "Barioth Blade",
+    "type": "great-sword",
+    "rarity": 6,
+    "attack": 720,
+    "element": {
+      "type": "ice",
+      "value": 300
+    },
+    "affinity": 10,
+    "skills": [
+      {
+        "skillId": "ice-attack",
+        "level": 1
+      }
+    ],
+    "materials": [
+      {
+        "materialId": "barioth-claw",
+        "quantity": 4
+      },
+      {
+        "materialId": "barioth-spike",
+        "quantity": 2
+      }
+    ],
+    "image": "",
+    "setName": null
+  },
+  {
+    "id": "gs-kushala-blade",
+    "name": "鋼龍大劍",
+    "nameEn": "Kushala Blade",
+    "type": "great-sword",
+    "rarity": 8,
+    "attack": 816,
+    "element": {
+      "type": "ice",
+      "value": 420
+    },
+    "affinity": 0,
+    "skills": [
+      {
+        "skillId": "ice-attack",
+        "level": 1
+      },
+      {
+        "skillId": "kushala-frostwind",
+        "level": 1
+      }
+    ],
+    "materials": [
+      {
+        "materialId": "kushala-shell",
+        "quantity": 4
+      },
+      {
+        "materialId": "kushala-horn",
+        "quantity": 1
+      }
+    ],
+    "image": "",
+    "setName": null
+  },
+  {
+    "id": "gs-sinister-blade",
+    "name": "怨虎龍大劍",
+    "nameEn": "Sinister Blade",
+    "type": "great-sword",
+    "rarity": 8,
+    "attack": 912,
+    "element": {
+      "type": "blast",
+      "value": 300
+    },
+    "affinity": 0,
+    "skills": [
+      {
+        "skillId": "attack-boost",
+        "level": 1
+      },
+      {
+        "skillId": "blast-attack",
+        "level": 1
+      }
+    ],
+    "materials": [
+      {
+        "materialId": "magnamalo-shell",
+        "quantity": 4
+      },
+      {
+        "materialId": "magnamalo-horn",
+        "quantity": 1
+      }
+    ],
+    "image": "",
+    "setName": null
+  },
+  {
+    "id": "gs-malzeno-blade",
+    "name": "爵銀龍大劍",
+    "nameEn": "Malzeno Blade",
+    "type": "great-sword",
+    "rarity": 9,
+    "attack": 960,
+    "element": {
+      "type": "dragon",
+      "value": 480
+    },
+    "affinity": 10,
+    "skills": [
+      {
+        "skillId": "critical-boost",
+        "level": 1
+      },
+      {
+        "skillId": "coalescence",
+        "level": 1
+      }
+    ],
+    "materials": [
+      {
+        "materialId": "malzeno-scale",
+        "quantity": 4
+      },
+      {
+        "materialId": "malzeno-horn",
+        "quantity": 2
+      }
+    ],
+    "image": "",
+    "setName": null
+  }
+]

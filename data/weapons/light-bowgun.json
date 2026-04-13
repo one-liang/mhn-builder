@@ -1,0 +1,325 @@
+[
+  {
+    "id": "lbg-iron",
+    "name": "鐵製輕弩",
+    "nameEn": "Iron Bowgun",
+    "type": "light-bowgun",
+    "rarity": 1,
+    "attack": 156,
+    "element": null,
+    "affinity": 0,
+    "skills": [],
+    "materials": [
+      {
+        "materialId": "iron-ore",
+        "quantity": 3
+      }
+    ],
+    "image": "",
+    "setName": null
+  },
+  {
+    "id": "lbg-jyuratodus",
+    "name": "泥魚龍輕弩",
+    "nameEn": "Jyuratodus Bowgun",
+    "type": "light-bowgun",
+    "rarity": 4,
+    "attack": 221,
+    "element": {
+      "type": "water",
+      "value": 210
+    },
+    "affinity": 0,
+    "skills": [
+      {
+        "skillId": "water-attack",
+        "level": 1
+      }
+    ],
+    "materials": [
+      {
+        "materialId": "jyuratodus-fin",
+        "quantity": 4
+      },
+      {
+        "materialId": "jyuratodus-fang",
+        "quantity": 2
+      }
+    ],
+    "image": "",
+    "setName": null
+  },
+  {
+    "id": "lbg-kadachi",
+    "name": "飛雷龍輕弩",
+    "nameEn": "Kadachi Bowgun",
+    "type": "light-bowgun",
+    "rarity": 5,
+    "attack": 247,
+    "element": {
+      "type": "thunder",
+      "value": 240
+    },
+    "affinity": 10,
+    "skills": [
+      {
+        "skillId": "thunder-attack",
+        "level": 1
+      }
+    ],
+    "materials": [
+      {
+        "materialId": "kadachi-electrode",
+        "quantity": 3
+      },
+      {
+        "materialId": "kadachi-membrane",
+        "quantity": 3
+      }
+    ],
+    "image": "",
+    "setName": null
+  },
+  {
+    "id": "lbg-rathalos",
+    "name": "火龍輕弩",
+    "nameEn": "Rathalos Bowgun",
+    "type": "light-bowgun",
+    "rarity": 6,
+    "attack": 273,
+    "element": {
+      "type": "fire",
+      "value": 300
+    },
+    "affinity": 0,
+    "skills": [
+      {
+        "skillId": "fire-attack",
+        "level": 1
+      },
+      {
+        "skillId": "attack-boost",
+        "level": 1
+      }
+    ],
+    "materials": [
+      {
+        "materialId": "rathalos-wingtalon",
+        "quantity": 4
+      },
+      {
+        "materialId": "rathalos-tail",
+        "quantity": 1
+      }
+    ],
+    "image": "",
+    "setName": null
+  },
+  {
+    "id": "lbg-legiana",
+    "name": "風漂龍輕弩",
+    "nameEn": "Legiana Bowgun",
+    "type": "light-bowgun",
+    "rarity": 5,
+    "attack": 247,
+    "element": {
+      "type": "ice",
+      "value": 270
+    },
+    "affinity": 10,
+    "skills": [
+      {
+        "skillId": "ice-attack",
+        "level": 1
+      },
+      {
+        "skillId": "reload-speed",
+        "level": 1
+      }
+    ],
+    "materials": [
+      {
+        "materialId": "legiana-webbing",
+        "quantity": 4
+      },
+      {
+        "materialId": "legiana-plate",
+        "quantity": 1
+      }
+    ],
+    "image": "",
+    "setName": null
+  },
+  {
+    "id": "lbg-odogaron",
+    "name": "兇爪龍輕弩",
+    "nameEn": "Odogaron Bowgun",
+    "type": "light-bowgun",
+    "rarity": 6,
+    "attack": 260,
+    "element": null,
+    "affinity": 25,
+    "skills": [
+      {
+        "skillId": "critical-eye",
+        "level": 1
+      },
+      {
+        "skillId": "recoil-down",
+        "level": 1
+      }
+    ],
+    "materials": [
+      {
+        "materialId": "odogaron-sinew",
+        "quantity": 3
+      },
+      {
+        "materialId": "odogaron-claw",
+        "quantity": 4
+      }
+    ],
+    "image": "",
+    "setName": null
+  },
+  {
+    "id": "lbg-zinogre",
+    "name": "雷狼龍輕弩",
+    "nameEn": "Zinogre Bowgun",
+    "type": "light-bowgun",
+    "rarity": 6,
+    "attack": 273,
+    "element": {
+      "type": "thunder",
+      "value": 330
+    },
+    "affinity": 0,
+    "skills": [
+      {
+        "skillId": "thunder-attack",
+        "level": 1
+      },
+      {
+        "skillId": "latent-power",
+        "level": 1
+      }
+    ],
+    "materials": [
+      {
+        "materialId": "zinogre-shocker",
+        "quantity": 3
+      },
+      {
+        "materialId": "zinogre-shell",
+        "quantity": 4
+      }
+    ],
+    "image": "",
+    "setName": null
+  },
+  {
+    "id": "lbg-kushala",
+    "name": "鋼龍輕弩",
+    "nameEn": "Kushala Bowgun",
+    "type": "light-bowgun",
+    "rarity": 8,
+    "attack": 286,
+    "element": {
+      "type": "ice",
+      "value": 420
+    },
+    "affinity": 0,
+    "skills": [
+      {
+        "skillId": "ice-attack",
+        "level": 1
+      },
+      {
+        "skillId": "kushala-frostwind",
+        "level": 1
+      }
+    ],
+    "materials": [
+      {
+        "materialId": "kushala-tail",
+        "quantity": 2
+      },
+      {
+        "materialId": "kushala-horn",
+        "quantity": 1
+      }
+    ],
+    "image": "",
+    "setName": null
+  },
+  {
+    "id": "lbg-kaiser",
+    "name": "炎王龍輕弩",
+    "nameEn": "Kaiser Bowgun",
+    "type": "light-bowgun",
+    "rarity": 8,
+    "attack": 286,
+    "element": {
+      "type": "blast",
+      "value": 360
+    },
+    "affinity": 0,
+    "skills": [
+      {
+        "skillId": "blast-attack",
+        "level": 1
+      },
+      {
+        "skillId": "teostra-blastpowder",
+        "level": 1
+      }
+    ],
+    "materials": [
+      {
+        "materialId": "teostra-horn",
+        "quantity": 1
+      },
+      {
+        "materialId": "teostra-tail",
+        "quantity": 2
+      }
+    ],
+    "image": "",
+    "setName": null
+  },
+  {
+    "id": "lbg-malzeno",
+    "name": "爵銀龍輕弩",
+    "nameEn": "Malzeno Bowgun",
+    "type": "light-bowgun",
+    "rarity": 9,
+    "attack": 312,
+    "element": {
+      "type": "dragon",
+      "value": 420
+    },
+    "affinity": 15,
+    "skills": [
+      {
+        "skillId": "critical-boost",
+        "level": 1
+      },
+      {
+        "skillId": "coalescence",
+        "level": 1
+      }
+    ],
+    "materials": [
+      {
+        "materialId": "malzeno-scale",
+        "quantity": 4
+      },
+      {
+        "materialId": "malzeno-horn",
+        "quantity": 2
+      }
+    ],
+    "image": "",
+    "setName": null
+  }
+]

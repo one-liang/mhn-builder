@@ -1,0 +1,309 @@
+[
+  {
+    "id": "sns-iron-sword",
+    "name": "鐵製片手劍",
+    "nameEn": "Iron Sword & Shield",
+    "type": "sword-and-shield",
+    "rarity": 1,
+    "attack": 168,
+    "element": null,
+    "affinity": 0,
+    "skills": [],
+    "materials": [
+      {
+        "materialId": "iron-ore",
+        "quantity": 3
+      }
+    ],
+    "image": "",
+    "setName": null
+  },
+  {
+    "id": "sns-jagras-edge",
+    "name": "大凶豺龍片手劍",
+    "nameEn": "Jagras Edge",
+    "type": "sword-and-shield",
+    "rarity": 3,
+    "attack": 231,
+    "element": null,
+    "affinity": 0,
+    "skills": [
+      {
+        "skillId": "health-boost",
+        "level": 1
+      }
+    ],
+    "materials": [
+      {
+        "materialId": "jagras-claw",
+        "quantity": 4
+      },
+      {
+        "materialId": "jagras-hide",
+        "quantity": 2
+      }
+    ],
+    "image": "",
+    "setName": null
+  },
+  {
+    "id": "sns-pukei-sword",
+    "name": "毒妖鳥片手劍",
+    "nameEn": "Pukei Sword",
+    "type": "sword-and-shield",
+    "rarity": 4,
+    "attack": 273,
+    "element": {
+      "type": "poison",
+      "value": 210
+    },
+    "affinity": 0,
+    "skills": [
+      {
+        "skillId": "poison-attack",
+        "level": 1
+      }
+    ],
+    "materials": [
+      {
+        "materialId": "pukei-scale",
+        "quantity": 4
+      },
+      {
+        "materialId": "pukei-sac",
+        "quantity": 2
+      }
+    ],
+    "image": "",
+    "setName": null
+  },
+  {
+    "id": "sns-girros-blade",
+    "name": "痺毒龍片手劍",
+    "nameEn": "Girros Blade",
+    "type": "sword-and-shield",
+    "rarity": 4,
+    "attack": 252,
+    "element": {
+      "type": "paralysis",
+      "value": 180
+    },
+    "affinity": 0,
+    "skills": [
+      {
+        "skillId": "paralysis-attack",
+        "level": 1
+      }
+    ],
+    "materials": [
+      {
+        "materialId": "girros-fang",
+        "quantity": 4
+      },
+      {
+        "materialId": "girros-hood",
+        "quantity": 2
+      }
+    ],
+    "image": "",
+    "setName": null
+  },
+  {
+    "id": "sns-anjanath-sword",
+    "name": "蠻顎龍片手劍",
+    "nameEn": "Anjanath Sword",
+    "type": "sword-and-shield",
+    "rarity": 5,
+    "attack": 315,
+    "element": {
+      "type": "fire",
+      "value": 270
+    },
+    "affinity": -10,
+    "skills": [
+      {
+        "skillId": "fire-attack",
+        "level": 1
+      }
+    ],
+    "materials": [
+      {
+        "materialId": "anjanath-fang",
+        "quantity": 4
+      },
+      {
+        "materialId": "anjanath-nosebone",
+        "quantity": 1
+      }
+    ],
+    "image": "",
+    "setName": null
+  },
+  {
+    "id": "sns-rathalos-sword",
+    "name": "火龍片手劍",
+    "nameEn": "Rathalos Sword",
+    "type": "sword-and-shield",
+    "rarity": 6,
+    "attack": 336,
+    "element": {
+      "type": "fire",
+      "value": 300
+    },
+    "affinity": 0,
+    "skills": [
+      {
+        "skillId": "attack-boost",
+        "level": 1
+      },
+      {
+        "skillId": "fire-attack",
+        "level": 1
+      }
+    ],
+    "materials": [
+      {
+        "materialId": "rathalos-wingtalon",
+        "quantity": 4
+      },
+      {
+        "materialId": "rathalos-marrow",
+        "quantity": 1
+      }
+    ],
+    "image": "",
+    "setName": null
+  },
+  {
+    "id": "sns-legiana-sword",
+    "name": "風漂龍片手劍",
+    "nameEn": "Legiana Sword",
+    "type": "sword-and-shield",
+    "rarity": 5,
+    "attack": 294,
+    "element": {
+      "type": "ice",
+      "value": 270
+    },
+    "affinity": 10,
+    "skills": [
+      {
+        "skillId": "ice-attack",
+        "level": 1
+      }
+    ],
+    "materials": [
+      {
+        "materialId": "legiana-claw",
+        "quantity": 4
+      },
+      {
+        "materialId": "legiana-plate",
+        "quantity": 1
+      }
+    ],
+    "image": "",
+    "setName": null
+  },
+  {
+    "id": "sns-barioth-sword",
+    "name": "冰牙龍片手劍",
+    "nameEn": "Barioth Sword",
+    "type": "sword-and-shield",
+    "rarity": 6,
+    "attack": 315,
+    "element": {
+      "type": "ice",
+      "value": 300
+    },
+    "affinity": 15,
+    "skills": [
+      {
+        "skillId": "ice-attack",
+        "level": 1
+      },
+      {
+        "skillId": "critical-eye",
+        "level": 1
+      }
+    ],
+    "materials": [
+      {
+        "materialId": "barioth-claw",
+        "quantity": 4
+      },
+      {
+        "materialId": "barioth-spike",
+        "quantity": 2
+      }
+    ],
+    "image": "",
+    "setName": null
+  },
+  {
+    "id": "sns-kaiser-sword",
+    "name": "炎王龍片手劍",
+    "nameEn": "Kaiser Sword",
+    "type": "sword-and-shield",
+    "rarity": 8,
+    "attack": 378,
+    "element": {
+      "type": "blast",
+      "value": 360
+    },
+    "affinity": 0,
+    "skills": [
+      {
+        "skillId": "teostra-blastpowder",
+        "level": 1
+      },
+      {
+        "skillId": "blast-attack",
+        "level": 1
+      }
+    ],
+    "materials": [
+      {
+        "materialId": "teostra-mane",
+        "quantity": 4
+      },
+      {
+        "materialId": "teostra-gem",
+        "quantity": 1
+      }
+    ],
+    "image": "",
+    "setName": null
+  },
+  {
+    "id": "sns-malzeno-sword",
+    "name": "爵銀龍片手劍",
+    "nameEn": "Malzeno Sword",
+    "type": "sword-and-shield",
+    "rarity": 9,
+    "attack": 399,
+    "element": {
+      "type": "dragon",
+      "value": 390
+    },
+    "affinity": 15,
+    "skills": [
+      {
+        "skillId": "critical-boost",
+        "level": 1
+      }
+    ],
+    "materials": [
+      {
+        "materialId": "malzeno-scale",
+        "quantity": 4
+      },
+      {
+        "materialId": "malzeno-horn",
+        "quantity": 2
+      }
+    ],
+    "image": "",
+    "setName": null
+  }
+]

@@ -1,0 +1,1340 @@
+[
+  {
+    "id": "leather-legs",
+    "name": "皮製長褲",
+    "nameEn": "",
+    "setName": "皮製",
+    "setNameEn": "Leather",
+    "part": "legs",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "poison-resistance",
+        "level": 1
+      },
+      {
+        "skillId": "paralysis-resistance",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "alloy-legs",
+    "name": "合金護腿",
+    "nameEn": "",
+    "setName": "合金",
+    "setNameEn": "Alloy",
+    "part": "legs",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "lock-on",
+        "level": 1
+      },
+      {
+        "skillId": "windproof",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "jagras-legs",
+    "name": "凶豺龍護腿",
+    "nameEn": "",
+    "setName": "凶豺龍",
+    "setNameEn": "Great Jagras",
+    "part": "legs",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "water-attack",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "kulu-legs",
+    "name": "搔鳥護腿",
+    "nameEn": "",
+    "setName": "搔鳥",
+    "setNameEn": "Kulu-Ya-Ku",
+    "part": "legs",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "critical-eye",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "pukei-legs",
+    "name": "毒妖鳥護腿",
+    "nameEn": "",
+    "setName": "毒妖鳥",
+    "setNameEn": "Pukei-Pukei",
+    "part": "legs",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "health-boost",
+        "level": 1
+      },
+      {
+        "skillId": "poison-resistance",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 2,
+    "image": ""
+  },
+  {
+    "id": "coral-pukei-legs",
+    "name": "妖水護腿",
+    "nameEn": "",
+    "setName": "妖水",
+    "setNameEn": "Coral Pukei-Pukei",
+    "part": "legs",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "power-prolonger",
+        "level": 1
+      },
+      {
+        "skillId": "weakness-exploit",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "barroth-legs",
+    "name": "土砂龍護腿",
+    "nameEn": "",
+    "setName": "土砂龍",
+    "setNameEn": "Barroth",
+    "part": "legs",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "recoil-down",
+        "level": 1
+      },
+      {
+        "skillId": "defense-boost",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "girros-legs",
+    "name": "凶顎龍護腿",
+    "nameEn": "",
+    "setName": "凶顎龍",
+    "setNameEn": "Great Girros",
+    "part": "legs",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "paralysis-attack",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "kadachi-legs",
+    "name": "飛雷龍護腿",
+    "nameEn": "",
+    "setName": "飛雷龍",
+    "setNameEn": "Tobi-Kadachi",
+    "part": "legs",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "artful-dodger",
+        "level": 1
+      },
+      {
+        "skillId": "thunder-resistance",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "viper-kadachi-legs",
+    "name": "朱毒護腿",
+    "nameEn": "",
+    "setName": "朱毒",
+    "setNameEn": "Viper Tobi-Kadachi",
+    "part": "legs",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "burst-peak",
+        "level": 1
+      },
+      {
+        "skillId": "follow-up-poison",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "paolumu-legs",
+    "name": "浮空龍護腿",
+    "nameEn": "",
+    "setName": "浮空龍",
+    "setNameEn": "Paolumu",
+    "part": "legs",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "windproof",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "nightshade-paolumu-legs",
+    "name": "浮夢護腿",
+    "nameEn": "",
+    "setName": "浮夢",
+    "setNameEn": "Nightshade Paolumu",
+    "part": "legs",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "awakening-strike",
+        "level": 1
+      },
+      {
+        "skillId": "status-sneak-attack",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "jyuratodus-legs",
+    "name": "泥魚龍護腿",
+    "nameEn": "",
+    "setName": "泥魚龍",
+    "setNameEn": "Jyuratodus",
+    "part": "legs",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "focus",
+        "level": 1
+      },
+      {
+        "skillId": "last-stand-guard",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "anjanath-legs",
+    "name": "蠻顎龍護腿",
+    "nameEn": "",
+    "setName": "蠻顎龍",
+    "setNameEn": "Anjanath",
+    "part": "legs",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "peak-performance",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "fulgur-anjanath-legs",
+    "name": "雷顎護腿",
+    "nameEn": "",
+    "setName": "雷顎",
+    "setNameEn": "Fulgur Anjanath",
+    "part": "legs",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "sp-meter-boost",
+        "level": 1
+      },
+      {
+        "skillId": "brute-force",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "rathian-legs",
+    "name": "雌火龍護腿",
+    "nameEn": "",
+    "setName": "雌火龍",
+    "setNameEn": "Rathian",
+    "part": "legs",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "health-boost",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 2,
+    "image": ""
+  },
+  {
+    "id": "pink-rathian-legs",
+    "name": "火龍心護腿",
+    "nameEn": "",
+    "setName": "火龍心",
+    "setNameEn": "Pink Rathian",
+    "part": "legs",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "special-boost",
+        "level": 2
+      },
+      {
+        "skillId": "dragon-attack",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "gold-rathian-legs",
+    "name": "金黃澄月護腿",
+    "nameEn": "",
+    "setName": "金黃澄月",
+    "setNameEn": "Gold Rathian",
+    "part": "legs",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "follow-up-poison",
+        "level": 1
+      },
+      {
+        "skillId": "poison-attack",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "legiana-legs",
+    "name": "風漂龍護腿",
+    "nameEn": "",
+    "setName": "風漂龍",
+    "setNameEn": "Legiana",
+    "part": "legs",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "reload-speed",
+        "level": 1
+      },
+      {
+        "skillId": "ice-resistance",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "diablos-legs",
+    "name": "角龍護腿",
+    "nameEn": "",
+    "setName": "角龍",
+    "setNameEn": "Diablos",
+    "part": "legs",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "slugger",
+        "level": 2
+      },
+      {
+        "skillId": "partbreaker",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "black-diablos-legs",
+    "name": "暴君角龍護腿",
+    "nameEn": "",
+    "setName": "暴君角龍",
+    "setNameEn": "Black Diablos",
+    "part": "legs",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "heroics",
+        "level": 1
+      },
+      {
+        "skillId": "offensive-guard",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "rathalos-legs",
+    "name": "火龍護腿",
+    "nameEn": "",
+    "setName": "火龍",
+    "setNameEn": "Rathalos",
+    "part": "legs",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "fire-resistance",
+        "level": 1
+      },
+      {
+        "skillId": "weakness-exploit",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "azure-rathalos-legs",
+    "name": "火龍魂護腿",
+    "nameEn": "",
+    "setName": "火龍魂",
+    "setNameEn": "Azure Rathalos",
+    "part": "legs",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "reload-speed",
+        "level": 2
+      },
+      {
+        "skillId": "fire-attack",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "silver-rathalos-legs",
+    "name": "銀白耀日護腿",
+    "nameEn": "",
+    "setName": "銀白耀日",
+    "setNameEn": "Silver Rathalos",
+    "part": "legs",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "critical-element",
+        "level": 1
+      },
+      {
+        "skillId": "weakness-exploit",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "zinogre-legs",
+    "name": "雷狼龍護腿",
+    "nameEn": "",
+    "setName": "雷狼龍",
+    "setNameEn": "Zinogre",
+    "part": "legs",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "burst",
+        "level": 1
+      },
+      {
+        "skillId": "thunder-attack",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "tzitzi-legs",
+    "name": "眩鳥護腿",
+    "nameEn": "",
+    "setName": "眩鳥",
+    "setNameEn": "Tzitzi-Ya-Ku",
+    "part": "legs",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "fortify",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 2,
+    "image": ""
+  },
+  {
+    "id": "odogaron-legs",
+    "name": "慘爪龍護腿",
+    "nameEn": "",
+    "setName": "慘爪龍",
+    "setNameEn": "Odogaron",
+    "part": "legs",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "sp-meter-boost-dodge",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "ebony-odogaron-legs",
+    "name": "亡爪護腿",
+    "nameEn": "",
+    "setName": "亡爪",
+    "setNameEn": "Ebony Odogaron",
+    "part": "legs",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "dragon-attack",
+        "level": 1
+      },
+      {
+        "skillId": "evade-extender",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "vangis-legs",
+    "name": "恐暴龍護腿",
+    "nameEn": "",
+    "setName": "恐暴龍",
+    "setNameEn": "Deviljho",
+    "part": "legs",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "guts",
+        "level": 1
+      },
+      {
+        "skillId": "latent-power",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "basarios-legs",
+    "name": "岩龍護腿",
+    "nameEn": "",
+    "setName": "岩龍",
+    "setNameEn": "Basarios",
+    "part": "legs",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "artillery",
+        "level": 1
+      },
+      {
+        "skillId": "guard",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "khezu-legs",
+    "name": "奇怪龍護腿",
+    "nameEn": "",
+    "setName": "奇怪龍",
+    "setNameEn": "Khezu",
+    "part": "legs",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "focus",
+        "level": 1
+      },
+      {
+        "skillId": "slugger",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "kushala-legs",
+    "name": "鋼龍踏實",
+    "nameEn": "",
+    "setName": "鋼龍",
+    "setNameEn": "Kushala Daora",
+    "part": "legs",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "kushala-frostwind",
+        "level": 1
+      },
+      {
+        "skillId": "skyward-striker",
+        "level": 1
+      },
+      {
+        "skillId": "artful-dodger",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "mizutsune-legs",
+    "name": "泡狐龍護腿",
+    "nameEn": "",
+    "setName": "泡狐龍",
+    "setNameEn": "Mizutsune",
+    "part": "legs",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "resuscitate",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "kaiser-legs",
+    "name": "帝王護腿",
+    "nameEn": "",
+    "setName": "帝王",
+    "setNameEn": "Teostra",
+    "part": "legs",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "teostra-blastpowder",
+        "level": 1
+      },
+      {
+        "skillId": "critical-boost",
+        "level": 1
+      },
+      {
+        "skillId": "evade-extender",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "aknosom-legs",
+    "name": "傘鳥護腿",
+    "nameEn": "",
+    "setName": "傘鳥",
+    "setNameEn": "Aknosom",
+    "part": "legs",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "fire-attack",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "sinister-legs",
+    "name": "禍鎧【腿甲】",
+    "nameEn": "",
+    "setName": "禍鎧",
+    "setNameEn": "Magnamalo",
+    "part": "legs",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "blast-attack",
+        "level": 1
+      },
+      {
+        "skillId": "sneak-attack",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "rajang-legs",
+    "name": "金色下裳",
+    "nameEn": "",
+    "setName": "金色",
+    "setNameEn": "Rajang",
+    "part": "legs",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "resentment",
+        "level": 1
+      },
+      {
+        "skillId": "tremor-resistance",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "nergigante-legs",
+    "name": "戰紋護腿",
+    "nameEn": "",
+    "setName": "戰紋",
+    "setNameEn": "Nergigante",
+    "part": "legs",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "nergigante-hunger",
+        "level": 1
+      },
+      {
+        "skillId": "reload-speed",
+        "level": 1
+      },
+      {
+        "skillId": "recoil-down",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "lagombi-legs",
+    "name": "白兔獸護腿",
+    "nameEn": "",
+    "setName": "白兔獸",
+    "setNameEn": "Lagombi",
+    "part": "legs",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "ice-attack",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "volvidon-legs",
+    "name": "赤甲獸護腿",
+    "nameEn": "",
+    "setName": "赤甲獸",
+    "setNameEn": "Volvidon",
+    "part": "legs",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "paralysis-resistance",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "somnacanth-legs",
+    "name": "人魚龍護腿",
+    "nameEn": "",
+    "setName": "人魚龍",
+    "setNameEn": "Somnacanth",
+    "part": "legs",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "status-sneak-attack",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "tigrex-legs",
+    "name": "轟龍護腿",
+    "nameEn": "",
+    "setName": "轟龍",
+    "setNameEn": "Tigrex",
+    "part": "legs",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "lock-on",
+        "level": 1
+      },
+      {
+        "skillId": "partbreaker",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "brute-tigrex-legs",
+    "name": "轟吼護腿",
+    "nameEn": "",
+    "setName": "轟吼",
+    "setNameEn": "Brute Tigrex",
+    "part": "legs",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "attack-boost-peak",
+        "level": 1
+      },
+      {
+        "skillId": "offensive-dodger",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "kirin-legs",
+    "name": "麒麟護脛",
+    "nameEn": "",
+    "setName": "麒麟",
+    "setNameEn": "Kirin",
+    "part": "legs",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "rajang-thunderclap",
+        "level": 1
+      },
+      {
+        "skillId": "recoil-down",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "bazelgeuse-legs",
+    "name": "爆鱗龍護腿",
+    "nameEn": "",
+    "setName": "爆鱗龍",
+    "setNameEn": "Bazelgeuse",
+    "part": "legs",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "valor",
+        "level": 1
+      },
+      {
+        "skillId": "blast-attack",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "chatacabra-legs",
+    "name": "纏蛙護腿",
+    "nameEn": "",
+    "setName": "纏蛙",
+    "setNameEn": "Chatacabra",
+    "part": "legs",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "defense-ready",
+        "level": 1
+      },
+      {
+        "skillId": "dodge-load",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "arzuros-legs",
+    "name": "青熊獸護腿",
+    "nameEn": "",
+    "setName": "青熊獸",
+    "setNameEn": "Arzuros",
+    "part": "legs",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "maximum-might",
+        "level": 1
+      },
+      {
+        "skillId": "special-boost",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "glavenus-legs",
+    "name": "斬龍護腿",
+    "nameEn": "",
+    "setName": "斬龍",
+    "setNameEn": "Glavenus",
+    "part": "legs",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "burst",
+        "level": 1
+      },
+      {
+        "skillId": "artful-dodger",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "chameleos-legs",
+    "name": "霞龍劍裝【腿甲】",
+    "nameEn": "",
+    "setName": "霞龍",
+    "setNameEn": "Chameleos",
+    "part": "legs",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "chameleos-miasma",
+        "level": 1
+      },
+      {
+        "skillId": "offensive-guard",
+        "level": 1
+      },
+      {
+        "skillId": "guard",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "wroggi-legs",
+    "name": "毒狗龍護腿",
+    "nameEn": "",
+    "setName": "毒狗龍",
+    "setNameEn": "Great Wroggi",
+    "part": "legs",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "final-shot",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "bishaten-legs",
+    "name": "天狗獸護腿",
+    "nameEn": "",
+    "setName": "天狗獸",
+    "setNameEn": "Bishaten",
+    "part": "legs",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "quick-work",
+        "level": 1
+      },
+      {
+        "skillId": "focus",
+        "level": 2
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "beotodus-legs",
+    "name": "冰魚龍護腿",
+    "nameEn": "",
+    "setName": "冰魚龍",
+    "setNameEn": "Beotodus",
+    "part": "legs",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "charge-shockwave-boost",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "nargacuga-legs",
+    "name": "迅龍護腿",
+    "nameEn": "",
+    "setName": "迅龍",
+    "setNameEn": "Nargacuga",
+    "part": "legs",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "status-hit-boost",
+        "level": 1
+      },
+      {
+        "skillId": "artful-dodger",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "namielle-legs",
+    "name": "觸角護腿",
+    "nameEn": "",
+    "setName": "觸角",
+    "setNameEn": "Namielle",
+    "part": "legs",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "namielle-thunderwave",
+        "level": 1
+      },
+      {
+        "skillId": "aggressive-dodger",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "garangolm-legs",
+    "name": "剛纏獸護腿",
+    "nameEn": "",
+    "setName": "剛纏獸",
+    "setNameEn": "Garangolm",
+    "part": "legs",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "resolute",
+        "level": 1
+      },
+      {
+        "skillId": "lock-on",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "lunagaron-legs",
+    "name": "冰狼龍護腿",
+    "nameEn": "",
+    "setName": "冰狼龍",
+    "setNameEn": "Lunagaron",
+    "part": "legs",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "ballistics",
+        "level": 1
+      },
+      {
+        "skillId": "burst",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "espinas-legs",
+    "name": "棘龍腳跟",
+    "nameEn": "",
+    "setName": "棘龍",
+    "setNameEn": "Espinas",
+    "part": "legs",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "hi-fire",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "malzeno-legs",
+    "name": "爵銀龍護腿",
+    "nameEn": "",
+    "setName": "爵銀龍",
+    "setNameEn": "Malzeno",
+    "part": "legs",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "valstrax-bloodspray",
+        "level": 1
+      },
+      {
+        "skillId": "follow-up",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "quematrice-legs",
+    "name": "炎尾龍護腿",
+    "nameEn": "",
+    "setName": "炎尾龍",
+    "setNameEn": "Quematrice",
+    "part": "legs",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "attack-boost",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "gossharag-legs",
+    "name": "雪鬼獸護腿",
+    "nameEn": "",
+    "setName": "雪鬼獸",
+    "setNameEn": "Gossharag",
+    "part": "legs",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "morph-boost",
+        "level": 1
+      },
+      {
+        "skillId": "lock-on",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "astalos-legs",
+    "name": "電龍護腿",
+    "nameEn": "",
+    "setName": "電龍",
+    "setNameEn": "Astalos",
+    "part": "legs",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "thunder-attack-peak",
+        "level": 1
+      },
+      {
+        "skillId": "thunder-attack",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "almudron-legs",
+    "name": "泥翁龍護腿",
+    "nameEn": "",
+    "setName": "泥翁龍",
+    "setNameEn": "Almudron",
+    "part": "legs",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "quick-work",
+        "level": 1
+      },
+      {
+        "skillId": "lock-on",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "seregios-legs",
+    "name": "千刃龍護腿",
+    "nameEn": "",
+    "setName": "千刃龍",
+    "setNameEn": "Seregios",
+    "part": "legs",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "attack-activation",
+        "level": 1
+      },
+      {
+        "skillId": "lock-on",
+        "level": 1
+      },
+      {
+        "skillId": "offensive-guard",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "radobaan-legs",
+    "name": "骨鎚龍護腿",
+    "nameEn": "",
+    "setName": "骨鎚龍",
+    "setNameEn": "Radobaan",
+    "part": "legs",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "sleep-resistance",
+        "level": 1
+      },
+      {
+        "skillId": "guard",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "banbaro-legs",
+    "name": "猛牛龍護腿",
+    "nameEn": "",
+    "setName": "猛牛龍",
+    "setNameEn": "Banbaro",
+    "part": "legs",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "divine-blessing",
+        "level": 1
+      },
+      {
+        "skillId": "sp-meter-boost",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  },
+  {
+    "id": "barioth-legs",
+    "name": "冰牙龍護腿",
+    "nameEn": "",
+    "setName": "冰牙龍",
+    "setNameEn": "Barioth",
+    "part": "legs",
+    "defense": 182,
+    "skills": [
+      {
+        "skillId": "sneak-attack",
+        "level": 1
+      },
+      {
+        "skillId": "evade-extender",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": ""
+  }
+]

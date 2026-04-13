@@ -1,0 +1,1219 @@
+[
+  {
+    "id": "abnormal-status-enhancement",
+    "name": "奇襲【狀態異常】",
+    "nameEn": "Abnormal Status Enhancement",
+    "description": "",
+    "maxLevel": 3,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": ""
+      },
+      {
+        "level": 2,
+        "effect": ""
+      },
+      {
+        "level": 3,
+        "effect": ""
+      }
+    ]
+  },
+  {
+    "id": "airborne",
+    "name": "輕巧",
+    "nameEn": "Airborne",
+    "description": "",
+    "maxLevel": 3,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": ""
+      },
+      {
+        "level": 2,
+        "effect": ""
+      },
+      {
+        "level": 3,
+        "effect": ""
+      }
+    ]
+  },
+  {
+    "id": "armor-up",
+    "name": "防禦準備",
+    "nameEn": "Armor Up",
+    "description": "",
+    "maxLevel": 3,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": ""
+      },
+      {
+        "level": 2,
+        "effect": ""
+      },
+      {
+        "level": 3,
+        "effect": ""
+      }
+    ]
+  },
+  {
+    "id": "attack-boost-secret",
+    "name": "攻擊．境界",
+    "nameEn": "Attack Boost Secret",
+    "description": "",
+    "maxLevel": 5,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": ""
+      },
+      {
+        "level": 2,
+        "effect": ""
+      },
+      {
+        "level": 3,
+        "effect": ""
+      },
+      {
+        "level": 4,
+        "effect": ""
+      },
+      {
+        "level": 5,
+        "effect": ""
+      }
+    ]
+  },
+  {
+    "id": "attack-up-critical-down",
+    "name": "蠻力",
+    "nameEn": "Attack Up Critical Down",
+    "description": "",
+    "maxLevel": 3,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": ""
+      },
+      {
+        "level": 2,
+        "effect": ""
+      },
+      {
+        "level": 3,
+        "effect": ""
+      }
+    ]
+  },
+  {
+    "id": "auto-just-dodge",
+    "name": "絕對迴避【SP】",
+    "nameEn": "Auto Just Dodge",
+    "description": "",
+    "maxLevel": 3,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": ""
+      },
+      {
+        "level": 2,
+        "effect": ""
+      },
+      {
+        "level": 3,
+        "effect": ""
+      }
+    ]
+  },
+  {
+    "id": "ballistic",
+    "name": "彈道強化",
+    "nameEn": "Ballistic",
+    "description": "",
+    "maxLevel": 3,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": ""
+      },
+      {
+        "level": 2,
+        "effect": ""
+      },
+      {
+        "level": 3,
+        "effect": ""
+      }
+    ]
+  },
+  {
+    "id": "blast-resistance",
+    "name": "爆破異常耐性",
+    "nameEn": "Blast Resistance",
+    "description": "",
+    "maxLevel": 3,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": ""
+      },
+      {
+        "level": 2,
+        "effect": ""
+      },
+      {
+        "level": 3,
+        "effect": ""
+      }
+    ]
+  },
+  {
+    "id": "bloodblight-cloak",
+    "name": "劫血纏身",
+    "nameEn": "Bloodblight Cloak",
+    "description": "",
+    "maxLevel": 1,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": ""
+      }
+    ]
+  },
+  {
+    "id": "bravery",
+    "name": "勇猛",
+    "nameEn": "Bravery",
+    "description": "",
+    "maxLevel": 3,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": ""
+      },
+      {
+        "level": 2,
+        "effect": ""
+      },
+      {
+        "level": 3,
+        "effect": ""
+      }
+    ]
+  },
+  {
+    "id": "break-attack-boost",
+    "name": "追擊",
+    "nameEn": "Break Attack Boost",
+    "description": "",
+    "maxLevel": 3,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": ""
+      },
+      {
+        "level": 2,
+        "effect": ""
+      },
+      {
+        "level": 3,
+        "effect": ""
+      }
+    ]
+  },
+  {
+    "id": "brutal-strike",
+    "name": "凶會心",
+    "nameEn": "Brutal Strike",
+    "description": "",
+    "maxLevel": 3,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": ""
+      },
+      {
+        "level": 2,
+        "effect": ""
+      },
+      {
+        "level": 3,
+        "effect": ""
+      }
+    ]
+  },
+  {
+    "id": "buildup-boost",
+    "name": "累積狀態異常時威力UP",
+    "nameEn": "Buildup Boost",
+    "description": "",
+    "maxLevel": 3,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": ""
+      },
+      {
+        "level": 2,
+        "effect": ""
+      },
+      {
+        "level": 3,
+        "effect": ""
+      }
+    ]
+  },
+  {
+    "id": "burst-dodger",
+    "name": "完美巧擊【持續】",
+    "nameEn": "Burst Dodger",
+    "description": "",
+    "maxLevel": 3,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": ""
+      },
+      {
+        "level": 2,
+        "effect": ""
+      },
+      {
+        "level": 3,
+        "effect": ""
+      }
+    ]
+  },
+  {
+    "id": "burst-secret",
+    "name": "連擊．境界",
+    "nameEn": "Burst Secret",
+    "description": "",
+    "maxLevel": 5,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": ""
+      },
+      {
+        "level": 2,
+        "effect": ""
+      },
+      {
+        "level": 3,
+        "effect": ""
+      },
+      {
+        "level": 4,
+        "effect": ""
+      },
+      {
+        "level": 5,
+        "effect": ""
+      }
+    ]
+  },
+  {
+    "id": "chameleos-poison",
+    "name": "霞龍的毒霧",
+    "nameEn": "Chameleos Poison",
+    "description": "",
+    "maxLevel": 3,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": ""
+      },
+      {
+        "level": 2,
+        "effect": ""
+      },
+      {
+        "level": 3,
+        "effect": ""
+      }
+    ]
+  },
+  {
+    "id": "charge-up",
+    "name": "蓄攻、響音強化",
+    "nameEn": "Charge Up",
+    "description": "",
+    "maxLevel": 3,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": ""
+      },
+      {
+        "level": 2,
+        "effect": ""
+      },
+      {
+        "level": 3,
+        "effect": ""
+      }
+    ]
+  },
+  {
+    "id": "concentration",
+    "name": "SP計量表加速",
+    "nameEn": "Concentration",
+    "description": "",
+    "maxLevel": 3,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": ""
+      },
+      {
+        "level": 2,
+        "effect": ""
+      },
+      {
+        "level": 3,
+        "effect": ""
+      }
+    ]
+  },
+  {
+    "id": "deathgaron",
+    "name": "堅忍不拔",
+    "nameEn": "Deathgaron",
+    "description": "",
+    "maxLevel": 2,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": ""
+      },
+      {
+        "level": 2,
+        "effect": ""
+      }
+    ]
+  },
+  {
+    "id": "disable-perfect-evade",
+    "name": "果敢",
+    "nameEn": "Disable Perfect Evade",
+    "description": "",
+    "maxLevel": 3,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": ""
+      },
+      {
+        "level": 2,
+        "effect": ""
+      },
+      {
+        "level": 3,
+        "effect": ""
+      }
+    ]
+  },
+  {
+    "id": "ending-shot",
+    "name": "最後一擊",
+    "nameEn": "Ending Shot",
+    "description": "",
+    "maxLevel": 3,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": ""
+      },
+      {
+        "level": 2,
+        "effect": ""
+      },
+      {
+        "level": 3,
+        "effect": ""
+      }
+    ]
+  },
+  {
+    "id": "enhancement-normal-ammo",
+    "name": "通常彈．屬性通常彈強化",
+    "nameEn": "Enhancement Normal Ammo",
+    "description": "",
+    "maxLevel": 3,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": ""
+      },
+      {
+        "level": 2,
+        "effect": ""
+      },
+      {
+        "level": 3,
+        "effect": ""
+      }
+    ]
+  },
+  {
+    "id": "evasive-reload",
+    "name": "迴避裝填",
+    "nameEn": "Evasive Reload",
+    "description": "",
+    "maxLevel": 3,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": ""
+      },
+      {
+        "level": 2,
+        "effect": ""
+      },
+      {
+        "level": 3,
+        "effect": ""
+      }
+    ]
+  },
+  {
+    "id": "feat-of-agility",
+    "name": "行雲流水",
+    "nameEn": "Feat Of Agility",
+    "description": "",
+    "maxLevel": 3,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": ""
+      },
+      {
+        "level": 2,
+        "effect": ""
+      },
+      {
+        "level": 3,
+        "effect": ""
+      }
+    ]
+  },
+  {
+    "id": "guarding-reload",
+    "name": "裝填防禦",
+    "nameEn": "Guarding Reload",
+    "description": "",
+    "maxLevel": 3,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": ""
+      },
+      {
+        "level": 2,
+        "effect": ""
+      },
+      {
+        "level": 3,
+        "effect": ""
+      }
+    ]
+  },
+  {
+    "id": "hellfire-cloak",
+    "name": "鬼火纏身",
+    "nameEn": "Hellfire Cloak",
+    "description": "",
+    "maxLevel": 1,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": ""
+      }
+    ]
+  },
+  {
+    "id": "high-performance-dragon",
+    "name": "高能強化【龍】",
+    "nameEn": "High Performance Dragon",
+    "description": "",
+    "maxLevel": 3,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": ""
+      },
+      {
+        "level": 2,
+        "effect": ""
+      },
+      {
+        "level": 3,
+        "effect": ""
+      }
+    ]
+  },
+  {
+    "id": "high-performance-fire",
+    "name": "高能強化【火】",
+    "nameEn": "High Performance Fire",
+    "description": "",
+    "maxLevel": 3,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": ""
+      },
+      {
+        "level": 2,
+        "effect": ""
+      },
+      {
+        "level": 3,
+        "effect": ""
+      }
+    ]
+  },
+  {
+    "id": "high-performance-ice",
+    "name": "高能強化【冰】",
+    "nameEn": "High Performance Ice",
+    "description": "",
+    "maxLevel": 0,
+    "category": "utility",
+    "levels": []
+  },
+  {
+    "id": "high-performance-thunder",
+    "name": "高能強化【雷】",
+    "nameEn": "High Performance Thunder",
+    "description": "",
+    "maxLevel": 3,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": ""
+      },
+      {
+        "level": 2,
+        "effect": ""
+      },
+      {
+        "level": 3,
+        "effect": ""
+      }
+    ]
+  },
+  {
+    "id": "ice-attack-boost-secret",
+    "name": "冰屬性攻擊強化．境界",
+    "nameEn": "Ice Attack Boost Secret",
+    "description": "",
+    "maxLevel": 5,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": ""
+      },
+      {
+        "level": 2,
+        "effect": ""
+      },
+      {
+        "level": 3,
+        "effect": ""
+      },
+      {
+        "level": 4,
+        "effect": ""
+      },
+      {
+        "level": 5,
+        "effect": ""
+      }
+    ]
+  },
+  {
+    "id": "kirin-robe",
+    "name": "幻獸疾雷",
+    "nameEn": "Kirin Robe",
+    "description": "",
+    "maxLevel": 3,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": ""
+      },
+      {
+        "level": 2,
+        "effect": ""
+      },
+      {
+        "level": 3,
+        "effect": ""
+      }
+    ]
+  },
+  {
+    "id": "kushala-bless",
+    "name": "鋼龍的凍風",
+    "nameEn": "Kushala Bless",
+    "description": "",
+    "maxLevel": 3,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": ""
+      },
+      {
+        "level": 2,
+        "effect": ""
+      },
+      {
+        "level": 3,
+        "effect": ""
+      }
+    ]
+  },
+  {
+    "id": "last-stand",
+    "name": "背水防禦",
+    "nameEn": "Last Stand",
+    "description": "",
+    "maxLevel": 3,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": ""
+      },
+      {
+        "level": 2,
+        "effect": ""
+      },
+      {
+        "level": 3,
+        "effect": ""
+      }
+    ]
+  },
+  {
+    "id": "malzeno-blood",
+    "name": "爵銀龍的紅血",
+    "nameEn": "Malzeno Blood",
+    "description": "",
+    "maxLevel": 3,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": ""
+      },
+      {
+        "level": 2,
+        "effect": ""
+      },
+      {
+        "level": 3,
+        "effect": ""
+      }
+    ]
+  },
+  {
+    "id": "move-forward-strengthen",
+    "name": "勇往直前",
+    "nameEn": "Move Forward Strengthen",
+    "description": "",
+    "maxLevel": 3,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": ""
+      },
+      {
+        "level": 2,
+        "effect": ""
+      },
+      {
+        "level": 3,
+        "effect": ""
+      }
+    ]
+  },
+  {
+    "id": "multi-attack-boost",
+    "name": "團體狩獵強化【攻擊】",
+    "nameEn": "Multi Attack Boost",
+    "description": "",
+    "maxLevel": 3,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": ""
+      },
+      {
+        "level": 2,
+        "effect": ""
+      },
+      {
+        "level": 3,
+        "effect": ""
+      }
+    ]
+  },
+  {
+    "id": "multiplayer-boost",
+    "name": "團體狩獵強化【防禦】",
+    "nameEn": "Multiplayer Boost",
+    "description": "",
+    "maxLevel": 3,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": ""
+      },
+      {
+        "level": 2,
+        "effect": ""
+      },
+      {
+        "level": 3,
+        "effect": ""
+      }
+    ]
+  },
+  {
+    "id": "namielle-wave",
+    "name": "溟波龍的雷浪",
+    "nameEn": "Namielle Wave",
+    "description": "",
+    "maxLevel": 3,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": ""
+      },
+      {
+        "level": 2,
+        "effect": ""
+      },
+      {
+        "level": 3,
+        "effect": ""
+      }
+    ]
+  },
+  {
+    "id": "nergigante-greed",
+    "name": "滅盡龍的渴望",
+    "nameEn": "Nergigante Greed",
+    "description": "",
+    "maxLevel": 3,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": ""
+      },
+      {
+        "level": 2,
+        "effect": ""
+      },
+      {
+        "level": 3,
+        "effect": ""
+      }
+    ]
+  },
+  {
+    "id": "part-break-special-boost",
+    "name": "破壞王【SP技能】",
+    "nameEn": "Part Break Special Boost",
+    "description": "",
+    "maxLevel": 3,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": ""
+      },
+      {
+        "level": 2,
+        "effect": ""
+      },
+      {
+        "level": 3,
+        "effect": ""
+      }
+    ]
+  },
+  {
+    "id": "perfect-evade-attack-boost",
+    "name": "完美巧擊",
+    "nameEn": "Perfect Evade Attack Boost",
+    "description": "",
+    "maxLevel": 3,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": ""
+      },
+      {
+        "level": 2,
+        "effect": ""
+      },
+      {
+        "level": 3,
+        "effect": ""
+      }
+    ]
+  },
+  {
+    "id": "perfect-evade-sp-charge",
+    "name": "SP計量表加速【完美迴避】",
+    "nameEn": "Perfect Evade Sp Charge",
+    "description": "",
+    "maxLevel": 3,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": ""
+      },
+      {
+        "level": 2,
+        "effect": ""
+      },
+      {
+        "level": 3,
+        "effect": ""
+      }
+    ]
+  },
+  {
+    "id": "power-burst",
+    "name": "真本領",
+    "nameEn": "Power Burst",
+    "description": "",
+    "maxLevel": 3,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": ""
+      },
+      {
+        "level": 2,
+        "effect": ""
+      },
+      {
+        "level": 3,
+        "effect": ""
+      }
+    ]
+  },
+  {
+    "id": "powerhouse",
+    "name": "攻擊活化",
+    "nameEn": "Powerhouse",
+    "description": "",
+    "maxLevel": 3,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": ""
+      },
+      {
+        "level": 2,
+        "effect": ""
+      },
+      {
+        "level": 3,
+        "effect": ""
+      }
+    ]
+  },
+  {
+    "id": "powerhouse-critical",
+    "name": "攻擊增強【會心】",
+    "nameEn": "Powerhouse Critical",
+    "description": "",
+    "maxLevel": 3,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": ""
+      },
+      {
+        "level": 2,
+        "effect": ""
+      },
+      {
+        "level": 3,
+        "effect": ""
+      }
+    ]
+  },
+  {
+    "id": "pursuit-paralysis",
+    "name": "追擊【麻痺】",
+    "nameEn": "Pursuit Paralysis",
+    "description": "",
+    "maxLevel": 3,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": ""
+      },
+      {
+        "level": 2,
+        "effect": ""
+      },
+      {
+        "level": 3,
+        "effect": ""
+      }
+    ]
+  },
+  {
+    "id": "pursuit-poison",
+    "name": "追擊【毒】",
+    "nameEn": "Pursuit Poison",
+    "description": "",
+    "maxLevel": 3,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": ""
+      },
+      {
+        "level": 2,
+        "effect": ""
+      },
+      {
+        "level": 3,
+        "effect": ""
+      }
+    ]
+  },
+  {
+    "id": "rising-tide",
+    "name": "愈戰愈勇",
+    "nameEn": "Rising Tide",
+    "description": "",
+    "maxLevel": 3,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": ""
+      },
+      {
+        "level": 2,
+        "effect": ""
+      },
+      {
+        "level": 3,
+        "effect": ""
+      }
+    ]
+  },
+  {
+    "id": "sleep-enhancement",
+    "name": "覺醒一擊",
+    "nameEn": "Sleep Enhancement",
+    "description": "",
+    "maxLevel": 3,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": ""
+      },
+      {
+        "level": 2,
+        "effect": ""
+      },
+      {
+        "level": 3,
+        "effect": ""
+      }
+    ]
+  },
+  {
+    "id": "sp-insurance",
+    "name": "SP計量表保險",
+    "nameEn": "Sp Insurance",
+    "description": "",
+    "maxLevel": 3,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": ""
+      },
+      {
+        "level": 2,
+        "effect": ""
+      },
+      {
+        "level": 3,
+        "effect": ""
+      }
+    ]
+  },
+  {
+    "id": "spare-shot",
+    "name": "彈藥節約",
+    "nameEn": "Spare Shot",
+    "description": "",
+    "maxLevel": 3,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": ""
+      },
+      {
+        "level": 2,
+        "effect": ""
+      },
+      {
+        "level": 3,
+        "effect": ""
+      }
+    ]
+  },
+  {
+    "id": "teostra-bless",
+    "name": "炎王龍的爆塵",
+    "nameEn": "Teostra Bless",
+    "description": "",
+    "maxLevel": 3,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": ""
+      },
+      {
+        "level": 2,
+        "effect": ""
+      },
+      {
+        "level": 3,
+        "effect": ""
+      }
+    ]
+  },
+  {
+    "id": "thunder-attack-boost-secret",
+    "name": "雷屬性攻擊強化．境界",
+    "nameEn": "Thunder Attack Boost Secret",
+    "description": "",
+    "maxLevel": 5,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": ""
+      },
+      {
+        "level": 2,
+        "effect": ""
+      },
+      {
+        "level": 3,
+        "effect": ""
+      },
+      {
+        "level": 4,
+        "effect": ""
+      },
+      {
+        "level": 5,
+        "effect": ""
+      }
+    ]
+  },
+  {
+    "id": "water-attack-boost-secret",
+    "name": "水屬性攻擊強化．境界",
+    "nameEn": "Water Attack Boost Secret",
+    "description": "",
+    "maxLevel": 5,
+    "category": "utility",
+    "levels": [
+      {
+        "level": 1,
+        "effect": ""
+      },
+      {
+        "level": 2,
+        "effect": ""
+      },
+      {
+        "level": 3,
+        "effect": ""
+      },
+      {
+        "level": 4,
+        "effect": ""
+      },
+      {
+        "level": 5,
+        "effect": ""
+      }
+    ]
+  }
+]

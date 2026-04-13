@@ -1,0 +1,321 @@
+[
+  {
+    "id": "bow-iron",
+    "name": "鐵製弓",
+    "nameEn": "Iron Bow",
+    "type": "bow",
+    "rarity": 1,
+    "attack": 144,
+    "element": null,
+    "affinity": 0,
+    "skills": [],
+    "materials": [
+      {
+        "materialId": "iron-ore",
+        "quantity": 3
+      }
+    ],
+    "image": "",
+    "setName": null
+  },
+  {
+    "id": "bow-pukei",
+    "name": "毒妖鳥弓",
+    "nameEn": "Pukei Bow",
+    "type": "bow",
+    "rarity": 4,
+    "attack": 204,
+    "element": {
+      "type": "poison",
+      "value": 210
+    },
+    "affinity": 0,
+    "skills": [
+      {
+        "skillId": "poison-attack",
+        "level": 1
+      }
+    ],
+    "materials": [
+      {
+        "materialId": "pukei-quill",
+        "quantity": 4
+      },
+      {
+        "materialId": "pukei-tail",
+        "quantity": 1
+      }
+    ],
+    "image": "",
+    "setName": null
+  },
+  {
+    "id": "bow-legiana",
+    "name": "風漂龍弓",
+    "nameEn": "Legiana Bow",
+    "type": "bow",
+    "rarity": 5,
+    "attack": 228,
+    "element": {
+      "type": "ice",
+      "value": 270
+    },
+    "affinity": 10,
+    "skills": [
+      {
+        "skillId": "ice-attack",
+        "level": 1
+      },
+      {
+        "skillId": "critical-eye",
+        "level": 1
+      }
+    ],
+    "materials": [
+      {
+        "materialId": "legiana-claw",
+        "quantity": 4
+      },
+      {
+        "materialId": "legiana-plate",
+        "quantity": 1
+      }
+    ],
+    "image": "",
+    "setName": null
+  },
+  {
+    "id": "bow-rathalos",
+    "name": "火龍弓",
+    "nameEn": "Rathalos Bow",
+    "type": "bow",
+    "rarity": 6,
+    "attack": 252,
+    "element": {
+      "type": "fire",
+      "value": 300
+    },
+    "affinity": 0,
+    "skills": [
+      {
+        "skillId": "fire-attack",
+        "level": 1
+      },
+      {
+        "skillId": "weakness-exploit",
+        "level": 1
+      }
+    ],
+    "materials": [
+      {
+        "materialId": "rathalos-tail",
+        "quantity": 2
+      },
+      {
+        "materialId": "rathalos-scale",
+        "quantity": 4
+      }
+    ],
+    "image": "",
+    "setName": null
+  },
+  {
+    "id": "bow-diablos",
+    "name": "角龍弓",
+    "nameEn": "Diablos Bow",
+    "type": "bow",
+    "rarity": 6,
+    "attack": 276,
+    "element": null,
+    "affinity": -20,
+    "skills": [
+      {
+        "skillId": "focus",
+        "level": 1
+      }
+    ],
+    "materials": [
+      {
+        "materialId": "diablos-fang",
+        "quantity": 4
+      },
+      {
+        "materialId": "diablos-marrow",
+        "quantity": 1
+      }
+    ],
+    "image": "",
+    "setName": null
+  },
+  {
+    "id": "bow-azure-rathalos",
+    "name": "蒼火龍弓",
+    "nameEn": "Azure Rathalos Bow",
+    "type": "bow",
+    "rarity": 7,
+    "attack": 264,
+    "element": {
+      "type": "fire",
+      "value": 360
+    },
+    "affinity": 10,
+    "skills": [
+      {
+        "skillId": "weakness-exploit",
+        "level": 1
+      },
+      {
+        "skillId": "critical-eye",
+        "level": 1
+      }
+    ],
+    "materials": [
+      {
+        "materialId": "azure-rathalos-scale",
+        "quantity": 4
+      },
+      {
+        "materialId": "azure-rathalos-marrow",
+        "quantity": 1
+      }
+    ],
+    "image": "",
+    "setName": null
+  },
+  {
+    "id": "bow-barioth",
+    "name": "冰牙龍弓",
+    "nameEn": "Barioth Bow",
+    "type": "bow",
+    "rarity": 6,
+    "attack": 240,
+    "element": {
+      "type": "ice",
+      "value": 300
+    },
+    "affinity": 15,
+    "skills": [
+      {
+        "skillId": "ice-attack",
+        "level": 1
+      }
+    ],
+    "materials": [
+      {
+        "materialId": "barioth-spike",
+        "quantity": 2
+      },
+      {
+        "materialId": "barioth-claw",
+        "quantity": 4
+      }
+    ],
+    "image": "",
+    "setName": null
+  },
+  {
+    "id": "bow-mizutsune",
+    "name": "泡狐龍弓",
+    "nameEn": "Mizutsune Bow",
+    "type": "bow",
+    "rarity": 7,
+    "attack": 252,
+    "element": {
+      "type": "water",
+      "value": 360
+    },
+    "affinity": 10,
+    "skills": [
+      {
+        "skillId": "water-attack",
+        "level": 1
+      },
+      {
+        "skillId": "bubbly-dance",
+        "level": 1
+      }
+    ],
+    "materials": [
+      {
+        "materialId": "mizutsune-fin",
+        "quantity": 4
+      },
+      {
+        "materialId": "mizutsune-plate",
+        "quantity": 1
+      }
+    ],
+    "image": "",
+    "setName": null
+  },
+  {
+    "id": "bow-kushala",
+    "name": "鋼龍弓",
+    "nameEn": "Kushala Bow",
+    "type": "bow",
+    "rarity": 8,
+    "attack": 264,
+    "element": {
+      "type": "ice",
+      "value": 420
+    },
+    "affinity": 0,
+    "skills": [
+      {
+        "skillId": "kushala-frostwind",
+        "level": 1
+      },
+      {
+        "skillId": "ice-attack",
+        "level": 1
+      }
+    ],
+    "materials": [
+      {
+        "materialId": "kushala-wing",
+        "quantity": 4
+      },
+      {
+        "materialId": "kushala-gem",
+        "quantity": 1
+      }
+    ],
+    "image": "",
+    "setName": null
+  },
+  {
+    "id": "bow-malzeno",
+    "name": "爵銀龍弓",
+    "nameEn": "Malzeno Bow",
+    "type": "bow",
+    "rarity": 9,
+    "attack": 288,
+    "element": {
+      "type": "dragon",
+      "value": 420
+    },
+    "affinity": 15,
+    "skills": [
+      {
+        "skillId": "critical-boost",
+        "level": 1
+      },
+      {
+        "skillId": "coalescence",
+        "level": 1
+      }
+    ],
+    "materials": [
+      {
+        "materialId": "malzeno-wing",
+        "quantity": 4
+      },
+      {
+        "materialId": "malzeno-horn",
+        "quantity": 2
+      }
+    ],
+    "image": "",
+    "setName": null
+  }
+]

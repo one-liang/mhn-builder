@@ -1,0 +1,380 @@
+[
+  {
+    "id": "ls-iron-katana",
+    "name": "鐵刀",
+    "nameEn": "Iron Katana",
+    "type": "long-sword",
+    "rarity": 1,
+    "attack": 264,
+    "element": null,
+    "affinity": 0,
+    "skills": [],
+    "materials": [
+      {
+        "materialId": "iron-ore",
+        "quantity": 3
+      }
+    ],
+    "image": "",
+    "setName": null
+  },
+  {
+    "id": "ls-jagras-katana",
+    "name": "大凶豺龍太刀",
+    "nameEn": "Jagras Katana",
+    "type": "long-sword",
+    "rarity": 3,
+    "attack": 363,
+    "element": null,
+    "affinity": 0,
+    "skills": [
+      {
+        "skillId": "health-boost",
+        "level": 1
+      }
+    ],
+    "materials": [
+      {
+        "materialId": "jagras-scale",
+        "quantity": 4
+      },
+      {
+        "materialId": "jagras-mane",
+        "quantity": 2
+      }
+    ],
+    "image": "",
+    "setName": null
+  },
+  {
+    "id": "ls-kadachi-blade",
+    "name": "飛雷龍太刀",
+    "nameEn": "Kadachi Blade",
+    "type": "long-sword",
+    "rarity": 5,
+    "attack": 462,
+    "element": {
+      "type": "thunder",
+      "value": 240
+    },
+    "affinity": 10,
+    "skills": [
+      {
+        "skillId": "thunder-attack",
+        "level": 1
+      }
+    ],
+    "materials": [
+      {
+        "materialId": "kadachi-pelt",
+        "quantity": 4
+      },
+      {
+        "materialId": "kadachi-electrode",
+        "quantity": 2
+      }
+    ],
+    "image": "",
+    "setName": null
+  },
+  {
+    "id": "ls-rathian-blade",
+    "name": "雌火龍太刀",
+    "nameEn": "Rathian Blade",
+    "type": "long-sword",
+    "rarity": 5,
+    "attack": 462,
+    "element": {
+      "type": "poison",
+      "value": 270
+    },
+    "affinity": 0,
+    "skills": [
+      {
+        "skillId": "poison-attack",
+        "level": 1
+      }
+    ],
+    "materials": [
+      {
+        "materialId": "rathian-scale",
+        "quantity": 4
+      },
+      {
+        "materialId": "rathian-spike",
+        "quantity": 1
+      }
+    ],
+    "image": "",
+    "setName": null
+  },
+  {
+    "id": "ls-rathalos-katana",
+    "name": "火龍太刀",
+    "nameEn": "Rathalos Katana",
+    "type": "long-sword",
+    "rarity": 6,
+    "attack": 528,
+    "element": {
+      "type": "fire",
+      "value": 300
+    },
+    "affinity": 0,
+    "skills": [
+      {
+        "skillId": "attack-boost",
+        "level": 1
+      },
+      {
+        "skillId": "weakness-exploit",
+        "level": 1
+      }
+    ],
+    "materials": [
+      {
+        "materialId": "rathalos-scale",
+        "quantity": 4
+      },
+      {
+        "materialId": "rathalos-plate",
+        "quantity": 1
+      }
+    ],
+    "image": "",
+    "setName": null
+  },
+  {
+    "id": "ls-odogaron-katana",
+    "name": "兇爪龍太刀",
+    "nameEn": "Odogaron Katana",
+    "type": "long-sword",
+    "rarity": 6,
+    "attack": 495,
+    "element": null,
+    "affinity": 25,
+    "skills": [
+      {
+        "skillId": "critical-eye",
+        "level": 2
+      }
+    ],
+    "materials": [
+      {
+        "materialId": "odogaron-claw",
+        "quantity": 4
+      },
+      {
+        "materialId": "odogaron-sinew",
+        "quantity": 2
+      }
+    ],
+    "image": "",
+    "setName": null
+  },
+  {
+    "id": "ls-azure-rathalos-katana",
+    "name": "蒼火龍太刀",
+    "nameEn": "Azure Rathalos Katana",
+    "type": "long-sword",
+    "rarity": 7,
+    "attack": 561,
+    "element": {
+      "type": "fire",
+      "value": 360
+    },
+    "affinity": 10,
+    "skills": [
+      {
+        "skillId": "critical-eye",
+        "level": 1
+      },
+      {
+        "skillId": "weakness-exploit",
+        "level": 1
+      }
+    ],
+    "materials": [
+      {
+        "materialId": "azure-rathalos-scale",
+        "quantity": 4
+      },
+      {
+        "materialId": "azure-rathalos-marrow",
+        "quantity": 1
+      }
+    ],
+    "image": "",
+    "setName": null
+  },
+  {
+    "id": "ls-zinogre-katana",
+    "name": "雷狼龍太刀",
+    "nameEn": "Zinogre Katana",
+    "type": "long-sword",
+    "rarity": 6,
+    "attack": 528,
+    "element": {
+      "type": "thunder",
+      "value": 330
+    },
+    "affinity": 0,
+    "skills": [
+      {
+        "skillId": "latent-power",
+        "level": 1
+      },
+      {
+        "skillId": "thunder-attack",
+        "level": 1
+      }
+    ],
+    "materials": [
+      {
+        "materialId": "zinogre-shell",
+        "quantity": 4
+      },
+      {
+        "materialId": "zinogre-plate",
+        "quantity": 1
+      }
+    ],
+    "image": "",
+    "setName": null
+  },
+  {
+    "id": "ls-deviljho-katana",
+    "name": "恐暴龍太刀",
+    "nameEn": "Deviljho Katana",
+    "type": "long-sword",
+    "rarity": 7,
+    "attack": 627,
+    "element": {
+      "type": "dragon",
+      "value": 360
+    },
+    "affinity": -20,
+    "skills": [
+      {
+        "skillId": "attack-boost",
+        "level": 2
+      }
+    ],
+    "materials": [
+      {
+        "materialId": "deviljho-scale",
+        "quantity": 4
+      },
+      {
+        "materialId": "deviljho-talon",
+        "quantity": 2
+      }
+    ],
+    "image": "",
+    "setName": null
+  },
+  {
+    "id": "ls-mizutsune-katana",
+    "name": "泡狐龍太刀",
+    "nameEn": "Mizutsune Katana",
+    "type": "long-sword",
+    "rarity": 7,
+    "attack": 528,
+    "element": {
+      "type": "water",
+      "value": 360
+    },
+    "affinity": 15,
+    "skills": [
+      {
+        "skillId": "bubbly-dance",
+        "level": 1
+      },
+      {
+        "skillId": "water-attack",
+        "level": 1
+      }
+    ],
+    "materials": [
+      {
+        "materialId": "mizutsune-fin",
+        "quantity": 4
+      },
+      {
+        "materialId": "mizutsune-plate",
+        "quantity": 1
+      }
+    ],
+    "image": "",
+    "setName": null
+  },
+  {
+    "id": "ls-sinister-katana",
+    "name": "怨虎龍太刀",
+    "nameEn": "Sinister Katana",
+    "type": "long-sword",
+    "rarity": 8,
+    "attack": 627,
+    "element": {
+      "type": "blast",
+      "value": 300
+    },
+    "affinity": 0,
+    "skills": [
+      {
+        "skillId": "attack-boost",
+        "level": 1
+      },
+      {
+        "skillId": "blast-attack",
+        "level": 1
+      }
+    ],
+    "materials": [
+      {
+        "materialId": "magnamalo-blade",
+        "quantity": 4
+      },
+      {
+        "materialId": "magnamalo-plate",
+        "quantity": 1
+      }
+    ],
+    "image": "",
+    "setName": null
+  },
+  {
+    "id": "ls-malzeno-katana",
+    "name": "爵銀龍太刀",
+    "nameEn": "Malzeno Katana",
+    "type": "long-sword",
+    "rarity": 9,
+    "attack": 660,
+    "element": {
+      "type": "dragon",
+      "value": 420
+    },
+    "affinity": 15,
+    "skills": [
+      {
+        "skillId": "critical-boost",
+        "level": 1
+      },
+      {
+        "skillId": "coalescence",
+        "level": 1
+      }
+    ],
+    "materials": [
+      {
+        "materialId": "malzeno-wing",
+        "quantity": 4
+      },
+      {
+        "materialId": "malzeno-horn",
+        "quantity": 2
+      }
+    ],
+    "image": "",
+    "setName": null
+  }
+]
