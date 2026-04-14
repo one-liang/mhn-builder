@@ -1,369 +1,912 @@
 [
   {
-    "id": "gs-iron-sword",
-    "name": "鐵之大劍",
-    "nameEn": "Iron Sword",
+    "id": "ore_greatsword",
+    "name": "巨劍",
+    "nameEn": "",
     "type": "great-sword",
-    "rarity": 1,
-    "attack": 384,
+    "attack": 1912,
     "element": null,
     "affinity": 0,
-    "skills": [],
-    "materials": [
-      {
-        "materialId": "iron-ore",
-        "quantity": 3
-      }
-    ],
-    "image": "",
-    "setName": null
-  },
-  {
-    "id": "gs-jagras-blade",
-    "name": "大凶豺龍大劍",
-    "nameEn": "Jagras Blade",
-    "type": "great-sword",
-    "rarity": 3,
-    "attack": 528,
-    "element": null,
-    "affinity": 0,
+    "spSkill": "【SP】真‧蓄力斬 Lv3",
     "skills": [
       {
-        "skillId": "health-boost",
-        "level": 1
-      }
-    ],
-    "materials": [
-      {
-        "materialId": "jagras-scale",
-        "quantity": 4
-      },
-      {
-        "materialId": "jagras-claw",
-        "quantity": 2
-      }
-    ],
-    "image": "",
-    "setName": null
-  },
-  {
-    "id": "gs-barroth-shredder",
-    "name": "土砂龍大劍",
-    "nameEn": "Barroth Shredder",
-    "type": "great-sword",
-    "rarity": 4,
-    "attack": 624,
-    "element": null,
-    "affinity": -10,
-    "skills": [
-      {
-        "skillId": "defense-boost",
-        "level": 1
-      }
-    ],
-    "materials": [
-      {
-        "materialId": "barroth-shell",
-        "quantity": 4
-      },
-      {
-        "materialId": "barroth-scalp",
-        "quantity": 2
-      }
-    ],
-    "image": "",
-    "setName": null
-  },
-  {
-    "id": "gs-anjanath-blade",
-    "name": "蠻顎龍大劍",
-    "nameEn": "Anjanath Blade",
-    "type": "great-sword",
-    "rarity": 5,
-    "attack": 720,
-    "element": {
-      "type": "fire",
-      "value": 300
-    },
-    "affinity": -15,
-    "skills": [
-      {
-        "skillId": "attack-boost",
-        "level": 1
-      }
-    ],
-    "materials": [
-      {
-        "materialId": "anjanath-scale",
-        "quantity": 4
-      },
-      {
-        "materialId": "anjanath-fang",
-        "quantity": 2
-      }
-    ],
-    "image": "",
-    "setName": null
-  },
-  {
-    "id": "gs-rathalos-smasher",
-    "name": "火龍大劍",
-    "nameEn": "Rathalos Smasher",
-    "type": "great-sword",
-    "rarity": 6,
-    "attack": 768,
-    "element": {
-      "type": "fire",
-      "value": 360
-    },
-    "affinity": 0,
-    "skills": [
-      {
-        "skillId": "attack-boost",
-        "level": 1
-      },
-      {
-        "skillId": "fire-attack",
-        "level": 1
-      }
-    ],
-    "materials": [
-      {
-        "materialId": "rathalos-scale",
-        "quantity": 4
-      },
-      {
-        "materialId": "rathalos-marrow",
-        "quantity": 1
-      }
-    ],
-    "image": "",
-    "setName": null
-  },
-  {
-    "id": "gs-diablos-shatterer",
-    "name": "角龍大劍",
-    "nameEn": "Diablos Shatterer",
-    "type": "great-sword",
-    "rarity": 6,
-    "attack": 864,
-    "element": null,
-    "affinity": -20,
-    "skills": [
-      {
-        "skillId": "slugger",
-        "level": 1
-      }
-    ],
-    "materials": [
-      {
-        "materialId": "diablos-shell",
-        "quantity": 4
-      },
-      {
-        "materialId": "twisted-horn",
-        "quantity": 1
-      }
-    ],
-    "image": "",
-    "setName": null
-  },
-  {
-    "id": "gs-deviljho-blade",
-    "name": "恐暴龍大劍",
-    "nameEn": "Deviljho Blade",
-    "type": "great-sword",
-    "rarity": 7,
-    "attack": 912,
-    "element": {
-      "type": "dragon",
-      "value": 420
-    },
-    "affinity": -20,
-    "skills": [
-      {
-        "skillId": "attack-boost",
+        "skillId": "poison_resistance",
         "level": 2
       }
     ],
-    "materials": [
-      {
-        "materialId": "deviljho-fang",
-        "quantity": 4
-      },
-      {
-        "materialId": "deviljho-talon",
-        "quantity": 2
-      }
-    ],
-    "image": "",
-    "setName": null
+    "image": ""
   },
   {
-    "id": "gs-zinogre-blade",
-    "name": "雷狼龍大劍",
-    "nameEn": "Zinogre Blade",
+    "id": "greatjagras_greatsword",
+    "name": "凶豺龍之刃",
+    "nameEn": "",
     "type": "great-sword",
-    "rarity": 6,
-    "attack": 768,
+    "attack": 1373,
+    "element": {
+      "type": "water",
+      "value": 25
+    },
+    "affinity": 0,
+    "spSkill": "【SP】真‧蓄力斬 Lv3",
+    "skills": [
+      {
+        "skillId": "health_boost",
+        "level": 2
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "pukeipukei_greatsword",
+    "name": "花朵之刀",
+    "nameEn": "",
+    "type": "great-sword",
+    "attack": 1596,
+    "element": {
+      "type": "poison",
+      "value": 50
+    },
+    "affinity": 0,
+    "spSkill": "【SP】真‧蓄力斬 Lv3",
+    "skills": [
+      {
+        "skillId": "sneak_attack",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "coral_pukeipukei_greatsword",
+    "name": "潟湖巨像",
+    "nameEn": "",
+    "type": "great-sword",
+    "attack": 1420,
+    "element": {
+      "type": "water",
+      "value": 232
+    },
+    "affinity": 0,
+    "spSkill": "【SP】真‧蓄力斬 Lv3",
+    "skills": [
+      {
+        "skillId": "earplugs",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "barroth_greatsword",
+    "name": "土砂龍巨劍",
+    "nameEn": "",
+    "type": "great-sword",
+    "attack": 2103,
+    "element": null,
+    "affinity": 0,
+    "spSkill": "【SP】真‧蓄力斬 Lv3",
+    "skills": [
+      {
+        "skillId": "defense_boost",
+        "level": 2
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "greatgirros_greatsword",
+    "name": "凶顎龍大劍",
+    "nameEn": "",
+    "type": "great-sword",
+    "attack": 1596,
+    "element": {
+      "type": "paralysis",
+      "value": 100
+    },
+    "affinity": 0,
+    "spSkill": "【SP】真‧蓄力斬 Lv3",
+    "skills": [
+      {
+        "skillId": "sneak_attack",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "tobikadachi_greatsword",
+    "name": "雷刃劍",
+    "nameEn": "",
+    "type": "great-sword",
+    "attack": 1293,
     "element": {
       "type": "thunder",
-      "value": 330
+      "value": 47
     },
     "affinity": 0,
+    "spSkill": "【SP】真‧蓄力斬 Lv3",
     "skills": [
       {
-        "skillId": "thunder-attack",
+        "skillId": "evade_extender",
         "level": 1
       }
     ],
-    "materials": [
-      {
-        "materialId": "zinogre-shell",
-        "quantity": 4
-      },
-      {
-        "materialId": "zinogre-horn",
-        "quantity": 2
-      }
-    ],
-    "image": "",
-    "setName": null
+    "image": ""
   },
   {
-    "id": "gs-barioth-blade",
-    "name": "冰牙龍大劍",
-    "nameEn": "Barioth Blade",
+    "id": "nightshade_paolumu_greatsword",
+    "name": "夜神剃刀",
+    "nameEn": "",
     "type": "great-sword",
-    "rarity": 6,
-    "attack": 720,
+    "attack": 1756,
     "element": {
-      "type": "ice",
-      "value": 300
+      "type": "sleep",
+      "value": 188
+    },
+    "affinity": 0,
+    "spSkill": "【SP】真‧蓄力斬 Lv3",
+    "skills": [
+      {
+        "skillId": "sneak_attack",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "jyuratodus_greatsword",
+    "name": "水斬劍",
+    "nameEn": "",
+    "type": "great-sword",
+    "attack": 1293,
+    "element": {
+      "type": "water",
+      "value": 75
+    },
+    "affinity": 0,
+    "spSkill": "【SP】真‧蓄力斬 Lv3",
+    "skills": [
+      {
+        "skillId": "last_stand",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "anjanath_greatsword",
+    "name": "蠻顎龍大劍",
+    "nameEn": "",
+    "type": "great-sword",
+    "attack": 1293,
+    "element": {
+      "type": "fire",
+      "value": 117
+    },
+    "affinity": 0,
+    "spSkill": "【SP】真‧蓄力斬 Lv3",
+    "skills": [
+      {
+        "skillId": "rising_tide",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "fulgur_anjanath_greatsword",
+    "name": "兵器雷顎大劍",
+    "nameEn": "",
+    "type": "great-sword",
+    "attack": 1434,
+    "element": {
+      "type": "thunder",
+      "value": 230
     },
     "affinity": 10,
+    "spSkill": "【SP】真‧蓄力斬 Lv3",
     "skills": [
       {
-        "skillId": "ice-attack",
+        "skillId": "critical_element",
         "level": 1
       }
     ],
-    "materials": [
-      {
-        "materialId": "barioth-claw",
-        "quantity": 4
-      },
-      {
-        "materialId": "barioth-spike",
-        "quantity": 2
-      }
-    ],
-    "image": "",
-    "setName": null
+    "image": ""
   },
   {
-    "id": "gs-kushala-blade",
-    "name": "鋼龍大劍",
-    "nameEn": "Kushala Blade",
+    "id": "legiana_greatsword",
+    "name": "冰刃劍",
+    "nameEn": "",
     "type": "great-sword",
-    "rarity": 8,
-    "attack": 816,
+    "attack": 1420,
     "element": {
       "type": "ice",
-      "value": 420
+      "value": 232
     },
     "affinity": 0,
+    "spSkill": "【SP】真‧蓄力斬 Lv3",
     "skills": [
       {
-        "skillId": "ice-attack",
-        "level": 1
-      },
-      {
-        "skillId": "kushala-frostwind",
-        "level": 1
+        "skillId": "divine_blessing",
+        "level": 2
       }
     ],
-    "materials": [
-      {
-        "materialId": "kushala-shell",
-        "quantity": 4
-      },
-      {
-        "materialId": "kushala-horn",
-        "quantity": 1
-      }
-    ],
-    "image": "",
-    "setName": null
+    "image": ""
   },
   {
-    "id": "gs-sinister-blade",
-    "name": "怨虎龍大劍",
-    "nameEn": "Sinister Blade",
+    "id": "diablos_greatsword",
+    "name": "不諧對角",
+    "nameEn": "",
     "type": "great-sword",
-    "rarity": 8,
-    "attack": 912,
+    "attack": 2371,
+    "element": null,
+    "affinity": 0,
+    "spSkill": "【SP】真‧蓄力斬 Lv3",
+    "skills": [
+      {
+        "skillId": "heroics",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "rathalos_greatsword",
+    "name": "火炎之刃",
+    "nameEn": "",
+    "type": "great-sword",
+    "attack": 1420,
     "element": {
-      "type": "blast",
-      "value": 300
+      "type": "fire",
+      "value": 232
     },
     "affinity": 0,
+    "spSkill": "【SP】真‧蓄力斬 Lv3",
     "skills": [
       {
-        "skillId": "attack-boost",
-        "level": 1
-      },
-      {
-        "skillId": "blast-attack",
+        "skillId": "earplugs",
         "level": 1
       }
     ],
-    "materials": [
-      {
-        "materialId": "magnamalo-shell",
-        "quantity": 4
-      },
-      {
-        "materialId": "magnamalo-horn",
-        "quantity": 1
-      }
-    ],
-    "image": "",
-    "setName": null
+    "image": ""
   },
   {
-    "id": "gs-malzeno-blade",
-    "name": "爵銀龍大劍",
-    "nameEn": "Malzeno Blade",
+    "id": "azure_rathalos_greatsword",
+    "name": "藍翼大劍",
+    "nameEn": "",
     "type": "great-sword",
-    "rarity": 9,
-    "attack": 960,
+    "attack": 1682,
+    "element": {
+      "type": "fire",
+      "value": 134
+    },
+    "affinity": 0,
+    "spSkill": "【SP】真‧蓄力斬 Lv3",
+    "skills": [
+      {
+        "skillId": "special_boost",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "silver_rathalos_greatsword",
+    "name": "輝劍火龍",
+    "nameEn": "",
+    "type": "great-sword",
+    "attack": 1345,
+    "element": {
+      "type": "fire",
+      "value": 277
+    },
+    "affinity": 20,
+    "spSkill": "【SP】真‧蓄力斬 Lv3",
+    "skills": [
+      {
+        "skillId": "critical_element",
+        "level": 2
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "radobaan_greatsword",
+    "name": "尖刺劍",
+    "nameEn": "",
+    "type": "great-sword",
+    "attack": 1596,
+    "element": {
+      "type": "sleep",
+      "value": 100
+    },
+    "affinity": 0,
+    "spSkill": "【SP】真‧蓄力斬 Lv3",
+    "skills": [
+      {
+        "skillId": "defense_boost",
+        "level": 2
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "banbaro_greatsword",
+    "name": "巨牛大斧",
+    "nameEn": "",
+    "type": "great-sword",
+    "attack": 2113,
+    "element": null,
+    "affinity": 0,
+    "spSkill": "【SP】真‧蓄力斬 Lv3",
+    "skills": [
+      {
+        "skillId": "firm_foothold",
+        "level": 2
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "barioth_greatsword",
+    "name": "冰尖巨牙",
+    "nameEn": "",
+    "type": "great-sword",
+    "attack": 1191,
+    "element": {
+      "type": "ice",
+      "value": 117
+    },
+    "affinity": 5,
+    "spSkill": "【SP】真‧蓄力斬 Lv3",
+    "skills": [
+      {
+        "skillId": "evade_extender",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "zinogre_greatsword",
+    "name": "迅雷斷裂斧",
+    "nameEn": "",
+    "type": "great-sword",
+    "attack": 1420,
+    "element": {
+      "type": "thunder",
+      "value": 232
+    },
+    "affinity": 0,
+    "spSkill": "【SP】真‧蓄力斬 Lv3",
+    "skills": [
+      {
+        "skillId": "artful_dodger",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "deviljho_greatsword",
+    "name": "狂戰士之劍",
+    "nameEn": "",
+    "type": "great-sword",
+    "attack": 1568,
     "element": {
       "type": "dragon",
-      "value": 480
+      "value": 292
     },
-    "affinity": 10,
+    "affinity": -30,
+    "spSkill": "【SP】真‧蓄力斬 Lv3",
     "skills": [
       {
-        "skillId": "critical-boost",
-        "level": 1
-      },
-      {
-        "skillId": "coalescence",
+        "skillId": "focus",
         "level": 1
       }
     ],
-    "materials": [
+    "image": ""
+  },
+  {
+    "id": "khezu_greatsword",
+    "name": "奇怪龍大劍",
+    "nameEn": "",
+    "type": "great-sword",
+    "attack": 1194,
+    "element": {
+      "type": "thunder",
+      "value": 120
+    },
+    "affinity": 5,
+    "spSkill": "【SP】真‧蓄力斬 Lv3",
+    "skills": [
       {
-        "materialId": "malzeno-scale",
-        "quantity": 4
-      },
-      {
-        "materialId": "malzeno-horn",
-        "quantity": 2
+        "skillId": "peak_performance",
+        "level": 1
       }
     ],
-    "image": "",
-    "setName": null
+    "image": ""
+  },
+  {
+    "id": "kushaladaora_greatsword",
+    "name": "鋼龍凍大劍",
+    "nameEn": "",
+    "type": "great-sword",
+    "attack": 1553,
+    "element": {
+      "type": "ice",
+      "value": 238
+    },
+    "affinity": 0,
+    "spSkill": "【SP】真‧蓄力斬 Lv3",
+    "skills": [
+      {
+        "skillId": "windproof",
+        "level": 2
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "mizutsune_greatsword",
+    "name": "狐大劍東道宿夜花",
+    "nameEn": "",
+    "type": "great-sword",
+    "attack": 1436,
+    "element": {
+      "type": "water",
+      "value": 230
+    },
+    "affinity": 10,
+    "spSkill": "【SP】真‧蓄力斬 Lv3",
+    "skills": [
+      {
+        "skillId": "artful_dodger",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "teostra_greatsword",
+    "name": "炎皇之刃",
+    "nameEn": "",
+    "type": "great-sword",
+    "attack": 1684,
+    "element": {
+      "type": "blast",
+      "value": 345
+    },
+    "affinity": 0,
+    "spSkill": "【SP】真‧蓄力斬 Lv3",
+    "skills": [
+      {
+        "skillId": "heroics",
+        "level": 2
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "aknosom_greatsword",
+    "name": "傘之大劍",
+    "nameEn": "",
+    "type": "great-sword",
+    "attack": 1588,
+    "element": {
+      "type": "fire",
+      "value": 59
+    },
+    "affinity": 0,
+    "spSkill": "【SP】真‧蓄力斬 Lv3",
+    "skills": [
+      {
+        "skillId": "lock_on",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "magnamalo_greatsword",
+    "name": "禍大劍【封】",
+    "nameEn": "",
+    "type": "great-sword",
+    "attack": 1516,
+    "element": {
+      "type": "blast",
+      "value": 236
+    },
+    "affinity": 0,
+    "spSkill": "【SP】真‧蓄力斬 Lv3",
+    "skills": [
+      {
+        "skillId": "partbreaker",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "rajang_greatsword",
+    "name": "鬼金棒",
+    "nameEn": "",
+    "type": "great-sword",
+    "attack": 1568,
+    "element": {
+      "type": "thunder",
+      "value": 292
+    },
+    "affinity": -30,
+    "spSkill": "【SP】真‧蓄力斬 Lv3",
+    "skills": [
+      {
+        "skillId": "resentment",
+        "level": 2
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "nergigante_greatsword",
+    "name": "滅鬼兇器",
+    "nameEn": "",
+    "type": "great-sword",
+    "attack": 1553,
+    "element": {
+      "type": "dragon",
+      "value": 238
+    },
+    "affinity": 0,
+    "spSkill": "【SP】真‧蓄力斬 Lv3",
+    "skills": [
+      {
+        "skillId": "partbreaker",
+        "level": 2
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "lagombi_greatsword",
+    "name": "冰雪大劍",
+    "nameEn": "",
+    "type": "great-sword",
+    "attack": 1588,
+    "element": {
+      "type": "ice",
+      "value": 38
+    },
+    "affinity": 0,
+    "spSkill": "【SP】真‧蓄力斬 Lv3",
+    "skills": [
+      {
+        "skillId": "lock_on",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "somnacanth_greatsword",
+    "name": "人魚之劍",
+    "nameEn": "",
+    "type": "great-sword",
+    "attack": 1567,
+    "element": {
+      "type": "sleep",
+      "value": 236
+    },
+    "affinity": -15,
+    "spSkill": "【SP】真‧蓄力斬 Lv3",
+    "skills": [
+      {
+        "skillId": "evade_extender",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "tigrex_greatsword",
+    "name": "轟龍大顎",
+    "nameEn": "",
+    "type": "great-sword",
+    "attack": 2633,
+    "element": null,
+    "affinity": -40,
+    "spSkill": "【SP】真‧蓄力斬 Lv3",
+    "skills": [
+      {
+        "skillId": "brutal_strike",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "brute_tigrex_greatsword",
+    "name": "劫難之刃",
+    "nameEn": "",
+    "type": "great-sword",
+    "attack": 2633,
+    "element": null,
+    "affinity": -10,
+    "spSkill": "【SP】真‧蓄力斬 Lv3",
+    "skills": [
+      {
+        "skillId": "armor_up",
+        "level": 3
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "kirin_greatsword",
+    "name": "召雷劍",
+    "nameEn": "",
+    "type": "great-sword",
+    "attack": 1622,
+    "element": {
+      "type": "thunder",
+      "value": 334
+    },
+    "affinity": 0,
+    "spSkill": "【SP】真‧蓄力斬 Lv3",
+    "skills": [
+      {
+        "skillId": "latent_power",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "glavenus_greatsword",
+    "name": "斬龍之炎",
+    "nameEn": "",
+    "type": "great-sword",
+    "attack": 1568,
+    "element": {
+      "type": "fire",
+      "value": 292
+    },
+    "affinity": -30,
+    "spSkill": "【SP】真‧蓄力斬 Lv3",
+    "skills": [
+      {
+        "skillId": "brutal_strike",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "chameleos_greatsword",
+    "name": "相鄰獅尾刀",
+    "nameEn": "",
+    "type": "great-sword",
+    "attack": 1741,
+    "element": {
+      "type": "poison",
+      "value": 347
+    },
+    "affinity": 0,
+    "spSkill": "【SP】真‧蓄力斬 Lv3",
+    "skills": [
+      {
+        "skillId": "abnormal_status_enhancement",
+        "level": 2
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "beotodus_greatsword",
+    "name": "冰魚龍斬劍",
+    "nameEn": "",
+    "type": "great-sword",
+    "attack": 1293,
+    "element": {
+      "type": "ice",
+      "value": 117
+    },
+    "affinity": 0,
+    "spSkill": "【SP】真‧蓄力斬 Lv3",
+    "skills": [
+      {
+        "skillId": "bravery",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "nargacuga_greatsword",
+    "name": "隱密鉤斬劍",
+    "nameEn": "",
+    "type": "great-sword",
+    "attack": 2082,
+    "element": null,
+    "affinity": 25,
+    "spSkill": "【SP】真‧蓄力斬 Lv3",
+    "skills": [
+      {
+        "skillId": "resuscitate",
+        "level": 2
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "garangolm_greatsword",
+    "name": "剛纏獸之刃",
+    "nameEn": "",
+    "type": "great-sword",
+    "attack": 2371,
+    "element": null,
+    "affinity": 0,
+    "spSkill": "【SP】真‧蓄力斬 Lv3",
+    "skills": [
+      {
+        "skillId": "disable_perfect_evade",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "lunagaron_greatsword",
+    "name": "冷月之斷劍",
+    "nameEn": "",
+    "type": "great-sword",
+    "attack": 1458,
+    "element": {
+      "type": "ice",
+      "value": 164
+    },
+    "affinity": 0,
+    "spSkill": "【SP】真‧蓄力斬 Lv3",
+    "skills": [
+      {
+        "skillId": "high_performance_ice",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "espinas_greatsword",
+    "name": "薔薇板劍",
+    "nameEn": "",
+    "type": "great-sword",
+    "attack": 1434,
+    "element": {
+      "type": "fire",
+      "value": 230
+    },
+    "affinity": 10,
+    "spSkill": "【SP】真‧蓄力斬 Lv3",
+    "skills": [
+      {
+        "skillId": "part_break_special_boost",
+        "level": 2
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "malzeno_greatsword",
+    "name": "斷頭之利刃",
+    "nameEn": "",
+    "type": "great-sword",
+    "attack": 1622,
+    "element": {
+      "type": "dragon",
+      "value": 334
+    },
+    "affinity": 0,
+    "spSkill": "【SP】真‧蓄力斬 Lv3",
+    "skills": [
+      {
+        "skillId": "high_performance_dragon",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "quematrice_greatsword",
+    "name": "炎尾大劍",
+    "nameEn": "",
+    "type": "great-sword",
+    "attack": 1458,
+    "element": {
+      "type": "fire",
+      "value": 68
+    },
+    "affinity": 0,
+    "spSkill": "【SP】真‧蓄力斬 Lv3",
+    "skills": [
+      {
+        "skillId": "bravery",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "gossharag_greatsword",
+    "name": "雪鬼獸大劍",
+    "nameEn": "",
+    "type": "great-sword",
+    "attack": 1492,
+    "element": {
+      "type": "ice",
+      "value": 147
+    },
+    "affinity": -30,
+    "spSkill": "【SP】真‧蓄力斬 Lv3",
+    "skills": [
+      {
+        "skillId": "brutal_strike",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "astalos_greatsword",
+    "name": "電龍啼劍",
+    "nameEn": "",
+    "type": "great-sword",
+    "attack": 1436,
+    "element": {
+      "type": "thunder",
+      "value": 230
+    },
+    "affinity": 10,
+    "spSkill": "【SP】真‧蓄力斬 Lv3",
+    "skills": [
+      {
+        "skillId": "thunder_attack",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "seregios_greatsword",
+    "name": "裂傷參宿七",
+    "nameEn": "",
+    "type": "great-sword",
+    "attack": 2335,
+    "element": null,
+    "affinity": 15,
+    "spSkill": "【SP】真‧蓄力斬 Lv3",
+    "skills": [
+      {
+        "skillId": "powerhouse",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "bone_greatsword",
+    "name": "骨劍",
+    "nameEn": "",
+    "type": "great-sword",
+    "attack": 1912,
+    "element": null,
+    "affinity": 0,
+    "spSkill": "【SP】真‧蓄力斬 Lv3",
+    "skills": [
+      {
+        "skillId": "concentration",
+        "level": 1
+      }
+    ],
+    "image": ""
   }
 ]

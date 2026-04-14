@@ -5,11 +5,6 @@ interface ArmorSkill {
   level: number
 }
 
-interface ArmorMaterial {
-  materialId: string
-  quantity: number
-}
-
 export interface Armor {
   id: string
   name: string
@@ -28,18 +23,49 @@ interface WeaponElement {
   value: number
 }
 
+export interface WeaponAmmo {
+  name: string
+  capacity: number
+  recoil: string
+  reload: string
+}
+
+export interface WeaponPhial {
+  name: string
+  description: string
+}
+
+export interface WeaponMelody {
+  name: string
+  description: string
+}
+
+export interface WeaponKinsect {
+  name: string
+  type: string
+  performanceType: string
+  attackSystem: string
+  bonus: string
+}
+
 export interface Weapon {
   id: string
   name: string
   nameEn: string
   type: string
-  rarity: number
   attack: number
   element: WeaponElement | null
   affinity: number
+  spSkill: string | null
   skills: ArmorSkill[]
-  materials: ArmorMaterial[]
   image: string
+  ammo?: WeaponAmmo[]
+  chargingShots?: string[]
+  bottleType?: string | null
+  phial?: WeaponPhial | null
+  shellingType?: WeaponPhial | null
+  melodies?: WeaponMelody[]
+  kinsect?: WeaponKinsect | null
 }
 
 type ArmorPart = 'head' | 'chest' | 'arms' | 'waist' | 'legs'
@@ -48,9 +74,17 @@ const WEAPON_TYPES = [
   'great-sword',
   'long-sword',
   'sword-and-shield',
+  'dual-blades',
   'hammer',
-  'bow',
+  'hunting-horn',
+  'lance',
+  'gunlance',
+  'switch-axe',
+  'charge-blade',
+  'insect-glaive',
   'light-bowgun',
+  'heavy-bowgun',
+  'bow',
 ] as const
 
 export const useEquipmentStore = defineStore('equipment', () => {
@@ -143,10 +177,18 @@ export function getWeaponTypeName(type: string): string {
   const names: Record<string, string> = {
     'great-sword': '大劍',
     'long-sword': '太刀',
-    'sword-and-shield': '片手劍',
-    'hammer': '錘',
+    'sword-and-shield': '單手劍',
+    'dual-blades': '雙劍',
+    'hammer': '大錘',
+    'hunting-horn': '狩獵笛',
+    'lance': '長槍',
+    'gunlance': '銃槍',
+    'switch-axe': '斬擊斧',
+    'charge-blade': '充能斧',
+    'insect-glaive': '操蟲棍',
+    'light-bowgun': '輕弩槍',
+    'heavy-bowgun': '重弩槍',
     'bow': '弓',
-    'light-bowgun': '輕弩',
   }
   return names[type] || type
 }

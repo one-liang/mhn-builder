@@ -1,0 +1,1184 @@
+[
+  {
+    "id": "ore_switchaxe",
+    "name": "鐵製試作劍斧",
+    "nameEn": "",
+    "type": "switch-axe",
+    "attack": 1912,
+    "element": null,
+    "affinity": 0,
+    "spSkill": "【SP】零距離解放突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "poison_resistance",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "毒瓶",
+      "description": "賦予劍模式下的攻擊毒屬性"
+    }
+  },
+  {
+    "id": "greatjagras_switchaxe",
+    "name": "凶豺龍劍斧",
+    "nameEn": "",
+    "type": "switch-axe",
+    "attack": 1373,
+    "element": {
+      "type": "water",
+      "value": 38
+    },
+    "affinity": 0,
+    "spSkill": "【SP】零距離解放突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "health_boost",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "減氣瓶",
+      "description": "賦予劍模式下的攻擊昏厥屬性"
+    }
+  },
+  {
+    "id": "pukeipukei_switchaxe",
+    "name": "曼陀羅花園",
+    "nameEn": "",
+    "type": "switch-axe",
+    "attack": 1596,
+    "element": {
+      "type": "poison",
+      "value": 100
+    },
+    "affinity": 0,
+    "spSkill": "【SP】零距離解放突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "sneak_attack",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "強擊瓶",
+      "description": "劍模式時的攻擊力上升"
+    }
+  },
+  {
+    "id": "coral_pukeipukei_switchaxe",
+    "name": "涌湍礁湖",
+    "nameEn": "",
+    "type": "switch-axe",
+    "attack": 1420,
+    "element": {
+      "type": "water",
+      "value": 232
+    },
+    "affinity": 0,
+    "spSkill": "【SP】零距離解放突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "earplugs",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "強屬性瓶",
+      "description": "劍模式時的屬性攻擊力上升"
+    }
+  },
+  {
+    "id": "barroth_switchaxe",
+    "name": "土砂龍斧",
+    "nameEn": "",
+    "type": "switch-axe",
+    "attack": 2103,
+    "element": null,
+    "affinity": 0,
+    "spSkill": "【SP】零距離解放突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "defense_boost",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "麻痺瓶",
+      "description": "賦予劍模式下的攻擊麻痺屬性"
+    }
+  },
+  {
+    "id": "tobikadachi_switchaxe",
+    "name": "閃電斧",
+    "nameEn": "",
+    "type": "switch-axe",
+    "attack": 1293,
+    "element": {
+      "type": "thunder",
+      "value": 47
+    },
+    "affinity": 0,
+    "spSkill": "【SP】零距離解放突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "evade_extender",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "強擊瓶",
+      "description": "劍模式時的攻擊力上升"
+    }
+  },
+  {
+    "id": "paolumu_switchaxe",
+    "name": "浮空龍大斧",
+    "nameEn": "",
+    "type": "switch-axe",
+    "attack": 2113,
+    "element": null,
+    "affinity": 0,
+    "spSkill": "【SP】零距離解放突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "divine_blessing",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "強擊瓶",
+      "description": "劍模式時的攻擊力上升"
+    }
+  },
+  {
+    "id": "nightshade_paolumu_switchaxe",
+    "name": "夜神斬斧",
+    "nameEn": "",
+    "type": "switch-axe",
+    "attack": 1756,
+    "element": {
+      "type": "sleep",
+      "value": 188
+    },
+    "affinity": 0,
+    "spSkill": "【SP】零距離解放突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "sneak_attack",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "強擊瓶",
+      "description": "劍模式時的攻擊力上升"
+    }
+  },
+  {
+    "id": "jyuratodus_switchaxe",
+    "name": "泥岩戰斧",
+    "nameEn": "",
+    "type": "switch-axe",
+    "attack": 1293,
+    "element": {
+      "type": "water",
+      "value": 75
+    },
+    "affinity": 0,
+    "spSkill": "【SP】零距離解放突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "last_stand",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "強屬性瓶",
+      "description": "劍模式時的屬性攻擊力上升"
+    }
+  },
+  {
+    "id": "anjanath_switchaxe",
+    "name": "蠻顎龍斬斧",
+    "nameEn": "",
+    "type": "switch-axe",
+    "attack": 1293,
+    "element": {
+      "type": "fire",
+      "value": 117
+    },
+    "affinity": 0,
+    "spSkill": "【SP】零距離解放突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "rising_tide",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "強屬性瓶",
+      "description": "劍模式時的屬性攻擊力上升"
+    }
+  },
+  {
+    "id": "fulgur_anjanath_switchaxe",
+    "name": "破軍雷顎劍斧",
+    "nameEn": "",
+    "type": "switch-axe",
+    "attack": 1434,
+    "element": {
+      "type": "thunder",
+      "value": 230
+    },
+    "affinity": 10,
+    "spSkill": "【SP】零距離解放突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "critical_element",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "強擊瓶",
+      "description": "劍模式時的攻擊力上升"
+    }
+  },
+  {
+    "id": "rathian_switchaxe",
+    "name": "龍姬的斬擊斧",
+    "nameEn": "",
+    "type": "switch-axe",
+    "attack": 1516,
+    "element": {
+      "type": "poison",
+      "value": 236
+    },
+    "affinity": 0,
+    "spSkill": "【SP】零距離解放突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "health_boost",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "強屬性瓶",
+      "description": "劍模式時的屬性攻擊力上升"
+    }
+  },
+  {
+    "id": "gold_rathian_switchaxe",
+    "name": "煌戰之金劍斧",
+    "nameEn": "",
+    "type": "switch-axe",
+    "attack": 1675,
+    "element": {
+      "type": "poison",
+      "value": 273
+    },
+    "affinity": 20,
+    "spSkill": "【SP】零距離解放突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "pursuit_poison",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "強屬性瓶",
+      "description": "劍模式時的屬性攻擊力上升"
+    }
+  },
+  {
+    "id": "legiana_switchaxe",
+    "name": "優雅戰斧",
+    "nameEn": "",
+    "type": "switch-axe",
+    "attack": 1420,
+    "element": {
+      "type": "ice",
+      "value": 232
+    },
+    "affinity": 0,
+    "spSkill": "【SP】零距離解放突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "divine_blessing",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "強屬性瓶",
+      "description": "劍模式時的屬性攻擊力上升"
+    }
+  },
+  {
+    "id": "diablos_switchaxe",
+    "name": "爆鎚戰斧",
+    "nameEn": "",
+    "type": "switch-axe",
+    "attack": 2371,
+    "element": null,
+    "affinity": 0,
+    "spSkill": "【SP】零距離解放突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "heroics",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "強擊瓶",
+      "description": "劍模式時的攻擊力上升"
+    }
+  },
+  {
+    "id": "black_diablos_switchaxe",
+    "name": "命運劍斧",
+    "nameEn": "",
+    "type": "switch-axe",
+    "attack": 2658,
+    "element": null,
+    "affinity": -30,
+    "spSkill": "【SP】零距離解放突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "partbreaker",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "強擊瓶",
+      "description": "劍模式時的攻擊力上升"
+    }
+  },
+  {
+    "id": "rathalos_switchaxe",
+    "name": "火龍劍斧",
+    "nameEn": "",
+    "type": "switch-axe",
+    "attack": 1420,
+    "element": {
+      "type": "fire",
+      "value": 232
+    },
+    "affinity": 0,
+    "spSkill": "【SP】零距離解放突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "earplugs",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "強擊瓶",
+      "description": "劍模式時的攻擊力上升"
+    }
+  },
+  {
+    "id": "azure_rathalos_switchaxe",
+    "name": "藍牙蒼炎斧",
+    "nameEn": "",
+    "type": "switch-axe",
+    "attack": 1682,
+    "element": {
+      "type": "fire",
+      "value": 134
+    },
+    "affinity": 0,
+    "spSkill": "【SP】零距離解放突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "special_boost",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "強擊瓶",
+      "description": "劍模式時的攻擊力上升"
+    }
+  },
+  {
+    "id": "silver_rathalos_switchaxe",
+    "name": "銀牙煌龍斧",
+    "nameEn": "",
+    "type": "switch-axe",
+    "attack": 1345,
+    "element": {
+      "type": "fire",
+      "value": 277
+    },
+    "affinity": 20,
+    "spSkill": "【SP】零距離解放突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "critical_element",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "強屬性瓶",
+      "description": "劍模式時的屬性攻擊力上升"
+    }
+  },
+  {
+    "id": "banbaro_switchaxe",
+    "name": "巨牛大劍斧",
+    "nameEn": "",
+    "type": "switch-axe",
+    "attack": 2113,
+    "element": null,
+    "affinity": 0,
+    "spSkill": "【SP】零距離解放突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "firm_foothold",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "強擊瓶",
+      "description": "劍模式時的攻擊力上升"
+    }
+  },
+  {
+    "id": "barioth_switchaxe",
+    "name": "琥珀碎斷",
+    "nameEn": "",
+    "type": "switch-axe",
+    "attack": 1191,
+    "element": {
+      "type": "ice",
+      "value": 117
+    },
+    "affinity": 5,
+    "spSkill": "【SP】零距離解放突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "evade_extender",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "強擊瓶",
+      "description": "劍模式時的攻擊力上升"
+    }
+  },
+  {
+    "id": "zinogre_switchaxe",
+    "name": "迅雷劍斧",
+    "nameEn": "",
+    "type": "switch-axe",
+    "attack": 1420,
+    "element": {
+      "type": "thunder",
+      "value": 232
+    },
+    "affinity": 0,
+    "spSkill": "【SP】零距離解放突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "artful_dodger",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "強屬性瓶",
+      "description": "劍模式時的屬性攻擊力上升"
+    }
+  },
+  {
+    "id": "deviljho_switchaxe",
+    "name": "暴君",
+    "nameEn": "",
+    "type": "switch-axe",
+    "attack": 1568,
+    "element": {
+      "type": "dragon",
+      "value": 292
+    },
+    "affinity": -30,
+    "spSkill": "【SP】零距離解放突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "morph_boost",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "強擊瓶",
+      "description": "劍模式時的攻擊力上升"
+    }
+  },
+  {
+    "id": "khezu_switchaxe",
+    "name": "奇怪龍萬用斧",
+    "nameEn": "",
+    "type": "switch-axe",
+    "attack": 1194,
+    "element": {
+      "type": "thunder",
+      "value": 120
+    },
+    "affinity": 5,
+    "spSkill": "【SP】零距離解放突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "peak_performance",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "強屬性瓶",
+      "description": "劍模式時的屬性攻擊力上升"
+    }
+  },
+  {
+    "id": "kushaladaora_switchaxe",
+    "name": "鋼龍之翼",
+    "nameEn": "",
+    "type": "switch-axe",
+    "attack": 1553,
+    "element": {
+      "type": "ice",
+      "value": 238
+    },
+    "affinity": 0,
+    "spSkill": "【SP】零距離解放突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "windproof",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "強擊瓶",
+      "description": "劍模式時的攻擊力上升"
+    }
+  },
+  {
+    "id": "mizutsune_switchaxe",
+    "name": "狐斬擊斧子規招別離",
+    "nameEn": "",
+    "type": "switch-axe",
+    "attack": 1436,
+    "element": {
+      "type": "water",
+      "value": 230
+    },
+    "affinity": 10,
+    "spSkill": "【SP】零距離解放突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "artful_dodger",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "強擊瓶",
+      "description": "劍模式時的攻擊力上升"
+    }
+  },
+  {
+    "id": "teostra_switchaxe",
+    "name": "炎王城塞",
+    "nameEn": "",
+    "type": "switch-axe",
+    "attack": 1684,
+    "element": {
+      "type": "blast",
+      "value": 345
+    },
+    "affinity": 0,
+    "spSkill": "【SP】零距離解放突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "heroics",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "強擊瓶",
+      "description": "劍模式時的攻擊力上升"
+    }
+  },
+  {
+    "id": "aknosom_switchaxe",
+    "name": "傘之旗",
+    "nameEn": "",
+    "type": "switch-axe",
+    "attack": 1588,
+    "element": {
+      "type": "fire",
+      "value": 59
+    },
+    "affinity": 0,
+    "spSkill": "【SP】零距離解放突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "lock_on",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "強擊瓶",
+      "description": "劍模式時的攻擊力上升"
+    }
+  },
+  {
+    "id": "magnamalo_switchaxe",
+    "name": "禍斧【封】",
+    "nameEn": "",
+    "type": "switch-axe",
+    "attack": 1516,
+    "element": {
+      "type": "blast",
+      "value": 236
+    },
+    "affinity": 0,
+    "spSkill": "【SP】零距離解放突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "partbreaker",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "強擊瓶",
+      "description": "劍模式時的攻擊力上升"
+    }
+  },
+  {
+    "id": "rajang_switchaxe",
+    "name": "金剛角斧",
+    "nameEn": "",
+    "type": "switch-axe",
+    "attack": 1568,
+    "element": {
+      "type": "thunder",
+      "value": 292
+    },
+    "affinity": -30,
+    "spSkill": "【SP】零距離解放突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "fighting_spirit",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "強擊瓶",
+      "description": "劍模式時的攻擊力上升"
+    }
+  },
+  {
+    "id": "nergigante_switchaxe",
+    "name": "斷滅的一閃",
+    "nameEn": "",
+    "type": "switch-axe",
+    "attack": 1553,
+    "element": {
+      "type": "dragon",
+      "value": 238
+    },
+    "affinity": 0,
+    "spSkill": "【SP】零距離解放突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "partbreaker",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "強擊瓶",
+      "description": "劍模式時的攻擊力上升"
+    }
+  },
+  {
+    "id": "lagombi_switchaxe",
+    "name": "白兔斬擊斧",
+    "nameEn": "",
+    "type": "switch-axe",
+    "attack": 1588,
+    "element": {
+      "type": "ice",
+      "value": 38
+    },
+    "affinity": 0,
+    "spSkill": "【SP】零距離解放突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "lock_on",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "強屬性瓶",
+      "description": "劍模式時的屬性攻擊力上升"
+    }
+  },
+  {
+    "id": "volvidon_switchaxe",
+    "name": "甲旋",
+    "nameEn": "",
+    "type": "switch-axe",
+    "attack": 1516,
+    "element": {
+      "type": "paralysis",
+      "value": 176
+    },
+    "affinity": 0,
+    "spSkill": "【SP】零距離解放突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "evade_extender",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "強屬性瓶",
+      "description": "劍模式時的屬性攻擊力上升"
+    }
+  },
+  {
+    "id": "tigrex_switchaxe",
+    "name": "轟龍掠奪者",
+    "nameEn": "",
+    "type": "switch-axe",
+    "attack": 2633,
+    "element": null,
+    "affinity": -40,
+    "spSkill": "【SP】零距離解放突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "brutal_strike",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "強擊瓶",
+      "description": "劍模式時的攻擊力上升"
+    }
+  },
+  {
+    "id": "brute_tigrex_switchaxe",
+    "name": "劫難掠奪者",
+    "nameEn": "",
+    "type": "switch-axe",
+    "attack": 2633,
+    "element": null,
+    "affinity": -10,
+    "spSkill": "【SP】零距離解放突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "armor_up",
+        "level": 3
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "減氣瓶",
+      "description": "賦予劍模式下的攻擊昏厥屬性"
+    }
+  },
+  {
+    "id": "kirin_switchaxe",
+    "name": "雷斧",
+    "nameEn": "",
+    "type": "switch-axe",
+    "attack": 1622,
+    "element": {
+      "type": "thunder",
+      "value": 334
+    },
+    "affinity": 0,
+    "spSkill": "【SP】零距離解放突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "latent_power",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "強屬性瓶",
+      "description": "劍模式時的屬性攻擊力上升"
+    }
+  },
+  {
+    "id": "bazelgeuse_switchaxe",
+    "name": "爆鱗龍劍斧",
+    "nameEn": "",
+    "type": "switch-axe",
+    "attack": 1942,
+    "element": {
+      "type": "blast",
+      "value": 201
+    },
+    "affinity": -30,
+    "spSkill": "【SP】零距離解放突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "burst",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "強擊瓶",
+      "description": "劍模式時的攻擊力上升"
+    }
+  },
+  {
+    "id": "arzuros_switchaxe",
+    "name": "青熊斧",
+    "nameEn": "",
+    "type": "switch-axe",
+    "attack": 2361,
+    "element": null,
+    "affinity": -20,
+    "spSkill": "【SP】零距離解放突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "special_boost",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "毒瓶",
+      "description": "賦予劍模式下的攻擊毒屬性"
+    }
+  },
+  {
+    "id": "glavenus_switchaxe",
+    "name": "斬龍斬斧",
+    "nameEn": "",
+    "type": "switch-axe",
+    "attack": 1568,
+    "element": {
+      "type": "fire",
+      "value": 292
+    },
+    "affinity": -30,
+    "spSkill": "【SP】零距離解放突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "brutal_strike",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "強擊瓶",
+      "description": "劍模式時的攻擊力上升"
+    }
+  },
+  {
+    "id": "chameleos_switchaxe",
+    "name": "幻視之巴羅爾",
+    "nameEn": "",
+    "type": "switch-axe",
+    "attack": 1741,
+    "element": {
+      "type": "poison",
+      "value": 347
+    },
+    "affinity": 0,
+    "spSkill": "【SP】零距離解放突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "abnormal_status_enhancement",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "強擊瓶",
+      "description": "劍模式時的攻擊力上升"
+    }
+  },
+  {
+    "id": "bishaten_switchaxe",
+    "name": "天具･法輪之斧",
+    "nameEn": "",
+    "type": "switch-axe",
+    "attack": 2113,
+    "element": null,
+    "affinity": 0,
+    "spSkill": "【SP】零距離解放突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "multi_attack_boost",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "滅龍瓶",
+      "description": "賦予劍模式下的攻擊龍屬性"
+    }
+  },
+  {
+    "id": "nargacuga_switchaxe",
+    "name": "隱密戰斧",
+    "nameEn": "",
+    "type": "switch-axe",
+    "attack": 2082,
+    "element": null,
+    "affinity": 25,
+    "spSkill": "【SP】零距離解放突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "resuscitate",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "強擊瓶",
+      "description": "劍模式時的攻擊力上升"
+    }
+  },
+  {
+    "id": "namielle_switchaxe",
+    "name": "暴君‧橫裂",
+    "nameEn": "",
+    "type": "switch-axe",
+    "attack": 1335,
+    "element": {
+      "type": "water",
+      "value": 276
+    },
+    "affinity": 15,
+    "spSkill": "【SP】零距離解放突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "weakness_exploit",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "強擊瓶",
+      "description": "劍模式時的攻擊力上升"
+    }
+  },
+  {
+    "id": "garangolm_switchaxe",
+    "name": "剛纏獸之斧",
+    "nameEn": "",
+    "type": "switch-axe",
+    "attack": 2371,
+    "element": null,
+    "affinity": 0,
+    "spSkill": "【SP】零距離解放突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "disable_perfect_evade",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "減氣瓶",
+      "description": "賦予劍模式下的攻擊昏厥屬性"
+    }
+  },
+  {
+    "id": "lunagaron_switchaxe",
+    "name": "冷月之斬擊斧",
+    "nameEn": "",
+    "type": "switch-axe",
+    "attack": 1458,
+    "element": {
+      "type": "ice",
+      "value": 164
+    },
+    "affinity": 0,
+    "spSkill": "【SP】零距離解放突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "high_performance_ice",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "強擊瓶",
+      "description": "劍模式時的攻擊力上升"
+    }
+  },
+  {
+    "id": "espinas_switchaxe",
+    "name": "薔薇刺斧",
+    "nameEn": "",
+    "type": "switch-axe",
+    "attack": 1434,
+    "element": {
+      "type": "fire",
+      "value": 230
+    },
+    "affinity": 10,
+    "spSkill": "【SP】零距離解放突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "part_break_special_boost",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "強屬性瓶",
+      "description": "劍模式時的屬性攻擊力上升"
+    }
+  },
+  {
+    "id": "malzeno_switchaxe",
+    "name": "五裂之拷問",
+    "nameEn": "",
+    "type": "switch-axe",
+    "attack": 1622,
+    "element": {
+      "type": "dragon",
+      "value": 334
+    },
+    "affinity": 0,
+    "spSkill": "【SP】零距離解放突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "high_performance_dragon",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "強擊瓶",
+      "description": "劍模式時的攻擊力上升"
+    }
+  },
+  {
+    "id": "astalos_switchaxe",
+    "name": "高級電龍翡翠斬擊斧",
+    "nameEn": "",
+    "type": "switch-axe",
+    "attack": 1436,
+    "element": {
+      "type": "thunder",
+      "value": 230
+    },
+    "affinity": 10,
+    "spSkill": "【SP】零距離解放突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "thunder_attack",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "強擊瓶",
+      "description": "劍模式時的攻擊力上升"
+    }
+  },
+  {
+    "id": "almudron_switchaxe",
+    "name": "泥翁封劍斧",
+    "nameEn": "",
+    "type": "switch-axe",
+    "attack": 1458,
+    "element": {
+      "type": "water",
+      "value": 164
+    },
+    "affinity": 0,
+    "spSkill": "【SP】零距離解放突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "water_attack",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "強屬性瓶",
+      "description": "劍模式時的屬性攻擊力上升"
+    }
+  },
+  {
+    "id": "seregios_switchaxe",
+    "name": "斬擊斧畢宿五",
+    "nameEn": "",
+    "type": "switch-axe",
+    "attack": 2335,
+    "element": null,
+    "affinity": 15,
+    "spSkill": "【SP】零距離解放突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "powerhouse",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "滅龍瓶",
+      "description": "賦予劍模式下的攻擊龍屬性"
+    }
+  },
+  {
+    "id": "bone_switchaxe",
+    "name": "骨製劍斧",
+    "nameEn": "",
+    "type": "switch-axe",
+    "attack": 1912,
+    "element": null,
+    "affinity": 0,
+    "spSkill": "【SP】零距離解放突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "concentration",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "強擊瓶",
+      "description": "劍模式時的攻擊力上升"
+    }
+  }
+]

@@ -44,7 +44,6 @@ function resolveSkillName(skillId: string) {
         :key="weapon.id"
         :id="weapon.id"
         :name="weapon.name"
-        :rarity="weapon.rarity"
         :skills="weapon.skills.map(s => ({ ...s, name: resolveSkillName(s.skillId) }))"
         :image="weapon.image"
         :weapon-type="type"

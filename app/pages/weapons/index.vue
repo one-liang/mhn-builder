@@ -3,7 +3,7 @@ import { useEquipmentStore, getWeaponTypeName } from '~/stores/equipment'
 
 useSeoMeta({
   title: '武器一覽 | 最強獵人 - MHN 配裝模擬器',
-  description: '瀏覽 Monster Hunter Now 所有武器類型，包含大劍、太刀、片手劍、錘、弓、輕弩等武器資料。',
+  description: '瀏覽 Monster Hunter Now 所有武器類型，包含大劍、太刀、單手劍、雙劍、大錘、狩獵笛、長槍、銃槍、斬擊斧、充能斧、操蟲棍、輕弩槍、重弩槍、弓等 14 種武器資料。',
   ogTitle: '武器一覽 | 最強獵人 - MHN 配裝模擬器',
   ogDescription: '瀏覽 MHN 所有武器類型與資料。',
 })

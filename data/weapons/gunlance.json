@@ -1,0 +1,1076 @@
+[
+  {
+    "id": "ore_gunlance",
+    "name": "鐵銃槍",
+    "nameEn": "",
+    "type": "gunlance",
+    "attack": 1912,
+    "element": null,
+    "affinity": 0,
+    "spSkill": "【SP】龍擊砲 Lv3",
+    "skills": [
+      {
+        "skillId": "poison_resistance",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "shellingType": {
+      "name": "通常型",
+      "description": "裝填數多，全彈發射的威力高"
+    }
+  },
+  {
+    "id": "greatjagras_gunlance",
+    "name": "牙龍銃槍",
+    "nameEn": "",
+    "type": "gunlance",
+    "attack": 1373,
+    "element": {
+      "type": "water",
+      "value": 38
+    },
+    "affinity": 0,
+    "spSkill": "【SP】龍擊砲 Lv3",
+    "skills": [
+      {
+        "skillId": "health_boost",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "shellingType": {
+      "name": "通常型",
+      "description": "裝填數多，全彈發射的威力高"
+    }
+  },
+  {
+    "id": "barroth_gunlance",
+    "name": "土砂龍銃槍",
+    "nameEn": "",
+    "type": "gunlance",
+    "attack": 2103,
+    "element": null,
+    "affinity": 0,
+    "spSkill": "【SP】龍擊砲 Lv3",
+    "skills": [
+      {
+        "skillId": "defense_boost",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "shellingType": {
+      "name": "擴散型",
+      "description": "砲擊和龍擊砲的威力高"
+    }
+  },
+  {
+    "id": "greatgirros_gunlance",
+    "name": "牙龍銃槍【黃牙】",
+    "nameEn": "",
+    "type": "gunlance",
+    "attack": 1596,
+    "element": {
+      "type": "paralysis",
+      "value": 100
+    },
+    "affinity": 0,
+    "spSkill": "【SP】龍擊砲 Lv3",
+    "skills": [
+      {
+        "skillId": "sneak_attack",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "shellingType": {
+      "name": "通常型",
+      "description": "裝填數多，全彈發射的威力高"
+    }
+  },
+  {
+    "id": "viper_tobikadachi_gunlance",
+    "name": "飛毒銃槍紅火花",
+    "nameEn": "",
+    "type": "gunlance",
+    "attack": 1776,
+    "element": {
+      "type": "paralysis",
+      "value": 201
+    },
+    "affinity": 10,
+    "spSkill": "【SP】龍擊砲 Lv3",
+    "skills": [
+      {
+        "skillId": "burst_secret",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "shellingType": {
+      "name": "放射型",
+      "description": "前方攻擊範圍廣，蓄力的威力高"
+    }
+  },
+  {
+    "id": "tobikadachi_gunlance",
+    "name": "脈衝銃槍",
+    "nameEn": "",
+    "type": "gunlance",
+    "attack": 1293,
+    "element": {
+      "type": "thunder",
+      "value": 47
+    },
+    "affinity": 0,
+    "spSkill": "【SP】龍擊砲 Lv3",
+    "skills": [
+      {
+        "skillId": "evade_extender",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "shellingType": {
+      "name": "放射型",
+      "description": "前方攻擊範圍廣，蓄力的威力高"
+    }
+  },
+  {
+    "id": "anjanath_gunlance",
+    "name": "火焰銃槍",
+    "nameEn": "",
+    "type": "gunlance",
+    "attack": 1293,
+    "element": {
+      "type": "fire",
+      "value": 117
+    },
+    "affinity": 0,
+    "spSkill": "【SP】龍擊砲 Lv3",
+    "skills": [
+      {
+        "skillId": "rising_tide",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "shellingType": {
+      "name": "通常型",
+      "description": "裝填數多，全彈發射的威力高"
+    }
+  },
+  {
+    "id": "jyuratodus_gunlance",
+    "name": "泥岩銃槍",
+    "nameEn": "",
+    "type": "gunlance",
+    "attack": 1293,
+    "element": {
+      "type": "water",
+      "value": 75
+    },
+    "affinity": 0,
+    "spSkill": "【SP】龍擊砲 Lv3",
+    "skills": [
+      {
+        "skillId": "last_stand",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "shellingType": {
+      "name": "擴散型",
+      "description": "砲擊和龍擊砲的威力高"
+    }
+  },
+  {
+    "id": "fulgur_anjanath_gunlance",
+    "name": "騰躍雷顎",
+    "nameEn": "",
+    "type": "gunlance",
+    "attack": 1434,
+    "element": {
+      "type": "thunder",
+      "value": 230
+    },
+    "affinity": 10,
+    "spSkill": "【SP】龍擊砲 Lv3",
+    "skills": [
+      {
+        "skillId": "critical_element",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "shellingType": {
+      "name": "擴散型",
+      "description": "砲擊和龍擊砲的威力高"
+    }
+  },
+  {
+    "id": "rathian_gunlance",
+    "name": "公主銃槍",
+    "nameEn": "",
+    "type": "gunlance",
+    "attack": 1516,
+    "element": {
+      "type": "poison",
+      "value": 236
+    },
+    "affinity": 0,
+    "spSkill": "【SP】龍擊砲 Lv3",
+    "skills": [
+      {
+        "skillId": "health_boost",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "shellingType": {
+      "name": "通常型",
+      "description": "裝填數多，全彈發射的威力高"
+    }
+  },
+  {
+    "id": "pink_rathian_gunlance",
+    "name": "薔薇銃槍",
+    "nameEn": "",
+    "type": "gunlance",
+    "attack": 1756,
+    "element": {
+      "type": "poison",
+      "value": 188
+    },
+    "affinity": 0,
+    "spSkill": "【SP】龍擊砲 Lv3",
+    "skills": [
+      {
+        "skillId": "evade_extender",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "shellingType": {
+      "name": "通常型",
+      "description": "裝填數多，全彈發射的威力高"
+    }
+  },
+  {
+    "id": "gold_rathian_gunlance",
+    "name": "女王爆裂銃槍",
+    "nameEn": "",
+    "type": "gunlance",
+    "attack": 1675,
+    "element": {
+      "type": "poison",
+      "value": 273
+    },
+    "affinity": 20,
+    "spSkill": "【SP】龍擊砲 Lv3",
+    "skills": [
+      {
+        "skillId": "pursuit_poison",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "shellingType": {
+      "name": "通常型",
+      "description": "裝填數多，全彈發射的威力高"
+    }
+  },
+  {
+    "id": "diablos_gunlance",
+    "name": "角龍銃槍",
+    "nameEn": "",
+    "type": "gunlance",
+    "attack": 2371,
+    "element": null,
+    "affinity": 0,
+    "spSkill": "【SP】龍擊砲 Lv3",
+    "skills": [
+      {
+        "skillId": "heroics",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "shellingType": {
+      "name": "擴散型",
+      "description": "砲擊和龍擊砲的威力高"
+    }
+  },
+  {
+    "id": "legiana_gunlance",
+    "name": "優雅銃槍",
+    "nameEn": "",
+    "type": "gunlance",
+    "attack": 1420,
+    "element": {
+      "type": "ice",
+      "value": 232
+    },
+    "affinity": 0,
+    "spSkill": "【SP】龍擊砲 Lv3",
+    "skills": [
+      {
+        "skillId": "divine_blessing",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "shellingType": {
+      "name": "通常型",
+      "description": "裝填數多，全彈發射的威力高"
+    }
+  },
+  {
+    "id": "rathalos_gunlance",
+    "name": "火龍銃槍",
+    "nameEn": "",
+    "type": "gunlance",
+    "attack": 1420,
+    "element": {
+      "type": "fire",
+      "value": 232
+    },
+    "affinity": 0,
+    "spSkill": "【SP】龍擊砲 Lv3",
+    "skills": [
+      {
+        "skillId": "earplugs",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "shellingType": {
+      "name": "放射型",
+      "description": "前方攻擊範圍廣，蓄力的威力高"
+    }
+  },
+  {
+    "id": "azure_rathalos_gunlance",
+    "name": "藍色城塔",
+    "nameEn": "",
+    "type": "gunlance",
+    "attack": 1682,
+    "element": {
+      "type": "fire",
+      "value": 134
+    },
+    "affinity": 0,
+    "spSkill": "【SP】龍擊砲 Lv3",
+    "skills": [
+      {
+        "skillId": "special_boost",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "shellingType": {
+      "name": "放射型",
+      "description": "前方攻擊範圍廣，蓄力的威力高"
+    }
+  },
+  {
+    "id": "silver_rathalos_gunlance",
+    "name": "古戰車銃槍",
+    "nameEn": "",
+    "type": "gunlance",
+    "attack": 1345,
+    "element": {
+      "type": "fire",
+      "value": 277
+    },
+    "affinity": 20,
+    "spSkill": "【SP】龍擊砲 Lv3",
+    "skills": [
+      {
+        "skillId": "critical_element",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "shellingType": {
+      "name": "放射型",
+      "description": "前方攻擊範圍廣，蓄力的威力高"
+    }
+  },
+  {
+    "id": "banbaro_gunlance",
+    "name": "巨牛大銃槍",
+    "nameEn": "",
+    "type": "gunlance",
+    "attack": 2113,
+    "element": null,
+    "affinity": 0,
+    "spSkill": "【SP】龍擊砲 Lv3",
+    "skills": [
+      {
+        "skillId": "firm_foothold",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "shellingType": {
+      "name": "通常型",
+      "description": "裝填數多，全彈發射的威力高"
+    }
+  },
+  {
+    "id": "barioth_gunlance",
+    "name": "雙鬥冰牙",
+    "nameEn": "",
+    "type": "gunlance",
+    "attack": 1191,
+    "element": {
+      "type": "ice",
+      "value": 117
+    },
+    "affinity": 5,
+    "spSkill": "【SP】龍擊砲 Lv3",
+    "skills": [
+      {
+        "skillId": "evade_extender",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "shellingType": {
+      "name": "擴散型",
+      "description": "砲擊和龍擊砲的威力高"
+    }
+  },
+  {
+    "id": "zinogre_gunlance",
+    "name": "王銃槍豪雷",
+    "nameEn": "",
+    "type": "gunlance",
+    "attack": 1420,
+    "element": {
+      "type": "thunder",
+      "value": 232
+    },
+    "affinity": 0,
+    "spSkill": "【SP】龍擊砲 Lv3",
+    "skills": [
+      {
+        "skillId": "artful_dodger",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "shellingType": {
+      "name": "通常型",
+      "description": "裝填數多，全彈發射的威力高"
+    }
+  },
+  {
+    "id": "deviljho_gunlance",
+    "name": "愚欲的銃槍",
+    "nameEn": "",
+    "type": "gunlance",
+    "attack": 1568,
+    "element": {
+      "type": "dragon",
+      "value": 292
+    },
+    "affinity": -30,
+    "spSkill": "【SP】龍擊砲 Lv3",
+    "skills": [
+      {
+        "skillId": "artillery",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "shellingType": {
+      "name": "放射型",
+      "description": "前方攻擊範圍廣，蓄力的威力高"
+    }
+  },
+  {
+    "id": "khezu_gunlance",
+    "name": "奇怪龍雷光槍",
+    "nameEn": "",
+    "type": "gunlance",
+    "attack": 1194,
+    "element": {
+      "type": "thunder",
+      "value": 120
+    },
+    "affinity": 5,
+    "spSkill": "【SP】龍擊砲 Lv3",
+    "skills": [
+      {
+        "skillId": "peak_performance",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "shellingType": {
+      "name": "擴散型",
+      "description": "砲擊和龍擊砲的威力高"
+    }
+  },
+  {
+    "id": "kushaladaora_gunlance",
+    "name": "鋼龍爪銃槍",
+    "nameEn": "",
+    "type": "gunlance",
+    "attack": 1553,
+    "element": {
+      "type": "ice",
+      "value": 238
+    },
+    "affinity": 0,
+    "spSkill": "【SP】龍擊砲 Lv3",
+    "skills": [
+      {
+        "skillId": "windproof",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "shellingType": {
+      "name": "放射型",
+      "description": "前方攻擊範圍廣，蓄力的威力高"
+    }
+  },
+  {
+    "id": "mizutsune_gunlance",
+    "name": "狐燈槍浮世沐絕行",
+    "nameEn": "",
+    "type": "gunlance",
+    "attack": 1436,
+    "element": {
+      "type": "water",
+      "value": 230
+    },
+    "affinity": 10,
+    "spSkill": "【SP】龍擊砲 Lv3",
+    "skills": [
+      {
+        "skillId": "artful_dodger",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "shellingType": {
+      "name": "放射型",
+      "description": "前方攻擊範圍廣，蓄力的威力高"
+    }
+  },
+  {
+    "id": "aknosom_gunlance",
+    "name": "傘之銃槍",
+    "nameEn": "",
+    "type": "gunlance",
+    "attack": 1588,
+    "element": {
+      "type": "fire",
+      "value": 59
+    },
+    "affinity": 0,
+    "spSkill": "【SP】龍擊砲 Lv3",
+    "skills": [
+      {
+        "skillId": "lock_on",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "shellingType": {
+      "name": "通常型",
+      "description": "裝填數多，全彈發射的威力高"
+    }
+  },
+  {
+    "id": "magnamalo_gunlance",
+    "name": "禍砲槍【封】",
+    "nameEn": "",
+    "type": "gunlance",
+    "attack": 1516,
+    "element": {
+      "type": "blast",
+      "value": 236
+    },
+    "affinity": 0,
+    "spSkill": "【SP】龍擊砲 Lv3",
+    "skills": [
+      {
+        "skillId": "partbreaker",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "shellingType": {
+      "name": "放射型",
+      "description": "前方攻擊範圍廣，蓄力的威力高"
+    }
+  },
+  {
+    "id": "rajang_gunlance",
+    "name": "鬼銃槍",
+    "nameEn": "",
+    "type": "gunlance",
+    "attack": 1568,
+    "element": {
+      "type": "thunder",
+      "value": 292
+    },
+    "affinity": -30,
+    "spSkill": "【SP】龍擊砲 Lv3",
+    "skills": [
+      {
+        "skillId": "guarding_reload",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "shellingType": {
+      "name": "擴散型",
+      "description": "砲擊和龍擊砲的威力高"
+    }
+  },
+  {
+    "id": "nergigante_gunlance",
+    "name": "燒滅種火",
+    "nameEn": "",
+    "type": "gunlance",
+    "attack": 1553,
+    "element": {
+      "type": "dragon",
+      "value": 238
+    },
+    "affinity": 0,
+    "spSkill": "【SP】龍擊砲 Lv3",
+    "skills": [
+      {
+        "skillId": "partbreaker",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "shellingType": {
+      "name": "擴散型",
+      "description": "砲擊和龍擊砲的威力高"
+    }
+  },
+  {
+    "id": "lagombi_gunlance",
+    "name": "白兔銃槍",
+    "nameEn": "",
+    "type": "gunlance",
+    "attack": 1588,
+    "element": {
+      "type": "ice",
+      "value": 38
+    },
+    "affinity": 0,
+    "spSkill": "【SP】龍擊砲 Lv3",
+    "skills": [
+      {
+        "skillId": "lock_on",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "shellingType": {
+      "name": "擴散型",
+      "description": "砲擊和龍擊砲的威力高"
+    }
+  },
+  {
+    "id": "volvidon_gunlance",
+    "name": "破壞射擊",
+    "nameEn": "",
+    "type": "gunlance",
+    "attack": 1516,
+    "element": {
+      "type": "paralysis",
+      "value": 176
+    },
+    "affinity": 0,
+    "spSkill": "【SP】龍擊砲 Lv3",
+    "skills": [
+      {
+        "skillId": "evade_extender",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "shellingType": {
+      "name": "放射型",
+      "description": "前方攻擊範圍廣，蓄力的威力高"
+    }
+  },
+  {
+    "id": "tigrex_gunlance",
+    "name": "轟龍爆破銃槍",
+    "nameEn": "",
+    "type": "gunlance",
+    "attack": 2633,
+    "element": null,
+    "affinity": -40,
+    "spSkill": "【SP】龍擊砲 Lv3",
+    "skills": [
+      {
+        "skillId": "brutal_strike",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "shellingType": {
+      "name": "擴散型",
+      "description": "砲擊和龍擊砲的威力高"
+    }
+  },
+  {
+    "id": "brute_tigrex_gunlance",
+    "name": "劫難爆破銃槍",
+    "nameEn": "",
+    "type": "gunlance",
+    "attack": 2633,
+    "element": null,
+    "affinity": -10,
+    "spSkill": "【SP】龍擊砲 Lv3",
+    "skills": [
+      {
+        "skillId": "perfect_evade_attack_boost",
+        "level": 5
+      }
+    ],
+    "image": "",
+    "shellingType": {
+      "name": "擴散型",
+      "description": "砲擊和龍擊砲的威力高"
+    }
+  },
+  {
+    "id": "bazelgeuse_gunlance",
+    "name": "爆鱗龍銃槍",
+    "nameEn": "",
+    "type": "gunlance",
+    "attack": 1942,
+    "element": {
+      "type": "blast",
+      "value": 201
+    },
+    "affinity": -30,
+    "spSkill": "【SP】龍擊砲 Lv3",
+    "skills": [
+      {
+        "skillId": "artillery",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "shellingType": {
+      "name": "擴散型",
+      "description": "砲擊和龍擊砲的威力高"
+    }
+  },
+  {
+    "id": "glavenus_gunlance",
+    "name": "斬龍破壞砲",
+    "nameEn": "",
+    "type": "gunlance",
+    "attack": 1568,
+    "element": {
+      "type": "fire",
+      "value": 292
+    },
+    "affinity": -30,
+    "spSkill": "【SP】龍擊砲 Lv3",
+    "skills": [
+      {
+        "skillId": "brutal_strike",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "shellingType": {
+      "name": "擴散型",
+      "description": "砲擊和龍擊砲的威力高"
+    }
+  },
+  {
+    "id": "chameleos_gunlance",
+    "name": "劇毒香氣",
+    "nameEn": "",
+    "type": "gunlance",
+    "attack": 1741,
+    "element": {
+      "type": "poison",
+      "value": 347
+    },
+    "affinity": 0,
+    "spSkill": "【SP】龍擊砲 Lv3",
+    "skills": [
+      {
+        "skillId": "abnormal_status_enhancement",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "shellingType": {
+      "name": "放射型",
+      "description": "前方攻擊範圍廣，蓄力的威力高"
+    }
+  },
+  {
+    "id": "nargacuga_gunlance",
+    "name": "隱密加農砲",
+    "nameEn": "",
+    "type": "gunlance",
+    "attack": 2082,
+    "element": null,
+    "affinity": 25,
+    "spSkill": "【SP】龍擊砲 Lv3",
+    "skills": [
+      {
+        "skillId": "resuscitate",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "shellingType": {
+      "name": "擴散型",
+      "description": "砲擊和龍擊砲的威力高"
+    }
+  },
+  {
+    "id": "namielle_gunlance",
+    "name": "暴君‧水碟",
+    "nameEn": "",
+    "type": "gunlance",
+    "attack": 1335,
+    "element": {
+      "type": "water",
+      "value": 276
+    },
+    "affinity": 15,
+    "spSkill": "【SP】龍擊砲 Lv3",
+    "skills": [
+      {
+        "skillId": "weakness_exploit",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "shellingType": {
+      "name": "通常型",
+      "description": "裝填數多，全彈發射的威力高"
+    }
+  },
+  {
+    "id": "garangolm_gunlance",
+    "name": "剛纏獸刺刀",
+    "nameEn": "",
+    "type": "gunlance",
+    "attack": 2371,
+    "element": null,
+    "affinity": 0,
+    "spSkill": "【SP】龍擊砲 Lv3",
+    "skills": [
+      {
+        "skillId": "disable_perfect_evade",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "shellingType": {
+      "name": "擴散型",
+      "description": "砲擊和龍擊砲的威力高"
+    }
+  },
+  {
+    "id": "lunagaron_gunlance",
+    "name": "冷月之銃槍",
+    "nameEn": "",
+    "type": "gunlance",
+    "attack": 1458,
+    "element": {
+      "type": "ice",
+      "value": 164
+    },
+    "affinity": 0,
+    "spSkill": "【SP】龍擊砲 Lv3",
+    "skills": [
+      {
+        "skillId": "high_performance_ice",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "shellingType": {
+      "name": "放射型",
+      "description": "前方攻擊範圍廣，蓄力的威力高"
+    }
+  },
+  {
+    "id": "espinas_gunlance",
+    "name": "薔薇大砲",
+    "nameEn": "",
+    "type": "gunlance",
+    "attack": 1756,
+    "element": {
+      "type": "poison",
+      "value": 183
+    },
+    "affinity": 10,
+    "spSkill": "【SP】龍擊砲 Lv3",
+    "skills": [
+      {
+        "skillId": "part_break_special_boost",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "shellingType": {
+      "name": "擴散型",
+      "description": "砲擊和龍擊砲的威力高"
+    }
+  },
+  {
+    "id": "malzeno_gunlance",
+    "name": "灼熱之悲鳴",
+    "nameEn": "",
+    "type": "gunlance",
+    "attack": 1622,
+    "element": {
+      "type": "dragon",
+      "value": 334
+    },
+    "affinity": 0,
+    "spSkill": "【SP】龍擊砲 Lv3",
+    "skills": [
+      {
+        "skillId": "high_performance_dragon",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "shellingType": {
+      "name": "放射型",
+      "description": "前方攻擊範圍廣，蓄力的威力高"
+    }
+  },
+  {
+    "id": "quematrice_gunlance",
+    "name": "炎尾巨砲",
+    "nameEn": "",
+    "type": "gunlance",
+    "attack": 1458,
+    "element": {
+      "type": "fire",
+      "value": 68
+    },
+    "affinity": 0,
+    "spSkill": "【SP】龍擊砲 Lv3",
+    "skills": [
+      {
+        "skillId": "bravery",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "shellingType": {
+      "name": "通常型",
+      "description": "裝填數多，全彈發射的威力高"
+    }
+  },
+  {
+    "id": "astalos_gunlance",
+    "name": "黑暗戰車",
+    "nameEn": "",
+    "type": "gunlance",
+    "attack": 1436,
+    "element": {
+      "type": "thunder",
+      "value": 230
+    },
+    "affinity": 10,
+    "spSkill": "【SP】龍擊砲 Lv3",
+    "skills": [
+      {
+        "skillId": "thunder_attack",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "shellingType": {
+      "name": "擴散型",
+      "description": "砲擊和龍擊砲的威力高"
+    }
+  },
+  {
+    "id": "almudron_gunlance",
+    "name": "泥翁濘銃槍",
+    "nameEn": "",
+    "type": "gunlance",
+    "attack": 1458,
+    "element": {
+      "type": "water",
+      "value": 164
+    },
+    "affinity": 0,
+    "spSkill": "【SP】龍擊砲 Lv3",
+    "skills": [
+      {
+        "skillId": "water_attack",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "shellingType": {
+      "name": "擴散型",
+      "description": "砲擊和龍擊砲的威力高"
+    }
+  },
+  {
+    "id": "seregios_gunlance",
+    "name": "銃槍敗臼一",
+    "nameEn": "",
+    "type": "gunlance",
+    "attack": 2335,
+    "element": null,
+    "affinity": 15,
+    "spSkill": "【SP】龍擊砲 Lv3",
+    "skills": [
+      {
+        "skillId": "powerhouse",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "shellingType": {
+      "name": "通常型",
+      "description": "裝填數多，全彈發射的威力高"
+    }
+  },
+  {
+    "id": "bone_gunlance",
+    "name": "骨銃槍",
+    "nameEn": "",
+    "type": "gunlance",
+    "attack": 1912,
+    "element": null,
+    "affinity": 0,
+    "spSkill": "【SP】龍擊砲 Lv3",
+    "skills": [
+      {
+        "skillId": "concentration",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "shellingType": {
+      "name": "放射型",
+      "description": "前方攻擊範圍廣，蓄力的威力高"
+    }
+  }
+]

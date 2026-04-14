@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { useEquipmentStore, getWeaponTypeName } from '~/stores/equipment'
 import { useSkillStore } from '~/stores/skill'
-import { useMaterialStore } from '~/stores/material'
 
 const route = useRoute()
 const type = route.params.type as string
@@ -10,16 +9,15 @@ const typeName = getWeaponTypeName(type)
 
 const equipmentStore = useEquipmentStore()
 const skillStore = useSkillStore()
-const materialStore = useMaterialStore()
-await Promise.all([equipmentStore.load(), skillStore.load(), materialStore.load()])
+await Promise.all([equipmentStore.load(), skillStore.load()])
 
 const weapon = computed(() => equipmentStore.getWeaponById(type, slug))
 
 useSeoMeta({
   title: () => weapon.value ? `${weapon.value.name} | 最強獵人 - MHN 配裝模擬器` : '武器詳情 | 最強獵人',
-  description: () => weapon.value ? `${weapon.value.name} - ${typeName}，攻擊力 ${weapon.value.attack}，稀有度 ${weapon.value.rarity}。` : '',
+  description: () => weapon.value ? `${weapon.value.name} - ${typeName}，滿級攻擊力 ${weapon.value.attack}。` : '',
   ogTitle: () => weapon.value ? `${weapon.value.name} | 最強獵人` : '',
-  ogDescription: () => weapon.value ? `${typeName}，攻擊力 ${weapon.value.attack}` : '',
+  ogDescription: () => weapon.value ? `${typeName}，滿級攻擊力 ${weapon.value.attack}` : '',
 })
 
 const elementNames: Record<string, string> = {
@@ -42,10 +40,6 @@ const elementNames: Record<string, string> = {
           <WeaponTypeIcon v-else :type="type" class="w-10 h-10 text-primary/80" />
         </div>
         <div>
-          <div class="flex items-center gap-2 mb-1">
-            <RarityIndicator :rarity="weapon.rarity" />
-            <span class="text-xs text-muted-foreground">稀有度 {{ weapon.rarity }}</span>
-          </div>
           <h1 class="text-lg font-bold text-foreground">{{ weapon.name }}</h1>
           <p class="text-xs text-muted-foreground mt-1">{{ typeName }}</p>
         </div>
@@ -79,9 +73,18 @@ const elementNames: Record<string, string> = {
         </div>
       </section>
 
-      <!-- Skills -->
+      <!-- SP技能 -->
+      <section v-if="weapon.spSkill" class="mb-4">
+        <h2 class="text-sm font-semibold text-primary mb-2">SP技能</h2>
+        <div class="flex items-center gap-2 p-3 rounded-lg bg-amber-500/10 border border-amber-500/30">
+          <span class="text-[10px] font-bold text-amber-400 border border-amber-400/60 rounded px-1 py-0.5 shrink-0">SP</span>
+          <span class="text-sm text-foreground">{{ weapon.spSkill.replace('【SP】', '') }}</span>
+        </div>
+      </section>
+
+      <!-- 裝備技能 -->
       <section v-if="weapon.skills.length" class="mb-4">
-        <h2 class="text-sm font-semibold text-primary mb-2">技能</h2>
+        <h2 class="text-sm font-semibold text-primary mb-2">裝備技能</h2>
         <div class="flex flex-col gap-2">
           <NuxtLink
             v-for="skill in weapon.skills"
@@ -95,16 +98,105 @@ const elementNames: Record<string, string> = {
         </div>
       </section>
 
-      <!-- Materials -->
-      <section v-if="weapon.materials.length" class="mb-4">
-        <h2 class="text-sm font-semibold text-primary mb-2">所需素材</h2>
-        <div class="bg-card rounded-lg border border-border divide-y divide-border">
-          <div v-for="mat in weapon.materials" :key="mat.materialId" class="flex items-center justify-between px-3 py-2">
-            <span class="text-sm text-foreground">{{ materialStore.getName(mat.materialId) }}</span>
-            <span class="text-sm text-primary font-medium">x{{ mat.quantity }}</span>
+      <!-- 彈藥種類（輕/重弩） -->
+      <section v-if="weapon.ammo?.length" class="mb-4">
+        <h2 class="text-sm font-semibold text-primary mb-2">彈藥種類</h2>
+        <div class="rounded-lg overflow-hidden border border-border">
+          <table class="w-full text-xs">
+            <thead class="bg-muted/50">
+              <tr>
+                <th class="text-left px-3 py-2 text-muted-foreground font-medium">名稱</th>
+                <th class="text-center px-2 py-2 text-muted-foreground font-medium">裝填數</th>
+                <th class="text-center px-2 py-2 text-muted-foreground font-medium">後座力</th>
+                <th class="text-center px-2 py-2 text-muted-foreground font-medium">填彈</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="ammo in weapon.ammo" :key="ammo.name" class="border-t border-border">
+                <td class="px-3 py-2 text-foreground">{{ ammo.name }}</td>
+                <td class="text-center px-2 py-2 text-foreground">{{ ammo.capacity }}</td>
+                <td class="text-center px-2 py-2 text-foreground">{{ ammo.recoil }}</td>
+                <td class="text-center px-2 py-2 text-foreground">{{ ammo.reload }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 蓄力射擊（弓） -->
+      <section v-if="weapon.chargingShots?.length" class="mb-4">
+        <h2 class="text-sm font-semibold text-primary mb-2">蓄力射擊</h2>
+        <div class="flex flex-wrap gap-2">
+          <span
+            v-for="shot in weapon.chargingShots"
+            :key="shot"
+            class="px-2 py-1 rounded text-xs bg-card border border-border text-foreground"
+          >{{ shot }}</span>
+        </div>
+      </section>
+
+      <!-- 瓶類型（弓）— only show if not "無" -->
+      <section v-if="weapon.bottleType && weapon.bottleType !== '無'" class="mb-4">
+        <h2 class="text-sm font-semibold text-primary mb-2">瓶類型</h2>
+        <div class="p-3 rounded-lg bg-card border border-border text-sm text-foreground">{{ weapon.bottleType }}</div>
+      </section>
+
+      <!-- 瓶類型（斬擊斧/充能斧） -->
+      <section v-if="weapon.phial" class="mb-4">
+        <h2 class="text-sm font-semibold text-primary mb-2">瓶類型</h2>
+        <div class="p-3 rounded-lg bg-card border border-border">
+          <p class="text-sm font-medium text-foreground">{{ weapon.phial.name }}</p>
+          <p v-if="weapon.phial.description" class="text-xs text-muted-foreground mt-1">{{ weapon.phial.description }}</p>
+        </div>
+      </section>
+
+      <!-- 砲擊類型（銃槍） -->
+      <section v-if="weapon.shellingType" class="mb-4">
+        <h2 class="text-sm font-semibold text-primary mb-2">砲擊類型</h2>
+        <div class="p-3 rounded-lg bg-card border border-border">
+          <p class="text-sm font-medium text-foreground">{{ weapon.shellingType.name }}</p>
+          <p v-if="weapon.shellingType.description" class="text-xs text-muted-foreground mt-1">{{ weapon.shellingType.description }}</p>
+        </div>
+      </section>
+
+      <!-- 旋律效果（狩獵笛） -->
+      <section v-if="weapon.melodies?.length" class="mb-4">
+        <h2 class="text-sm font-semibold text-primary mb-2">旋律效果</h2>
+        <div class="flex flex-col gap-2">
+          <div
+            v-for="melody in weapon.melodies"
+            :key="melody.name"
+            class="p-3 rounded-lg bg-card border border-border"
+          >
+            <p class="text-sm font-medium text-foreground">{{ melody.name }}</p>
+            <p v-if="melody.description" class="text-xs text-muted-foreground mt-1">{{ melody.description }}</p>
           </div>
         </div>
       </section>
+
+      <!-- 獵蟲（操蟲棍） -->
+      <section v-if="weapon.kinsect" class="mb-4">
+        <h2 class="text-sm font-semibold text-primary mb-2">獵蟲：{{ weapon.kinsect.name }}</h2>
+        <div class="grid grid-cols-2 gap-2">
+          <div class="flex flex-col p-3 rounded-lg bg-card border border-border">
+            <span class="text-[10px] text-muted-foreground">獵蟲類型</span>
+            <span class="text-sm font-medium text-foreground mt-0.5">{{ weapon.kinsect.type }}</span>
+          </div>
+          <div class="flex flex-col p-3 rounded-lg bg-card border border-border">
+            <span class="text-[10px] text-muted-foreground">性能類型</span>
+            <span class="text-sm font-medium text-foreground mt-0.5">{{ weapon.kinsect.performanceType }}</span>
+          </div>
+          <div class="flex flex-col p-3 rounded-lg bg-card border border-border">
+            <span class="text-[10px] text-muted-foreground">攻擊系統</span>
+            <span class="text-sm font-medium text-foreground mt-0.5">{{ weapon.kinsect.attackSystem }}</span>
+          </div>
+          <div class="flex flex-col p-3 rounded-lg bg-card border border-border">
+            <span class="text-[10px] text-muted-foreground">獵蟲加成</span>
+            <span class="text-sm font-medium text-foreground mt-0.5">{{ weapon.kinsect.bonus }}</span>
+          </div>
+        </div>
+      </section>
+
     </template>
 
     <div v-else class="text-center py-16 text-muted-foreground">找不到此武器</div>

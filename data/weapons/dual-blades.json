@@ -1,13 +1,13 @@
 [
   {
-    "id": "ore_longsword",
-    "name": "鐵刀",
+    "id": "ore_dualblades",
+    "name": "雙匕",
     "nameEn": "",
-    "type": "long-sword",
+    "type": "dual-blades",
     "attack": 1912,
     "element": null,
     "affinity": 0,
-    "spSkill": "【SP】氣刃兜割 Lv3",
+    "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
         "skillId": "poison_resistance",
@@ -17,14 +17,14 @@
     "image": ""
   },
   {
-    "id": "kuluyaku_longsword",
-    "name": "星空太刀",
+    "id": "kuluyaku_dualblades",
+    "name": "釘鉤小刀",
     "nameEn": "",
-    "type": "long-sword",
+    "type": "dual-blades",
     "attack": 1912,
     "element": null,
-    "affinity": 5,
-    "spSkill": "【SP】氣刃兜割 Lv3",
+    "affinity": 10,
+    "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
         "skillId": "fortify",
@@ -34,17 +34,17 @@
     "image": ""
   },
   {
-    "id": "tobikadachi_longsword",
-    "name": "脈衝彎刀",
+    "id": "tobikadachi_dualblades",
+    "name": "脈衝戰斧",
     "nameEn": "",
-    "type": "long-sword",
+    "type": "dual-blades",
     "attack": 1293,
     "element": {
       "type": "thunder",
       "value": 47
     },
     "affinity": 0,
-    "spSkill": "【SP】氣刃兜割 Lv3",
+    "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
         "skillId": "evade_extender",
@@ -54,17 +54,17 @@
     "image": ""
   },
   {
-    "id": "viper_tobikadachi_longsword",
-    "name": "朱赤麻痹牙",
+    "id": "viper_tobikadachi_dualblades",
+    "name": "朱赤毒之爪",
     "nameEn": "",
-    "type": "long-sword",
+    "type": "dual-blades",
     "attack": 1776,
     "element": {
-      "type": "paralysis",
+      "type": "poison",
       "value": 201
     },
     "affinity": 10,
-    "spSkill": "【SP】氣刃兜割 Lv3",
+    "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
         "skillId": "burst_secret",
@@ -74,17 +74,17 @@
     "image": ""
   },
   {
-    "id": "jyuratodus_longsword",
-    "name": "泥魚龍彎刀",
+    "id": "jyuratodus_dualblades",
+    "name": "泥岩利劍",
     "nameEn": "",
-    "type": "long-sword",
+    "type": "dual-blades",
     "attack": 1293,
     "element": {
       "type": "water",
       "value": 75
     },
     "affinity": 0,
-    "spSkill": "【SP】氣刃兜割 Lv3",
+    "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
         "skillId": "last_stand",
@@ -94,17 +94,17 @@
     "image": ""
   },
   {
-    "id": "anjanath_longsword",
-    "name": "火焰彎刀",
+    "id": "anjanath_dualblades",
+    "name": "火焰戰斧",
     "nameEn": "",
-    "type": "long-sword",
+    "type": "dual-blades",
     "attack": 1293,
     "element": {
       "type": "fire",
       "value": 117
     },
     "affinity": 0,
-    "spSkill": "【SP】氣刃兜割 Lv3",
+    "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
         "skillId": "rising_tide",
@@ -114,17 +114,17 @@
     "image": ""
   },
   {
-    "id": "fulgur_anjanath_longsword",
-    "name": "崩壞雷顎",
+    "id": "fulgur_anjanath_dualblades",
+    "name": "旋風雷顎",
     "nameEn": "",
-    "type": "long-sword",
+    "type": "dual-blades",
     "attack": 1434,
     "element": {
       "type": "thunder",
       "value": 230
     },
     "affinity": 10,
-    "spSkill": "【SP】氣刃兜割 Lv3",
+    "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
         "skillId": "critical_element",
@@ -134,77 +134,17 @@
     "image": ""
   },
   {
-    "id": "rathian_longsword",
-    "name": "飛龍刀【綠葉】",
+    "id": "legiana_dualblades",
+    "name": "冰結小刀",
     "nameEn": "",
-    "type": "long-sword",
-    "attack": 1516,
-    "element": {
-      "type": "poison",
-      "value": 236
-    },
-    "affinity": 0,
-    "spSkill": "【SP】氣刃兜割 Lv3",
-    "skills": [
-      {
-        "skillId": "health_boost",
-        "level": 2
-      }
-    ],
-    "image": ""
-  },
-  {
-    "id": "pink_rathian_longsword",
-    "name": "飛龍刀【櫻花】",
-    "nameEn": "",
-    "type": "long-sword",
-    "attack": 1756,
-    "element": {
-      "type": "poison",
-      "value": 188
-    },
-    "affinity": 0,
-    "spSkill": "【SP】氣刃兜割 Lv3",
-    "skills": [
-      {
-        "skillId": "evade_extender",
-        "level": 1
-      }
-    ],
-    "image": ""
-  },
-  {
-    "id": "gold_rathian_longsword",
-    "name": "飛龍刀【月】",
-    "nameEn": "",
-    "type": "long-sword",
-    "attack": 1675,
-    "element": {
-      "type": "poison",
-      "value": 273
-    },
-    "affinity": 20,
-    "spSkill": "【SP】氣刃兜割 Lv3",
-    "skills": [
-      {
-        "skillId": "pursuit_poison",
-        "level": 2
-      }
-    ],
-    "image": ""
-  },
-  {
-    "id": "legiana_longsword",
-    "name": "優雅彎刀",
-    "nameEn": "",
-    "type": "long-sword",
+    "type": "dual-blades",
     "attack": 1420,
     "element": {
       "type": "ice",
       "value": 232
     },
     "affinity": 0,
-    "spSkill": "【SP】氣刃兜割 Lv3",
+    "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
         "skillId": "divine_blessing",
@@ -214,17 +154,51 @@
     "image": ""
   },
   {
-    "id": "rathalos_longsword",
-    "name": "飛龍刀【紅葉】",
+    "id": "diablos_dualblades",
+    "name": "角龍手斧",
     "nameEn": "",
-    "type": "long-sword",
+    "type": "dual-blades",
+    "attack": 2371,
+    "element": null,
+    "affinity": 0,
+    "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
+    "skills": [
+      {
+        "skillId": "heroics",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "black_diablos_dualblades",
+    "name": "命運棍棒",
+    "nameEn": "",
+    "type": "dual-blades",
+    "attack": 2658,
+    "element": null,
+    "affinity": -30,
+    "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
+    "skills": [
+      {
+        "skillId": "partbreaker",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "rathalos_dualblades",
+    "name": "雌雄焰刀",
+    "nameEn": "",
+    "type": "dual-blades",
     "attack": 1420,
     "element": {
       "type": "fire",
       "value": 232
     },
     "affinity": 0,
-    "spSkill": "【SP】氣刃兜割 Lv3",
+    "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
         "skillId": "earplugs",
@@ -234,37 +208,17 @@
     "image": ""
   },
   {
-    "id": "azure_rathalos_longsword",
-    "name": "飛龍刀【蒼】",
+    "id": "silver_rathalos_dualblades",
+    "name": "金銀龍對劍",
     "nameEn": "",
-    "type": "long-sword",
-    "attack": 1682,
-    "element": {
-      "type": "fire",
-      "value": 134
-    },
-    "affinity": 0,
-    "spSkill": "【SP】氣刃兜割 Lv3",
-    "skills": [
-      {
-        "skillId": "special_boost",
-        "level": 1
-      }
-    ],
-    "image": ""
-  },
-  {
-    "id": "silver_rathalos_longsword",
-    "name": "飛龍刀【銀】",
-    "nameEn": "",
-    "type": "long-sword",
+    "type": "dual-blades",
     "attack": 1345,
     "element": {
       "type": "fire",
       "value": 277
     },
     "affinity": 20,
-    "spSkill": "【SP】氣刃兜割 Lv3",
+    "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
         "skillId": "critical_element",
@@ -274,14 +228,14 @@
     "image": ""
   },
   {
-    "id": "banbaro_longsword",
-    "name": "巨牛大太刀",
+    "id": "banbaro_dualblades",
+    "name": "巨牛大骨",
     "nameEn": "",
-    "type": "long-sword",
+    "type": "dual-blades",
     "attack": 2113,
     "element": null,
     "affinity": 0,
-    "spSkill": "【SP】氣刃兜割 Lv3",
+    "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
         "skillId": "firm_foothold",
@@ -291,17 +245,17 @@
     "image": ""
   },
   {
-    "id": "barioth_longsword",
-    "name": "冰牙刀【琥珀】",
+    "id": "barioth_dualblades",
+    "name": "暗霧蘊劍",
     "nameEn": "",
-    "type": "long-sword",
+    "type": "dual-blades",
     "attack": 1191,
     "element": {
       "type": "ice",
       "value": 117
     },
     "affinity": 5,
-    "spSkill": "【SP】氣刃兜割 Lv3",
+    "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
         "skillId": "evade_extender",
@@ -311,17 +265,17 @@
     "image": ""
   },
   {
-    "id": "zinogre_longsword",
-    "name": "王刀雷切",
+    "id": "zinogre_dualblades",
+    "name": "王雙刃雷神",
     "nameEn": "",
-    "type": "long-sword",
+    "type": "dual-blades",
     "attack": 1420,
     "element": {
       "type": "thunder",
       "value": 232
     },
     "affinity": 0,
-    "spSkill": "【SP】氣刃兜割 Lv3",
+    "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
         "skillId": "artful_dodger",
@@ -331,17 +285,17 @@
     "image": ""
   },
   {
-    "id": "tzitziyaku_longsword",
-    "name": "眩刀【搖】",
+    "id": "tzitziyaku_dualblades",
+    "name": "閃耀小刀",
     "nameEn": "",
-    "type": "long-sword",
+    "type": "dual-blades",
     "attack": 1588,
     "element": {
       "type": "thunder",
       "value": 38
     },
     "affinity": 0,
-    "spSkill": "【SP】氣刃兜割 Lv3",
+    "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
         "skillId": "lock_on",
@@ -351,57 +305,94 @@
     "image": ""
   },
   {
-    "id": "deviljho_longsword",
-    "name": "殘酷痛苦太刀",
+    "id": "odogaron_dualblades",
+    "name": "慘爪戰斧",
     "nameEn": "",
-    "type": "long-sword",
+    "type": "dual-blades",
+    "attack": 2059,
+    "element": null,
+    "affinity": 5,
+    "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
+    "skills": [
+      {
+        "skillId": "perfect_evade_sp_charge",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "ebony_odogaron_dualblades",
+    "name": "冥府鎖鐮",
+    "nameEn": "",
+    "type": "dual-blades",
+    "attack": 1436,
+    "element": {
+      "type": "dragon",
+      "value": 230
+    },
+    "affinity": 10,
+    "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
+    "skills": [
+      {
+        "skillId": "critical_boost",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "deviljho_dualblades",
+    "name": "憤怒的雙刀",
+    "nameEn": "",
+    "type": "dual-blades",
     "attack": 1568,
     "element": {
       "type": "dragon",
       "value": 292
     },
     "affinity": -30,
-    "spSkill": "【SP】氣刃兜割 Lv3",
+    "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
-        "skillId": "feat_of_agility",
-        "level": 1
+        "skillId": "burst",
+        "level": 2
       }
     ],
     "image": ""
   },
   {
-    "id": "basarios_longsword",
-    "name": "巨岩彎刀",
+    "id": "khezu_dualblades",
+    "name": "奇怪龍短劍",
     "nameEn": "",
-    "type": "long-sword",
-    "attack": 1666,
+    "type": "dual-blades",
+    "attack": 1194,
     "element": {
-      "type": "fire",
-      "value": 39
+      "type": "thunder",
+      "value": 120
     },
-    "affinity": -15,
-    "spSkill": "【SP】氣刃兜割 Lv3",
+    "affinity": 5,
+    "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
-        "skillId": "heroics",
+        "skillId": "peak_performance",
         "level": 1
       }
     ],
     "image": ""
   },
   {
-    "id": "kushaladaora_longsword",
-    "name": "鋼龍之刃",
+    "id": "kushaladaora_dualblades",
+    "name": "天狼鋼龍劍",
     "nameEn": "",
-    "type": "long-sword",
+    "type": "dual-blades",
     "attack": 1553,
     "element": {
       "type": "ice",
       "value": 238
     },
     "affinity": 0,
-    "spSkill": "【SP】氣刃兜割 Lv3",
+    "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
         "skillId": "windproof",
@@ -411,17 +402,17 @@
     "image": ""
   },
   {
-    "id": "mizutsune_longsword",
-    "name": "狐刀無雲照明月",
+    "id": "mizutsune_dualblades",
+    "name": "狐雙刃拂曉夢如空",
     "nameEn": "",
-    "type": "long-sword",
+    "type": "dual-blades",
     "attack": 1436,
     "element": {
       "type": "water",
       "value": 230
     },
     "affinity": 10,
-    "spSkill": "【SP】氣刃兜割 Lv3",
+    "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
         "skillId": "artful_dodger",
@@ -431,37 +422,17 @@
     "image": ""
   },
   {
-    "id": "teostra_longsword",
-    "name": "帝王刀【陽炎】",
+    "id": "aknosom_dualblades",
+    "name": "傘之雙劍",
     "nameEn": "",
-    "type": "long-sword",
-    "attack": 1684,
-    "element": {
-      "type": "blast",
-      "value": 345
-    },
-    "affinity": 0,
-    "spSkill": "【SP】氣刃兜割 Lv3",
-    "skills": [
-      {
-        "skillId": "heroics",
-        "level": 2
-      }
-    ],
-    "image": ""
-  },
-  {
-    "id": "aknosom_longsword",
-    "name": "傘之太刀",
-    "nameEn": "",
-    "type": "long-sword",
+    "type": "dual-blades",
     "attack": 1588,
     "element": {
       "type": "fire",
       "value": 59
     },
     "affinity": 0,
-    "spSkill": "【SP】氣刃兜割 Lv3",
+    "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
         "skillId": "lock_on",
@@ -471,17 +442,17 @@
     "image": ""
   },
   {
-    "id": "magnamalo_longsword",
-    "name": "禍太刀【封】",
+    "id": "magnamalo_dualblades",
+    "name": "禍刃【封】",
     "nameEn": "",
-    "type": "long-sword",
+    "type": "dual-blades",
     "attack": 1516,
     "element": {
       "type": "blast",
       "value": 236
     },
     "affinity": 0,
-    "spSkill": "【SP】氣刃兜割 Lv3",
+    "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
         "skillId": "partbreaker",
@@ -491,37 +462,37 @@
     "image": ""
   },
   {
-    "id": "rajang_longsword",
-    "name": "鬼薙刀",
+    "id": "rajang_dualblades",
+    "name": "鬥鬼【高丸】",
     "nameEn": "",
-    "type": "long-sword",
+    "type": "dual-blades",
     "attack": 1568,
     "element": {
       "type": "thunder",
       "value": 292
     },
     "affinity": -30,
-    "spSkill": "【SP】氣刃兜割 Lv3",
+    "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
-        "skillId": "focus",
-        "level": 1
+        "skillId": "power_prolonger",
+        "level": 2
       }
     ],
     "image": ""
   },
   {
-    "id": "nergigante_longsword",
-    "name": "滅盡一刀",
+    "id": "nergigante_dualblades",
+    "name": "殘滅之爪",
     "nameEn": "",
-    "type": "long-sword",
+    "type": "dual-blades",
     "attack": 1553,
     "element": {
       "type": "dragon",
       "value": 238
     },
     "affinity": 0,
-    "spSkill": "【SP】氣刃兜割 Lv3",
+    "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
         "skillId": "partbreaker",
@@ -531,17 +502,17 @@
     "image": ""
   },
   {
-    "id": "lagombi_longsword",
-    "name": "白兔刃",
+    "id": "lagombi_dualblades",
+    "name": "冰雪雙劍",
     "nameEn": "",
-    "type": "long-sword",
+    "type": "dual-blades",
     "attack": 1588,
     "element": {
       "type": "ice",
       "value": 38
     },
     "affinity": 0,
-    "spSkill": "【SP】氣刃兜割 Lv3",
+    "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
         "skillId": "lock_on",
@@ -551,17 +522,17 @@
     "image": ""
   },
   {
-    "id": "somnacanth_longsword",
-    "name": "人魚利爪",
+    "id": "somnacanth_dualblades",
+    "name": "人魚之爪",
     "nameEn": "",
-    "type": "long-sword",
+    "type": "dual-blades",
     "attack": 1567,
     "element": {
       "type": "sleep",
       "value": 236
     },
     "affinity": -15,
-    "spSkill": "【SP】氣刃兜割 Lv3",
+    "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
         "skillId": "evade_extender",
@@ -571,14 +542,14 @@
     "image": ""
   },
   {
-    "id": "tigrex_longsword",
-    "name": "一虎刀",
+    "id": "tigrex_dualblades",
+    "name": "轟龍鏈劍",
     "nameEn": "",
-    "type": "long-sword",
+    "type": "dual-blades",
     "attack": 2633,
     "element": null,
     "affinity": -40,
-    "spSkill": "【SP】氣刃兜割 Lv3",
+    "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
         "skillId": "brutal_strike",
@@ -588,51 +559,71 @@
     "image": ""
   },
   {
-    "id": "brute_tigrex_longsword",
-    "name": "吼虎刀",
+    "id": "brute_tigrex_dualblades",
+    "name": "劫難鏈劍",
     "nameEn": "",
-    "type": "long-sword",
+    "type": "dual-blades",
     "attack": 2633,
     "element": null,
     "affinity": -10,
-    "spSkill": "【SP】氣刃兜割 Lv3",
+    "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
-        "skillId": "feat_of_agility",
+        "skillId": "power_prolonger",
         "level": 3
       }
     ],
     "image": ""
   },
   {
-    "id": "bazelgeuse_longsword",
-    "name": "爆鱗大刀",
+    "id": "kirin_dualblades",
+    "name": "迅雷",
     "nameEn": "",
-    "type": "long-sword",
-    "attack": 1942,
+    "type": "dual-blades",
+    "attack": 1622,
     "element": {
-      "type": "blast",
-      "value": 201
+      "type": "thunder",
+      "value": 334
     },
-    "affinity": -30,
-    "spSkill": "【SP】氣刃兜割 Lv3",
+    "affinity": 0,
+    "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
-        "skillId": "feat_of_agility",
+        "skillId": "latent_power",
         "level": 1
       }
     ],
     "image": ""
   },
   {
-    "id": "arzuros_longsword",
-    "name": "青熊薙",
+    "id": "bazelgeuse_dualblades",
+    "name": "爆鱗手斧",
     "nameEn": "",
-    "type": "long-sword",
+    "type": "dual-blades",
+    "attack": 1942,
+    "element": {
+      "type": "blast",
+      "value": 201
+    },
+    "affinity": -30,
+    "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
+    "skills": [
+      {
+        "skillId": "brutal_strike",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "arzuros_dualblades",
+    "name": "青熊雙鉞",
+    "nameEn": "",
+    "type": "dual-blades",
     "attack": 2361,
     "element": null,
     "affinity": -20,
-    "spSkill": "【SP】氣刃兜割 Lv3",
+    "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
         "skillId": "special_boost",
@@ -642,17 +633,17 @@
     "image": ""
   },
   {
-    "id": "glavenus_longsword",
-    "name": "斬龍寶刀",
+    "id": "glavenus_dualblades",
+    "name": "灼炎之保存者",
     "nameEn": "",
-    "type": "long-sword",
+    "type": "dual-blades",
     "attack": 1568,
     "element": {
       "type": "fire",
       "value": 292
     },
     "affinity": -30,
-    "spSkill": "【SP】氣刃兜割 Lv3",
+    "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
         "skillId": "brutal_strike",
@@ -662,17 +653,17 @@
     "image": ""
   },
   {
-    "id": "chameleos_longsword",
-    "name": "海市蜃樓幽魂",
+    "id": "chameleos_dualblades",
+    "name": "雙劍霞龍",
     "nameEn": "",
-    "type": "long-sword",
+    "type": "dual-blades",
     "attack": 1741,
     "element": {
       "type": "poison",
       "value": 347
     },
     "affinity": 0,
-    "spSkill": "【SP】氣刃兜割 Lv3",
+    "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
         "skillId": "abnormal_status_enhancement",
@@ -682,17 +673,17 @@
     "image": ""
   },
   {
-    "id": "greatwroggi_longsword",
-    "name": "毒狗龍太刀",
+    "id": "greatwroggi_dualblades",
+    "name": "亡命之徒",
     "nameEn": "",
-    "type": "long-sword",
+    "type": "dual-blades",
     "attack": 1647,
     "element": {
       "type": "poison",
       "value": 66
     },
     "affinity": 10,
-    "spSkill": "【SP】氣刃兜割 Lv3",
+    "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
         "skillId": "lock_on",
@@ -702,131 +693,17 @@
     "image": ""
   },
   {
-    "id": "nargacuga_longsword",
-    "name": "隱密配劍",
+    "id": "beotodus_dualblades",
+    "name": "冰魚龍戰斧",
     "nameEn": "",
-    "type": "long-sword",
-    "attack": 2082,
-    "element": null,
-    "affinity": 25,
-    "spSkill": "【SP】氣刃兜割 Lv3",
-    "skills": [
-      {
-        "skillId": "resuscitate",
-        "level": 2
-      }
-    ],
-    "image": ""
-  },
-  {
-    "id": "namielle_longsword",
-    "name": "暴君‧柱頭",
-    "nameEn": "",
-    "type": "long-sword",
-    "attack": 1335,
-    "element": {
-      "type": "water",
-      "value": 276
-    },
-    "affinity": 15,
-    "spSkill": "【SP】氣刃兜割 Lv3",
-    "skills": [
-      {
-        "skillId": "weakness_exploit",
-        "level": 1
-      }
-    ],
-    "image": ""
-  },
-  {
-    "id": "garangolm_longsword",
-    "name": "剛纏獸之刀",
-    "nameEn": "",
-    "type": "long-sword",
-    "attack": 2371,
-    "element": null,
-    "affinity": 0,
-    "spSkill": "【SP】氣刃兜割 Lv3",
-    "skills": [
-      {
-        "skillId": "disable_perfect_evade",
-        "level": 1
-      }
-    ],
-    "image": ""
-  },
-  {
-    "id": "lunagaron_longsword",
-    "name": "冷月之白刃",
-    "nameEn": "",
-    "type": "long-sword",
-    "attack": 1458,
+    "type": "dual-blades",
+    "attack": 1293,
     "element": {
       "type": "ice",
-      "value": 164
+      "value": 117
     },
     "affinity": 0,
-    "spSkill": "【SP】氣刃兜割 Lv3",
-    "skills": [
-      {
-        "skillId": "high_performance_ice",
-        "level": 1
-      }
-    ],
-    "image": ""
-  },
-  {
-    "id": "espinas_longsword",
-    "name": "薔薇羽刀",
-    "nameEn": "",
-    "type": "long-sword",
-    "attack": 1756,
-    "element": {
-      "type": "poison",
-      "value": 183
-    },
-    "affinity": 10,
-    "spSkill": "【SP】氣刃兜割 Lv3",
-    "skills": [
-      {
-        "skillId": "part_break_special_boost",
-        "level": 2
-      }
-    ],
-    "image": ""
-  },
-  {
-    "id": "malzeno_longsword",
-    "name": "裂空之翼",
-    "nameEn": "",
-    "type": "long-sword",
-    "attack": 1622,
-    "element": {
-      "type": "dragon",
-      "value": 334
-    },
-    "affinity": 0,
-    "spSkill": "【SP】氣刃兜割 Lv3",
-    "skills": [
-      {
-        "skillId": "high_performance_dragon",
-        "level": 1
-      }
-    ],
-    "image": ""
-  },
-  {
-    "id": "quematrice_longsword",
-    "name": "炎尾鑢",
-    "nameEn": "",
-    "type": "long-sword",
-    "attack": 1458,
-    "element": {
-      "type": "fire",
-      "value": 68
-    },
-    "affinity": 0,
-    "spSkill": "【SP】氣刃兜割 Lv3",
+    "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
         "skillId": "bravery",
@@ -836,17 +713,131 @@
     "image": ""
   },
   {
-    "id": "astalos_longsword",
-    "name": "飛龍刀【橄欖石】",
+    "id": "nargacuga_dualblades",
+    "name": "隱密直柄斧",
     "nameEn": "",
-    "type": "long-sword",
+    "type": "dual-blades",
+    "attack": 2082,
+    "element": null,
+    "affinity": 25,
+    "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
+    "skills": [
+      {
+        "skillId": "resuscitate",
+        "level": 2
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "garangolm_dualblades",
+    "name": "剛纏獸之對",
+    "nameEn": "",
+    "type": "dual-blades",
+    "attack": 2371,
+    "element": null,
+    "affinity": 0,
+    "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
+    "skills": [
+      {
+        "skillId": "disable_perfect_evade",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "lunagaron_dualblades",
+    "name": "冷月之朱爪",
+    "nameEn": "",
+    "type": "dual-blades",
+    "attack": 1458,
+    "element": {
+      "type": "ice",
+      "value": 164
+    },
+    "affinity": 0,
+    "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
+    "skills": [
+      {
+        "skillId": "high_performance_ice",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "espinas_dualblades",
+    "name": "薔薇獠牙",
+    "nameEn": "",
+    "type": "dual-blades",
+    "attack": 1434,
+    "element": {
+      "type": "fire",
+      "value": 230
+    },
+    "affinity": 10,
+    "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
+    "skills": [
+      {
+        "skillId": "part_break_special_boost",
+        "level": 2
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "malzeno_dualblades",
+    "name": "血爪之創傷",
+    "nameEn": "",
+    "type": "dual-blades",
+    "attack": 1622,
+    "element": {
+      "type": "dragon",
+      "value": 334
+    },
+    "affinity": 0,
+    "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
+    "skills": [
+      {
+        "skillId": "high_performance_dragon",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "quematrice_dualblades",
+    "name": "炎尾雙刃",
+    "nameEn": "",
+    "type": "dual-blades",
+    "attack": 1458,
+    "element": {
+      "type": "fire",
+      "value": 68
+    },
+    "affinity": 0,
+    "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
+    "skills": [
+      {
+        "skillId": "bravery",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "astalos_dualblades",
+    "name": "孤高雙光劍",
+    "nameEn": "",
+    "type": "dual-blades",
     "attack": 1436,
     "element": {
       "type": "thunder",
       "value": 230
     },
     "affinity": 10,
-    "spSkill": "【SP】氣刃兜割 Lv3",
+    "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
         "skillId": "thunder_attack",
@@ -856,17 +847,17 @@
     "image": ""
   },
   {
-    "id": "almudron_longsword",
-    "name": "泥翁經太刀",
+    "id": "almudron_dualblades",
+    "name": "泥翁雙斬劍",
     "nameEn": "",
-    "type": "long-sword",
+    "type": "dual-blades",
     "attack": 1458,
     "element": {
       "type": "water",
       "value": 164
     },
     "affinity": 0,
-    "spSkill": "【SP】氣刃兜割 Lv3",
+    "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
         "skillId": "water_attack",
@@ -876,14 +867,14 @@
     "image": ""
   },
   {
-    "id": "seregios_longsword",
-    "name": "太刀參宿五",
+    "id": "seregios_dualblades",
+    "name": "巨顎軒轅十二",
     "nameEn": "",
-    "type": "long-sword",
+    "type": "dual-blades",
     "attack": 2335,
     "element": null,
     "affinity": 15,
-    "spSkill": "【SP】氣刃兜割 Lv3",
+    "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
         "skillId": "powerhouse",
@@ -893,14 +884,14 @@
     "image": ""
   },
   {
-    "id": "bone_longsword",
-    "name": "骨製彎刀",
+    "id": "bone_dualblades",
+    "name": "骨斧",
     "nameEn": "",
-    "type": "long-sword",
+    "type": "dual-blades",
     "attack": 1912,
     "element": null,
     "affinity": 0,
-    "spSkill": "【SP】氣刃兜割 Lv3",
+    "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
         "skillId": "concentration",
