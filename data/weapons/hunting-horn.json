@@ -1,0 +1,1530 @@
+[
+  {
+    "id": "ore_huntinghorn",
+    "name": "金屬風笛",
+    "nameEn": "",
+    "type": "hunting-horn",
+    "attack": 1912,
+    "element": null,
+    "affinity": 0,
+    "spSkill": "【SP】三音演奏 Lv3",
+    "skills": [
+      {
+        "skillId": "poison_resistance",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "melodies": [
+      {
+        "name": "泥．積雪無效",
+        "description": "在一定時間內，不會受到魔物的泥濘&積雪影響"
+      },
+      {
+        "name": "精靈王的加護",
+        "description": "在一定時間內，有一定機率減少受到的傷害"
+      },
+      {
+        "name": "攻擊力UP【小】",
+        "description": "在一段時間內，小幅提升攻擊力"
+      }
+    ]
+  },
+  {
+    "id": "kuluyaku_huntinghorn",
+    "name": "搔鳥風笛",
+    "nameEn": "",
+    "type": "hunting-horn",
+    "attack": 1912,
+    "element": null,
+    "affinity": 10,
+    "spSkill": "【SP】三音演奏 Lv3",
+    "skills": [
+      {
+        "skillId": "fortify",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "melodies": [
+      {
+        "name": "麻痺無效",
+        "description": "在一定時間內，不會陷入麻痺狀態"
+      },
+      {
+        "name": "會心率UP【小】",
+        "description": "在一段時間內，小幅提升會心率"
+      },
+      {
+        "name": "高頻衝擊波",
+        "description": "在自身周圍發出高頻率噪音衝擊波造成傷害"
+      }
+    ]
+  },
+  {
+    "id": "pukeipukei_huntinghorn",
+    "name": "花朵號角",
+    "nameEn": "",
+    "type": "hunting-horn",
+    "attack": 1596,
+    "element": {
+      "type": "poison",
+      "value": 100
+    },
+    "affinity": 0,
+    "spSkill": "【SP】三音演奏 Lv3",
+    "skills": [
+      {
+        "skillId": "sneak_attack",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "melodies": [
+      {
+        "name": "雷耐性UP",
+        "description": "在一定時間內，減輕雷屬性的傷害"
+      },
+      {
+        "name": "迴避距離UP",
+        "description": "在一段時間內，增加迴避距離"
+      },
+      {
+        "name": "高頻衝擊波",
+        "description": "在自身周圍發出高頻率噪音衝擊波造成傷害"
+      }
+    ]
+  },
+  {
+    "id": "coral_pukeipukei_huntinghorn",
+    "name": "潟湖鼓",
+    "nameEn": "",
+    "type": "hunting-horn",
+    "attack": 1420,
+    "element": {
+      "type": "water",
+      "value": 232
+    },
+    "affinity": 0,
+    "spSkill": "【SP】三音演奏 Lv3",
+    "skills": [
+      {
+        "skillId": "earplugs",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "melodies": [
+      {
+        "name": "睡眠無效",
+        "description": "在一定時間內，不會陷入睡眠狀態"
+      },
+      {
+        "name": "風壓耐性",
+        "description": "在一定時間內，不會受到風壓【小】的影響並擁有對風壓【大】的耐性"
+      },
+      {
+        "name": "水屬性攻擊力UP",
+        "description": "在一段時間內，大幅提升水屬性武器的屬性值"
+      }
+    ]
+  },
+  {
+    "id": "barroth_huntinghorn",
+    "name": "土砂笙【戰之音】",
+    "nameEn": "",
+    "type": "hunting-horn",
+    "attack": 2103,
+    "element": null,
+    "affinity": 0,
+    "spSkill": "【SP】三音演奏 Lv3",
+    "skills": [
+      {
+        "skillId": "defense_boost",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "melodies": [
+      {
+        "name": "防禦力UP",
+        "description": "在一段時間內，大幅提升防禦力"
+      },
+      {
+        "name": "後仰無效",
+        "description": "在一定時間內，受到攻擊不會後仰"
+      },
+      {
+        "name": "攻擊力UP【大】",
+        "description": "在一段時間內，大幅提升攻擊力"
+      }
+    ]
+  },
+  {
+    "id": "tobikadachi_huntinghorn",
+    "name": "閃電風笛",
+    "nameEn": "",
+    "type": "hunting-horn",
+    "attack": 1293,
+    "element": {
+      "type": "thunder",
+      "value": 47
+    },
+    "affinity": 0,
+    "spSkill": "【SP】三音演奏 Lv3",
+    "skills": [
+      {
+        "skillId": "evade_extender",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "melodies": [
+      {
+        "name": "睡眠無效",
+        "description": "在一定時間內，不會陷入睡眠狀態"
+      },
+      {
+        "name": "聽覺保護【大】",
+        "description": "在一定時間內，不會受到咆哮【小】和咆哮【大】影響"
+      },
+      {
+        "name": "攻擊力UP【大】",
+        "description": "在一段時間內，大幅提升攻擊力"
+      }
+    ]
+  },
+  {
+    "id": "paolumu_huntinghorn",
+    "name": "浮空龍號角",
+    "nameEn": "",
+    "type": "hunting-horn",
+    "attack": 2113,
+    "element": null,
+    "affinity": 0,
+    "spSkill": "【SP】三音演奏 Lv3",
+    "skills": [
+      {
+        "skillId": "divine_blessing",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "melodies": [
+      {
+        "name": "睡眠無效",
+        "description": "在一定時間內，不會陷入睡眠狀態"
+      },
+      {
+        "name": "風壓耐性",
+        "description": "在一定時間內，不會受到風壓【小】的影響並擁有對風壓【大】的耐性"
+      },
+      {
+        "name": "攻擊力UP【大】",
+        "description": "在一段時間內，大幅提升攻擊力"
+      }
+    ]
+  },
+  {
+    "id": "nightshade_paolumu_huntinghorn",
+    "name": "夜神長號",
+    "nameEn": "",
+    "type": "hunting-horn",
+    "attack": 1756,
+    "element": {
+      "type": "sleep",
+      "value": 188
+    },
+    "affinity": 0,
+    "spSkill": "【SP】三音演奏 Lv3",
+    "skills": [
+      {
+        "skillId": "sneak_attack",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "melodies": [
+      {
+        "name": "火耐性UP",
+        "description": "在一定時間內，減輕火屬性的傷害"
+      },
+      {
+        "name": "迴避距離UP",
+        "description": "在一段時間內，增加迴避距離"
+      },
+      {
+        "name": "攻擊力UP【大】",
+        "description": "在一段時間內，大幅提升攻擊力"
+      }
+    ]
+  },
+  {
+    "id": "jyuratodus_huntinghorn",
+    "name": "水流風笛",
+    "nameEn": "",
+    "type": "hunting-horn",
+    "attack": 1293,
+    "element": {
+      "type": "water",
+      "value": 75
+    },
+    "affinity": 0,
+    "spSkill": "【SP】三音演奏 Lv3",
+    "skills": [
+      {
+        "skillId": "last_stand",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "melodies": [
+      {
+        "name": "火耐性UP",
+        "description": "在一定時間內，減輕火屬性的傷害"
+      },
+      {
+        "name": "聽覺保護【小】",
+        "description": "在一定時間內，不會受到咆哮【小】影響"
+      },
+      {
+        "name": "攻擊力UP【大】",
+        "description": "在一段時間內，大幅提升攻擊力"
+      }
+    ]
+  },
+  {
+    "id": "anjanath_huntinghorn",
+    "name": "火焰號角",
+    "nameEn": "",
+    "type": "hunting-horn",
+    "attack": 1293,
+    "element": {
+      "type": "fire",
+      "value": 117
+    },
+    "affinity": 0,
+    "spSkill": "【SP】三音演奏 Lv3",
+    "skills": [
+      {
+        "skillId": "rising_tide",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "melodies": [
+      {
+        "name": "SP計量表加速【小】",
+        "description": "在一段時間內，SP計量表的增加量小幅提升"
+      },
+      {
+        "name": "風壓耐性",
+        "description": "在一定時間內，不會受到風壓【小】的影響並擁有對風壓【大】的耐性"
+      },
+      {
+        "name": "攻擊力UP【大】",
+        "description": "在一段時間內，大幅提升攻擊力"
+      }
+    ]
+  },
+  {
+    "id": "fulgur_anjanath_huntinghorn",
+    "name": "管樂雷顎",
+    "nameEn": "",
+    "type": "hunting-horn",
+    "attack": 1434,
+    "element": {
+      "type": "thunder",
+      "value": 230
+    },
+    "affinity": 10,
+    "spSkill": "【SP】三音演奏 Lv3",
+    "skills": [
+      {
+        "skillId": "critical_element",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "melodies": [
+      {
+        "name": "防禦力UP",
+        "description": "在一段時間內，大幅提升防禦力"
+      },
+      {
+        "name": "迴避距離UP",
+        "description": "在一段時間內，增加迴避距離"
+      },
+      {
+        "name": "高頻衝擊波",
+        "description": "在自身周圍發出高頻率噪音衝擊波造成傷害"
+      }
+    ]
+  },
+  {
+    "id": "rathian_huntinghorn",
+    "name": "女武神戰鈴",
+    "nameEn": "",
+    "type": "hunting-horn",
+    "attack": 1516,
+    "element": {
+      "type": "poison",
+      "value": 236
+    },
+    "affinity": 0,
+    "spSkill": "【SP】三音演奏 Lv3",
+    "skills": [
+      {
+        "skillId": "health_boost",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "melodies": [
+      {
+        "name": "龍耐性UP",
+        "description": "在一定時間內，減輕龍屬性的傷害"
+      },
+      {
+        "name": "震動無效",
+        "description": "在一定時間內，不會受到地面震動影響"
+      },
+      {
+        "name": "攻擊力UP【大】",
+        "description": "在一段時間內，大幅提升攻擊力"
+      }
+    ]
+  },
+  {
+    "id": "pink_rathian_huntinghorn",
+    "name": "櫻戰鈴",
+    "nameEn": "",
+    "type": "hunting-horn",
+    "attack": 1682,
+    "element": {
+      "type": "fire",
+      "value": 134
+    },
+    "affinity": 0,
+    "spSkill": "【SP】三音演奏 Lv3",
+    "skills": [
+      {
+        "skillId": "evade_extender",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "melodies": [
+      {
+        "name": "雷耐性UP",
+        "description": "在一定時間內，減輕雷屬性的傷害"
+      },
+      {
+        "name": "聽覺保護【大】",
+        "description": "在一定時間內，不會受到咆哮【小】和咆哮【大】影響"
+      },
+      {
+        "name": "火屬性攻擊力UP",
+        "description": "在一段時間內，大幅提升火屬性武器的屬性值"
+      }
+    ]
+  },
+  {
+    "id": "gold_rathian_huntinghorn",
+    "name": "金獵笛",
+    "nameEn": "",
+    "type": "hunting-horn",
+    "attack": 1345,
+    "element": {
+      "type": "fire",
+      "value": 277
+    },
+    "affinity": 20,
+    "spSkill": "【SP】三音演奏 Lv3",
+    "skills": [
+      {
+        "skillId": "critical_element",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "melodies": [
+      {
+        "name": "麻痺無效",
+        "description": "在一定時間內，不會陷入麻痺狀態"
+      },
+      {
+        "name": "攻擊力UP【小】",
+        "description": "在一段時間內，小幅提升攻擊力"
+      },
+      {
+        "name": "高頻衝擊波",
+        "description": "在自身周圍發出高頻率噪音衝擊波造成傷害"
+      }
+    ]
+  },
+  {
+    "id": "legiana_huntinghorn",
+    "name": "優雅風笛",
+    "nameEn": "",
+    "type": "hunting-horn",
+    "attack": 1420,
+    "element": {
+      "type": "ice",
+      "value": 232
+    },
+    "affinity": 0,
+    "spSkill": "【SP】三音演奏 Lv3",
+    "skills": [
+      {
+        "skillId": "divine_blessing",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "melodies": [
+      {
+        "name": "雷耐性UP",
+        "description": "在一定時間內，減輕雷屬性的傷害"
+      },
+      {
+        "name": "聽覺保護【小】",
+        "description": "在一定時間內，不會受到咆哮【小】影響"
+      },
+      {
+        "name": "屬性值UP【大】",
+        "description": "在一段時間內，大幅提升屬性值"
+      }
+    ]
+  },
+  {
+    "id": "diablos_huntinghorn",
+    "name": "雙重號角",
+    "nameEn": "",
+    "type": "hunting-horn",
+    "attack": 2371,
+    "element": null,
+    "affinity": 0,
+    "spSkill": "【SP】三音演奏 Lv3",
+    "skills": [
+      {
+        "skillId": "heroics",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "melodies": [
+      {
+        "name": "震動無效",
+        "description": "在一定時間內，不會受到地面震動影響"
+      },
+      {
+        "name": "聽覺保護【大】",
+        "description": "在一定時間內，不會受到咆哮【小】和咆哮【大】影響"
+      },
+      {
+        "name": "攻擊力UP【小】",
+        "description": "在一段時間內，小幅提升攻擊力"
+      }
+    ]
+  },
+  {
+    "id": "rathalos_huntinghorn",
+    "name": "火羽狩獵笛",
+    "nameEn": "",
+    "type": "hunting-horn",
+    "attack": 1420,
+    "element": {
+      "type": "fire",
+      "value": 232
+    },
+    "affinity": 0,
+    "spSkill": "【SP】三音演奏 Lv3",
+    "skills": [
+      {
+        "skillId": "earplugs",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "melodies": [
+      {
+        "name": "冰耐性UP",
+        "description": "在一定時間內，減輕冰屬性的傷害"
+      },
+      {
+        "name": "SP計量表加速【小】",
+        "description": "在一段時間內，SP計量表的增加量小幅提升"
+      },
+      {
+        "name": "屬性值UP【大】",
+        "description": "在一段時間內，大幅提升屬性值"
+      }
+    ]
+  },
+  {
+    "id": "radobaan_huntinghorn",
+    "name": "尖刺號角",
+    "nameEn": "",
+    "type": "hunting-horn",
+    "attack": 1596,
+    "element": {
+      "type": "sleep",
+      "value": 100
+    },
+    "affinity": 0,
+    "spSkill": "【SP】三音演奏 Lv3",
+    "skills": [
+      {
+        "skillId": "defense_boost",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "melodies": [
+      {
+        "name": "後仰無效",
+        "description": "在一定時間內，受到攻擊不會後仰"
+      },
+      {
+        "name": "精靈王的加護",
+        "description": "在一定時間內，有一定機率減少受到的傷害"
+      },
+      {
+        "name": "高頻衝擊波",
+        "description": "在自身周圍發出高頻率噪音衝擊波造成傷害"
+      }
+    ]
+  },
+  {
+    "id": "barioth_huntinghorn",
+    "name": "冰尖號角",
+    "nameEn": "",
+    "type": "hunting-horn",
+    "attack": 1191,
+    "element": {
+      "type": "ice",
+      "value": 117
+    },
+    "affinity": 5,
+    "spSkill": "【SP】三音演奏 Lv3",
+    "skills": [
+      {
+        "skillId": "evade_extender",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "melodies": [
+      {
+        "name": "毒無效",
+        "description": "在一定時間內，不會陷入中毒狀態"
+      },
+      {
+        "name": "風壓耐性",
+        "description": "在一定時間內，不會受到風壓【小】的影響並擁有對風壓【大】的耐性"
+      },
+      {
+        "name": "會心率UP【大】",
+        "description": "在一段時間內，大幅提升會心率"
+      }
+    ]
+  },
+  {
+    "id": "zinogre_huntinghorn",
+    "name": "王琴轟雷",
+    "nameEn": "",
+    "type": "hunting-horn",
+    "attack": 1420,
+    "element": {
+      "type": "thunder",
+      "value": 232
+    },
+    "affinity": 0,
+    "spSkill": "【SP】三音演奏 Lv3",
+    "skills": [
+      {
+        "skillId": "artful_dodger",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "melodies": [
+      {
+        "name": "毒無效",
+        "description": "在一定時間內，不會陷入中毒狀態"
+      },
+      {
+        "name": "後仰無效",
+        "description": "在一定時間內，受到攻擊不會後仰"
+      },
+      {
+        "name": "雷屬性攻擊力UP",
+        "description": "在一段時間內，大幅提升雷屬性武器的屬性值"
+      }
+    ]
+  },
+  {
+    "id": "deviljho_huntinghorn",
+    "name": "鎖縛的暴龍",
+    "nameEn": "",
+    "type": "hunting-horn",
+    "attack": 1568,
+    "element": {
+      "type": "dragon",
+      "value": 292
+    },
+    "affinity": -30,
+    "spSkill": "【SP】三音演奏 Lv3",
+    "skills": [
+      {
+        "skillId": "power_prolonger",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "melodies": [
+      {
+        "name": "毒無效",
+        "description": "在一定時間內，不會陷入中毒狀態"
+      },
+      {
+        "name": "風壓無效",
+        "description": "在一定時間內，不會受到所有的風壓影響"
+      },
+      {
+        "name": "攻擊力UP【大】",
+        "description": "在一段時間內，大幅提升攻擊力"
+      }
+    ]
+  },
+  {
+    "id": "basarios_huntinghorn",
+    "name": "岩龍貝斯",
+    "nameEn": "",
+    "type": "hunting-horn",
+    "attack": 1666,
+    "element": {
+      "type": "fire",
+      "value": 39
+    },
+    "affinity": -15,
+    "spSkill": "【SP】三音演奏 Lv3",
+    "skills": [
+      {
+        "skillId": "heroics",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "melodies": [
+      {
+        "name": "冰耐性UP",
+        "description": "在一定時間內，減輕冰屬性的傷害"
+      },
+      {
+        "name": "精靈王的加護",
+        "description": "在一定時間內，有一定機率減少受到的傷害"
+      },
+      {
+        "name": "攻擊力UP【小】",
+        "description": "在一段時間內，小幅提升攻擊力"
+      }
+    ]
+  },
+  {
+    "id": "khezu_huntinghorn",
+    "name": "奇怪龍號角",
+    "nameEn": "",
+    "type": "hunting-horn",
+    "attack": 1194,
+    "element": {
+      "type": "thunder",
+      "value": 120
+    },
+    "affinity": 5,
+    "spSkill": "【SP】三音演奏 Lv3",
+    "skills": [
+      {
+        "skillId": "peak_performance",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "melodies": [
+      {
+        "name": "泥．積雪無效",
+        "description": "在一定時間內，不會受到魔物的泥濘&積雪影響"
+      },
+      {
+        "name": "會心率UP【小】",
+        "description": "在一段時間內，小幅提升會心率"
+      },
+      {
+        "name": "高頻衝擊波",
+        "description": "在自身周圍發出高頻率噪音衝擊波造成傷害"
+      }
+    ]
+  },
+  {
+    "id": "kushaladaora_huntinghorn",
+    "name": "鋼龍巴風特笛",
+    "nameEn": "",
+    "type": "hunting-horn",
+    "attack": 1553,
+    "element": {
+      "type": "ice",
+      "value": 238
+    },
+    "affinity": 0,
+    "spSkill": "【SP】三音演奏 Lv3",
+    "skills": [
+      {
+        "skillId": "windproof",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "melodies": [
+      {
+        "name": "火耐性UP",
+        "description": "在一定時間內，減輕火屬性的傷害"
+      },
+      {
+        "name": "攻擊力UP【小】",
+        "description": "在一段時間內，小幅提升攻擊力"
+      },
+      {
+        "name": "高頻衝擊波【散】",
+        "description": "在自身周圍發出高頻率噪音衝擊波造成傷害，解除爆破異常和鬼火纏身狀態"
+      }
+    ]
+  },
+  {
+    "id": "mizutsune_huntinghorn",
+    "name": "狐鈴無語亦無聲",
+    "nameEn": "",
+    "type": "hunting-horn",
+    "attack": 1436,
+    "element": {
+      "type": "water",
+      "value": 230
+    },
+    "affinity": 10,
+    "spSkill": "【SP】三音演奏 Lv3",
+    "skills": [
+      {
+        "skillId": "artful_dodger",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "melodies": [
+      {
+        "name": "龍耐性UP",
+        "description": "在一定時間內，減輕龍屬性的傷害"
+      },
+      {
+        "name": "迴避距離UP",
+        "description": "在一段時間內，增加迴避距離"
+      },
+      {
+        "name": "會心率UP【大】",
+        "description": "在一段時間內，大幅提升會心率"
+      }
+    ]
+  },
+  {
+    "id": "teostra_huntinghorn",
+    "name": "炎王豎琴",
+    "nameEn": "",
+    "type": "hunting-horn",
+    "attack": 1684,
+    "element": {
+      "type": "blast",
+      "value": 345
+    },
+    "affinity": 0,
+    "spSkill": "【SP】三音演奏 Lv3",
+    "skills": [
+      {
+        "skillId": "heroics",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "melodies": [
+      {
+        "name": "毒無效．解毒",
+        "description": "解除中毒狀態，在一定時間內，不會陷入中毒狀態"
+      },
+      {
+        "name": "屬性值UP【小】",
+        "description": "在一段時間內，小幅提升屬性值"
+      },
+      {
+        "name": "SP計量表加速【大】",
+        "description": "在一段時間內，SP計量表的累積量大幅提升"
+      }
+    ]
+  },
+  {
+    "id": "magnamalo_huntinghorn",
+    "name": "禍琵琶【封】",
+    "nameEn": "",
+    "type": "hunting-horn",
+    "attack": 1516,
+    "element": {
+      "type": "blast",
+      "value": 236
+    },
+    "affinity": 0,
+    "spSkill": "【SP】三音演奏 Lv3",
+    "skills": [
+      {
+        "skillId": "partbreaker",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "melodies": [
+      {
+        "name": "睡眠無效",
+        "description": "在一定時間內，不會陷入睡眠狀態"
+      },
+      {
+        "name": "後仰無效",
+        "description": "在一定時間內，受到攻擊不會後仰"
+      },
+      {
+        "name": "屬性值UP【大】",
+        "description": "在一段時間內，大幅提升屬性值"
+      }
+    ]
+  },
+  {
+    "id": "rajang_huntinghorn",
+    "name": "電電太鼓",
+    "nameEn": "",
+    "type": "hunting-horn",
+    "attack": 1568,
+    "element": {
+      "type": "thunder",
+      "value": 292
+    },
+    "affinity": -30,
+    "spSkill": "【SP】三音演奏 Lv3",
+    "skills": [
+      {
+        "skillId": "attack_up_critical_down",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "melodies": [
+      {
+        "name": "水耐性UP",
+        "description": "在一定時間內，減輕水屬性的傷害"
+      },
+      {
+        "name": "聽覺保護【小】",
+        "description": "在一定時間內，不會受到咆哮【小】影響"
+      },
+      {
+        "name": "屬性值UP【大】",
+        "description": "在一段時間內，大幅提升屬性值"
+      }
+    ]
+  },
+  {
+    "id": "nergigante_huntinghorn",
+    "name": "寂滅的章節",
+    "nameEn": "",
+    "type": "hunting-horn",
+    "attack": 1553,
+    "element": {
+      "type": "dragon",
+      "value": 238
+    },
+    "affinity": 0,
+    "spSkill": "【SP】三音演奏 Lv3",
+    "skills": [
+      {
+        "skillId": "partbreaker",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "melodies": [
+      {
+        "name": "水耐性UP",
+        "description": "在一定時間內，減輕水屬性的傷害"
+      },
+      {
+        "name": "後仰無效",
+        "description": "在一定時間內，受到攻擊不會後仰"
+      },
+      {
+        "name": "屬性值UP【大】",
+        "description": "在一段時間內，大幅提升屬性值"
+      }
+    ]
+  },
+  {
+    "id": "somnacanth_huntinghorn",
+    "name": "人魚援手",
+    "nameEn": "",
+    "type": "hunting-horn",
+    "attack": 1567,
+    "element": {
+      "type": "sleep",
+      "value": 236
+    },
+    "affinity": -15,
+    "spSkill": "【SP】三音演奏 Lv3",
+    "skills": [
+      {
+        "skillId": "evade_extender",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "melodies": [
+      {
+        "name": "麻痺無效",
+        "description": "在一定時間內，不會陷入麻痺狀態"
+      },
+      {
+        "name": "後仰無效",
+        "description": "在一定時間內，受到攻擊不會後仰"
+      },
+      {
+        "name": "屬性值UP【大】",
+        "description": "在一段時間內，大幅提升屬性值"
+      }
+    ]
+  },
+  {
+    "id": "tigrex_huntinghorn",
+    "name": "轟龍紋笛",
+    "nameEn": "",
+    "type": "hunting-horn",
+    "attack": 2633,
+    "element": null,
+    "affinity": -40,
+    "spSkill": "【SP】三音演奏 Lv3",
+    "skills": [
+      {
+        "skillId": "brutal_strike",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "melodies": [
+      {
+        "name": "防禦力UP",
+        "description": "在一段時間內，大幅提升防禦力"
+      },
+      {
+        "name": "SP計量表加速【小】",
+        "description": "在一段時間內，SP計量表的增加量小幅提升"
+      },
+      {
+        "name": "高頻衝擊波",
+        "description": "在自身周圍發出高頻率噪音衝擊波造成傷害"
+      }
+    ]
+  },
+  {
+    "id": "brute_tigrex_huntinghorn",
+    "name": "劫難紋笛",
+    "nameEn": "",
+    "type": "hunting-horn",
+    "attack": 2633,
+    "element": null,
+    "affinity": -10,
+    "spSkill": "【SP】三音演奏 Lv3",
+    "skills": [
+      {
+        "skillId": "power_prolonger",
+        "level": 3
+      }
+    ],
+    "image": "",
+    "melodies": [
+      {
+        "name": "震動無效",
+        "description": "在一定時間內，不會受到地面震動影響"
+      },
+      {
+        "name": "迴避距離UP",
+        "description": "在一段時間內，增加迴避距離"
+      },
+      {
+        "name": "攻擊力UP【大】",
+        "description": "在一段時間內，大幅提升攻擊力"
+      }
+    ]
+  },
+  {
+    "id": "kirin_huntinghorn",
+    "name": "雷鳴笛",
+    "nameEn": "",
+    "type": "hunting-horn",
+    "attack": 1622,
+    "element": {
+      "type": "thunder",
+      "value": 334
+    },
+    "affinity": 0,
+    "spSkill": "【SP】三音演奏 Lv3",
+    "skills": [
+      {
+        "skillId": "latent_power",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "melodies": [
+      {
+        "name": "震動無效",
+        "description": "在一定時間內，不會受到地面震動影響"
+      },
+      {
+        "name": "SP計量表加速【小】",
+        "description": "在一段時間內，SP計量表的增加量小幅提升"
+      },
+      {
+        "name": "會心率UP【大】",
+        "description": "在一段時間內，大幅提升會心率"
+      }
+    ]
+  },
+  {
+    "id": "bazelgeuse_huntinghorn",
+    "name": "爆鱗太鼓",
+    "nameEn": "",
+    "type": "hunting-horn",
+    "attack": 1942,
+    "element": {
+      "type": "blast",
+      "value": 201
+    },
+    "affinity": -30,
+    "spSkill": "【SP】三音演奏 Lv3",
+    "skills": [
+      {
+        "skillId": "partbreaker",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "melodies": [
+      {
+        "name": "震動無效",
+        "description": "在一定時間內，不會受到地面震動影響"
+      },
+      {
+        "name": "迴避距離UP",
+        "description": "在一段時間內，增加迴避距離"
+      },
+      {
+        "name": "高頻衝擊波",
+        "description": "在自身周圍發出高頻率噪音衝擊波造成傷害"
+      }
+    ]
+  },
+  {
+    "id": "arzuros_huntinghorn",
+    "name": "青熊笛【壹式】",
+    "nameEn": "",
+    "type": "hunting-horn",
+    "attack": 2361,
+    "element": null,
+    "affinity": -20,
+    "spSkill": "【SP】三音演奏 Lv3",
+    "skills": [
+      {
+        "skillId": "special_boost",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "melodies": [
+      {
+        "name": "毒無效",
+        "description": "在一定時間內，不會陷入中毒狀態"
+      },
+      {
+        "name": "SP計量表加速【小】",
+        "description": "在一段時間內，SP計量表的增加量小幅提升"
+      },
+      {
+        "name": "攻擊力UP【小】",
+        "description": "在一段時間內，小幅提升攻擊力"
+      }
+    ]
+  },
+  {
+    "id": "glavenus_huntinghorn",
+    "name": "灼炎之火靈",
+    "nameEn": "",
+    "type": "hunting-horn",
+    "attack": 1568,
+    "element": {
+      "type": "fire",
+      "value": 292
+    },
+    "affinity": -30,
+    "spSkill": "【SP】三音演奏 Lv3",
+    "skills": [
+      {
+        "skillId": "brutal_strike",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "melodies": [
+      {
+        "name": "後仰無效",
+        "description": "在一定時間內，受到攻擊不會後仰"
+      },
+      {
+        "name": "聽覺保護【小】",
+        "description": "在一定時間內，不會受到咆哮【小】影響"
+      },
+      {
+        "name": "SP計量表加速【大】",
+        "description": "在一段時間內，SP計量表的累積量大幅提升"
+      }
+    ]
+  },
+  {
+    "id": "chameleos_huntinghorn",
+    "name": "咒語陶笛",
+    "nameEn": "",
+    "type": "hunting-horn",
+    "attack": 1741,
+    "element": {
+      "type": "poison",
+      "value": 347
+    },
+    "affinity": 0,
+    "spSkill": "【SP】三音演奏 Lv3",
+    "skills": [
+      {
+        "skillId": "abnormal_status_enhancement",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "melodies": [
+      {
+        "name": "防禦力UP",
+        "description": "在一段時間內，大幅提升防禦力"
+      },
+      {
+        "name": "風壓無效",
+        "description": "在一定時間內，不會受到所有的風壓影響"
+      },
+      {
+        "name": "屬性值UP【大】",
+        "description": "在一段時間內，大幅提升屬性值"
+      }
+    ]
+  },
+  {
+    "id": "nargacuga_huntinghorn",
+    "name": "隱密音調",
+    "nameEn": "",
+    "type": "hunting-horn",
+    "attack": 2082,
+    "element": null,
+    "affinity": 25,
+    "spSkill": "【SP】三音演奏 Lv3",
+    "skills": [
+      {
+        "skillId": "resuscitate",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "melodies": [
+      {
+        "name": "迴避距離UP",
+        "description": "在一段時間內，增加迴避距離"
+      },
+      {
+        "name": "會心率UP【小】",
+        "description": "在一段時間內，小幅提升會心率"
+      },
+      {
+        "name": "SP計量表加速【大】",
+        "description": "在一段時間內，SP計量表的累積量大幅提升"
+      }
+    ]
+  },
+  {
+    "id": "namielle_huntinghorn",
+    "name": "水蛇號角",
+    "nameEn": "",
+    "type": "hunting-horn",
+    "attack": 1335,
+    "element": {
+      "type": "water",
+      "value": 276
+    },
+    "affinity": 15,
+    "spSkill": "【SP】三音演奏 Lv3",
+    "skills": [
+      {
+        "skillId": "weakness_exploit",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "melodies": [
+      {
+        "name": "全屬性耐性UP",
+        "description": "在一定時間內，減輕所有屬性的傷害"
+      },
+      {
+        "name": "會心率UP【小】",
+        "description": "在一段時間內，小幅提升會心率"
+      },
+      {
+        "name": "高頻衝擊波",
+        "description": "在自身周圍發出高頻率噪音衝擊波造成傷害"
+      }
+    ]
+  },
+  {
+    "id": "garangolm_huntinghorn",
+    "name": "剛纏獸之鼓",
+    "nameEn": "",
+    "type": "hunting-horn",
+    "attack": 2371,
+    "element": null,
+    "affinity": 0,
+    "spSkill": "【SP】三音演奏 Lv3",
+    "skills": [
+      {
+        "skillId": "disable_perfect_evade",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "melodies": [
+      {
+        "name": "泥．積雪無效",
+        "description": "在一定時間內，不會受到魔物的泥濘&積雪影響"
+      },
+      {
+        "name": "攻擊力UP【小】",
+        "description": "在一段時間內，小幅提升攻擊力"
+      },
+      {
+        "name": "高頻衝擊波",
+        "description": "在自身周圍發出高頻率噪音衝擊波造成傷害"
+      }
+    ]
+  },
+  {
+    "id": "lunagaron_huntinghorn",
+    "name": "冷月之弦樂器",
+    "nameEn": "",
+    "type": "hunting-horn",
+    "attack": 1458,
+    "element": {
+      "type": "ice",
+      "value": 164
+    },
+    "affinity": 0,
+    "spSkill": "【SP】三音演奏 Lv3",
+    "skills": [
+      {
+        "skillId": "high_performance_ice",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "melodies": [
+      {
+        "name": "毒無效",
+        "description": "在一定時間內，不會陷入中毒狀態"
+      },
+      {
+        "name": "麻痺無效",
+        "description": "在一定時間內，不會陷入麻痺狀態"
+      },
+      {
+        "name": "攻擊力UP【大】",
+        "description": "在一段時間內，大幅提升攻擊力"
+      }
+    ]
+  },
+  {
+    "id": "espinas_huntinghorn",
+    "name": "薔薇吉他",
+    "nameEn": "",
+    "type": "hunting-horn",
+    "attack": 1756,
+    "element": {
+      "type": "poison",
+      "value": 183
+    },
+    "affinity": 10,
+    "spSkill": "【SP】三音演奏 Lv3",
+    "skills": [
+      {
+        "skillId": "part_break_special_boost",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "melodies": [
+      {
+        "name": "水耐性UP",
+        "description": "在一定時間內，減輕水屬性的傷害"
+      },
+      {
+        "name": "後仰無效",
+        "description": "在一定時間內，受到攻擊不會後仰"
+      },
+      {
+        "name": "會心率UP【大】",
+        "description": "在一段時間內，大幅提升會心率"
+      }
+    ]
+  },
+  {
+    "id": "malzeno_huntinghorn",
+    "name": "魔奏之悲鳴",
+    "nameEn": "",
+    "type": "hunting-horn",
+    "attack": 1622,
+    "element": {
+      "type": "dragon",
+      "value": 334
+    },
+    "affinity": 0,
+    "spSkill": "【SP】三音演奏 Lv3",
+    "skills": [
+      {
+        "skillId": "high_performance_dragon",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "melodies": [
+      {
+        "name": "迴避距離UP",
+        "description": "在一段時間內，增加迴避距離"
+      },
+      {
+        "name": "屬性值UP【小】",
+        "description": "在一段時間內，小幅提升屬性值"
+      },
+      {
+        "name": "高頻衝擊波",
+        "description": "在自身周圍發出高頻率噪音衝擊波造成傷害"
+      }
+    ]
+  },
+  {
+    "id": "astalos_huntinghorn",
+    "name": "綠雷狩笛",
+    "nameEn": "",
+    "type": "hunting-horn",
+    "attack": 1436,
+    "element": {
+      "type": "thunder",
+      "value": 230
+    },
+    "affinity": 10,
+    "spSkill": "【SP】三音演奏 Lv3",
+    "skills": [
+      {
+        "skillId": "thunder_attack",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "melodies": [
+      {
+        "name": "裂傷無效",
+        "description": "在一定時間內，不會陷入裂傷狀態"
+      },
+      {
+        "name": "迴避距離UP",
+        "description": "在一段時間內，增加迴避距離"
+      },
+      {
+        "name": "雷屬性攻擊力UP",
+        "description": "在一段時間內，大幅提升雷屬性武器的屬性值"
+      }
+    ]
+  },
+  {
+    "id": "seregios_huntinghorn",
+    "name": "音笛參宿七",
+    "nameEn": "",
+    "type": "hunting-horn",
+    "attack": 2335,
+    "element": null,
+    "affinity": 15,
+    "spSkill": "【SP】三音演奏 Lv3",
+    "skills": [
+      {
+        "skillId": "powerhouse",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "melodies": [
+      {
+        "name": "迴避距離UP",
+        "description": "在一段時間內，增加迴避距離"
+      },
+      {
+        "name": "精靈王的加護",
+        "description": "在一定時間內，有一定機率減少受到的傷害"
+      },
+      {
+        "name": "會心率UP【大】",
+        "description": "在一段時間內，大幅提升會心率"
+      }
+    ]
+  },
+  {
+    "id": "bone_huntinghorn",
+    "name": "骨製號角",
+    "nameEn": "",
+    "type": "hunting-horn",
+    "attack": 1912,
+    "element": null,
+    "affinity": 0,
+    "spSkill": "【SP】三音演奏 Lv3",
+    "skills": [
+      {
+        "skillId": "concentration",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "melodies": [
+      {
+        "name": "迴避距離UP",
+        "description": "在一段時間內，增加迴避距離"
+      },
+      {
+        "name": "聽覺保護【小】",
+        "description": "在一定時間內，不會受到咆哮【小】影響"
+      },
+      {
+        "name": "攻擊力UP【大】",
+        "description": "在一段時間內，大幅提升攻擊力"
+      }
+    ]
+  }
+]

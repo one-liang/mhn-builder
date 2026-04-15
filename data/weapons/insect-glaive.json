@@ -1,0 +1,1289 @@
+[
+  {
+    "id": "ore_insectglaive",
+    "name": "鐵製長刀",
+    "nameEn": "",
+    "type": "insect-glaive",
+    "attack": 1912,
+    "element": null,
+    "affinity": 0,
+    "spSkill": "【SP】急襲突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "poison_resistance",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "kinsect": {
+      "name": "茶色金龜子",
+      "type": "飛翔型",
+      "performanceType": "迅速",
+      "attackSystem": "切斷",
+      "bonus": "善於採集"
+    }
+  },
+  {
+    "id": "kuluyaku_insectglaive",
+    "name": "搔鳥長刀",
+    "nameEn": "",
+    "type": "insect-glaive",
+    "attack": 1912,
+    "element": null,
+    "affinity": 10,
+    "spSkill": "【SP】急襲突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "fortify",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "kinsect": {
+      "name": "寬翅蛾",
+      "type": "飛翔型",
+      "performanceType": "迅速",
+      "attackSystem": "打擊",
+      "bonus": "追擊頻率UP"
+    }
+  },
+  {
+    "id": "pukeipukei_insectglaive",
+    "name": "花朵之刀",
+    "nameEn": "",
+    "type": "insect-glaive",
+    "attack": 1596,
+    "element": {
+      "type": "poison",
+      "value": 100
+    },
+    "affinity": 0,
+    "spSkill": "【SP】急襲突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "sneak_attack",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "kinsect": {
+      "name": "土蟋蟀",
+      "type": "粉塵型",
+      "performanceType": "耐力",
+      "attackSystem": "切斷",
+      "bonus": "強化時最大耐力UP"
+    }
+  },
+  {
+    "id": "coral_pukeipukei_insectglaive",
+    "name": "潟湖長刀",
+    "nameEn": "",
+    "type": "insect-glaive",
+    "attack": 1420,
+    "element": {
+      "type": "water",
+      "value": 232
+    },
+    "affinity": 0,
+    "spSkill": "【SP】急襲突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "earplugs",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "kinsect": {
+      "name": "咒縛天牛",
+      "type": "粉塵型",
+      "performanceType": "力量",
+      "attackSystem": "切斷",
+      "bonus": "強爆粉塵"
+    }
+  },
+  {
+    "id": "tobikadachi_insectglaive",
+    "name": "脈衝長棍",
+    "nameEn": "",
+    "type": "insect-glaive",
+    "attack": 1293,
+    "element": {
+      "type": "thunder",
+      "value": 47
+    },
+    "affinity": 0,
+    "spSkill": "【SP】急襲突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "evade_extender",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "kinsect": {
+      "name": "大西納托蟲",
+      "type": "飛翔型",
+      "performanceType": "耐力",
+      "attackSystem": "切斷",
+      "bonus": "追擊頻率UP"
+    }
+  },
+  {
+    "id": "viper_tobikadachi_insectglaive",
+    "name": "朱赤痺之柱",
+    "nameEn": "",
+    "type": "insect-glaive",
+    "attack": 1776,
+    "element": {
+      "type": "paralysis",
+      "value": 201
+    },
+    "affinity": 10,
+    "spSkill": "【SP】急襲突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "burst_secret",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "kinsect": {
+      "name": "大西納托蟲",
+      "type": "飛翔型",
+      "performanceType": "耐力",
+      "attackSystem": "切斷",
+      "bonus": "追擊頻率UP"
+    }
+  },
+  {
+    "id": "nightshade_paolumu_insectglaive",
+    "name": "夜神長刀",
+    "nameEn": "",
+    "type": "insect-glaive",
+    "attack": 1756,
+    "element": {
+      "type": "sleep",
+      "value": 188
+    },
+    "affinity": 0,
+    "spSkill": "【SP】急襲突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "sneak_attack",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "kinsect": {
+      "name": "堅甲瓢蟲",
+      "type": "粉塵型",
+      "performanceType": "耐力",
+      "attackSystem": "打擊",
+      "bonus": "強化時最大耐力UP"
+    }
+  },
+  {
+    "id": "jyuratodus_insectglaive",
+    "name": "水流棍",
+    "nameEn": "",
+    "type": "insect-glaive",
+    "attack": 1293,
+    "element": {
+      "type": "water",
+      "value": 75
+    },
+    "affinity": 0,
+    "spSkill": "【SP】急襲突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "last_stand",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "kinsect": {
+      "name": "短角獨角仙",
+      "type": "共鬥型",
+      "performanceType": "迅速",
+      "attackSystem": "打擊",
+      "bonus": "昏厥威力UP"
+    }
+  },
+  {
+    "id": "anjanath_insectglaive",
+    "name": "蠻顎龍桿刀",
+    "nameEn": "",
+    "type": "insect-glaive",
+    "attack": 1293,
+    "element": {
+      "type": "fire",
+      "value": 117
+    },
+    "affinity": 0,
+    "spSkill": "【SP】急襲突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "rising_tide",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "kinsect": {
+      "name": "鏟刃獨角仙",
+      "type": "共鬥型",
+      "performanceType": "耐力",
+      "attackSystem": "打擊",
+      "bonus": "昏厥威力UP"
+    }
+  },
+  {
+    "id": "fulgur_anjanath_insectglaive",
+    "name": "直桿雷顎棍",
+    "nameEn": "",
+    "type": "insect-glaive",
+    "attack": 1434,
+    "element": {
+      "type": "thunder",
+      "value": 230
+    },
+    "affinity": 10,
+    "spSkill": "【SP】急襲突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "critical_element",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "kinsect": {
+      "name": "帝王公牛鍬形蟲",
+      "type": "共鬥型",
+      "performanceType": "耐力",
+      "attackSystem": "切斷",
+      "bonus": "強化時屬性值UP"
+    }
+  },
+  {
+    "id": "rathian_insectglaive",
+    "name": "公主權杖",
+    "nameEn": "",
+    "type": "insect-glaive",
+    "attack": 1516,
+    "element": {
+      "type": "poison",
+      "value": 236
+    },
+    "affinity": 0,
+    "spSkill": "【SP】急襲突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "health_boost",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "kinsect": {
+      "name": "風霧蛾",
+      "type": "飛翔型",
+      "performanceType": "迅速",
+      "attackSystem": "切斷",
+      "bonus": "追擊頻率UP"
+    }
+  },
+  {
+    "id": "legiana_insectglaive",
+    "name": "冰霜長刀",
+    "nameEn": "",
+    "type": "insect-glaive",
+    "attack": 1420,
+    "element": {
+      "type": "ice",
+      "value": 232
+    },
+    "affinity": 0,
+    "spSkill": "【SP】急襲突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "divine_blessing",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "kinsect": {
+      "name": "西納托紅楓蟲",
+      "type": "飛翔型",
+      "performanceType": "力量",
+      "attackSystem": "切斷",
+      "bonus": "制空"
+    }
+  },
+  {
+    "id": "diablos_insectglaive",
+    "name": "爆鎚棍",
+    "nameEn": "",
+    "type": "insect-glaive",
+    "attack": 2371,
+    "element": null,
+    "affinity": 0,
+    "spSkill": "【SP】急襲突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "heroics",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "kinsect": {
+      "name": "窄翅長蛾",
+      "type": "飛翔型",
+      "performanceType": "耐力",
+      "attackSystem": "打擊",
+      "bonus": "追擊頻率UP"
+    }
+  },
+  {
+    "id": "black_diablos_insectglaive",
+    "name": "命運長刀",
+    "nameEn": "",
+    "type": "insect-glaive",
+    "attack": 2658,
+    "element": null,
+    "affinity": -30,
+    "spSkill": "【SP】急襲突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "partbreaker",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "kinsect": {
+      "name": "彈頭雀蛾",
+      "type": "飛翔型",
+      "performanceType": "力量",
+      "attackSystem": "打擊",
+      "bonus": "制空"
+    }
+  },
+  {
+    "id": "rathalos_insectglaive",
+    "name": "火焰長刀",
+    "nameEn": "",
+    "type": "insect-glaive",
+    "attack": 1420,
+    "element": {
+      "type": "fire",
+      "value": 232
+    },
+    "affinity": 0,
+    "spSkill": "【SP】急襲突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "earplugs",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "kinsect": {
+      "name": "大西納托蟲",
+      "type": "飛翔型",
+      "performanceType": "耐力",
+      "attackSystem": "切斷",
+      "bonus": "追擊頻率UP"
+    }
+  },
+  {
+    "id": "azure_rathalos_insectglaive",
+    "name": "蒼炎棍【飛翔】",
+    "nameEn": "",
+    "type": "insect-glaive",
+    "attack": 1682,
+    "element": {
+      "type": "fire",
+      "value": 134
+    },
+    "affinity": 0,
+    "spSkill": "【SP】急襲突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "special_boost",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "kinsect": {
+      "name": "堅甲瓢蟲",
+      "type": "粉塵型",
+      "performanceType": "耐力",
+      "attackSystem": "打擊",
+      "bonus": "強化時最大耐力UP"
+    }
+  },
+  {
+    "id": "silver_rathalos_insectglaive",
+    "name": "繚亂輝龍棍",
+    "nameEn": "",
+    "type": "insect-glaive",
+    "attack": 1345,
+    "element": {
+      "type": "fire",
+      "value": 277
+    },
+    "affinity": 20,
+    "spSkill": "【SP】急襲突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "critical_element",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "kinsect": {
+      "name": "風霧蛾",
+      "type": "飛翔型",
+      "performanceType": "迅速",
+      "attackSystem": "切斷",
+      "bonus": "追擊頻率UP"
+    }
+  },
+  {
+    "id": "barioth_insectglaive",
+    "name": "琥珀曲棍",
+    "nameEn": "",
+    "type": "insect-glaive",
+    "attack": 1191,
+    "element": {
+      "type": "ice",
+      "value": 117
+    },
+    "affinity": 5,
+    "spSkill": "【SP】急襲突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "evade_extender",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "kinsect": {
+      "name": "寬翅蛾",
+      "type": "飛翔型",
+      "performanceType": "迅速",
+      "attackSystem": "打擊",
+      "bonus": "追擊頻率UP"
+    }
+  },
+  {
+    "id": "zinogre_insectglaive",
+    "name": "王棍雷電",
+    "nameEn": "",
+    "type": "insect-glaive",
+    "attack": 1420,
+    "element": {
+      "type": "thunder",
+      "value": 232
+    },
+    "affinity": 0,
+    "spSkill": "【SP】急襲突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "artful_dodger",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "kinsect": {
+      "name": "咒縛天牛",
+      "type": "粉塵型",
+      "performanceType": "力量",
+      "attackSystem": "切斷",
+      "bonus": "強爆粉塵"
+    }
+  },
+  {
+    "id": "tzitziyaku_insectglaive",
+    "name": "閃耀長刀",
+    "nameEn": "",
+    "type": "insect-glaive",
+    "attack": 1588,
+    "element": {
+      "type": "thunder",
+      "value": 38
+    },
+    "affinity": 0,
+    "spSkill": "【SP】急襲突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "lock_on",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "kinsect": {
+      "name": "亮翅蜂",
+      "type": "粉塵型",
+      "performanceType": "迅速",
+      "attackSystem": "切斷",
+      "bonus": "強化時最大耐力UP"
+    }
+  },
+  {
+    "id": "odogaron_insectglaive",
+    "name": "慘爪長棍",
+    "nameEn": "",
+    "type": "insect-glaive",
+    "attack": 2059,
+    "element": null,
+    "affinity": 5,
+    "spSkill": "【SP】急襲突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "perfect_evade_sp_charge",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "kinsect": {
+      "name": "短角獨角仙",
+      "type": "共鬥型",
+      "performanceType": "迅速",
+      "attackSystem": "打擊",
+      "bonus": "昏厥威力UP"
+    }
+  },
+  {
+    "id": "ebony_odogaron_insectglaive",
+    "name": "冥府三鈷杵",
+    "nameEn": "",
+    "type": "insect-glaive",
+    "attack": 1436,
+    "element": {
+      "type": "dragon",
+      "value": 230
+    },
+    "affinity": 10,
+    "spSkill": "【SP】急襲突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "critical_boost",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "kinsect": {
+      "name": "帝王公牛鍬形蟲",
+      "type": "共鬥型",
+      "performanceType": "耐力",
+      "attackSystem": "切斷",
+      "bonus": "強化時屬性值UP"
+    }
+  },
+  {
+    "id": "deviljho_insectglaive",
+    "name": "邪惡之翼",
+    "nameEn": "",
+    "type": "insect-glaive",
+    "attack": 1568,
+    "element": {
+      "type": "dragon",
+      "value": 292
+    },
+    "affinity": -30,
+    "spSkill": "【SP】急襲突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "move_forward_strengthen",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "kinsect": {
+      "name": "光輝獨角仙",
+      "type": "共鬥型",
+      "performanceType": "力量",
+      "attackSystem": "打擊",
+      "bonus": "全力共鬥攻擊"
+    }
+  },
+  {
+    "id": "khezu_insectglaive",
+    "name": "雷光膛棍",
+    "nameEn": "",
+    "type": "insect-glaive",
+    "attack": 1194,
+    "element": {
+      "type": "thunder",
+      "value": 120
+    },
+    "affinity": 5,
+    "spSkill": "【SP】急襲突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "peak_performance",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "kinsect": {
+      "name": "鏟刃獨角仙",
+      "type": "共鬥型",
+      "performanceType": "耐力",
+      "attackSystem": "打擊",
+      "bonus": "昏厥威力UP"
+    }
+  },
+  {
+    "id": "kushaladaora_insectglaive",
+    "name": "冰體鋼龍棍",
+    "nameEn": "",
+    "type": "insect-glaive",
+    "attack": 1553,
+    "element": {
+      "type": "ice",
+      "value": 238
+    },
+    "affinity": 0,
+    "spSkill": "【SP】急襲突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "windproof",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "kinsect": {
+      "name": "窄翅長蛾",
+      "type": "飛翔型",
+      "performanceType": "耐力",
+      "attackSystem": "打擊",
+      "bonus": "追擊頻率UP"
+    }
+  },
+  {
+    "id": "mizutsune_insectglaive",
+    "name": "狐薙刀秋風拂朝露",
+    "nameEn": "",
+    "type": "insect-glaive",
+    "attack": 1436,
+    "element": {
+      "type": "water",
+      "value": 230
+    },
+    "affinity": 10,
+    "spSkill": "【SP】急襲突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "artful_dodger",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "kinsect": {
+      "name": "大西納托蟲",
+      "type": "飛翔型",
+      "performanceType": "耐力",
+      "attackSystem": "切斷",
+      "bonus": "追擊頻率UP"
+    }
+  },
+  {
+    "id": "aknosom_insectglaive",
+    "name": "傘之操蟲棍",
+    "nameEn": "",
+    "type": "insect-glaive",
+    "attack": 1588,
+    "element": {
+      "type": "fire",
+      "value": 59
+    },
+    "affinity": 0,
+    "spSkill": "【SP】急襲突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "lock_on",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "kinsect": {
+      "name": "短角獨角仙",
+      "type": "共鬥型",
+      "performanceType": "迅速",
+      "attackSystem": "打擊",
+      "bonus": "昏厥威力UP"
+    }
+  },
+  {
+    "id": "magnamalo_insectglaive",
+    "name": "禍鉾【封】",
+    "nameEn": "",
+    "type": "insect-glaive",
+    "attack": 1516,
+    "element": {
+      "type": "blast",
+      "value": 236
+    },
+    "affinity": 0,
+    "spSkill": "【SP】急襲突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "partbreaker",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "kinsect": {
+      "name": "窄翅長蛾",
+      "type": "飛翔型",
+      "performanceType": "耐力",
+      "attackSystem": "打擊",
+      "bonus": "追擊頻率UP"
+    }
+  },
+  {
+    "id": "rajang_insectglaive",
+    "name": "金碎棍棒",
+    "nameEn": "",
+    "type": "insect-glaive",
+    "attack": 1568,
+    "element": {
+      "type": "thunder",
+      "value": 292
+    },
+    "affinity": -30,
+    "spSkill": "【SP】急襲突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "airborne",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "kinsect": {
+      "name": "彈頭雀蛾",
+      "type": "飛翔型",
+      "performanceType": "力量",
+      "attackSystem": "打擊",
+      "bonus": "制空"
+    }
+  },
+  {
+    "id": "nergigante_insectglaive",
+    "name": "撲滅導燈",
+    "nameEn": "",
+    "type": "insect-glaive",
+    "attack": 1553,
+    "element": {
+      "type": "dragon",
+      "value": 238
+    },
+    "affinity": 0,
+    "spSkill": "【SP】急襲突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "partbreaker",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "kinsect": {
+      "name": "彈頭雀蛾",
+      "type": "飛翔型",
+      "performanceType": "力量",
+      "attackSystem": "打擊",
+      "bonus": "制空"
+    }
+  },
+  {
+    "id": "lagombi_insectglaive",
+    "name": "白兔操蟲棍",
+    "nameEn": "",
+    "type": "insect-glaive",
+    "attack": 1588,
+    "element": {
+      "type": "ice",
+      "value": 38
+    },
+    "affinity": 0,
+    "spSkill": "【SP】急襲突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "lock_on",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "kinsect": {
+      "name": "風霧蛾",
+      "type": "飛翔型",
+      "performanceType": "迅速",
+      "attackSystem": "切斷",
+      "bonus": "追擊頻率UP"
+    }
+  },
+  {
+    "id": "somnacanth_insectglaive",
+    "name": "人魚毒手",
+    "nameEn": "",
+    "type": "insect-glaive",
+    "attack": 1567,
+    "element": {
+      "type": "sleep",
+      "value": 236
+    },
+    "affinity": -15,
+    "spSkill": "【SP】急襲突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "evade_extender",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "kinsect": {
+      "name": "短角獨角仙",
+      "type": "共鬥型",
+      "performanceType": "迅速",
+      "attackSystem": "打擊",
+      "bonus": "昏厥威力UP"
+    }
+  },
+  {
+    "id": "tigrex_insectglaive",
+    "name": "轟龍長棍",
+    "nameEn": "",
+    "type": "insect-glaive",
+    "attack": 2633,
+    "element": null,
+    "affinity": -40,
+    "spSkill": "【SP】急襲突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "brutal_strike",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "kinsect": {
+      "name": "鏟刃獨角仙",
+      "type": "共鬥型",
+      "performanceType": "耐力",
+      "attackSystem": "打擊",
+      "bonus": "昏厥威力UP"
+    }
+  },
+  {
+    "id": "brute_tigrex_insectglaive",
+    "name": "劫難長棍",
+    "nameEn": "",
+    "type": "insect-glaive",
+    "attack": 2633,
+    "element": null,
+    "affinity": -10,
+    "spSkill": "【SP】急襲突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "power_prolonger",
+        "level": 3
+      }
+    ],
+    "image": "",
+    "kinsect": {
+      "name": "巨角蟬",
+      "type": "共鬥型",
+      "performanceType": "迅速",
+      "attackSystem": "打擊",
+      "bonus": "解除採集限制"
+    }
+  },
+  {
+    "id": "kirin_insectglaive",
+    "name": "深藍電光",
+    "nameEn": "",
+    "type": "insect-glaive",
+    "attack": 1622,
+    "element": {
+      "type": "thunder",
+      "value": 334
+    },
+    "affinity": 0,
+    "spSkill": "【SP】急襲突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "latent_power",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "kinsect": {
+      "name": "齒鉗鍬形蟲",
+      "type": "共鬥型",
+      "performanceType": "力量",
+      "attackSystem": "切斷",
+      "bonus": "全力共鬥攻擊"
+    }
+  },
+  {
+    "id": "chatacabra_insectglaive",
+    "name": "纏蛙棍",
+    "nameEn": "",
+    "type": "insect-glaive",
+    "attack": 2197,
+    "element": null,
+    "affinity": 10,
+    "spSkill": "【SP】急襲突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "armor_up",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "kinsect": {
+      "name": "疊翅鳳蝶",
+      "type": "飛翔型",
+      "performanceType": "迅速",
+      "attackSystem": "打擊",
+      "bonus": "解除採集限制"
+    }
+  },
+  {
+    "id": "glavenus_insectglaive",
+    "name": "灼炎之奔流",
+    "nameEn": "",
+    "type": "insect-glaive",
+    "attack": 1568,
+    "element": {
+      "type": "fire",
+      "value": 292
+    },
+    "affinity": -30,
+    "spSkill": "【SP】急襲突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "brutal_strike",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "kinsect": {
+      "name": "原始鍬形蟲",
+      "type": "共鬥型",
+      "performanceType": "迅速",
+      "attackSystem": "切斷",
+      "bonus": "強化時屬性值UP"
+    }
+  },
+  {
+    "id": "chameleos_insectglaive",
+    "name": "煙霧輪棍",
+    "nameEn": "",
+    "type": "insect-glaive",
+    "attack": 1741,
+    "element": {
+      "type": "poison",
+      "value": 347
+    },
+    "affinity": 0,
+    "spSkill": "【SP】急襲突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "abnormal_status_enhancement",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "kinsect": {
+      "name": "愛心巨蟲",
+      "type": "粉塵型",
+      "performanceType": "力量",
+      "attackSystem": "打擊",
+      "bonus": "連爆粉塵"
+    }
+  },
+  {
+    "id": "beotodus_insectglaive",
+    "name": "冰魚龍長柄刀",
+    "nameEn": "",
+    "type": "insect-glaive",
+    "attack": 1293,
+    "element": {
+      "type": "ice",
+      "value": 117
+    },
+    "affinity": 0,
+    "spSkill": "【SP】急襲突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "bravery",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "kinsect": {
+      "name": "鏟刃獨角仙",
+      "type": "共鬥型",
+      "performanceType": "耐力",
+      "attackSystem": "打擊",
+      "bonus": "昏厥威力UP"
+    }
+  },
+  {
+    "id": "nargacuga_insectglaive",
+    "name": "隱密長鞭",
+    "nameEn": "",
+    "type": "insect-glaive",
+    "attack": 2186,
+    "element": null,
+    "affinity": 25,
+    "spSkill": "【SP】急襲突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "resuscitate",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "kinsect": {
+      "name": "風霧蛾",
+      "type": "飛翔型",
+      "performanceType": "迅速",
+      "attackSystem": "切斷",
+      "bonus": "追擊頻率UP"
+    }
+  },
+  {
+    "id": "namielle_insectglaive",
+    "name": "水蛇奧秘",
+    "nameEn": "",
+    "type": "insect-glaive",
+    "attack": 1335,
+    "element": {
+      "type": "water",
+      "value": 276
+    },
+    "affinity": 15,
+    "spSkill": "【SP】急襲突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "weakness_exploit",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "kinsect": {
+      "name": "帝王公牛鍬形蟲",
+      "type": "共鬥型",
+      "performanceType": "耐力",
+      "attackSystem": "切斷",
+      "bonus": "強化時屬性值UP"
+    }
+  },
+  {
+    "id": "garangolm_insectglaive",
+    "name": "剛纏獸長柄刀",
+    "nameEn": "",
+    "type": "insect-glaive",
+    "attack": 2371,
+    "element": null,
+    "affinity": 0,
+    "spSkill": "【SP】急襲突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "disable_perfect_evade",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "kinsect": {
+      "name": "光輝獨角仙",
+      "type": "共鬥型",
+      "performanceType": "力量",
+      "attackSystem": "打擊",
+      "bonus": "全力共鬥攻擊"
+    }
+  },
+  {
+    "id": "lunagaron_insectglaive",
+    "name": "冷月之雙刃棍",
+    "nameEn": "",
+    "type": "insect-glaive",
+    "attack": 1458,
+    "element": {
+      "type": "ice",
+      "value": 164
+    },
+    "affinity": 0,
+    "spSkill": "【SP】急襲突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "high_performance_ice",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "kinsect": {
+      "name": "亮翅蜂",
+      "type": "粉塵型",
+      "performanceType": "迅速",
+      "attackSystem": "切斷",
+      "bonus": "強化時最大耐力UP"
+    }
+  },
+  {
+    "id": "espinas_insectglaive",
+    "name": "薔薇棘棍",
+    "nameEn": "",
+    "type": "insect-glaive",
+    "attack": 1434,
+    "element": {
+      "type": "fire",
+      "value": 230
+    },
+    "affinity": 10,
+    "spSkill": "【SP】急襲突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "part_break_special_boost",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "kinsect": {
+      "name": "齒鉗鍬形蟲",
+      "type": "共鬥型",
+      "performanceType": "力量",
+      "attackSystem": "切斷",
+      "bonus": "全力共鬥攻擊"
+    }
+  },
+  {
+    "id": "malzeno_insectglaive",
+    "name": "鞭笞之杖",
+    "nameEn": "",
+    "type": "insect-glaive",
+    "attack": 1622,
+    "element": {
+      "type": "dragon",
+      "value": 334
+    },
+    "affinity": 0,
+    "spSkill": "【SP】急襲突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "high_performance_dragon",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "kinsect": {
+      "name": "風霧蛾",
+      "type": "飛翔型",
+      "performanceType": "迅速",
+      "attackSystem": "切斷",
+      "bonus": "追擊頻率UP"
+    }
+  },
+  {
+    "id": "gossharag_insectglaive",
+    "name": "雪鬼獸操蟲棍",
+    "nameEn": "",
+    "type": "insect-glaive",
+    "attack": 1492,
+    "element": {
+      "type": "ice",
+      "value": 147
+    },
+    "affinity": -30,
+    "spSkill": "【SP】急襲突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "brutal_strike",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "kinsect": {
+      "name": "齒鉗鍬形蟲",
+      "type": "共鬥型",
+      "performanceType": "力量",
+      "attackSystem": "切斷",
+      "bonus": "全力共鬥攻擊"
+    }
+  },
+  {
+    "id": "astalos_insectglaive",
+    "name": "雷牙之霆龍棍",
+    "nameEn": "",
+    "type": "insect-glaive",
+    "attack": 1436,
+    "element": {
+      "type": "thunder",
+      "value": 230
+    },
+    "affinity": 10,
+    "spSkill": "【SP】急襲突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "thunder_attack",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "kinsect": {
+      "name": "窄翅長蛾",
+      "type": "飛翔型",
+      "performanceType": "耐力",
+      "attackSystem": "打擊",
+      "bonus": "追擊頻率UP"
+    }
+  },
+  {
+    "id": "seregios_insectglaive",
+    "name": "蟲棍河鼓二",
+    "nameEn": "",
+    "type": "insect-glaive",
+    "attack": 2335,
+    "element": null,
+    "affinity": 15,
+    "spSkill": "【SP】急襲突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "powerhouse",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "kinsect": {
+      "name": "西納托擬態蟲",
+      "type": "飛翔型",
+      "performanceType": "迅速",
+      "attackSystem": "切斷",
+      "bonus": "解除採集限制"
+    }
+  },
+  {
+    "id": "bone_insectglaive",
+    "name": "骨棍",
+    "nameEn": "",
+    "type": "insect-glaive",
+    "attack": 1912,
+    "element": null,
+    "affinity": 0,
+    "spSkill": "【SP】急襲突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "concentration",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "kinsect": {
+      "name": "綠色金龜子",
+      "type": "共鬥型",
+      "performanceType": "迅速",
+      "attackSystem": "打擊",
+      "bonus": "善於採集"
+    }
+  }
+]

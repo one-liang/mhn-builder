@@ -1,0 +1,829 @@
+[
+  {
+    "id": "ore_lance",
+    "name": "鐵槍",
+    "nameEn": "",
+    "type": "lance",
+    "attack": 1912,
+    "element": null,
+    "affinity": 0,
+    "spSkill": "【SP】突進 Lv3",
+    "skills": [
+      {
+        "skillId": "poison_resistance",
+        "level": 2
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "kuluyaku_lance",
+    "name": "搔鳥長槍",
+    "nameEn": "",
+    "type": "lance",
+    "attack": 1912,
+    "element": null,
+    "affinity": 10,
+    "spSkill": "【SP】突進 Lv3",
+    "skills": [
+      {
+        "skillId": "fortify",
+        "level": 2
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "pukeipukei_lance",
+    "name": "花朵長槍",
+    "nameEn": "",
+    "type": "lance",
+    "attack": 1596,
+    "element": {
+      "type": "poison",
+      "value": 100
+    },
+    "affinity": 0,
+    "spSkill": "【SP】突進 Lv3",
+    "skills": [
+      {
+        "skillId": "sneak_attack",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "coral_pukeipukei_lance",
+    "name": "潟湖尖刺",
+    "nameEn": "",
+    "type": "lance",
+    "attack": 1420,
+    "element": {
+      "type": "water",
+      "value": 232
+    },
+    "affinity": 0,
+    "spSkill": "【SP】突進 Lv3",
+    "skills": [
+      {
+        "skillId": "earplugs",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "barroth_lance",
+    "name": "土砂龍長槍",
+    "nameEn": "",
+    "type": "lance",
+    "attack": 2103,
+    "element": null,
+    "affinity": 0,
+    "spSkill": "【SP】突進 Lv3",
+    "skills": [
+      {
+        "skillId": "defense_boost",
+        "level": 2
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "tobikadachi_lance",
+    "name": "閃電長槍",
+    "nameEn": "",
+    "type": "lance",
+    "attack": 1293,
+    "element": {
+      "type": "thunder",
+      "value": 47
+    },
+    "affinity": 0,
+    "spSkill": "【SP】突進 Lv3",
+    "skills": [
+      {
+        "skillId": "evade_extender",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "nightshade_paolumu_lance",
+    "name": "夜神斧槍",
+    "nameEn": "",
+    "type": "lance",
+    "attack": 1756,
+    "element": {
+      "type": "sleep",
+      "value": 188
+    },
+    "affinity": 0,
+    "spSkill": "【SP】突進 Lv3",
+    "skills": [
+      {
+        "skillId": "sneak_attack",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "jyuratodus_lance",
+    "name": "水流骨槍",
+    "nameEn": "",
+    "type": "lance",
+    "attack": 1293,
+    "element": {
+      "type": "water",
+      "value": 75
+    },
+    "affinity": 0,
+    "spSkill": "【SP】突進 Lv3",
+    "skills": [
+      {
+        "skillId": "last_stand",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "legiana_lance",
+    "name": "優雅長槍",
+    "nameEn": "",
+    "type": "lance",
+    "attack": 1420,
+    "element": {
+      "type": "ice",
+      "value": 232
+    },
+    "affinity": 0,
+    "spSkill": "【SP】突進 Lv3",
+    "skills": [
+      {
+        "skillId": "divine_blessing",
+        "level": 2
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "diablos_lance",
+    "name": "角龍角槍",
+    "nameEn": "",
+    "type": "lance",
+    "attack": 2371,
+    "element": null,
+    "affinity": 0,
+    "spSkill": "【SP】突進 Lv3",
+    "skills": [
+      {
+        "skillId": "heroics",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "rathalos_lance",
+    "name": "火焰長槍",
+    "nameEn": "",
+    "type": "lance",
+    "attack": 1420,
+    "element": {
+      "type": "fire",
+      "value": 232
+    },
+    "affinity": 0,
+    "spSkill": "【SP】突進 Lv3",
+    "skills": [
+      {
+        "skillId": "earplugs",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "azure_rathalos_lance",
+    "name": "蒼尾長槍",
+    "nameEn": "",
+    "type": "lance",
+    "attack": 1682,
+    "element": {
+      "type": "fire",
+      "value": 134
+    },
+    "affinity": 0,
+    "spSkill": "【SP】突進 Lv3",
+    "skills": [
+      {
+        "skillId": "special_boost",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "silver_rathalos_lance",
+    "name": "銀白日珥",
+    "nameEn": "",
+    "type": "lance",
+    "attack": 1345,
+    "element": {
+      "type": "fire",
+      "value": 277
+    },
+    "affinity": 20,
+    "spSkill": "【SP】突進 Lv3",
+    "skills": [
+      {
+        "skillId": "critical_element",
+        "level": 2
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "barioth_lance",
+    "name": "冰牙長槍",
+    "nameEn": "",
+    "type": "lance",
+    "attack": 1191,
+    "element": {
+      "type": "ice",
+      "value": 117
+    },
+    "affinity": 5,
+    "spSkill": "【SP】突進 Lv3",
+    "skills": [
+      {
+        "skillId": "evade_extender",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "zinogre_lance",
+    "name": "迅雷疾槍",
+    "nameEn": "",
+    "type": "lance",
+    "attack": 1420,
+    "element": {
+      "type": "thunder",
+      "value": 232
+    },
+    "affinity": 0,
+    "spSkill": "【SP】突進 Lv3",
+    "skills": [
+      {
+        "skillId": "artful_dodger",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "odogaron_lance",
+    "name": "慘爪長槍",
+    "nameEn": "",
+    "type": "lance",
+    "attack": 2059,
+    "element": null,
+    "affinity": 5,
+    "spSkill": "【SP】突進 Lv3",
+    "skills": [
+      {
+        "skillId": "perfect_evade_sp_charge",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "ebony_odogaron_lance",
+    "name": "兇槍亡爪",
+    "nameEn": "",
+    "type": "lance",
+    "attack": 1436,
+    "element": {
+      "type": "dragon",
+      "value": 230
+    },
+    "affinity": 10,
+    "spSkill": "【SP】突進 Lv3",
+    "skills": [
+      {
+        "skillId": "critical_boost",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "deviljho_lance",
+    "name": "悲哀的重槍",
+    "nameEn": "",
+    "type": "lance",
+    "attack": 1568,
+    "element": {
+      "type": "dragon",
+      "value": 292
+    },
+    "affinity": -30,
+    "spSkill": "【SP】突進 Lv3",
+    "skills": [
+      {
+        "skillId": "offensive_guard",
+        "level": 2
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "basarios_lance",
+    "name": "劇毒長槍",
+    "nameEn": "",
+    "type": "lance",
+    "attack": 1671,
+    "element": {
+      "type": "poison",
+      "value": 98
+    },
+    "affinity": -15,
+    "spSkill": "【SP】突進 Lv3",
+    "skills": [
+      {
+        "skillId": "heroics",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "kushaladaora_lance",
+    "name": "祈願鋼龍槍",
+    "nameEn": "",
+    "type": "lance",
+    "attack": 1553,
+    "element": {
+      "type": "ice",
+      "value": 238
+    },
+    "affinity": 0,
+    "spSkill": "【SP】突進 Lv3",
+    "skills": [
+      {
+        "skillId": "windproof",
+        "level": 2
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "mizutsune_lance",
+    "name": "狐槍花凋方可憶",
+    "nameEn": "",
+    "type": "lance",
+    "attack": 1436,
+    "element": {
+      "type": "water",
+      "value": 230
+    },
+    "affinity": 10,
+    "spSkill": "【SP】突進 Lv3",
+    "skills": [
+      {
+        "skillId": "artful_dodger",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "teostra_lance",
+    "name": "炎皇咆哮",
+    "nameEn": "",
+    "type": "lance",
+    "attack": 1684,
+    "element": {
+      "type": "blast",
+      "value": 345
+    },
+    "affinity": 0,
+    "spSkill": "【SP】突進 Lv3",
+    "skills": [
+      {
+        "skillId": "heroics",
+        "level": 2
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "aknosom_lance",
+    "name": "傘之槍",
+    "nameEn": "",
+    "type": "lance",
+    "attack": 1588,
+    "element": {
+      "type": "fire",
+      "value": 59
+    },
+    "affinity": 0,
+    "spSkill": "【SP】突進 Lv3",
+    "skills": [
+      {
+        "skillId": "lock_on",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "magnamalo_lance",
+    "name": "禍槍【封】",
+    "nameEn": "",
+    "type": "lance",
+    "attack": 1516,
+    "element": {
+      "type": "blast",
+      "value": 236
+    },
+    "affinity": 0,
+    "spSkill": "【SP】突進 Lv3",
+    "skills": [
+      {
+        "skillId": "partbreaker",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "rajang_lance",
+    "name": "鬼槍金獅子",
+    "nameEn": "",
+    "type": "lance",
+    "attack": 1568,
+    "element": {
+      "type": "thunder",
+      "value": 292
+    },
+    "affinity": -30,
+    "spSkill": "【SP】突進 Lv3",
+    "skills": [
+      {
+        "skillId": "burst",
+        "level": 2
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "nergigante_lance",
+    "name": "亡滅之腕",
+    "nameEn": "",
+    "type": "lance",
+    "attack": 1553,
+    "element": {
+      "type": "dragon",
+      "value": 238
+    },
+    "affinity": 0,
+    "spSkill": "【SP】突進 Lv3",
+    "skills": [
+      {
+        "skillId": "partbreaker",
+        "level": 2
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "volvidon_lance",
+    "name": "赤甲獸矛",
+    "nameEn": "",
+    "type": "lance",
+    "attack": 1516,
+    "element": {
+      "type": "paralysis",
+      "value": 176
+    },
+    "affinity": 0,
+    "spSkill": "【SP】突進 Lv3",
+    "skills": [
+      {
+        "skillId": "evade_extender",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "tigrex_lance",
+    "name": "轟龍之刺",
+    "nameEn": "",
+    "type": "lance",
+    "attack": 2633,
+    "element": null,
+    "affinity": -40,
+    "spSkill": "【SP】突進 Lv3",
+    "skills": [
+      {
+        "skillId": "brutal_strike",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "brute_tigrex_lance",
+    "name": "劫難之刺",
+    "nameEn": "",
+    "type": "lance",
+    "attack": 2633,
+    "element": null,
+    "affinity": -10,
+    "spSkill": "【SP】突進 Lv3",
+    "skills": [
+      {
+        "skillId": "move_forward_strengthen",
+        "level": 5
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "kirin_lance",
+    "name": "雷槍",
+    "nameEn": "",
+    "type": "lance",
+    "attack": 1622,
+    "element": {
+      "type": "thunder",
+      "value": 334
+    },
+    "affinity": 0,
+    "spSkill": "【SP】突進 Lv3",
+    "skills": [
+      {
+        "skillId": "latent_power",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "bazelgeuse_lance",
+    "name": "爆鱗突擊槍",
+    "nameEn": "",
+    "type": "lance",
+    "attack": 1942,
+    "element": {
+      "type": "blast",
+      "value": 201
+    },
+    "affinity": -30,
+    "spSkill": "【SP】突進 Lv3",
+    "skills": [
+      {
+        "skillId": "offensive_guard",
+        "level": 2
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "glavenus_lance",
+    "name": "灼炎之神牙",
+    "nameEn": "",
+    "type": "lance",
+    "attack": 1568,
+    "element": {
+      "type": "fire",
+      "value": 292
+    },
+    "affinity": -30,
+    "spSkill": "【SP】突進 Lv3",
+    "skills": [
+      {
+        "skillId": "brutal_strike",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "nargacuga_lance",
+    "name": "隱密尖槍",
+    "nameEn": "",
+    "type": "lance",
+    "attack": 2082,
+    "element": null,
+    "affinity": 25,
+    "spSkill": "【SP】突進 Lv3",
+    "skills": [
+      {
+        "skillId": "resuscitate",
+        "level": 2
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "namielle_lance",
+    "name": "水蛇讚嘆",
+    "nameEn": "",
+    "type": "lance",
+    "attack": 1335,
+    "element": {
+      "type": "water",
+      "value": 276
+    },
+    "affinity": 15,
+    "spSkill": "【SP】突進 Lv3",
+    "skills": [
+      {
+        "skillId": "weakness_exploit",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "garangolm_lance",
+    "name": "剛纏獸之塔",
+    "nameEn": "",
+    "type": "lance",
+    "attack": 2371,
+    "element": null,
+    "affinity": 0,
+    "spSkill": "【SP】突進 Lv3",
+    "skills": [
+      {
+        "skillId": "disable_perfect_evade",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "lunagaron_lance",
+    "name": "冷月之旋槍",
+    "nameEn": "",
+    "type": "lance",
+    "attack": 1458,
+    "element": {
+      "type": "ice",
+      "value": 164
+    },
+    "affinity": 0,
+    "spSkill": "【SP】突進 Lv3",
+    "skills": [
+      {
+        "skillId": "high_performance_ice",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "espinas_lance",
+    "name": "薔薇長槍",
+    "nameEn": "",
+    "type": "lance",
+    "attack": 1434,
+    "element": {
+      "type": "fire",
+      "value": 230
+    },
+    "affinity": 10,
+    "spSkill": "【SP】突進 Lv3",
+    "skills": [
+      {
+        "skillId": "part_break_special_boost",
+        "level": 2
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "malzeno_lance",
+    "name": "穿刺之木釘",
+    "nameEn": "",
+    "type": "lance",
+    "attack": 1622,
+    "element": {
+      "type": "dragon",
+      "value": 334
+    },
+    "affinity": 0,
+    "spSkill": "【SP】突進 Lv3",
+    "skills": [
+      {
+        "skillId": "high_performance_dragon",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "quematrice_lance",
+    "name": "炎尾長槍",
+    "nameEn": "",
+    "type": "lance",
+    "attack": 1458,
+    "element": {
+      "type": "fire",
+      "value": 68
+    },
+    "affinity": 0,
+    "spSkill": "【SP】突進 Lv3",
+    "skills": [
+      {
+        "skillId": "bravery",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "gossharag_lance",
+    "name": "雪鬼獸長槍",
+    "nameEn": "",
+    "type": "lance",
+    "attack": 1492,
+    "element": {
+      "type": "ice",
+      "value": 147
+    },
+    "affinity": -30,
+    "spSkill": "【SP】突進 Lv3",
+    "skills": [
+      {
+        "skillId": "brutal_strike",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "astalos_lance",
+    "name": "綠電刺矛",
+    "nameEn": "",
+    "type": "lance",
+    "attack": 1436,
+    "element": {
+      "type": "thunder",
+      "value": 230
+    },
+    "affinity": 10,
+    "spSkill": "【SP】突進 Lv3",
+    "skills": [
+      {
+        "skillId": "thunder_attack",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "seregios_lance",
+    "name": "長槍天囷一",
+    "nameEn": "",
+    "type": "lance",
+    "attack": 2335,
+    "element": null,
+    "affinity": 15,
+    "spSkill": "【SP】突進 Lv3",
+    "skills": [
+      {
+        "skillId": "powerhouse",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "bone_lance",
+    "name": "骨槍",
+    "nameEn": "",
+    "type": "lance",
+    "attack": 1912,
+    "element": null,
+    "affinity": 0,
+    "spSkill": "【SP】突進 Lv3",
+    "skills": [
+      {
+        "skillId": "concentration",
+        "level": 1
+      }
+    ],
+    "image": ""
+  }
+]

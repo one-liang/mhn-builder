@@ -1,0 +1,1265 @@
+[
+  {
+    "id": "ore_bow",
+    "name": "鐵弓",
+    "nameEn": "",
+    "type": "bow",
+    "attack": 1912,
+    "element": null,
+    "affinity": 0,
+    "spSkill": "【SP】龍之箭 Lv3",
+    "skills": [
+      {
+        "skillId": "poison_resistance",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "chargingShots": [
+      "連射箭 lv1",
+      "連射箭 lv2",
+      "連射箭 lv3",
+      "連射箭 lv4"
+    ],
+    "bottleType": "無"
+  },
+  {
+    "id": "kuluyaku_bow",
+    "name": "搔鳥弓",
+    "nameEn": "",
+    "type": "bow",
+    "attack": 1912,
+    "element": null,
+    "affinity": 5,
+    "spSkill": "【SP】龍之箭 Lv3",
+    "skills": [
+      {
+        "skillId": "fortify",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "chargingShots": [
+      "連射箭 lv1",
+      "連射箭 lv2",
+      "連射箭 lv3",
+      "貫通箭 lv4"
+    ],
+    "bottleType": "無"
+  },
+  {
+    "id": "pukeipukei_bow",
+    "name": "花朵弓",
+    "nameEn": "",
+    "type": "bow",
+    "attack": 1596,
+    "element": {
+      "type": "poison",
+      "value": 50
+    },
+    "affinity": 0,
+    "spSkill": "【SP】龍之箭 Lv3",
+    "skills": [
+      {
+        "skillId": "sneak_attack",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "chargingShots": [
+      "連射箭 lv1",
+      "連射箭 lv2",
+      "連射箭 lv3",
+      "擴散箭 lv4"
+    ],
+    "bottleType": "毒瓶"
+  },
+  {
+    "id": "coral_pukeipukei_bow",
+    "name": "潟湖射手",
+    "nameEn": "",
+    "type": "bow",
+    "attack": 1420,
+    "element": {
+      "type": "water",
+      "value": 232
+    },
+    "affinity": 0,
+    "spSkill": "【SP】龍之箭 Lv3",
+    "skills": [
+      {
+        "skillId": "earplugs",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "chargingShots": [
+      "連射箭 lv2",
+      "連射箭 lv3",
+      "貫通箭 lv3",
+      "貫通箭 lv4"
+    ],
+    "bottleType": "無"
+  },
+  {
+    "id": "tobikadachi_bow",
+    "name": "脈衝弓",
+    "nameEn": "",
+    "type": "bow",
+    "attack": 1293,
+    "element": {
+      "type": "thunder",
+      "value": 47
+    },
+    "affinity": 0,
+    "spSkill": "【SP】龍之箭 Lv3",
+    "skills": [
+      {
+        "skillId": "evade_extender",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "chargingShots": [
+      "貫通箭 lv1",
+      "貫通箭 lv2",
+      "貫通箭 lv3",
+      "貫通箭 lv4"
+    ],
+    "bottleType": "無"
+  },
+  {
+    "id": "viper_tobikadachi_bow",
+    "name": "飛毒弓朱嵐",
+    "nameEn": "",
+    "type": "bow",
+    "attack": 1776,
+    "element": {
+      "type": "paralysis",
+      "value": 201
+    },
+    "affinity": 10,
+    "spSkill": "【SP】龍之箭 Lv3",
+    "skills": [
+      {
+        "skillId": "burst_secret",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "chargingShots": [
+      "貫通箭 lv1",
+      "貫通箭 lv2",
+      "連射箭 lv3",
+      "連射箭 lv4"
+    ],
+    "bottleType": "麻痺瓶"
+  },
+  {
+    "id": "nightshade_paolumu_bow",
+    "name": "夢魘弓",
+    "nameEn": "",
+    "type": "bow",
+    "attack": 1756,
+    "element": {
+      "type": "sleep",
+      "value": 188
+    },
+    "affinity": 0,
+    "spSkill": "【SP】龍之箭 Lv3",
+    "skills": [
+      {
+        "skillId": "sneak_attack",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "chargingShots": [
+      "連射箭 lv2",
+      "連射箭 lv3",
+      "擴散箭 lv3",
+      "擴散箭 lv4"
+    ],
+    "bottleType": "睡眠瓶"
+  },
+  {
+    "id": "jyuratodus_bow",
+    "name": "水流弓",
+    "nameEn": "",
+    "type": "bow",
+    "attack": 1293,
+    "element": {
+      "type": "water",
+      "value": 75
+    },
+    "affinity": 0,
+    "spSkill": "【SP】龍之箭 Lv3",
+    "skills": [
+      {
+        "skillId": "last_stand",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "chargingShots": [
+      "擴散箭 lv1",
+      "擴散箭 lv2",
+      "連射箭 lv3",
+      "連射箭 lv4"
+    ],
+    "bottleType": "無"
+  },
+  {
+    "id": "anjanath_bow",
+    "name": "火焰弓",
+    "nameEn": "",
+    "type": "bow",
+    "attack": 1293,
+    "element": {
+      "type": "fire",
+      "value": 117
+    },
+    "affinity": 0,
+    "spSkill": "【SP】龍之箭 Lv3",
+    "skills": [
+      {
+        "skillId": "rising_tide",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "chargingShots": [
+      "擴散箭 lv1",
+      "擴散箭 lv2",
+      "擴散箭 lv3",
+      "擴散箭 lv4"
+    ],
+    "bottleType": "無"
+  },
+  {
+    "id": "fulgur_anjanath_bow",
+    "name": "風色雷顎",
+    "nameEn": "",
+    "type": "bow",
+    "attack": 1434,
+    "element": {
+      "type": "thunder",
+      "value": 230
+    },
+    "affinity": 10,
+    "spSkill": "【SP】龍之箭 Lv3",
+    "skills": [
+      {
+        "skillId": "critical_element",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "chargingShots": [
+      "連射箭 lv2",
+      "連射箭 lv3",
+      "擴散箭 lv3",
+      "擴散箭 lv4"
+    ],
+    "bottleType": "無"
+  },
+  {
+    "id": "rathian_bow",
+    "name": "公主弓矢",
+    "nameEn": "",
+    "type": "bow",
+    "attack": 1516,
+    "element": {
+      "type": "poison",
+      "value": 236
+    },
+    "affinity": 0,
+    "spSkill": "【SP】龍之箭 Lv3",
+    "skills": [
+      {
+        "skillId": "health_boost",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "chargingShots": [
+      "連射箭 lv1",
+      "連射箭 lv2",
+      "擴散箭 lv3",
+      "擴散箭 lv4"
+    ],
+    "bottleType": "毒瓶"
+  },
+  {
+    "id": "pink_rathian_bow",
+    "name": "薔薇弓",
+    "nameEn": "",
+    "type": "bow",
+    "attack": 1293,
+    "element": {
+      "type": "dragon",
+      "value": 181
+    },
+    "affinity": 0,
+    "spSkill": "【SP】龍之箭 Lv3",
+    "skills": [
+      {
+        "skillId": "evade_extender",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "chargingShots": [
+      "貫通箭 lv2",
+      "貫通箭 lv3",
+      "擴散箭 lv3",
+      "擴散箭 lv4"
+    ],
+    "bottleType": "無"
+  },
+  {
+    "id": "gold_rathian_bow",
+    "name": "瘋狂弓",
+    "nameEn": "",
+    "type": "bow",
+    "attack": 1345,
+    "element": {
+      "type": "dragon",
+      "value": 277
+    },
+    "affinity": 20,
+    "spSkill": "【SP】龍之箭 Lv3",
+    "skills": [
+      {
+        "skillId": "pursuit_poison",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "chargingShots": [
+      "擴散箭 lv2",
+      "貫通箭 lv2",
+      "擴散箭 lv4",
+      "貫通箭 lv3"
+    ],
+    "bottleType": "無"
+  },
+  {
+    "id": "legiana_bow",
+    "name": "優雅長弓",
+    "nameEn": "",
+    "type": "bow",
+    "attack": 1420,
+    "element": {
+      "type": "ice",
+      "value": 232
+    },
+    "affinity": 0,
+    "spSkill": "【SP】龍之箭 Lv3",
+    "skills": [
+      {
+        "skillId": "divine_blessing",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "chargingShots": [
+      "貫通箭 lv1",
+      "貫通箭 lv2",
+      "連射箭 lv3",
+      "連射箭 lv4"
+    ],
+    "bottleType": "無"
+  },
+  {
+    "id": "diablos_bow",
+    "name": "角龍大弓",
+    "nameEn": "",
+    "type": "bow",
+    "attack": 2371,
+    "element": null,
+    "affinity": 0,
+    "spSkill": "【SP】龍之箭 Lv3",
+    "skills": [
+      {
+        "skillId": "heroics",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "chargingShots": [
+      "擴散箭 lv1",
+      "連射箭 lv2",
+      "擴散箭 lv3",
+      "連射箭 lv4"
+    ],
+    "bottleType": "無"
+  },
+  {
+    "id": "black_diablos_bow",
+    "name": "疾風角弓",
+    "nameEn": "",
+    "type": "bow",
+    "attack": 2658,
+    "element": null,
+    "affinity": -30,
+    "spSkill": "【SP】龍之箭 Lv3",
+    "skills": [
+      {
+        "skillId": "partbreaker",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "chargingShots": [
+      "貫通箭 lv1",
+      "貫通箭 lv1",
+      "貫通箭 lv4",
+      "貫通箭 lv4"
+    ],
+    "bottleType": "無"
+  },
+  {
+    "id": "rathalos_bow",
+    "name": "火龍強弓",
+    "nameEn": "",
+    "type": "bow",
+    "attack": 1420,
+    "element": {
+      "type": "fire",
+      "value": 232
+    },
+    "affinity": 0,
+    "spSkill": "【SP】龍之箭 Lv3",
+    "skills": [
+      {
+        "skillId": "earplugs",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "chargingShots": [
+      "連射箭 lv1",
+      "連射箭 lv2",
+      "貫通箭 lv3",
+      "貫通箭 lv4"
+    ],
+    "bottleType": "無"
+  },
+  {
+    "id": "azure_rathalos_bow",
+    "name": "蒼火龍剛弓",
+    "nameEn": "",
+    "type": "bow",
+    "attack": 1682,
+    "element": {
+      "type": "fire",
+      "value": 134
+    },
+    "affinity": 0,
+    "spSkill": "【SP】龍之箭 Lv3",
+    "skills": [
+      {
+        "skillId": "special_boost",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "chargingShots": [
+      "擴散箭 lv2",
+      "擴散箭 lv3",
+      "連射箭 lv3",
+      "連射箭 lv4"
+    ],
+    "bottleType": "無"
+  },
+  {
+    "id": "silver_rathalos_bow",
+    "name": "銀火龍烈弓",
+    "nameEn": "",
+    "type": "bow",
+    "attack": 1345,
+    "element": {
+      "type": "fire",
+      "value": 277
+    },
+    "affinity": 20,
+    "spSkill": "【SP】龍之箭 Lv3",
+    "skills": [
+      {
+        "skillId": "critical_element",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "chargingShots": [
+      "擴散箭 lv2",
+      "貫通箭 lv2",
+      "擴散箭 lv4",
+      "貫通箭 lv3"
+    ],
+    "bottleType": "無"
+  },
+  {
+    "id": "banbaro_bow",
+    "name": "巨牛大弓",
+    "nameEn": "",
+    "type": "bow",
+    "attack": 2113,
+    "element": null,
+    "affinity": 0,
+    "spSkill": "【SP】龍之箭 Lv3",
+    "skills": [
+      {
+        "skillId": "firm_foothold",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "chargingShots": [
+      "貫通箭 lv1",
+      "擴散箭 lv2",
+      "貫通箭 lv3",
+      "擴散箭 lv4"
+    ],
+    "bottleType": "無"
+  },
+  {
+    "id": "barioth_bow",
+    "name": "冰尖暴風",
+    "nameEn": "",
+    "type": "bow",
+    "attack": 1191,
+    "element": {
+      "type": "ice",
+      "value": 117
+    },
+    "affinity": 5,
+    "spSkill": "【SP】龍之箭 Lv3",
+    "skills": [
+      {
+        "skillId": "evade_extender",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "chargingShots": [
+      "連射箭 lv1",
+      "連射箭 lv2",
+      "擴散箭 lv3",
+      "擴散箭 lv4"
+    ],
+    "bottleType": "無"
+  },
+  {
+    "id": "zinogre_bow",
+    "name": "王弓遠雷",
+    "nameEn": "",
+    "type": "bow",
+    "attack": 1420,
+    "element": {
+      "type": "thunder",
+      "value": 232
+    },
+    "affinity": 0,
+    "spSkill": "【SP】龍之箭 Lv3",
+    "skills": [
+      {
+        "skillId": "artful_dodger",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "chargingShots": [
+      "貫通箭 lv1",
+      "貫通箭 lv2",
+      "連射箭 lv3",
+      "連射箭 lv4"
+    ],
+    "bottleType": "無"
+  },
+  {
+    "id": "deviljho_bow",
+    "name": "暴徒的凶弓",
+    "nameEn": "",
+    "type": "bow",
+    "attack": 1568,
+    "element": {
+      "type": "dragon",
+      "value": 292
+    },
+    "affinity": -30,
+    "spSkill": "【SP】龍之箭 Lv3",
+    "skills": [
+      {
+        "skillId": "peak_performance",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "chargingShots": [
+      "連射箭 lv2",
+      "擴散箭 lv3",
+      "連射箭 lv3",
+      "貫通箭 lv4"
+    ],
+    "bottleType": "無"
+  },
+  {
+    "id": "khezu_bow",
+    "name": "奇怪龍弓",
+    "nameEn": "",
+    "type": "bow",
+    "attack": 1194,
+    "element": {
+      "type": "thunder",
+      "value": 120
+    },
+    "affinity": 5,
+    "spSkill": "【SP】龍之箭 Lv3",
+    "skills": [
+      {
+        "skillId": "peak_performance",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "chargingShots": [
+      "擴散箭 lv1",
+      "擴散箭 lv2",
+      "擴散箭 lv3",
+      "擴散箭 lv4"
+    ],
+    "bottleType": "無"
+  },
+  {
+    "id": "kushaladaora_bow",
+    "name": "鋼龍強弓",
+    "nameEn": "",
+    "type": "bow",
+    "attack": 1553,
+    "element": {
+      "type": "ice",
+      "value": 238
+    },
+    "affinity": 0,
+    "spSkill": "【SP】龍之箭 Lv3",
+    "skills": [
+      {
+        "skillId": "windproof",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "chargingShots": [
+      "連射箭 lv1",
+      "連射箭 lv2",
+      "擴散箭 lv4",
+      "貫通箭 lv4"
+    ],
+    "bottleType": "無"
+  },
+  {
+    "id": "mizutsune_bow",
+    "name": "狐弓露珠亂世情",
+    "nameEn": "",
+    "type": "bow",
+    "attack": 1436,
+    "element": {
+      "type": "water",
+      "value": 230
+    },
+    "affinity": 10,
+    "spSkill": "【SP】龍之箭 Lv3",
+    "skills": [
+      {
+        "skillId": "artful_dodger",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "chargingShots": [
+      "連射箭 lv1",
+      "連射箭 lv2",
+      "擴散箭 lv3",
+      "擴散箭 lv4"
+    ],
+    "bottleType": "無"
+  },
+  {
+    "id": "teostra_bow",
+    "name": "勇猛與光明的淒烈弓",
+    "nameEn": "",
+    "type": "bow",
+    "attack": 1684,
+    "element": {
+      "type": "blast",
+      "value": 345
+    },
+    "affinity": 0,
+    "spSkill": "【SP】龍之箭 Lv3",
+    "skills": [
+      {
+        "skillId": "heroics",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "chargingShots": [
+      "貫通箭 lv1",
+      "貫通箭 lv2",
+      "連射箭 lv4",
+      "擴散箭 lv4"
+    ],
+    "bottleType": "爆破瓶"
+  },
+  {
+    "id": "magnamalo_bow",
+    "name": "禍弓【封】",
+    "nameEn": "",
+    "type": "bow",
+    "attack": 1516,
+    "element": {
+      "type": "blast",
+      "value": 236
+    },
+    "affinity": 0,
+    "spSkill": "【SP】龍之箭 Lv3",
+    "skills": [
+      {
+        "skillId": "partbreaker",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "chargingShots": [
+      "連射箭 lv1",
+      "連射箭 lv2",
+      "貫通箭 lv3",
+      "貫通箭 lv4"
+    ],
+    "bottleType": "爆破瓶"
+  },
+  {
+    "id": "rajang_bow",
+    "name": "雷弓【獸王】",
+    "nameEn": "",
+    "type": "bow",
+    "attack": 1568,
+    "element": {
+      "type": "thunder",
+      "value": 292
+    },
+    "affinity": -30,
+    "spSkill": "【SP】龍之箭 Lv3",
+    "skills": [
+      {
+        "skillId": "rising_tide",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "chargingShots": [
+      "連射箭 lv1",
+      "連射箭 lv2",
+      "貫通箭 lv3",
+      "貫通箭 lv4"
+    ],
+    "bottleType": "無"
+  },
+  {
+    "id": "nergigante_bow",
+    "name": "必滅一矢",
+    "nameEn": "",
+    "type": "bow",
+    "attack": 1553,
+    "element": {
+      "type": "dragon",
+      "value": 238
+    },
+    "affinity": 0,
+    "spSkill": "【SP】龍之箭 Lv3",
+    "skills": [
+      {
+        "skillId": "partbreaker",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "chargingShots": [
+      "擴散箭 lv1",
+      "連射箭 lv2",
+      "貫通箭 lv4",
+      "連射箭 lv4"
+    ],
+    "bottleType": "無"
+  },
+  {
+    "id": "tigrex_bow",
+    "name": "轟龍弓",
+    "nameEn": "",
+    "type": "bow",
+    "attack": 2633,
+    "element": null,
+    "affinity": -40,
+    "spSkill": "【SP】龍之箭 Lv3",
+    "skills": [
+      {
+        "skillId": "brutal_strike",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "chargingShots": [
+      "擴散箭 lv1",
+      "擴散箭 lv2",
+      "擴散箭 lv3",
+      "擴散箭 lv4"
+    ],
+    "bottleType": "無"
+  },
+  {
+    "id": "brute_tigrex_bow",
+    "name": "劫難弧弓",
+    "nameEn": "",
+    "type": "bow",
+    "attack": 1734,
+    "element": {
+      "type": "blast",
+      "value": 250
+    },
+    "affinity": -10,
+    "spSkill": "【SP】龍之箭 Lv3",
+    "skills": [
+      {
+        "skillId": "ballistic",
+        "level": 3
+      }
+    ],
+    "image": "",
+    "chargingShots": [
+      "擴散箭 lv1",
+      "擴散箭 lv1",
+      "擴散箭 lv4",
+      "擴散箭 lv4"
+    ],
+    "bottleType": "爆破瓶"
+  },
+  {
+    "id": "arzuros_bow",
+    "name": "青熊弓",
+    "nameEn": "",
+    "type": "bow",
+    "attack": 2361,
+    "element": null,
+    "affinity": -20,
+    "spSkill": "【SP】龍之箭 Lv3",
+    "skills": [
+      {
+        "skillId": "special_boost",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "chargingShots": [
+      "擴散箭 lv1",
+      "連射箭 lv2",
+      "貫通箭 lv3",
+      "貫通箭 lv4"
+    ],
+    "bottleType": "無"
+  },
+  {
+    "id": "glavenus_bow",
+    "name": "斬龍弓",
+    "nameEn": "",
+    "type": "bow",
+    "attack": 1568,
+    "element": {
+      "type": "fire",
+      "value": 292
+    },
+    "affinity": -30,
+    "spSkill": "【SP】龍之箭 Lv3",
+    "skills": [
+      {
+        "skillId": "brutal_strike",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "chargingShots": [
+      "貫通箭 lv1",
+      "貫通箭 lv2",
+      "連射箭 lv3",
+      "連射箭 lv4"
+    ],
+    "bottleType": "無"
+  },
+  {
+    "id": "chameleos_bow",
+    "name": "魔導弓魂之谷",
+    "nameEn": "",
+    "type": "bow",
+    "attack": 1741,
+    "element": {
+      "type": "poison",
+      "value": 347
+    },
+    "affinity": 0,
+    "spSkill": "【SP】龍之箭 Lv3",
+    "skills": [
+      {
+        "skillId": "abnormal_status_enhancement",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "chargingShots": [
+      "擴散箭 lv1",
+      "擴散箭 lv2",
+      "連射箭 lv4",
+      "貫通箭 lv4"
+    ],
+    "bottleType": "毒瓶"
+  },
+  {
+    "id": "greatwroggi_bow",
+    "name": "毒狗龍左輪",
+    "nameEn": "",
+    "type": "bow",
+    "attack": 1647,
+    "element": {
+      "type": "poison",
+      "value": 66
+    },
+    "affinity": 10,
+    "spSkill": "【SP】龍之箭 Lv3",
+    "skills": [
+      {
+        "skillId": "focus",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "chargingShots": [
+      "貫通箭 lv1",
+      "貫通箭 lv2",
+      "貫通箭 lv3",
+      "連射箭 lv4"
+    ],
+    "bottleType": "毒瓶"
+  },
+  {
+    "id": "bishaten_bow",
+    "name": "天具･光背弓",
+    "nameEn": "",
+    "type": "bow",
+    "attack": 1516,
+    "element": {
+      "type": "paralysis",
+      "value": 176
+    },
+    "affinity": 0,
+    "spSkill": "【SP】龍之箭 Lv3",
+    "skills": [
+      {
+        "skillId": "multi_attack_boost",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "chargingShots": [
+      "擴散箭 lv1",
+      "擴散箭 lv2",
+      "貫通箭 lv3",
+      "貫通箭 lv4"
+    ],
+    "bottleType": "麻痺瓶"
+  },
+  {
+    "id": "nargacuga_bow",
+    "name": "隱密長弓",
+    "nameEn": "",
+    "type": "bow",
+    "attack": 2082,
+    "element": null,
+    "affinity": 25,
+    "spSkill": "【SP】龍之箭 Lv3",
+    "skills": [
+      {
+        "skillId": "resuscitate",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "chargingShots": [
+      "連射箭 lv1",
+      "連射箭 lv2",
+      "貫通箭 lv3",
+      "貫通箭 lv4"
+    ],
+    "bottleType": "無"
+  },
+  {
+    "id": "namielle_bow",
+    "name": "暴君‧浮浪",
+    "nameEn": "",
+    "type": "bow",
+    "attack": 1335,
+    "element": {
+      "type": "water",
+      "value": 276
+    },
+    "affinity": 15,
+    "spSkill": "【SP】龍之箭 Lv3",
+    "skills": [
+      {
+        "skillId": "weakness_exploit",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "chargingShots": [
+      "擴散箭 lv1",
+      "擴散箭 lv2",
+      "連射箭 lv4",
+      "貫通箭 lv4"
+    ],
+    "bottleType": "無"
+  },
+  {
+    "id": "garangolm_bow",
+    "name": "剛纏獸之弓",
+    "nameEn": "",
+    "type": "bow",
+    "attack": 2371,
+    "element": null,
+    "affinity": 0,
+    "spSkill": "【SP】龍之箭 Lv3",
+    "skills": [
+      {
+        "skillId": "disable_perfect_evade",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "chargingShots": [
+      "擴散箭 lv1",
+      "連射箭 lv2",
+      "連射箭 lv3",
+      "擴散箭 lv4"
+    ],
+    "bottleType": "無"
+  },
+  {
+    "id": "lunagaron_bow",
+    "name": "冷月之狼弓",
+    "nameEn": "",
+    "type": "bow",
+    "attack": 1458,
+    "element": {
+      "type": "ice",
+      "value": 164
+    },
+    "affinity": 0,
+    "spSkill": "【SP】龍之箭 Lv3",
+    "skills": [
+      {
+        "skillId": "high_performance_ice",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "chargingShots": [
+      "擴散箭 lv1",
+      "擴散箭 lv2",
+      "貫通箭 lv3",
+      "貫通箭 lv4"
+    ],
+    "bottleType": "無"
+  },
+  {
+    "id": "espinas_bow",
+    "name": "薔薇弧弓",
+    "nameEn": "",
+    "type": "bow",
+    "attack": 1434,
+    "element": {
+      "type": "fire",
+      "value": 230
+    },
+    "affinity": 10,
+    "spSkill": "【SP】龍之箭 Lv3",
+    "skills": [
+      {
+        "skillId": "part_break_special_boost",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "chargingShots": [
+      "貫通箭 lv1",
+      "貫通箭 lv2",
+      "貫通箭 lv3",
+      "貫通箭 lv4"
+    ],
+    "bottleType": "無"
+  },
+  {
+    "id": "malzeno_bow",
+    "name": "渴望之吸血鬼",
+    "nameEn": "",
+    "type": "bow",
+    "attack": 1622,
+    "element": {
+      "type": "dragon",
+      "value": 334
+    },
+    "affinity": 0,
+    "spSkill": "【SP】龍之箭 Lv3",
+    "skills": [
+      {
+        "skillId": "high_performance_dragon",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "chargingShots": [
+      "貫通箭 lv1",
+      "貫通箭 lv2",
+      "貫通箭 lv4",
+      "貫通箭 lv4"
+    ],
+    "bottleType": "無"
+  },
+  {
+    "id": "quematrice_bow",
+    "name": "炎尾弓",
+    "nameEn": "",
+    "type": "bow",
+    "attack": 1458,
+    "element": {
+      "type": "fire",
+      "value": 68
+    },
+    "affinity": 0,
+    "spSkill": "【SP】龍之箭 Lv3",
+    "skills": [
+      {
+        "skillId": "bravery",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "chargingShots": [
+      "連射箭 lv1",
+      "連射箭 lv2",
+      "連射箭 lv3",
+      "擴散箭 lv4"
+    ],
+    "bottleType": "無"
+  },
+  {
+    "id": "astalos_bow",
+    "name": "雷擊弓雷鳴",
+    "nameEn": "",
+    "type": "bow",
+    "attack": 1436,
+    "element": {
+      "type": "thunder",
+      "value": 230
+    },
+    "affinity": 10,
+    "spSkill": "【SP】龍之箭 Lv3",
+    "skills": [
+      {
+        "skillId": "thunder_attack",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "chargingShots": [
+      "擴散箭 lv1",
+      "擴散箭 lv2",
+      "貫通箭 lv3",
+      "貫通箭 lv4"
+    ],
+    "bottleType": "無"
+  },
+  {
+    "id": "almudron_bow",
+    "name": "泥翁射擊弓",
+    "nameEn": "",
+    "type": "bow",
+    "attack": 1458,
+    "element": {
+      "type": "water",
+      "value": 164
+    },
+    "affinity": 0,
+    "spSkill": "【SP】龍之箭 Lv3",
+    "skills": [
+      {
+        "skillId": "water_attack",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "chargingShots": [
+      "擴散箭 lv1",
+      "擴散箭 lv2",
+      "擴散箭 lv3",
+      "擴散箭 lv4"
+    ],
+    "bottleType": "無"
+  },
+  {
+    "id": "seregios_bow",
+    "name": "銳弓箕宿一",
+    "nameEn": "",
+    "type": "bow",
+    "attack": 2335,
+    "element": null,
+    "affinity": 15,
+    "spSkill": "【SP】龍之箭 Lv3",
+    "skills": [
+      {
+        "skillId": "powerhouse",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "chargingShots": [
+      "連射箭 lv1",
+      "連射箭 lv1",
+      "連射箭 lv4",
+      "連射箭 lv4"
+    ],
+    "bottleType": "無"
+  },
+  {
+    "id": "bone_bow",
+    "name": "獵弓",
+    "nameEn": "",
+    "type": "bow",
+    "attack": 1912,
+    "element": null,
+    "affinity": 0,
+    "spSkill": "【SP】龍之箭 Lv3",
+    "skills": [
+      {
+        "skillId": "concentration",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "chargingShots": [
+      "擴散箭 lv1",
+      "擴散箭 lv2",
+      "連射箭 lv3",
+      "連射箭 lv4"
+    ],
+    "bottleType": "無"
+  }
+]

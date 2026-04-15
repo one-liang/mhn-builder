@@ -1,0 +1,1049 @@
+[
+  {
+    "id": "ore_chargeblade",
+    "name": "調查團試作盾斧",
+    "nameEn": "",
+    "type": "charge-blade",
+    "attack": 1912,
+    "element": null,
+    "affinity": 0,
+    "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
+    "skills": [
+      {
+        "skillId": "poison_resistance",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "榴彈瓶",
+      "description": "於擊中位置引發帶有昏厥效果的爆炸"
+    }
+  },
+  {
+    "id": "greatjagras_chargeblade",
+    "name": "凶豺龍兵裝",
+    "nameEn": "",
+    "type": "charge-blade",
+    "attack": 1373,
+    "element": {
+      "type": "water",
+      "value": 38
+    },
+    "affinity": 0,
+    "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
+    "skills": [
+      {
+        "skillId": "health_boost",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "榴彈瓶",
+      "description": "於擊中位置引發帶有昏厥效果的爆炸"
+    }
+  },
+  {
+    "id": "greatgirros_chargeblade",
+    "name": "凶顎龍兵裝",
+    "nameEn": "",
+    "type": "charge-blade",
+    "attack": 1596,
+    "element": {
+      "type": "paralysis",
+      "value": 100
+    },
+    "affinity": 0,
+    "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
+    "skills": [
+      {
+        "skillId": "sneak_attack",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "榴彈瓶",
+      "description": "於擊中位置引發帶有昏厥效果的爆炸"
+    }
+  },
+  {
+    "id": "tobikadachi_chargeblade",
+    "name": "脈衝兵裝",
+    "nameEn": "",
+    "type": "charge-blade",
+    "attack": 1293,
+    "element": {
+      "type": "thunder",
+      "value": 47
+    },
+    "affinity": 0,
+    "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
+    "skills": [
+      {
+        "skillId": "evade_extender",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "強屬性瓶",
+      "description": "於擊中位置引發與武器相同屬性的爆炸"
+    }
+  },
+  {
+    "id": "viper_tobikadachi_chargeblade",
+    "name": "朱赤毒之腕",
+    "nameEn": "",
+    "type": "charge-blade",
+    "attack": 1776,
+    "element": {
+      "type": "poison",
+      "value": 201
+    },
+    "affinity": 10,
+    "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
+    "skills": [
+      {
+        "skillId": "burst_secret",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "榴彈瓶",
+      "description": "於擊中位置引發帶有昏厥效果的爆炸"
+    }
+  },
+  {
+    "id": "jyuratodus_chargeblade",
+    "name": "泥流盾斧",
+    "nameEn": "",
+    "type": "charge-blade",
+    "attack": 1293,
+    "element": {
+      "type": "water",
+      "value": 75
+    },
+    "affinity": 0,
+    "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
+    "skills": [
+      {
+        "skillId": "last_stand",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "強屬性瓶",
+      "description": "於擊中位置引發與武器相同屬性的爆炸"
+    }
+  },
+  {
+    "id": "rathian_chargeblade",
+    "name": "焰火盾斧",
+    "nameEn": "",
+    "type": "charge-blade",
+    "attack": 1516,
+    "element": {
+      "type": "poison",
+      "value": 236
+    },
+    "affinity": 0,
+    "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
+    "skills": [
+      {
+        "skillId": "health_boost",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "榴彈瓶",
+      "description": "於擊中位置引發帶有昏厥效果的爆炸"
+    }
+  },
+  {
+    "id": "pink_rathian_chargeblade",
+    "name": "櫻火盾斧",
+    "nameEn": "",
+    "type": "charge-blade",
+    "attack": 1756,
+    "element": {
+      "type": "poison",
+      "value": 188
+    },
+    "affinity": 0,
+    "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
+    "skills": [
+      {
+        "skillId": "evade_extender",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "榴彈瓶",
+      "description": "於擊中位置引發帶有昏厥效果的爆炸"
+    }
+  },
+  {
+    "id": "gold_rathian_chargeblade",
+    "name": "月神金盾",
+    "nameEn": "",
+    "type": "charge-blade",
+    "attack": 1675,
+    "element": {
+      "type": "poison",
+      "value": 273
+    },
+    "affinity": 20,
+    "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
+    "skills": [
+      {
+        "skillId": "pursuit_poison",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "榴彈瓶",
+      "description": "於擊中位置引發帶有昏厥效果的爆炸"
+    }
+  },
+  {
+    "id": "legiana_chargeblade",
+    "name": "冰結盾斧",
+    "nameEn": "",
+    "type": "charge-blade",
+    "attack": 1420,
+    "element": {
+      "type": "ice",
+      "value": 232
+    },
+    "affinity": 0,
+    "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
+    "skills": [
+      {
+        "skillId": "divine_blessing",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "強屬性瓶",
+      "description": "於擊中位置引發與武器相同屬性的爆炸"
+    }
+  },
+  {
+    "id": "diablos_chargeblade",
+    "name": "爆鎚盾牆",
+    "nameEn": "",
+    "type": "charge-blade",
+    "attack": 2371,
+    "element": null,
+    "affinity": 0,
+    "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
+    "skills": [
+      {
+        "skillId": "heroics",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "榴彈瓶",
+      "description": "於擊中位置引發帶有昏厥效果的爆炸"
+    }
+  },
+  {
+    "id": "black_diablos_chargeblade",
+    "name": "命運武力",
+    "nameEn": "",
+    "type": "charge-blade",
+    "attack": 2658,
+    "element": null,
+    "affinity": -30,
+    "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
+    "skills": [
+      {
+        "skillId": "partbreaker",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "榴彈瓶",
+      "description": "於擊中位置引發帶有昏厥效果的爆炸"
+    }
+  },
+  {
+    "id": "rathalos_chargeblade",
+    "name": "火龍盾斧",
+    "nameEn": "",
+    "type": "charge-blade",
+    "attack": 1420,
+    "element": {
+      "type": "fire",
+      "value": 232
+    },
+    "affinity": 0,
+    "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
+    "skills": [
+      {
+        "skillId": "earplugs",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "強屬性瓶",
+      "description": "於擊中位置引發與武器相同屬性的爆炸"
+    }
+  },
+  {
+    "id": "azure_rathalos_chargeblade",
+    "name": "魂魄斬蒼炎斧",
+    "nameEn": "",
+    "type": "charge-blade",
+    "attack": 1682,
+    "element": {
+      "type": "fire",
+      "value": 134
+    },
+    "affinity": 0,
+    "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
+    "skills": [
+      {
+        "skillId": "special_boost",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "強屬性瓶",
+      "description": "於擊中位置引發與武器相同屬性的爆炸"
+    }
+  },
+  {
+    "id": "silver_rathalos_chargeblade",
+    "name": "業火斧獄雷",
+    "nameEn": "",
+    "type": "charge-blade",
+    "attack": 1345,
+    "element": {
+      "type": "fire",
+      "value": 277
+    },
+    "affinity": 20,
+    "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
+    "skills": [
+      {
+        "skillId": "critical_element",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "強屬性瓶",
+      "description": "於擊中位置引發與武器相同屬性的爆炸"
+    }
+  },
+  {
+    "id": "barioth_chargeblade",
+    "name": "純白騎士",
+    "nameEn": "",
+    "type": "charge-blade",
+    "attack": 1191,
+    "element": {
+      "type": "ice",
+      "value": 117
+    },
+    "affinity": 5,
+    "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
+    "skills": [
+      {
+        "skillId": "evade_extender",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "強屬性瓶",
+      "description": "於擊中位置引發與武器相同屬性的爆炸"
+    }
+  },
+  {
+    "id": "zinogre_chargeblade",
+    "name": "王盾斧雷紋",
+    "nameEn": "",
+    "type": "charge-blade",
+    "attack": 1420,
+    "element": {
+      "type": "thunder",
+      "value": 232
+    },
+    "affinity": 0,
+    "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
+    "skills": [
+      {
+        "skillId": "artful_dodger",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "強屬性瓶",
+      "description": "於擊中位置引發與武器相同屬性的爆炸"
+    }
+  },
+  {
+    "id": "odogaron_chargeblade",
+    "name": "慘爪兵裝",
+    "nameEn": "",
+    "type": "charge-blade",
+    "attack": 2059,
+    "element": null,
+    "affinity": 5,
+    "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
+    "skills": [
+      {
+        "skillId": "perfect_evade_sp_charge",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "榴彈瓶",
+      "description": "於擊中位置引發帶有昏厥效果的爆炸"
+    }
+  },
+  {
+    "id": "ebony_odogaron_chargeblade",
+    "name": "冥府之炎",
+    "nameEn": "",
+    "type": "charge-blade",
+    "attack": 1436,
+    "element": {
+      "type": "dragon",
+      "value": 230
+    },
+    "affinity": 10,
+    "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
+    "skills": [
+      {
+        "skillId": "critical_boost",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "強屬性瓶",
+      "description": "於擊中位置引發與武器相同屬性的爆炸"
+    }
+  },
+  {
+    "id": "deviljho_chargeblade",
+    "name": "暴虐的盾斧",
+    "nameEn": "",
+    "type": "charge-blade",
+    "attack": 1568,
+    "element": {
+      "type": "dragon",
+      "value": 292
+    },
+    "affinity": -30,
+    "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
+    "skills": [
+      {
+        "skillId": "latent_power",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "強屬性瓶",
+      "description": "於擊中位置引發與武器相同屬性的爆炸"
+    }
+  },
+  {
+    "id": "basarios_chargeblade",
+    "name": "巨人兵裝",
+    "nameEn": "",
+    "type": "charge-blade",
+    "attack": 1671,
+    "element": {
+      "type": "poison",
+      "value": 98
+    },
+    "affinity": -15,
+    "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
+    "skills": [
+      {
+        "skillId": "heroics",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "榴彈瓶",
+      "description": "於擊中位置引發帶有昏厥效果的爆炸"
+    }
+  },
+  {
+    "id": "kushaladaora_chargeblade",
+    "name": "鋼龍幻夢",
+    "nameEn": "",
+    "type": "charge-blade",
+    "attack": 1553,
+    "element": {
+      "type": "ice",
+      "value": 238
+    },
+    "affinity": 0,
+    "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
+    "skills": [
+      {
+        "skillId": "windproof",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "榴彈瓶",
+      "description": "於擊中位置引發帶有昏厥效果的爆炸"
+    }
+  },
+  {
+    "id": "mizutsune_chargeblade",
+    "name": "狐衣斧鏡花水月央",
+    "nameEn": "",
+    "type": "charge-blade",
+    "attack": 1436,
+    "element": {
+      "type": "water",
+      "value": 230
+    },
+    "affinity": 10,
+    "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
+    "skills": [
+      {
+        "skillId": "artful_dodger",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "榴彈瓶",
+      "description": "於擊中位置引發帶有昏厥效果的爆炸"
+    }
+  },
+  {
+    "id": "teostra_chargeblade",
+    "name": "炎王新星",
+    "nameEn": "",
+    "type": "charge-blade",
+    "attack": 1684,
+    "element": {
+      "type": "blast",
+      "value": 345
+    },
+    "affinity": 0,
+    "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
+    "skills": [
+      {
+        "skillId": "heroics",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "榴彈瓶",
+      "description": "於擊中位置引發帶有昏厥效果的爆炸"
+    }
+  },
+  {
+    "id": "magnamalo_chargeblade",
+    "name": "禍鉞【封】",
+    "nameEn": "",
+    "type": "charge-blade",
+    "attack": 1516,
+    "element": {
+      "type": "blast",
+      "value": 236
+    },
+    "affinity": 0,
+    "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
+    "skills": [
+      {
+        "skillId": "partbreaker",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "榴彈瓶",
+      "description": "於擊中位置引發帶有昏厥效果的爆炸"
+    }
+  },
+  {
+    "id": "rajang_chargeblade",
+    "name": "金剛盾斧",
+    "nameEn": "",
+    "type": "charge-blade",
+    "attack": 1568,
+    "element": {
+      "type": "thunder",
+      "value": 292
+    },
+    "affinity": -30,
+    "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
+    "skills": [
+      {
+        "skillId": "feat_of_agility",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "榴彈瓶",
+      "description": "於擊中位置引發帶有昏厥效果的爆炸"
+    }
+  },
+  {
+    "id": "nergigante_chargeblade",
+    "name": "壞滅一束",
+    "nameEn": "",
+    "type": "charge-blade",
+    "attack": 1553,
+    "element": {
+      "type": "dragon",
+      "value": 238
+    },
+    "affinity": 0,
+    "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
+    "skills": [
+      {
+        "skillId": "partbreaker",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "榴彈瓶",
+      "description": "於擊中位置引發帶有昏厥效果的爆炸"
+    }
+  },
+  {
+    "id": "volvidon_chargeblade",
+    "name": "圓舞車輪",
+    "nameEn": "",
+    "type": "charge-blade",
+    "attack": 1516,
+    "element": {
+      "type": "paralysis",
+      "value": 176
+    },
+    "affinity": 0,
+    "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
+    "skills": [
+      {
+        "skillId": "evade_extender",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "榴彈瓶",
+      "description": "於擊中位置引發帶有昏厥效果的爆炸"
+    }
+  },
+  {
+    "id": "somnacanth_chargeblade",
+    "name": "人魚呻吟",
+    "nameEn": "",
+    "type": "charge-blade",
+    "attack": 1567,
+    "element": {
+      "type": "sleep",
+      "value": 236
+    },
+    "affinity": -15,
+    "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
+    "skills": [
+      {
+        "skillId": "evade_extender",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "榴彈瓶",
+      "description": "於擊中位置引發帶有昏厥效果的爆炸"
+    }
+  },
+  {
+    "id": "tigrex_chargeblade",
+    "name": "轟龍兵裝",
+    "nameEn": "",
+    "type": "charge-blade",
+    "attack": 2633,
+    "element": null,
+    "affinity": -40,
+    "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
+    "skills": [
+      {
+        "skillId": "brutal_strike",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "榴彈瓶",
+      "description": "於擊中位置引發帶有昏厥效果的爆炸"
+    }
+  },
+  {
+    "id": "brute_tigrex_chargeblade",
+    "name": "劫難兵裝",
+    "nameEn": "",
+    "type": "charge-blade",
+    "attack": 2633,
+    "element": null,
+    "affinity": -10,
+    "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
+    "skills": [
+      {
+        "skillId": "evasive_reload",
+        "level": 5
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "榴彈瓶",
+      "description": "於擊中位置引發帶有昏厥效果的爆炸"
+    }
+  },
+  {
+    "id": "chatacabra_chargeblade",
+    "name": "纏蛙兵裝",
+    "nameEn": "",
+    "type": "charge-blade",
+    "attack": 2197,
+    "element": null,
+    "affinity": 10,
+    "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
+    "skills": [
+      {
+        "skillId": "armor_up",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "榴彈瓶",
+      "description": "於擊中位置引發帶有昏厥效果的爆炸"
+    }
+  },
+  {
+    "id": "glavenus_chargeblade",
+    "name": "灼炎之索求者",
+    "nameEn": "",
+    "type": "charge-blade",
+    "attack": 1568,
+    "element": {
+      "type": "fire",
+      "value": 292
+    },
+    "affinity": -30,
+    "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
+    "skills": [
+      {
+        "skillId": "brutal_strike",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "強屬性瓶",
+      "description": "於擊中位置引發與武器相同屬性的爆炸"
+    }
+  },
+  {
+    "id": "chameleos_chargeblade",
+    "name": "幻想神諭",
+    "nameEn": "",
+    "type": "charge-blade",
+    "attack": 1741,
+    "element": {
+      "type": "poison",
+      "value": 347
+    },
+    "affinity": 0,
+    "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
+    "skills": [
+      {
+        "skillId": "abnormal_status_enhancement",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "榴彈瓶",
+      "description": "於擊中位置引發帶有昏厥效果的爆炸"
+    }
+  },
+  {
+    "id": "beotodus_chargeblade",
+    "name": "深沉霜雪",
+    "nameEn": "",
+    "type": "charge-blade",
+    "attack": 1293,
+    "element": {
+      "type": "ice",
+      "value": 117
+    },
+    "affinity": 0,
+    "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
+    "skills": [
+      {
+        "skillId": "bravery",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "強屬性瓶",
+      "description": "於擊中位置引發與武器相同屬性的爆炸"
+    }
+  },
+  {
+    "id": "nargacuga_chargeblade",
+    "name": "隱密守護者",
+    "nameEn": "",
+    "type": "charge-blade",
+    "attack": 2082,
+    "element": null,
+    "affinity": 25,
+    "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
+    "skills": [
+      {
+        "skillId": "resuscitate",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "榴彈瓶",
+      "description": "於擊中位置引發帶有昏厥效果的爆炸"
+    }
+  },
+  {
+    "id": "namielle_chargeblade",
+    "name": "水蛇悠遠",
+    "nameEn": "",
+    "type": "charge-blade",
+    "attack": 1335,
+    "element": {
+      "type": "water",
+      "value": 276
+    },
+    "affinity": 15,
+    "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
+    "skills": [
+      {
+        "skillId": "weakness_exploit",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "榴彈瓶",
+      "description": "於擊中位置引發帶有昏厥效果的爆炸"
+    }
+  },
+  {
+    "id": "garangolm_chargeblade",
+    "name": "剛纏獸之心",
+    "nameEn": "",
+    "type": "charge-blade",
+    "attack": 2371,
+    "element": null,
+    "affinity": 0,
+    "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
+    "skills": [
+      {
+        "skillId": "disable_perfect_evade",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "榴彈瓶",
+      "description": "於擊中位置引發帶有昏厥效果的爆炸"
+    }
+  },
+  {
+    "id": "lunagaron_chargeblade",
+    "name": "冷月之充能斧",
+    "nameEn": "",
+    "type": "charge-blade",
+    "attack": 1458,
+    "element": {
+      "type": "ice",
+      "value": 164
+    },
+    "affinity": 0,
+    "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
+    "skills": [
+      {
+        "skillId": "high_performance_ice",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "榴彈瓶",
+      "description": "於擊中位置引發帶有昏厥效果的爆炸"
+    }
+  },
+  {
+    "id": "espinas_chargeblade",
+    "name": "薔薇之痛",
+    "nameEn": "",
+    "type": "charge-blade",
+    "attack": 1756,
+    "element": {
+      "type": "poison",
+      "value": 183
+    },
+    "affinity": 10,
+    "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
+    "skills": [
+      {
+        "skillId": "part_break_special_boost",
+        "level": 2
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "榴彈瓶",
+      "description": "於擊中位置引發帶有昏厥效果的爆炸"
+    }
+  },
+  {
+    "id": "malzeno_chargeblade",
+    "name": "紅翼之血鷹",
+    "nameEn": "",
+    "type": "charge-blade",
+    "attack": 1622,
+    "element": {
+      "type": "dragon",
+      "value": 334
+    },
+    "affinity": 0,
+    "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
+    "skills": [
+      {
+        "skillId": "high_performance_dragon",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "榴彈瓶",
+      "description": "於擊中位置引發帶有昏厥效果的爆炸"
+    }
+  },
+  {
+    "id": "gossharag_chargeblade",
+    "name": "雪鬼獸充能斧",
+    "nameEn": "",
+    "type": "charge-blade",
+    "attack": 1492,
+    "element": {
+      "type": "ice",
+      "value": 147
+    },
+    "affinity": -30,
+    "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
+    "skills": [
+      {
+        "skillId": "brutal_strike",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "榴彈瓶",
+      "description": "於擊中位置引發帶有昏厥效果的爆炸"
+    }
+  },
+  {
+    "id": "astalos_chargeblade",
+    "name": "電閃斧翠綠海克力士",
+    "nameEn": "",
+    "type": "charge-blade",
+    "attack": 1436,
+    "element": {
+      "type": "thunder",
+      "value": 230
+    },
+    "affinity": 10,
+    "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
+    "skills": [
+      {
+        "skillId": "thunder_attack",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "榴彈瓶",
+      "description": "於擊中位置引發帶有昏厥效果的爆炸"
+    }
+  },
+  {
+    "id": "seregios_chargeblade",
+    "name": "神魔觜宿一",
+    "nameEn": "",
+    "type": "charge-blade",
+    "attack": 2335,
+    "element": null,
+    "affinity": 15,
+    "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
+    "skills": [
+      {
+        "skillId": "powerhouse",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "榴彈瓶",
+      "description": "於擊中位置引發帶有昏厥效果的爆炸"
+    }
+  },
+  {
+    "id": "bone_chargeblade",
+    "name": "骨製兵裝",
+    "nameEn": "",
+    "type": "charge-blade",
+    "attack": 1912,
+    "element": null,
+    "affinity": 0,
+    "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
+    "skills": [
+      {
+        "skillId": "concentration",
+        "level": 1
+      }
+    ],
+    "image": "",
+    "phial": {
+      "name": "榴彈瓶",
+      "description": "於擊中位置引發帶有昏厥效果的爆炸"
+    }
+  }
+]

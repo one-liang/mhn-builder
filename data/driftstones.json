@@ -1,0 +1,143 @@
+[
+  {
+    "id": "A",
+    "name": "神秘漂流石【A】",
+    "nameEn": "Mysterious Driftstone A",
+    "possibleSkills": [
+      "dragon-attack",
+      "critical-boost",
+      "aggressive-dodger"
+    ]
+  },
+  {
+    "id": "B",
+    "name": "神秘漂流石【B】",
+    "nameEn": "Mysterious Driftstone B",
+    "possibleSkills": [
+      "blast-attack",
+      "partbreaker",
+      "aggressive-dodger"
+    ]
+  },
+  {
+    "id": "C",
+    "name": "神秘漂流石【C】",
+    "nameEn": "Mysterious Driftstone C",
+    "possibleSkills": [
+      "fire-attack",
+      "water-attack",
+      "thunder-attack",
+      "ice-attack",
+      "dragon-attack"
+    ]
+  },
+  {
+    "id": "D",
+    "name": "神秘漂流石【D】",
+    "nameEn": "Mysterious Driftstone D",
+    "possibleSkills": [
+      "headstrong"
+    ]
+  },
+  {
+    "id": "E",
+    "name": "神秘漂流石【E】",
+    "nameEn": "Mysterious Driftstone E",
+    "possibleSkills": [
+      "special-partbreaker",
+      "fighting-spirit"
+    ]
+  },
+  {
+    "id": "F",
+    "name": "神秘漂流石【F】",
+    "nameEn": "Mysterious Driftstone F",
+    "possibleSkills": [
+      "coalescence",
+      "latent-power"
+    ]
+  },
+  {
+    "id": "G",
+    "name": "神秘漂流石【G】",
+    "nameEn": "Mysterious Driftstone G",
+    "possibleSkills": [
+      "critical-boost",
+      "critical-eye",
+      "weakness-exploit"
+    ]
+  },
+  {
+    "id": "H",
+    "name": "神秘漂流石【H】",
+    "nameEn": "Mysterious Driftstone H",
+    "possibleSkills": [
+      "status-sneak-attack",
+      "blast-attack"
+    ]
+  },
+  {
+    "id": "I",
+    "name": "神秘漂流石【I】",
+    "nameEn": "Mysterious Driftstone I",
+    "possibleSkills": [
+      "timed-charger",
+      "headstrong"
+    ]
+  },
+  {
+    "id": "J",
+    "name": "神秘漂流石【J】",
+    "nameEn": "Mysterious Driftstone J",
+    "possibleSkills": [
+      "offensive-dodger",
+      "fighting-spirit"
+    ]
+  },
+  {
+    "id": "K",
+    "name": "神秘漂流石【K】",
+    "nameEn": "Mysterious Driftstone K",
+    "possibleSkills": [
+      "charge-master",
+      "focus"
+    ]
+  },
+  {
+    "id": "L",
+    "name": "神秘漂流石【L】",
+    "nameEn": "Mysterious Driftstone L",
+    "possibleSkills": [
+      "resuscitate",
+      "coalescence"
+    ]
+  },
+  {
+    "id": "M",
+    "name": "神秘漂流石【M】",
+    "nameEn": "Mysterious Driftstone M",
+    "possibleSkills": [
+      "critical-range-boost",
+      "burst"
+    ]
+  },
+  {
+    "id": "N",
+    "name": "神秘漂流石【N】",
+    "nameEn": "Mysterious Driftstone N",
+    "possibleSkills": [
+      "reflection",
+      "headstrong"
+    ]
+  },
+  {
+    "id": "O",
+    "name": "神秘漂流石【O】",
+    "nameEn": "Mysterious Driftstone O",
+    "possibleSkills": [
+      "morph-boost",
+      "burst",
+      "critical-boost"
+    ]
+  }
+]

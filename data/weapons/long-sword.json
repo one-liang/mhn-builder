@@ -1,0 +1,912 @@
+[
+  {
+    "id": "ore_longsword",
+    "name": "鐵刀",
+    "nameEn": "",
+    "type": "long-sword",
+    "attack": 1912,
+    "element": null,
+    "affinity": 0,
+    "spSkill": "【SP】氣刃兜割 Lv3",
+    "skills": [
+      {
+        "skillId": "poison_resistance",
+        "level": 2
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "kuluyaku_longsword",
+    "name": "星空太刀",
+    "nameEn": "",
+    "type": "long-sword",
+    "attack": 1912,
+    "element": null,
+    "affinity": 5,
+    "spSkill": "【SP】氣刃兜割 Lv3",
+    "skills": [
+      {
+        "skillId": "fortify",
+        "level": 2
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "tobikadachi_longsword",
+    "name": "脈衝彎刀",
+    "nameEn": "",
+    "type": "long-sword",
+    "attack": 1293,
+    "element": {
+      "type": "thunder",
+      "value": 47
+    },
+    "affinity": 0,
+    "spSkill": "【SP】氣刃兜割 Lv3",
+    "skills": [
+      {
+        "skillId": "evade_extender",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "viper_tobikadachi_longsword",
+    "name": "朱赤麻痹牙",
+    "nameEn": "",
+    "type": "long-sword",
+    "attack": 1776,
+    "element": {
+      "type": "paralysis",
+      "value": 201
+    },
+    "affinity": 10,
+    "spSkill": "【SP】氣刃兜割 Lv3",
+    "skills": [
+      {
+        "skillId": "burst_secret",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "jyuratodus_longsword",
+    "name": "泥魚龍彎刀",
+    "nameEn": "",
+    "type": "long-sword",
+    "attack": 1293,
+    "element": {
+      "type": "water",
+      "value": 75
+    },
+    "affinity": 0,
+    "spSkill": "【SP】氣刃兜割 Lv3",
+    "skills": [
+      {
+        "skillId": "last_stand",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "anjanath_longsword",
+    "name": "火焰彎刀",
+    "nameEn": "",
+    "type": "long-sword",
+    "attack": 1293,
+    "element": {
+      "type": "fire",
+      "value": 117
+    },
+    "affinity": 0,
+    "spSkill": "【SP】氣刃兜割 Lv3",
+    "skills": [
+      {
+        "skillId": "rising_tide",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "fulgur_anjanath_longsword",
+    "name": "崩壞雷顎",
+    "nameEn": "",
+    "type": "long-sword",
+    "attack": 1434,
+    "element": {
+      "type": "thunder",
+      "value": 230
+    },
+    "affinity": 10,
+    "spSkill": "【SP】氣刃兜割 Lv3",
+    "skills": [
+      {
+        "skillId": "critical_element",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "rathian_longsword",
+    "name": "飛龍刀【綠葉】",
+    "nameEn": "",
+    "type": "long-sword",
+    "attack": 1516,
+    "element": {
+      "type": "poison",
+      "value": 236
+    },
+    "affinity": 0,
+    "spSkill": "【SP】氣刃兜割 Lv3",
+    "skills": [
+      {
+        "skillId": "health_boost",
+        "level": 2
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "pink_rathian_longsword",
+    "name": "飛龍刀【櫻花】",
+    "nameEn": "",
+    "type": "long-sword",
+    "attack": 1756,
+    "element": {
+      "type": "poison",
+      "value": 188
+    },
+    "affinity": 0,
+    "spSkill": "【SP】氣刃兜割 Lv3",
+    "skills": [
+      {
+        "skillId": "evade_extender",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "gold_rathian_longsword",
+    "name": "飛龍刀【月】",
+    "nameEn": "",
+    "type": "long-sword",
+    "attack": 1675,
+    "element": {
+      "type": "poison",
+      "value": 273
+    },
+    "affinity": 20,
+    "spSkill": "【SP】氣刃兜割 Lv3",
+    "skills": [
+      {
+        "skillId": "pursuit_poison",
+        "level": 2
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "legiana_longsword",
+    "name": "優雅彎刀",
+    "nameEn": "",
+    "type": "long-sword",
+    "attack": 1420,
+    "element": {
+      "type": "ice",
+      "value": 232
+    },
+    "affinity": 0,
+    "spSkill": "【SP】氣刃兜割 Lv3",
+    "skills": [
+      {
+        "skillId": "divine_blessing",
+        "level": 2
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "rathalos_longsword",
+    "name": "飛龍刀【紅葉】",
+    "nameEn": "",
+    "type": "long-sword",
+    "attack": 1420,
+    "element": {
+      "type": "fire",
+      "value": 232
+    },
+    "affinity": 0,
+    "spSkill": "【SP】氣刃兜割 Lv3",
+    "skills": [
+      {
+        "skillId": "earplugs",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "azure_rathalos_longsword",
+    "name": "飛龍刀【蒼】",
+    "nameEn": "",
+    "type": "long-sword",
+    "attack": 1682,
+    "element": {
+      "type": "fire",
+      "value": 134
+    },
+    "affinity": 0,
+    "spSkill": "【SP】氣刃兜割 Lv3",
+    "skills": [
+      {
+        "skillId": "special_boost",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "silver_rathalos_longsword",
+    "name": "飛龍刀【銀】",
+    "nameEn": "",
+    "type": "long-sword",
+    "attack": 1345,
+    "element": {
+      "type": "fire",
+      "value": 277
+    },
+    "affinity": 20,
+    "spSkill": "【SP】氣刃兜割 Lv3",
+    "skills": [
+      {
+        "skillId": "critical_element",
+        "level": 2
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "banbaro_longsword",
+    "name": "巨牛大太刀",
+    "nameEn": "",
+    "type": "long-sword",
+    "attack": 2113,
+    "element": null,
+    "affinity": 0,
+    "spSkill": "【SP】氣刃兜割 Lv3",
+    "skills": [
+      {
+        "skillId": "firm_foothold",
+        "level": 2
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "barioth_longsword",
+    "name": "冰牙刀【琥珀】",
+    "nameEn": "",
+    "type": "long-sword",
+    "attack": 1191,
+    "element": {
+      "type": "ice",
+      "value": 117
+    },
+    "affinity": 5,
+    "spSkill": "【SP】氣刃兜割 Lv3",
+    "skills": [
+      {
+        "skillId": "evade_extender",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "zinogre_longsword",
+    "name": "王刀雷切",
+    "nameEn": "",
+    "type": "long-sword",
+    "attack": 1420,
+    "element": {
+      "type": "thunder",
+      "value": 232
+    },
+    "affinity": 0,
+    "spSkill": "【SP】氣刃兜割 Lv3",
+    "skills": [
+      {
+        "skillId": "artful_dodger",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "tzitziyaku_longsword",
+    "name": "眩刀【搖】",
+    "nameEn": "",
+    "type": "long-sword",
+    "attack": 1588,
+    "element": {
+      "type": "thunder",
+      "value": 38
+    },
+    "affinity": 0,
+    "spSkill": "【SP】氣刃兜割 Lv3",
+    "skills": [
+      {
+        "skillId": "lock_on",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "deviljho_longsword",
+    "name": "殘酷痛苦太刀",
+    "nameEn": "",
+    "type": "long-sword",
+    "attack": 1568,
+    "element": {
+      "type": "dragon",
+      "value": 292
+    },
+    "affinity": -30,
+    "spSkill": "【SP】氣刃兜割 Lv3",
+    "skills": [
+      {
+        "skillId": "feat_of_agility",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "basarios_longsword",
+    "name": "巨岩彎刀",
+    "nameEn": "",
+    "type": "long-sword",
+    "attack": 1666,
+    "element": {
+      "type": "fire",
+      "value": 39
+    },
+    "affinity": -15,
+    "spSkill": "【SP】氣刃兜割 Lv3",
+    "skills": [
+      {
+        "skillId": "heroics",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "kushaladaora_longsword",
+    "name": "鋼龍之刃",
+    "nameEn": "",
+    "type": "long-sword",
+    "attack": 1553,
+    "element": {
+      "type": "ice",
+      "value": 238
+    },
+    "affinity": 0,
+    "spSkill": "【SP】氣刃兜割 Lv3",
+    "skills": [
+      {
+        "skillId": "windproof",
+        "level": 2
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "mizutsune_longsword",
+    "name": "狐刀無雲照明月",
+    "nameEn": "",
+    "type": "long-sword",
+    "attack": 1436,
+    "element": {
+      "type": "water",
+      "value": 230
+    },
+    "affinity": 10,
+    "spSkill": "【SP】氣刃兜割 Lv3",
+    "skills": [
+      {
+        "skillId": "artful_dodger",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "teostra_longsword",
+    "name": "帝王刀【陽炎】",
+    "nameEn": "",
+    "type": "long-sword",
+    "attack": 1684,
+    "element": {
+      "type": "blast",
+      "value": 345
+    },
+    "affinity": 0,
+    "spSkill": "【SP】氣刃兜割 Lv3",
+    "skills": [
+      {
+        "skillId": "heroics",
+        "level": 2
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "aknosom_longsword",
+    "name": "傘之太刀",
+    "nameEn": "",
+    "type": "long-sword",
+    "attack": 1588,
+    "element": {
+      "type": "fire",
+      "value": 59
+    },
+    "affinity": 0,
+    "spSkill": "【SP】氣刃兜割 Lv3",
+    "skills": [
+      {
+        "skillId": "lock_on",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "magnamalo_longsword",
+    "name": "禍太刀【封】",
+    "nameEn": "",
+    "type": "long-sword",
+    "attack": 1516,
+    "element": {
+      "type": "blast",
+      "value": 236
+    },
+    "affinity": 0,
+    "spSkill": "【SP】氣刃兜割 Lv3",
+    "skills": [
+      {
+        "skillId": "partbreaker",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "rajang_longsword",
+    "name": "鬼薙刀",
+    "nameEn": "",
+    "type": "long-sword",
+    "attack": 1568,
+    "element": {
+      "type": "thunder",
+      "value": 292
+    },
+    "affinity": -30,
+    "spSkill": "【SP】氣刃兜割 Lv3",
+    "skills": [
+      {
+        "skillId": "focus",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "nergigante_longsword",
+    "name": "滅盡一刀",
+    "nameEn": "",
+    "type": "long-sword",
+    "attack": 1553,
+    "element": {
+      "type": "dragon",
+      "value": 238
+    },
+    "affinity": 0,
+    "spSkill": "【SP】氣刃兜割 Lv3",
+    "skills": [
+      {
+        "skillId": "partbreaker",
+        "level": 2
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "lagombi_longsword",
+    "name": "白兔刃",
+    "nameEn": "",
+    "type": "long-sword",
+    "attack": 1588,
+    "element": {
+      "type": "ice",
+      "value": 38
+    },
+    "affinity": 0,
+    "spSkill": "【SP】氣刃兜割 Lv3",
+    "skills": [
+      {
+        "skillId": "lock_on",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "somnacanth_longsword",
+    "name": "人魚利爪",
+    "nameEn": "",
+    "type": "long-sword",
+    "attack": 1567,
+    "element": {
+      "type": "sleep",
+      "value": 236
+    },
+    "affinity": -15,
+    "spSkill": "【SP】氣刃兜割 Lv3",
+    "skills": [
+      {
+        "skillId": "evade_extender",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "tigrex_longsword",
+    "name": "一虎刀",
+    "nameEn": "",
+    "type": "long-sword",
+    "attack": 2633,
+    "element": null,
+    "affinity": -40,
+    "spSkill": "【SP】氣刃兜割 Lv3",
+    "skills": [
+      {
+        "skillId": "brutal_strike",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "brute_tigrex_longsword",
+    "name": "吼虎刀",
+    "nameEn": "",
+    "type": "long-sword",
+    "attack": 2633,
+    "element": null,
+    "affinity": -10,
+    "spSkill": "【SP】氣刃兜割 Lv3",
+    "skills": [
+      {
+        "skillId": "feat_of_agility",
+        "level": 3
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "bazelgeuse_longsword",
+    "name": "爆鱗大刀",
+    "nameEn": "",
+    "type": "long-sword",
+    "attack": 1942,
+    "element": {
+      "type": "blast",
+      "value": 201
+    },
+    "affinity": -30,
+    "spSkill": "【SP】氣刃兜割 Lv3",
+    "skills": [
+      {
+        "skillId": "feat_of_agility",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "arzuros_longsword",
+    "name": "青熊薙",
+    "nameEn": "",
+    "type": "long-sword",
+    "attack": 2361,
+    "element": null,
+    "affinity": -20,
+    "spSkill": "【SP】氣刃兜割 Lv3",
+    "skills": [
+      {
+        "skillId": "special_boost",
+        "level": 2
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "glavenus_longsword",
+    "name": "斬龍寶刀",
+    "nameEn": "",
+    "type": "long-sword",
+    "attack": 1568,
+    "element": {
+      "type": "fire",
+      "value": 292
+    },
+    "affinity": -30,
+    "spSkill": "【SP】氣刃兜割 Lv3",
+    "skills": [
+      {
+        "skillId": "brutal_strike",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "chameleos_longsword",
+    "name": "海市蜃樓幽魂",
+    "nameEn": "",
+    "type": "long-sword",
+    "attack": 1741,
+    "element": {
+      "type": "poison",
+      "value": 347
+    },
+    "affinity": 0,
+    "spSkill": "【SP】氣刃兜割 Lv3",
+    "skills": [
+      {
+        "skillId": "abnormal_status_enhancement",
+        "level": 2
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "greatwroggi_longsword",
+    "name": "毒狗龍太刀",
+    "nameEn": "",
+    "type": "long-sword",
+    "attack": 1647,
+    "element": {
+      "type": "poison",
+      "value": 66
+    },
+    "affinity": 10,
+    "spSkill": "【SP】氣刃兜割 Lv3",
+    "skills": [
+      {
+        "skillId": "lock_on",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "nargacuga_longsword",
+    "name": "隱密配劍",
+    "nameEn": "",
+    "type": "long-sword",
+    "attack": 2082,
+    "element": null,
+    "affinity": 25,
+    "spSkill": "【SP】氣刃兜割 Lv3",
+    "skills": [
+      {
+        "skillId": "resuscitate",
+        "level": 2
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "namielle_longsword",
+    "name": "暴君‧柱頭",
+    "nameEn": "",
+    "type": "long-sword",
+    "attack": 1335,
+    "element": {
+      "type": "water",
+      "value": 276
+    },
+    "affinity": 15,
+    "spSkill": "【SP】氣刃兜割 Lv3",
+    "skills": [
+      {
+        "skillId": "weakness_exploit",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "garangolm_longsword",
+    "name": "剛纏獸之刀",
+    "nameEn": "",
+    "type": "long-sword",
+    "attack": 2371,
+    "element": null,
+    "affinity": 0,
+    "spSkill": "【SP】氣刃兜割 Lv3",
+    "skills": [
+      {
+        "skillId": "disable_perfect_evade",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "lunagaron_longsword",
+    "name": "冷月之白刃",
+    "nameEn": "",
+    "type": "long-sword",
+    "attack": 1458,
+    "element": {
+      "type": "ice",
+      "value": 164
+    },
+    "affinity": 0,
+    "spSkill": "【SP】氣刃兜割 Lv3",
+    "skills": [
+      {
+        "skillId": "high_performance_ice",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "espinas_longsword",
+    "name": "薔薇羽刀",
+    "nameEn": "",
+    "type": "long-sword",
+    "attack": 1756,
+    "element": {
+      "type": "poison",
+      "value": 183
+    },
+    "affinity": 10,
+    "spSkill": "【SP】氣刃兜割 Lv3",
+    "skills": [
+      {
+        "skillId": "part_break_special_boost",
+        "level": 2
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "malzeno_longsword",
+    "name": "裂空之翼",
+    "nameEn": "",
+    "type": "long-sword",
+    "attack": 1622,
+    "element": {
+      "type": "dragon",
+      "value": 334
+    },
+    "affinity": 0,
+    "spSkill": "【SP】氣刃兜割 Lv3",
+    "skills": [
+      {
+        "skillId": "high_performance_dragon",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "quematrice_longsword",
+    "name": "炎尾鑢",
+    "nameEn": "",
+    "type": "long-sword",
+    "attack": 1458,
+    "element": {
+      "type": "fire",
+      "value": 68
+    },
+    "affinity": 0,
+    "spSkill": "【SP】氣刃兜割 Lv3",
+    "skills": [
+      {
+        "skillId": "bravery",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "astalos_longsword",
+    "name": "飛龍刀【橄欖石】",
+    "nameEn": "",
+    "type": "long-sword",
+    "attack": 1436,
+    "element": {
+      "type": "thunder",
+      "value": 230
+    },
+    "affinity": 10,
+    "spSkill": "【SP】氣刃兜割 Lv3",
+    "skills": [
+      {
+        "skillId": "thunder_attack",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "almudron_longsword",
+    "name": "泥翁經太刀",
+    "nameEn": "",
+    "type": "long-sword",
+    "attack": 1458,
+    "element": {
+      "type": "water",
+      "value": 164
+    },
+    "affinity": 0,
+    "spSkill": "【SP】氣刃兜割 Lv3",
+    "skills": [
+      {
+        "skillId": "water_attack",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "seregios_longsword",
+    "name": "太刀參宿五",
+    "nameEn": "",
+    "type": "long-sword",
+    "attack": 2335,
+    "element": null,
+    "affinity": 15,
+    "spSkill": "【SP】氣刃兜割 Lv3",
+    "skills": [
+      {
+        "skillId": "powerhouse",
+        "level": 1
+      }
+    ],
+    "image": ""
+  },
+  {
+    "id": "bone_longsword",
+    "name": "骨製彎刀",
+    "nameEn": "",
+    "type": "long-sword",
+    "attack": 1912,
+    "element": null,
+    "affinity": 0,
+    "spSkill": "【SP】氣刃兜割 Lv3",
+    "skills": [
+      {
+        "skillId": "concentration",
+        "level": 1
+      }
+    ],
+    "image": ""
+  }
+]
