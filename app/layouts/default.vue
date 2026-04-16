@@ -9,7 +9,7 @@
     </header>
 
     <!-- Scrollable Content -->
-    <main class="flex-1 overflow-y-auto pb-16">
+    <main class="flex-1 pb-16">
       <slot />
     </main>
 

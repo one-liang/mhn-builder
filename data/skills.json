@@ -1417,7 +1417,7 @@
   },
   {
     "id": "firm-foothold",
-    "name": "屹立不倒",
+    "name": "軀幹強化",
     "nameEn": "Firm Foothold",
     "description": "受到攻擊時減少後退距離。",
     "maxLevel": 3,
