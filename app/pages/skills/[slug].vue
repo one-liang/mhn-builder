@@ -1,16 +1,13 @@
 <script setup lang="ts">
 import { useSkillStore } from '~/stores/skill'
 import { useEquipmentStore, getWeaponTypeName, getPartName } from '~/stores/equipment'
-import { useDriftstoneStore } from '~/stores/driftstone'
-
 const route = useRoute()
 const slug = route.params.slug as string
 
 const skillStore = useSkillStore()
 const equipmentStore = useEquipmentStore()
-const driftstoneStore = useDriftstoneStore()
 
-await Promise.all([skillStore.load(), equipmentStore.load(), driftstoneStore.load()])
+await Promise.all([skillStore.load(), equipmentStore.load()])
 
 const skill = computed(() => skillStore.getById(slug))
 
@@ -49,10 +46,6 @@ const weaponsWithSkill = computed(() => {
   return result
 })
 
-const driftstonesWithSkill = computed(() => {
-  if (!skill.value) return []
-  return driftstoneStore.getBySkillId(slug)
-})
 </script>
 
 <template>
@@ -128,21 +121,6 @@ const driftstonesWithSkill = computed(() => {
         </div>
       </section>
 
-      <!-- Driftstones with this skill -->
-      <section v-if="driftstonesWithSkill.length" class="mb-4">
-        <h2 class="text-sm font-semibold text-primary mb-2">可產出此技能的漂流石</h2>
-        <div class="flex flex-col gap-2">
-          <NuxtLink
-            v-for="d in driftstonesWithSkill"
-            :key="d.id"
-            :to="`/driftstones/${d.id}`"
-            class="flex items-center justify-between p-3 rounded-lg bg-card border border-border hover:border-primary/40 transition-colors"
-          >
-            <span class="text-sm text-foreground">{{ d.name }}</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-muted-foreground"><path d="m9 18 6-6-6-6"/></svg>
-          </NuxtLink>
-        </div>
-      </section>
     </template>
 
     <div v-else class="text-center py-16 text-muted-foreground">找不到此技能</div>

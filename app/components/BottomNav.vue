@@ -6,7 +6,6 @@ const tabs = [
   { name: '武器', path: '/weapons', icon: 'sword' },
   { name: '配裝', path: '/build', icon: 'build' },
   { name: '技能', path: '/skills', icon: 'zap' },
-  { name: '漂流石', path: '/driftstones', icon: 'gem' },
 ]
 
 function isActive(path: string) {
@@ -32,9 +31,7 @@ function isActive(path: string) {
         <svg v-if="tab.icon === 'build'" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 17.5 3 6V3h3l11.5 11.5"/><path d="m13 19 6-6"/><path d="m16 16 4 4"/><path d="M19 5c0 3-2 5-4 5.5"/><path d="M15 2c2 0 4 1 4 3 0 .5-.1 1-.3 1.5"/></svg>
         <!-- Zap icon -->
         <svg v-if="tab.icon === 'zap'" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>
-        <!-- Gem icon -->
-        <svg v-if="tab.icon === 'gem'" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 6-10 13L2 9Z"/><path d="M11 3 8 9l4 13 4-13-3-6"/><path d="M2 9h20"/></svg>
-        <span class="text-[10px] mt-0.5 font-medium">{{ tab.name }}</span>
+<span class="text-[10px] mt-0.5 font-medium">{{ tab.name }}</span>
       </NuxtLink>
     </div>
   </nav>
