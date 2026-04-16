@@ -77,7 +77,7 @@
   --muted-foreground: #A89880;
   --accent: #8B2500;
   --accent-foreground: #F5F0E0;
-  --destructive: #8B2500;
+  --destructive: #F87171;   /* red-400, WCAG 2.2 AA: 5.95:1 on card, 6.59:1 on bg */
   --border: rgba(212, 160, 23, 0.2);
   --input: rgba(212, 160, 23, 0.15);
   --ring: #D4A017;
