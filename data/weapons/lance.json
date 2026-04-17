@@ -14,7 +14,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/ore_lance.webp"
   },
   {
     "id": "kuluyaku_lance",
@@ -31,7 +31,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/kuluyaku_lance.webp"
   },
   {
     "id": "pukeipukei_lance",
@@ -51,7 +51,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/pukeipukei_lance.webp"
   },
   {
     "id": "coral_pukeipukei_lance",
@@ -71,7 +71,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/coral_pukeipukei_lance.webp"
   },
   {
     "id": "barroth_lance",
@@ -88,7 +88,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/barroth_lance.webp"
   },
   {
     "id": "tobikadachi_lance",
@@ -108,7 +108,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/tobikadachi_lance.webp"
   },
   {
     "id": "nightshade_paolumu_lance",
@@ -128,7 +128,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/nightshade_paolumu_lance.webp"
   },
   {
     "id": "jyuratodus_lance",
@@ -148,7 +148,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/jyuratodus_lance.webp"
   },
   {
     "id": "legiana_lance",
@@ -168,7 +168,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/legiana_lance.webp"
   },
   {
     "id": "diablos_lance",
@@ -185,7 +185,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/diablos_lance.webp"
   },
   {
     "id": "rathalos_lance",
@@ -205,7 +205,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/rathalos_lance.webp"
   },
   {
     "id": "azure_rathalos_lance",
@@ -225,7 +225,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/azure_rathalos_lance.webp"
   },
   {
     "id": "silver_rathalos_lance",
@@ -245,7 +245,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/silver_rathalos_lance.webp"
   },
   {
     "id": "barioth_lance",
@@ -265,7 +265,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/barioth_lance.webp"
   },
   {
     "id": "zinogre_lance",
@@ -285,7 +285,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/zinogre_lance.webp"
   },
   {
     "id": "odogaron_lance",
@@ -302,7 +302,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/odogaron_lance.webp"
   },
   {
     "id": "ebony_odogaron_lance",
@@ -322,7 +322,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/ebony_odogaron_lance.webp"
   },
   {
     "id": "deviljho_lance",
@@ -342,7 +342,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/deviljho_lance.webp"
   },
   {
     "id": "basarios_lance",
@@ -362,7 +362,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/basarios_lance.webp"
   },
   {
     "id": "kushaladaora_lance",
@@ -382,7 +382,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/kushaladaora_lance.webp"
   },
   {
     "id": "mizutsune_lance",
@@ -402,7 +402,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/mizutsune_lance.webp"
   },
   {
     "id": "teostra_lance",
@@ -422,7 +422,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/teostra_lance.webp"
   },
   {
     "id": "aknosom_lance",
@@ -442,7 +442,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/aknosom_lance.webp"
   },
   {
     "id": "magnamalo_lance",
@@ -462,7 +462,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/magnamalo_lance.webp"
   },
   {
     "id": "rajang_lance",
@@ -482,7 +482,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/rajang_lance.webp"
   },
   {
     "id": "nergigante_lance",
@@ -502,7 +502,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/nergigante_lance.webp"
   },
   {
     "id": "volvidon_lance",
@@ -522,7 +522,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/volvidon_lance.webp"
   },
   {
     "id": "tigrex_lance",
@@ -539,7 +539,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/tigrex_lance.webp"
   },
   {
     "id": "brute_tigrex_lance",
@@ -556,7 +556,7 @@
         "level": 5
       }
     ],
-    "image": ""
+    "image": "/images/weapons/brute_tigrex_lance.webp"
   },
   {
     "id": "kirin_lance",
@@ -576,7 +576,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/kirin_lance.webp"
   },
   {
     "id": "bazelgeuse_lance",
@@ -596,7 +596,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/bazelgeuse_lance.webp"
   },
   {
     "id": "glavenus_lance",
@@ -616,7 +616,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/glavenus_lance.webp"
   },
   {
     "id": "nargacuga_lance",
@@ -633,7 +633,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/nargacuga_lance.webp"
   },
   {
     "id": "namielle_lance",
@@ -653,7 +653,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/namielle_lance.webp"
   },
   {
     "id": "garangolm_lance",
@@ -670,7 +670,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/garangolm_lance.webp"
   },
   {
     "id": "lunagaron_lance",
@@ -690,7 +690,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/lunagaron_lance.webp"
   },
   {
     "id": "espinas_lance",
@@ -710,7 +710,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/espinas_lance.webp"
   },
   {
     "id": "malzeno_lance",
@@ -730,7 +730,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/malzeno_lance.webp"
   },
   {
     "id": "quematrice_lance",
@@ -750,7 +750,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/quematrice_lance.webp"
   },
   {
     "id": "gossharag_lance",
@@ -770,7 +770,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/gossharag_lance.webp"
   },
   {
     "id": "astalos_lance",
@@ -790,7 +790,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/astalos_lance.webp"
   },
   {
     "id": "seregios_lance",
@@ -807,7 +807,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/seregios_lance.webp"
   },
   {
     "id": "bone_lance",
@@ -824,6 +824,6 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/bone_lance.webp"
   }
 ]

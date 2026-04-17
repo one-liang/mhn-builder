@@ -14,7 +14,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/ore_huntinghorn.webp",
     "melodies": [
       {
         "name": "泥．積雪無效",
@@ -45,7 +45,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/kuluyaku_huntinghorn.webp",
     "melodies": [
       {
         "name": "麻痺無效",
@@ -79,7 +79,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/pukeipukei_huntinghorn.webp",
     "melodies": [
       {
         "name": "雷耐性UP",
@@ -113,7 +113,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/coral_pukeipukei_huntinghorn.webp",
     "melodies": [
       {
         "name": "睡眠無效",
@@ -144,7 +144,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/barroth_huntinghorn.webp",
     "melodies": [
       {
         "name": "防禦力UP",
@@ -178,7 +178,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/tobikadachi_huntinghorn.webp",
     "melodies": [
       {
         "name": "睡眠無效",
@@ -209,7 +209,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/paolumu_huntinghorn.webp",
     "melodies": [
       {
         "name": "睡眠無效",
@@ -243,7 +243,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/nightshade_paolumu_huntinghorn.webp",
     "melodies": [
       {
         "name": "火耐性UP",
@@ -277,7 +277,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/jyuratodus_huntinghorn.webp",
     "melodies": [
       {
         "name": "火耐性UP",
@@ -311,7 +311,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/anjanath_huntinghorn.webp",
     "melodies": [
       {
         "name": "SP計量表加速【小】",
@@ -345,7 +345,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/fulgur_anjanath_huntinghorn.webp",
     "melodies": [
       {
         "name": "防禦力UP",
@@ -379,7 +379,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/rathian_huntinghorn.webp",
     "melodies": [
       {
         "name": "龍耐性UP",
@@ -413,7 +413,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/pink_rathian_huntinghorn.webp",
     "melodies": [
       {
         "name": "雷耐性UP",
@@ -447,7 +447,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/gold_rathian_huntinghorn.webp",
     "melodies": [
       {
         "name": "麻痺無效",
@@ -481,7 +481,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/legiana_huntinghorn.webp",
     "melodies": [
       {
         "name": "雷耐性UP",
@@ -512,7 +512,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/diablos_huntinghorn.webp",
     "melodies": [
       {
         "name": "震動無效",
@@ -546,7 +546,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/rathalos_huntinghorn.webp",
     "melodies": [
       {
         "name": "冰耐性UP",
@@ -580,7 +580,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/radobaan_huntinghorn.webp",
     "melodies": [
       {
         "name": "後仰無效",
@@ -614,7 +614,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/barioth_huntinghorn.webp",
     "melodies": [
       {
         "name": "毒無效",
@@ -648,7 +648,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/zinogre_huntinghorn.webp",
     "melodies": [
       {
         "name": "毒無效",
@@ -682,7 +682,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/deviljho_huntinghorn.webp",
     "melodies": [
       {
         "name": "毒無效",
@@ -716,7 +716,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/basarios_huntinghorn.webp",
     "melodies": [
       {
         "name": "冰耐性UP",
@@ -750,7 +750,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/khezu_huntinghorn.webp",
     "melodies": [
       {
         "name": "泥．積雪無效",
@@ -784,7 +784,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/kushaladaora_huntinghorn.webp",
     "melodies": [
       {
         "name": "火耐性UP",
@@ -818,7 +818,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/mizutsune_huntinghorn.webp",
     "melodies": [
       {
         "name": "龍耐性UP",
@@ -852,7 +852,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/teostra_huntinghorn.webp",
     "melodies": [
       {
         "name": "毒無效．解毒",
@@ -886,7 +886,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/magnamalo_huntinghorn.webp",
     "melodies": [
       {
         "name": "睡眠無效",
@@ -920,7 +920,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/rajang_huntinghorn.webp",
     "melodies": [
       {
         "name": "水耐性UP",
@@ -954,7 +954,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/nergigante_huntinghorn.webp",
     "melodies": [
       {
         "name": "水耐性UP",
@@ -988,7 +988,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/somnacanth_huntinghorn.webp",
     "melodies": [
       {
         "name": "麻痺無效",
@@ -1019,7 +1019,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/tigrex_huntinghorn.webp",
     "melodies": [
       {
         "name": "防禦力UP",
@@ -1050,7 +1050,7 @@
         "level": 3
       }
     ],
-    "image": "",
+    "image": "/images/weapons/brute_tigrex_huntinghorn.webp",
     "melodies": [
       {
         "name": "震動無效",
@@ -1084,7 +1084,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/kirin_huntinghorn.webp",
     "melodies": [
       {
         "name": "震動無效",
@@ -1118,7 +1118,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/bazelgeuse_huntinghorn.webp",
     "melodies": [
       {
         "name": "震動無效",
@@ -1149,7 +1149,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/arzuros_huntinghorn.webp",
     "melodies": [
       {
         "name": "毒無效",
@@ -1183,7 +1183,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/glavenus_huntinghorn.webp",
     "melodies": [
       {
         "name": "後仰無效",
@@ -1217,7 +1217,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/chameleos_huntinghorn.webp",
     "melodies": [
       {
         "name": "防禦力UP",
@@ -1248,7 +1248,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/nargacuga_huntinghorn.webp",
     "melodies": [
       {
         "name": "迴避距離UP",
@@ -1282,7 +1282,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/namielle_huntinghorn.webp",
     "melodies": [
       {
         "name": "全屬性耐性UP",
@@ -1313,7 +1313,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/garangolm_huntinghorn.webp",
     "melodies": [
       {
         "name": "泥．積雪無效",
@@ -1347,7 +1347,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/lunagaron_huntinghorn.webp",
     "melodies": [
       {
         "name": "毒無效",
@@ -1381,7 +1381,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/espinas_huntinghorn.webp",
     "melodies": [
       {
         "name": "水耐性UP",
@@ -1415,7 +1415,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/malzeno_huntinghorn.webp",
     "melodies": [
       {
         "name": "迴避距離UP",
@@ -1449,7 +1449,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/astalos_huntinghorn.webp",
     "melodies": [
       {
         "name": "裂傷無效",
@@ -1480,7 +1480,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/seregios_huntinghorn.webp",
     "melodies": [
       {
         "name": "迴避距離UP",
@@ -1511,7 +1511,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/bone_huntinghorn.webp",
     "melodies": [
       {
         "name": "迴避距離UP",

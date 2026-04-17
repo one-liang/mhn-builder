@@ -14,7 +14,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/ore_bow.webp",
     "chargingShots": [
       "連射箭 lv1",
       "連射箭 lv2",
@@ -38,7 +38,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/kuluyaku_bow.webp",
     "chargingShots": [
       "連射箭 lv1",
       "連射箭 lv2",
@@ -65,7 +65,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/pukeipukei_bow.webp",
     "chargingShots": [
       "連射箭 lv1",
       "連射箭 lv2",
@@ -92,7 +92,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/coral_pukeipukei_bow.webp",
     "chargingShots": [
       "連射箭 lv2",
       "連射箭 lv3",
@@ -119,7 +119,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/tobikadachi_bow.webp",
     "chargingShots": [
       "貫通箭 lv1",
       "貫通箭 lv2",
@@ -146,7 +146,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/viper_tobikadachi_bow.webp",
     "chargingShots": [
       "貫通箭 lv1",
       "貫通箭 lv2",
@@ -173,7 +173,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/nightshade_paolumu_bow.webp",
     "chargingShots": [
       "連射箭 lv2",
       "連射箭 lv3",
@@ -200,7 +200,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/jyuratodus_bow.webp",
     "chargingShots": [
       "擴散箭 lv1",
       "擴散箭 lv2",
@@ -227,7 +227,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/anjanath_bow.webp",
     "chargingShots": [
       "擴散箭 lv1",
       "擴散箭 lv2",
@@ -254,7 +254,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/fulgur_anjanath_bow.webp",
     "chargingShots": [
       "連射箭 lv2",
       "連射箭 lv3",
@@ -281,7 +281,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/rathian_bow.webp",
     "chargingShots": [
       "連射箭 lv1",
       "連射箭 lv2",
@@ -308,7 +308,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/pink_rathian_bow.webp",
     "chargingShots": [
       "貫通箭 lv2",
       "貫通箭 lv3",
@@ -335,7 +335,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/gold_rathian_bow.webp",
     "chargingShots": [
       "擴散箭 lv2",
       "貫通箭 lv2",
@@ -362,7 +362,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/legiana_bow.webp",
     "chargingShots": [
       "貫通箭 lv1",
       "貫通箭 lv2",
@@ -386,7 +386,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/diablos_bow.webp",
     "chargingShots": [
       "擴散箭 lv1",
       "連射箭 lv2",
@@ -410,7 +410,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/black_diablos_bow.webp",
     "chargingShots": [
       "貫通箭 lv1",
       "貫通箭 lv1",
@@ -437,7 +437,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/rathalos_bow.webp",
     "chargingShots": [
       "連射箭 lv1",
       "連射箭 lv2",
@@ -464,7 +464,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/azure_rathalos_bow.webp",
     "chargingShots": [
       "擴散箭 lv2",
       "擴散箭 lv3",
@@ -491,7 +491,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/silver_rathalos_bow.webp",
     "chargingShots": [
       "擴散箭 lv2",
       "貫通箭 lv2",
@@ -515,7 +515,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/banbaro_bow.webp",
     "chargingShots": [
       "貫通箭 lv1",
       "擴散箭 lv2",
@@ -542,7 +542,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/barioth_bow.webp",
     "chargingShots": [
       "連射箭 lv1",
       "連射箭 lv2",
@@ -569,7 +569,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/zinogre_bow.webp",
     "chargingShots": [
       "貫通箭 lv1",
       "貫通箭 lv2",
@@ -596,7 +596,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/deviljho_bow.webp",
     "chargingShots": [
       "連射箭 lv2",
       "擴散箭 lv3",
@@ -623,7 +623,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/khezu_bow.webp",
     "chargingShots": [
       "擴散箭 lv1",
       "擴散箭 lv2",
@@ -650,7 +650,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/kushaladaora_bow.webp",
     "chargingShots": [
       "連射箭 lv1",
       "連射箭 lv2",
@@ -677,7 +677,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/mizutsune_bow.webp",
     "chargingShots": [
       "連射箭 lv1",
       "連射箭 lv2",
@@ -704,7 +704,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/teostra_bow.webp",
     "chargingShots": [
       "貫通箭 lv1",
       "貫通箭 lv2",
@@ -731,7 +731,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/magnamalo_bow.webp",
     "chargingShots": [
       "連射箭 lv1",
       "連射箭 lv2",
@@ -758,7 +758,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/rajang_bow.webp",
     "chargingShots": [
       "連射箭 lv1",
       "連射箭 lv2",
@@ -785,7 +785,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/nergigante_bow.webp",
     "chargingShots": [
       "擴散箭 lv1",
       "連射箭 lv2",
@@ -809,7 +809,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/tigrex_bow.webp",
     "chargingShots": [
       "擴散箭 lv1",
       "擴散箭 lv2",
@@ -836,7 +836,7 @@
         "level": 3
       }
     ],
-    "image": "",
+    "image": "/images/weapons/brute_tigrex_bow.webp",
     "chargingShots": [
       "擴散箭 lv1",
       "擴散箭 lv1",
@@ -860,7 +860,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/arzuros_bow.webp",
     "chargingShots": [
       "擴散箭 lv1",
       "連射箭 lv2",
@@ -887,7 +887,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/glavenus_bow.webp",
     "chargingShots": [
       "貫通箭 lv1",
       "貫通箭 lv2",
@@ -914,7 +914,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/chameleos_bow.webp",
     "chargingShots": [
       "擴散箭 lv1",
       "擴散箭 lv2",
@@ -941,7 +941,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/greatwroggi_bow.webp",
     "chargingShots": [
       "貫通箭 lv1",
       "貫通箭 lv2",
@@ -968,7 +968,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/bishaten_bow.webp",
     "chargingShots": [
       "擴散箭 lv1",
       "擴散箭 lv2",
@@ -992,7 +992,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/nargacuga_bow.webp",
     "chargingShots": [
       "連射箭 lv1",
       "連射箭 lv2",
@@ -1019,7 +1019,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/namielle_bow.webp",
     "chargingShots": [
       "擴散箭 lv1",
       "擴散箭 lv2",
@@ -1043,7 +1043,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/garangolm_bow.webp",
     "chargingShots": [
       "擴散箭 lv1",
       "連射箭 lv2",
@@ -1070,7 +1070,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/lunagaron_bow.webp",
     "chargingShots": [
       "擴散箭 lv1",
       "擴散箭 lv2",
@@ -1097,7 +1097,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/espinas_bow.webp",
     "chargingShots": [
       "貫通箭 lv1",
       "貫通箭 lv2",
@@ -1124,7 +1124,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/malzeno_bow.webp",
     "chargingShots": [
       "貫通箭 lv1",
       "貫通箭 lv2",
@@ -1151,7 +1151,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/quematrice_bow.webp",
     "chargingShots": [
       "連射箭 lv1",
       "連射箭 lv2",
@@ -1178,7 +1178,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/astalos_bow.webp",
     "chargingShots": [
       "擴散箭 lv1",
       "擴散箭 lv2",
@@ -1205,7 +1205,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/almudron_bow.webp",
     "chargingShots": [
       "擴散箭 lv1",
       "擴散箭 lv2",
@@ -1229,7 +1229,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/seregios_bow.webp",
     "chargingShots": [
       "連射箭 lv1",
       "連射箭 lv1",
@@ -1253,7 +1253,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/bone_bow.webp",
     "chargingShots": [
       "擴散箭 lv1",
       "擴散箭 lv2",

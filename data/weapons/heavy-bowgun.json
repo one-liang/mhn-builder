@@ -14,7 +14,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/ore_heavybowgun.webp",
     "ammo": [
       {
         "name": "LV1 通常彈",
@@ -48,7 +48,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/greatjagras_heavybowgun.webp",
     "ammo": [
       {
         "name": "水冷彈",
@@ -73,7 +73,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/pukeipukei_heavybowgun.webp",
     "ammo": [
       {
         "name": "LV1 貫通彈",
@@ -101,7 +101,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/coral_pukeipukei_heavybowgun.webp",
     "ammo": [
       {
         "name": "貫通水冷彈",
@@ -135,7 +135,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/tobikadachi_heavybowgun.webp",
     "ammo": [
       {
         "name": "電擊彈",
@@ -172,7 +172,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/viper_tobikadachi_heavybowgun.webp",
     "ammo": [
       {
         "name": "LV1麻痺彈",
@@ -197,7 +197,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/nightshade_paolumu_heavybowgun.webp",
     "ammo": [
       {
         "name": "LV1 散彈",
@@ -231,7 +231,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/jyuratodus_heavybowgun.webp",
     "ammo": [
       {
         "name": "水冷彈",
@@ -265,7 +265,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/anjanath_heavybowgun.webp",
     "ammo": [
       {
         "name": "火炎散彈",
@@ -293,7 +293,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/fulgur_anjanath_heavybowgun.webp",
     "ammo": [
       {
         "name": "貫通電擊彈",
@@ -318,7 +318,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/rathian_heavybowgun.webp",
     "ammo": [
       {
         "name": "LV1毒彈",
@@ -343,7 +343,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/gold_rathian_heavybowgun.webp",
     "ammo": [
       {
         "name": "LV1毒彈",
@@ -371,7 +371,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/legiana_heavybowgun.webp",
     "ammo": [
       {
         "name": "貫通冰結彈",
@@ -396,7 +396,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/diablos_heavybowgun.webp",
     "ammo": [
       {
         "name": "LV1 通常彈",
@@ -427,7 +427,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/black_diablos_heavybowgun.webp",
     "ammo": [
       {
         "name": "LV1 貫通彈",
@@ -452,7 +452,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/radobaan_heavybowgun.webp",
     "ammo": [
       {
         "name": "LV1 貫通彈",
@@ -480,7 +480,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/barioth_heavybowgun.webp",
     "ammo": [
       {
         "name": "貫通冰結彈",
@@ -508,7 +508,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/zinogre_heavybowgun.webp",
     "ammo": [
       {
         "name": "電擊散彈",
@@ -542,7 +542,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/tzitziyaku_heavybowgun.webp",
     "ammo": [
       {
         "name": "電擊彈",
@@ -576,7 +576,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/deviljho_heavybowgun.webp",
     "ammo": [
       {
         "name": "滅龍散彈",
@@ -616,7 +616,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/basarios_heavybowgun.webp",
     "ammo": [
       {
         "name": "火炎龍擊彈",
@@ -650,7 +650,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/kushaladaora_heavybowgun.webp",
     "ammo": [
       {
         "name": "貫通冰結彈",
@@ -684,7 +684,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/mizutsune_heavybowgun.webp",
     "ammo": [
       {
         "name": "貫通水冷彈",
@@ -712,7 +712,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/teostra_heavybowgun.webp",
     "ammo": [
       {
         "name": "貫通火炎彈",
@@ -743,7 +743,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/magnamalo_heavybowgun.webp",
     "ammo": [
       {
         "name": "LV1 散彈",
@@ -777,7 +777,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/rajang_heavybowgun.webp",
     "ammo": [
       {
         "name": "電擊徹甲榴彈",
@@ -805,7 +805,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/nergigante_heavybowgun.webp",
     "ammo": [
       {
         "name": "滅龍散彈",
@@ -833,7 +833,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/lagombi_heavybowgun.webp",
     "ammo": [
       {
         "name": "冰結彈",
@@ -864,7 +864,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/volvidon_heavybowgun.webp",
     "ammo": [
       {
         "name": "LV1麻痺彈",
@@ -889,7 +889,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/tigrex_heavybowgun.webp",
     "ammo": [
       {
         "name": "LV1 散彈",
@@ -920,7 +920,7 @@
         "level": 3
       }
     ],
-    "image": "",
+    "image": "/images/weapons/brute_tigrex_heavybowgun.webp",
     "ammo": [
       {
         "name": "斬裂彈",
@@ -948,7 +948,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/kirin_heavybowgun.webp",
     "ammo": [
       {
         "name": "貫通電擊彈",
@@ -985,7 +985,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/chatacabra_heavybowgun.webp",
     "ammo": [
       {
         "name": "LV1 散彈",
@@ -1010,7 +1010,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/arzuros_heavybowgun.webp",
     "ammo": [
       {
         "name": "LV1 貫通彈",
@@ -1044,7 +1044,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/glavenus_heavybowgun.webp",
     "ammo": [
       {
         "name": "貫通火炎彈",
@@ -1069,7 +1069,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/chameleos_heavybowgun.webp",
     "ammo": [
       {
         "name": "LV1毒彈",
@@ -1094,7 +1094,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/bishaten_heavybowgun.webp",
     "ammo": [
       {
         "name": "LV1麻痺彈",
@@ -1125,7 +1125,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/nargacuga_heavybowgun.webp",
     "ammo": [
       {
         "name": "LV1 貫通彈",
@@ -1153,7 +1153,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/namielle_heavybowgun.webp",
     "ammo": [
       {
         "name": "水冷散彈",
@@ -1178,7 +1178,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/garangolm_heavybowgun.webp",
     "ammo": [
       {
         "name": "LV1 散彈",
@@ -1212,7 +1212,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/lunagaron_heavybowgun.webp",
     "ammo": [
       {
         "name": "貫通冰結彈",
@@ -1240,7 +1240,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/espinas_heavybowgun.webp",
     "ammo": [
       {
         "name": "LV1麻痺彈",
@@ -1268,7 +1268,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/malzeno_heavybowgun.webp",
     "ammo": [
       {
         "name": "貫通滅龍彈",
@@ -1302,7 +1302,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/astalos_heavybowgun.webp",
     "ammo": [
       {
         "name": "貫通電擊彈",
@@ -1327,7 +1327,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/seregios_heavybowgun.webp",
     "ammo": [
       {
         "name": "LV1 通常彈",
@@ -1358,7 +1358,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/bone_heavybowgun.webp",
     "ammo": [
       {
         "name": "LV1 貫通彈",

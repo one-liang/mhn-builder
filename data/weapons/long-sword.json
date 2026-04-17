@@ -14,7 +14,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/ore_longsword.webp"
   },
   {
     "id": "kuluyaku_longsword",
@@ -31,7 +31,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/kuluyaku_longsword.webp"
   },
   {
     "id": "tobikadachi_longsword",
@@ -51,7 +51,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/tobikadachi_longsword.webp"
   },
   {
     "id": "viper_tobikadachi_longsword",
@@ -71,7 +71,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/viper_tobikadachi_longsword.webp"
   },
   {
     "id": "jyuratodus_longsword",
@@ -91,7 +91,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/jyuratodus_longsword.webp"
   },
   {
     "id": "anjanath_longsword",
@@ -111,7 +111,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/anjanath_longsword.webp"
   },
   {
     "id": "fulgur_anjanath_longsword",
@@ -131,7 +131,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/fulgur_anjanath_longsword.webp"
   },
   {
     "id": "rathian_longsword",
@@ -151,7 +151,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/rathian_longsword.webp"
   },
   {
     "id": "pink_rathian_longsword",
@@ -171,7 +171,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/pink_rathian_longsword.webp"
   },
   {
     "id": "gold_rathian_longsword",
@@ -191,7 +191,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/gold_rathian_longsword.webp"
   },
   {
     "id": "legiana_longsword",
@@ -211,7 +211,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/legiana_longsword.webp"
   },
   {
     "id": "rathalos_longsword",
@@ -231,7 +231,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/rathalos_longsword.webp"
   },
   {
     "id": "azure_rathalos_longsword",
@@ -251,7 +251,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/azure_rathalos_longsword.webp"
   },
   {
     "id": "silver_rathalos_longsword",
@@ -271,7 +271,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/silver_rathalos_longsword.webp"
   },
   {
     "id": "banbaro_longsword",
@@ -288,7 +288,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/banbaro_longsword.webp"
   },
   {
     "id": "barioth_longsword",
@@ -308,7 +308,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/barioth_longsword.webp"
   },
   {
     "id": "zinogre_longsword",
@@ -328,7 +328,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/zinogre_longsword.webp"
   },
   {
     "id": "tzitziyaku_longsword",
@@ -348,7 +348,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/tzitziyaku_longsword.webp"
   },
   {
     "id": "deviljho_longsword",
@@ -368,7 +368,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/deviljho_longsword.webp"
   },
   {
     "id": "basarios_longsword",
@@ -388,7 +388,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/basarios_longsword.webp"
   },
   {
     "id": "kushaladaora_longsword",
@@ -408,7 +408,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/kushaladaora_longsword.webp"
   },
   {
     "id": "mizutsune_longsword",
@@ -428,7 +428,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/mizutsune_longsword.webp"
   },
   {
     "id": "teostra_longsword",
@@ -448,7 +448,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/teostra_longsword.webp"
   },
   {
     "id": "aknosom_longsword",
@@ -468,7 +468,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/aknosom_longsword.webp"
   },
   {
     "id": "magnamalo_longsword",
@@ -488,7 +488,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/magnamalo_longsword.webp"
   },
   {
     "id": "rajang_longsword",
@@ -508,7 +508,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/rajang_longsword.webp"
   },
   {
     "id": "nergigante_longsword",
@@ -528,7 +528,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/nergigante_longsword.webp"
   },
   {
     "id": "lagombi_longsword",
@@ -548,7 +548,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/lagombi_longsword.webp"
   },
   {
     "id": "somnacanth_longsword",
@@ -568,7 +568,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/somnacanth_longsword.webp"
   },
   {
     "id": "tigrex_longsword",
@@ -585,7 +585,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/tigrex_longsword.webp"
   },
   {
     "id": "brute_tigrex_longsword",
@@ -602,7 +602,7 @@
         "level": 3
       }
     ],
-    "image": ""
+    "image": "/images/weapons/brute_tigrex_longsword.webp"
   },
   {
     "id": "bazelgeuse_longsword",
@@ -622,7 +622,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/bazelgeuse_longsword.webp"
   },
   {
     "id": "arzuros_longsword",
@@ -639,7 +639,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/arzuros_longsword.webp"
   },
   {
     "id": "glavenus_longsword",
@@ -659,7 +659,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/glavenus_longsword.webp"
   },
   {
     "id": "chameleos_longsword",
@@ -679,7 +679,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/chameleos_longsword.webp"
   },
   {
     "id": "greatwroggi_longsword",
@@ -699,7 +699,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/greatwroggi_longsword.webp"
   },
   {
     "id": "nargacuga_longsword",
@@ -716,7 +716,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/nargacuga_longsword.webp"
   },
   {
     "id": "namielle_longsword",
@@ -736,7 +736,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/namielle_longsword.webp"
   },
   {
     "id": "garangolm_longsword",
@@ -753,7 +753,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/garangolm_longsword.webp"
   },
   {
     "id": "lunagaron_longsword",
@@ -773,7 +773,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/lunagaron_longsword.webp"
   },
   {
     "id": "espinas_longsword",
@@ -793,7 +793,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/espinas_longsword.webp"
   },
   {
     "id": "malzeno_longsword",
@@ -813,7 +813,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/malzeno_longsword.webp"
   },
   {
     "id": "quematrice_longsword",
@@ -833,7 +833,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/quematrice_longsword.webp"
   },
   {
     "id": "astalos_longsword",
@@ -853,7 +853,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/astalos_longsword.webp"
   },
   {
     "id": "almudron_longsword",
@@ -873,7 +873,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/almudron_longsword.webp"
   },
   {
     "id": "seregios_longsword",
@@ -890,7 +890,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/seregios_longsword.webp"
   },
   {
     "id": "bone_longsword",
@@ -907,6 +907,6 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/bone_longsword.webp"
   }
 ]

@@ -14,7 +14,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/ore_switchaxe.webp",
     "phial": {
       "name": "毒瓶",
       "description": "賦予劍模式下的攻擊毒屬性"
@@ -38,7 +38,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/greatjagras_switchaxe.webp",
     "phial": {
       "name": "減氣瓶",
       "description": "賦予劍模式下的攻擊昏厥屬性"
@@ -62,7 +62,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/pukeipukei_switchaxe.webp",
     "phial": {
       "name": "強擊瓶",
       "description": "劍模式時的攻擊力上升"
@@ -86,7 +86,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/coral_pukeipukei_switchaxe.webp",
     "phial": {
       "name": "強屬性瓶",
       "description": "劍模式時的屬性攻擊力上升"
@@ -107,7 +107,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/barroth_switchaxe.webp",
     "phial": {
       "name": "麻痺瓶",
       "description": "賦予劍模式下的攻擊麻痺屬性"
@@ -131,7 +131,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/tobikadachi_switchaxe.webp",
     "phial": {
       "name": "強擊瓶",
       "description": "劍模式時的攻擊力上升"
@@ -152,7 +152,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/paolumu_switchaxe.webp",
     "phial": {
       "name": "強擊瓶",
       "description": "劍模式時的攻擊力上升"
@@ -176,7 +176,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/nightshade_paolumu_switchaxe.webp",
     "phial": {
       "name": "強擊瓶",
       "description": "劍模式時的攻擊力上升"
@@ -200,7 +200,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/jyuratodus_switchaxe.webp",
     "phial": {
       "name": "強屬性瓶",
       "description": "劍模式時的屬性攻擊力上升"
@@ -224,7 +224,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/anjanath_switchaxe.webp",
     "phial": {
       "name": "強屬性瓶",
       "description": "劍模式時的屬性攻擊力上升"
@@ -248,7 +248,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/fulgur_anjanath_switchaxe.webp",
     "phial": {
       "name": "強擊瓶",
       "description": "劍模式時的攻擊力上升"
@@ -272,7 +272,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/rathian_switchaxe.webp",
     "phial": {
       "name": "強屬性瓶",
       "description": "劍模式時的屬性攻擊力上升"
@@ -296,7 +296,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/gold_rathian_switchaxe.webp",
     "phial": {
       "name": "強屬性瓶",
       "description": "劍模式時的屬性攻擊力上升"
@@ -320,7 +320,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/legiana_switchaxe.webp",
     "phial": {
       "name": "強屬性瓶",
       "description": "劍模式時的屬性攻擊力上升"
@@ -341,7 +341,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/diablos_switchaxe.webp",
     "phial": {
       "name": "強擊瓶",
       "description": "劍模式時的攻擊力上升"
@@ -362,7 +362,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/black_diablos_switchaxe.webp",
     "phial": {
       "name": "強擊瓶",
       "description": "劍模式時的攻擊力上升"
@@ -386,7 +386,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/rathalos_switchaxe.webp",
     "phial": {
       "name": "強擊瓶",
       "description": "劍模式時的攻擊力上升"
@@ -410,7 +410,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/azure_rathalos_switchaxe.webp",
     "phial": {
       "name": "強擊瓶",
       "description": "劍模式時的攻擊力上升"
@@ -434,7 +434,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/silver_rathalos_switchaxe.webp",
     "phial": {
       "name": "強屬性瓶",
       "description": "劍模式時的屬性攻擊力上升"
@@ -455,7 +455,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/banbaro_switchaxe.webp",
     "phial": {
       "name": "強擊瓶",
       "description": "劍模式時的攻擊力上升"
@@ -479,7 +479,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/barioth_switchaxe.webp",
     "phial": {
       "name": "強擊瓶",
       "description": "劍模式時的攻擊力上升"
@@ -503,7 +503,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/zinogre_switchaxe.webp",
     "phial": {
       "name": "強屬性瓶",
       "description": "劍模式時的屬性攻擊力上升"
@@ -527,7 +527,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/deviljho_switchaxe.webp",
     "phial": {
       "name": "強擊瓶",
       "description": "劍模式時的攻擊力上升"
@@ -551,7 +551,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/khezu_switchaxe.webp",
     "phial": {
       "name": "強屬性瓶",
       "description": "劍模式時的屬性攻擊力上升"
@@ -575,7 +575,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/kushaladaora_switchaxe.webp",
     "phial": {
       "name": "強擊瓶",
       "description": "劍模式時的攻擊力上升"
@@ -599,7 +599,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/mizutsune_switchaxe.webp",
     "phial": {
       "name": "強擊瓶",
       "description": "劍模式時的攻擊力上升"
@@ -623,7 +623,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/teostra_switchaxe.webp",
     "phial": {
       "name": "強擊瓶",
       "description": "劍模式時的攻擊力上升"
@@ -647,7 +647,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/aknosom_switchaxe.webp",
     "phial": {
       "name": "強擊瓶",
       "description": "劍模式時的攻擊力上升"
@@ -671,7 +671,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/magnamalo_switchaxe.webp",
     "phial": {
       "name": "強擊瓶",
       "description": "劍模式時的攻擊力上升"
@@ -695,7 +695,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/rajang_switchaxe.webp",
     "phial": {
       "name": "強擊瓶",
       "description": "劍模式時的攻擊力上升"
@@ -719,7 +719,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/nergigante_switchaxe.webp",
     "phial": {
       "name": "強擊瓶",
       "description": "劍模式時的攻擊力上升"
@@ -743,7 +743,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/lagombi_switchaxe.webp",
     "phial": {
       "name": "強屬性瓶",
       "description": "劍模式時的屬性攻擊力上升"
@@ -767,7 +767,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/volvidon_switchaxe.webp",
     "phial": {
       "name": "強屬性瓶",
       "description": "劍模式時的屬性攻擊力上升"
@@ -788,7 +788,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/tigrex_switchaxe.webp",
     "phial": {
       "name": "強擊瓶",
       "description": "劍模式時的攻擊力上升"
@@ -809,7 +809,7 @@
         "level": 3
       }
     ],
-    "image": "",
+    "image": "/images/weapons/brute_tigrex_switchaxe.webp",
     "phial": {
       "name": "減氣瓶",
       "description": "賦予劍模式下的攻擊昏厥屬性"
@@ -833,7 +833,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/kirin_switchaxe.webp",
     "phial": {
       "name": "強屬性瓶",
       "description": "劍模式時的屬性攻擊力上升"
@@ -857,7 +857,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/bazelgeuse_switchaxe.webp",
     "phial": {
       "name": "強擊瓶",
       "description": "劍模式時的攻擊力上升"
@@ -878,7 +878,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/arzuros_switchaxe.webp",
     "phial": {
       "name": "毒瓶",
       "description": "賦予劍模式下的攻擊毒屬性"
@@ -902,7 +902,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/glavenus_switchaxe.webp",
     "phial": {
       "name": "強擊瓶",
       "description": "劍模式時的攻擊力上升"
@@ -926,7 +926,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/chameleos_switchaxe.webp",
     "phial": {
       "name": "強擊瓶",
       "description": "劍模式時的攻擊力上升"
@@ -947,7 +947,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/bishaten_switchaxe.webp",
     "phial": {
       "name": "滅龍瓶",
       "description": "賦予劍模式下的攻擊龍屬性"
@@ -968,7 +968,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/nargacuga_switchaxe.webp",
     "phial": {
       "name": "強擊瓶",
       "description": "劍模式時的攻擊力上升"
@@ -992,7 +992,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/namielle_switchaxe.webp",
     "phial": {
       "name": "強擊瓶",
       "description": "劍模式時的攻擊力上升"
@@ -1013,7 +1013,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/garangolm_switchaxe.webp",
     "phial": {
       "name": "減氣瓶",
       "description": "賦予劍模式下的攻擊昏厥屬性"
@@ -1037,7 +1037,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/lunagaron_switchaxe.webp",
     "phial": {
       "name": "強擊瓶",
       "description": "劍模式時的攻擊力上升"
@@ -1061,7 +1061,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/espinas_switchaxe.webp",
     "phial": {
       "name": "強屬性瓶",
       "description": "劍模式時的屬性攻擊力上升"
@@ -1085,7 +1085,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/malzeno_switchaxe.webp",
     "phial": {
       "name": "強擊瓶",
       "description": "劍模式時的攻擊力上升"
@@ -1109,7 +1109,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/astalos_switchaxe.webp",
     "phial": {
       "name": "強擊瓶",
       "description": "劍模式時的攻擊力上升"
@@ -1133,7 +1133,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/almudron_switchaxe.webp",
     "phial": {
       "name": "強屬性瓶",
       "description": "劍模式時的屬性攻擊力上升"
@@ -1154,7 +1154,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/seregios_switchaxe.webp",
     "phial": {
       "name": "滅龍瓶",
       "description": "賦予劍模式下的攻擊龍屬性"
@@ -1175,7 +1175,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/bone_switchaxe.webp",
     "phial": {
       "name": "強擊瓶",
       "description": "劍模式時的攻擊力上升"

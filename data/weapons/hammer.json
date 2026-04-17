@@ -14,7 +14,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/ore_hammer.webp"
   },
   {
     "id": "kuluyaku_hammer",
@@ -31,7 +31,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/kuluyaku_hammer.webp"
   },
   {
     "id": "pukeipukei_hammer",
@@ -51,7 +51,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/pukeipukei_hammer.webp"
   },
   {
     "id": "coral_pukeipukei_hammer",
@@ -71,7 +71,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/coral_pukeipukei_hammer.webp"
   },
   {
     "id": "barroth_hammer",
@@ -88,7 +88,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/barroth_hammer.webp"
   },
   {
     "id": "greatgirros_hammer",
@@ -108,7 +108,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/greatgirros_hammer.webp"
   },
   {
     "id": "tobikadachi_hammer",
@@ -128,7 +128,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/tobikadachi_hammer.webp"
   },
   {
     "id": "nightshade_paolumu_hammer",
@@ -148,7 +148,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/nightshade_paolumu_hammer.webp"
   },
   {
     "id": "jyuratodus_hammer",
@@ -168,7 +168,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/jyuratodus_hammer.webp"
   },
   {
     "id": "anjanath_hammer",
@@ -188,7 +188,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/anjanath_hammer.webp"
   },
   {
     "id": "fulgur_anjanath_hammer",
@@ -208,7 +208,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/fulgur_anjanath_hammer.webp"
   },
   {
     "id": "diablos_hammer",
@@ -225,7 +225,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/diablos_hammer.webp"
   },
   {
     "id": "black_diablos_hammer",
@@ -242,7 +242,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/black_diablos_hammer.webp"
   },
   {
     "id": "rathalos_hammer",
@@ -262,7 +262,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/rathalos_hammer.webp"
   },
   {
     "id": "silver_rathalos_hammer",
@@ -282,7 +282,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/silver_rathalos_hammer.webp"
   },
   {
     "id": "radobaan_hammer",
@@ -302,7 +302,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/radobaan_hammer.webp"
   },
   {
     "id": "banbaro_hammer",
@@ -319,7 +319,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/banbaro_hammer.webp"
   },
   {
     "id": "barioth_hammer",
@@ -339,7 +339,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/barioth_hammer.webp"
   },
   {
     "id": "zinogre_hammer",
@@ -359,7 +359,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/zinogre_hammer.webp"
   },
   {
     "id": "deviljho_hammer",
@@ -379,7 +379,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/deviljho_hammer.webp"
   },
   {
     "id": "basarios_hammer",
@@ -396,7 +396,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/basarios_hammer.webp"
   },
   {
     "id": "khezu_hammer",
@@ -416,7 +416,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/khezu_hammer.webp"
   },
   {
     "id": "kushaladaora_hammer",
@@ -436,7 +436,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/kushaladaora_hammer.webp"
   },
   {
     "id": "mizutsune_hammer",
@@ -456,7 +456,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/mizutsune_hammer.webp"
   },
   {
     "id": "teostra_hammer",
@@ -476,7 +476,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/teostra_hammer.webp"
   },
   {
     "id": "magnamalo_hammer",
@@ -496,7 +496,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/magnamalo_hammer.webp"
   },
   {
     "id": "rajang_hammer",
@@ -516,7 +516,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/rajang_hammer.webp"
   },
   {
     "id": "nergigante_hammer",
@@ -536,7 +536,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/nergigante_hammer.webp"
   },
   {
     "id": "volvidon_hammer",
@@ -556,7 +556,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/volvidon_hammer.webp"
   },
   {
     "id": "somnacanth_hammer",
@@ -576,7 +576,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/somnacanth_hammer.webp"
   },
   {
     "id": "tigrex_hammer",
@@ -593,7 +593,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/tigrex_hammer.webp"
   },
   {
     "id": "chatacabra_hammer",
@@ -610,7 +610,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/chatacabra_hammer.webp"
   },
   {
     "id": "arzuros_hammer",
@@ -627,7 +627,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/arzuros_hammer.webp"
   },
   {
     "id": "glavenus_hammer",
@@ -647,7 +647,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/glavenus_hammer.webp"
   },
   {
     "id": "chameleos_hammer",
@@ -667,7 +667,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/chameleos_hammer.webp"
   },
   {
     "id": "greatwroggi_hammer",
@@ -687,7 +687,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/greatwroggi_hammer.webp"
   },
   {
     "id": "bishaten_hammer",
@@ -704,7 +704,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/bishaten_hammer.webp"
   },
   {
     "id": "nargacuga_hammer",
@@ -721,7 +721,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/nargacuga_hammer.webp"
   },
   {
     "id": "garangolm_hammer",
@@ -738,7 +738,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/garangolm_hammer.webp"
   },
   {
     "id": "lunagaron_hammer",
@@ -758,7 +758,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/lunagaron_hammer.webp"
   },
   {
     "id": "espinas_hammer",
@@ -778,7 +778,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/espinas_hammer.webp"
   },
   {
     "id": "malzeno_hammer",
@@ -798,7 +798,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/malzeno_hammer.webp"
   },
   {
     "id": "gossharag_hammer",
@@ -818,7 +818,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/gossharag_hammer.webp"
   },
   {
     "id": "astalos_hammer",
@@ -838,7 +838,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/astalos_hammer.webp"
   },
   {
     "id": "almudron_hammer",
@@ -858,7 +858,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/almudron_hammer.webp"
   },
   {
     "id": "seregios_hammer",
@@ -875,7 +875,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/seregios_hammer.webp"
   },
   {
     "id": "bone_hammer",
@@ -892,6 +892,6 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/bone_hammer.webp"
   }
 ]
