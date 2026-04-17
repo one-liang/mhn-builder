@@ -2,6 +2,7 @@
 import type { Armor, Weapon } from '~/stores/equipment'
 import { useBuildStore, type BuildSlot, type ArmorSlot } from '~/stores/build'
 import { useSkillStore } from '~/stores/skill'
+import type { BuildResult } from '~/lib/autoBuildAlgorithm'
 
 useSeoMeta({
   title: '配裝模擬器 | 最強獵人 - MHN 配裝模擬器',
@@ -112,6 +113,10 @@ function resetBuild() {
   showToast('已清除配裝')
 }
 
+function onAutoBuildApply(result: BuildResult) {
+  showToast(`已套用配裝 #${result.rank}`)
+}
+
 const armorSlots: ArmorSlot[] = ['head', 'chest', 'arms', 'waist', 'legs']
 const skillEntries = computed(() => buildStore.skillSummary)
 </script>
@@ -136,6 +141,11 @@ const skillEntries = computed(() => buildStore.skillSummary)
 
     <!-- Content area (uses layout's outer scroll) -->
     <div class="px-4">
+      <!-- Auto-build panel -->
+      <div class="py-2">
+        <AutoBuildPanel @apply="onAutoBuildApply" />
+      </div>
+
       <!-- Equipment section -->
       <div class="py-2 flex flex-col gap-2">
         <!-- Weapon slot (no driftstone) -->

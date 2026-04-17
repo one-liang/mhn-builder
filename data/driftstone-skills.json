@@ -1,0 +1,491 @@
+{
+  "stones": [
+    {
+      "id": "red",
+      "name": "漂流石【紅】",
+      "prime": false,
+      "skillIds": [
+        "fire-attack",
+        "steadfast",
+        "partbreaker",
+        "brute-force",
+        "blast-attack",
+        "offensive-guard",
+        "guard",
+        "heroics",
+        "attack-boost",
+        "defense-boost",
+        "health-boost",
+        "last-stand-guard",
+        "firm-foothold",
+        "guts",
+        "fortify",
+        "artful-dodger",
+        "group-hunt-attack",
+        "fire-resistance",
+        "water-resistance",
+        "thunder-resistance",
+        "ice-resistance",
+        "dragon-resistance",
+        "poison-resistance",
+        "paralysis-resistance",
+        "sleep-resistance",
+        "bleeding-resistance",
+        "blastblight-resistance"
+      ]
+    },
+    {
+      "id": "blue",
+      "name": "漂流石【藍】",
+      "prime": false,
+      "skillIds": [
+        "water-attack",
+        "focus",
+        "charge-master",
+        "poison-attack",
+        "slugger",
+        "aggressive-dodger",
+        "peak-performance",
+        "attack-boost",
+        "defense-boost",
+        "health-boost",
+        "last-stand-guard",
+        "firm-foothold",
+        "guts",
+        "fortify",
+        "artful-dodger",
+        "group-hunt-attack",
+        "fire-resistance",
+        "water-resistance",
+        "thunder-resistance",
+        "ice-resistance",
+        "dragon-resistance",
+        "poison-resistance",
+        "paralysis-resistance",
+        "sleep-resistance",
+        "bleeding-resistance",
+        "blastblight-resistance"
+      ]
+    },
+    {
+      "id": "black",
+      "name": "漂流石【黑】",
+      "prime": false,
+      "skillIds": [
+        "dragon-attack",
+        "status-sneak-attack",
+        "coalescence",
+        "resentment",
+        "sneak-attack",
+        "battle-temper",
+        "divine-blessing",
+        "attack-boost",
+        "defense-boost",
+        "health-boost",
+        "last-stand-guard",
+        "firm-foothold",
+        "guts",
+        "fortify",
+        "artful-dodger",
+        "group-hunt-attack",
+        "fire-resistance",
+        "water-resistance",
+        "thunder-resistance",
+        "ice-resistance",
+        "dragon-resistance",
+        "poison-resistance",
+        "paralysis-resistance",
+        "sleep-resistance",
+        "bleeding-resistance",
+        "blastblight-resistance"
+      ]
+    },
+    {
+      "id": "white",
+      "name": "漂流石【白】",
+      "prime": false,
+      "skillIds": [
+        "special-boost",
+        "special-partbreaker",
+        "fighting-spirit",
+        "latent-power",
+        "sp-meter-boost",
+        "sp-meter-boost-dodge",
+        "guard-up",
+        "special-insurance",
+        "attack-boost",
+        "defense-boost",
+        "health-boost",
+        "last-stand-guard",
+        "firm-foothold",
+        "guts",
+        "fortify",
+        "artful-dodger",
+        "group-hunt-attack",
+        "fire-resistance",
+        "water-resistance",
+        "thunder-resistance",
+        "ice-resistance",
+        "dragon-resistance",
+        "poison-resistance",
+        "paralysis-resistance",
+        "sleep-resistance",
+        "bleeding-resistance",
+        "blastblight-resistance"
+      ]
+    },
+    {
+      "id": "yellow",
+      "name": "漂流石【黃】",
+      "prime": false,
+      "skillIds": [
+        "thunder-attack",
+        "burst",
+        "evasive-concentration",
+        "offensive-dodger",
+        "paralysis-attack",
+        "skyward-striker",
+        "power-prolonger",
+        "evade-extender",
+        "attack-boost",
+        "defense-boost",
+        "health-boost",
+        "last-stand-guard",
+        "firm-foothold",
+        "guts",
+        "fortify",
+        "artful-dodger",
+        "group-hunt-attack",
+        "fire-resistance",
+        "water-resistance",
+        "thunder-resistance",
+        "ice-resistance",
+        "dragon-resistance",
+        "poison-resistance",
+        "paralysis-resistance",
+        "sleep-resistance",
+        "bleeding-resistance",
+        "blastblight-resistance"
+      ]
+    },
+    {
+      "id": "sky",
+      "name": "漂流石【水藍】",
+      "prime": false,
+      "skillIds": [
+        "ice-attack",
+        "critical-eye",
+        "critical-boost",
+        "weakness-exploit",
+        "sleep-attack",
+        "earplugs",
+        "tremor-resistance",
+        "windproof",
+        "attack-boost",
+        "defense-boost",
+        "health-boost",
+        "last-stand-guard",
+        "firm-foothold",
+        "guts",
+        "fortify",
+        "artful-dodger",
+        "group-hunt-attack",
+        "fire-resistance",
+        "water-resistance",
+        "thunder-resistance",
+        "ice-resistance",
+        "dragon-resistance",
+        "poison-resistance",
+        "paralysis-resistance",
+        "sleep-resistance",
+        "bleeding-resistance",
+        "blastblight-resistance"
+      ]
+    },
+    {
+      "id": "abnormal-status-enhancement-prime",
+      "name": "漂流純石【奇襲【狀態異常】】",
+      "prime": true,
+      "skillIds": [
+        "status-sneak-attack"
+      ]
+    },
+    {
+      "id": "attack-up-critical-down-prime",
+      "name": "漂流純石【蠻力】",
+      "prime": true,
+      "skillIds": [
+        "brute-force"
+      ]
+    },
+    {
+      "id": "burst-dodger-prime",
+      "name": "漂流純石【完美巧擊【持續】】",
+      "prime": true,
+      "skillIds": [
+        "offensive-dodger"
+      ]
+    },
+    {
+      "id": "burst-prime",
+      "name": "漂流純石【連擊】",
+      "prime": true,
+      "skillIds": [
+        "burst"
+      ]
+    },
+    {
+      "id": "charge-master-prime",
+      "name": "漂流純石【蓄力大師】",
+      "prime": true,
+      "skillIds": [
+        "charge-master"
+      ]
+    },
+    {
+      "id": "coalescence-prime",
+      "name": "漂流純石【轉禍為福】",
+      "prime": true,
+      "skillIds": [
+        "coalescence"
+      ]
+    },
+    {
+      "id": "critical-boost-prime",
+      "name": "漂流純石【超會心】",
+      "prime": true,
+      "skillIds": [
+        "critical-boost"
+      ]
+    },
+    {
+      "id": "critical-eye-prime",
+      "name": "漂流純石【看破】",
+      "prime": true,
+      "skillIds": [
+        "critical-eye"
+      ]
+    },
+    {
+      "id": "critical-range-boost-prime",
+      "name": "漂流純石【最有效距離威力UP】",
+      "prime": true,
+      "skillIds": [
+        "critical-range-boost"
+      ]
+    },
+    {
+      "id": "dragon-attack-prime",
+      "name": "漂流純石【龍屬性攻擊強化】",
+      "prime": true,
+      "skillIds": [
+        "dragon-attack"
+      ]
+    },
+    {
+      "id": "fighting-spirit-prime",
+      "name": "漂流純石【鬥氣活性】",
+      "prime": true,
+      "skillIds": [
+        "fighting-spirit"
+      ]
+    },
+    {
+      "id": "fire-attack-prime",
+      "name": "漂流純石【火屬性攻擊強化】",
+      "prime": true,
+      "skillIds": [
+        "fire-attack"
+      ]
+    },
+    {
+      "id": "focus-prime",
+      "name": "漂流純石【集中】",
+      "prime": true,
+      "skillIds": [
+        "focus"
+      ]
+    },
+    {
+      "id": "guard-reflect-prime",
+      "name": "漂流純石【反彈】",
+      "prime": true,
+      "skillIds": [
+        "guard-up"
+      ]
+    },
+    {
+      "id": "head-on-fight-prime",
+      "name": "漂流純石【屹立不倒】",
+      "prime": true,
+      "skillIds": [
+        "steadfast"
+      ]
+    },
+    {
+      "id": "ice-attack-prime",
+      "name": "漂流純石【冰屬性攻擊強化】",
+      "prime": true,
+      "skillIds": [
+        "ice-attack"
+      ]
+    },
+    {
+      "id": "just-charge-prime",
+      "name": "漂流純石【完美蓄力解放】",
+      "prime": true,
+      "skillIds": [
+        "charge-master"
+      ]
+    },
+    {
+      "id": "latent-power-prime",
+      "name": "漂流純石【力量解放】",
+      "prime": true,
+      "skillIds": [
+        "latent-power"
+      ]
+    },
+    {
+      "id": "move-forward-strengthen-prime",
+      "name": "漂流純石【勇往直前】",
+      "prime": true,
+      "skillIds": [
+        "evasive-concentration"
+      ]
+    },
+    {
+      "id": "partbreaker-prime",
+      "name": "漂流純石【破壞王】",
+      "prime": true,
+      "skillIds": [
+        "partbreaker"
+      ]
+    },
+    {
+      "id": "part-break-special-boost-prime",
+      "name": "漂流純石【破壞王【SP技能】】",
+      "prime": true,
+      "skillIds": [
+        "special-partbreaker"
+      ]
+    },
+    {
+      "id": "perfect-evade-ailments-attack-boost-prime",
+      "name": "漂流純石【完美巧擊【狀態異常】】",
+      "prime": true,
+      "skillIds": [
+        "status-sneak-attack"
+      ]
+    },
+    {
+      "id": "resuscitate-prime",
+      "name": "漂流純石【死裡逃生】",
+      "prime": true,
+      "skillIds": [
+        "resuscitate"
+      ]
+    },
+    {
+      "id": "special-boost-prime",
+      "name": "漂流純石【SP技能威力提升】",
+      "prime": true,
+      "skillIds": [
+        "special-boost"
+      ]
+    },
+    {
+      "id": "thunder-attack-prime",
+      "name": "漂流純石【雷屬性攻擊強化】",
+      "prime": true,
+      "skillIds": [
+        "thunder-attack"
+      ]
+    },
+    {
+      "id": "water-attack-prime",
+      "name": "漂流純石【水屬性攻擊強化】",
+      "prime": true,
+      "skillIds": [
+        "water-attack"
+      ]
+    },
+    {
+      "id": "weakness-exploit-prime",
+      "name": "漂流純石【弱點特效】",
+      "prime": true,
+      "skillIds": [
+        "weakness-exploit"
+      ]
+    }
+  ],
+  "achievableSkillIds": [
+    "aggressive-dodger",
+    "artful-dodger",
+    "attack-boost",
+    "battle-temper",
+    "blast-attack",
+    "blastblight-resistance",
+    "bleeding-resistance",
+    "brute-force",
+    "burst",
+    "charge-master",
+    "coalescence",
+    "critical-boost",
+    "critical-eye",
+    "critical-range-boost",
+    "defense-boost",
+    "divine-blessing",
+    "dragon-attack",
+    "dragon-resistance",
+    "earplugs",
+    "evade-extender",
+    "evasive-concentration",
+    "fighting-spirit",
+    "fire-attack",
+    "fire-resistance",
+    "firm-foothold",
+    "focus",
+    "fortify",
+    "group-hunt-attack",
+    "guard",
+    "guard-up",
+    "guts",
+    "health-boost",
+    "heroics",
+    "ice-attack",
+    "ice-resistance",
+    "last-stand-guard",
+    "latent-power",
+    "offensive-dodger",
+    "offensive-guard",
+    "paralysis-attack",
+    "paralysis-resistance",
+    "partbreaker",
+    "peak-performance",
+    "poison-attack",
+    "poison-resistance",
+    "power-prolonger",
+    "resentment",
+    "resuscitate",
+    "skyward-striker",
+    "sleep-attack",
+    "sleep-resistance",
+    "slugger",
+    "sneak-attack",
+    "sp-meter-boost",
+    "sp-meter-boost-dodge",
+    "special-boost",
+    "special-insurance",
+    "special-partbreaker",
+    "status-sneak-attack",
+    "steadfast",
+    "thunder-attack",
+    "thunder-resistance",
+    "tremor-resistance",
+    "water-attack",
+    "water-resistance",
+    "weakness-exploit",
+    "windproof"
+  ]
+}

@@ -1539,7 +1539,7 @@
     "nameEn": "Kushala Frostwind",
     "description": "減輕風壓的影響，並提升冰屬性攻擊力。",
     "maxLevel": 3,
-    "category": "utility",
+    "category": "element",
     "levels": [
       {
         "level": 1,
@@ -1561,7 +1561,7 @@
     "nameEn": "Teostra Blastpowder",
     "description": "更容易擺脫爆破異常，且更容易觸發爆破蓄積。",
     "maxLevel": 3,
-    "category": "utility",
+    "category": "element",
     "levels": [
       {
         "level": 1,
