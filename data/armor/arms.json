@@ -18,7 +18,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/leather-arms.webp"
   },
   {
     "id": "alloy-arms",
@@ -35,7 +35,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/alloy-arms.webp"
   },
   {
     "id": "jagras-arms",
@@ -56,7 +56,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/jagras-arms.webp"
   },
   {
     "id": "kulu-arms",
@@ -77,7 +77,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/kulu-arms.webp"
   },
   {
     "id": "pukei-arms",
@@ -98,7 +98,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/pukei-arms.webp"
   },
   {
     "id": "coral-pukei-arms",
@@ -119,7 +119,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/coral-pukei-arms.webp"
   },
   {
     "id": "barroth-arms",
@@ -136,7 +136,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/barroth-arms.webp"
   },
   {
     "id": "girros-arms",
@@ -157,7 +157,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/girros-arms.webp"
   },
   {
     "id": "kadachi-arms",
@@ -178,7 +178,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/kadachi-arms.webp"
   },
   {
     "id": "viper-kadachi-arms",
@@ -203,7 +203,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/viper-kadachi-arms.webp"
   },
   {
     "id": "paolumu-arms",
@@ -224,7 +224,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/paolumu-arms.webp"
   },
   {
     "id": "nightshade-paolumu-arms",
@@ -241,7 +241,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/nightshade-paolumu-arms.webp"
   },
   {
     "id": "jyuratodus-arms",
@@ -258,7 +258,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/jyuratodus-arms.webp"
   },
   {
     "id": "anjanath-arms",
@@ -275,7 +275,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/anjanath-arms.webp"
   },
   {
     "id": "fulgur-anjanath-arms",
@@ -292,7 +292,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/fulgur-anjanath-arms.webp"
   },
   {
     "id": "rathian-arms",
@@ -313,7 +313,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/rathian-arms.webp"
   },
   {
     "id": "pink-rathian-arms",
@@ -334,7 +334,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/pink-rathian-arms.webp"
   },
   {
     "id": "gold-rathian-arms",
@@ -351,7 +351,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/gold-rathian-arms.webp"
   },
   {
     "id": "legiana-arms",
@@ -368,7 +368,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/legiana-arms.webp"
   },
   {
     "id": "diablos-arms",
@@ -389,7 +389,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/diablos-arms.webp"
   },
   {
     "id": "black-diablos-arms",
@@ -410,7 +410,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/black-diablos-arms.webp"
   },
   {
     "id": "rathalos-arms",
@@ -431,7 +431,7 @@
       }
     ],
     "driftstoneSlots": 2,
-    "image": ""
+    "image": "/images/armor/rathalos-arms.webp"
   },
   {
     "id": "azure-rathalos-arms",
@@ -448,7 +448,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/azure-rathalos-arms.webp"
   },
   {
     "id": "silver-rathalos-arms",
@@ -465,7 +465,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/silver-rathalos-arms.webp"
   },
   {
     "id": "zinogre-arms",
@@ -482,7 +482,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/zinogre-arms.webp"
   },
   {
     "id": "tzitzi-arms",
@@ -499,7 +499,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/tzitzi-arms.webp"
   },
   {
     "id": "odogaron-arms",
@@ -520,7 +520,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/odogaron-arms.webp"
   },
   {
     "id": "ebony-odogaron-arms",
@@ -537,7 +537,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/ebony-odogaron-arms.webp"
   },
   {
     "id": "vangis-arms",
@@ -558,7 +558,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/vangis-arms.webp"
   },
   {
     "id": "basarios-arms",
@@ -575,7 +575,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/basarios-arms.webp"
   },
   {
     "id": "khezu-arms",
@@ -596,7 +596,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/khezu-arms.webp"
   },
   {
     "id": "kushala-arms",
@@ -621,7 +621,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/kushala-arms.webp"
   },
   {
     "id": "mizutsune-arms",
@@ -642,7 +642,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/mizutsune-arms.webp"
   },
   {
     "id": "kaiser-arms",
@@ -667,7 +667,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/kaiser-arms.webp"
   },
   {
     "id": "aknosom-arms",
@@ -688,7 +688,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/aknosom-arms.webp"
   },
   {
     "id": "sinister-arms",
@@ -705,7 +705,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/sinister-arms.webp"
   },
   {
     "id": "rajang-arms",
@@ -722,7 +722,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/rajang-arms.webp"
   },
   {
     "id": "nergigante-arms",
@@ -747,7 +747,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/nergigante-arms.webp"
   },
   {
     "id": "lagombi-arms",
@@ -768,7 +768,7 @@
       }
     ],
     "driftstoneSlots": 2,
-    "image": ""
+    "image": "/images/armor/lagombi-arms.webp"
   },
   {
     "id": "volvidon-arms",
@@ -785,7 +785,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/volvidon-arms.webp"
   },
   {
     "id": "somnacanth-arms",
@@ -802,7 +802,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/somnacanth-arms.webp"
   },
   {
     "id": "tigrex-arms",
@@ -819,7 +819,7 @@
       }
     ],
     "driftstoneSlots": 2,
-    "image": ""
+    "image": "/images/armor/tigrex-arms.webp"
   },
   {
     "id": "brute-tigrex-arms",
@@ -844,7 +844,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/brute-tigrex-arms.webp"
   },
   {
     "id": "kirin-arms",
@@ -869,7 +869,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/kirin-arms.webp"
   },
   {
     "id": "bazelgeuse-arms",
@@ -886,7 +886,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/bazelgeuse-arms.webp"
   },
   {
     "id": "chatacabra-arms",
@@ -903,7 +903,7 @@
       }
     ],
     "driftstoneSlots": 2,
-    "image": ""
+    "image": "/images/armor/chatacabra-arms.webp"
   },
   {
     "id": "arzuros-arms",
@@ -924,7 +924,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/arzuros-arms.webp"
   },
   {
     "id": "glavenus-arms",
@@ -941,7 +941,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/glavenus-arms.webp"
   },
   {
     "id": "chameleos-arms",
@@ -962,7 +962,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/chameleos-arms.webp"
   },
   {
     "id": "wroggi-arms",
@@ -979,7 +979,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/wroggi-arms.webp"
   },
   {
     "id": "bishaten-arms",
@@ -1000,7 +1000,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/bishaten-arms.webp"
   },
   {
     "id": "beotodus-arms",
@@ -1021,7 +1021,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/beotodus-arms.webp"
   },
   {
     "id": "nargacuga-arms",
@@ -1038,7 +1038,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/nargacuga-arms.webp"
   },
   {
     "id": "namielle-arms",
@@ -1063,7 +1063,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/namielle-arms.webp"
   },
   {
     "id": "garangolm-arms",
@@ -1080,7 +1080,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/garangolm-arms.webp"
   },
   {
     "id": "lunagaron-arms",
@@ -1097,7 +1097,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/lunagaron-arms.webp"
   },
   {
     "id": "espinas-arms",
@@ -1118,7 +1118,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/espinas-arms.webp"
   },
   {
     "id": "malzeno-arms",
@@ -1143,7 +1143,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/malzeno-arms.webp"
   },
   {
     "id": "quematrice-arms",
@@ -1164,7 +1164,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/quematrice-arms.webp"
   },
   {
     "id": "gossharag-arms",
@@ -1185,7 +1185,7 @@
       }
     ],
     "driftstoneSlots": 2,
-    "image": ""
+    "image": "/images/armor/gossharag-arms.webp"
   },
   {
     "id": "astalos-arms",
@@ -1210,7 +1210,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/astalos-arms.webp"
   },
   {
     "id": "almudron-arms",
@@ -1231,7 +1231,7 @@
       }
     ],
     "driftstoneSlots": 2,
-    "image": ""
+    "image": "/images/armor/almudron-arms.webp"
   },
   {
     "id": "seregios-arms",
@@ -1252,7 +1252,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/seregios-arms.webp"
   },
   {
     "id": "radobaan-arms",
@@ -1273,7 +1273,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/radobaan-arms.webp"
   },
   {
     "id": "banbaro-arms",
@@ -1294,7 +1294,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/banbaro-arms.webp"
   },
   {
     "id": "barioth-arms",
@@ -1311,6 +1311,6 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/barioth-arms.webp"
   }
 ]

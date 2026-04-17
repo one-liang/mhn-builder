@@ -18,7 +18,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/leather-chest.webp"
   },
   {
     "id": "alloy-chest",
@@ -35,7 +35,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/alloy-chest.webp"
   },
   {
     "id": "jagras-chest",
@@ -52,7 +52,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/jagras-chest.webp"
   },
   {
     "id": "kulu-chest",
@@ -69,7 +69,7 @@
       }
     ],
     "driftstoneSlots": 2,
-    "image": ""
+    "image": "/images/armor/kulu-chest.webp"
   },
   {
     "id": "pukei-chest",
@@ -90,7 +90,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/pukei-chest.webp"
   },
   {
     "id": "coral-pukei-chest",
@@ -111,7 +111,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/coral-pukei-chest.webp"
   },
   {
     "id": "barroth-chest",
@@ -128,7 +128,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/barroth-chest.webp"
   },
   {
     "id": "girros-chest",
@@ -149,7 +149,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/girros-chest.webp"
   },
   {
     "id": "kadachi-chest",
@@ -170,7 +170,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/kadachi-chest.webp"
   },
   {
     "id": "viper-kadachi-chest",
@@ -187,7 +187,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/viper-kadachi-chest.webp"
   },
   {
     "id": "paolumu-chest",
@@ -204,7 +204,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/paolumu-chest.webp"
   },
   {
     "id": "nightshade-paolumu-chest",
@@ -225,7 +225,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/nightshade-paolumu-chest.webp"
   },
   {
     "id": "jyuratodus-chest",
@@ -246,7 +246,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/jyuratodus-chest.webp"
   },
   {
     "id": "anjanath-chest",
@@ -263,7 +263,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/anjanath-chest.webp"
   },
   {
     "id": "fulgur-anjanath-chest",
@@ -284,7 +284,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/fulgur-anjanath-chest.webp"
   },
   {
     "id": "rathian-chest",
@@ -301,7 +301,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/rathian-chest.webp"
   },
   {
     "id": "pink-rathian-chest",
@@ -322,7 +322,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/pink-rathian-chest.webp"
   },
   {
     "id": "gold-rathian-chest",
@@ -339,7 +339,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/gold-rathian-chest.webp"
   },
   {
     "id": "legiana-chest",
@@ -360,7 +360,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/legiana-chest.webp"
   },
   {
     "id": "diablos-chest",
@@ -381,7 +381,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/diablos-chest.webp"
   },
   {
     "id": "black-diablos-chest",
@@ -402,7 +402,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/black-diablos-chest.webp"
   },
   {
     "id": "rathalos-chest",
@@ -419,7 +419,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/rathalos-chest.webp"
   },
   {
     "id": "azure-rathalos-chest",
@@ -440,7 +440,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/azure-rathalos-chest.webp"
   },
   {
     "id": "silver-rathalos-chest",
@@ -461,7 +461,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/silver-rathalos-chest.webp"
   },
   {
     "id": "zinogre-chest",
@@ -482,7 +482,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/zinogre-chest.webp"
   },
   {
     "id": "tzitzi-chest",
@@ -503,7 +503,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/tzitzi-chest.webp"
   },
   {
     "id": "odogaron-chest",
@@ -524,7 +524,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/odogaron-chest.webp"
   },
   {
     "id": "ebony-odogaron-chest",
@@ -545,7 +545,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/ebony-odogaron-chest.webp"
   },
   {
     "id": "vangis-chest",
@@ -562,7 +562,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/vangis-chest.webp"
   },
   {
     "id": "basarios-chest",
@@ -579,7 +579,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/basarios-chest.webp"
   },
   {
     "id": "khezu-chest",
@@ -596,7 +596,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/khezu-chest.webp"
   },
   {
     "id": "kushala-chest",
@@ -621,7 +621,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/kushala-chest.webp"
   },
   {
     "id": "mizutsune-chest",
@@ -638,7 +638,7 @@
       }
     ],
     "driftstoneSlots": 2,
-    "image": ""
+    "image": "/images/armor/mizutsune-chest.webp"
   },
   {
     "id": "kaiser-chest",
@@ -663,7 +663,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/kaiser-chest.webp"
   },
   {
     "id": "aknosom-chest",
@@ -684,7 +684,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/aknosom-chest.webp"
   },
   {
     "id": "sinister-chest",
@@ -705,7 +705,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/sinister-chest.webp"
   },
   {
     "id": "rajang-chest",
@@ -726,7 +726,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/rajang-chest.webp"
   },
   {
     "id": "nergigante-chest",
@@ -751,7 +751,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/nergigante-chest.webp"
   },
   {
     "id": "lagombi-chest",
@@ -768,7 +768,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/lagombi-chest.webp"
   },
   {
     "id": "volvidon-chest",
@@ -785,7 +785,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/volvidon-chest.webp"
   },
   {
     "id": "somnacanth-chest",
@@ -802,7 +802,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/somnacanth-chest.webp"
   },
   {
     "id": "tigrex-chest",
@@ -823,7 +823,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/tigrex-chest.webp"
   },
   {
     "id": "brute-tigrex-chest",
@@ -848,7 +848,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/brute-tigrex-chest.webp"
   },
   {
     "id": "kirin-chest",
@@ -873,7 +873,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/kirin-chest.webp"
   },
   {
     "id": "bazelgeuse-chest",
@@ -890,7 +890,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/bazelgeuse-chest.webp"
   },
   {
     "id": "chatacabra-chest",
@@ -911,7 +911,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/chatacabra-chest.webp"
   },
   {
     "id": "arzuros-chest",
@@ -928,7 +928,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/arzuros-chest.webp"
   },
   {
     "id": "glavenus-chest",
@@ -949,7 +949,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/glavenus-chest.webp"
   },
   {
     "id": "chameleos-chest",
@@ -970,7 +970,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/chameleos-chest.webp"
   },
   {
     "id": "wroggi-chest",
@@ -991,7 +991,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/wroggi-chest.webp"
   },
   {
     "id": "bishaten-chest",
@@ -1012,7 +1012,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/bishaten-chest.webp"
   },
   {
     "id": "beotodus-chest",
@@ -1033,7 +1033,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/beotodus-chest.webp"
   },
   {
     "id": "nargacuga-chest",
@@ -1054,7 +1054,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/nargacuga-chest.webp"
   },
   {
     "id": "namielle-chest",
@@ -1079,7 +1079,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/namielle-chest.webp"
   },
   {
     "id": "garangolm-chest",
@@ -1100,7 +1100,7 @@
       }
     ],
     "driftstoneSlots": 2,
-    "image": ""
+    "image": "/images/armor/garangolm-chest.webp"
   },
   {
     "id": "lunagaron-chest",
@@ -1117,7 +1117,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/lunagaron-chest.webp"
   },
   {
     "id": "espinas-chest",
@@ -1134,7 +1134,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/espinas-chest.webp"
   },
   {
     "id": "malzeno-chest",
@@ -1155,7 +1155,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/malzeno-chest.webp"
   },
   {
     "id": "quematrice-chest",
@@ -1176,7 +1176,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/quematrice-chest.webp"
   },
   {
     "id": "gossharag-chest",
@@ -1197,7 +1197,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/gossharag-chest.webp"
   },
   {
     "id": "astalos-chest",
@@ -1218,7 +1218,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/astalos-chest.webp"
   },
   {
     "id": "almudron-chest",
@@ -1239,7 +1239,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/almudron-chest.webp"
   },
   {
     "id": "seregios-chest",
@@ -1260,7 +1260,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/seregios-chest.webp"
   },
   {
     "id": "radobaan-chest",
@@ -1281,7 +1281,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/radobaan-chest.webp"
   },
   {
     "id": "banbaro-chest",
@@ -1302,7 +1302,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/banbaro-chest.webp"
   },
   {
     "id": "barioth-chest",
@@ -1323,6 +1323,6 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/barioth-chest.webp"
   }
 ]
