@@ -14,7 +14,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/ore_greatsword.webp"
   },
   {
     "id": "greatjagras_greatsword",
@@ -34,7 +34,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/greatjagras_greatsword.webp"
   },
   {
     "id": "pukeipukei_greatsword",
@@ -54,7 +54,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/pukeipukei_greatsword.webp"
   },
   {
     "id": "coral_pukeipukei_greatsword",
@@ -74,7 +74,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/coral_pukeipukei_greatsword.webp"
   },
   {
     "id": "barroth_greatsword",
@@ -91,7 +91,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/barroth_greatsword.webp"
   },
   {
     "id": "greatgirros_greatsword",
@@ -111,7 +111,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/greatgirros_greatsword.webp"
   },
   {
     "id": "tobikadachi_greatsword",
@@ -131,7 +131,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/tobikadachi_greatsword.webp"
   },
   {
     "id": "nightshade_paolumu_greatsword",
@@ -151,7 +151,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/nightshade_paolumu_greatsword.webp"
   },
   {
     "id": "jyuratodus_greatsword",
@@ -171,7 +171,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/jyuratodus_greatsword.webp"
   },
   {
     "id": "anjanath_greatsword",
@@ -191,7 +191,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/anjanath_greatsword.webp"
   },
   {
     "id": "fulgur_anjanath_greatsword",
@@ -211,7 +211,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/fulgur_anjanath_greatsword.webp"
   },
   {
     "id": "legiana_greatsword",
@@ -231,7 +231,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/legiana_greatsword.webp"
   },
   {
     "id": "diablos_greatsword",
@@ -248,7 +248,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/diablos_greatsword.webp"
   },
   {
     "id": "rathalos_greatsword",
@@ -268,7 +268,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/rathalos_greatsword.webp"
   },
   {
     "id": "azure_rathalos_greatsword",
@@ -288,7 +288,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/azure_rathalos_greatsword.webp"
   },
   {
     "id": "silver_rathalos_greatsword",
@@ -308,7 +308,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/silver_rathalos_greatsword.webp"
   },
   {
     "id": "radobaan_greatsword",
@@ -328,7 +328,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/radobaan_greatsword.webp"
   },
   {
     "id": "banbaro_greatsword",
@@ -345,7 +345,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/banbaro_greatsword.webp"
   },
   {
     "id": "barioth_greatsword",
@@ -365,7 +365,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/barioth_greatsword.webp"
   },
   {
     "id": "zinogre_greatsword",
@@ -385,7 +385,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/zinogre_greatsword.webp"
   },
   {
     "id": "deviljho_greatsword",
@@ -405,7 +405,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/deviljho_greatsword.webp"
   },
   {
     "id": "khezu_greatsword",
@@ -425,7 +425,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/khezu_greatsword.webp"
   },
   {
     "id": "kushaladaora_greatsword",
@@ -445,7 +445,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/kushaladaora_greatsword.webp"
   },
   {
     "id": "mizutsune_greatsword",
@@ -465,7 +465,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/mizutsune_greatsword.webp"
   },
   {
     "id": "teostra_greatsword",
@@ -485,7 +485,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/teostra_greatsword.webp"
   },
   {
     "id": "aknosom_greatsword",
@@ -505,7 +505,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/aknosom_greatsword.webp"
   },
   {
     "id": "magnamalo_greatsword",
@@ -525,7 +525,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/magnamalo_greatsword.webp"
   },
   {
     "id": "rajang_greatsword",
@@ -545,7 +545,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/rajang_greatsword.webp"
   },
   {
     "id": "nergigante_greatsword",
@@ -565,7 +565,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/nergigante_greatsword.webp"
   },
   {
     "id": "lagombi_greatsword",
@@ -585,7 +585,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/lagombi_greatsword.webp"
   },
   {
     "id": "somnacanth_greatsword",
@@ -605,7 +605,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/somnacanth_greatsword.webp"
   },
   {
     "id": "tigrex_greatsword",
@@ -622,7 +622,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/tigrex_greatsword.webp"
   },
   {
     "id": "brute_tigrex_greatsword",
@@ -639,7 +639,7 @@
         "level": 3
       }
     ],
-    "image": ""
+    "image": "/images/weapons/brute_tigrex_greatsword.webp"
   },
   {
     "id": "kirin_greatsword",
@@ -659,7 +659,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/kirin_greatsword.webp"
   },
   {
     "id": "glavenus_greatsword",
@@ -679,7 +679,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/glavenus_greatsword.webp"
   },
   {
     "id": "chameleos_greatsword",
@@ -699,7 +699,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/chameleos_greatsword.webp"
   },
   {
     "id": "beotodus_greatsword",
@@ -719,7 +719,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/beotodus_greatsword.webp"
   },
   {
     "id": "nargacuga_greatsword",
@@ -736,7 +736,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/nargacuga_greatsword.webp"
   },
   {
     "id": "garangolm_greatsword",
@@ -753,7 +753,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/garangolm_greatsword.webp"
   },
   {
     "id": "lunagaron_greatsword",
@@ -773,7 +773,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/lunagaron_greatsword.webp"
   },
   {
     "id": "espinas_greatsword",
@@ -793,7 +793,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/espinas_greatsword.webp"
   },
   {
     "id": "malzeno_greatsword",
@@ -813,7 +813,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/malzeno_greatsword.webp"
   },
   {
     "id": "quematrice_greatsword",
@@ -833,7 +833,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/quematrice_greatsword.webp"
   },
   {
     "id": "gossharag_greatsword",
@@ -853,7 +853,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/gossharag_greatsword.webp"
   },
   {
     "id": "astalos_greatsword",
@@ -873,7 +873,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/astalos_greatsword.webp"
   },
   {
     "id": "seregios_greatsword",
@@ -890,7 +890,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/seregios_greatsword.webp"
   },
   {
     "id": "bone_greatsword",
@@ -907,6 +907,6 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/bone_greatsword.webp"
   }
 ]

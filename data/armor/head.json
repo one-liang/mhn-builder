@@ -18,7 +18,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/leather-head.webp"
   },
   {
     "id": "alloy-head",
@@ -35,7 +35,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/alloy-head.webp"
   },
   {
     "id": "jagras-head",
@@ -52,7 +52,7 @@
       }
     ],
     "driftstoneSlots": 2,
-    "image": ""
+    "image": "/images/armor/jagras-head.webp"
   },
   {
     "id": "kulu-head",
@@ -73,7 +73,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/kulu-head.webp"
   },
   {
     "id": "pukei-head",
@@ -94,7 +94,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/pukei-head.webp"
   },
   {
     "id": "coral-pukei-head",
@@ -115,7 +115,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/coral-pukei-head.webp"
   },
   {
     "id": "barroth-head",
@@ -136,7 +136,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/barroth-head.webp"
   },
   {
     "id": "girros-head",
@@ -153,7 +153,7 @@
       }
     ],
     "driftstoneSlots": 2,
-    "image": ""
+    "image": "/images/armor/girros-head.webp"
   },
   {
     "id": "kadachi-head",
@@ -174,7 +174,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/kadachi-head.webp"
   },
   {
     "id": "viper-kadachi-head",
@@ -199,7 +199,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/viper-kadachi-head.webp"
   },
   {
     "id": "paolumu-head",
@@ -220,7 +220,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/paolumu-head.webp"
   },
   {
     "id": "nightshade-paolumu-head",
@@ -237,7 +237,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/nightshade-paolumu-head.webp"
   },
   {
     "id": "jyuratodus-head",
@@ -258,7 +258,7 @@
       }
     ],
     "driftstoneSlots": 2,
-    "image": ""
+    "image": "/images/armor/jyuratodus-head.webp"
   },
   {
     "id": "anjanath-head",
@@ -279,7 +279,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/anjanath-head.webp"
   },
   {
     "id": "fulgur-anjanath-head",
@@ -300,7 +300,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/fulgur-anjanath-head.webp"
   },
   {
     "id": "rathian-head",
@@ -321,7 +321,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/rathian-head.webp"
   },
   {
     "id": "pink-rathian-head",
@@ -342,7 +342,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/pink-rathian-head.webp"
   },
   {
     "id": "gold-rathian-head",
@@ -363,7 +363,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/gold-rathian-head.webp"
   },
   {
     "id": "legiana-head",
@@ -384,7 +384,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/legiana-head.webp"
   },
   {
     "id": "diablos-head",
@@ -401,7 +401,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/diablos-head.webp"
   },
   {
     "id": "black-diablos-head",
@@ -422,7 +422,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/black-diablos-head.webp"
   },
   {
     "id": "rathalos-head",
@@ -443,7 +443,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/rathalos-head.webp"
   },
   {
     "id": "azure-rathalos-head",
@@ -460,7 +460,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/azure-rathalos-head.webp"
   },
   {
     "id": "silver-rathalos-head",
@@ -477,7 +477,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/silver-rathalos-head.webp"
   },
   {
     "id": "zinogre-head",
@@ -498,7 +498,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/zinogre-head.webp"
   },
   {
     "id": "tzitzi-head",
@@ -519,7 +519,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/tzitzi-head.webp"
   },
   {
     "id": "odogaron-head",
@@ -536,7 +536,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/odogaron-head.webp"
   },
   {
     "id": "ebony-odogaron-head",
@@ -557,7 +557,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/ebony-odogaron-head.webp"
   },
   {
     "id": "vangis-head",
@@ -578,7 +578,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/vangis-head.webp"
   },
   {
     "id": "basarios-head",
@@ -595,7 +595,7 @@
       }
     ],
     "driftstoneSlots": 2,
-    "image": ""
+    "image": "/images/armor/basarios-head.webp"
   },
   {
     "id": "khezu-head",
@@ -616,7 +616,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/khezu-head.webp"
   },
   {
     "id": "kushala-head",
@@ -641,7 +641,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/kushala-head.webp"
   },
   {
     "id": "mizutsune-head",
@@ -658,7 +658,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/mizutsune-head.webp"
   },
   {
     "id": "kaiser-head",
@@ -683,7 +683,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/kaiser-head.webp"
   },
   {
     "id": "aknosom-head",
@@ -700,7 +700,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/aknosom-head.webp"
   },
   {
     "id": "sinister-head",
@@ -717,7 +717,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/sinister-head.webp"
   },
   {
     "id": "rajang-head",
@@ -734,7 +734,7 @@
       }
     ],
     "driftstoneSlots": 2,
-    "image": ""
+    "image": "/images/armor/rajang-head.webp"
   },
   {
     "id": "nergigante-head",
@@ -759,7 +759,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/nergigante-head.webp"
   },
   {
     "id": "lagombi-head",
@@ -780,7 +780,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/lagombi-head.webp"
   },
   {
     "id": "volvidon-head",
@@ -801,7 +801,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/volvidon-head.webp"
   },
   {
     "id": "somnacanth-head",
@@ -822,7 +822,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/somnacanth-head.webp"
   },
   {
     "id": "tigrex-head",
@@ -843,7 +843,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/tigrex-head.webp"
   },
   {
     "id": "brute-tigrex-head",
@@ -864,7 +864,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/brute-tigrex-head.webp"
   },
   {
     "id": "kirin-head",
@@ -889,7 +889,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/kirin-head.webp"
   },
   {
     "id": "bazelgeuse-head",
@@ -910,7 +910,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/bazelgeuse-head.webp"
   },
   {
     "id": "chatacabra-head",
@@ -931,7 +931,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/chatacabra-head.webp"
   },
   {
     "id": "arzuros-head",
@@ -952,7 +952,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/arzuros-head.webp"
   },
   {
     "id": "glavenus-head",
@@ -969,7 +969,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/glavenus-head.webp"
   },
   {
     "id": "chameleos-head",
@@ -994,7 +994,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/chameleos-head.webp"
   },
   {
     "id": "wroggi-head",
@@ -1011,7 +1011,7 @@
       }
     ],
     "driftstoneSlots": 2,
-    "image": ""
+    "image": "/images/armor/wroggi-head.webp"
   },
   {
     "id": "bishaten-head",
@@ -1028,7 +1028,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/bishaten-head.webp"
   },
   {
     "id": "beotodus-head",
@@ -1045,7 +1045,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/beotodus-head.webp"
   },
   {
     "id": "nargacuga-head",
@@ -1066,7 +1066,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/nargacuga-head.webp"
   },
   {
     "id": "namielle-head",
@@ -1091,7 +1091,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/namielle-head.webp"
   },
   {
     "id": "garangolm-head",
@@ -1108,7 +1108,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/garangolm-head.webp"
   },
   {
     "id": "lunagaron-head",
@@ -1129,7 +1129,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/lunagaron-head.webp"
   },
   {
     "id": "espinas-head",
@@ -1150,7 +1150,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/espinas-head.webp"
   },
   {
     "id": "malzeno-head",
@@ -1171,7 +1171,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/malzeno-head.webp"
   },
   {
     "id": "quematrice-head",
@@ -1192,7 +1192,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/quematrice-head.webp"
   },
   {
     "id": "gossharag-head",
@@ -1213,7 +1213,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/gossharag-head.webp"
   },
   {
     "id": "astalos-head",
@@ -1238,7 +1238,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/astalos-head.webp"
   },
   {
     "id": "almudron-head",
@@ -1263,7 +1263,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/almudron-head.webp"
   },
   {
     "id": "seregios-head",
@@ -1284,7 +1284,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/seregios-head.webp"
   },
   {
     "id": "radobaan-head",
@@ -1301,7 +1301,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/radobaan-head.webp"
   },
   {
     "id": "banbaro-head",
@@ -1322,7 +1322,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/banbaro-head.webp"
   },
   {
     "id": "barioth-head",
@@ -1343,6 +1343,6 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/barioth-head.webp"
   }
 ]

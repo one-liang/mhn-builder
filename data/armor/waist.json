@@ -18,7 +18,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/leather-waist.webp"
   },
   {
     "id": "alloy-waist",
@@ -35,7 +35,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/alloy-waist.webp"
   },
   {
     "id": "jagras-waist",
@@ -56,7 +56,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/jagras-waist.webp"
   },
   {
     "id": "kulu-waist",
@@ -77,7 +77,7 @@
       }
     ],
     "driftstoneSlots": 2,
-    "image": ""
+    "image": "/images/armor/kulu-waist.webp"
   },
   {
     "id": "pukei-waist",
@@ -94,7 +94,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/pukei-waist.webp"
   },
   {
     "id": "coral-pukei-waist",
@@ -115,7 +115,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/coral-pukei-waist.webp"
   },
   {
     "id": "barroth-waist",
@@ -136,7 +136,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/barroth-waist.webp"
   },
   {
     "id": "girros-waist",
@@ -157,7 +157,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/girros-waist.webp"
   },
   {
     "id": "kadachi-waist",
@@ -174,7 +174,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/kadachi-waist.webp"
   },
   {
     "id": "viper-kadachi-waist",
@@ -195,7 +195,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/viper-kadachi-waist.webp"
   },
   {
     "id": "paolumu-waist",
@@ -212,7 +212,7 @@
       }
     ],
     "driftstoneSlots": 2,
-    "image": ""
+    "image": "/images/armor/paolumu-waist.webp"
   },
   {
     "id": "nightshade-paolumu-waist",
@@ -233,7 +233,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/nightshade-paolumu-waist.webp"
   },
   {
     "id": "jyuratodus-waist",
@@ -250,7 +250,7 @@
       }
     ],
     "driftstoneSlots": 2,
-    "image": ""
+    "image": "/images/armor/jyuratodus-waist.webp"
   },
   {
     "id": "anjanath-waist",
@@ -271,7 +271,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/anjanath-waist.webp"
   },
   {
     "id": "fulgur-anjanath-waist",
@@ -292,7 +292,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/fulgur-anjanath-waist.webp"
   },
   {
     "id": "rathian-waist",
@@ -313,7 +313,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/rathian-waist.webp"
   },
   {
     "id": "pink-rathian-waist",
@@ -330,7 +330,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/pink-rathian-waist.webp"
   },
   {
     "id": "gold-rathian-waist",
@@ -351,7 +351,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/gold-rathian-waist.webp"
   },
   {
     "id": "legiana-waist",
@@ -372,7 +372,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/legiana-waist.webp"
   },
   {
     "id": "diablos-waist",
@@ -393,7 +393,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/diablos-waist.webp"
   },
   {
     "id": "black-diablos-waist",
@@ -414,7 +414,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/black-diablos-waist.webp"
   },
   {
     "id": "rathalos-waist",
@@ -435,7 +435,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/rathalos-waist.webp"
   },
   {
     "id": "azure-rathalos-waist",
@@ -456,7 +456,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/azure-rathalos-waist.webp"
   },
   {
     "id": "silver-rathalos-waist",
@@ -473,7 +473,7 @@
       }
     ],
     "driftstoneSlots": 2,
-    "image": ""
+    "image": "/images/armor/silver-rathalos-waist.webp"
   },
   {
     "id": "zinogre-waist",
@@ -494,7 +494,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/zinogre-waist.webp"
   },
   {
     "id": "tzitzi-waist",
@@ -515,7 +515,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/tzitzi-waist.webp"
   },
   {
     "id": "odogaron-waist",
@@ -536,7 +536,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/odogaron-waist.webp"
   },
   {
     "id": "ebony-odogaron-waist",
@@ -557,7 +557,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/ebony-odogaron-waist.webp"
   },
   {
     "id": "vangis-waist",
@@ -578,7 +578,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/vangis-waist.webp"
   },
   {
     "id": "basarios-waist",
@@ -595,7 +595,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/basarios-waist.webp"
   },
   {
     "id": "khezu-waist",
@@ -612,7 +612,7 @@
       }
     ],
     "driftstoneSlots": 2,
-    "image": ""
+    "image": "/images/armor/khezu-waist.webp"
   },
   {
     "id": "kushala-waist",
@@ -637,7 +637,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/kushala-waist.webp"
   },
   {
     "id": "mizutsune-waist",
@@ -654,7 +654,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/mizutsune-waist.webp"
   },
   {
     "id": "kaiser-waist",
@@ -679,7 +679,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/kaiser-waist.webp"
   },
   {
     "id": "aknosom-waist",
@@ -700,7 +700,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/aknosom-waist.webp"
   },
   {
     "id": "sinister-waist",
@@ -721,7 +721,7 @@
       }
     ],
     "driftstoneSlots": 2,
-    "image": ""
+    "image": "/images/armor/sinister-waist.webp"
   },
   {
     "id": "rajang-waist",
@@ -738,7 +738,7 @@
       }
     ],
     "driftstoneSlots": 0,
-    "image": ""
+    "image": "/images/armor/rajang-waist.webp"
   },
   {
     "id": "nergigante-waist",
@@ -763,7 +763,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/nergigante-waist.webp"
   },
   {
     "id": "lagombi-waist",
@@ -780,7 +780,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/lagombi-waist.webp"
   },
   {
     "id": "volvidon-waist",
@@ -801,7 +801,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/volvidon-waist.webp"
   },
   {
     "id": "somnacanth-waist",
@@ -822,7 +822,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/somnacanth-waist.webp"
   },
   {
     "id": "tigrex-waist",
@@ -839,7 +839,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/tigrex-waist.webp"
   },
   {
     "id": "brute-tigrex-waist",
@@ -860,7 +860,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/brute-tigrex-waist.webp"
   },
   {
     "id": "kirin-waist",
@@ -885,7 +885,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/kirin-waist.webp"
   },
   {
     "id": "bazelgeuse-waist",
@@ -902,7 +902,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/bazelgeuse-waist.webp"
   },
   {
     "id": "chatacabra-waist",
@@ -923,7 +923,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/chatacabra-waist.webp"
   },
   {
     "id": "arzuros-waist",
@@ -940,7 +940,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/arzuros-waist.webp"
   },
   {
     "id": "glavenus-waist",
@@ -961,7 +961,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/glavenus-waist.webp"
   },
   {
     "id": "chameleos-waist",
@@ -982,7 +982,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/chameleos-waist.webp"
   },
   {
     "id": "wroggi-waist",
@@ -999,7 +999,7 @@
       }
     ],
     "driftstoneSlots": 2,
-    "image": ""
+    "image": "/images/armor/wroggi-waist.webp"
   },
   {
     "id": "bishaten-waist",
@@ -1020,7 +1020,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/bishaten-waist.webp"
   },
   {
     "id": "beotodus-waist",
@@ -1041,7 +1041,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/beotodus-waist.webp"
   },
   {
     "id": "nargacuga-waist",
@@ -1062,7 +1062,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/nargacuga-waist.webp"
   },
   {
     "id": "namielle-waist",
@@ -1083,7 +1083,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/namielle-waist.webp"
   },
   {
     "id": "garangolm-waist",
@@ -1104,7 +1104,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/garangolm-waist.webp"
   },
   {
     "id": "lunagaron-waist",
@@ -1121,7 +1121,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/lunagaron-waist.webp"
   },
   {
     "id": "espinas-waist",
@@ -1142,7 +1142,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/espinas-waist.webp"
   },
   {
     "id": "malzeno-waist",
@@ -1163,7 +1163,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/malzeno-waist.webp"
   },
   {
     "id": "quematrice-waist",
@@ -1184,7 +1184,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/quematrice-waist.webp"
   },
   {
     "id": "gossharag-waist",
@@ -1205,7 +1205,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/gossharag-waist.webp"
   },
   {
     "id": "astalos-waist",
@@ -1230,7 +1230,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/astalos-waist.webp"
   },
   {
     "id": "almudron-waist",
@@ -1255,7 +1255,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/almudron-waist.webp"
   },
   {
     "id": "seregios-waist",
@@ -1280,7 +1280,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/seregios-waist.webp"
   },
   {
     "id": "radobaan-waist",
@@ -1297,7 +1297,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/radobaan-waist.webp"
   },
   {
     "id": "banbaro-waist",
@@ -1318,7 +1318,7 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/banbaro-waist.webp"
   },
   {
     "id": "barioth-waist",
@@ -1339,6 +1339,6 @@
       }
     ],
     "driftstoneSlots": 1,
-    "image": ""
+    "image": "/images/armor/barioth-waist.webp"
   }
 ]

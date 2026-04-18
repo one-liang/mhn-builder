@@ -14,7 +14,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/ore_chargeblade.webp",
     "phial": {
       "name": "榴彈瓶",
       "description": "於擊中位置引發帶有昏厥效果的爆炸"
@@ -38,7 +38,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/greatjagras_chargeblade.webp",
     "phial": {
       "name": "榴彈瓶",
       "description": "於擊中位置引發帶有昏厥效果的爆炸"
@@ -62,7 +62,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/greatgirros_chargeblade.webp",
     "phial": {
       "name": "榴彈瓶",
       "description": "於擊中位置引發帶有昏厥效果的爆炸"
@@ -86,7 +86,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/tobikadachi_chargeblade.webp",
     "phial": {
       "name": "強屬性瓶",
       "description": "於擊中位置引發與武器相同屬性的爆炸"
@@ -110,7 +110,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/viper_tobikadachi_chargeblade.webp",
     "phial": {
       "name": "榴彈瓶",
       "description": "於擊中位置引發帶有昏厥效果的爆炸"
@@ -134,7 +134,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/jyuratodus_chargeblade.webp",
     "phial": {
       "name": "強屬性瓶",
       "description": "於擊中位置引發與武器相同屬性的爆炸"
@@ -158,7 +158,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/rathian_chargeblade.webp",
     "phial": {
       "name": "榴彈瓶",
       "description": "於擊中位置引發帶有昏厥效果的爆炸"
@@ -182,7 +182,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/pink_rathian_chargeblade.webp",
     "phial": {
       "name": "榴彈瓶",
       "description": "於擊中位置引發帶有昏厥效果的爆炸"
@@ -206,7 +206,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/gold_rathian_chargeblade.webp",
     "phial": {
       "name": "榴彈瓶",
       "description": "於擊中位置引發帶有昏厥效果的爆炸"
@@ -230,7 +230,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/legiana_chargeblade.webp",
     "phial": {
       "name": "強屬性瓶",
       "description": "於擊中位置引發與武器相同屬性的爆炸"
@@ -251,7 +251,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/diablos_chargeblade.webp",
     "phial": {
       "name": "榴彈瓶",
       "description": "於擊中位置引發帶有昏厥效果的爆炸"
@@ -272,7 +272,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/black_diablos_chargeblade.webp",
     "phial": {
       "name": "榴彈瓶",
       "description": "於擊中位置引發帶有昏厥效果的爆炸"
@@ -296,7 +296,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/rathalos_chargeblade.webp",
     "phial": {
       "name": "強屬性瓶",
       "description": "於擊中位置引發與武器相同屬性的爆炸"
@@ -320,7 +320,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/azure_rathalos_chargeblade.webp",
     "phial": {
       "name": "強屬性瓶",
       "description": "於擊中位置引發與武器相同屬性的爆炸"
@@ -344,7 +344,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/silver_rathalos_chargeblade.webp",
     "phial": {
       "name": "強屬性瓶",
       "description": "於擊中位置引發與武器相同屬性的爆炸"
@@ -368,7 +368,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/barioth_chargeblade.webp",
     "phial": {
       "name": "強屬性瓶",
       "description": "於擊中位置引發與武器相同屬性的爆炸"
@@ -392,7 +392,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/zinogre_chargeblade.webp",
     "phial": {
       "name": "強屬性瓶",
       "description": "於擊中位置引發與武器相同屬性的爆炸"
@@ -413,7 +413,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/odogaron_chargeblade.webp",
     "phial": {
       "name": "榴彈瓶",
       "description": "於擊中位置引發帶有昏厥效果的爆炸"
@@ -437,7 +437,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/ebony_odogaron_chargeblade.webp",
     "phial": {
       "name": "強屬性瓶",
       "description": "於擊中位置引發與武器相同屬性的爆炸"
@@ -461,7 +461,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/deviljho_chargeblade.webp",
     "phial": {
       "name": "強屬性瓶",
       "description": "於擊中位置引發與武器相同屬性的爆炸"
@@ -485,7 +485,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/basarios_chargeblade.webp",
     "phial": {
       "name": "榴彈瓶",
       "description": "於擊中位置引發帶有昏厥效果的爆炸"
@@ -509,7 +509,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/kushaladaora_chargeblade.webp",
     "phial": {
       "name": "榴彈瓶",
       "description": "於擊中位置引發帶有昏厥效果的爆炸"
@@ -533,7 +533,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/mizutsune_chargeblade.webp",
     "phial": {
       "name": "榴彈瓶",
       "description": "於擊中位置引發帶有昏厥效果的爆炸"
@@ -557,7 +557,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/teostra_chargeblade.webp",
     "phial": {
       "name": "榴彈瓶",
       "description": "於擊中位置引發帶有昏厥效果的爆炸"
@@ -581,7 +581,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/magnamalo_chargeblade.webp",
     "phial": {
       "name": "榴彈瓶",
       "description": "於擊中位置引發帶有昏厥效果的爆炸"
@@ -605,7 +605,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/rajang_chargeblade.webp",
     "phial": {
       "name": "榴彈瓶",
       "description": "於擊中位置引發帶有昏厥效果的爆炸"
@@ -629,7 +629,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/nergigante_chargeblade.webp",
     "phial": {
       "name": "榴彈瓶",
       "description": "於擊中位置引發帶有昏厥效果的爆炸"
@@ -653,7 +653,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/volvidon_chargeblade.webp",
     "phial": {
       "name": "榴彈瓶",
       "description": "於擊中位置引發帶有昏厥效果的爆炸"
@@ -677,7 +677,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/somnacanth_chargeblade.webp",
     "phial": {
       "name": "榴彈瓶",
       "description": "於擊中位置引發帶有昏厥效果的爆炸"
@@ -698,7 +698,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/tigrex_chargeblade.webp",
     "phial": {
       "name": "榴彈瓶",
       "description": "於擊中位置引發帶有昏厥效果的爆炸"
@@ -719,7 +719,7 @@
         "level": 5
       }
     ],
-    "image": "",
+    "image": "/images/weapons/brute_tigrex_chargeblade.webp",
     "phial": {
       "name": "榴彈瓶",
       "description": "於擊中位置引發帶有昏厥效果的爆炸"
@@ -740,7 +740,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/chatacabra_chargeblade.webp",
     "phial": {
       "name": "榴彈瓶",
       "description": "於擊中位置引發帶有昏厥效果的爆炸"
@@ -764,7 +764,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/glavenus_chargeblade.webp",
     "phial": {
       "name": "強屬性瓶",
       "description": "於擊中位置引發與武器相同屬性的爆炸"
@@ -788,7 +788,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/chameleos_chargeblade.webp",
     "phial": {
       "name": "榴彈瓶",
       "description": "於擊中位置引發帶有昏厥效果的爆炸"
@@ -812,7 +812,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/beotodus_chargeblade.webp",
     "phial": {
       "name": "強屬性瓶",
       "description": "於擊中位置引發與武器相同屬性的爆炸"
@@ -833,7 +833,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/nargacuga_chargeblade.webp",
     "phial": {
       "name": "榴彈瓶",
       "description": "於擊中位置引發帶有昏厥效果的爆炸"
@@ -857,7 +857,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/namielle_chargeblade.webp",
     "phial": {
       "name": "榴彈瓶",
       "description": "於擊中位置引發帶有昏厥效果的爆炸"
@@ -878,7 +878,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/garangolm_chargeblade.webp",
     "phial": {
       "name": "榴彈瓶",
       "description": "於擊中位置引發帶有昏厥效果的爆炸"
@@ -902,7 +902,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/lunagaron_chargeblade.webp",
     "phial": {
       "name": "榴彈瓶",
       "description": "於擊中位置引發帶有昏厥效果的爆炸"
@@ -926,7 +926,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/espinas_chargeblade.webp",
     "phial": {
       "name": "榴彈瓶",
       "description": "於擊中位置引發帶有昏厥效果的爆炸"
@@ -950,7 +950,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/malzeno_chargeblade.webp",
     "phial": {
       "name": "榴彈瓶",
       "description": "於擊中位置引發帶有昏厥效果的爆炸"
@@ -974,7 +974,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/gossharag_chargeblade.webp",
     "phial": {
       "name": "榴彈瓶",
       "description": "於擊中位置引發帶有昏厥效果的爆炸"
@@ -998,7 +998,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/astalos_chargeblade.webp",
     "phial": {
       "name": "榴彈瓶",
       "description": "於擊中位置引發帶有昏厥效果的爆炸"
@@ -1019,7 +1019,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/seregios_chargeblade.webp",
     "phial": {
       "name": "榴彈瓶",
       "description": "於擊中位置引發帶有昏厥效果的爆炸"
@@ -1040,7 +1040,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/bone_chargeblade.webp",
     "phial": {
       "name": "榴彈瓶",
       "description": "於擊中位置引發帶有昏厥效果的爆炸"

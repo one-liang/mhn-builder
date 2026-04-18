@@ -14,7 +14,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/ore_swordshield.webp"
   },
   {
     "id": "greatjagras_swordshield",
@@ -34,7 +34,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/greatjagras_swordshield.webp"
   },
   {
     "id": "pukeipukei_swordshield",
@@ -54,7 +54,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/pukeipukei_swordshield.webp"
   },
   {
     "id": "coral_pukeipukei_swordshield",
@@ -74,7 +74,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/coral_pukeipukei_swordshield.webp"
   },
   {
     "id": "barroth_swordshield",
@@ -91,7 +91,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/barroth_swordshield.webp"
   },
   {
     "id": "greatgirros_swordshield",
@@ -111,7 +111,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/greatgirros_swordshield.webp"
   },
   {
     "id": "tobikadachi_swordshield",
@@ -131,7 +131,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/tobikadachi_swordshield.webp"
   },
   {
     "id": "paolumu_swordshield",
@@ -148,7 +148,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/paolumu_swordshield.webp"
   },
   {
     "id": "nightshade_paolumu_swordshield",
@@ -168,7 +168,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/nightshade_paolumu_swordshield.webp"
   },
   {
     "id": "jyuratodus_swordshield",
@@ -188,7 +188,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/jyuratodus_swordshield.webp"
   },
   {
     "id": "anjanath_swordshield",
@@ -208,7 +208,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/anjanath_swordshield.webp"
   },
   {
     "id": "fulgur_anjanath_swordshield",
@@ -228,7 +228,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/fulgur_anjanath_swordshield.webp"
   },
   {
     "id": "rathian_swordshield",
@@ -248,7 +248,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/rathian_swordshield.webp"
   },
   {
     "id": "pink_rathian_swordshield",
@@ -268,7 +268,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/pink_rathian_swordshield.webp"
   },
   {
     "id": "gold_rathian_swordshield",
@@ -288,7 +288,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/gold_rathian_swordshield.webp"
   },
   {
     "id": "legiana_swordshield",
@@ -308,7 +308,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/legiana_swordshield.webp"
   },
   {
     "id": "diablos_swordshield",
@@ -325,7 +325,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/diablos_swordshield.webp"
   },
   {
     "id": "rathalos_swordshield",
@@ -345,7 +345,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/rathalos_swordshield.webp"
   },
   {
     "id": "azure_rathalos_swordshield",
@@ -365,7 +365,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/azure_rathalos_swordshield.webp"
   },
   {
     "id": "silver_rathalos_swordshield",
@@ -385,7 +385,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/silver_rathalos_swordshield.webp"
   },
   {
     "id": "radobaan_swordshield",
@@ -405,7 +405,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/radobaan_swordshield.webp"
   },
   {
     "id": "barioth_swordshield",
@@ -425,7 +425,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/barioth_swordshield.webp"
   },
   {
     "id": "zinogre_swordshield",
@@ -445,7 +445,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/zinogre_swordshield.webp"
   },
   {
     "id": "deviljho_swordshield",
@@ -465,7 +465,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/deviljho_swordshield.webp"
   },
   {
     "id": "khezu_swordshield",
@@ -485,7 +485,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/khezu_swordshield.webp"
   },
   {
     "id": "kushaladaora_swordshield",
@@ -505,7 +505,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/kushaladaora_swordshield.webp"
   },
   {
     "id": "mizutsune_swordshield",
@@ -525,7 +525,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/mizutsune_swordshield.webp"
   },
   {
     "id": "teostra_swordshield",
@@ -545,7 +545,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/teostra_swordshield.webp"
   },
   {
     "id": "magnamalo_swordshield",
@@ -565,7 +565,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/magnamalo_swordshield.webp"
   },
   {
     "id": "rajang_swordshield",
@@ -585,7 +585,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/rajang_swordshield.webp"
   },
   {
     "id": "nergigante_swordshield",
@@ -605,7 +605,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/nergigante_swordshield.webp"
   },
   {
     "id": "tigrex_swordshield",
@@ -622,7 +622,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/tigrex_swordshield.webp"
   },
   {
     "id": "brute_tigrex_swordshield",
@@ -639,7 +639,7 @@
         "level": 5
       }
     ],
-    "image": ""
+    "image": "/images/weapons/brute_tigrex_swordshield.webp"
   },
   {
     "id": "kirin_swordshield",
@@ -659,7 +659,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/kirin_swordshield.webp"
   },
   {
     "id": "chatacabra_swordshield",
@@ -676,7 +676,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/chatacabra_swordshield.webp"
   },
   {
     "id": "glavenus_swordshield",
@@ -696,7 +696,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/glavenus_swordshield.webp"
   },
   {
     "id": "greatwroggi_swordshield",
@@ -716,7 +716,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/greatwroggi_swordshield.webp"
   },
   {
     "id": "bishaten_swordshield",
@@ -733,7 +733,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/bishaten_swordshield.webp"
   },
   {
     "id": "nargacuga_swordshield",
@@ -750,7 +750,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/nargacuga_swordshield.webp"
   },
   {
     "id": "namielle_swordshield",
@@ -770,7 +770,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/namielle_swordshield.webp"
   },
   {
     "id": "garangolm_swordshield",
@@ -787,7 +787,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/garangolm_swordshield.webp"
   },
   {
     "id": "lunagaron_swordshield",
@@ -807,7 +807,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/lunagaron_swordshield.webp"
   },
   {
     "id": "espinas_swordshield",
@@ -827,7 +827,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/espinas_swordshield.webp"
   },
   {
     "id": "malzeno_swordshield",
@@ -847,7 +847,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/malzeno_swordshield.webp"
   },
   {
     "id": "quematrice_swordshield",
@@ -867,7 +867,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/quematrice_swordshield.webp"
   },
   {
     "id": "gossharag_swordshield",
@@ -887,7 +887,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/gossharag_swordshield.webp"
   },
   {
     "id": "astalos_swordshield",
@@ -907,7 +907,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/astalos_swordshield.webp"
   },
   {
     "id": "seregios_swordshield",
@@ -924,7 +924,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/seregios_swordshield.webp"
   },
   {
     "id": "bone_swordshield",
@@ -941,6 +941,6 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/bone_swordshield.webp"
   }
 ]

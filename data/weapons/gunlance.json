@@ -14,7 +14,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/ore_gunlance.webp",
     "shellingType": {
       "name": "通常型",
       "description": "裝填數多，全彈發射的威力高"
@@ -38,7 +38,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/greatjagras_gunlance.webp",
     "shellingType": {
       "name": "通常型",
       "description": "裝填數多，全彈發射的威力高"
@@ -59,7 +59,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/barroth_gunlance.webp",
     "shellingType": {
       "name": "擴散型",
       "description": "砲擊和龍擊砲的威力高"
@@ -83,7 +83,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/greatgirros_gunlance.webp",
     "shellingType": {
       "name": "通常型",
       "description": "裝填數多，全彈發射的威力高"
@@ -107,7 +107,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/viper_tobikadachi_gunlance.webp",
     "shellingType": {
       "name": "放射型",
       "description": "前方攻擊範圍廣，蓄力的威力高"
@@ -131,7 +131,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/tobikadachi_gunlance.webp",
     "shellingType": {
       "name": "放射型",
       "description": "前方攻擊範圍廣，蓄力的威力高"
@@ -155,7 +155,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/anjanath_gunlance.webp",
     "shellingType": {
       "name": "通常型",
       "description": "裝填數多，全彈發射的威力高"
@@ -179,7 +179,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/jyuratodus_gunlance.webp",
     "shellingType": {
       "name": "擴散型",
       "description": "砲擊和龍擊砲的威力高"
@@ -203,7 +203,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/fulgur_anjanath_gunlance.webp",
     "shellingType": {
       "name": "擴散型",
       "description": "砲擊和龍擊砲的威力高"
@@ -227,7 +227,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/rathian_gunlance.webp",
     "shellingType": {
       "name": "通常型",
       "description": "裝填數多，全彈發射的威力高"
@@ -251,7 +251,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/pink_rathian_gunlance.webp",
     "shellingType": {
       "name": "通常型",
       "description": "裝填數多，全彈發射的威力高"
@@ -275,7 +275,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/gold_rathian_gunlance.webp",
     "shellingType": {
       "name": "通常型",
       "description": "裝填數多，全彈發射的威力高"
@@ -296,7 +296,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/diablos_gunlance.webp",
     "shellingType": {
       "name": "擴散型",
       "description": "砲擊和龍擊砲的威力高"
@@ -320,7 +320,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/legiana_gunlance.webp",
     "shellingType": {
       "name": "通常型",
       "description": "裝填數多，全彈發射的威力高"
@@ -344,7 +344,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/rathalos_gunlance.webp",
     "shellingType": {
       "name": "放射型",
       "description": "前方攻擊範圍廣，蓄力的威力高"
@@ -368,7 +368,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/azure_rathalos_gunlance.webp",
     "shellingType": {
       "name": "放射型",
       "description": "前方攻擊範圍廣，蓄力的威力高"
@@ -392,7 +392,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/silver_rathalos_gunlance.webp",
     "shellingType": {
       "name": "放射型",
       "description": "前方攻擊範圍廣，蓄力的威力高"
@@ -413,7 +413,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/banbaro_gunlance.webp",
     "shellingType": {
       "name": "通常型",
       "description": "裝填數多，全彈發射的威力高"
@@ -437,7 +437,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/barioth_gunlance.webp",
     "shellingType": {
       "name": "擴散型",
       "description": "砲擊和龍擊砲的威力高"
@@ -461,7 +461,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/zinogre_gunlance.webp",
     "shellingType": {
       "name": "通常型",
       "description": "裝填數多，全彈發射的威力高"
@@ -485,7 +485,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/deviljho_gunlance.webp",
     "shellingType": {
       "name": "放射型",
       "description": "前方攻擊範圍廣，蓄力的威力高"
@@ -509,7 +509,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/khezu_gunlance.webp",
     "shellingType": {
       "name": "擴散型",
       "description": "砲擊和龍擊砲的威力高"
@@ -533,7 +533,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/kushaladaora_gunlance.webp",
     "shellingType": {
       "name": "放射型",
       "description": "前方攻擊範圍廣，蓄力的威力高"
@@ -557,7 +557,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/mizutsune_gunlance.webp",
     "shellingType": {
       "name": "放射型",
       "description": "前方攻擊範圍廣，蓄力的威力高"
@@ -581,7 +581,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/aknosom_gunlance.webp",
     "shellingType": {
       "name": "通常型",
       "description": "裝填數多，全彈發射的威力高"
@@ -605,7 +605,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/magnamalo_gunlance.webp",
     "shellingType": {
       "name": "放射型",
       "description": "前方攻擊範圍廣，蓄力的威力高"
@@ -629,7 +629,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/rajang_gunlance.webp",
     "shellingType": {
       "name": "擴散型",
       "description": "砲擊和龍擊砲的威力高"
@@ -653,7 +653,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/nergigante_gunlance.webp",
     "shellingType": {
       "name": "擴散型",
       "description": "砲擊和龍擊砲的威力高"
@@ -677,7 +677,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/lagombi_gunlance.webp",
     "shellingType": {
       "name": "擴散型",
       "description": "砲擊和龍擊砲的威力高"
@@ -701,7 +701,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/volvidon_gunlance.webp",
     "shellingType": {
       "name": "放射型",
       "description": "前方攻擊範圍廣，蓄力的威力高"
@@ -722,7 +722,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/tigrex_gunlance.webp",
     "shellingType": {
       "name": "擴散型",
       "description": "砲擊和龍擊砲的威力高"
@@ -743,7 +743,7 @@
         "level": 5
       }
     ],
-    "image": "",
+    "image": "/images/weapons/brute_tigrex_gunlance.webp",
     "shellingType": {
       "name": "擴散型",
       "description": "砲擊和龍擊砲的威力高"
@@ -767,7 +767,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/bazelgeuse_gunlance.webp",
     "shellingType": {
       "name": "擴散型",
       "description": "砲擊和龍擊砲的威力高"
@@ -791,7 +791,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/glavenus_gunlance.webp",
     "shellingType": {
       "name": "擴散型",
       "description": "砲擊和龍擊砲的威力高"
@@ -815,7 +815,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/chameleos_gunlance.webp",
     "shellingType": {
       "name": "放射型",
       "description": "前方攻擊範圍廣，蓄力的威力高"
@@ -836,7 +836,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/nargacuga_gunlance.webp",
     "shellingType": {
       "name": "擴散型",
       "description": "砲擊和龍擊砲的威力高"
@@ -860,7 +860,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/namielle_gunlance.webp",
     "shellingType": {
       "name": "通常型",
       "description": "裝填數多，全彈發射的威力高"
@@ -881,7 +881,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/garangolm_gunlance.webp",
     "shellingType": {
       "name": "擴散型",
       "description": "砲擊和龍擊砲的威力高"
@@ -905,7 +905,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/lunagaron_gunlance.webp",
     "shellingType": {
       "name": "放射型",
       "description": "前方攻擊範圍廣，蓄力的威力高"
@@ -929,7 +929,7 @@
         "level": 2
       }
     ],
-    "image": "",
+    "image": "/images/weapons/espinas_gunlance.webp",
     "shellingType": {
       "name": "擴散型",
       "description": "砲擊和龍擊砲的威力高"
@@ -953,7 +953,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/malzeno_gunlance.webp",
     "shellingType": {
       "name": "放射型",
       "description": "前方攻擊範圍廣，蓄力的威力高"
@@ -977,7 +977,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/quematrice_gunlance.webp",
     "shellingType": {
       "name": "通常型",
       "description": "裝填數多，全彈發射的威力高"
@@ -1001,7 +1001,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/astalos_gunlance.webp",
     "shellingType": {
       "name": "擴散型",
       "description": "砲擊和龍擊砲的威力高"
@@ -1025,7 +1025,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/almudron_gunlance.webp",
     "shellingType": {
       "name": "擴散型",
       "description": "砲擊和龍擊砲的威力高"
@@ -1046,7 +1046,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/seregios_gunlance.webp",
     "shellingType": {
       "name": "通常型",
       "description": "裝填數多，全彈發射的威力高"
@@ -1067,7 +1067,7 @@
         "level": 1
       }
     ],
-    "image": "",
+    "image": "/images/weapons/bone_gunlance.webp",
     "shellingType": {
       "name": "放射型",
       "description": "前方攻擊範圍廣，蓄力的威力高"

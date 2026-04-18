@@ -14,7 +14,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/ore_dualblades.webp"
   },
   {
     "id": "kuluyaku_dualblades",
@@ -31,7 +31,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/kuluyaku_dualblades.webp"
   },
   {
     "id": "tobikadachi_dualblades",
@@ -51,7 +51,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/tobikadachi_dualblades.webp"
   },
   {
     "id": "viper_tobikadachi_dualblades",
@@ -71,7 +71,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/viper_tobikadachi_dualblades.webp"
   },
   {
     "id": "jyuratodus_dualblades",
@@ -91,7 +91,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/jyuratodus_dualblades.webp"
   },
   {
     "id": "anjanath_dualblades",
@@ -111,7 +111,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/anjanath_dualblades.webp"
   },
   {
     "id": "fulgur_anjanath_dualblades",
@@ -131,7 +131,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/fulgur_anjanath_dualblades.webp"
   },
   {
     "id": "legiana_dualblades",
@@ -151,7 +151,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/legiana_dualblades.webp"
   },
   {
     "id": "diablos_dualblades",
@@ -168,7 +168,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/diablos_dualblades.webp"
   },
   {
     "id": "black_diablos_dualblades",
@@ -185,7 +185,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/black_diablos_dualblades.webp"
   },
   {
     "id": "rathalos_dualblades",
@@ -205,7 +205,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/rathalos_dualblades.webp"
   },
   {
     "id": "silver_rathalos_dualblades",
@@ -225,7 +225,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/silver_rathalos_dualblades.webp"
   },
   {
     "id": "banbaro_dualblades",
@@ -242,7 +242,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/banbaro_dualblades.webp"
   },
   {
     "id": "barioth_dualblades",
@@ -262,7 +262,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/barioth_dualblades.webp"
   },
   {
     "id": "zinogre_dualblades",
@@ -282,7 +282,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/zinogre_dualblades.webp"
   },
   {
     "id": "tzitziyaku_dualblades",
@@ -302,7 +302,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/tzitziyaku_dualblades.webp"
   },
   {
     "id": "odogaron_dualblades",
@@ -319,7 +319,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/odogaron_dualblades.webp"
   },
   {
     "id": "ebony_odogaron_dualblades",
@@ -339,7 +339,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/ebony_odogaron_dualblades.webp"
   },
   {
     "id": "deviljho_dualblades",
@@ -359,7 +359,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/deviljho_dualblades.webp"
   },
   {
     "id": "khezu_dualblades",
@@ -379,7 +379,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/khezu_dualblades.webp"
   },
   {
     "id": "kushaladaora_dualblades",
@@ -399,7 +399,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/kushaladaora_dualblades.webp"
   },
   {
     "id": "mizutsune_dualblades",
@@ -419,7 +419,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/mizutsune_dualblades.webp"
   },
   {
     "id": "aknosom_dualblades",
@@ -439,7 +439,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/aknosom_dualblades.webp"
   },
   {
     "id": "magnamalo_dualblades",
@@ -459,7 +459,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/magnamalo_dualblades.webp"
   },
   {
     "id": "rajang_dualblades",
@@ -479,7 +479,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/rajang_dualblades.webp"
   },
   {
     "id": "nergigante_dualblades",
@@ -499,7 +499,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/nergigante_dualblades.webp"
   },
   {
     "id": "lagombi_dualblades",
@@ -519,7 +519,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/lagombi_dualblades.webp"
   },
   {
     "id": "somnacanth_dualblades",
@@ -539,7 +539,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/somnacanth_dualblades.webp"
   },
   {
     "id": "tigrex_dualblades",
@@ -556,7 +556,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/tigrex_dualblades.webp"
   },
   {
     "id": "brute_tigrex_dualblades",
@@ -573,7 +573,7 @@
         "level": 3
       }
     ],
-    "image": ""
+    "image": "/images/weapons/brute_tigrex_dualblades.webp"
   },
   {
     "id": "kirin_dualblades",
@@ -593,7 +593,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/kirin_dualblades.webp"
   },
   {
     "id": "bazelgeuse_dualblades",
@@ -613,7 +613,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/bazelgeuse_dualblades.webp"
   },
   {
     "id": "arzuros_dualblades",
@@ -630,7 +630,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/arzuros_dualblades.webp"
   },
   {
     "id": "glavenus_dualblades",
@@ -650,7 +650,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/glavenus_dualblades.webp"
   },
   {
     "id": "chameleos_dualblades",
@@ -670,7 +670,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/chameleos_dualblades.webp"
   },
   {
     "id": "greatwroggi_dualblades",
@@ -690,7 +690,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/greatwroggi_dualblades.webp"
   },
   {
     "id": "beotodus_dualblades",
@@ -710,7 +710,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/beotodus_dualblades.webp"
   },
   {
     "id": "nargacuga_dualblades",
@@ -727,7 +727,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/nargacuga_dualblades.webp"
   },
   {
     "id": "garangolm_dualblades",
@@ -744,7 +744,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/garangolm_dualblades.webp"
   },
   {
     "id": "lunagaron_dualblades",
@@ -764,7 +764,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/lunagaron_dualblades.webp"
   },
   {
     "id": "espinas_dualblades",
@@ -784,7 +784,7 @@
         "level": 2
       }
     ],
-    "image": ""
+    "image": "/images/weapons/espinas_dualblades.webp"
   },
   {
     "id": "malzeno_dualblades",
@@ -804,7 +804,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/malzeno_dualblades.webp"
   },
   {
     "id": "quematrice_dualblades",
@@ -824,7 +824,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/quematrice_dualblades.webp"
   },
   {
     "id": "astalos_dualblades",
@@ -844,7 +844,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/astalos_dualblades.webp"
   },
   {
     "id": "almudron_dualblades",
@@ -864,7 +864,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/almudron_dualblades.webp"
   },
   {
     "id": "seregios_dualblades",
@@ -881,7 +881,7 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/seregios_dualblades.webp"
   },
   {
     "id": "bone_dualblades",
@@ -898,6 +898,6 @@
         "level": 1
       }
     ],
-    "image": ""
+    "image": "/images/weapons/bone_dualblades.webp"
   }
 ]
