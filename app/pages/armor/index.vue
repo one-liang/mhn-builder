@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useEquipmentStore, getPartName } from '~/stores/equipment'
+import { useEquipmentStore, getPartName, getMonsterIconKey } from '~/stores/equipment'
 import { useSkillStore } from '~/stores/skill'
 
 useSeoMeta({
@@ -66,6 +66,7 @@ function resolveSkillName(skillId: string) {
         :armor-part="item.part"
         :to="`/armor/${item.id}`"
         :subtitle="`${item.setName} | ${getPartName(item.part)} | 防禦 ${item.defense}`"
+        :monster-icon-key="getMonsterIconKey(item.id)"
       />
     </div>
 
