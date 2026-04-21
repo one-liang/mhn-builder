@@ -2,8 +2,10 @@ import { defineStore } from 'pinia'
 import { useEquipmentStore } from './equipment'
 import { useSkillStore } from './skill'
 import { useBuildStore } from './build'
+import type { BuildSlot } from './build'
 import { runAutoBuild } from '~/lib/autoBuildAlgorithm'
 import type { TargetSkill, BuildResult } from '~/lib/autoBuildAlgorithm'
+import type { Armor } from './equipment'
 import driftstoneData from '../../data/driftstone-skills.json'
 
 const DRIFTSTONE_SKILL_IDS = new Set(driftstoneData.achievableSkillIds)
@@ -17,7 +19,6 @@ export const useAutoBuildStore = defineStore('autoBuild', () => {
 
   // ── Input state ──────────────────────────────────────────────────────────
   const targetSkills = ref<TargetSkill[]>([])
-  const weaponType = ref<string>('')   // '' = any type
   const includeDriftstones = ref(false)
 
   // ── Output state ─────────────────────────────────────────────────────────
@@ -27,6 +28,21 @@ export const useAutoBuildStore = defineStore('autoBuild', () => {
   const searchedCombos = ref(0)
   const elapsedMs = ref(0)
   const error = ref<string | null>(null)
+  const appliedRank = ref<number | null>(null)
+
+  // ── Lock state ───────────────────────────────────────────────────────────
+  const lockedSlots = ref<Set<BuildSlot>>(new Set())
+
+  function toggleLock(slot: BuildSlot) {
+    const next = new Set(lockedSlots.value)
+    if (next.has(slot)) next.delete(slot)
+    else next.add(slot)
+    lockedSlots.value = next
+  }
+
+  function isLocked(slot: BuildSlot): boolean {
+    return lockedSlots.value.has(slot)
+  }
 
   // ── Target skill management ──────────────────────────────────────────────
   function addTargetSkill(skillId: string, desiredLevel: number) {
@@ -50,6 +66,14 @@ export const useAutoBuildStore = defineStore('autoBuild', () => {
     results.value = []
     hasRun.value = false
     error.value = null
+    appliedRank.value = null
+  }
+
+  function resetSearch() {
+    results.value = []
+    hasRun.value = false
+    error.value = null
+    appliedRank.value = null
   }
 
   // ── Run algorithm ────────────────────────────────────────────────────────
@@ -69,23 +93,34 @@ export const useAutoBuildStore = defineStore('autoBuild', () => {
       skillStore.skills.map(s => [s.id, { id: s.id, maxLevel: s.maxLevel, name: s.name }])
     )
 
+    // Build locked armor references
+    const lockedArmor: Partial<Record<'head' | 'chest' | 'arms' | 'waist' | 'legs', Armor>> = {}
+    for (const p of ['head', 'chest', 'arms', 'waist', 'legs'] as const) {
+      if (lockedSlots.value.has(p) && buildStore[p]) lockedArmor[p] = buildStore[p]!
+    }
+
     try {
       const result = runAutoBuild(
         {
           targetSkills: targetSkills.value,
-          weaponType: weaponType.value || undefined,
           topK: 3,
           includeDriftstones: includeDriftstones.value,
           driftstoneSkillIds: DRIFTSTONE_SKILL_IDS,
+          lockedArmor,
         },
         equipmentStore.armor,
-        equipmentStore.weapons,
         skillMap,
       )
       results.value = result.builds
       searchedCombos.value = result.searchedCombos
       elapsedMs.value = result.elapsedMs
       hasRun.value = true
+
+      // Auto-apply the best result
+      const best = result.builds[0]
+      if (best) {
+        applyResult(best)
+      }
     } catch (e) {
       error.value = e instanceof Error ? e.message : '搜尋時發生錯誤'
     } finally {
@@ -95,17 +130,18 @@ export const useAutoBuildStore = defineStore('autoBuild', () => {
 
   // ── Apply result to build store ──────────────────────────────────────────
   function applyResult(result: BuildResult) {
-    buildStore.setSlot('weapon', result.weapon)
-    buildStore.setSlot('head', result.armor.head)
-    buildStore.setSlot('chest', result.armor.chest)
-    buildStore.setSlot('arms', result.armor.arms)
-    buildStore.setSlot('waist', result.armor.waist)
-    buildStore.setSlot('legs', result.armor.legs)
+    // Only update unlocked armor slots (weapon is not managed by auto-build)
+    if (!lockedSlots.value.has('head'))   buildStore.setSlot('head',   result.armor.head)
+    if (!lockedSlots.value.has('chest'))  buildStore.setSlot('chest',  result.armor.chest)
+    if (!lockedSlots.value.has('arms'))   buildStore.setSlot('arms',   result.armor.arms)
+    if (!lockedSlots.value.has('waist'))  buildStore.setSlot('waist',  result.armor.waist)
+    if (!lockedSlots.value.has('legs'))   buildStore.setSlot('legs',   result.armor.legs)
 
-    // Apply driftstone assignments if present
+    // Apply driftstone assignments for unlocked armor slots
     if (result.driftstoneAssignments) {
       const SLOTS = ['head', 'chest', 'arms', 'waist', 'legs'] as const
       for (const slot of SLOTS) {
+        if (lockedSlots.value.has(slot)) continue
         const assignments = result.driftstoneAssignments[slot]
         if (!assignments) continue
         for (let i = 0; i < assignments.length; i++) {
@@ -113,12 +149,13 @@ export const useAutoBuildStore = defineStore('autoBuild', () => {
         }
       }
     }
+
+    appliedRank.value = result.rank
   }
 
   return {
     // Input state
     targetSkills,
-    weaponType,
     includeDriftstones,
     // Output state
     results,
@@ -127,11 +164,17 @@ export const useAutoBuildStore = defineStore('autoBuild', () => {
     searchedCombos,
     elapsedMs,
     error,
+    appliedRank,
+    // Lock state
+    lockedSlots,
+    toggleLock,
+    isLocked,
     // Actions
     addTargetSkill,
     removeTargetSkill,
     updateTargetSkillLevel,
     clearTargets,
+    resetSearch,
     run,
     applyResult,
   }

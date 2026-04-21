@@ -9,7 +9,7 @@
  * 4. Return top-N builds.
  */
 
-import type { Armor, Weapon } from '~/stores/equipment'
+import type { Armor } from '~/stores/equipment'
 import type { SkillSummaryEntry } from '~/stores/build'
 
 // ── Types ───────────────────────────────────────────────────────────────────
@@ -21,18 +21,16 @@ export interface TargetSkill {
 
 export interface AutoBuildRequest {
   targetSkills: TargetSkill[]
-  weaponType?: string          // '' or undefined = any type
-  weaponId?: string           // if set, pin this specific weapon
   topK?: number               // number of results to return (default 3)
   includeDriftstones?: boolean // if true, optimally assign driftstone slots
   driftstoneSkillIds?: Set<string> // skill IDs achievable via driftstone; non-members get boosted scoring weight
+  lockedArmor?: Partial<Record<ArmorPart, Armor>> // locked armor pieces to use as-is
 }
 
 export interface BuildResult {
   rank: number
   score: number
   coveragePercent: number  // 0-100, % of desired skill levels met (capped)
-  weapon: Weapon | null
   armor: {
     head: Armor | null
     chest: Armor | null
@@ -61,7 +59,6 @@ interface SkillRecord {
 // ── Constants ───────────────────────────────────────────────────────────────
 
 const CANDIDATE_K = 8          // max armor candidates per slot
-const WEAPON_K = 5             // max weapon candidates
 const WEIGHT_MET = 100         // score per met desired level (driftstone-achievable skills)
 const WEIGHT_MET_RARE = 300    // score per met desired level (non-driftstone skills — force armor coverage)
 const WEIGHT_MISS = 60         // penalty per missing desired level
@@ -78,13 +75,28 @@ function normalizeId(id: string): string {
 
 // ── Candidate selection ──────────────────────────────────────────────────────
 
-function armorContributionScore(piece: Armor, targetSkills: TargetSkill[], remaining: Map<string, number>): number {
+/**
+ * Score an armor piece by how much it contributes toward target skills.
+ * When driftstoneSkillIds is provided (i.e. driftstones are enabled), skills
+ * that CANNOT be achieved via driftstone get 3× weight so the candidate
+ * selector strongly prefers pieces that cover those rare skills.
+ */
+function armorContributionScore(
+  piece: Armor,
+  targetSkills: TargetSkill[],
+  remaining: Map<string, number>,
+  driftstoneSkillIds?: Set<string>,
+): number {
   let score = 0
   for (const s of piece.skills) {
     const nid = normalizeId(s.skillId)
     const needed = remaining.get(nid)
     if (needed !== undefined && needed > 0) {
-      score += Math.min(s.level, needed)
+      const contribution = Math.min(s.level, needed)
+      // Non-driftstone skills MUST come from armor — weight them 3× so they
+      // aren't crowded out by common driftstone-achievable skills in the top-K.
+      const weight = (driftstoneSkillIds && !driftstoneSkillIds.has(nid)) ? 3 : 1
+      score += contribution * weight
     }
   }
   return score
@@ -94,6 +106,7 @@ export function selectArmorCandidates(
   part: ArmorPart,
   pieces: Armor[],
   targetSkills: TargetSkill[],
+  driftstoneSkillIds?: Set<string>,
 ): Armor[] {
   const remaining = new Map<string, number>()
   for (const t of targetSkills) {
@@ -105,7 +118,7 @@ export function selectArmorCandidates(
   const withoutSkill: Armor[] = []
 
   for (const piece of pieces) {
-    const score = armorContributionScore(piece, targetSkills, remaining)
+    const score = armorContributionScore(piece, targetSkills, remaining, driftstoneSkillIds)
     if (score > 0) {
       withSkill.push({ piece, score })
     } else {
@@ -128,6 +141,10 @@ export function selectArmorCandidates(
   // Guarantee representation: for each target skill, ensure at least one candidate
   // has that skill. Without this, a rare skill (e.g. only on 1 armor piece) can be
   // crowded out when K slots are filled by higher-scoring pieces for other skills.
+  //
+  // IMPORTANT: always push a new slot — never replace a previous guarantee.
+  // If we replaced candidates[last] each time, only the final skill's piece would
+  // survive, leaving earlier rare skills completely unrepresented.
   for (const t of targetSkills) {
     const nid = normalizeId(t.skillId)
     const represented = candidates.some(p =>
@@ -141,12 +158,8 @@ export function selectArmorCandidates(
           const lb = b.skills.find(s => normalizeId(s.skillId) === nid)?.level ?? 0
           return lb - la || b.defense - a.defense
         })[0]
-      if (best) {
-        if (candidates.length >= CANDIDATE_K) {
-          candidates[candidates.length - 1] = best  // Replace lowest-priority
-        } else {
-          candidates.push(best)
-        }
+      if (best && !candidates.some(c => c.id === best.id)) {
+        candidates.push(best)  // Always add a new slot — never overwrite
       }
     }
   }
@@ -154,53 +167,6 @@ export function selectArmorCandidates(
   return candidates
 }
 
-function weaponContributionScore(weapon: Weapon, targetSkills: TargetSkill[]): number {
-  let score = 0
-  for (const s of weapon.skills) {
-    const nid = normalizeId(s.skillId)
-    const target = targetSkills.find(t => normalizeId(t.skillId) === nid)
-    if (target) score += Math.min(s.level, target.desiredLevel)
-  }
-  return score
-}
-
-export function selectWeaponCandidates(
-  allWeapons: Record<string, Weapon[]>,
-  request: AutoBuildRequest,
-): Weapon[] {
-  // Pin a specific weapon
-  if (request.weaponId) {
-    for (const list of Object.values(allWeapons)) {
-      const found = list.find(w => w.id === request.weaponId)
-      if (found) return [found]
-    }
-  }
-
-  // Build candidate pool from requested type(s)
-  const pool: Weapon[] = []
-  if (request.weaponType) {
-    pool.push(...(allWeapons[request.weaponType] ?? []))
-  } else {
-    for (const list of Object.values(allWeapons)) {
-      pool.push(...list)
-    }
-  }
-
-  // Sort: skill contribution desc, then attack desc
-  const scored = pool.map(w => ({
-    weapon: w,
-    score: weaponContributionScore(w, request.targetSkills),
-  }))
-  scored.sort((a, b) => b.score - a.score || b.weapon.attack - a.weapon.attack)
-
-  // Take top-K, but include at least one weapon even if no skill contribution
-  const topK = scored.slice(0, WEAPON_K).map(x => x.weapon)
-  if (topK.length === 0 && pool.length > 0) {
-    const best = pool.sort((a, b) => b.attack - a.attack)[0]
-    if (best) topK.push(best)
-  }
-  return topK
-}
 
 // ── Driftstone greedy assignment ─────────────────────────────────────────────
 
@@ -253,7 +219,6 @@ function assignDriftstones(
 // ── Combo evaluation ──────────────────────────────────────────────────────────
 
 function aggregateSkills(
-  weapon: Weapon | null,
   armor: Record<ArmorPart, Armor | null>,
 ): Map<string, number> {
   const totals = new Map<string, number>()
@@ -262,9 +227,6 @@ function aggregateSkills(
     totals.set(nid, (totals.get(nid) ?? 0) + level)
   }
 
-  if (weapon) {
-    for (const s of weapon.skills) add(s.skillId, s.level)
-  }
   for (const part of ARMOR_PARTS) {
     const piece = armor[part]
     if (piece) {
@@ -281,14 +243,13 @@ interface EvalResult {
 }
 
 function evaluateCombo(
-  weapon: Weapon | null,
   armor: Record<ArmorPart, Armor | null>,
   targetSkills: TargetSkill[],
   skillMap: Map<string, SkillRecord>,
   includeDriftstones: boolean,
   driftstoneSkillIds: Set<string>,
 ): EvalResult {
-  const baseTotals = aggregateSkills(weapon, armor)
+  const baseTotals = aggregateSkills(armor)
 
   let totals: Map<string, number>
   let driftstoneAssignments: Record<ArmorPart, (string | null)[]> | undefined
@@ -308,9 +269,10 @@ function evaluateCombo(
     const raw = totals.get(nid) ?? 0
     const capped = Math.min(raw, maxLv)
 
-    // Non-driftstone skills get a higher met-weight to force armor coverage when driftstones disabled.
-    // When driftstones are enabled, they can cover any skill, so standard weight applies.
-    const metWeight = (!includeDriftstones && !driftstoneSkillIds.has(nid)) ? WEIGHT_MET_RARE : WEIGHT_MET
+    // Non-driftstone skills MUST come from armor regardless of whether driftstones
+    // are enabled — driftstones cannot cover them, so always use the higher weight
+    // to force the algorithm to seek armor pieces that provide those skills.
+    const metWeight = !driftstoneSkillIds.has(nid) ? WEIGHT_MET_RARE : WEIGHT_MET
 
     score += Math.min(capped, desiredLevel) * metWeight
     score -= Math.max(0, desiredLevel - capped) * WEIGHT_MISS
@@ -354,7 +316,6 @@ function buildSkillSummaryFromTotals(
 export function runAutoBuild(
   request: AutoBuildRequest,
   allArmor: Record<ArmorPart, Armor[]>,
-  allWeapons: Record<string, Weapon[]>,
   skillMap: Map<string, SkillRecord>,
 ): AutoBuildResult {
   const t0 = performance.now()
@@ -362,94 +323,94 @@ export function runAutoBuild(
   const includeDriftstones = request.includeDriftstones ?? false
   const driftstoneSkillIds = request.driftstoneSkillIds ?? new Set<string>()
 
-  // Pre-select candidates
-  const weaponCandidates = selectWeaponCandidates(allWeapons, request)
+  // Pass driftstoneSkillIds to candidate selection only when driftstones are enabled.
+  // This lets selectArmorCandidates boost the score of non-driftstone skills
+  // so they aren't crowded out by common driftstone-achievable skills.
+  const candidateDriftstoneIds = includeDriftstones ? driftstoneSkillIds : undefined
+
   const armorCandidates: Record<ArmorPart, Armor[]> = {
-    head: selectArmorCandidates('head', allArmor.head, request.targetSkills),
-    chest: selectArmorCandidates('chest', allArmor.chest, request.targetSkills),
-    arms: selectArmorCandidates('arms', allArmor.arms, request.targetSkills),
-    waist: selectArmorCandidates('waist', allArmor.waist, request.targetSkills),
-    legs: selectArmorCandidates('legs', allArmor.legs, request.targetSkills),
+    head:  request.lockedArmor?.head  ? [request.lockedArmor.head]  : selectArmorCandidates('head',  allArmor.head,  request.targetSkills, candidateDriftstoneIds),
+    chest: request.lockedArmor?.chest ? [request.lockedArmor.chest] : selectArmorCandidates('chest', allArmor.chest, request.targetSkills, candidateDriftstoneIds),
+    arms:  request.lockedArmor?.arms  ? [request.lockedArmor.arms]  : selectArmorCandidates('arms',  allArmor.arms,  request.targetSkills, candidateDriftstoneIds),
+    waist: request.lockedArmor?.waist ? [request.lockedArmor.waist] : selectArmorCandidates('waist', allArmor.waist, request.targetSkills, candidateDriftstoneIds),
+    legs:  request.lockedArmor?.legs  ? [request.lockedArmor.legs]  : selectArmorCandidates('legs',  allArmor.legs,  request.targetSkills, candidateDriftstoneIds),
   }
 
-  // Enumerate all combinations
+  // Enumerate all armor combinations
   let searchedCombos = 0
   const topBuilds: { score: number; result: Omit<BuildResult, 'rank'> }[] = []
   let minTopScore = -Infinity
 
-  for (const weapon of weaponCandidates) {
-    for (const head of armorCandidates.head) {
-      for (const chest of armorCandidates.chest) {
-        for (const arms of armorCandidates.arms) {
-          for (const waist of armorCandidates.waist) {
-            for (const legs of armorCandidates.legs) {
-              searchedCombos++
-              const armorMap = { head, chest, arms, waist, legs }
-              const { score, totals, driftstoneAssignments } = evaluateCombo(
-                weapon, armorMap, request.targetSkills, skillMap, includeDriftstones, driftstoneSkillIds,
-              )
+  for (const head of armorCandidates.head) {
+    for (const chest of armorCandidates.chest) {
+      for (const arms of armorCandidates.arms) {
+        for (const waist of armorCandidates.waist) {
+          for (const legs of armorCandidates.legs) {
+            searchedCombos++
+            const armorMap = { head, chest, arms, waist, legs }
+            const { score, totals, driftstoneAssignments } = evaluateCombo(
+              armorMap, request.targetSkills, skillMap, includeDriftstones, driftstoneSkillIds,
+            )
 
-              if (topBuilds.length < topN || score > minTopScore) {
-                const unmetSkills = request.targetSkills
-                  .filter(t => {
-                    const nid = normalizeId(t.skillId)
-                    const skillDef = skillMap.get(nid)
-                    const maxLv = skillDef?.maxLevel ?? t.desiredLevel
-                    const raw = totals.get(nid) ?? 0
-                    const capped = Math.min(raw, maxLv)
-                    return capped < t.desiredLevel
-                  })
-                  .map(t => {
-                    const nid = normalizeId(t.skillId)
-                    const skillDef = skillMap.get(nid)
-                    const maxLv = skillDef?.maxLevel ?? t.desiredLevel
-                    const raw = totals.get(nid) ?? 0
-                    const capped = Math.min(raw, maxLv)
-                    return {
-                      skillId: nid,
-                      name: skillDef?.name ?? nid,
-                      missing: t.desiredLevel - capped,
-                    }
-                  })
-
-                const totalDefense = ARMOR_PARTS.reduce((sum, p) => sum + (armorMap[p]?.defense ?? 0), 0)
-
-                // Compute coverage %
-                const totalDesired = request.targetSkills.reduce((sum, t) => sum + t.desiredLevel, 0)
-                const totalMet = request.targetSkills.reduce((sum, t) => {
+            if (topBuilds.length < topN || score > minTopScore) {
+              const unmetSkills = request.targetSkills
+                .filter(t => {
                   const nid = normalizeId(t.skillId)
                   const skillDef = skillMap.get(nid)
                   const maxLv = skillDef?.maxLevel ?? t.desiredLevel
                   const raw = totals.get(nid) ?? 0
                   const capped = Math.min(raw, maxLv)
-                  return sum + Math.min(capped, t.desiredLevel)
-                }, 0)
-                const coveragePercent = totalDesired > 0 ? Math.round((totalMet / totalDesired) * 100) : 100
+                  return capped < t.desiredLevel
+                })
+                .map(t => {
+                  const nid = normalizeId(t.skillId)
+                  const skillDef = skillMap.get(nid)
+                  const maxLv = skillDef?.maxLevel ?? t.desiredLevel
+                  const raw = totals.get(nid) ?? 0
+                  const capped = Math.min(raw, maxLv)
+                  return {
+                    skillId: nid,
+                    name: skillDef?.name ?? nid,
+                    missing: t.desiredLevel - capped,
+                  }
+                })
 
-                const entry = {
+              const totalDefense = ARMOR_PARTS.reduce((sum, p) => sum + (armorMap[p]?.defense ?? 0), 0)
+
+              // Compute coverage %
+              const totalDesired = request.targetSkills.reduce((sum, t) => sum + t.desiredLevel, 0)
+              const totalMet = request.targetSkills.reduce((sum, t) => {
+                const nid = normalizeId(t.skillId)
+                const skillDef = skillMap.get(nid)
+                const maxLv = skillDef?.maxLevel ?? t.desiredLevel
+                const raw = totals.get(nid) ?? 0
+                const capped = Math.min(raw, maxLv)
+                return sum + Math.min(capped, t.desiredLevel)
+              }, 0)
+              const coveragePercent = totalDesired > 0 ? Math.round((totalMet / totalDesired) * 100) : 100
+
+              const entry = {
+                score,
+                result: {
                   score,
-                  result: {
-                    score,
-                    coveragePercent,
-                    weapon,
-                    armor: armorMap,
-                    skillSummary: buildSkillSummaryFromTotals(totals, skillMap),
-                    unmetSkills,
-                    totalDefense,
-                    driftstoneAssignments,
-                  },
-                }
+                  coveragePercent,
+                  armor: armorMap,
+                  skillSummary: buildSkillSummaryFromTotals(totals, skillMap),
+                  unmetSkills,
+                  totalDefense,
+                  driftstoneAssignments,
+                },
+              }
 
-                if (topBuilds.length < topN) {
-                  topBuilds.push(entry)
-                  topBuilds.sort((a, b) => b.score - a.score)
-                  minTopScore = topBuilds.at(-1)!.score
-                } else {
-                  // Replace lowest
-                  topBuilds[topBuilds.length - 1] = entry
-                  topBuilds.sort((a, b) => b.score - a.score)
-                  minTopScore = topBuilds.at(-1)!.score
-                }
+              if (topBuilds.length < topN) {
+                topBuilds.push(entry)
+                topBuilds.sort((a, b) => b.score - a.score)
+                minTopScore = topBuilds.at(-1)!.score
+              } else {
+                // Replace lowest
+                topBuilds[topBuilds.length - 1] = entry
+                topBuilds.sort((a, b) => b.score - a.score)
+                minTopScore = topBuilds.at(-1)!.score
               }
             }
           }

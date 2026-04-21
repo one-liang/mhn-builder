@@ -3,8 +3,8 @@
     "id": "leather-legs",
     "name": "皮製長褲",
     "nameEn": "",
-    "setName": "皮製",
-    "setNameEn": "Leather",
+    "setName": "無",
+    "setNameEn": "",
     "part": "legs",
     "defense": 182,
     "skills": [
@@ -24,8 +24,8 @@
     "id": "alloy-legs",
     "name": "合金護腿",
     "nameEn": "",
-    "setName": "合金",
-    "setNameEn": "Alloy",
+    "setName": "無",
+    "setNameEn": "",
     "part": "legs",
     "defense": 182,
     "skills": [
@@ -45,14 +45,14 @@
     "id": "jagras-legs",
     "name": "凶豺龍護腿",
     "nameEn": "",
-    "setName": "凶豺龍",
-    "setNameEn": "Great Jagras",
+    "setName": "",
+    "setNameEn": "",
     "part": "legs",
     "defense": 182,
     "skills": [
       {
         "skillId": "water-attack",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 1,
@@ -62,14 +62,14 @@
     "id": "kulu-legs",
     "name": "搔鳥護腿",
     "nameEn": "",
-    "setName": "搔鳥",
-    "setNameEn": "Kulu-Ya-Ku",
+    "setName": "",
+    "setNameEn": "",
     "part": "legs",
     "defense": 182,
     "skills": [
       {
         "skillId": "critical-eye",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 1,
@@ -79,8 +79,8 @@
     "id": "pukei-legs",
     "name": "毒妖鳥護腿",
     "nameEn": "",
-    "setName": "毒妖鳥",
-    "setNameEn": "Pukei-Pukei",
+    "setName": "",
+    "setNameEn": "",
     "part": "legs",
     "defense": 182,
     "skills": [
@@ -100,8 +100,8 @@
     "id": "coral-pukei-legs",
     "name": "妖水護腿",
     "nameEn": "",
-    "setName": "妖水",
-    "setNameEn": "Coral Pukei-Pukei",
+    "setName": "",
+    "setNameEn": "",
     "part": "legs",
     "defense": 182,
     "skills": [
@@ -121,8 +121,8 @@
     "id": "barroth-legs",
     "name": "土砂龍護腿",
     "nameEn": "",
-    "setName": "土砂龍",
-    "setNameEn": "Barroth",
+    "setName": "",
+    "setNameEn": "",
     "part": "legs",
     "defense": 182,
     "skills": [
@@ -132,7 +132,7 @@
       },
       {
         "skillId": "defense-boost",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 1,
@@ -142,14 +142,14 @@
     "id": "girros-legs",
     "name": "凶顎龍護腿",
     "nameEn": "",
-    "setName": "凶顎龍",
-    "setNameEn": "Great Girros",
+    "setName": "",
+    "setNameEn": "",
     "part": "legs",
     "defense": 182,
     "skills": [
       {
         "skillId": "paralysis-attack",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 1,
@@ -159,8 +159,8 @@
     "id": "kadachi-legs",
     "name": "飛雷龍護腿",
     "nameEn": "",
-    "setName": "飛雷龍",
-    "setNameEn": "Tobi-Kadachi",
+    "setName": "",
+    "setNameEn": "",
     "part": "legs",
     "defense": 182,
     "skills": [
@@ -180,8 +180,8 @@
     "id": "viper-kadachi-legs",
     "name": "朱毒護腿",
     "nameEn": "",
-    "setName": "朱毒",
-    "setNameEn": "Viper Tobi-Kadachi",
+    "setName": "",
+    "setNameEn": "",
     "part": "legs",
     "defense": 182,
     "skills": [
@@ -191,7 +191,7 @@
       },
       {
         "skillId": "follow-up-poison",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 1,
@@ -201,14 +201,14 @@
     "id": "paolumu-legs",
     "name": "浮空龍護腿",
     "nameEn": "",
-    "setName": "浮空龍",
-    "setNameEn": "Paolumu",
+    "setName": "",
+    "setNameEn": "",
     "part": "legs",
     "defense": 182,
     "skills": [
       {
         "skillId": "windproof",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 1,
@@ -218,8 +218,8 @@
     "id": "nightshade-paolumu-legs",
     "name": "浮夢護腿",
     "nameEn": "",
-    "setName": "浮夢",
-    "setNameEn": "Nightshade Paolumu",
+    "setName": "",
+    "setNameEn": "",
     "part": "legs",
     "defense": 182,
     "skills": [
@@ -239,14 +239,14 @@
     "id": "jyuratodus-legs",
     "name": "泥魚龍護腿",
     "nameEn": "",
-    "setName": "泥魚龍",
-    "setNameEn": "Jyuratodus",
+    "setName": "",
+    "setNameEn": "",
     "part": "legs",
     "defense": 182,
     "skills": [
       {
         "skillId": "focus",
-        "level": 1
+        "level": 2
       },
       {
         "skillId": "last-stand-guard",
@@ -260,14 +260,14 @@
     "id": "anjanath-legs",
     "name": "蠻顎龍護腿",
     "nameEn": "",
-    "setName": "蠻顎龍",
-    "setNameEn": "Anjanath",
+    "setName": "",
+    "setNameEn": "",
     "part": "legs",
     "defense": 182,
     "skills": [
       {
         "skillId": "peak-performance",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 1,
@@ -277,14 +277,14 @@
     "id": "fulgur-anjanath-legs",
     "name": "雷顎護腿",
     "nameEn": "",
-    "setName": "雷顎",
-    "setNameEn": "Fulgur Anjanath",
+    "setName": "",
+    "setNameEn": "",
     "part": "legs",
     "defense": 182,
     "skills": [
       {
         "skillId": "sp-meter-boost",
-        "level": 1
+        "level": 2
       },
       {
         "skillId": "brute-force",
@@ -298,14 +298,14 @@
     "id": "rathian-legs",
     "name": "雌火龍護腿",
     "nameEn": "",
-    "setName": "雌火龍",
-    "setNameEn": "Rathian",
+    "setName": "",
+    "setNameEn": "",
     "part": "legs",
     "defense": 182,
     "skills": [
       {
         "skillId": "health-boost",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 2,
@@ -315,8 +315,8 @@
     "id": "pink-rathian-legs",
     "name": "火龍心護腿",
     "nameEn": "",
-    "setName": "火龍心",
-    "setNameEn": "Pink Rathian",
+    "setName": "",
+    "setNameEn": "",
     "part": "legs",
     "defense": 182,
     "skills": [
@@ -336,8 +336,8 @@
     "id": "gold-rathian-legs",
     "name": "金黃澄月護腿",
     "nameEn": "",
-    "setName": "金黃澄月",
-    "setNameEn": "Gold Rathian",
+    "setName": "",
+    "setNameEn": "",
     "part": "legs",
     "defense": 182,
     "skills": [
@@ -357,8 +357,8 @@
     "id": "legiana-legs",
     "name": "風漂龍護腿",
     "nameEn": "",
-    "setName": "風漂龍",
-    "setNameEn": "Legiana",
+    "setName": "",
+    "setNameEn": "",
     "part": "legs",
     "defense": 182,
     "skills": [
@@ -378,8 +378,8 @@
     "id": "diablos-legs",
     "name": "角龍護腿",
     "nameEn": "",
-    "setName": "角龍",
-    "setNameEn": "Diablos",
+    "setName": "",
+    "setNameEn": "",
     "part": "legs",
     "defense": 182,
     "skills": [
@@ -399,8 +399,8 @@
     "id": "black-diablos-legs",
     "name": "暴君角龍護腿",
     "nameEn": "",
-    "setName": "暴君角龍",
-    "setNameEn": "Black Diablos",
+    "setName": "",
+    "setNameEn": "",
     "part": "legs",
     "defense": 182,
     "skills": [
@@ -420,8 +420,8 @@
     "id": "rathalos-legs",
     "name": "火龍護腿",
     "nameEn": "",
-    "setName": "火龍",
-    "setNameEn": "Rathalos",
+    "setName": "",
+    "setNameEn": "",
     "part": "legs",
     "defense": 182,
     "skills": [
@@ -441,8 +441,8 @@
     "id": "azure-rathalos-legs",
     "name": "火龍魂護腿",
     "nameEn": "",
-    "setName": "火龍魂",
-    "setNameEn": "Azure Rathalos",
+    "setName": "",
+    "setNameEn": "",
     "part": "legs",
     "defense": 182,
     "skills": [
@@ -462,8 +462,8 @@
     "id": "silver-rathalos-legs",
     "name": "銀白耀日護腿",
     "nameEn": "",
-    "setName": "銀白耀日",
-    "setNameEn": "Silver Rathalos",
+    "setName": "",
+    "setNameEn": "",
     "part": "legs",
     "defense": 182,
     "skills": [
@@ -483,8 +483,8 @@
     "id": "zinogre-legs",
     "name": "雷狼龍護腿",
     "nameEn": "",
-    "setName": "雷狼龍",
-    "setNameEn": "Zinogre",
+    "setName": "",
+    "setNameEn": "",
     "part": "legs",
     "defense": 182,
     "skills": [
@@ -504,14 +504,14 @@
     "id": "tzitzi-legs",
     "name": "眩鳥護腿",
     "nameEn": "",
-    "setName": "眩鳥",
-    "setNameEn": "Tzitzi-Ya-Ku",
+    "setName": "",
+    "setNameEn": "",
     "part": "legs",
     "defense": 182,
     "skills": [
       {
         "skillId": "fortify",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 2,
@@ -521,14 +521,14 @@
     "id": "odogaron-legs",
     "name": "慘爪龍護腿",
     "nameEn": "",
-    "setName": "慘爪龍",
-    "setNameEn": "Odogaron",
+    "setName": "",
+    "setNameEn": "",
     "part": "legs",
     "defense": 182,
     "skills": [
       {
         "skillId": "sp-meter-boost-dodge",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 1,
@@ -538,14 +538,14 @@
     "id": "ebony-odogaron-legs",
     "name": "亡爪護腿",
     "nameEn": "",
-    "setName": "亡爪",
-    "setNameEn": "Ebony Odogaron",
+    "setName": "",
+    "setNameEn": "",
     "part": "legs",
     "defense": 182,
     "skills": [
       {
         "skillId": "dragon-attack",
-        "level": 1
+        "level": 2
       },
       {
         "skillId": "evade-extender",
@@ -559,14 +559,14 @@
     "id": "vangis-legs",
     "name": "恐暴龍護腿",
     "nameEn": "",
-    "setName": "恐暴龍",
-    "setNameEn": "Deviljho",
+    "setName": "",
+    "setNameEn": "",
     "part": "legs",
     "defense": 182,
     "skills": [
       {
         "skillId": "guts",
-        "level": 1
+        "level": 2
       },
       {
         "skillId": "latent-power",
@@ -580,8 +580,8 @@
     "id": "basarios-legs",
     "name": "岩龍護腿",
     "nameEn": "",
-    "setName": "岩龍",
-    "setNameEn": "Basarios",
+    "setName": "",
+    "setNameEn": "",
     "part": "legs",
     "defense": 182,
     "skills": [
@@ -601,8 +601,8 @@
     "id": "khezu-legs",
     "name": "奇怪龍護腿",
     "nameEn": "",
-    "setName": "奇怪龍",
-    "setNameEn": "Khezu",
+    "setName": "",
+    "setNameEn": "",
     "part": "legs",
     "defense": 182,
     "skills": [
@@ -622,8 +622,8 @@
     "id": "kushala-legs",
     "name": "鋼龍踏實",
     "nameEn": "",
-    "setName": "鋼龍",
-    "setNameEn": "Kushala Daora",
+    "setName": "",
+    "setNameEn": "",
     "part": "legs",
     "defense": 182,
     "skills": [
@@ -647,14 +647,14 @@
     "id": "mizutsune-legs",
     "name": "泡狐龍護腿",
     "nameEn": "",
-    "setName": "泡狐龍",
-    "setNameEn": "Mizutsune",
+    "setName": "",
+    "setNameEn": "",
     "part": "legs",
     "defense": 182,
     "skills": [
       {
         "skillId": "resuscitate",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 1,
@@ -664,8 +664,8 @@
     "id": "kaiser-legs",
     "name": "帝王護腿",
     "nameEn": "",
-    "setName": "帝王",
-    "setNameEn": "Teostra",
+    "setName": "",
+    "setNameEn": "",
     "part": "legs",
     "defense": 182,
     "skills": [
@@ -689,14 +689,14 @@
     "id": "aknosom-legs",
     "name": "傘鳥護腿",
     "nameEn": "",
-    "setName": "傘鳥",
-    "setNameEn": "Aknosom",
+    "setName": "",
+    "setNameEn": "",
     "part": "legs",
     "defense": 182,
     "skills": [
       {
         "skillId": "fire-attack",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 1,
@@ -706,8 +706,8 @@
     "id": "sinister-legs",
     "name": "禍鎧【腿甲】",
     "nameEn": "",
-    "setName": "禍鎧",
-    "setNameEn": "Magnamalo",
+    "setName": "",
+    "setNameEn": "",
     "part": "legs",
     "defense": 182,
     "skills": [
@@ -727,14 +727,14 @@
     "id": "rajang-legs",
     "name": "金色下裳",
     "nameEn": "",
-    "setName": "金色",
-    "setNameEn": "Rajang",
+    "setName": "",
+    "setNameEn": "",
     "part": "legs",
     "defense": 182,
     "skills": [
       {
         "skillId": "resentment",
-        "level": 1
+        "level": 2
       },
       {
         "skillId": "tremor-resistance",
@@ -748,8 +748,8 @@
     "id": "nergigante-legs",
     "name": "戰紋護腿",
     "nameEn": "",
-    "setName": "戰紋",
-    "setNameEn": "Nergigante",
+    "setName": "",
+    "setNameEn": "",
     "part": "legs",
     "defense": 182,
     "skills": [
@@ -773,14 +773,14 @@
     "id": "lagombi-legs",
     "name": "白兔獸護腿",
     "nameEn": "",
-    "setName": "白兔獸",
-    "setNameEn": "Lagombi",
+    "setName": "",
+    "setNameEn": "",
     "part": "legs",
     "defense": 182,
     "skills": [
       {
         "skillId": "ice-attack",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 1,
@@ -790,14 +790,14 @@
     "id": "volvidon-legs",
     "name": "赤甲獸護腿",
     "nameEn": "",
-    "setName": "赤甲獸",
-    "setNameEn": "Volvidon",
+    "setName": "",
+    "setNameEn": "",
     "part": "legs",
     "defense": 182,
     "skills": [
       {
         "skillId": "paralysis-resistance",
-        "level": 1
+        "level": 3
       }
     ],
     "driftstoneSlots": 1,
@@ -807,14 +807,14 @@
     "id": "somnacanth-legs",
     "name": "人魚龍護腿",
     "nameEn": "",
-    "setName": "人魚龍",
-    "setNameEn": "Somnacanth",
+    "setName": "",
+    "setNameEn": "",
     "part": "legs",
     "defense": 182,
     "skills": [
       {
         "skillId": "status-sneak-attack",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 1,
@@ -824,8 +824,8 @@
     "id": "tigrex-legs",
     "name": "轟龍護腿",
     "nameEn": "",
-    "setName": "轟龍",
-    "setNameEn": "Tigrex",
+    "setName": "",
+    "setNameEn": "",
     "part": "legs",
     "defense": 182,
     "skills": [
@@ -835,7 +835,7 @@
       },
       {
         "skillId": "partbreaker",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 1,
@@ -845,8 +845,8 @@
     "id": "brute-tigrex-legs",
     "name": "轟吼護腿",
     "nameEn": "",
-    "setName": "轟吼",
-    "setNameEn": "Brute Tigrex",
+    "setName": "",
+    "setNameEn": "",
     "part": "legs",
     "defense": 182,
     "skills": [
@@ -856,7 +856,7 @@
       },
       {
         "skillId": "offensive-dodger",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 1,
@@ -866,8 +866,8 @@
     "id": "kirin-legs",
     "name": "麒麟護脛",
     "nameEn": "",
-    "setName": "麒麟",
-    "setNameEn": "Kirin",
+    "setName": "",
+    "setNameEn": "",
     "part": "legs",
     "defense": 182,
     "skills": [
@@ -877,7 +877,7 @@
       },
       {
         "skillId": "recoil-down",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 1,
@@ -887,14 +887,14 @@
     "id": "bazelgeuse-legs",
     "name": "爆鱗龍護腿",
     "nameEn": "",
-    "setName": "爆鱗龍",
-    "setNameEn": "Bazelgeuse",
+    "setName": "",
+    "setNameEn": "",
     "part": "legs",
     "defense": 182,
     "skills": [
       {
         "skillId": "valor",
-        "level": 1
+        "level": 2
       },
       {
         "skillId": "blast-attack",
@@ -908,8 +908,8 @@
     "id": "chatacabra-legs",
     "name": "纏蛙護腿",
     "nameEn": "",
-    "setName": "纏蛙",
-    "setNameEn": "Chatacabra",
+    "setName": "",
+    "setNameEn": "",
     "part": "legs",
     "defense": 182,
     "skills": [
@@ -919,7 +919,7 @@
       },
       {
         "skillId": "dodge-load",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 1,
@@ -929,8 +929,8 @@
     "id": "arzuros-legs",
     "name": "青熊獸護腿",
     "nameEn": "",
-    "setName": "青熊獸",
-    "setNameEn": "Arzuros",
+    "setName": "",
+    "setNameEn": "",
     "part": "legs",
     "defense": 182,
     "skills": [
@@ -950,14 +950,14 @@
     "id": "glavenus-legs",
     "name": "斬龍護腿",
     "nameEn": "",
-    "setName": "斬龍",
-    "setNameEn": "Glavenus",
+    "setName": "",
+    "setNameEn": "",
     "part": "legs",
     "defense": 182,
     "skills": [
       {
         "skillId": "burst",
-        "level": 1
+        "level": 2
       },
       {
         "skillId": "artful-dodger",
@@ -971,8 +971,8 @@
     "id": "chameleos-legs",
     "name": "霞龍劍裝【腿甲】",
     "nameEn": "",
-    "setName": "霞龍",
-    "setNameEn": "Chameleos",
+    "setName": "",
+    "setNameEn": "",
     "part": "legs",
     "defense": 182,
     "skills": [
@@ -996,14 +996,14 @@
     "id": "wroggi-legs",
     "name": "毒狗龍護腿",
     "nameEn": "",
-    "setName": "毒狗龍",
-    "setNameEn": "Great Wroggi",
+    "setName": "",
+    "setNameEn": "",
     "part": "legs",
     "defense": 182,
     "skills": [
       {
         "skillId": "final-shot",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 1,
@@ -1013,8 +1013,8 @@
     "id": "bishaten-legs",
     "name": "天狗獸護腿",
     "nameEn": "",
-    "setName": "天狗獸",
-    "setNameEn": "Bishaten",
+    "setName": "",
+    "setNameEn": "",
     "part": "legs",
     "defense": 182,
     "skills": [
@@ -1034,14 +1034,14 @@
     "id": "beotodus-legs",
     "name": "冰魚龍護腿",
     "nameEn": "",
-    "setName": "冰魚龍",
-    "setNameEn": "Beotodus",
+    "setName": "",
+    "setNameEn": "",
     "part": "legs",
     "defense": 182,
     "skills": [
       {
         "skillId": "charge-shockwave-boost",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 1,
@@ -1051,14 +1051,14 @@
     "id": "nargacuga-legs",
     "name": "迅龍護腿",
     "nameEn": "",
-    "setName": "迅龍",
-    "setNameEn": "Nargacuga",
+    "setName": "",
+    "setNameEn": "",
     "part": "legs",
     "defense": 182,
     "skills": [
       {
         "skillId": "status-hit-boost",
-        "level": 1
+        "level": 2
       },
       {
         "skillId": "artful-dodger",
@@ -1072,8 +1072,8 @@
     "id": "namielle-legs",
     "name": "觸角護腿",
     "nameEn": "",
-    "setName": "觸角",
-    "setNameEn": "Namielle",
+    "setName": "",
+    "setNameEn": "",
     "part": "legs",
     "defense": 182,
     "skills": [
@@ -1083,7 +1083,7 @@
       },
       {
         "skillId": "aggressive-dodger",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 1,
@@ -1093,8 +1093,8 @@
     "id": "garangolm-legs",
     "name": "剛纏獸護腿",
     "nameEn": "",
-    "setName": "剛纏獸",
-    "setNameEn": "Garangolm",
+    "setName": "",
+    "setNameEn": "",
     "part": "legs",
     "defense": 182,
     "skills": [
@@ -1114,14 +1114,14 @@
     "id": "lunagaron-legs",
     "name": "冰狼龍護腿",
     "nameEn": "",
-    "setName": "冰狼龍",
-    "setNameEn": "Lunagaron",
+    "setName": "",
+    "setNameEn": "",
     "part": "legs",
     "defense": 182,
     "skills": [
       {
         "skillId": "ballistics",
-        "level": 1
+        "level": 2
       },
       {
         "skillId": "burst",
@@ -1135,14 +1135,14 @@
     "id": "espinas-legs",
     "name": "棘龍腳跟",
     "nameEn": "",
-    "setName": "棘龍",
-    "setNameEn": "Espinas",
+    "setName": "",
+    "setNameEn": "",
     "part": "legs",
     "defense": 182,
     "skills": [
       {
         "skillId": "hi-fire",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 1,
@@ -1152,8 +1152,8 @@
     "id": "malzeno-legs",
     "name": "爵銀龍護腿",
     "nameEn": "",
-    "setName": "爵銀龍",
-    "setNameEn": "Malzeno",
+    "setName": "",
+    "setNameEn": "",
     "part": "legs",
     "defense": 182,
     "skills": [
@@ -1163,7 +1163,7 @@
       },
       {
         "skillId": "follow-up",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 1,
@@ -1173,14 +1173,14 @@
     "id": "quematrice-legs",
     "name": "炎尾龍護腿",
     "nameEn": "",
-    "setName": "炎尾龍",
-    "setNameEn": "Quematrice",
+    "setName": "",
+    "setNameEn": "",
     "part": "legs",
     "defense": 182,
     "skills": [
       {
         "skillId": "attack-boost",
-        "level": 1
+        "level": 3
       }
     ],
     "driftstoneSlots": 1,
@@ -1190,14 +1190,14 @@
     "id": "gossharag-legs",
     "name": "雪鬼獸護腿",
     "nameEn": "",
-    "setName": "雪鬼獸",
-    "setNameEn": "Gossharag",
+    "setName": "",
+    "setNameEn": "",
     "part": "legs",
     "defense": 182,
     "skills": [
       {
         "skillId": "morph-boost",
-        "level": 1
+        "level": 2
       },
       {
         "skillId": "lock-on",
@@ -1211,8 +1211,8 @@
     "id": "astalos-legs",
     "name": "電龍護腿",
     "nameEn": "",
-    "setName": "電龍",
-    "setNameEn": "Astalos",
+    "setName": "",
+    "setNameEn": "",
     "part": "legs",
     "defense": 182,
     "skills": [
@@ -1222,7 +1222,7 @@
       },
       {
         "skillId": "thunder-attack",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 1,
@@ -1232,14 +1232,14 @@
     "id": "almudron-legs",
     "name": "泥翁龍護腿",
     "nameEn": "",
-    "setName": "泥翁龍",
-    "setNameEn": "Almudron",
+    "setName": "",
+    "setNameEn": "",
     "part": "legs",
     "defense": 182,
     "skills": [
       {
         "skillId": "quick-work",
-        "level": 1
+        "level": 2
       },
       {
         "skillId": "lock-on",
@@ -1253,8 +1253,8 @@
     "id": "seregios-legs",
     "name": "千刃龍護腿",
     "nameEn": "",
-    "setName": "千刃龍",
-    "setNameEn": "Seregios",
+    "setName": "",
+    "setNameEn": "",
     "part": "legs",
     "defense": 182,
     "skills": [
@@ -1278,8 +1278,8 @@
     "id": "radobaan-legs",
     "name": "骨鎚龍護腿",
     "nameEn": "",
-    "setName": "骨鎚龍",
-    "setNameEn": "Radobaan",
+    "setName": "",
+    "setNameEn": "",
     "part": "legs",
     "defense": 182,
     "skills": [
@@ -1299,8 +1299,8 @@
     "id": "banbaro-legs",
     "name": "猛牛龍護腿",
     "nameEn": "",
-    "setName": "猛牛龍",
-    "setNameEn": "Banbaro",
+    "setName": "",
+    "setNameEn": "",
     "part": "legs",
     "defense": 182,
     "skills": [
@@ -1320,8 +1320,8 @@
     "id": "barioth-legs",
     "name": "冰牙龍護腿",
     "nameEn": "",
-    "setName": "冰牙龍",
-    "setNameEn": "Barioth",
+    "setName": "",
+    "setNameEn": "",
     "part": "legs",
     "defense": 182,
     "skills": [

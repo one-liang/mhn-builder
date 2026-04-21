@@ -3,8 +3,8 @@
     "id": "leather-arms",
     "name": "皮製手套",
     "nameEn": "",
-    "setName": "皮製",
-    "setNameEn": "Leather",
+    "setName": "無",
+    "setNameEn": "",
     "part": "arms",
     "defense": 182,
     "skills": [
@@ -24,14 +24,14 @@
     "id": "alloy-arms",
     "name": "合金腕甲",
     "nameEn": "",
-    "setName": "合金",
-    "setNameEn": "Alloy",
+    "setName": "無",
+    "setNameEn": "",
     "part": "arms",
     "defense": 182,
     "skills": [
       {
         "skillId": "health-boost",
-        "level": 1
+        "level": 3
       }
     ],
     "driftstoneSlots": 1,
@@ -41,8 +41,8 @@
     "id": "jagras-arms",
     "name": "凶豺龍腕甲",
     "nameEn": "",
-    "setName": "凶豺龍",
-    "setNameEn": "Great Jagras",
+    "setName": "",
+    "setNameEn": "",
     "part": "arms",
     "defense": 182,
     "skills": [
@@ -62,8 +62,8 @@
     "id": "kulu-arms",
     "name": "搔鳥腕甲",
     "nameEn": "",
-    "setName": "搔鳥",
-    "setNameEn": "Kulu-Ya-Ku",
+    "setName": "",
+    "setNameEn": "",
     "part": "arms",
     "defense": 182,
     "skills": [
@@ -83,8 +83,8 @@
     "id": "pukei-arms",
     "name": "毒妖鳥腕甲",
     "nameEn": "",
-    "setName": "毒妖鳥",
-    "setNameEn": "Pukei-Pukei",
+    "setName": "",
+    "setNameEn": "",
     "part": "arms",
     "defense": 182,
     "skills": [
@@ -104,8 +104,8 @@
     "id": "coral-pukei-arms",
     "name": "妖水腕甲",
     "nameEn": "",
-    "setName": "妖水",
-    "setNameEn": "Coral Pukei-Pukei",
+    "setName": "",
+    "setNameEn": "",
     "part": "arms",
     "defense": 182,
     "skills": [
@@ -125,14 +125,14 @@
     "id": "barroth-arms",
     "name": "土砂龍腕甲",
     "nameEn": "",
-    "setName": "土砂龍",
-    "setNameEn": "Barroth",
+    "setName": "",
+    "setNameEn": "",
     "part": "arms",
     "defense": 182,
     "skills": [
       {
         "skillId": "guard",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 1,
@@ -142,8 +142,8 @@
     "id": "girros-arms",
     "name": "凶顎龍腕甲",
     "nameEn": "",
-    "setName": "凶顎龍",
-    "setNameEn": "Great Girros",
+    "setName": "",
+    "setNameEn": "",
     "part": "arms",
     "defense": 182,
     "skills": [
@@ -163,14 +163,14 @@
     "id": "kadachi-arms",
     "name": "飛雷龍腕甲",
     "nameEn": "",
-    "setName": "飛雷龍",
-    "setNameEn": "Tobi-Kadachi",
+    "setName": "",
+    "setNameEn": "",
     "part": "arms",
     "defense": 182,
     "skills": [
       {
         "skillId": "evade-extender",
-        "level": 1
+        "level": 2
       },
       {
         "skillId": "artful-dodger",
@@ -184,8 +184,8 @@
     "id": "viper-kadachi-arms",
     "name": "朱毒腕甲",
     "nameEn": "",
-    "setName": "朱毒",
-    "setNameEn": "Viper Tobi-Kadachi",
+    "setName": "",
+    "setNameEn": "",
     "part": "arms",
     "defense": 182,
     "skills": [
@@ -209,14 +209,14 @@
     "id": "paolumu-arms",
     "name": "浮空龍腕甲",
     "nameEn": "",
-    "setName": "浮空龍",
-    "setNameEn": "Paolumu",
+    "setName": "",
+    "setNameEn": "",
     "part": "arms",
     "defense": 182,
     "skills": [
       {
         "skillId": "sp-meter-boost",
-        "level": 1
+        "level": 2
       },
       {
         "skillId": "divine-blessing",
@@ -230,14 +230,14 @@
     "id": "nightshade-paolumu-arms",
     "name": "浮夢腕甲",
     "nameEn": "",
-    "setName": "浮夢",
-    "setNameEn": "Nightshade Paolumu",
+    "setName": "",
+    "setNameEn": "",
     "part": "arms",
     "defense": 182,
     "skills": [
       {
         "skillId": "sleep-attack",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 1,
@@ -247,14 +247,14 @@
     "id": "jyuratodus-arms",
     "name": "泥魚龍腕甲",
     "nameEn": "",
-    "setName": "泥魚龍",
-    "setNameEn": "Jyuratodus",
+    "setName": "",
+    "setNameEn": "",
     "part": "arms",
     "defense": 182,
     "skills": [
       {
         "skillId": "water-attack",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 1,
@@ -264,14 +264,14 @@
     "id": "anjanath-arms",
     "name": "蠻顎龍腕甲",
     "nameEn": "",
-    "setName": "蠻顎龍",
-    "setNameEn": "Anjanath",
+    "setName": "",
+    "setNameEn": "",
     "part": "arms",
     "defense": 182,
     "skills": [
       {
         "skillId": "fire-attack",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 1,
@@ -281,14 +281,14 @@
     "id": "fulgur-anjanath-arms",
     "name": "雷顎腕甲",
     "nameEn": "",
-    "setName": "雷顎",
-    "setNameEn": "Fulgur Anjanath",
+    "setName": "",
+    "setNameEn": "",
     "part": "arms",
     "defense": 182,
     "skills": [
       {
         "skillId": "hi-thunder",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 1,
@@ -298,8 +298,8 @@
     "id": "rathian-arms",
     "name": "雌火龍腕甲",
     "nameEn": "",
-    "setName": "雌火龍",
-    "setNameEn": "Rathian",
+    "setName": "",
+    "setNameEn": "",
     "part": "arms",
     "defense": 182,
     "skills": [
@@ -309,7 +309,7 @@
       },
       {
         "skillId": "burst",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 1,
@@ -319,8 +319,8 @@
     "id": "pink-rathian-arms",
     "name": "火龍心腕甲",
     "nameEn": "",
-    "setName": "火龍心",
-    "setNameEn": "Pink Rathian",
+    "setName": "",
+    "setNameEn": "",
     "part": "arms",
     "defense": 182,
     "skills": [
@@ -340,14 +340,14 @@
     "id": "gold-rathian-arms",
     "name": "金黃澄月腕甲",
     "nameEn": "",
-    "setName": "金黃澄月",
-    "setNameEn": "Gold Rathian",
+    "setName": "",
+    "setNameEn": "",
     "part": "arms",
     "defense": 182,
     "skills": [
       {
         "skillId": "follow-up-poison",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 1,
@@ -357,14 +357,14 @@
     "id": "legiana-arms",
     "name": "風漂龍腕甲",
     "nameEn": "",
-    "setName": "風漂龍",
-    "setNameEn": "Legiana",
+    "setName": "",
+    "setNameEn": "",
     "part": "arms",
     "defense": 182,
     "skills": [
       {
         "skillId": "reload-speed",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 1,
@@ -374,8 +374,8 @@
     "id": "diablos-arms",
     "name": "角龍腕甲",
     "nameEn": "",
-    "setName": "角龍",
-    "setNameEn": "Diablos",
+    "setName": "",
+    "setNameEn": "",
     "part": "arms",
     "defense": 182,
     "skills": [
@@ -395,8 +395,8 @@
     "id": "black-diablos-arms",
     "name": "暴君角龍腕甲",
     "nameEn": "",
-    "setName": "暴君角龍",
-    "setNameEn": "Black Diablos",
+    "setName": "",
+    "setNameEn": "",
     "part": "arms",
     "defense": 182,
     "skills": [
@@ -416,8 +416,8 @@
     "id": "rathalos-arms",
     "name": "火龍腕甲",
     "nameEn": "",
-    "setName": "火龍",
-    "setNameEn": "Rathalos",
+    "setName": "",
+    "setNameEn": "",
     "part": "arms",
     "defense": 182,
     "skills": [
@@ -437,14 +437,14 @@
     "id": "azure-rathalos-arms",
     "name": "火龍魂腕甲",
     "nameEn": "",
-    "setName": "火龍魂",
-    "setNameEn": "Azure Rathalos",
+    "setName": "",
+    "setNameEn": "",
     "part": "arms",
     "defense": 182,
     "skills": [
       {
         "skillId": "critical-boost",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 1,
@@ -454,8 +454,8 @@
     "id": "silver-rathalos-arms",
     "name": "銀白耀日腕甲",
     "nameEn": "",
-    "setName": "銀白耀日",
-    "setNameEn": "Silver Rathalos",
+    "setName": "",
+    "setNameEn": "",
     "part": "arms",
     "defense": 182,
     "skills": [
@@ -471,14 +471,14 @@
     "id": "zinogre-arms",
     "name": "雷狼龍腕甲",
     "nameEn": "",
-    "setName": "雷狼龍",
-    "setNameEn": "Zinogre",
+    "setName": "",
+    "setNameEn": "",
     "part": "arms",
     "defense": 182,
     "skills": [
       {
         "skillId": "thunder-attack",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 1,
@@ -488,14 +488,14 @@
     "id": "tzitzi-arms",
     "name": "眩鳥腕甲",
     "nameEn": "",
-    "setName": "眩鳥",
-    "setNameEn": "Tzitzi-Ya-Ku",
+    "setName": "",
+    "setNameEn": "",
     "part": "arms",
     "defense": 182,
     "skills": [
       {
         "skillId": "status-sneak-attack",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 1,
@@ -505,8 +505,8 @@
     "id": "odogaron-arms",
     "name": "慘爪龍腕甲",
     "nameEn": "",
-    "setName": "慘爪龍",
-    "setNameEn": "Odogaron",
+    "setName": "",
+    "setNameEn": "",
     "part": "arms",
     "defense": 182,
     "skills": [
@@ -516,7 +516,7 @@
       },
       {
         "skillId": "bleeding-resistance",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 1,
@@ -526,14 +526,14 @@
     "id": "ebony-odogaron-arms",
     "name": "亡爪腕甲",
     "nameEn": "",
-    "setName": "亡爪",
-    "setNameEn": "Ebony Odogaron",
+    "setName": "",
+    "setNameEn": "",
     "part": "arms",
     "defense": 182,
     "skills": [
       {
         "skillId": "steadfast",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 1,
@@ -543,14 +543,14 @@
     "id": "vangis-arms",
     "name": "恐暴龍腕甲",
     "nameEn": "",
-    "setName": "恐暴龍",
-    "setNameEn": "Deviljho",
+    "setName": "",
+    "setNameEn": "",
     "part": "arms",
     "defense": 182,
     "skills": [
       {
         "skillId": "peak-performance",
-        "level": 1
+        "level": 2
       },
       {
         "skillId": "dragon-attack",
@@ -564,14 +564,14 @@
     "id": "basarios-arms",
     "name": "岩龍腕甲",
     "nameEn": "",
-    "setName": "岩龍",
-    "setNameEn": "Basarios",
+    "setName": "",
+    "setNameEn": "",
     "part": "arms",
     "defense": 182,
     "skills": [
       {
         "skillId": "recoil-down",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 1,
@@ -581,14 +581,14 @@
     "id": "khezu-arms",
     "name": "奇怪龍腕甲",
     "nameEn": "",
-    "setName": "奇怪龍",
-    "setNameEn": "Khezu",
+    "setName": "",
+    "setNameEn": "",
     "part": "arms",
     "defense": 182,
     "skills": [
       {
         "skillId": "special-insurance",
-        "level": 1
+        "level": 2
       },
       {
         "skillId": "fortify",
@@ -602,8 +602,8 @@
     "id": "kushala-arms",
     "name": "鋼龍剛強",
     "nameEn": "",
-    "setName": "鋼龍",
-    "setNameEn": "Kushala Daora",
+    "setName": "",
+    "setNameEn": "",
     "part": "arms",
     "defense": 182,
     "skills": [
@@ -627,8 +627,8 @@
     "id": "mizutsune-arms",
     "name": "泡狐龍腕甲",
     "nameEn": "",
-    "setName": "泡狐龍",
-    "setNameEn": "Mizutsune",
+    "setName": "",
+    "setNameEn": "",
     "part": "arms",
     "defense": 182,
     "skills": [
@@ -648,8 +648,8 @@
     "id": "kaiser-arms",
     "name": "帝王腕甲",
     "nameEn": "",
-    "setName": "帝王",
-    "setNameEn": "Teostra",
+    "setName": "",
+    "setNameEn": "",
     "part": "arms",
     "defense": 182,
     "skills": [
@@ -673,8 +673,8 @@
     "id": "aknosom-arms",
     "name": "傘鳥腕甲",
     "nameEn": "",
-    "setName": "傘鳥",
-    "setNameEn": "Aknosom",
+    "setName": "",
+    "setNameEn": "",
     "part": "arms",
     "defense": 182,
     "skills": [
@@ -694,14 +694,14 @@
     "id": "sinister-arms",
     "name": "禍鎧【臂甲】",
     "nameEn": "",
-    "setName": "禍鎧",
-    "setNameEn": "Magnamalo",
+    "setName": "",
+    "setNameEn": "",
     "part": "arms",
     "defense": 182,
     "skills": [
       {
         "skillId": "blast-attack",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 1,
@@ -711,14 +711,14 @@
     "id": "rajang-arms",
     "name": "金色臂甲",
     "nameEn": "",
-    "setName": "金色",
-    "setNameEn": "Rajang",
+    "setName": "",
+    "setNameEn": "",
     "part": "arms",
     "defense": 182,
     "skills": [
       {
         "skillId": "fighting-spirit",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 1,
@@ -728,8 +728,8 @@
     "id": "nergigante-arms",
     "name": "戰紋腕甲",
     "nameEn": "",
-    "setName": "戰紋",
-    "setNameEn": "Nergigante",
+    "setName": "",
+    "setNameEn": "",
     "part": "arms",
     "defense": 182,
     "skills": [
@@ -753,8 +753,8 @@
     "id": "lagombi-arms",
     "name": "白兔獸腕甲",
     "nameEn": "",
-    "setName": "白兔獸",
-    "setNameEn": "Lagombi",
+    "setName": "",
+    "setNameEn": "",
     "part": "arms",
     "defense": 182,
     "skills": [
@@ -774,14 +774,14 @@
     "id": "volvidon-arms",
     "name": "赤甲獸腕甲",
     "nameEn": "",
-    "setName": "赤甲獸",
-    "setNameEn": "Volvidon",
+    "setName": "",
+    "setNameEn": "",
     "part": "arms",
     "defense": 182,
     "skills": [
       {
         "skillId": "morph-boost",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 1,
@@ -791,14 +791,14 @@
     "id": "somnacanth-arms",
     "name": "人魚龍腕甲",
     "nameEn": "",
-    "setName": "人魚龍",
-    "setNameEn": "Somnacanth",
+    "setName": "",
+    "setNameEn": "",
     "part": "arms",
     "defense": 182,
     "skills": [
       {
         "skillId": "dodge-load",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 1,
@@ -808,14 +808,14 @@
     "id": "tigrex-arms",
     "name": "轟龍腕甲",
     "nameEn": "",
-    "setName": "轟龍",
-    "setNameEn": "Tigrex",
+    "setName": "",
+    "setNameEn": "",
     "part": "arms",
     "defense": 182,
     "skills": [
       {
         "skillId": "earplugs",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 2,
@@ -825,8 +825,8 @@
     "id": "brute-tigrex-arms",
     "name": "轟吼腕甲",
     "nameEn": "",
-    "setName": "轟吼",
-    "setNameEn": "Brute Tigrex",
+    "setName": "",
+    "setNameEn": "",
     "part": "arms",
     "defense": 182,
     "skills": [
@@ -850,8 +850,8 @@
     "id": "kirin-arms",
     "name": "麒麟長腕甲",
     "nameEn": "",
-    "setName": "麒麟",
-    "setNameEn": "Kirin",
+    "setName": "",
+    "setNameEn": "",
     "part": "arms",
     "defense": 182,
     "skills": [
@@ -875,14 +875,14 @@
     "id": "bazelgeuse-arms",
     "name": "爆鱗龍腕甲",
     "nameEn": "",
-    "setName": "爆鱗龍",
-    "setNameEn": "Bazelgeuse",
+    "setName": "",
+    "setNameEn": "",
     "part": "arms",
     "defense": 182,
     "skills": [
       {
         "skillId": "maximum-might",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 1,
@@ -892,14 +892,14 @@
     "id": "chatacabra-arms",
     "name": "纏蛙腕甲",
     "nameEn": "",
-    "setName": "纏蛙",
-    "setNameEn": "Chatacabra",
+    "setName": "",
+    "setNameEn": "",
     "part": "arms",
     "defense": 182,
     "skills": [
       {
         "skillId": "defense-ready",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 2,
@@ -909,14 +909,14 @@
     "id": "arzuros-arms",
     "name": "青熊獸腕甲",
     "nameEn": "",
-    "setName": "青熊獸",
-    "setNameEn": "Arzuros",
+    "setName": "",
+    "setNameEn": "",
     "part": "arms",
     "defense": 182,
     "skills": [
       {
         "skillId": "focus",
-        "level": 1
+        "level": 2
       },
       {
         "skillId": "sp-meter-boost",
@@ -930,14 +930,14 @@
     "id": "glavenus-arms",
     "name": "斬龍腕甲",
     "nameEn": "",
-    "setName": "斬龍",
-    "setNameEn": "Glavenus",
+    "setName": "",
+    "setNameEn": "",
     "part": "arms",
     "defense": 182,
     "skills": [
       {
         "skillId": "weakness-exploit",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 1,
@@ -947,8 +947,8 @@
     "id": "chameleos-arms",
     "name": "霞龍劍裝【大袖】",
     "nameEn": "",
-    "setName": "霞龍",
-    "setNameEn": "Chameleos",
+    "setName": "",
+    "setNameEn": "",
     "part": "arms",
     "defense": 182,
     "skills": [
@@ -958,7 +958,7 @@
       },
       {
         "skillId": "valor",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 1,
@@ -968,14 +968,14 @@
     "id": "wroggi-arms",
     "name": "毒狗龍腕甲",
     "nameEn": "",
-    "setName": "毒狗龍",
-    "setNameEn": "Great Wroggi",
+    "setName": "",
+    "setNameEn": "",
     "part": "arms",
     "defense": 182,
     "skills": [
       {
         "skillId": "critical-eye",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 1,
@@ -985,14 +985,14 @@
     "id": "bishaten-arms",
     "name": "天狗獸腕甲",
     "nameEn": "",
-    "setName": "天狗獸",
-    "setNameEn": "Bishaten",
+    "setName": "",
+    "setNameEn": "",
     "part": "arms",
     "defense": 182,
     "skills": [
       {
         "skillId": "slugger",
-        "level": 1
+        "level": 2
       },
       {
         "skillId": "skyward-striker",
@@ -1006,8 +1006,8 @@
     "id": "beotodus-arms",
     "name": "冰魚龍腕甲",
     "nameEn": "",
-    "setName": "冰魚龍",
-    "setNameEn": "Beotodus",
+    "setName": "",
+    "setNameEn": "",
     "part": "arms",
     "defense": 182,
     "skills": [
@@ -1017,7 +1017,7 @@
       },
       {
         "skillId": "focus",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 1,
@@ -1027,14 +1027,14 @@
     "id": "nargacuga-arms",
     "name": "迅龍腕甲",
     "nameEn": "",
-    "setName": "迅龍",
-    "setNameEn": "Nargacuga",
+    "setName": "",
+    "setNameEn": "",
     "part": "arms",
     "defense": 182,
     "skills": [
       {
         "skillId": "status-hit-boost",
-        "level": 1
+        "level": 3
       }
     ],
     "driftstoneSlots": 1,
@@ -1044,8 +1044,8 @@
     "id": "namielle-arms",
     "name": "觸角腕甲",
     "nameEn": "",
-    "setName": "觸角",
-    "setNameEn": "Namielle",
+    "setName": "",
+    "setNameEn": "",
     "part": "arms",
     "defense": 182,
     "skills": [
@@ -1069,14 +1069,14 @@
     "id": "garangolm-arms",
     "name": "剛纏獸腕甲",
     "nameEn": "",
-    "setName": "剛纏獸",
-    "setNameEn": "Garangolm",
+    "setName": "",
+    "setNameEn": "",
     "part": "arms",
     "defense": 182,
     "skills": [
       {
         "skillId": "resolute",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 1,
@@ -1086,14 +1086,14 @@
     "id": "lunagaron-arms",
     "name": "冰狼龍腕甲",
     "nameEn": "",
-    "setName": "冰狼龍",
-    "setNameEn": "Lunagaron",
+    "setName": "",
+    "setNameEn": "",
     "part": "arms",
     "defense": 182,
     "skills": [
       {
         "skillId": "charge-shockwave-boost",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 1,
@@ -1103,14 +1103,14 @@
     "id": "espinas-arms",
     "name": "棘龍雙手",
     "nameEn": "",
-    "setName": "棘龍",
-    "setNameEn": "Espinas",
+    "setName": "",
+    "setNameEn": "",
     "part": "arms",
     "defense": 182,
     "skills": [
       {
         "skillId": "special-partbreaker",
-        "level": 1
+        "level": 2
       },
       {
         "skillId": "lock-on",
@@ -1124,8 +1124,8 @@
     "id": "malzeno-arms",
     "name": "爵銀龍腕甲",
     "nameEn": "",
-    "setName": "爵銀龍",
-    "setNameEn": "Malzeno",
+    "setName": "",
+    "setNameEn": "",
     "part": "arms",
     "defense": 182,
     "skills": [
@@ -1149,8 +1149,8 @@
     "id": "quematrice-arms",
     "name": "炎尾龍腕甲",
     "nameEn": "",
-    "setName": "炎尾龍",
-    "setNameEn": "Quematrice",
+    "setName": "",
+    "setNameEn": "",
     "part": "arms",
     "defense": 182,
     "skills": [
@@ -1170,8 +1170,8 @@
     "id": "gossharag-arms",
     "name": "雪鬼獸腕甲",
     "nameEn": "",
-    "setName": "雪鬼獸",
-    "setNameEn": "Gossharag",
+    "setName": "",
+    "setNameEn": "",
     "part": "arms",
     "defense": 182,
     "skills": [
@@ -1191,8 +1191,8 @@
     "id": "astalos-arms",
     "name": "電龍腕甲",
     "nameEn": "",
-    "setName": "電龍",
-    "setNameEn": "Astalos",
+    "setName": "",
+    "setNameEn": "",
     "part": "arms",
     "defense": 182,
     "skills": [
@@ -1216,8 +1216,8 @@
     "id": "almudron-arms",
     "name": "泥翁龍腕甲",
     "nameEn": "",
-    "setName": "泥翁龍",
-    "setNameEn": "Almudron",
+    "setName": "",
+    "setNameEn": "",
     "part": "arms",
     "defense": 182,
     "skills": [
@@ -1237,8 +1237,8 @@
     "id": "seregios-arms",
     "name": "千刃龍腕甲",
     "nameEn": "",
-    "setName": "千刃龍",
-    "setNameEn": "Seregios",
+    "setName": "",
+    "setNameEn": "",
     "part": "arms",
     "defense": 182,
     "skills": [
@@ -1248,7 +1248,7 @@
       },
       {
         "skillId": "attack-boost",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 1,
@@ -1258,8 +1258,8 @@
     "id": "radobaan-arms",
     "name": "骨鎚龍腕甲",
     "nameEn": "",
-    "setName": "骨鎚龍",
-    "setNameEn": "Radobaan",
+    "setName": "",
+    "setNameEn": "",
     "part": "arms",
     "defense": 182,
     "skills": [
@@ -1279,14 +1279,14 @@
     "id": "banbaro-arms",
     "name": "猛牛龍腕甲",
     "nameEn": "",
-    "setName": "猛牛龍",
-    "setNameEn": "Banbaro",
+    "setName": "",
+    "setNameEn": "",
     "part": "arms",
     "defense": 182,
     "skills": [
       {
         "skillId": "offensive-guard",
-        "level": 1
+        "level": 2
       },
       {
         "skillId": "tremor-resistance",
@@ -1300,14 +1300,14 @@
     "id": "barioth-arms",
     "name": "冰牙龍腕甲",
     "nameEn": "",
-    "setName": "冰牙龍",
-    "setNameEn": "Barioth",
+    "setName": "",
+    "setNameEn": "",
     "part": "arms",
     "defense": 182,
     "skills": [
       {
         "skillId": "ice-attack",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 1,

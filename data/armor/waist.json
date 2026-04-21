@@ -3,8 +3,8 @@
     "id": "leather-waist",
     "name": "皮製皮帶",
     "nameEn": "",
-    "setName": "皮製",
-    "setNameEn": "Leather",
+    "setName": "無",
+    "setNameEn": "",
     "part": "waist",
     "defense": 182,
     "skills": [
@@ -24,14 +24,14 @@
     "id": "alloy-waist",
     "name": "合金腰甲",
     "nameEn": "",
-    "setName": "合金",
-    "setNameEn": "Alloy",
+    "setName": "無",
+    "setNameEn": "",
     "part": "waist",
     "defense": 182,
     "skills": [
       {
         "skillId": "defense-boost",
-        "level": 1
+        "level": 3
       }
     ],
     "driftstoneSlots": 1,
@@ -41,14 +41,14 @@
     "id": "jagras-waist",
     "name": "凶豺龍腰甲",
     "nameEn": "",
-    "setName": "凶豺龍",
-    "setNameEn": "Great Jagras",
+    "setName": "",
+    "setNameEn": "",
     "part": "waist",
     "defense": 182,
     "skills": [
       {
         "skillId": "fortify",
-        "level": 1
+        "level": 2
       },
       {
         "skillId": "battle-temper",
@@ -62,8 +62,8 @@
     "id": "kulu-waist",
     "name": "搔鳥腰甲",
     "nameEn": "",
-    "setName": "搔鳥",
-    "setNameEn": "Kulu-Ya-Ku",
+    "setName": "",
+    "setNameEn": "",
     "part": "waist",
     "defense": 182,
     "skills": [
@@ -83,14 +83,14 @@
     "id": "pukei-waist",
     "name": "毒妖鳥腰甲",
     "nameEn": "",
-    "setName": "毒妖鳥",
-    "setNameEn": "Pukei-Pukei",
+    "setName": "",
+    "setNameEn": "",
     "part": "waist",
     "defense": 182,
     "skills": [
       {
         "skillId": "poison-attack",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 1,
@@ -100,8 +100,8 @@
     "id": "coral-pukei-waist",
     "name": "妖水腰甲",
     "nameEn": "",
-    "setName": "妖水",
-    "setNameEn": "Coral Pukei-Pukei",
+    "setName": "",
+    "setNameEn": "",
     "part": "waist",
     "defense": 182,
     "skills": [
@@ -121,8 +121,8 @@
     "id": "barroth-waist",
     "name": "土砂龍腰甲",
     "nameEn": "",
-    "setName": "土砂龍",
-    "setNameEn": "Barroth",
+    "setName": "",
+    "setNameEn": "",
     "part": "waist",
     "defense": 182,
     "skills": [
@@ -142,8 +142,8 @@
     "id": "girros-waist",
     "name": "凶顎龍腰甲",
     "nameEn": "",
-    "setName": "凶顎龍",
-    "setNameEn": "Great Girros",
+    "setName": "",
+    "setNameEn": "",
     "part": "waist",
     "defense": 182,
     "skills": [
@@ -153,7 +153,7 @@
       },
       {
         "skillId": "earplugs",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 1,
@@ -163,14 +163,14 @@
     "id": "kadachi-waist",
     "name": "飛雷龍腰甲",
     "nameEn": "",
-    "setName": "飛雷龍",
-    "setNameEn": "Tobi-Kadachi",
+    "setName": "",
+    "setNameEn": "",
     "part": "waist",
     "defense": 182,
     "skills": [
       {
         "skillId": "thunder-attack",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 1,
@@ -180,8 +180,8 @@
     "id": "viper-kadachi-waist",
     "name": "朱毒腰甲",
     "nameEn": "",
-    "setName": "朱毒",
-    "setNameEn": "Viper Tobi-Kadachi",
+    "setName": "",
+    "setNameEn": "",
     "part": "waist",
     "defense": 182,
     "skills": [
@@ -191,7 +191,7 @@
       },
       {
         "skillId": "burst",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 1,
@@ -201,14 +201,14 @@
     "id": "paolumu-waist",
     "name": "浮空龍腰甲",
     "nameEn": "",
-    "setName": "浮空龍",
-    "setNameEn": "Paolumu",
+    "setName": "",
+    "setNameEn": "",
     "part": "waist",
     "defense": 182,
     "skills": [
       {
         "skillId": "divine-blessing",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 2,
@@ -218,14 +218,14 @@
     "id": "nightshade-paolumu-waist",
     "name": "浮夢腰甲",
     "nameEn": "",
-    "setName": "浮夢",
-    "setNameEn": "Nightshade Paolumu",
+    "setName": "",
+    "setNameEn": "",
     "part": "waist",
     "defense": 182,
     "skills": [
       {
         "skillId": "sneak-attack",
-        "level": 1
+        "level": 2
       },
       {
         "skillId": "evade-extender",
@@ -239,14 +239,14 @@
     "id": "jyuratodus-waist",
     "name": "泥魚龍腰甲",
     "nameEn": "",
-    "setName": "泥魚龍",
-    "setNameEn": "Jyuratodus",
+    "setName": "",
+    "setNameEn": "",
     "part": "waist",
     "defense": 182,
     "skills": [
       {
         "skillId": "water-resistance",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 2,
@@ -256,8 +256,8 @@
     "id": "anjanath-waist",
     "name": "蠻顎龍腰甲",
     "nameEn": "",
-    "setName": "蠻顎龍",
-    "setNameEn": "Anjanath",
+    "setName": "",
+    "setNameEn": "",
     "part": "waist",
     "defense": 182,
     "skills": [
@@ -277,14 +277,14 @@
     "id": "fulgur-anjanath-waist",
     "name": "雷顎腰甲",
     "nameEn": "",
-    "setName": "雷顎",
-    "setNameEn": "Fulgur Anjanath",
+    "setName": "",
+    "setNameEn": "",
     "part": "waist",
     "defense": 182,
     "skills": [
       {
         "skillId": "special-boost",
-        "level": 1
+        "level": 2
       },
       {
         "skillId": "lock-on",
@@ -298,8 +298,8 @@
     "id": "rathian-waist",
     "name": "雌火龍腰甲",
     "nameEn": "",
-    "setName": "雌火龍",
-    "setNameEn": "Rathian",
+    "setName": "",
+    "setNameEn": "",
     "part": "waist",
     "defense": 182,
     "skills": [
@@ -319,14 +319,14 @@
     "id": "pink-rathian-waist",
     "name": "火龍心腰甲",
     "nameEn": "",
-    "setName": "火龍心",
-    "setNameEn": "Pink Rathian",
+    "setName": "",
+    "setNameEn": "",
     "part": "waist",
     "defense": 182,
     "skills": [
       {
         "skillId": "critical-eye",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 1,
@@ -336,8 +336,8 @@
     "id": "gold-rathian-waist",
     "name": "金黃澄月腰甲",
     "nameEn": "",
-    "setName": "金黃澄月",
-    "setNameEn": "Gold Rathian",
+    "setName": "",
+    "setNameEn": "",
     "part": "waist",
     "defense": 182,
     "skills": [
@@ -357,8 +357,8 @@
     "id": "legiana-waist",
     "name": "風漂龍腰甲",
     "nameEn": "",
-    "setName": "風漂龍",
-    "setNameEn": "Legiana",
+    "setName": "",
+    "setNameEn": "",
     "part": "waist",
     "defense": 182,
     "skills": [
@@ -378,8 +378,8 @@
     "id": "diablos-waist",
     "name": "角龍腰甲",
     "nameEn": "",
-    "setName": "角龍",
-    "setNameEn": "Diablos",
+    "setName": "",
+    "setNameEn": "",
     "part": "waist",
     "defense": 182,
     "skills": [
@@ -399,8 +399,8 @@
     "id": "black-diablos-waist",
     "name": "暴君角龍腰甲",
     "nameEn": "",
-    "setName": "暴君角龍",
-    "setNameEn": "Black Diablos",
+    "setName": "",
+    "setNameEn": "",
     "part": "waist",
     "defense": 182,
     "skills": [
@@ -420,8 +420,8 @@
     "id": "rathalos-waist",
     "name": "火龍腰甲",
     "nameEn": "",
-    "setName": "火龍",
-    "setNameEn": "Rathalos",
+    "setName": "",
+    "setNameEn": "",
     "part": "waist",
     "defense": 182,
     "skills": [
@@ -441,8 +441,8 @@
     "id": "azure-rathalos-waist",
     "name": "火龍魂腰甲",
     "nameEn": "",
-    "setName": "火龍魂",
-    "setNameEn": "Azure Rathalos",
+    "setName": "",
+    "setNameEn": "",
     "part": "waist",
     "defense": 182,
     "skills": [
@@ -462,8 +462,8 @@
     "id": "silver-rathalos-waist",
     "name": "銀白耀日腰甲",
     "nameEn": "",
-    "setName": "銀白耀日",
-    "setNameEn": "Silver Rathalos",
+    "setName": "",
+    "setNameEn": "",
     "part": "waist",
     "defense": 182,
     "skills": [
@@ -479,8 +479,8 @@
     "id": "zinogre-waist",
     "name": "雷狼龍腰甲",
     "nameEn": "",
-    "setName": "雷狼龍",
-    "setNameEn": "Zinogre",
+    "setName": "",
+    "setNameEn": "",
     "part": "waist",
     "defense": 182,
     "skills": [
@@ -500,8 +500,8 @@
     "id": "tzitzi-waist",
     "name": "眩鳥腰甲",
     "nameEn": "",
-    "setName": "眩鳥",
-    "setNameEn": "Tzitzi-Ya-Ku",
+    "setName": "",
+    "setNameEn": "",
     "part": "waist",
     "defense": 182,
     "skills": [
@@ -521,8 +521,8 @@
     "id": "odogaron-waist",
     "name": "慘爪龍腰甲",
     "nameEn": "",
-    "setName": "慘爪龍",
-    "setNameEn": "Odogaron",
+    "setName": "",
+    "setNameEn": "",
     "part": "waist",
     "defense": 182,
     "skills": [
@@ -542,14 +542,14 @@
     "id": "ebony-odogaron-waist",
     "name": "亡爪腰甲",
     "nameEn": "",
-    "setName": "亡爪",
-    "setNameEn": "Ebony Odogaron",
+    "setName": "",
+    "setNameEn": "",
     "part": "waist",
     "defense": 182,
     "skills": [
       {
         "skillId": "critical-boost",
-        "level": 1
+        "level": 2
       },
       {
         "skillId": "sp-meter-boost-dodge",
@@ -563,14 +563,14 @@
     "id": "vangis-waist",
     "name": "恐暴龍腰甲",
     "nameEn": "",
-    "setName": "恐暴龍",
-    "setNameEn": "Deviljho",
+    "setName": "",
+    "setNameEn": "",
     "part": "waist",
     "defense": 182,
     "skills": [
       {
         "skillId": "dragon-attack",
-        "level": 1
+        "level": 2
       },
       {
         "skillId": "tremor-resistance",
@@ -584,14 +584,14 @@
     "id": "basarios-waist",
     "name": "岩龍腰甲",
     "nameEn": "",
-    "setName": "岩龍",
-    "setNameEn": "Basarios",
+    "setName": "",
+    "setNameEn": "",
     "part": "waist",
     "defense": 182,
     "skills": [
       {
         "skillId": "fire-attack",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 1,
@@ -601,14 +601,14 @@
     "id": "khezu-waist",
     "name": "奇怪龍腰甲",
     "nameEn": "",
-    "setName": "奇怪龍",
-    "setNameEn": "Khezu",
+    "setName": "",
+    "setNameEn": "",
     "part": "waist",
     "defense": 182,
     "skills": [
       {
         "skillId": "paralysis-resistance",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 2,
@@ -618,8 +618,8 @@
     "id": "kushala-waist",
     "name": "鋼龍安穩",
     "nameEn": "",
-    "setName": "鋼龍",
-    "setNameEn": "Kushala Daora",
+    "setName": "",
+    "setNameEn": "",
     "part": "waist",
     "defense": 182,
     "skills": [
@@ -643,14 +643,14 @@
     "id": "mizutsune-waist",
     "name": "泡狐龍腰甲",
     "nameEn": "",
-    "setName": "泡狐龍",
-    "setNameEn": "Mizutsune",
+    "setName": "",
+    "setNameEn": "",
     "part": "waist",
     "defense": 182,
     "skills": [
       {
         "skillId": "sp-meter-boost-dodge",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 1,
@@ -660,8 +660,8 @@
     "id": "kaiser-waist",
     "name": "帝王腰甲",
     "nameEn": "",
-    "setName": "帝王",
-    "setNameEn": "Teostra",
+    "setName": "",
+    "setNameEn": "",
     "part": "waist",
     "defense": 182,
     "skills": [
@@ -685,8 +685,8 @@
     "id": "aknosom-waist",
     "name": "傘鳥腰甲",
     "nameEn": "",
-    "setName": "傘鳥",
-    "setNameEn": "Aknosom",
+    "setName": "",
+    "setNameEn": "",
     "part": "waist",
     "defense": 182,
     "skills": [
@@ -706,8 +706,8 @@
     "id": "sinister-waist",
     "name": "禍鎧【腰具】",
     "nameEn": "",
-    "setName": "禍鎧",
-    "setNameEn": "Magnamalo",
+    "setName": "",
+    "setNameEn": "",
     "part": "waist",
     "defense": 182,
     "skills": [
@@ -727,14 +727,14 @@
     "id": "rajang-waist",
     "name": "金色帶",
     "nameEn": "",
-    "setName": "金色",
-    "setNameEn": "Rajang",
+    "setName": "",
+    "setNameEn": "",
     "part": "waist",
     "defense": 182,
     "skills": [
       {
         "skillId": "focus",
-        "level": 1
+        "level": 3
       }
     ],
     "driftstoneSlots": 0,
@@ -744,8 +744,8 @@
     "id": "nergigante-waist",
     "name": "戰紋腰甲",
     "nameEn": "",
-    "setName": "戰紋",
-    "setNameEn": "Nergigante",
+    "setName": "",
+    "setNameEn": "",
     "part": "waist",
     "defense": 182,
     "skills": [
@@ -769,14 +769,14 @@
     "id": "lagombi-waist",
     "name": "白兔獸腰甲",
     "nameEn": "",
-    "setName": "白兔獸",
-    "setNameEn": "Lagombi",
+    "setName": "",
+    "setNameEn": "",
     "part": "waist",
     "defense": 182,
     "skills": [
       {
         "skillId": "group-hunt-defense",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 1,
@@ -786,14 +786,14 @@
     "id": "volvidon-waist",
     "name": "赤甲獸腰甲",
     "nameEn": "",
-    "setName": "赤甲獸",
-    "setNameEn": "Volvidon",
+    "setName": "",
+    "setNameEn": "",
     "part": "waist",
     "defense": 182,
     "skills": [
       {
         "skillId": "special-insurance",
-        "level": 1
+        "level": 2
       },
       {
         "skillId": "fighting-spirit",
@@ -807,8 +807,8 @@
     "id": "somnacanth-waist",
     "name": "人魚龍腰甲",
     "nameEn": "",
-    "setName": "人魚龍",
-    "setNameEn": "Somnacanth",
+    "setName": "",
+    "setNameEn": "",
     "part": "waist",
     "defense": 182,
     "skills": [
@@ -828,14 +828,14 @@
     "id": "tigrex-waist",
     "name": "轟龍腰甲",
     "nameEn": "",
-    "setName": "轟龍",
-    "setNameEn": "Tigrex",
+    "setName": "",
+    "setNameEn": "",
     "part": "waist",
     "defense": 182,
     "skills": [
       {
         "skillId": "maximum-might",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 1,
@@ -845,8 +845,8 @@
     "id": "brute-tigrex-waist",
     "name": "轟吼腰甲",
     "nameEn": "",
-    "setName": "轟吼",
-    "setNameEn": "Brute Tigrex",
+    "setName": "",
+    "setNameEn": "",
     "part": "waist",
     "defense": 182,
     "skills": [
@@ -856,7 +856,7 @@
       },
       {
         "skillId": "attack-boost",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 1,
@@ -866,8 +866,8 @@
     "id": "kirin-waist",
     "name": "麒麟腰環",
     "nameEn": "",
-    "setName": "麒麟",
-    "setNameEn": "Kirin",
+    "setName": "",
+    "setNameEn": "",
     "part": "waist",
     "defense": 182,
     "skills": [
@@ -891,14 +891,14 @@
     "id": "bazelgeuse-waist",
     "name": "爆鱗龍腰甲",
     "nameEn": "",
-    "setName": "爆鱗龍",
-    "setNameEn": "Bazelgeuse",
+    "setName": "",
+    "setNameEn": "",
     "part": "waist",
     "defense": 182,
     "skills": [
       {
         "skillId": "artillery",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 1,
@@ -908,8 +908,8 @@
     "id": "chatacabra-waist",
     "name": "纏蛙腰甲",
     "nameEn": "",
-    "setName": "纏蛙",
-    "setNameEn": "Chatacabra",
+    "setName": "",
+    "setNameEn": "",
     "part": "waist",
     "defense": 182,
     "skills": [
@@ -919,7 +919,7 @@
       },
       {
         "skillId": "resentment",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 1,
@@ -929,14 +929,14 @@
     "id": "arzuros-waist",
     "name": "青熊獸腰甲",
     "nameEn": "",
-    "setName": "青熊獸",
-    "setNameEn": "Arzuros",
+    "setName": "",
+    "setNameEn": "",
     "part": "waist",
     "defense": 182,
     "skills": [
       {
         "skillId": "morph-boost",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 1,
@@ -946,14 +946,14 @@
     "id": "glavenus-waist",
     "name": "斬龍腰甲",
     "nameEn": "",
-    "setName": "斬龍",
-    "setNameEn": "Glavenus",
+    "setName": "",
+    "setNameEn": "",
     "part": "waist",
     "defense": 182,
     "skills": [
       {
         "skillId": "quick-work",
-        "level": 1
+        "level": 2
       },
       {
         "skillId": "sneak-attack",
@@ -967,8 +967,8 @@
     "id": "chameleos-waist",
     "name": "霞龍劍裝【圓帶】",
     "nameEn": "",
-    "setName": "霞龍",
-    "setNameEn": "Chameleos",
+    "setName": "",
+    "setNameEn": "",
     "part": "waist",
     "defense": 182,
     "skills": [
@@ -978,7 +978,7 @@
       },
       {
         "skillId": "follow-up-poison",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 1,
@@ -988,14 +988,14 @@
     "id": "wroggi-waist",
     "name": "毒狗龍腰甲",
     "nameEn": "",
-    "setName": "毒狗龍",
-    "setNameEn": "Great Wroggi",
+    "setName": "",
+    "setNameEn": "",
     "part": "waist",
     "defense": 182,
     "skills": [
       {
         "skillId": "guard",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 2,
@@ -1005,8 +1005,8 @@
     "id": "bishaten-waist",
     "name": "天狗獸腰甲",
     "nameEn": "",
-    "setName": "天狗獸",
-    "setNameEn": "Bishaten",
+    "setName": "",
+    "setNameEn": "",
     "part": "waist",
     "defense": 182,
     "skills": [
@@ -1016,7 +1016,7 @@
       },
       {
         "skillId": "group-hunt-attack",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 1,
@@ -1026,14 +1026,14 @@
     "id": "beotodus-waist",
     "name": "冰魚龍腰甲",
     "nameEn": "",
-    "setName": "冰魚龍",
-    "setNameEn": "Beotodus",
+    "setName": "",
+    "setNameEn": "",
     "part": "waist",
     "defense": 182,
     "skills": [
       {
         "skillId": "load-guard",
-        "level": 1
+        "level": 2
       },
       {
         "skillId": "ice-attack",
@@ -1047,14 +1047,14 @@
     "id": "nargacuga-waist",
     "name": "迅龍腰甲",
     "nameEn": "",
-    "setName": "迅龍",
-    "setNameEn": "Nargacuga",
+    "setName": "",
+    "setNameEn": "",
     "part": "waist",
     "defense": 182,
     "skills": [
       {
         "skillId": "dodge-load",
-        "level": 1
+        "level": 2
       },
       {
         "skillId": "peak-performance",
@@ -1068,8 +1068,8 @@
     "id": "namielle-waist",
     "name": "觸角腰甲",
     "nameEn": "",
-    "setName": "觸角",
-    "setNameEn": "Namielle",
+    "setName": "",
+    "setNameEn": "",
     "part": "waist",
     "defense": 182,
     "skills": [
@@ -1079,7 +1079,7 @@
       },
       {
         "skillId": "water-attack",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 1,
@@ -1089,8 +1089,8 @@
     "id": "garangolm-waist",
     "name": "剛纏獸護裙",
     "nameEn": "",
-    "setName": "剛纏獸",
-    "setNameEn": "Garangolm",
+    "setName": "",
+    "setNameEn": "",
     "part": "waist",
     "defense": 182,
     "skills": [
@@ -1100,7 +1100,7 @@
       },
       {
         "skillId": "reload-speed",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 1,
@@ -1110,14 +1110,14 @@
     "id": "lunagaron-waist",
     "name": "冰狼龍腰甲",
     "nameEn": "",
-    "setName": "冰狼龍",
-    "setNameEn": "Lunagaron",
+    "setName": "",
+    "setNameEn": "",
     "part": "waist",
     "defense": 182,
     "skills": [
       {
         "skillId": "health-boost",
-        "level": 1
+        "level": 3
       }
     ],
     "driftstoneSlots": 1,
@@ -1127,14 +1127,14 @@
     "id": "espinas-waist",
     "name": "棘龍臍帶",
     "nameEn": "",
-    "setName": "棘龍",
-    "setNameEn": "Espinas",
+    "setName": "",
+    "setNameEn": "",
     "part": "waist",
     "defense": 182,
     "skills": [
       {
         "skillId": "follow-up",
-        "level": 1
+        "level": 2
       },
       {
         "skillId": "partbreaker",
@@ -1148,8 +1148,8 @@
     "id": "malzeno-waist",
     "name": "爵銀龍腰甲",
     "nameEn": "",
-    "setName": "爵銀龍",
-    "setNameEn": "Malzeno",
+    "setName": "",
+    "setNameEn": "",
     "part": "waist",
     "defense": 182,
     "skills": [
@@ -1159,7 +1159,7 @@
       },
       {
         "skillId": "fighting-spirit",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 1,
@@ -1169,14 +1169,14 @@
     "id": "quematrice-waist",
     "name": "炎尾龍腰甲",
     "nameEn": "",
-    "setName": "炎尾龍",
-    "setNameEn": "Quematrice",
+    "setName": "",
+    "setNameEn": "",
     "part": "waist",
     "defense": 182,
     "skills": [
       {
         "skillId": "evasive-concentration",
-        "level": 1
+        "level": 2
       },
       {
         "skillId": "sp-meter-boost",
@@ -1190,8 +1190,8 @@
     "id": "gossharag-waist",
     "name": "雪鬼獸腰甲",
     "nameEn": "",
-    "setName": "雪鬼獸",
-    "setNameEn": "Gossharag",
+    "setName": "",
+    "setNameEn": "",
     "part": "waist",
     "defense": 182,
     "skills": [
@@ -1201,7 +1201,7 @@
       },
       {
         "skillId": "morph-attack-boost",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 1,
@@ -1211,8 +1211,8 @@
     "id": "astalos-waist",
     "name": "電龍腰甲",
     "nameEn": "",
-    "setName": "電龍",
-    "setNameEn": "Astalos",
+    "setName": "",
+    "setNameEn": "",
     "part": "waist",
     "defense": 182,
     "skills": [
@@ -1236,8 +1236,8 @@
     "id": "almudron-waist",
     "name": "泥翁龍腰甲",
     "nameEn": "",
-    "setName": "泥翁龍",
-    "setNameEn": "Almudron",
+    "setName": "",
+    "setNameEn": "",
     "part": "waist",
     "defense": 182,
     "skills": [
@@ -1261,8 +1261,8 @@
     "id": "seregios-waist",
     "name": "千刃龍腰甲",
     "nameEn": "",
-    "setName": "千刃龍",
-    "setNameEn": "Seregios",
+    "setName": "",
+    "setNameEn": "",
     "part": "waist",
     "defense": 182,
     "skills": [
@@ -1286,14 +1286,14 @@
     "id": "radobaan-waist",
     "name": "骨鎚龍腰甲",
     "nameEn": "",
-    "setName": "骨鎚龍",
-    "setNameEn": "Radobaan",
+    "setName": "",
+    "setNameEn": "",
     "part": "waist",
     "defense": 182,
     "skills": [
       {
         "skillId": "sleep-attack",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 1,
@@ -1303,14 +1303,14 @@
     "id": "banbaro-waist",
     "name": "猛牛龍腰甲",
     "nameEn": "",
-    "setName": "猛牛龍",
-    "setNameEn": "Banbaro",
+    "setName": "",
+    "setNameEn": "",
     "part": "waist",
     "defense": 182,
     "skills": [
       {
         "skillId": "attack-boost",
-        "level": 1
+        "level": 2
       },
       {
         "skillId": "firm-foothold",
@@ -1324,8 +1324,8 @@
     "id": "barioth-waist",
     "name": "冰牙龍腰甲",
     "nameEn": "",
-    "setName": "冰牙龍",
-    "setNameEn": "Barioth",
+    "setName": "",
+    "setNameEn": "",
     "part": "waist",
     "defense": 182,
     "skills": [
