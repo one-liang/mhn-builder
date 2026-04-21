@@ -38,43 +38,62 @@ const skillBadges = computed(() => {
   <button
     class="w-full flex items-center gap-3 p-2.5 rounded-lg border transition-colors min-h-[52px] text-left cursor-pointer"
     :class="item
-      ? 'bg-card border-border hover:border-primary/60'
+      ? 'bg-card border-border/80 border-l-2 border-l-primary/50 hover:border-primary/70'
       : 'bg-card/40 border-dashed border-border/60 hover:border-primary/40'"
     @click="emit('open')"
   >
-    <!-- Icon -->
-    <div
-      class="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-md"
-      :class="item ? 'bg-secondary text-primary' : 'bg-secondary/40 text-muted-foreground/60'"
-    >
-      <WeaponTypeIcon
-        v-if="isWeapon && item && 'type' in item"
-        :type="(item as Weapon).type"
-        class="w-6 h-6"
-      />
-      <ArmorPartIcon
-        v-else-if="!isWeapon"
-        :part="slotType"
-        class="w-6 h-6"
-      />
-      <!-- Weapon unselected icon -->
-      <svg
-        v-else-if="isWeapon"
-        xmlns="http://www.w3.org/2000/svg"
-        width="22"
-        height="22"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="1.8"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+    <!-- Icon group: type icon + item image -->
+    <div class="flex-shrink-0 flex items-center gap-1.5">
+      <!-- Type icon (shrinks when item selected) -->
+      <div
+        class="flex items-center justify-center rounded-md transition-all"
+        :class="item
+          ? 'w-8 h-8 bg-secondary/60 text-primary'
+          : 'w-10 h-10 bg-secondary/40 text-muted-foreground/60'"
       >
-        <polyline points="14.5 17.5 3 6 3 3 6 3 17.5 14.5" />
-        <line x1="13" x2="19" y1="19" y2="13" />
-        <line x1="16" x2="20" y1="16" y2="20" />
-        <line x1="19" x2="21" y1="21" y2="19" />
-      </svg>
+        <WeaponTypeIcon
+          v-if="isWeapon && item && 'type' in item"
+          :type="(item as Weapon).type"
+          class="w-5 h-5"
+        />
+        <ArmorPartIcon
+          v-else-if="!isWeapon"
+          :part="slotType"
+          :class="item ? 'w-5 h-5' : 'w-6 h-6'"
+        />
+        <!-- Weapon unselected icon -->
+        <svg
+          v-else-if="isWeapon"
+          xmlns="http://www.w3.org/2000/svg"
+          width="22"
+          height="22"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <polyline points="14.5 17.5 3 6 3 3 6 3 17.5 14.5" />
+          <line x1="13" x2="19" y1="19" y2="13" />
+          <line x1="16" x2="20" y1="16" y2="20" />
+          <line x1="19" x2="21" y1="21" y2="19" />
+        </svg>
+      </div>
+
+      <!-- Item image (only when selected) -->
+      <div
+        v-if="item"
+        class="w-10 h-10 rounded-md bg-secondary overflow-hidden flex-shrink-0"
+      >
+        <img
+          :src="item.image"
+          :alt="item.name"
+          class="w-full h-full object-cover"
+          loading="lazy"
+          @error="($event.target as HTMLImageElement).style.display = 'none'"
+        />
+      </div>
     </div>
 
     <!-- Content -->
