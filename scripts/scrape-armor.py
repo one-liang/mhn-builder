@@ -12,6 +12,69 @@ import time
 import sys
 from pathlib import Path
 
+# Official website URL-based skill IDs → our internal skill IDs.
+# The scraper extracts skill IDs from URL segments (e.g. /zh/skills/powerhouse),
+# but our skills.json and the UI use a different internal naming convention.
+# Keeping this map here ensures every future scrape produces correctly-named IDs
+# without needing to run fix-armor-skill-ids.py as a separate manual step.
+SKILL_ID_REMAP = {
+    "abnormal-status-enhancement": "status-sneak-attack",
+    "airborne":                    "skyward-striker",
+    "armor-up":                    "defense-ready",
+    "attack-boost-secret":         "attack-boost-peak",
+    "attack-up-critical-down":     "brute-force",
+    "auto-just-dodge":             "absolute-evasion-sp",
+    "ballistic":                   "ballistics",
+    "blast-resistance":            "blastblight-resistance",
+    "bloodblight-cloak":           "bloody-shroud",
+    "bravery":                     "valor",
+    "break-attack-boost":          "follow-up",
+    "brutal-strike":               "maximum-might",
+    "buildup-boost":               "status-hit-boost",
+    "burst-dodger":                "offensive-dodger",
+    "burst-secret":                "burst-peak",
+    "chameleos-poison":            "chameleos-miasma",
+    "charge-up":                   "charge-shockwave-boost",
+    "concentration":               "sp-meter-boost",
+    "deathgaron":                  "steadfast",
+    "disable-perfect-evade":       "resolute",
+    "ending-shot":                 "final-shot",
+    "enhancement-normal-ammo":     "normal-shots-boost",
+    "evasive-reload":              "dodge-load",
+    "feat-of-agility":             "quick-work",
+    "guarding-reload":             "load-guard",
+    "hellfire-cloak":              "foxfire-veil",
+    "high-performance-dragon":     "hi-dragon",
+    "high-performance-fire":       "hi-fire",
+    "high-performance-ice":        "hi-ice",
+    "high-performance-thunder":    "hi-thunder",
+    "ice-attack-boost-secret":     "ice-attack-peak",
+    "kirin-robe":                  "rajang-thunderclap",
+    "kushala-bless":               "kushala-frostwind",
+    "last-stand":                  "last-stand-guard",
+    "malzeno-blood":               "valstrax-bloodspray",
+    "move-forward-strengthen":     "evasive-concentration",
+    "multi-attack-boost":          "group-hunt-attack",
+    "multiplayer-boost":           "group-hunt-defense",
+    "namielle-wave":               "namielle-thunderwave",
+    "nergigante-greed":            "nergigante-hunger",
+    "part-break-special-boost":    "special-partbreaker",
+    "perfect-evade-attack-boost":  "aggressive-dodger",
+    "perfect-evade-sp-charge":     "sp-meter-boost-dodge",
+    "power-burst":                 "true-ability",
+    "powerhouse":                  "attack-activation",
+    "powerhouse-critical":         "attack-crit",
+    "pursuit-paralysis":           "follow-up-paralysis",
+    "pursuit-poison":              "follow-up-poison",
+    "rising-tide":                 "battle-temper",
+    "sleep-enhancement":           "awakening-strike",
+    "sp-insurance":                "special-insurance",
+    "spare-shot":                  "ammo-saver",
+    "teostra-bless":               "teostra-blastpowder",
+    "thunder-attack-boost-secret": "thunder-attack-peak",
+    "water-attack-boost-secret":   "water-attack-peak",
+}
+
 BASE_URL = "https://monsterhunternow.com/zh/armor"
 HEADERS = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)"}
 
@@ -152,17 +215,20 @@ def extract_armor_data(html, url_key, id_prefix, part):
             defense = vals[-2] if len(vals) >= 2 else vals[-1]
 
     # Extract skills: find all skill links in the table
+    # The page shows each skill across multiple upgrade tiers — keep the MAX level per skill
     skill_links = re.findall(
         r'href="/zh/skills/([^"]+)"[^>]*>\s*<p>([^<]+?)\s+Lv(\d+)</p>',
         html
     )
-    skills = []
-    seen_skills = {}
+    max_skill_levels: dict[str, int] = {}
     for skill_url, _skill_name, level in skill_links:
-        skill_id = skill_url.replace("_", "-").rstrip("/")
-        if skill_id not in seen_skills:
-            seen_skills[skill_id] = int(level)
-            skills.append({"skillId": skill_id, "level": int(level)})
+        raw_id = skill_url.replace("_", "-").rstrip("/")
+        # Remap official URL-based IDs to our internal skill IDs
+        skill_id = SKILL_ID_REMAP.get(raw_id, raw_id)
+        lv = int(level)
+        if lv > max_skill_levels.get(skill_id, 0):
+            max_skill_levels[skill_id] = lv
+    skills = [{"skillId": sid, "level": lv} for sid, lv in max_skill_levels.items()]
 
     # Extract max driftstone slots
     # Look for <p>数字</p> in the driftstone column (not "無")

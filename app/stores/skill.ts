@@ -11,7 +11,7 @@ export interface Skill {
   nameEn: string
   description: string
   maxLevel: number
-  category: 'attack' | 'element' | 'defense' | 'resistance' | 'utility'
+  category: 'attack' | 'element' | 'defense' | 'resistance' | 'utility' | 'other'
   levels: SkillLevel[]
 }
 
@@ -63,6 +63,9 @@ export const useSkillStore = defineStore('skill', () => {
 
   function getByCategory(category: string) {
     if (!category || category === 'all') return skills.value
+    if (category === 'defense-resistance') {
+      return skills.value.filter(s => s.category === 'defense' || s.category === 'resistance')
+    }
     return skills.value.filter(s => s.category === category)
   }
 
@@ -77,9 +80,8 @@ export const useSkillStore = defineStore('skill', () => {
     { id: 'all', name: '全部' },
     { id: 'attack', name: '攻擊' },
     { id: 'element', name: '屬性' },
-    { id: 'defense', name: '防禦' },
-    { id: 'resistance', name: '耐性' },
-    { id: 'utility', name: '輔助' },
+    { id: 'utility', name: '動作' },
+    { id: 'defense-resistance', name: '防禦耐性' },
   ])
 
   return { skills, loaded, load, getById, getByCategory, search, categories }

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useSkillStore } from '~/stores/skill'
+import driftstoneData from '../../data/driftstone-skills.json'
 
 const props = defineProps<{
   open: boolean
@@ -12,20 +13,62 @@ const emit = defineEmits<{
 
 const skillStore = useSkillStore()
 const search = ref('')
+const activeStone = ref('all')
+
+// Build stone filter list: 全部 + each unique color stone + 純石
+const STONE_FILTERS = [
+  { id: 'all', name: '全部' },
+  ...driftstoneData.stones
+    .filter(s => !s.prime)
+    .map(s => ({ id: s.id, name: s.name })),
+  { id: 'prime', name: '純石' },
+]
+
+const ACHIEVABLE_IDS = new Set(driftstoneData.achievableSkillIds)
+
+// For each stone id: Set of skill IDs it can provide
+const STONE_SKILL_MAP = new Map<string, Set<string>>()
+for (const stone of driftstoneData.stones) {
+  if (!STONE_SKILL_MAP.has(stone.id)) {
+    STONE_SKILL_MAP.set(stone.id, new Set(stone.skillIds))
+  }
+}
+// Build "prime" pseudo-filter: all skills with a dedicated prime stone
+const primeSkillIds = new Set(
+  driftstoneData.stones.filter(s => s.prime).flatMap(s => s.skillIds)
+)
 
 watch(
   () => props.open,
   (isOpen) => {
-    if (isOpen) search.value = ''
+    if (isOpen) {
+      search.value = ''
+      activeStone.value = 'all'
+    }
   }
 )
 
 const filteredSkills = computed(() => {
+  // Step 1: filter by stone
+  let list = skillStore.skills.filter(s => ACHIEVABLE_IDS.has(s.id))
+
+  if (activeStone.value !== 'all') {
+    if (activeStone.value === 'prime') {
+      list = list.filter(s => primeSkillIds.has(s.id))
+    } else {
+      const stoneIds = STONE_SKILL_MAP.get(activeStone.value)
+      if (stoneIds) list = list.filter(s => stoneIds.has(s.id))
+    }
+  }
+
+  // Step 2: filter by search query
   const q = search.value.trim().toLowerCase()
-  if (!q) return skillStore.skills
-  return skillStore.skills.filter((s) => {
-    return s.name.toLowerCase().includes(q) || (s.nameEn ?? '').toLowerCase().includes(q)
-  })
+  if (q) {
+    list = list.filter(s =>
+      s.name.toLowerCase().includes(q) || (s.nameEn ?? '').toLowerCase().includes(q)
+    )
+  }
+  return list
 })
 
 function close() {
@@ -46,12 +89,8 @@ function onKeydown(e: KeyboardEvent) {
   if (e.key === 'Escape' && props.open) close()
 }
 
-onMounted(() => {
-  window.addEventListener('keydown', onKeydown)
-})
-onBeforeUnmount(() => {
-  window.removeEventListener('keydown', onKeydown)
-})
+onMounted(() => { window.addEventListener('keydown', onKeydown) })
+onBeforeUnmount(() => { window.removeEventListener('keydown', onKeydown) })
 </script>
 
 <template>
@@ -70,7 +109,7 @@ onBeforeUnmount(() => {
         >
           <!-- Header -->
           <div class="flex items-center justify-between px-4 h-12 border-b border-border">
-            <h2 class="text-sm font-semibold text-foreground">選擇漂移鑲嵌技能</h2>
+            <h2 class="text-sm font-semibold text-foreground">選擇漂流鍊成技能</h2>
             <button
               class="p-2 -mr-2 text-muted-foreground hover:text-foreground transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center"
               aria-label="關閉"
@@ -80,14 +119,28 @@ onBeforeUnmount(() => {
             </button>
           </div>
 
-          <!-- Search -->
-          <div class="p-3 border-b border-border">
+          <!-- Search + stone filter -->
+          <div class="px-3 pt-3 pb-2 border-b border-border flex flex-col gap-2">
             <input
               v-model="search"
               type="text"
-              placeholder="搜尋技能名稱..."
+              placeholder="搜尋漂流技能名稱..."
               class="w-full px-3 py-2 rounded-lg bg-secondary border border-border text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary/60 min-h-[44px]"
             />
+            <!-- Stone color filter pills -->
+            <div class="flex gap-1.5 overflow-x-auto pb-0.5 scrollbar-none">
+              <button
+                v-for="stone in STONE_FILTERS"
+                :key="stone.id"
+                class="flex-shrink-0 px-2.5 py-1 rounded-full text-[11px] font-medium border transition-all cursor-pointer whitespace-nowrap"
+                :class="activeStone === stone.id
+                  ? 'bg-primary text-primary-foreground border-primary'
+                  : 'bg-secondary text-muted-foreground border-border hover:border-primary/50'"
+                @click="activeStone = stone.id"
+              >
+                {{ stone.name }}
+              </button>
+            </div>
           </div>
 
           <!-- List -->
@@ -115,17 +168,24 @@ onBeforeUnmount(() => {
             >
               <div class="flex items-center gap-3">
                 <div class="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-md bg-secondary text-primary/80">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 6-10 13L2 9Z"/><path d="M11 3 8 9l4 13 4-13-3-6"/><path d="M2 9h20"/></svg>
                 </div>
                 <div class="min-w-0 flex-1">
-                  <div class="text-sm font-medium text-foreground">{{ skill.name }}</div>
+                  <div class="flex items-center gap-1.5">
+                    <span class="text-sm font-medium text-foreground">{{ skill.name }}</span>
+                    <!-- Pure stone badge -->
+                    <span
+                      v-if="primeSkillIds.has(skill.id)"
+                      class="text-[9px] px-1 py-0.5 rounded bg-primary/15 text-primary border border-primary/25 flex-shrink-0"
+                    >純石</span>
+                  </div>
                   <div class="text-[11px] text-muted-foreground mt-0.5">最高 Lv{{ skill.maxLevel }}</div>
                 </div>
               </div>
             </div>
 
             <p v-if="!filteredSkills.length" class="text-center text-muted-foreground py-8 text-sm">
-              找不到符合條件的技能
+              找不到符合條件的漂流技能
             </p>
           </div>
         </div>
@@ -135,6 +195,8 @@ onBeforeUnmount(() => {
 </template>
 
 <style scoped>
+.scrollbar-none { scrollbar-width: none; -ms-overflow-style: none; }
+.scrollbar-none::-webkit-scrollbar { display: none; }
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.2s ease;

@@ -2,10 +2,11 @@
 const route = useRoute()
 
 const tabs = [
-  { name: '防具', path: '/armor',   icon: 'shield', iconImg: null },
-  { name: '武器', path: '/weapons', icon: 'sword',  iconImg: '/images/weapon-types/weapon_great_sword.svg' },
-  { name: '配裝', path: '/build',   icon: 'build',  iconImg: null },
-  { name: '技能', path: '/skills',  icon: 'zap',    iconImg: '/images/skills/skill.png' },
+  { name: '防具',   path: '/armor',       icon: 'shield', iconImg: null },
+  { name: '武器',   path: '/weapons',     icon: 'sword',  iconImg: '/images/weapon-types/weapon_great_sword.svg' },
+  { name: '配裝',   path: '/build',       icon: 'build',  iconImg: null },
+  { name: '技能',   path: '/skills',      icon: 'zap',    iconImg: '/images/skills/skill.png' },
+  { name: '漂流石', path: '/driftstones', icon: 'gem',    iconImg: null },
 ]
 
 function isActive(path: string) {
@@ -23,7 +24,7 @@ function isActive(path: string) {
         class="flex flex-col items-center justify-center flex-1 h-full min-h-[44px] transition-colors px-1"
         :class="isActive(tab.path) ? 'text-primary' : 'text-muted-foreground hover:text-foreground'"
       >
-        <!-- Official image icon -->
+        <!-- Official image icon (weapon_great_sword.svg / skill.png) -->
         <img
           v-if="tab.iconImg"
           :src="tab.iconImg"
@@ -35,6 +36,8 @@ function isActive(path: string) {
         <svg v-if="!tab.iconImg && tab.icon === 'shield'" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg>
         <!-- Build icon (sword + shield) -->
         <svg v-if="!tab.iconImg && tab.icon === 'build'" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 17.5 3 6V3h3l11.5 11.5"/><path d="m13 19 6-6"/><path d="m16 16 4 4"/><path d="M19 5c0 3-2 5-4 5.5"/><path d="M15 2c2 0 4 1 4 3 0 .5-.1 1-.3 1.5"/></svg>
+        <!-- Gem icon -->
+        <svg v-if="!tab.iconImg && tab.icon === 'gem'" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 6-10 13L2 9Z"/><path d="M11 3 8 9l4 13 4-13-3-6"/><path d="M2 9h20"/></svg>
 <span class="text-[10px] mt-0.5 font-medium">{{ tab.name }}</span>
       </NuxtLink>
     </div>
