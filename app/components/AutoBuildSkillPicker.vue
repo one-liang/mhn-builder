@@ -8,12 +8,17 @@ const props = defineProps<{
 
 const emit = defineEmits<{
   (e: 'update:open', v: boolean): void
-  (e: 'select', skillId: string): void
+  (e: 'selectMany', skillIds: string[]): void
+  (e: 'deselectMany', skillIds: string[]): void
 }>()
 
 const skillStore = useSkillStore()
 const search = ref('')
 const activeCategory = ref('all')
+const pendingIds = ref<Set<string>>(new Set())
+const toRemoveIds = ref<Set<string>>(new Set())
+
+const MAX_SKILLS = 6
 
 watch(
   () => props.open,
@@ -21,6 +26,8 @@ watch(
     if (isOpen) {
       search.value = ''
       activeCategory.value = 'all'
+      pendingIds.value = new Set()
+      toRemoveIds.value = new Set()
     }
   }
 )
@@ -38,14 +45,36 @@ const filteredSkills = computed(() => {
 
 const excludeSet = computed(() => new Set(props.excludeIds ?? []))
 
+// Net selected: existing (minus those marked for removal) + new pending
+const totalSelected = computed(() =>
+  excludeSet.value.size - toRemoveIds.value.size + pendingIds.value.size
+)
+
+const canAddMore = computed(() => totalSelected.value < MAX_SKILLS)
+
 function close() {
+  emit('selectMany', [...pendingIds.value])
+  emit('deselectMany', [...toRemoveIds.value])
   emit('update:open', false)
 }
 
-function onSelect(skillId: string) {
-  if (excludeSet.value.has(skillId)) return
-  emit('select', skillId)
-  close()
+function toggleSkill(skillId: string) {
+  if (excludeSet.value.has(skillId)) {
+    // Toggle removal of an already-selected skill
+    const next = new Set(toRemoveIds.value)
+    if (next.has(skillId)) next.delete(skillId)
+    else next.add(skillId)
+    toRemoveIds.value = next
+    return
+  }
+  if (pendingIds.value.has(skillId)) {
+    const next = new Set(pendingIds.value)
+    next.delete(skillId)
+    pendingIds.value = next
+  } else {
+    if (!canAddMore.value) return
+    pendingIds.value = new Set([...pendingIds.value, skillId])
+  }
 }
 
 function onKeydown(e: KeyboardEvent) {
@@ -73,13 +102,15 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
           <!-- Header -->
           <div class="flex items-center justify-between px-4 h-12 border-b border-border">
             <h2 class="text-sm font-semibold text-foreground">選擇目標技能</h2>
-            <button
-              class="p-2 -mr-2 text-muted-foreground hover:text-foreground transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center"
-              aria-label="關閉"
-              @click="close"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
-            </button>
+            <div class="flex items-center gap-2">
+              <span class="text-xs text-muted-foreground">{{ totalSelected }}/{{ MAX_SKILLS }}</span>
+              <button
+                class="px-3 py-1 text-xs font-semibold rounded-md bg-primary text-primary-foreground hover:brightness-110 transition-all min-h-[32px] cursor-pointer"
+                @click="close"
+              >
+                完成
+              </button>
+            </div>
           </div>
 
           <!-- Search -->
@@ -112,26 +143,52 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
               v-for="skill in filteredSkills"
               :key="skill.id"
               role="button"
-              :tabindex="excludeSet.has(skill.id) ? -1 : 0"
+              :tabindex="0"
               class="p-3 rounded-lg border transition-colors"
-              :class="excludeSet.has(skill.id)
-                ? 'bg-secondary/20 border-border opacity-35 cursor-not-allowed'
-                : 'bg-secondary/40 border-border hover:border-primary/40 cursor-pointer'"
-              @click="onSelect(skill.id)"
-              @keydown.enter="onSelect(skill.id)"
-              @keydown.space.prevent="onSelect(skill.id)"
+              :class="toRemoveIds.has(skill.id)
+                ? 'bg-destructive/10 border-destructive/40 cursor-pointer'
+                : excludeSet.has(skill.id)
+                  ? 'bg-primary/12 border-primary/40 cursor-pointer'
+                  : pendingIds.has(skill.id)
+                    ? 'bg-primary/15 border-primary/50 cursor-pointer'
+                    : (!canAddMore
+                      ? 'bg-secondary/40 border-border opacity-50 cursor-not-allowed'
+                      : 'bg-secondary/40 border-border hover:border-primary/40 cursor-pointer')"
+              @click="toggleSkill(skill.id)"
+              @keydown.enter="toggleSkill(skill.id)"
+              @keydown.space.prevent="toggleSkill(skill.id)"
             >
               <div class="flex items-center gap-3">
+                <!-- Icon -->
                 <div
                   class="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-md bg-secondary"
-                  :class="excludeSet.has(skill.id) ? 'text-muted-foreground/40' : 'text-primary/80'"
+                  :class="toRemoveIds.has(skill.id)
+                    ? 'text-destructive'
+                    : (excludeSet.has(skill.id) || pendingIds.has(skill.id))
+                      ? 'text-primary'
+                      : 'text-primary/80'"
                 >
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>
+                  <!-- X icon: marked for removal -->
+                  <svg v-if="toRemoveIds.has(skill.id)" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+                  <!-- Checkmark: already in targetSkills -->
+                  <svg v-else-if="excludeSet.has(skill.id)" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                  <!-- Checkmark: newly pending -->
+                  <svg v-else-if="pendingIds.has(skill.id)" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                  <!-- Default zap -->
+                  <svg v-else xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>
                 </div>
                 <div class="min-w-0 flex-1">
-                  <div class="text-sm font-medium text-foreground">
+                  <div
+                    class="text-sm font-medium"
+                    :class="toRemoveIds.has(skill.id)
+                      ? 'text-destructive line-through'
+                      : (excludeSet.has(skill.id) || pendingIds.has(skill.id))
+                        ? 'text-primary'
+                        : 'text-foreground'"
+                  >
                     {{ skill.name }}
-                    <span v-if="excludeSet.has(skill.id)" class="text-xs text-muted-foreground ml-1">（已選擇）</span>
+                    <span v-if="toRemoveIds.has(skill.id)" class="text-[11px] text-destructive/70 ml-1 no-underline" style="text-decoration:none">（點擊取消移除）</span>
+                    <span v-else-if="excludeSet.has(skill.id)" class="text-[11px] text-muted-foreground ml-1">（點擊移除）</span>
                   </div>
                   <div class="text-[11px] text-muted-foreground mt-0.5">最高 Lv{{ skill.maxLevel }}</div>
                 </div>
@@ -149,6 +206,13 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
 </template>
 
 <style scoped>
+.scrollbar-none {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.2s ease;

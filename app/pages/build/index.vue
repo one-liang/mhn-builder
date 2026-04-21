@@ -2,7 +2,7 @@
 import type { Armor, Weapon } from '~/stores/equipment'
 import { useBuildStore, type BuildSlot, type ArmorSlot } from '~/stores/build'
 import { useSkillStore } from '~/stores/skill'
-import type { BuildResult } from '~/lib/autoBuildAlgorithm'
+import { useAutoBuildStore } from '~/stores/autoBuild'
 
 useSeoMeta({
   title: '配裝模擬器 | 最強獵人 - MHN 配裝模擬器',
@@ -14,6 +14,7 @@ useSeoMeta({
 const route = useRoute()
 const buildStore = useBuildStore()
 const skillStore = useSkillStore()
+const autoBuildStore = useAutoBuildStore()
 
 const queryParams = computed(() => {
   const result: Record<string, string | undefined> = {}
@@ -113,8 +114,10 @@ function resetBuild() {
   showToast('已清除配裝')
 }
 
-function onAutoBuildApply(result: BuildResult) {
-  showToast(`已套用配裝 #${result.rank}`)
+function onAutoBuildSearchComplete() {
+  nextTick(() => {
+    document.getElementById('equipment-section')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  })
 }
 
 const armorSlots: ArmorSlot[] = ['head', 'chest', 'arms', 'waist', 'legs']
@@ -143,17 +146,31 @@ const skillEntries = computed(() => buildStore.skillSummary)
     <div class="px-4">
       <!-- Auto-build panel -->
       <div class="py-2">
-        <AutoBuildPanel @apply="onAutoBuildApply" />
+        <AutoBuildPanel @search-complete="onAutoBuildSearchComplete" />
       </div>
 
       <!-- Equipment section -->
-      <div class="py-2 flex flex-col gap-2">
-        <!-- Weapon slot (no driftstone) -->
-        <BuildSlot
-          slot-type="weapon"
-          :item="buildStore.weapon"
-          @open="openSelector('weapon')"
-        />
+      <div id="equipment-section" class="py-2 flex flex-col gap-2" style="scroll-margin-top: 112px">
+        <!-- Weapon slot with lock button -->
+        <div class="flex items-stretch gap-2">
+          <button
+            class="flex-shrink-0 w-9 flex items-center justify-center rounded-lg border transition-all cursor-pointer"
+            :class="autoBuildStore.isLocked('weapon')
+              ? 'bg-primary/15 border-primary/50 text-primary'
+              : 'bg-card/40 border-border/40 text-muted-foreground/30 hover:text-muted-foreground hover:border-border'"
+            :aria-label="autoBuildStore.isLocked('weapon') ? '解除鎖定武器' : '鎖定武器'"
+            @click="autoBuildStore.toggleLock('weapon')"
+          >
+            <svg v-if="autoBuildStore.isLocked('weapon')" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            <svg v-else xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 9.9-1"/></svg>
+          </button>
+          <BuildSlot
+            class="flex-1 min-w-0"
+            slot-type="weapon"
+            :item="buildStore.weapon"
+            @open="openSelector('weapon')"
+          />
+        </div>
 
         <!-- Armor slots with inline driftstone circles -->
         <div
@@ -161,6 +178,18 @@ const skillEntries = computed(() => buildStore.skillSummary)
           :key="s"
           class="flex items-stretch gap-2"
         >
+          <!-- Lock button -->
+          <button
+            class="flex-shrink-0 w-9 flex items-center justify-center rounded-lg border transition-all cursor-pointer"
+            :class="autoBuildStore.isLocked(s)
+              ? 'bg-primary/15 border-primary/50 text-primary'
+              : 'bg-card/40 border-border/40 text-muted-foreground/30 hover:text-muted-foreground hover:border-border'"
+            :aria-label="autoBuildStore.isLocked(s) ? `解除鎖定${s}` : `鎖定${s}`"
+            @click="autoBuildStore.toggleLock(s)"
+          >
+            <svg v-if="autoBuildStore.isLocked(s)" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            <svg v-else xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 9.9-1"/></svg>
+          </button>
           <!-- Armor slot (flex-1) -->
           <BuildSlot
             class="flex-1 min-w-0"
