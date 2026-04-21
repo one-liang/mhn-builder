@@ -203,3 +203,111 @@ export function getPartName(part: string): string {
   }
   return names[part] || part
 }
+
+export function getWeaponTypeIconName(type: string): string {
+  const map: Record<string, string> = {
+    'great-sword': 'weapon_great_sword',
+    'long-sword': 'weapon_long_sword',
+    'sword-and-shield': 'weapon_sword_shield',
+    'dual-blades': 'weapon_dual_blades',
+    'hammer': 'weapon_hammer',
+    'hunting-horn': 'weapon_hunting_horn',
+    'lance': 'weapon_lance',
+    'gunlance': 'weapon_gunlance',
+    'switch-axe': 'weapon_switch_axe',
+    'charge-blade': 'weapon_charge_blade',
+    'insect-glaive': 'weapon_insect_glaive',
+    'light-bowgun': 'weapon_light_bowgun',
+    'heavy-bowgun': 'weapon_heavy_bowgun',
+    'bow': 'weapon_bow',
+  }
+  return map[type] || `weapon_${type.replace(/-/g, '_')}`
+}
+
+// Maps armor set ID prefix → monster url_key (used for monster icon filenames)
+const ARMOR_MONSTER_MAP: Record<string, string> = {
+  leather: 'ore',
+  alloy: 'alloy',
+  jagras: 'greatjagras',
+  kulu: 'kuluyaku',
+  pukei: 'pukeipukei',
+  'coral-pukei': 'coral_pukeipukei',
+  barroth: 'barroth',
+  girros: 'greatgirros',
+  kadachi: 'tobikadachi',
+  'viper-kadachi': 'viper_tobikadachi',
+  paolumu: 'paolumu',
+  'nightshade-paolumu': 'nightshade_paolumu',
+  jyuratodus: 'jyuratodus',
+  anjanath: 'anjanath',
+  'fulgur-anjanath': 'fulgur_anjanath',
+  rathian: 'rathian',
+  'pink-rathian': 'pink_rathian',
+  'gold-rathian': 'gold_rathian',
+  legiana: 'legiana',
+  diablos: 'diablos',
+  'black-diablos': 'black_diablos',
+  rathalos: 'rathalos',
+  'azure-rathalos': 'azure_rathalos',
+  'silver-rathalos': 'silver_rathalos',
+  zinogre: 'zinogre',
+  tzitzi: 'tzitziyaku',
+  odogaron: 'odogaron',
+  'ebony-odogaron': 'ebony_odogaron',
+  vangis: 'deviljho',
+  basarios: 'basarios',
+  khezu: 'khezu',
+  kushala: 'kushaladaora',
+  mizutsune: 'mizutsune',
+  kaiser: 'teostra',
+  aknosom: 'aknosom',
+  sinister: 'magnamalo',
+  rajang: 'rajang',
+  nergigante: 'nergigante',
+  lagombi: 'lagombi',
+  volvidon: 'volvidon',
+  somnacanth: 'somnacanth',
+  tigrex: 'tigrex',
+  'brute-tigrex': 'brute_tigrex',
+  kirin: 'kirin',
+  bazelgeuse: 'bazelgeuse',
+  chatacabra: 'chatacabra',
+  arzuros: 'arzuros',
+  glavenus: 'glavenus',
+  chameleos: 'chameleos',
+  wroggi: 'greatwroggi',
+  bishaten: 'bishaten',
+  beotodus: 'beotodus',
+  nargacuga: 'nargacuga',
+  namielle: 'namielle',
+  garangolm: 'garangolm',
+  lunagaron: 'lunagaron',
+  espinas: 'espinas',
+  malzeno: 'malzeno',
+  quematrice: 'quematrice',
+  gossharag: 'gossharag',
+  astalos: 'astalos',
+  almudron: 'almudron',
+  seregios: 'seregios',
+  radobaan: 'radobaan',
+  banbaro: 'banbaro',
+  barioth: 'barioth',
+}
+
+const ARMOR_PARTS = ['head', 'chest', 'arms', 'waist', 'legs'] as const
+
+/** Extract the set prefix from an armor ID (strips the trailing -part). */
+export function getArmorSetPrefix(armorId: string): string {
+  for (const part of ARMOR_PARTS) {
+    if (armorId.endsWith(`-${part}`)) {
+      return armorId.slice(0, -(part.length + 1))
+    }
+  }
+  return armorId
+}
+
+/** Returns the monster icon filename (without extension) for a given armor ID. */
+export function getMonsterIconKey(armorId: string): string | undefined {
+  const prefix = getArmorSetPrefix(armorId)
+  return ARMOR_MONSTER_MAP[prefix]
+}

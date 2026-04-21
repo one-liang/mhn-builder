@@ -63,6 +63,7 @@ const filteredSkills = computed(() => {
         :to="`/skills/${skill.id}`"
         class="flex items-center justify-between p-3 rounded-lg bg-card border border-border hover:border-primary/40 transition-colors min-h-[44px]"
       >
+        <img src="/images/skills/skill.png" class="w-6 h-6 flex-shrink-0 rounded" :alt="skill.name" />
         <div class="flex-1 min-w-0">
           <div class="flex items-center gap-2">
             <span class="text-sm font-medium text-foreground">{{ skill.name }}</span>

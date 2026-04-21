@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useEquipmentStore, getWeaponTypeName } from '~/stores/equipment'
+import { useEquipmentStore, getWeaponTypeName, getWeaponTypeIconName } from '~/stores/equipment'
 
 useSeoMeta({
   title: '武器一覽 | 最強獵人 - MHN 配裝模擬器',
@@ -23,9 +23,16 @@ await equipmentStore.load()
         :to="`/weapons/${wt.type}`"
         class="flex items-center justify-between p-4 rounded-lg bg-card border border-border hover:border-primary/40 transition-colors min-h-[44px]"
       >
-        <div>
-          <h2 class="text-sm font-semibold text-foreground">{{ wt.name }}</h2>
-          <p class="text-xs text-muted-foreground">{{ wt.count }} 把武器</p>
+        <div class="flex items-center gap-3">
+          <img
+            :src="`/images/weapon-types/${getWeaponTypeIconName(wt.type)}.svg`"
+            class="w-6 h-6 flex-shrink-0 dark:invert"
+            :alt="wt.name"
+          />
+          <div>
+            <h2 class="text-sm font-semibold text-foreground">{{ wt.name }}</h2>
+            <p class="text-xs text-muted-foreground">{{ wt.count }} 把武器</p>
+          </div>
         </div>
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-muted-foreground"><path d="m9 18 6-6-6-6"/></svg>
       </NuxtLink>

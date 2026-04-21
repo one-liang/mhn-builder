@@ -16,6 +16,7 @@ const props = defineProps<{
   armorPart?: string
   to: string
   subtitle?: string
+  monsterIconKey?: string
 }>()
 </script>
 
@@ -55,7 +56,16 @@ const props = defineProps<{
         <RarityIndicator v-if="rarity" :rarity="rarity" />
         <h3 class="font-semibold text-sm truncate text-foreground">{{ name }}</h3>
       </div>
-      <p v-if="subtitle" class="text-xs text-muted-foreground mt-0.5">{{ subtitle }}</p>
+      <div v-if="monsterIconKey || subtitle" class="flex items-center gap-1 mt-0.5">
+        <img
+          v-if="monsterIconKey"
+          :src="`/images/monsters/${monsterIconKey}.webp`"
+          class="w-4 h-4 rounded-sm flex-shrink-0 object-cover"
+          :alt="monsterIconKey"
+          @error="($event.target as HTMLImageElement).style.display = 'none'"
+        />
+        <p v-if="subtitle" class="text-xs text-muted-foreground">{{ subtitle }}</p>
+      </div>
       <div v-if="skills.length" class="flex flex-wrap gap-1 mt-1.5">
         <SkillBadge
           v-for="skill in skills"
