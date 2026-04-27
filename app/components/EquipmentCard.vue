@@ -5,6 +5,8 @@ interface Skill {
   name?: string
 }
 
+const { imageUrl } = useImageUrl()
+
 const props = defineProps<{
   id: string
   name: string
@@ -31,7 +33,7 @@ const props = defineProps<{
     >
       <img
         v-if="image"
-        :src="image"
+        :src="imageUrl(image)"
         :alt="name"
         class="w-full h-full object-cover"
         loading="lazy"
@@ -59,7 +61,7 @@ const props = defineProps<{
       <div v-if="monsterIconKey || subtitle" class="flex items-center gap-1 mt-0.5">
         <img
           v-if="monsterIconKey"
-          :src="`/images/monsters/${monsterIconKey}.webp`"
+          :src="imageUrl(`/images/monsters/${monsterIconKey}.webp`)"
           class="w-4 h-4 rounded-sm flex-shrink-0 object-cover"
           :alt="monsterIconKey"
           @error="($event.target as HTMLImageElement).style.display = 'none'"

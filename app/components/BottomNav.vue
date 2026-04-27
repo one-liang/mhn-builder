@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const route = useRoute()
+const { imageUrl } = useImageUrl()
 
 const tabs = [
   { name: '配裝',   path: '/build',       icon: 'build',  iconImg: null },
@@ -38,7 +39,7 @@ function isActive(path: string) {
         <!-- Official image icon -->
         <img
           v-if="tab.iconImg"
-          :src="tab.iconImg"
+          :src="imageUrl(tab.iconImg)"
           width="20" height="20"
           class="rounded-sm"
           :class="[tab.iconImg.endsWith('.svg') ? 'dark:invert' : '', isActive(tab.path) ? 'opacity-100' : 'opacity-60']"

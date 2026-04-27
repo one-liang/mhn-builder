@@ -11,6 +11,7 @@ const skillStore = useSkillStore()
 await Promise.all([equipmentStore.load(), skillStore.load()])
 
 const armor = computed(() => equipmentStore.getArmorById(slug))
+const { imageUrl } = useImageUrl()
 
 useSeoMeta({
   title: () => armor.value ? `${armor.value.name} | 最強獵人 - MHN 配裝模擬器` : '防具詳情 | 最強獵人',
@@ -31,7 +32,7 @@ useSeoMeta({
       <!-- Header -->
       <div class="flex items-start gap-4 mb-6">
         <div class="w-20 h-20 rounded-lg bg-secondary flex items-center justify-center flex-shrink-0">
-          <img v-if="armor.image" :src="armor.image" :alt="armor.name" class="w-full h-full object-cover rounded-lg" @error="($event.target as HTMLImageElement).style.display = 'none'" />
+          <img v-if="armor.image" :src="imageUrl(armor.image)" :alt="armor.name" class="w-full h-full object-cover rounded-lg" @error="($event.target as HTMLImageElement).style.display = 'none'" />
           <ArmorPartIcon v-else :part="armor.part" class="w-10 h-10 text-primary/80" />
         </div>
         <div>

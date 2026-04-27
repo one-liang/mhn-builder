@@ -16,6 +16,7 @@ const emit = defineEmits<{
 }>()
 
 const skillStore = useSkillStore()
+const { imageUrl } = useImageUrl()
 
 const slotLabel = computed(() => {
   if (props.slotType === 'weapon') return '武器'
@@ -80,7 +81,7 @@ const skillBadges = computed(() => {
         class="w-10 h-10 rounded-md bg-secondary overflow-hidden flex-shrink-0"
       >
         <img
-          :src="item.image"
+          :src="imageUrl(item.image)"
           :alt="item.name"
           class="w-full h-full object-cover"
           loading="lazy"

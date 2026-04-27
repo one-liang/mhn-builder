@@ -12,6 +12,7 @@ const skillStore = useSkillStore()
 await Promise.all([equipmentStore.load(), skillStore.load()])
 
 const weapon = computed(() => equipmentStore.getWeaponById(type, slug))
+const { imageUrl } = useImageUrl()
 
 useSeoMeta({
   title: () => weapon.value ? `${weapon.value.name} | 最強獵人 - MHN 配裝模擬器` : '武器詳情 | 最強獵人',
@@ -36,7 +37,7 @@ const elementNames: Record<string, string> = {
     <template v-if="weapon">
       <div class="flex items-start gap-4 mb-6">
         <div class="w-20 h-20 rounded-lg bg-secondary flex items-center justify-center flex-shrink-0">
-          <img v-if="weapon.image" :src="weapon.image" :alt="weapon.name" class="w-full h-full object-cover rounded-lg" @error="($event.target as HTMLImageElement).style.display = 'none'" />
+          <img v-if="weapon.image" :src="imageUrl(weapon.image)" :alt="weapon.name" class="w-full h-full object-cover rounded-lg" @error="($event.target as HTMLImageElement).style.display = 'none'" />
           <WeaponTypeIcon v-else :type="type" class="w-10 h-10 text-primary/80" />
         </div>
         <div>

@@ -10,6 +10,7 @@ useSeoMeta({
 
 const equipmentStore = useEquipmentStore()
 await equipmentStore.load()
+const { imageUrl } = useImageUrl()
 </script>
 
 <template>
@@ -25,7 +26,7 @@ await equipmentStore.load()
       >
         <div class="flex items-center gap-3">
           <img
-            :src="`/images/weapon-types/${getWeaponTypeIconName(wt.type)}.svg`"
+            :src="imageUrl(`/images/weapon-types/${getWeaponTypeIconName(wt.type)}.svg`)"
             class="w-6 h-6 flex-shrink-0 dark:invert"
             :alt="wt.name"
           />

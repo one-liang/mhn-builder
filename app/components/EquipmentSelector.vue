@@ -18,6 +18,7 @@ const emit = defineEmits<{
 
 const equipmentStore = useEquipmentStore()
 const skillStore = useSkillStore()
+const { imageUrl } = useImageUrl()
 
 const search = ref('')
 const activeWeaponType = ref('all')
@@ -221,7 +222,7 @@ onBeforeUnmount(() => {
                   class="flex-shrink-0 w-12 h-12 rounded-md bg-secondary overflow-hidden"
                 >
                   <img
-                    :src="(item as Weapon).image"
+                    :src="imageUrl((item as Weapon).image)"
                     :alt="item.name"
                     class="w-full h-full object-cover"
                     loading="lazy"
