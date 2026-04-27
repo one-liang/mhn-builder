@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Weapon } from '~/stores/equipment'
+import type { Armor, Weapon } from '~/stores/equipment'
 import { getPartName } from '~/stores/equipment'
 import type { BuildSlot } from '~/stores/build'
 import { useSkillStore } from '~/stores/skill'
@@ -23,6 +23,10 @@ const slotLabel = computed(() => {
 })
 
 const isWeapon = computed(() => props.slotType === 'weapon')
+
+const weaponType = computed(() =>
+  isWeapon.value && props.item ? (props.item as Weapon).type : ''
+)
 
 const skillBadges = computed(() => {
   if (!props.item) return []
@@ -52,8 +56,9 @@ const skillBadges = computed(() => {
           : 'w-10 h-10 bg-secondary/40 text-muted-foreground/60'"
       >
         <WeaponTypeIcon
-          v-if="isWeapon && item && 'type' in item"
-          :type="(item as Weapon).type"
+          v-if="isWeapon && item"
+          :key="weaponType"
+          :type="weaponType"
           class="w-5 h-5"
         />
         <ArmorPartIcon
@@ -61,24 +66,12 @@ const skillBadges = computed(() => {
           :part="slotType"
           :class="item ? 'w-5 h-5' : 'w-6 h-6'"
         />
-        <!-- Weapon unselected icon -->
-        <svg
+        <!-- Weapon unselected: default to sword-and-shield icon -->
+        <WeaponTypeIcon
           v-else-if="isWeapon"
-          xmlns="http://www.w3.org/2000/svg"
-          width="22"
-          height="22"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="1.8"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <polyline points="14.5 17.5 3 6 3 3 6 3 17.5 14.5" />
-          <line x1="13" x2="19" y1="19" y2="13" />
-          <line x1="16" x2="20" y1="16" y2="20" />
-          <line x1="19" x2="21" y1="21" y2="19" />
-        </svg>
+          type="sword-and-shield"
+          class="w-6 h-6"
+        />
       </div>
 
       <!-- Item image (only when selected) -->

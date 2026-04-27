@@ -128,7 +128,7 @@ onBeforeUnmount(() => { window.removeEventListener('keydown', onKeydown) })
               class="w-full px-3 py-2 rounded-lg bg-secondary border border-border text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary/60 min-h-[44px]"
             />
             <!-- Stone color filter pills -->
-            <div class="flex gap-1.5 overflow-x-auto pb-0.5 scrollbar-none">
+            <div class="flex flex-nowrap gap-1.5 overflow-x-auto sm:flex-wrap sm:overflow-visible pb-0.5 sm:pb-0 scrollbar-none">
               <button
                 v-for="stone in STONE_FILTERS"
                 :key="stone.id"
@@ -143,45 +143,30 @@ onBeforeUnmount(() => { window.removeEventListener('keydown', onKeydown) })
             </div>
           </div>
 
-          <!-- List -->
-          <div class="flex-1 overflow-y-auto p-3 flex flex-col gap-1.5">
+          <!-- Pill grid -->
+          <div class="flex-1 overflow-y-auto px-3 pt-2 pb-3">
             <!-- Clear option -->
             <button
-              class="flex items-center gap-3 p-3 rounded-lg border border-dashed border-border hover:border-accent/60 transition-colors min-h-[44px] text-left"
+              class="w-full py-2 mb-3 rounded-full border border-dashed border-border hover:border-primary/60 text-sm text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
               @click="onClear"
             >
-              <div class="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-md bg-secondary text-muted-foreground">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
-              </div>
-              <span class="text-sm text-muted-foreground">清除技能</span>
+              清除技能
             </button>
 
-            <div
-              v-for="skill in filteredSkills"
-              :key="skill.id"
-              role="button"
-              tabindex="0"
-              class="p-3 rounded-lg bg-secondary/40 border border-border hover:border-primary/40 transition-colors cursor-pointer"
-              @click="onSelect(skill.id)"
-              @keydown.enter="onSelect(skill.id)"
-              @keydown.space.prevent="onSelect(skill.id)"
-            >
-              <div class="flex items-center gap-3">
-                <div class="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-md bg-secondary text-primary/80">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 6-10 13L2 9Z"/><path d="M11 3 8 9l4 13 4-13-3-6"/><path d="M2 9h20"/></svg>
-                </div>
-                <div class="min-w-0 flex-1">
-                  <div class="flex items-center gap-1.5">
-                    <span class="text-sm font-medium text-foreground">{{ skill.name }}</span>
-                    <!-- Pure stone badge -->
-                    <span
-                      v-if="primeSkillIds.has(skill.id)"
-                      class="text-[9px] px-1 py-0.5 rounded bg-primary/15 text-primary border border-primary/25 flex-shrink-0"
-                    >純石</span>
-                  </div>
-                  <div class="text-[11px] text-muted-foreground mt-0.5">最高 Lv{{ skill.maxLevel }}</div>
-                </div>
-              </div>
+            <div class="grid grid-cols-2 gap-2">
+              <button
+                v-for="skill in filteredSkills"
+                :key="skill.id"
+                tabindex="0"
+                class="px-3 py-2.5 rounded-full border border-border bg-secondary text-sm font-medium text-foreground text-center hover:border-primary/60 hover:bg-primary/8 transition-colors cursor-pointer leading-snug"
+                @click="onSelect(skill.id)"
+                @keydown.enter="onSelect(skill.id)"
+                @keydown.space.prevent="onSelect(skill.id)"
+              >
+                <span class="truncate block">
+                  {{ skill.name }}<span v-if="primeSkillIds.has(skill.id)" class="text-primary ml-0.5 text-[10px]">✦</span>
+                </span>
+              </button>
             </div>
 
             <p v-if="!filteredSkills.length" class="text-center text-muted-foreground py-8 text-sm">

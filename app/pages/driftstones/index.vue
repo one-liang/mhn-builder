@@ -85,7 +85,7 @@ const filteredSkills = computed(() => {
     </div>
 
     <!-- Stone filter pills -->
-    <div class="flex gap-1.5 overflow-x-auto pb-2 mb-4 -mx-4 px-4 scrollbar-hide">
+    <div class="flex flex-nowrap gap-1.5 overflow-x-auto sm:flex-wrap sm:overflow-visible pb-2 sm:pb-0 mb-4 -mx-4 px-4 sm:mx-0 sm:px-0 scrollbar-hide">
       <button
         v-for="stone in STONE_FILTERS"
         :key="stone.id"

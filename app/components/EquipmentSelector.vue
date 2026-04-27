@@ -13,36 +13,75 @@ const props = defineProps<{
 
 const emit = defineEmits<{
   (e: 'update:open', v: boolean): void
-  (e: 'select', item: Weapon | Armor | null): void
+  (e: 'select', item: Weapon | Armor | null, actualSlot?: string): void
 }>()
 
 const equipmentStore = useEquipmentStore()
 const skillStore = useSkillStore()
 
 const search = ref('')
+const activeWeaponType = ref('all')
+const activeArmorSlot = ref('head')
+
+const WEAPON_TYPES = [
+  { id: 'all', name: '全部' },
+  { id: 'great-sword', name: '大劍' },
+  { id: 'long-sword', name: '太刀' },
+  { id: 'sword-and-shield', name: '單手劍' },
+  { id: 'dual-blades', name: '雙刀' },
+  { id: 'hammer', name: '大錘' },
+  { id: 'hunting-horn', name: '狩獵笛' },
+  { id: 'lance', name: '長槍' },
+  { id: 'gunlance', name: '銃槍' },
+  { id: 'switch-axe', name: '斬擊斧' },
+  { id: 'charge-blade', name: '充能斧' },
+  { id: 'insect-glaive', name: '操蟲棍' },
+  { id: 'light-bowgun', name: '輕弩槍' },
+  { id: 'heavy-bowgun', name: '重弩槍' },
+  { id: 'bow', name: '弓' },
+]
+
+const ARMOR_SLOTS = [
+  { id: 'head', name: '頭部' },
+  { id: 'chest', name: '胸部' },
+  { id: 'arms', name: '腕部' },
+  { id: 'waist', name: '腰部' },
+  { id: 'legs', name: '腿部' },
+]
 
 watch(
   () => props.open,
   (isOpen) => {
-    if (isOpen) search.value = ''
+    if (isOpen) {
+      search.value = ''
+      activeWeaponType.value = 'all'
+      if (props.slotType && props.slotType !== 'weapon') {
+        activeArmorSlot.value = props.slotType
+      }
+    }
   }
 )
 
+const isWeaponSlot = computed(() => props.slotType === 'weapon')
+
 const slotLabel = computed(() => {
   if (!props.slotType) return ''
-  if (props.slotType === 'weapon') return '武器'
-  return `${getPartName(props.slotType)}防具`
+  if (isWeaponSlot.value) return '武器'
+  return `${getPartName(activeArmorSlot.value)}防具`
 })
 
-const allWeapons = computed<Weapon[]>(() => {
-  return Object.values(equipmentStore.weapons).flat()
-})
+const allWeapons = computed<Weapon[]>(() =>
+  Object.values(equipmentStore.weapons).flat()
+)
 
 const items = computed<SelectableItem[]>(() => {
-  const slot = props.slotType
-  if (!slot) return []
-  if (slot === 'weapon') return allWeapons.value
-  return equipmentStore.getArmorByPart(slot)
+  if (!props.slotType) return []
+  if (isWeaponSlot.value) {
+    const weapons = allWeapons.value
+    if (activeWeaponType.value === 'all') return weapons
+    return weapons.filter(w => (w as Weapon).type === activeWeaponType.value)
+  }
+  return equipmentStore.getArmorByPart(activeArmorSlot.value as Armor['part'])
 })
 
 const filteredItems = computed(() => {
@@ -68,12 +107,14 @@ function close() {
 }
 
 function onSelect(item: SelectableItem) {
-  emit('select', item)
+  const actualSlot = isWeaponSlot.value ? undefined : activeArmorSlot.value
+  emit('select', item, actualSlot)
   close()
 }
 
 function onClear() {
-  emit('select', null)
+  const actualSlot = isWeaponSlot.value ? undefined : activeArmorSlot.value
+  emit('select', null, actualSlot)
   close()
 }
 
@@ -115,27 +156,52 @@ onBeforeUnmount(() => {
             </button>
           </div>
 
-          <!-- Search -->
-          <div class="p-3 border-b border-border">
+          <!-- Search + category filters -->
+          <div class="px-3 pt-3 pb-2 border-b border-border flex flex-col gap-2">
             <input
               v-model="search"
               type="text"
               :placeholder="`搜尋${slotLabel}名稱...`"
               class="w-full px-3 py-2 rounded-lg bg-secondary border border-border text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary/60 min-h-[44px]"
             />
+            <!-- Weapon type filter pills -->
+            <div v-if="isWeaponSlot" class="flex gap-1.5 overflow-x-auto sm:overflow-x-visible sm:flex-wrap pb-0.5 sm:pb-0 scrollbar-none">
+              <button
+                v-for="wt in WEAPON_TYPES"
+                :key="wt.id"
+                class="flex-shrink-0 px-2.5 py-1 rounded-full text-[11px] font-medium border transition-all cursor-pointer whitespace-nowrap"
+                :class="activeWeaponType === wt.id
+                  ? 'bg-primary text-primary-foreground border-primary'
+                  : 'bg-secondary text-muted-foreground border-border hover:border-primary/50'"
+                @click="activeWeaponType = wt.id"
+              >
+                {{ wt.name }}
+              </button>
+            </div>
+            <!-- Armor slot tabs -->
+            <div v-else class="flex gap-1.5 overflow-x-auto sm:overflow-x-visible sm:flex-wrap pb-0.5 sm:pb-0 scrollbar-none">
+              <button
+                v-for="slot in ARMOR_SLOTS"
+                :key="slot.id"
+                class="flex-shrink-0 px-2.5 py-1 rounded-full text-[11px] font-medium border transition-all cursor-pointer whitespace-nowrap"
+                :class="activeArmorSlot === slot.id
+                  ? 'bg-primary text-primary-foreground border-primary'
+                  : 'bg-secondary text-muted-foreground border-border hover:border-primary/50'"
+                @click="activeArmorSlot = slot.id"
+              >
+                {{ slot.name }}
+              </button>
+            </div>
           </div>
 
           <!-- List -->
           <div class="flex-1 overflow-y-auto p-3 flex flex-col gap-1.5">
             <!-- Clear option -->
             <button
-              class="flex items-center gap-3 p-3 rounded-lg border border-dashed border-border hover:border-accent/60 transition-colors min-h-[44px] text-left"
+              class="w-full py-2 mb-1 rounded-lg border border-dashed border-border hover:border-primary/50 text-sm text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
               @click="onClear"
             >
-              <div class="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-md bg-secondary text-muted-foreground">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
-              </div>
-              <span class="text-sm text-muted-foreground">取消選擇</span>
+              取消選擇
             </button>
 
             <div
@@ -149,10 +215,27 @@ onBeforeUnmount(() => {
               @keydown.space.prevent="onSelect(item)"
             >
               <div class="flex items-start gap-3">
-                <div class="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-md bg-secondary text-primary/80">
-                  <WeaponTypeIcon v-if="slotType === 'weapon' && 'type' in item" :type="item.type" class="w-5 h-5" />
-                  <ArmorPartIcon v-else-if="slotType && slotType !== 'weapon'" :part="slotType" class="w-5 h-5" />
+                <!-- Weapon: show item image -->
+                <div
+                  v-if="isWeaponSlot"
+                  class="flex-shrink-0 w-12 h-12 rounded-md bg-secondary overflow-hidden"
+                >
+                  <img
+                    :src="(item as Weapon).image"
+                    :alt="item.name"
+                    class="w-full h-full object-cover"
+                    loading="lazy"
+                    @error="($event.target as HTMLImageElement).style.display = 'none'"
+                  />
                 </div>
+                <!-- Armor: show part icon -->
+                <div
+                  v-else
+                  class="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-md bg-secondary text-primary/80"
+                >
+                  <ArmorPartIcon :part="activeArmorSlot" class="w-5 h-5" />
+                </div>
+
                 <div class="min-w-0 flex-1">
                   <div class="text-sm font-medium text-foreground truncate">{{ item.name }}</div>
                   <div v-if="itemSkills(item).length" class="flex flex-wrap gap-1 mt-1.5">
@@ -166,7 +249,7 @@ onBeforeUnmount(() => {
                   </div>
                   <!-- Driftstone slot count indicator -->
                   <div
-                    v-if="slotType !== 'weapon' && 'driftstoneSlots' in item && (item as Armor).driftstoneSlots > 0"
+                    v-if="!isWeaponSlot && 'driftstoneSlots' in item && (item as Armor).driftstoneSlots > 0"
                     class="flex items-center gap-1 mt-1"
                   >
                     <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="text-primary/60"><path d="M6 3h12l4 6-10 13L2 9Z"/><path d="M11 3 8 9l4 13 4-13-3-6"/><path d="M2 9h20"/></svg>
@@ -187,6 +270,8 @@ onBeforeUnmount(() => {
 </template>
 
 <style scoped>
+.scrollbar-none { scrollbar-width: none; -ms-overflow-style: none; }
+.scrollbar-none::-webkit-scrollbar { display: none; }
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.2s ease;

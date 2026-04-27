@@ -40,7 +40,7 @@ const isEmpty = computed(() => entries.value.length === 0)
               :key="i"
               class="inline-block w-2.5 h-2.5 rounded-full border"
               :class="i <= entry.total
-                ? 'bg-primary border-primary shadow-[0_0_4px_var(--color-primary)]'
+                ? 'bg-primary border-primary'
                 : 'bg-transparent border-border'"
             />
           </div>

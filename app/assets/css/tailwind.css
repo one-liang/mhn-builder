@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Noto+Sans+TC:wght@400;500;600;700;900&display=swap');
 
 @import "tailwindcss";
 @import "tw-animate-css";
@@ -34,56 +34,90 @@
   --color-chart-4: var(--chart-4);
   --color-chart-5: var(--chart-5);
 
-  /* MHN Rarity colors */
-  --color-rarity-1: #9ca3af;
-  --color-rarity-2: #a3e635;
-  --color-rarity-3: #22d3ee;
-  --color-rarity-4: #3b82f6;
-  --color-rarity-5: #a855f7;
-  --color-rarity-6: #f59e0b;
-  --color-rarity-7: #ef4444;
-  --color-rarity-8: #ec4899;
-  --color-rarity-9: #fbbf24;
+  /* MHN Rarity colors — shared across themes */
+  --color-rarity-1: #6B7280;
+  --color-rarity-2: #65A30D;
+  --color-rarity-3: #0891B2;
+  --color-rarity-4: #2563EB;
+  --color-rarity-5: #9333EA;
+  --color-rarity-6: #D97706;
+  --color-rarity-7: #DC2626;
+  --color-rarity-8: #DB2777;
+  --color-rarity-9: #B45309;
 
   /* Element colors */
-  --color-element-fire: #ef4444;
-  --color-element-water: #3b82f6;
-  --color-element-thunder: #eab308;
-  --color-element-ice: #06b6d4;
-  --color-element-dragon: #8b5cf6;
-  --color-element-poison: #a855f7;
-  --color-element-paralysis: #facc15;
-  --color-element-sleep: #60a5fa;
-  --color-element-blast: #f97316;
+  --color-element-fire: #DC2626;
+  --color-element-water: #2563EB;
+  --color-element-thunder: #CA8A04;
+  --color-element-ice: #0891B2;
+  --color-element-dragon: #7C3AED;
+  --color-element-poison: #9333EA;
+  --color-element-paralysis: #CA8A04;
+  --color-element-sleep: #3B82F6;
+  --color-element-blast: #EA580C;
 
   --font-sans: 'Noto Sans TC', sans-serif;
+  --font-cinzel: 'Cinzel', serif;
 }
 
-/* Monster Hunter Game Theme - Always dark */
+/* =============================================
+   VERSION A: 獵人公會 Guild Hall
+   Light mode (default)
+============================================= */
 :root {
   --radius: 0.5rem;
-  /* MH Dark theme as default */
-  --background: #1A1410;
-  --foreground: #F5F0E0;
-  --card: #2D1B10;
-  --card-foreground: #F5F0E0;
-  --popover: #2D1B10;
-  --popover-foreground: #F5F0E0;
-  --primary: #D4A017;
-  --primary-foreground: #1A1410;
+
+  /* Parchment × Forest × Gold */
+  --background: #FDF8F0;
+  --foreground: #1C1408;
+  --card: #FFF8ED;
+  --card-foreground: #1C1408;
+  --popover: #FFF8ED;
+  --popover-foreground: #1C1408;
+  --primary: #8B5E0A;            /* dark gold — 5.4:1 on parchment */
+  --primary-foreground: #FDF8F0;
+  --secondary: #F0E6D0;
+  --secondary-foreground: #3D2A0E;
+  --muted: #EDE0C8;
+  --muted-foreground: #5C4A30;   /* 8:1 on parchment */
+  --accent: #2D5016;             /* forest green */
+  --accent-foreground: #FDF8F0;
+  --destructive: #C0392B;        /* dark red — 5.2:1 on parchment */
+  --border: rgba(160, 110, 20, 0.28);
+  --input: rgba(160, 110, 20, 0.15);
+  --ring: #8B5E0A;
+  --chart-1: #8B5E0A;
+  --chart-2: #2D5016;
+  --chart-3: #1C1408;
+  --chart-4: #F0E6D0;
+  --chart-5: #5C4A30;
+}
+
+/* =============================================
+   Dark mode override
+============================================= */
+.dark {
+  --background: #1A1208;
+  --foreground: #F5E8C8;
+  --card: #2A1C0E;
+  --card-foreground: #F5E8C8;
+  --popover: #2A1C0E;
+  --popover-foreground: #F5E8C8;
+  --primary: #E4B84A;            /* bright gold — 8.9:1 on #1A1208 */
+  --primary-foreground: #1A1208;
   --secondary: #3D2A1A;
-  --secondary-foreground: #F5F0E0;
+  --secondary-foreground: #F5E8C8;
   --muted: #3D2A1A;
-  --muted-foreground: #A89880;
-  --accent: #8B2500;
-  --accent-foreground: #F5F0E0;
-  --destructive: #F87171;   /* red-400, WCAG 2.2 AA: 5.95:1 on card, 6.59:1 on bg */
-  --border: rgba(212, 160, 23, 0.2);
-  --input: rgba(212, 160, 23, 0.15);
-  --ring: #D4A017;
-  --chart-1: #D4A017;
-  --chart-2: #8B2500;
-  --chart-3: #F5F0E0;
+  --muted-foreground: #A89880;   /* 4.8:1 on #1A1208 */
+  --accent: #4A7C2F;             /* brighter forest green */
+  --accent-foreground: #F5E8C8;
+  --destructive: #F87171;        /* 5.9:1 on #2A1C0E */
+  --border: rgba(228, 184, 74, 0.2);
+  --input: rgba(228, 184, 74, 0.15);
+  --ring: #E4B84A;
+  --chart-1: #E4B84A;
+  --chart-2: #4A7C2F;
+  --chart-3: #F5E8C8;
   --chart-4: #3D2A1A;
   --chart-5: #A89880;
 }
@@ -95,19 +129,22 @@
   body {
     @apply bg-background text-foreground font-sans antialiased;
   }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
 }
 
-/* Scrollbar styling for MH theme */
-::-webkit-scrollbar {
-  width: 6px;
-}
-::-webkit-scrollbar-track {
-  background: var(--background);
-}
+/* Scrollbar styling */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--background); }
 ::-webkit-scrollbar-thumb {
-  background: rgba(212, 160, 23, 0.3);
+  background: rgba(160, 110, 20, 0.3);
   border-radius: 3px;
 }
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(212, 160, 23, 0.5);
-}
+::-webkit-scrollbar-thumb:hover { background: rgba(160, 110, 20, 0.5); }
+
+.dark ::-webkit-scrollbar-thumb { background: rgba(228, 184, 74, 0.3); }
+.dark ::-webkit-scrollbar-thumb:hover { background: rgba(228, 184, 74, 0.5); }

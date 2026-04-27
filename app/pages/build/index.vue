@@ -35,9 +35,10 @@ function openSelector(slotType: BuildSlot) {
   selectorOpen.value = true
 }
 
-function onSelect(item: Weapon | Armor | null) {
-  if (!activeSlot.value) return
-  buildStore.setSlot(activeSlot.value, item)
+function onSelect(item: Weapon | Armor | null, actualSlot?: string) {
+  const targetSlot = (actualSlot as BuildSlot) ?? activeSlot.value
+  if (!targetSlot) return
+  buildStore.setSlot(targetSlot, item)
 }
 
 // Driftstone skill picker
@@ -203,28 +204,22 @@ const skillEntries = computed(() => buildStore.skillSummary)
             <button
               v-for="i in buildStore[s]!.driftstoneSlots"
               :key="i"
-              class="flex-shrink-0 w-11 flex flex-col items-center justify-center gap-1 rounded-lg border transition-all cursor-pointer"
+              class="flex-shrink-0 w-14 flex flex-col items-center justify-center gap-0.5 rounded-lg border transition-all cursor-pointer"
               :class="getDriftstoneSkillName(s, i - 1)
                 ? 'bg-primary/15 border-primary/50 hover:bg-primary/25'
                 : 'bg-card/40 border-dashed border-border/60 hover:border-primary/50'"
+              :title="getDriftstoneSkillName(s, i - 1) ?? undefined"
               :aria-label="`漂移槽 ${i}：${getDriftstoneSkillName(s, i - 1) ?? '空'}`"
               @click="openDriftstoneSkill(s, i - 1)"
             >
               <!-- Gem icon -->
-              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" :class="getDriftstoneSkillName(s, i - 1) ? 'text-primary' : 'text-muted-foreground/40'"><path d="M6 3h12l4 6-10 13L2 9Z"/><path d="M11 3 8 9l4 13 4-13-3-6"/><path d="M2 9h20"/></svg>
-              <!-- Filled / empty dot -->
-              <span
-                class="w-3 h-3 rounded-full border-2 flex-shrink-0"
-                :class="getDriftstoneSkillName(s, i - 1)
-                  ? 'bg-primary border-primary shadow-[0_0_6px_var(--color-primary)]'
-                  : 'bg-transparent border-border/60'"
-              />
-              <!-- Skill name abbreviation (first 2 chars) -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" :class="getDriftstoneSkillName(s, i - 1) ? 'text-primary' : 'text-muted-foreground/40'"><path d="M6 3h12l4 6-10 13L2 9Z"/><path d="M11 3 8 9l4 13 4-13-3-6"/><path d="M2 9h20"/></svg>
+              <!-- Skill name (first 4 chars) or + -->
               <span
                 v-if="getDriftstoneSkillName(s, i - 1)"
-                class="text-[9px] font-medium text-primary leading-tight text-center w-full px-0.5 truncate"
+                class="text-[9px] font-medium text-primary leading-tight text-center w-full px-1 truncate"
               >
-                {{ getDriftstoneSkillName(s, i - 1)!.slice(0, 2) }}
+                {{ getDriftstoneSkillName(s, i - 1)!.slice(0, 4) }}
               </span>
               <span
                 v-else
@@ -238,8 +233,8 @@ const skillEntries = computed(() => buildStore.skillSummary)
       <!-- Divider between equipment and skill summary -->
       <div class="border-t border-border/40" />
 
-      <!-- Skill section -->
-      <div class="py-2 flex flex-col gap-1.5">
+      <!-- Skill section (game-style: hex icon + dotted spacer + level bars) -->
+      <div class="py-3 flex flex-col gap-3">
         <div
           v-if="!skillEntries.length"
           class="py-4 text-center"
@@ -250,63 +245,96 @@ const skillEntries = computed(() => buildStore.skillSummary)
         <div
           v-for="entry in skillEntries"
           :key="entry.id"
-          class="flex items-center gap-3 px-2.5 py-2 rounded-lg border transition-colors"
-          :class="entry.overflow
-            ? 'bg-destructive/8 border-destructive/40'
-            : 'bg-card/60 border-border'"
+          class="flex items-center gap-3"
         >
+          <!-- Hexagonal icon badge -->
+          <div class="flex-shrink-0 relative w-[46px] h-[46px] flex items-center justify-center">
+            <svg
+              viewBox="0 0 46 46"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="absolute inset-0 w-full h-full"
+              :class="entry.overflow ? 'text-destructive/30' : 'text-muted-foreground/30'"
+            >
+              <polygon
+                points="23,2 42,12.5 42,33.5 23,44 4,33.5 4,12.5"
+                stroke="currentColor"
+                stroke-width="1.5"
+                fill="currentColor"
+                fill-opacity="0.08"
+              />
+            </svg>
+            <!-- Overflow icon -->
+            <svg
+              v-if="entry.overflow"
+              xmlns="http://www.w3.org/2000/svg"
+              width="17"
+              height="17"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="relative z-10 text-destructive/70"
+              aria-label="技能超過最高等級"
+            ><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" x2="12" y1="9" y2="13"/><line x1="12" x2="12.01" y1="17" y2="17"/></svg>
+            <!-- Gem icon for driftstone skills -->
+            <svg
+              v-else-if="driftstoneSkillIds.has(entry.id)"
+              xmlns="http://www.w3.org/2000/svg"
+              width="17"
+              height="17"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="relative z-10 text-primary/60"
+            ><path d="M6 3h12l4 6-10 13L2 9Z"/><path d="M11 3 8 9l4 13 4-13-3-6"/><path d="M2 9h20"/></svg>
+            <!-- Default skill icon -->
+            <svg
+              v-else
+              xmlns="http://www.w3.org/2000/svg"
+              width="17"
+              height="17"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="relative z-10 text-muted-foreground/60"
+            ><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>
+          </div>
+
+          <!-- Skill content -->
           <div class="flex-1 min-w-0">
-            <div class="flex items-center justify-between gap-2">
-              <div class="flex items-center gap-1.5 min-w-0">
-                <!-- Overflow warning icon -->
-                <svg
-                  v-if="entry.overflow"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="12"
-                  height="12"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="flex-shrink-0 text-destructive"
-                  aria-label="技能超過最高等級"
-                ><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" x2="12" y1="9" y2="13"/><line x1="12" x2="12.01" y1="17" y2="17"/></svg>
-                <!-- Gem icon for driftstone-attributed skills (only when not overflow) -->
-                <svg
-                  v-else-if="driftstoneSkillIds.has(entry.id)"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="10"
-                  height="10"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.8"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="flex-shrink-0 text-primary/60"
-                ><path d="M6 3h12l4 6-10 13L2 9Z"/><path d="M11 3 8 9l4 13 4-13-3-6"/><path d="M2 9h20"/></svg>
-                <span
-                  class="text-sm font-medium truncate"
-                  :class="entry.overflow ? 'text-destructive' : 'text-foreground'"
-                >{{ entry.name }}</span>
-              </div>
+            <!-- Name + dotted spacer + Lv -->
+            <div class="flex items-center gap-1 min-w-0">
               <span
-                class="text-xs font-semibold flex-shrink-0"
-                :class="entry.overflow ? 'text-destructive' : 'text-primary'"
-              >Lv{{ entry.total }}</span>
+                class="text-sm font-medium flex-shrink-0"
+                :class="entry.overflow ? 'text-destructive' : 'text-foreground'"
+              >{{ entry.name }}</span>
+              <div
+                class="flex-1 self-center"
+                style="border-bottom: 1.5px dotted; opacity: 0.25; margin: 0 4px 1px;"
+              />
+              <span
+                class="text-sm font-bold flex-shrink-0"
+                :class="entry.overflow ? 'text-destructive' : 'text-foreground'"
+              >Lv {{ entry.total }}</span>
             </div>
-            <div class="flex gap-1 mt-1" aria-hidden="true">
+            <!-- Segment bars -->
+            <div class="flex gap-1 mt-1.5" aria-hidden="true">
               <span
                 v-for="i in entry.max"
                 :key="i"
-                class="inline-block w-2 h-2 rounded-full border"
+                class="h-1.5 w-5"
                 :class="i <= Math.min(entry.total, entry.max)
-                  ? (entry.overflow
-                      ? 'bg-destructive border-destructive shadow-[0_0_4px_var(--color-destructive)]'
-                      : 'bg-primary border-primary shadow-[0_0_4px_var(--color-primary)]')
-                  : 'bg-transparent border-border'"
+                  ? (entry.overflow ? 'bg-destructive/70' : 'bg-primary')
+                  : 'bg-muted-foreground/20'"
               />
             </div>
           </div>

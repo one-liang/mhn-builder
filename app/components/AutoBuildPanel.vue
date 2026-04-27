@@ -150,24 +150,29 @@ const bestResult = computed(() => autoBuildStore.results[0] ?? null)
               :key="target.skillId"
               class="flex items-center gap-2 px-2.5 py-2 rounded-lg bg-secondary/40 border border-border"
             >
+              <!-- Gem icon -->
+              <div class="flex-shrink-0 flex items-center justify-center w-6 h-6 rounded bg-primary/10">
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="text-primary/70"><path d="M6 3h12l4 6-10 13L2 9Z"/><path d="M11 3 8 9l4 13 4-13-3-6"/><path d="M2 9h20"/></svg>
+              </div>
+
               <!-- Skill name -->
               <span class="flex-1 text-sm font-medium text-foreground truncate">
                 {{ getSkillName(target.skillId) }}
               </span>
 
-              <!-- Level dots -->
-              <div class="flex items-center gap-1 flex-shrink-0">
+              <!-- Level bars -->
+              <div class="flex items-center gap-0.5 flex-shrink-0">
                 <button
                   v-for="lv in getSkillMaxLevel(target.skillId)"
                   :key="lv"
-                  class="w-4 h-4 rounded-full border-2 transition-all cursor-pointer"
+                  class="w-4 h-1.5 transition-all cursor-pointer"
                   :class="lv <= target.desiredLevel
-                    ? 'bg-primary border-primary shadow-[0_0_4px_var(--color-primary)]'
-                    : 'bg-transparent border-border hover:border-primary/50'"
+                    ? 'bg-primary'
+                    : 'bg-border hover:bg-primary/40'"
                   :aria-label="`設定等級 ${lv}`"
                   @click="autoBuildStore.updateTargetSkillLevel(target.skillId, lv)"
                 />
-                <span class="text-xs text-primary font-semibold ml-1 w-6 text-right">Lv{{ target.desiredLevel }}</span>
+                <span class="text-xs text-primary font-semibold ml-1.5 w-6 text-right">Lv{{ target.desiredLevel }}</span>
               </div>
 
               <!-- Remove -->

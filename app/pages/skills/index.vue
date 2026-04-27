@@ -41,7 +41,7 @@ const filteredSkills = computed(() => {
     </div>
 
     <!-- Category Filter -->
-    <div class="flex gap-2 overflow-x-auto pb-2 mb-4 -mx-4 px-4 scrollbar-hide">
+    <div class="flex flex-nowrap gap-2 overflow-x-auto sm:flex-wrap sm:overflow-visible pb-2 sm:pb-0 mb-4 -mx-4 px-4 sm:mx-0 sm:px-0 scrollbar-hide">
       <button
         v-for="cat in skillStore.categories"
         :key="cat.id"
@@ -61,7 +61,7 @@ const filteredSkills = computed(() => {
         v-for="skill in filteredSkills"
         :key="skill.id"
         :to="`/skills/${skill.id}`"
-        class="flex items-center justify-between p-3 rounded-lg bg-card border border-border hover:border-primary/40 transition-colors min-h-[44px]"
+        class="flex items-center justify-between gap-3 p-3 rounded-lg bg-card border border-border hover:border-primary/40 transition-colors min-h-[44px]"
       >
         <img src="/images/skills/skill.png" class="w-6 h-6 flex-shrink-0 rounded" :alt="skill.name" />
         <div class="flex-1 min-w-0">
