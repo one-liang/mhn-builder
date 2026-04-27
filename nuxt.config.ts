@@ -4,6 +4,9 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
+  app: {
+    baseURL: '/mhn-builder/',
+  },
   css: ['~/assets/css/tailwind.css'],
   modules: ['shadcn-nuxt', '@pinia/nuxt', '@vueuse/nuxt'],
   vite: {
