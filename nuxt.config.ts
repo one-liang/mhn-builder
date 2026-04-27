@@ -6,6 +6,15 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ['~/assets/css/tailwind.css'],
   modules: ['shadcn-nuxt', '@pinia/nuxt', '@vueuse/nuxt'],
+  app: {
+    baseURL: process.env.NUXT_APP_BASE_URL || '/',
+  },
+  nitro: {
+    prerender: {
+      crawlLinks: true,
+      routes: ['/'],
+    },
+  },
   vite: {
     plugins: [tailwindcss()],
     optimizeDeps: {
