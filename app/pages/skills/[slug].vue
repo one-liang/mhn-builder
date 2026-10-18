@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { ChevronRight } from 'lucide-vue-next'
 import { useSkillStore } from '~/stores/skill'
 import { useEquipmentStore, getWeaponTypeName, getPartName } from '~/stores/equipment'
 const route = useRoute()
@@ -49,80 +50,107 @@ const weaponsWithSkill = computed(() => {
 </script>
 
 <template>
-  <div class="px-4 py-4 max-w-lg mx-auto">
-    <NuxtLink to="/skills" class="inline-flex items-center gap-1 text-xs text-muted-foreground hover:text-primary mb-4">
-      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
-      返回技能列表
-    </NuxtLink>
-
+  <div class="mx-auto max-w-2xl px-4 sm:px-6">
     <template v-if="skill">
-      <!-- Header -->
-      <div class="mb-6">
-        <div class="flex items-center gap-2 mb-1">
-          <span class="px-2 py-0.5 rounded text-[10px] font-medium bg-primary/15 text-primary border border-primary/20">
+      <PageHeader
+        :title="skill.name"
+        :eyebrow="skill.nameEn || 'Skill'"
+        :back="{ to: '/skills', label: '技能列表' }"
+      >
+        <div class="mt-3 flex items-center gap-2">
+          <span class="rounded-sm bg-secondary px-2 py-1 text-[0.6875rem] font-medium text-secondary-foreground">
             {{ categoryNames[skill.category] || skill.category }}
           </span>
-          <span class="text-xs text-muted-foreground">最高 Lv{{ skill.maxLevel }}</span>
+          <span class="font-num text-xs font-semibold tabular-nums text-muted-foreground">MAX Lv{{ skill.maxLevel }}</span>
         </div>
-        <h1 class="text-lg font-bold text-foreground">{{ skill.name }}</h1>
-        <p class="text-sm text-muted-foreground mt-2">{{ skill.description }}</p>
+        <p class="mt-4 max-w-prose text-[0.9375rem] leading-relaxed text-muted-foreground">{{ skill.description }}</p>
+      </PageHeader>
+
+      <div class="flex flex-col gap-10">
+        <!-- Level Effects -->
+        <section>
+          <SectionHeading title="等級效果" en="Levels" />
+          <ol class="divide-y divide-border overflow-hidden rounded-md border border-border bg-card">
+            <li
+              v-for="lv in skill.levels"
+              :key="lv.level"
+              class="flex items-start gap-4 px-3 py-3 sm:px-4"
+            >
+              <div class="flex w-14 flex-shrink-0 flex-col gap-1.5 pt-0.5">
+                <span class="font-num text-lg font-semibold leading-none tabular-nums text-primary">
+                  <span class="text-[0.6875rem] font-medium text-muted-foreground">Lv</span>{{ lv.level }}
+                </span>
+                <span class="flex gap-[2px]" aria-hidden="true">
+                  <span
+                    v-for="i in skill.maxLevel"
+                    :key="i"
+                    class="h-1 flex-1 -skew-x-[18deg]"
+                    :class="i <= lv.level ? 'bg-primary' : 'bg-border'"
+                  />
+                </span>
+              </div>
+              <span class="text-sm leading-relaxed text-foreground">{{ lv.effect }}</span>
+            </li>
+          </ol>
+        </section>
+
+        <!-- Armor with this skill -->
+        <section v-if="armorWithSkill.length">
+          <SectionHeading title="擁有此技能的防具" en="Armor">
+            <span class="font-num text-sm tabular-nums text-muted-foreground">{{ armorWithSkill.length }}</span>
+          </SectionHeading>
+          <ul class="divide-y divide-border overflow-hidden rounded-md border border-border bg-card">
+            <li v-for="a in armorWithSkill" :key="a.id">
+              <NuxtLink
+                :to="`/armor/${a.id}`"
+                class="group flex min-h-12 items-center gap-3 px-3 py-2.5 transition-colors hover:bg-secondary/70 sm:px-4"
+              >
+                <div class="min-w-0 flex-1">
+                  <p class="truncate text-sm font-medium text-foreground">{{ a.name }}</p>
+                  <p class="mt-0.5 truncate text-[0.6875rem] text-muted-foreground">
+                    {{ a.setName && a.setName !== '無' ? `${a.setName} · ` : '' }}{{ getPartName(a.part) }}
+                  </p>
+                </div>
+                <span class="font-num tabular-nums text-foreground">
+                  <span class="text-[0.6875rem] font-medium text-muted-foreground">Lv</span>
+                  <span class="text-lg font-semibold">{{ a.skillLevel }}</span>
+                </span>
+                <ChevronRight class="size-4 flex-shrink-0 text-muted-foreground transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
+              </NuxtLink>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Weapons with this skill -->
+        <section v-if="weaponsWithSkill.length">
+          <SectionHeading title="擁有此技能的武器" en="Weapons">
+            <span class="font-num text-sm tabular-nums text-muted-foreground">{{ weaponsWithSkill.length }}</span>
+          </SectionHeading>
+          <ul class="divide-y divide-border overflow-hidden rounded-md border border-border bg-card">
+            <li v-for="w in weaponsWithSkill" :key="w.weapon.id">
+              <NuxtLink
+                :to="`/weapons/${w.type}/${w.weapon.id}`"
+                class="group flex min-h-12 items-center gap-3 px-3 py-2.5 transition-colors hover:bg-secondary/70 sm:px-4"
+              >
+                <div class="min-w-0 flex-1">
+                  <p class="truncate text-sm font-medium text-foreground">{{ w.weapon.name }}</p>
+                  <p class="mt-0.5 truncate text-[0.6875rem] text-muted-foreground">{{ getWeaponTypeName(w.type) }}</p>
+                </div>
+                <span class="font-num tabular-nums text-foreground">
+                  <span class="text-[0.6875rem] font-medium text-muted-foreground">Lv</span>
+                  <span class="text-lg font-semibold">{{ w.skillLevel }}</span>
+                </span>
+                <ChevronRight class="size-4 flex-shrink-0 text-muted-foreground transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
+              </NuxtLink>
+            </li>
+          </ul>
+        </section>
       </div>
-
-      <!-- Level Effects -->
-      <section class="mb-4">
-        <h2 class="text-sm font-semibold text-primary mb-2">等級效果</h2>
-        <div class="bg-card rounded-lg border border-border divide-y divide-border">
-          <div
-            v-for="lv in skill.levels"
-            :key="lv.level"
-            class="flex items-start gap-3 px-3 py-2"
-          >
-            <span class="text-xs font-bold text-primary flex-shrink-0 mt-0.5">Lv{{ lv.level }}</span>
-            <span class="text-sm text-foreground">{{ lv.effect }}</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- Armor with this skill -->
-      <section v-if="armorWithSkill.length" class="mb-4">
-        <h2 class="text-sm font-semibold text-primary mb-2">擁有此技能的防具</h2>
-        <div class="flex flex-col gap-2">
-          <NuxtLink
-            v-for="a in armorWithSkill"
-            :key="a.id"
-            :to="`/armor/${a.id}`"
-            class="flex items-center justify-between p-3 rounded-lg bg-card border border-border hover:border-primary/40 transition-colors"
-          >
-            <div class="flex-1 min-w-0">
-              <span class="text-sm text-foreground">{{ a.name }}</span>
-              <span class="text-xs text-muted-foreground ml-2">{{ a.setName }} | {{ getPartName(a.part) }}</span>
-            </div>
-            <SkillBadge :name="skill.name" :level="a.skillLevel" />
-          </NuxtLink>
-        </div>
-      </section>
-
-      <!-- Weapons with this skill -->
-      <section v-if="weaponsWithSkill.length" class="mb-4">
-        <h2 class="text-sm font-semibold text-primary mb-2">擁有此技能的武器</h2>
-        <div class="flex flex-col gap-2">
-          <NuxtLink
-            v-for="w in weaponsWithSkill"
-            :key="w.weapon.id"
-            :to="`/weapons/${w.type}/${w.weapon.id}`"
-            class="flex items-center justify-between p-3 rounded-lg bg-card border border-border hover:border-primary/40 transition-colors"
-          >
-            <div class="flex-1 min-w-0">
-              <span class="text-sm text-foreground">{{ w.weapon.name }}</span>
-              <span class="text-xs text-muted-foreground ml-2">{{ getWeaponTypeName(w.type) }}</span>
-            </div>
-            <SkillBadge :name="skill.name" :level="w.skillLevel" />
-          </NuxtLink>
-        </div>
-      </section>
-
     </template>
 
-    <div v-else class="text-center py-16 text-muted-foreground">找不到此技能</div>
+    <div v-else class="py-24 text-center">
+      <p class="text-sm text-muted-foreground">找不到此技能</p>
+      <NuxtLink to="/skills" class="mt-3 inline-flex h-11 items-center text-sm font-medium text-primary">返回技能列表</NuxtLink>
+    </div>
   </div>
 </template>

@@ -1,13 +1,14 @@
-### Requirement: Monster Hunter game-themed color system
-系統 SHALL 使用魔物獵人遊戲風格的暗色系配色方案。主要色系包含：Primary 琥珀金（用於重點元素與互動元件）、Background 深棕（整體背景）、Surface 較淺棕（卡片與區塊背景）、Accent 深紅（強調與警告）、Text 米白（主要文字）。色系 SHALL 透過 Tailwind CSS 自訂主題變數定義。
+### Requirement: Ink & Vermilion (墨朱) color system
+系統 SHALL 使用「墨朱」配色方案：冷調墨色中性色（Background／Card／Secondary／Border）搭配單一朱紅強調色（Primary）。語意色包含：Stone 青碧（所有漂流石相關元素）、Warning 琥珀（技能超出上限、未達成目標）、Destructive 玫紅（刪除類操作）、Positive 綠（正會心等正向數值）。色系 SHALL 以 OKLCH 定義於 `app/assets/css/tailwind.css` 的 CSS 自訂屬性，並透過 Tailwind CSS 主題變數使用。
 
-#### Scenario: Dark theme applied globally
-- **WHEN** 使用者開啟網站任意頁面
-- **THEN** 頁面 SHALL 使用深色背景搭配淺色文字，呈現魔物獵人風格
+#### Scenario: Primary color used sparingly
+- **WHEN** 頁面顯示主要操作（開始配裝、開始搜尋、分享）、目前所在導航、已選取的目標技能
+- **THEN** SHALL 使用朱紅 Primary 標示
+- **AND** 一般篩選籤的選中狀態 SHALL 使用墨色反白（foreground 底、background 字），不使用 Primary
 
-#### Scenario: Interactive elements use primary color
-- **WHEN** 頁面顯示可互動元素（按鈕、連結、選中狀態）
-- **THEN** SHALL 使用琥珀金系色彩標示
+#### Scenario: Driftstone elements use stone color
+- **WHEN** 頁面顯示漂移鑲嵌槽、漂流石技能或純石標記
+- **THEN** SHALL 使用 Stone 青碧色系標示
 
 ### Requirement: Mobile-first responsive layout
 系統 SHALL 以手機螢幕（375px~428px 寬度）為主要設計目標。所有頁面 SHALL 在手機上完整可用，不需要橫向捲動。桌面版為次要支援，使用 max-width 容器居中顯示。
@@ -21,11 +22,11 @@
 - **THEN** 內容 SHALL 以 max-width 容器居中顯示
 
 ### Requirement: Bottom tab navigation
-系統 SHALL 在手機版提供固定於螢幕底部的 Tab 導航列，包含以下 4 個 Tab：防具（Armor）、武器（Weapons）、技能（Skills）、漂流石（Driftstones）。當前所在 Tab SHALL 以視覺高亮標示。導航列 SHALL 位於拇指自然觸及區域。
+系統 SHALL 在手機版（寬度 < 768px）提供固定於螢幕底部的 Tab 導航列，包含以下 5 個 Tab：配裝（Build）、武器（Weapons）、防具（Armor）、技能（Skills）、漂流石（Driftstones）。當前所在 Tab SHALL 以視覺高亮標示。導航列 SHALL 位於拇指自然觸及區域。寬度 ≥ 768px 時，導航 SHALL 改為顯示在頂部標題列中。
 
 #### Scenario: Tab navigation display
 - **WHEN** 使用者在手機上開啟網站
-- **THEN** 底部 SHALL 顯示固定的 4 個 Tab 導航按鈕
+- **THEN** 底部 SHALL 顯示固定的 5 個 Tab 導航按鈕
 
 #### Scenario: Active tab highlight
 - **WHEN** 使用者位於防具列表頁面
@@ -35,12 +36,12 @@
 - **WHEN** 使用者點擊底部「技能」Tab
 - **THEN** 頁面 SHALL 導航至技能列表頁面
 
-### Requirement: Card-based equipment display
-系統 SHALL 使用卡片式設計展示裝備項目，每張卡片包含：裝備圖片（左側或上方）、裝備名稱、稀有度指示、技能標籤。卡片 SHALL 有適當的觸控目標大小（最小 44px 高度）。
+### Requirement: List-based equipment display
+系統 SHALL 以單一外框、以分隔線區隔的清單列展示裝備項目，每列包含：裝備圖片（左側）、裝備名稱、關鍵數值（攻擊／屬性／會心或防禦）、技能標籤。每列 SHALL 有適當的觸控目標大小（最小 44px 高度）。
 
-#### Scenario: Armor card display
+#### Scenario: Armor list display
 - **WHEN** 使用者瀏覽防具列表
-- **THEN** 每件防具 SHALL 以卡片形式顯示，包含圖片、名稱、稀有度、技能標籤
+- **THEN** 每件防具 SHALL 以清單列形式顯示，包含圖片、名稱、系列與部位、防禦力、技能標籤
 
 #### Scenario: Touch target size
 - **WHEN** 使用者在手機上操作
@@ -117,18 +118,18 @@ The system SHALL respect the user's `prefers-reduced-motion` setting.
 - **THEN** all CSS transitions and animations SHALL be disabled or minimized
 
 ### Requirement: Modern Monster Hunter themed design system
-The app SHALL use a CSS Custom Properties design system with distinct light and dark token sets that reflect Monster Hunter game aesthetics — bright, readable in light mode; immersive and atmospheric in dark mode.
+The app SHALL use a CSS Custom Properties design system with distinct light (紙) and dark (墨) token sets. Typography SHALL use Noto Serif TC (black weight) for page titles and the brand mark, Noto Sans TC for body text, and Barlow Condensed for numerals and English eyebrow labels.
 
-#### Scenario: Light mode renders bright theme
+#### Scenario: Light mode renders paper theme
 - **WHEN** the app is in light mode
-- **THEN** the background SHALL use a light color (≥ #F0F0F0 luminance range)
-- **AND** primary accent SHALL reference Monster Hunter gold/amber tones
+- **THEN** the background SHALL use a cool off-white (≥ #F0F0F0 luminance range)
+- **AND** primary accent SHALL be vermilion
 - **AND** all cards SHALL be visually distinct from the page background
 
-#### Scenario: Dark mode renders MH atmospheric theme
+#### Scenario: Dark mode renders ink theme
 - **WHEN** the app is in dark mode
-- **THEN** the background SHALL be deep and dark (matching the original MH dark aesthetic)
-- **AND** primary accent SHALL glow/stand out against the dark background
+- **THEN** the background SHALL be a deep blue-black ink tone
+- **AND** primary accent SHALL be a brighter vermilion that stands out against the dark background
 
 ### Requirement: Theme toggle button in header
 The app header SHALL include a visible toggle button for switching between light and dark modes.

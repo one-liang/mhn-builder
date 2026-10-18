@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { Check, ChevronDown } from 'lucide-vue-next'
 import { useSkillStore } from '~/stores/skill'
 
 const props = defineProps<{
@@ -21,10 +22,10 @@ const collapsedCats = ref<Set<string>>(new Set())
 const MAX_SKILLS = 6
 
 const DISPLAY_CATEGORIES = [
-  { id: 'attack', name: '攻擊' },
-  { id: 'element', name: '屬性' },
-  { id: 'utility', name: '動作' },
-  { id: 'defense-resistance', name: '防禦・耐性' },
+  { id: 'attack', name: '攻擊', en: 'Attack' },
+  { id: 'element', name: '屬性', en: 'Element' },
+  { id: 'utility', name: '動作', en: 'Utility' },
+  { id: 'defense-resistance', name: '防禦・耐性', en: 'Defense' },
 ]
 
 watch(
@@ -66,14 +67,18 @@ function isSelected(skillId: string): boolean {
     pendingIds.value.has(skillId)
 }
 
-function pillClass(skillId: string): string {
+function isDisabled(skillId: string): boolean {
+  return !isSelected(skillId) && !toRemoveIds.value.has(skillId) && !canAddMore.value && !excludeSet.value.has(skillId)
+}
+
+function tileClass(skillId: string): string {
   if (toRemoveIds.value.has(skillId))
-    return 'bg-destructive/10 border-destructive/40 text-destructive line-through cursor-pointer'
+    return 'border-dashed border-destructive/60 bg-transparent text-destructive line-through'
   if (isSelected(skillId))
-    return 'bg-primary/12 border-primary text-primary font-semibold cursor-pointer'
-  if (!canAddMore.value && !excludeSet.value.has(skillId))
-    return 'bg-card border-border text-foreground/40 cursor-not-allowed'
-  return 'bg-card border-border text-foreground hover:border-primary/50 hover:bg-primary/8 cursor-pointer'
+    return 'border-primary bg-accent font-bold text-accent-foreground'
+  if (isDisabled(skillId))
+    return 'border-border bg-card text-foreground/35 cursor-not-allowed'
+  return 'border-border bg-card text-foreground hover:border-border-strong'
 }
 
 function confirmClose() {
@@ -112,141 +117,100 @@ function toggleCategory(catId: string) {
   else next.add(catId)
   collapsedCats.value = next
 }
-
-function onKeydown(e: KeyboardEvent) {
-  if (e.key === 'Escape' && props.open) cancelClose()
-}
-
-onMounted(() => window.addEventListener('keydown', onKeydown))
-onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
 </script>
 
 <template>
-  <Teleport to="body">
-    <Transition name="fade">
-      <div
-        v-if="open"
-        class="fixed inset-0 z-[100] flex items-end sm:items-center justify-center"
-        role="dialog"
-        aria-modal="true"
-      >
-        <div class="absolute inset-0 bg-black/70 backdrop-blur-sm" @click="cancelClose" />
+  <BottomSheet :open="open" title="目標技能" eyebrow="Auto Build" @close="cancelClose">
+    <template #header-actions>
+      <span class="mr-1 font-num text-sm font-semibold tabular-nums" :class="canAddMore ? 'text-muted-foreground' : 'text-primary'">
+        <span class="text-lg text-foreground">{{ totalSelected }}</span>/{{ MAX_SKILLS }}
+      </span>
+    </template>
 
-        <div
-          class="relative flex flex-col w-full sm:max-w-lg sm:mx-4 h-[100dvh] sm:h-[85dvh] sm:rounded-xl bg-card shadow-2xl overflow-hidden"
+    <template #toolbar>
+      <SearchField v-model="search" placeholder="搜尋技能名稱" />
+    </template>
+
+    <!-- Search results: flat grid -->
+    <div v-if="search.trim()" class="p-3 sm:p-4">
+      <div class="grid grid-cols-3 gap-2">
+        <button
+          v-for="skill in searchResults"
+          :key="skill.id"
+          type="button"
+          class="relative min-h-12 cursor-pointer rounded-md border px-2 py-2.5 text-center text-[0.8125rem] leading-snug transition-colors"
+          :class="tileClass(skill.id)"
+          :aria-pressed="isSelected(skill.id)"
+          :aria-disabled="isDisabled(skill.id) || undefined"
+          @click="toggleSkill(skill.id)"
         >
-          <!-- Header: centered "技能" title + dotted separator -->
-          <div class="pt-5 pb-0 px-5 text-center">
-            <h2 class="text-lg font-bold text-foreground tracking-wide">技能</h2>
-            <div class="mt-3 border-t border-dashed border-border/70" />
-          </div>
-
-          <!-- Search bar -->
-          <div class="px-4 pt-3 pb-2">
-            <input
-              v-model="search"
-              type="text"
-              placeholder="搜尋"
-              class="w-full px-4 py-2.5 rounded-xl bg-background border border-border/60 text-sm text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:border-primary/60 min-h-[44px]"
-            />
-          </div>
-
-          <!-- Skill content area -->
-          <div class="flex-1 overflow-y-auto scrollbar-none">
-            <!-- Search results: flat 3-col grid -->
-            <div v-if="search.trim()" class="px-4 py-3">
-              <div class="grid grid-cols-3 gap-2">
-                <button
-                  v-for="skill in searchResults"
-                  :key="skill.id"
-                  class="px-2 py-3 rounded-2xl border text-sm text-center leading-snug transition-colors"
-                  :class="pillClass(skill.id)"
-                  @click="toggleSkill(skill.id)"
-                  @keydown.enter="toggleSkill(skill.id)"
-                  @keydown.space.prevent="toggleSkill(skill.id)"
-                >
-                  {{ skill.name }}
-                </button>
-              </div>
-              <p v-if="!searchResults.length" class="text-center text-muted-foreground py-8 text-sm">
-                找不到符合條件的技能
-              </p>
-            </div>
-
-            <!-- Category sections -->
-            <div v-else class="px-4">
-              <div v-for="cat in DISPLAY_CATEGORIES" :key="cat.id" class="pt-4 pb-2">
-                <!-- Category header row -->
-                <button
-                  class="w-full flex items-center justify-between cursor-pointer mb-2"
-                  @click="toggleCategory(cat.id)"
-                >
-                  <span class="text-base font-bold text-foreground">{{ cat.name }}</span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="18"
-                    height="18"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="text-muted-foreground transition-transform duration-200"
-                    :class="collapsedCats.has(cat.id) ? 'rotate-180' : ''"
-                  ><polyline points="18 15 12 9 6 15" /></svg>
-                </button>
-                <!-- Dotted separator -->
-                <div class="border-t border-dotted border-border/70 mb-3" />
-                <!-- 3-col pill grid -->
-                <div v-if="!collapsedCats.has(cat.id)" class="grid grid-cols-3 gap-2">
-                  <button
-                    v-for="skill in skillsPerCategory[cat.id]"
-                    :key="skill.id"
-                    class="px-2 py-3 rounded-2xl border text-sm text-center leading-snug transition-colors"
-                    :class="pillClass(skill.id)"
-                    @click="toggleSkill(skill.id)"
-                    @keydown.enter="toggleSkill(skill.id)"
-                    @keydown.space.prevent="toggleSkill(skill.id)"
-                  >
-                    {{ skill.name }}
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Bottom action buttons -->
-          <div class="flex gap-3 px-4 py-4 border-t border-border/50 bg-card">
-            <button
-              class="flex-[2] py-3 rounded-xl border border-border/80 text-sm font-medium text-foreground hover:bg-secondary/60 transition-colors min-h-[44px] cursor-pointer"
-              @click="cancelClose"
-            >取消</button>
-            <button
-              class="flex-[3] py-3 rounded-xl bg-primary text-primary-foreground text-sm font-semibold hover:brightness-110 transition-all min-h-[44px] cursor-pointer"
-              @click="confirmClose"
-            >好</button>
-          </div>
-        </div>
+          <span
+            v-if="isSelected(skill.id)"
+            class="absolute -right-px -top-px flex size-4 items-center justify-center rounded-bl-sm rounded-tr-md bg-primary text-primary-foreground"
+            aria-hidden="true"
+          ><Check class="size-3" :stroke-width="3" /></span>
+          {{ skill.name }}
+        </button>
       </div>
-    </Transition>
-  </Teleport>
-</template>
+      <p v-if="!searchResults.length" class="py-12 text-center text-sm text-muted-foreground">
+        找不到符合條件的技能
+      </p>
+    </div>
 
-<style scoped>
-.scrollbar-none {
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-.scrollbar-none::-webkit-scrollbar {
-  display: none;
-}
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.2s ease;
-}
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
-}
-</style>
+    <!-- Category sections -->
+    <div v-else class="px-3 pb-4 sm:px-4">
+      <section v-for="cat in DISPLAY_CATEGORIES" :key="cat.id" class="pt-4">
+        <button
+          type="button"
+          class="mb-3 flex w-full cursor-pointer items-center gap-2.5 text-left"
+          :aria-expanded="!collapsedCats.has(cat.id)"
+          @click="toggleCategory(cat.id)"
+        >
+          <span class="text-[0.9375rem] font-bold text-foreground">{{ cat.name }}</span>
+          <span class="eyebrow text-muted-foreground">{{ cat.en }}</span>
+          <span class="font-num text-xs tabular-nums text-muted-foreground">{{ skillsPerCategory[cat.id]?.length }}</span>
+          <span class="h-px flex-1 bg-border" aria-hidden="true" />
+          <ChevronDown
+            class="size-4 text-muted-foreground transition-transform duration-200"
+            :class="collapsedCats.has(cat.id) ? '-rotate-90' : ''"
+            aria-hidden="true"
+          />
+        </button>
+        <div v-if="!collapsedCats.has(cat.id)" class="grid grid-cols-3 gap-2">
+          <button
+            v-for="skill in skillsPerCategory[cat.id]"
+            :key="skill.id"
+            type="button"
+            class="relative min-h-12 cursor-pointer rounded-md border px-2 py-2.5 text-center text-[0.8125rem] leading-snug transition-colors"
+            :class="tileClass(skill.id)"
+            :aria-pressed="isSelected(skill.id)"
+            :aria-disabled="isDisabled(skill.id) || undefined"
+            @click="toggleSkill(skill.id)"
+          >
+            <span
+              v-if="isSelected(skill.id)"
+              class="absolute -right-px -top-px flex size-4 items-center justify-center rounded-bl-sm rounded-tr-md bg-primary text-primary-foreground"
+              aria-hidden="true"
+            ><Check class="size-3" :stroke-width="3" /></span>
+            {{ skill.name }}
+          </button>
+        </div>
+      </section>
+    </div>
+
+    <template #footer>
+      <div class="flex gap-2">
+        <button
+          type="button"
+          class="h-11 flex-[2] cursor-pointer rounded-md border border-border text-sm font-medium text-foreground transition-colors hover:bg-secondary"
+          @click="cancelClose"
+        >取消</button>
+        <button
+          type="button"
+          class="cut-corner-sm h-11 flex-[3] cursor-pointer bg-primary text-sm font-bold text-primary-foreground transition-[filter] hover:brightness-110"
+          @click="confirmClose"
+        >確定</button>
+      </div>
+    </template>
+  </BottomSheet>
+</template>

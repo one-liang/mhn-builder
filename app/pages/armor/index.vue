@@ -33,55 +33,49 @@ const filteredArmor = computed(() => {
 function resolveSkillName(skillId: string) {
   return skillStore.getById(skillId)?.name || skillId
 }
+
+function armorSubtitle(setName: string, part: string) {
+  return setName && setName !== '無' ? `${setName} · ${getPartName(part)}` : getPartName(part)
+}
 </script>
 
 <template>
-  <div class="px-4 py-4 max-w-lg mx-auto">
-    <h1 class="text-xl font-bold text-foreground mb-4">防具一覽</h1>
+  <div class="mx-auto max-w-2xl px-4 sm:px-6">
+    <PageHeader
+      title="防具圖鑑"
+      eyebrow="Armor"
+      :count="filteredArmor.length"
+      count-label="件"
+    />
 
     <!-- Part Filter -->
-    <div class="flex gap-2 overflow-x-auto pb-2 mb-4 -mx-4 px-4 scrollbar-hide">
-      <button
-        v-for="part in parts"
-        :key="part.id"
-        class="flex-shrink-0 px-3 py-1.5 rounded-full text-xs font-medium transition-colors min-h-[32px]"
-        :class="activePart === part.id
-          ? 'bg-primary text-primary-foreground'
-          : 'bg-secondary text-muted-foreground hover:text-foreground'"
-        @click="activePart = part.id"
-      >
-        {{ part.name }}
-      </button>
+    <div class="mb-4">
+      <FilterChips v-model="activePart" :options="parts" label="防具部位">
+        <template #icon="{ option }">
+          <ArmorPartIcon v-if="option.id !== 'all'" :part="option.id" class="size-3.5" aria-hidden="true" />
+        </template>
+      </FilterChips>
     </div>
 
     <!-- Armor List -->
-    <div class="flex flex-col gap-2">
-      <EquipmentCard
-        v-for="item in filteredArmor"
-        :key="item.id"
-        :id="item.id"
-        :name="item.name"
-        :skills="item.skills.map(s => ({ ...s, name: resolveSkillName(s.skillId) }))"
-        :image="item.image"
-        :armor-part="item.part"
-        :to="`/armor/${item.id}`"
-        :subtitle="`${item.setName} | ${getPartName(item.part)} | 防禦 ${item.defense}`"
-        :monster-icon-key="getMonsterIconKey(item.id)"
-      />
-    </div>
+    <ul v-if="filteredArmor.length" class="divide-y divide-border overflow-hidden rounded-md border border-border bg-card">
+      <li v-for="item in filteredArmor" :key="item.id">
+        <EquipmentCard
+          :id="item.id"
+          :name="item.name"
+          :skills="item.skills.map(s => ({ ...s, name: resolveSkillName(s.skillId) }))"
+          :image="item.image"
+          :armor-part="item.part"
+          :to="`/armor/${item.id}`"
+          :subtitle="armorSubtitle(item.setName, item.part)"
+          :stats="[{ label: '防禦', value: item.defense }]"
+          :monster-icon-key="getMonsterIconKey(item.id)"
+        />
+      </li>
+    </ul>
 
-    <p v-if="!filteredArmor.length" class="text-center text-muted-foreground py-8">
+    <p v-else class="py-16 text-center text-sm text-muted-foreground">
       暫無資料
     </p>
   </div>
 </template>
-
-<style scoped>
-.scrollbar-hide::-webkit-scrollbar {
-  display: none;
-}
-.scrollbar-hide {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-</style>

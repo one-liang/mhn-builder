@@ -1,15 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Noto+Sans+TC:wght@400;500;600;700;900&display=swap');
-
 @import "tailwindcss";
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
+/* =============================================
+   墨朱 Ink & Vermilion design system
+   - 冷調墨色中性色 + 單一朱紅強調色
+   - 漂流石相關一律使用 stone（青碧）語意色
+   - 超量／缺少等提醒使用 warning（琥珀）
+============================================= */
+
 @theme inline {
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 2px);
+  --radius-xl: calc(var(--radius) + 6px);
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -25,15 +31,18 @@
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
   --color-destructive: var(--destructive);
+  --color-warning: var(--warning);
+  --color-positive: var(--positive);
+  --color-stone: var(--stone);
+  --color-stone-soft: var(--stone-soft);
   --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --color-chart-1: var(--chart-1);
-  --color-chart-2: var(--chart-2);
-  --color-chart-3: var(--chart-3);
-  --color-chart-4: var(--chart-4);
-  --color-chart-5: var(--chart-5);
+}
 
+/* static：一律輸出成 CSS 變數，供 var() 與 JS 動態樣式取用 */
+@theme static {
   /* MHN Rarity colors — shared across themes */
   --color-rarity-1: #6B7280;
   --color-rarity-2: #65A30D;
@@ -46,88 +55,103 @@
   --color-rarity-9: #B45309;
 
   /* Element colors */
-  --color-element-fire: #DC2626;
-  --color-element-water: #2563EB;
-  --color-element-thunder: #CA8A04;
-  --color-element-ice: #0891B2;
-  --color-element-dragon: #7C3AED;
-  --color-element-poison: #9333EA;
+  --color-element-fire: #E5533D;
+  --color-element-water: #3B7DD8;
+  --color-element-thunder: #D4A21C;
+  --color-element-ice: #4FB3D9;
+  --color-element-dragon: #8B5CF6;
+  --color-element-poison: #A855F7;
   --color-element-paralysis: #CA8A04;
-  --color-element-sleep: #3B82F6;
-  --color-element-blast: #EA580C;
+  --color-element-sleep: #6B8AF2;
+  --color-element-blast: #EA7A1C;
 
-  --font-sans: 'Noto Sans TC', sans-serif;
-  --font-cinzel: 'Cinzel', serif;
+  --font-sans: 'Noto Sans TC', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Noto Serif TC', 'Noto Sans TC', serif;
+  --font-num: 'Barlow Condensed', 'Noto Sans TC', ui-sans-serif, sans-serif;
+
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-/* =============================================
-   VERSION A: 獵人公會 Guild Hall
-   Light mode (default)
-============================================= */
+/* Light — 紙 */
 :root {
-  --radius: 0.5rem;
+  --radius: 0.25rem;
 
-  /* Parchment × Forest × Gold */
-  --background: #FDF8F0;
-  --foreground: #1C1408;
-  --card: #FFF8ED;
-  --card-foreground: #1C1408;
-  --popover: #FFF8ED;
-  --popover-foreground: #1C1408;
-  --primary: #8B5E0A;            /* dark gold — 5.4:1 on parchment */
-  --primary-foreground: #FDF8F0;
-  --secondary: #F0E6D0;
-  --secondary-foreground: #3D2A0E;
-  --muted: #EDE0C8;
-  --muted-foreground: #5C4A30;   /* 8:1 on parchment */
-  --accent: #2D5016;             /* forest green */
-  --accent-foreground: #FDF8F0;
-  --destructive: #C0392B;        /* dark red — 5.2:1 on parchment */
-  --border: rgba(160, 110, 20, 0.28);
-  --input: rgba(160, 110, 20, 0.15);
-  --ring: #8B5E0A;
-  --chart-1: #8B5E0A;
-  --chart-2: #2D5016;
-  --chart-3: #1C1408;
-  --chart-4: #F0E6D0;
-  --chart-5: #5C4A30;
+  --background: oklch(0.975 0.004 250);
+  --foreground: oklch(0.22 0.02 260);
+  --card: oklch(0.995 0.002 250);
+  --card-foreground: oklch(0.22 0.02 260);
+  --popover: oklch(0.995 0.002 250);
+  --popover-foreground: oklch(0.22 0.02 260);
+  --primary: oklch(0.55 0.2 33);              /* 朱 — 5.0:1 on background */
+  --primary-foreground: oklch(0.985 0.006 33);
+  --secondary: oklch(0.945 0.006 250);
+  --secondary-foreground: oklch(0.22 0.02 260);
+  --muted: oklch(0.945 0.006 250);
+  --muted-foreground: oklch(0.48 0.016 260);  /* 6.1:1 on background */
+  --accent: oklch(0.95 0.025 33);
+  --accent-foreground: oklch(0.45 0.17 33);
+  --destructive: oklch(0.52 0.19 12);
+  --warning: oklch(0.54 0.12 70);
+  --positive: oklch(0.5 0.12 155);
+  --stone: oklch(0.5 0.085 200);              /* 青碧 — 5.4:1 on background */
+  --stone-soft: oklch(0.95 0.025 200);
+  --border: oklch(0.885 0.008 250);
+  --border-strong: oklch(0.8 0.01 250);
+  --input: oklch(0.885 0.008 250);
+  --ring: oklch(0.55 0.2 33);
+
+  color-scheme: light;
 }
 
-/* =============================================
-   Dark mode override
-============================================= */
+/* Dark — 墨 */
 .dark {
-  --background: #1A1208;
-  --foreground: #F5E8C8;
-  --card: #2A1C0E;
-  --card-foreground: #F5E8C8;
-  --popover: #2A1C0E;
-  --popover-foreground: #F5E8C8;
-  --primary: #E4B84A;            /* bright gold — 8.9:1 on #1A1208 */
-  --primary-foreground: #1A1208;
-  --secondary: #3D2A1A;
-  --secondary-foreground: #F5E8C8;
-  --muted: #3D2A1A;
-  --muted-foreground: #A89880;   /* 4.8:1 on #1A1208 */
-  --accent: #4A7C2F;             /* brighter forest green */
-  --accent-foreground: #F5E8C8;
-  --destructive: #F87171;        /* 5.9:1 on #2A1C0E */
-  --border: rgba(228, 184, 74, 0.2);
-  --input: rgba(228, 184, 74, 0.15);
-  --ring: #E4B84A;
-  --chart-1: #E4B84A;
-  --chart-2: #4A7C2F;
-  --chart-3: #F5E8C8;
-  --chart-4: #3D2A1A;
-  --chart-5: #A89880;
+  --background: oklch(0.165 0.012 255);
+  --foreground: oklch(0.94 0.008 250);
+  --card: oklch(0.205 0.014 255);
+  --card-foreground: oklch(0.94 0.008 250);
+  --popover: oklch(0.205 0.014 255);
+  --popover-foreground: oklch(0.94 0.008 250);
+  --primary: oklch(0.69 0.185 36);            /* 6.4:1 on background */
+  --primary-foreground: oklch(0.17 0.03 36);
+  --secondary: oklch(0.245 0.016 255);
+  --secondary-foreground: oklch(0.94 0.008 250);
+  --muted: oklch(0.245 0.016 255);
+  --muted-foreground: oklch(0.72 0.016 255);  /* 7.8:1 on background */
+  --accent: oklch(0.27 0.05 36);
+  --accent-foreground: oklch(0.8 0.13 40);
+  --destructive: oklch(0.71 0.17 14);
+  --warning: oklch(0.83 0.14 80);
+  --positive: oklch(0.78 0.14 155);
+  --stone: oklch(0.79 0.1 195);
+  --stone-soft: oklch(0.27 0.04 195);
+  --border: oklch(0.31 0.016 255);
+  --border-strong: oklch(0.4 0.018 255);
+  --input: oklch(0.31 0.016 255);
+  --ring: oklch(0.69 0.185 36);
+
+  color-scheme: dark;
 }
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply border-border;
+  }
+  html {
+    -webkit-tap-highlight-color: transparent;
   }
   body {
     @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: "palt" 1;
+  }
+  ::selection {
+    background: color-mix(in oklch, var(--primary) 28%, transparent);
+  }
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+  }
+  input:focus-visible {
+    outline-offset: 0;
   }
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
@@ -137,14 +161,38 @@
   }
 }
 
-/* Scrollbar styling */
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: var(--background); }
-::-webkit-scrollbar-thumb {
-  background: rgba(160, 110, 20, 0.3);
-  border-radius: 3px;
+/* 切角：模仿防具甲片的斜切邊，只用在無外框的實心元素上 */
+@utility cut-corner {
+  clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
 }
-::-webkit-scrollbar-thumb:hover { background: rgba(160, 110, 20, 0.5); }
+@utility cut-corner-sm {
+  clip-path: polygon(6px 0, 100% 0, 100% calc(100% - 6px), calc(100% - 6px) 100%, 0 100%, 0 6px);
+}
 
-.dark ::-webkit-scrollbar-thumb { background: rgba(228, 184, 74, 0.3); }
-.dark ::-webkit-scrollbar-thumb:hover { background: rgba(228, 184, 74, 0.5); }
+/* 英文小標：窄體大寫字距 */
+@utility eyebrow {
+  font-family: var(--font-num);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+@utility scrollbar-none {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 4px;
+  border: 2px solid var(--background);
+}
+::-webkit-scrollbar-thumb:hover { background: var(--muted-foreground); }

@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { ChevronRight } from 'lucide-vue-next'
 import { useSkillStore } from '~/stores/skill'
 
 useSeoMeta({
@@ -10,10 +11,14 @@ useSeoMeta({
 
 const skillStore = useSkillStore()
 await skillStore.load()
-const { imageUrl } = useImageUrl()
 
 const activeCategory = ref('all')
 const searchQuery = ref('')
+
+// 分類代表字（列表左側字牌）
+const CATEGORY_GLYPH: Record<string, string> = {
+  attack: '攻', element: '屬', defense: '防', resistance: '耐', utility: '動',
+}
 
 const filteredSkills = computed(() => {
   let result = skillStore.getByCategory(activeCategory.value)
@@ -28,66 +33,44 @@ const filteredSkills = computed(() => {
 </script>
 
 <template>
-  <div class="px-4 py-4 max-w-lg mx-auto">
-    <h1 class="text-xl font-bold text-foreground mb-4">技能一覽</h1>
+  <div class="mx-auto max-w-2xl px-4 sm:px-6">
+    <PageHeader
+      title="技能辭典"
+      eyebrow="Skills"
+      :count="filteredSkills.length"
+      count-label="項"
+    />
 
-    <!-- Search -->
-    <div class="mb-3">
-      <input
-        v-model="searchQuery"
-        type="text"
-        placeholder="搜尋技能名稱..."
-        class="w-full px-3 py-2 rounded-lg bg-card border border-border text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary/60 min-h-[44px]"
-      />
-    </div>
-
-    <!-- Category Filter -->
-    <div class="flex flex-nowrap gap-2 overflow-x-auto sm:flex-wrap sm:overflow-visible pb-2 sm:pb-0 mb-4 -mx-4 px-4 sm:mx-0 sm:px-0 scrollbar-hide">
-      <button
-        v-for="cat in skillStore.categories"
-        :key="cat.id"
-        class="flex-shrink-0 px-3 py-1.5 rounded-full text-xs font-medium transition-colors min-h-[32px]"
-        :class="activeCategory === cat.id
-          ? 'bg-primary text-primary-foreground'
-          : 'bg-secondary text-muted-foreground hover:text-foreground'"
-        @click="activeCategory = cat.id"
-      >
-        {{ cat.name }}
-      </button>
+    <div class="mb-4 flex flex-col gap-2">
+      <SearchField v-model="searchQuery" placeholder="搜尋技能名稱或效果" />
+      <FilterChips v-model="activeCategory" :options="skillStore.categories" label="技能分類" />
     </div>
 
     <!-- Skill List -->
-    <div class="flex flex-col gap-2">
-      <NuxtLink
-        v-for="skill in filteredSkills"
-        :key="skill.id"
-        :to="`/skills/${skill.id}`"
-        class="flex items-center justify-between gap-3 p-3 rounded-lg bg-card border border-border hover:border-primary/40 transition-colors min-h-[44px]"
-      >
-        <img :src="imageUrl('/images/skills/skill.png')" class="w-6 h-6 flex-shrink-0 rounded" :alt="skill.name" />
-        <div class="flex-1 min-w-0">
-          <div class="flex items-center gap-2">
-            <span class="text-sm font-medium text-foreground">{{ skill.name }}</span>
-            <span class="text-[10px] text-muted-foreground">Lv{{ skill.maxLevel }}</span>
+    <ul v-if="filteredSkills.length" class="divide-y divide-border overflow-hidden rounded-md border border-border bg-card">
+      <li v-for="skill in filteredSkills" :key="skill.id">
+        <NuxtLink
+          :to="`/skills/${skill.id}`"
+          class="group flex min-h-[44px] items-center gap-3 px-3 py-3 transition-colors hover:bg-secondary/70 sm:px-4"
+        >
+          <span
+            class="flex size-9 flex-shrink-0 items-center justify-center rounded-sm bg-secondary font-display text-base font-black text-foreground"
+            aria-hidden="true"
+          >{{ CATEGORY_GLYPH[skill.category] ?? '技' }}</span>
+          <div class="min-w-0 flex-1">
+            <div class="flex items-baseline gap-2">
+              <span class="truncate text-sm font-bold text-foreground">{{ skill.name }}</span>
+              <span class="flex-shrink-0 font-num text-xs font-semibold tabular-nums text-muted-foreground">MAX {{ skill.maxLevel }}</span>
+            </div>
+            <p class="mt-0.5 truncate text-xs text-muted-foreground">{{ skill.description }}</p>
           </div>
-          <p class="text-xs text-muted-foreground truncate mt-0.5">{{ skill.description }}</p>
-        </div>
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-muted-foreground flex-shrink-0 ml-2"><path d="m9 18 6-6-6-6"/></svg>
-      </NuxtLink>
-    </div>
+          <ChevronRight class="size-4 flex-shrink-0 text-muted-foreground transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
+        </NuxtLink>
+      </li>
+    </ul>
 
-    <p v-if="!filteredSkills.length" class="text-center text-muted-foreground py-8">
+    <p v-else class="py-16 text-center text-sm text-muted-foreground">
       找不到符合條件的技能
     </p>
   </div>
 </template>
-
-<style scoped>
-.scrollbar-hide::-webkit-scrollbar {
-  display: none;
-}
-.scrollbar-hide {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-</style>

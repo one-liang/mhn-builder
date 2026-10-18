@@ -20,12 +20,8 @@ const rarityColor = computed(() => {
 </script>
 
 <template>
-  <span class="flex items-center gap-0.5">
-    <span
-      v-for="i in Math.min(rarity, 9)"
-      :key="i"
-      class="w-1.5 h-1.5 rounded-full"
-      :class="rarityColor"
-    />
+  <span class="inline-flex flex-shrink-0 items-center gap-1" :aria-label="`稀有度 ${rarity}`">
+    <span class="h-3 w-1 -skew-x-12" :class="rarityColor" aria-hidden="true" />
+    <span class="font-num text-[0.6875rem] font-semibold tabular-nums text-muted-foreground" aria-hidden="true">R{{ rarity }}</span>
   </span>
 </template>
