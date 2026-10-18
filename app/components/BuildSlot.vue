@@ -1,6 +1,7 @@
 <script setup lang="ts">
+import { ChevronRight, Plus } from 'lucide-vue-next'
 import type { Armor, Weapon } from '~/stores/equipment'
-import { getPartName } from '~/stores/equipment'
+import { getPartName, getWeaponTypeName } from '~/stores/equipment'
 import type { BuildSlot } from '~/stores/build'
 import { useSkillStore } from '~/stores/skill'
 
@@ -18,16 +19,23 @@ const emit = defineEmits<{
 const skillStore = useSkillStore()
 const { imageUrl } = useImageUrl()
 
+const isWeapon = computed(() => props.slotType === 'weapon')
+
 const slotLabel = computed(() => {
-  if (props.slotType === 'weapon') return '武器'
+  if (isWeapon.value) return '武器'
   return getPartName(props.slotType)
 })
-
-const isWeapon = computed(() => props.slotType === 'weapon')
 
 const weaponType = computed(() =>
   isWeapon.value && props.item ? (props.item as Weapon).type : ''
 )
+
+const subLabel = computed(() => {
+  if (!props.item) return ''
+  if (isWeapon.value) return getWeaponTypeName(weaponType.value)
+  const setName = (props.item as Armor).setName
+  return setName && setName !== '無' ? setName : ''
+})
 
 const skillBadges = computed(() => {
   if (!props.item) return []
@@ -37,91 +45,84 @@ const skillBadges = computed(() => {
     level: s.level,
   }))
 })
+
+function hideImage(e: Event) {
+  (e.target as HTMLImageElement).style.display = 'none'
+}
 </script>
 
 <template>
   <button
-    class="w-full flex items-center gap-3 p-2.5 rounded-lg border transition-colors min-h-[52px] text-left cursor-pointer"
+    type="button"
+    class="group flex min-h-[64px] w-full cursor-pointer items-center gap-3 rounded-md border p-2 pr-3 text-left transition-colors duration-150"
     :class="item
-      ? 'bg-card border-border/80 border-l-2 border-l-primary/50 hover:border-primary/70'
-      : 'bg-card/40 border-dashed border-border/60 hover:border-primary/40'"
+      ? 'border-border bg-card hover:border-border-strong'
+      : 'border-dashed border-border-strong bg-transparent hover:border-primary hover:bg-accent/50'"
+    :aria-label="item ? `${slotLabel}：${item.name}，點擊更換` : `選擇${slotLabel}`"
     @click="emit('open')"
   >
-    <!-- Icon group: type icon + item image -->
-    <div class="flex-shrink-0 flex items-center gap-1.5">
-      <!-- Type icon (shrinks when item selected) -->
-      <div
-        class="flex items-center justify-center rounded-md transition-all"
-        :class="item
-          ? 'w-8 h-8 bg-secondary/60 text-primary'
-          : 'w-10 h-10 bg-secondary/40 text-muted-foreground/60'"
-      >
-        <WeaponTypeIcon
-          v-if="isWeapon && item"
-          :key="weaponType"
-          :type="weaponType"
-          class="w-5 h-5"
-        />
-        <ArmorPartIcon
-          v-else-if="!isWeapon"
-          :part="slotType"
-          :class="item ? 'w-5 h-5' : 'w-6 h-6'"
-        />
-        <!-- Weapon unselected: default to sword-and-shield icon -->
-        <WeaponTypeIcon
-          v-else-if="isWeapon"
-          type="sword-and-shield"
-          class="w-6 h-6"
-        />
-      </div>
-
-      <!-- Item image (only when selected) -->
-      <div
-        v-if="item"
-        class="w-10 h-10 rounded-md bg-secondary overflow-hidden flex-shrink-0"
-      >
-        <img
-          :src="imageUrl(item.image)"
-          :alt="item.name"
-          class="w-full h-full object-cover"
-          loading="lazy"
-          @error="($event.target as HTMLImageElement).style.display = 'none'"
-        />
-      </div>
+    <!-- Icon / image tile -->
+    <div
+      class="relative flex size-12 flex-shrink-0 items-center justify-center overflow-hidden rounded-sm"
+      :class="item
+        ? 'bg-[radial-gradient(circle_at_50%_35%,var(--card),var(--secondary))] ring-1 ring-inset ring-border'
+        : 'bg-secondary text-muted-foreground'"
+    >
+      <WeaponTypeIcon
+        v-if="isWeapon"
+        :type="weaponType || 'sword-and-shield'"
+        class="size-6"
+        :class="item ? 'text-muted-foreground/50' : ''"
+      />
+      <ArmorPartIcon
+        v-else
+        :part="slotType"
+        class="size-6"
+        :class="item ? 'text-muted-foreground/50' : ''"
+      />
+      <img
+        v-if="item?.image"
+        :src="imageUrl(item.image)"
+        :alt="item.name"
+        class="absolute inset-0 size-full object-contain p-0.5"
+        loading="lazy"
+        @error="hideImage"
+      />
     </div>
 
     <!-- Content -->
-    <div class="flex-1 min-w-0">
+    <div class="min-w-0 flex-1">
+      <p class="flex items-center gap-1.5 text-[0.6875rem] font-medium leading-none">
+        <span :class="item ? 'text-primary' : 'text-muted-foreground'">{{ slotLabel }}</span>
+        <template v-if="subLabel">
+          <span class="text-border-strong" aria-hidden="true">/</span>
+          <span class="truncate text-muted-foreground">{{ subLabel }}</span>
+        </template>
+      </p>
       <template v-if="item">
-        <div class="text-sm font-semibold text-foreground truncate">{{ item.name }}</div>
-        <div v-if="skillBadges.length" class="flex flex-wrap gap-1 mt-1">
-          <span
+        <p class="mt-1 truncate text-sm font-bold leading-snug text-foreground">{{ item.name }}</p>
+        <div v-if="skillBadges.length" class="mt-1 flex flex-wrap gap-1">
+          <SkillBadge
             v-for="s in skillBadges"
             :key="s.id"
-            class="inline-flex items-center px-1.5 py-0.5 text-[9px] font-medium rounded bg-primary/10 text-primary/80 border border-primary/20 leading-none"
-          >{{ s.name }} Lv{{ s.level }}</span>
+            :name="s.name"
+            :level="s.level"
+            size="sm"
+          />
         </div>
       </template>
-      <template v-else>
-        <div class="text-[11px] text-muted-foreground font-medium">{{ slotLabel }}</div>
-        <div class="text-sm text-muted-foreground/80 mt-0.5">未選擇</div>
-      </template>
+      <p v-else class="mt-1.5 text-sm text-muted-foreground">尚未選擇</p>
     </div>
 
-    <!-- Chevron -->
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="16"
-      height="16"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class="flex-shrink-0 text-muted-foreground"
-    >
-      <path d="m9 18 6-6-6-6" />
-    </svg>
+    <ChevronRight
+      v-if="item"
+      class="size-4 flex-shrink-0 text-muted-foreground transition-transform duration-200 group-hover:translate-x-0.5"
+      aria-hidden="true"
+    />
+    <Plus
+      v-else
+      class="size-4 flex-shrink-0 text-muted-foreground transition-colors group-hover:text-primary"
+      aria-hidden="true"
+    />
   </button>
 </template>

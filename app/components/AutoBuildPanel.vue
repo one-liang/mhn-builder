@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { ChevronDown, ChevronUp, Gem, LoaderCircle, Plus, RotateCcw, Search, TriangleAlert, WandSparkles, X } from 'lucide-vue-next'
 import { useAutoBuildStore } from '~/stores/autoBuild'
 import { useSkillStore } from '~/stores/skill'
 
@@ -44,202 +45,220 @@ function getSkillMaxLevel(skillId: string): number {
 }
 
 const bestResult = computed(() => autoBuildStore.results[0] ?? null)
+const canSearch = computed(() => autoBuildStore.targetSkills.length > 0 && !autoBuildStore.isRunning)
 </script>
 
 <template>
   <!-- Collapsed state: single toggle button -->
-  <div v-if="!expanded">
-    <button
-      class="w-full flex items-center justify-between px-4 py-3 rounded-xl border border-primary/25 bg-primary/8 hover:bg-primary/15 transition-all cursor-pointer"
-      @click="expanded = true"
-    >
-      <div class="flex items-center gap-2">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><circle cx="12" cy="12" r="3"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
-        <span class="text-sm font-semibold text-foreground">自動配裝</span>
-      </div>
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-muted-foreground"><polyline points="6 9 12 15 18 9"/></svg>
-    </button>
-  </div>
+  <button
+    v-if="!expanded"
+    type="button"
+    class="group flex w-full cursor-pointer items-center gap-3 rounded-md border border-border bg-card p-2.5 pr-3 text-left transition-colors hover:border-border-strong"
+    :aria-expanded="false"
+    @click="expanded = true"
+  >
+    <span class="cut-corner-sm flex size-10 flex-shrink-0 items-center justify-center bg-primary text-primary-foreground">
+      <WandSparkles class="size-[18px]" aria-hidden="true" />
+    </span>
+    <span class="min-w-0 flex-1">
+      <span class="block text-sm font-bold text-foreground">自動配裝</span>
+      <span class="block truncate text-xs text-muted-foreground">指定目標技能，自動找出最佳防具組合</span>
+    </span>
+    <span
+      v-if="autoBuildStore.targetSkills.length"
+      class="flex-shrink-0 rounded-sm bg-secondary px-1.5 py-0.5 text-[0.6875rem] font-medium text-secondary-foreground"
+    >{{ autoBuildStore.targetSkills.length }} 項目標</span>
+    <ChevronDown class="size-4 flex-shrink-0 text-muted-foreground transition-transform group-hover:translate-y-0.5" aria-hidden="true" />
+  </button>
 
   <!-- Expanded state: full panel -->
-  <div
-    v-else
-    class="rounded-xl border border-primary/30 bg-card/60 overflow-hidden"
-  >
+  <section v-else class="overflow-hidden rounded-md border border-border bg-card" aria-label="自動配裝">
     <!-- Panel header -->
-    <div class="flex items-center justify-between px-4 py-3 border-b border-border/60">
-      <div class="flex items-center gap-2">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><circle cx="12" cy="12" r="3"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
-        <span class="text-sm font-semibold text-foreground">自動配裝</span>
+    <div class="flex items-center gap-3 border-b border-border p-2.5 pr-1.5">
+      <span class="cut-corner-sm flex size-10 flex-shrink-0 items-center justify-center bg-primary text-primary-foreground">
+        <WandSparkles class="size-[18px]" aria-hidden="true" />
+      </span>
+      <div class="min-w-0 flex-1">
+        <h2 class="text-sm font-bold text-foreground">自動配裝</h2>
+        <p class="eyebrow mt-1 text-[0.625rem] text-muted-foreground">Auto Build</p>
       </div>
       <button
-        class="p-1.5 text-muted-foreground hover:text-foreground transition-colors"
-        aria-label="收合"
+        type="button"
+        class="flex size-11 cursor-pointer items-center justify-center rounded-md text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+        aria-label="收合自動配裝"
+        :aria-expanded="true"
         @click="expanded = false"
       >
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+        <ChevronUp class="size-4" aria-hidden="true" />
       </button>
     </div>
 
-    <div class="p-3 flex flex-col gap-3">
+    <div class="flex flex-col gap-3 p-3">
       <!-- ── Post-search result state ── -->
       <template v-if="autoBuildStore.hasRun">
         <!-- No result -->
-        <div v-if="!bestResult" class="flex flex-col gap-2">
-          <p class="text-sm text-center text-muted-foreground py-1">找不到符合條件的配裝</p>
-          <button
-            class="w-full h-9 rounded-lg border border-border text-sm text-muted-foreground hover:text-foreground hover:border-primary/50 transition-all cursor-pointer"
-            @click="autoBuildStore.resetSearch()"
-          >重新搜尋</button>
+        <div v-if="!bestResult" class="flex items-start gap-2.5 rounded-md border border-warning/40 bg-warning/10 p-3">
+          <TriangleAlert class="mt-0.5 size-4 flex-shrink-0 text-warning" aria-hidden="true" />
+          <p class="text-sm text-foreground">找不到符合條件的配裝，試著降低技能等級或減少目標。</p>
         </div>
 
-        <!-- Success: unmet skills + reset -->
-        <div v-else class="flex flex-col gap-2">
+        <!-- Success -->
+        <template v-else>
+          <dl class="grid grid-cols-3 divide-x divide-border rounded-md border border-border bg-background">
+            <div class="px-3 py-2.5">
+              <dt class="text-[0.6875rem] text-muted-foreground">達成率</dt>
+              <dd
+                class="mt-0.5 font-num text-2xl font-semibold leading-none tabular-nums"
+                :class="bestResult.coveragePercent >= 100 ? 'text-positive' : 'text-warning'"
+              >{{ Math.round(bestResult.coveragePercent) }}<span class="text-sm">%</span></dd>
+            </div>
+            <div class="px-3 py-2.5">
+              <dt class="text-[0.6875rem] text-muted-foreground">搜尋組合</dt>
+              <dd class="mt-0.5 font-num text-2xl font-semibold leading-none tabular-nums text-foreground">{{ autoBuildStore.searchedCombos.toLocaleString() }}</dd>
+            </div>
+            <div class="px-3 py-2.5">
+              <dt class="text-[0.6875rem] text-muted-foreground">耗時</dt>
+              <dd class="mt-0.5 font-num text-2xl font-semibold leading-none tabular-nums text-foreground">{{ Math.round(autoBuildStore.elapsedMs) }}<span class="text-sm">ms</span></dd>
+            </div>
+          </dl>
+
           <!-- Unmet skill warnings (only shown when targets not fully met) -->
-          <div v-if="bestResult.unmetSkills.length > 0" class="flex flex-wrap gap-1 px-0.5">
+          <div v-if="bestResult.unmetSkills.length > 0" class="flex flex-wrap items-center gap-1.5">
+            <span class="text-[0.6875rem] text-muted-foreground">未達成</span>
             <span
               v-for="u in bestResult.unmetSkills"
               :key="u.skillId"
-              class="text-[10px] px-1.5 py-0.5 rounded bg-destructive/15 text-destructive border border-destructive/30"
-            >{{ u.name }} 缺 {{ u.missing }}</span>
+              class="inline-flex h-6 items-center gap-1 rounded-sm border border-warning/40 bg-warning/10 px-1.5 text-[0.6875rem] font-medium text-warning"
+            >{{ u.name }}<span class="font-num text-xs font-semibold tabular-nums">−{{ u.missing }}</span></span>
           </div>
-          <button
-            class="w-full h-9 rounded-lg border border-border text-sm text-muted-foreground hover:text-foreground hover:border-primary/50 transition-all cursor-pointer"
-            @click="autoBuildStore.resetSearch()"
-          >重新搜尋</button>
-        </div>
+          <p class="text-xs text-muted-foreground">已將最佳組合套用到下方裝備欄。</p>
+        </template>
+
+        <button
+          type="button"
+          class="flex h-10 w-full cursor-pointer items-center justify-center gap-1.5 rounded-md border border-border text-sm font-medium text-foreground transition-colors hover:bg-secondary"
+          @click="autoBuildStore.resetSearch()"
+        >
+          <RotateCcw class="size-3.5" aria-hidden="true" />
+          重新搜尋
+        </button>
       </template>
 
       <!-- ── Search form (shown when not yet run, or after reset) ── -->
       <template v-else>
-        <!-- Target skills -->
-        <div>
-          <div class="flex items-center justify-between mb-1.5">
-            <p class="text-[11px] text-muted-foreground">目標技能（最多 6 項）</p>
-            <div class="flex items-center gap-2">
-              <!-- Driftstone toggle -->
-              <label class="flex items-center gap-1.5 cursor-pointer select-none">
-                <span class="text-[11px] text-muted-foreground">含漂流石</span>
-                <button
-                  role="switch"
-                  :aria-checked="autoBuildStore.includeDriftstones"
-                  class="relative inline-flex h-4 w-7 flex-shrink-0 items-center rounded-full border-2 transition-colors"
-                  :class="autoBuildStore.includeDriftstones
-                    ? 'bg-primary border-primary'
-                    : 'bg-secondary border-border'"
-                  @click="autoBuildStore.includeDriftstones = !autoBuildStore.includeDriftstones"
-                >
-                  <span
-                    class="inline-block h-2.5 w-2.5 rounded-full bg-white transition-transform shadow-sm"
-                    :class="autoBuildStore.includeDriftstones ? 'translate-x-2.5' : 'translate-x-0.5'"
-                  />
-                </button>
-              </label>
-              <button
-                v-if="autoBuildStore.targetSkills.length > 0"
-                class="text-[11px] text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
-                @click="autoBuildStore.clearTargets()"
-              >清除全部</button>
-            </div>
-          </div>
-
-          <!-- Skill rows -->
-          <div v-if="autoBuildStore.targetSkills.length > 0" class="flex flex-col gap-1.5 mb-2">
-            <div
-              v-for="target in autoBuildStore.targetSkills"
-              :key="target.skillId"
-              class="flex items-center gap-2 px-2.5 py-2 rounded-lg bg-secondary/40 border border-border"
-            >
-              <!-- Gem icon -->
-              <div class="flex-shrink-0 flex items-center justify-center w-6 h-6 rounded bg-primary/10">
-                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="text-primary/70"><path d="M6 3h12l4 6-10 13L2 9Z"/><path d="M11 3 8 9l4 13 4-13-3-6"/><path d="M2 9h20"/></svg>
-              </div>
-
-              <!-- Skill name -->
-              <span class="flex-1 text-sm font-medium text-foreground truncate">
-                {{ getSkillName(target.skillId) }}
-              </span>
-
-              <!-- Level bars -->
-              <div class="flex items-center gap-0.5 flex-shrink-0">
-                <button
-                  v-for="lv in getSkillMaxLevel(target.skillId)"
-                  :key="lv"
-                  class="w-4 h-1.5 transition-all cursor-pointer"
-                  :class="lv <= target.desiredLevel
-                    ? 'bg-primary'
-                    : 'bg-border hover:bg-primary/40'"
-                  :aria-label="`設定等級 ${lv}`"
-                  @click="autoBuildStore.updateTargetSkillLevel(target.skillId, lv)"
-                />
-                <span class="text-xs text-primary font-semibold ml-1.5 w-6 text-right">Lv{{ target.desiredLevel }}</span>
-              </div>
-
-              <!-- Remove -->
-              <button
-                class="flex-shrink-0 p-1 text-muted-foreground hover:text-destructive transition-colors cursor-pointer"
-                :aria-label="`移除 ${getSkillName(target.skillId)}`"
-                @click="autoBuildStore.removeTargetSkill(target.skillId)"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
-              </button>
-            </div>
-          </div>
-
-          <!-- Add skill button -->
-          <button
-            class="w-full flex items-center justify-center gap-1.5 py-2 rounded-lg border border-dashed border-border hover:border-primary/50 text-sm text-muted-foreground hover:text-foreground transition-all cursor-pointer"
-            @click="skillPickerOpen = true"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
-            新增目標技能
-          </button>
-
-          <!-- Validation error -->
-          <p v-if="autoBuildStore.error" class="text-xs text-destructive mt-1.5">
-            {{ autoBuildStore.error }}
+        <div class="flex items-center justify-between gap-2">
+          <p class="text-xs font-medium text-muted-foreground">
+            目標技能
+            <span class="font-num text-sm font-semibold tabular-nums text-foreground">{{ autoBuildStore.targetSkills.length }}</span>/6
           </p>
+          <div class="flex items-center gap-1">
+            <!-- Driftstone toggle -->
+            <button
+              type="button"
+              role="switch"
+              :aria-checked="autoBuildStore.includeDriftstones"
+              class="flex h-9 cursor-pointer items-center gap-2 rounded-md px-2 text-xs font-medium text-muted-foreground transition-colors hover:text-foreground"
+              @click="autoBuildStore.includeDriftstones = !autoBuildStore.includeDriftstones"
+            >
+              <Gem class="size-3.5 text-stone" aria-hidden="true" />
+              含漂流石
+              <span
+                class="relative inline-flex h-5 w-9 flex-shrink-0 items-center rounded-full transition-colors"
+                :class="autoBuildStore.includeDriftstones ? 'bg-stone' : 'bg-border-strong'"
+                aria-hidden="true"
+              >
+                <span
+                  class="inline-block size-4 rounded-full bg-card shadow-sm transition-transform duration-200"
+                  :class="autoBuildStore.includeDriftstones ? 'translate-x-[18px]' : 'translate-x-0.5'"
+                />
+              </span>
+            </button>
+            <button
+              v-if="autoBuildStore.targetSkills.length > 0"
+              type="button"
+              class="h-9 cursor-pointer rounded-md px-2 text-xs font-medium text-muted-foreground transition-colors hover:text-foreground"
+              @click="autoBuildStore.clearTargets()"
+            >清除</button>
+          </div>
         </div>
+
+        <!-- Skill rows -->
+        <ul v-if="autoBuildStore.targetSkills.length > 0" class="divide-y divide-border overflow-hidden rounded-md border border-border bg-background">
+          <li
+            v-for="target in autoBuildStore.targetSkills"
+            :key="target.skillId"
+            class="flex items-center gap-2 py-1 pl-3 pr-1"
+          >
+            <span class="min-w-0 flex-1 truncate text-sm font-medium text-foreground">
+              {{ getSkillName(target.skillId) }}
+            </span>
+
+            <!-- Level bars -->
+            <div class="flex flex-shrink-0 items-center" role="group" :aria-label="`${getSkillName(target.skillId)} 目標等級`">
+              <button
+                v-for="lv in getSkillMaxLevel(target.skillId)"
+                :key="lv"
+                type="button"
+                class="group flex h-9 w-[18px] cursor-pointer items-center justify-center"
+                :aria-label="`設定等級 ${lv}`"
+                :aria-pressed="lv === target.desiredLevel"
+                @click="autoBuildStore.updateTargetSkillLevel(target.skillId, lv)"
+              >
+                <span
+                  class="h-2.5 w-3.5 -skew-x-[18deg] transition-colors"
+                  :class="lv <= target.desiredLevel ? 'bg-primary' : 'bg-border-strong group-hover:bg-primary/40'"
+                />
+              </button>
+              <span class="ml-1 w-9 text-right font-num text-sm font-semibold tabular-nums text-foreground">
+                <span class="text-[0.6875rem] font-medium text-muted-foreground">Lv</span>{{ target.desiredLevel }}
+              </span>
+            </div>
+
+            <!-- Remove -->
+            <button
+              type="button"
+              class="flex size-9 flex-shrink-0 cursor-pointer items-center justify-center rounded-md text-muted-foreground transition-colors hover:bg-secondary hover:text-destructive"
+              :aria-label="`移除 ${getSkillName(target.skillId)}`"
+              @click="autoBuildStore.removeTargetSkill(target.skillId)"
+            >
+              <X class="size-4" aria-hidden="true" />
+            </button>
+          </li>
+        </ul>
+
+        <!-- Add skill button -->
+        <button
+          type="button"
+          class="flex h-11 w-full cursor-pointer items-center justify-center gap-1.5 rounded-md border border-dashed border-border-strong text-sm font-medium text-muted-foreground transition-colors hover:border-primary hover:text-foreground"
+          @click="skillPickerOpen = true"
+        >
+          <Plus class="size-4" aria-hidden="true" />
+          {{ autoBuildStore.targetSkills.length ? '調整目標技能' : '新增目標技能' }}
+        </button>
+
+        <!-- Validation error -->
+        <p v-if="autoBuildStore.error" class="flex items-center gap-1.5 text-xs text-destructive">
+          <TriangleAlert class="size-3.5" aria-hidden="true" />
+          {{ autoBuildStore.error }}
+        </p>
 
         <!-- Search button -->
         <button
-          class="w-full flex items-center justify-center gap-2 h-10 rounded-lg text-sm font-semibold transition-all cursor-pointer"
-          :class="autoBuildStore.targetSkills.length === 0
-            ? 'bg-primary/30 text-primary-foreground/50 cursor-not-allowed'
-            : 'bg-primary text-primary-foreground hover:brightness-110'"
-          :disabled="autoBuildStore.isRunning || autoBuildStore.targetSkills.length === 0"
+          type="button"
+          class="cut-corner-sm flex h-11 w-full items-center justify-center gap-2 text-sm font-bold transition-[filter,background-color]"
+          :class="autoBuildStore.targetSkills.length > 0
+            ? 'bg-primary text-primary-foreground enabled:cursor-pointer enabled:hover:brightness-110 disabled:cursor-wait'
+            : 'cursor-not-allowed bg-secondary text-muted-foreground'"
+          :disabled="!canSearch"
           @click="autoBuildStore.run()"
         >
-          <svg
-            v-if="autoBuildStore.isRunning"
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="animate-spin"
-          ><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>
-          <svg
-            v-else
-            xmlns="http://www.w3.org/2000/svg"
-            width="15"
-            height="15"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          ><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-          {{ autoBuildStore.isRunning ? '搜尋中...' : '開始搜尋' }}
+          <LoaderCircle v-if="autoBuildStore.isRunning" class="size-4 animate-spin" aria-hidden="true" />
+          <Search v-else class="size-4" aria-hidden="true" />
+          {{ autoBuildStore.isRunning ? '搜尋中…' : '開始搜尋' }}
         </button>
       </template>
     </div>
-  </div>
+  </section>
 
   <!-- Skill picker modal -->
   <AutoBuildSkillPicker
@@ -249,13 +268,3 @@ const bestResult = computed(() => autoBuildStore.results[0] ?? null)
     @deselect-many="onSkillsDeselected"
   />
 </template>
-
-<style scoped>
-.scrollbar-none {
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-.scrollbar-none::-webkit-scrollbar {
-  display: none;
-}
-</style>

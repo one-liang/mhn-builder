@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { useEquipmentStore, getPartName } from '~/stores/equipment'
+import { ChevronRight, Gem } from 'lucide-vue-next'
+import { useEquipmentStore, getPartName, getMonsterIconKey } from '~/stores/equipment'
 import { useSkillStore } from '~/stores/skill'
 
 const route = useRoute()
@@ -19,76 +20,96 @@ useSeoMeta({
   ogTitle: () => armor.value ? `${armor.value.name} | 最強獵人` : '',
   ogDescription: () => armor.value ? `${armor.value.setName}套裝 ${getPartName(armor.value.part)}，防禦 ${armor.value.defense}` : '',
 })
+
+const hasSet = computed(() => !!armor.value?.setName && armor.value.setName !== '無')
+
+function hideImage(e: Event) {
+  (e.target as HTMLImageElement).style.display = 'none'
+}
 </script>
 
 <template>
-  <div class="px-4 py-4 max-w-lg mx-auto">
-    <NuxtLink to="/armor" class="inline-flex items-center gap-1 text-xs text-muted-foreground hover:text-primary mb-4">
-      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
-      返回防具列表
-    </NuxtLink>
-
+  <div class="mx-auto max-w-2xl px-4 sm:px-6">
     <template v-if="armor">
-      <!-- Header -->
-      <div class="flex items-start gap-4 mb-6">
-        <div class="w-20 h-20 rounded-lg bg-secondary flex items-center justify-center flex-shrink-0">
-          <img v-if="armor.image" :src="imageUrl(armor.image)" :alt="armor.name" class="w-full h-full object-cover rounded-lg" @error="($event.target as HTMLImageElement).style.display = 'none'" />
-          <ArmorPartIcon v-else :part="armor.part" class="w-10 h-10 text-primary/80" />
+      <PageHeader
+        :title="armor.name"
+        :eyebrow="`${getPartName(armor.part)} · Armor`"
+        :back="{ to: '/armor', label: '防具列表' }"
+      />
+
+      <!-- Hero: image + stats -->
+      <div class="mb-10 flex items-stretch gap-3 sm:gap-4">
+        <div class="relative flex size-28 flex-shrink-0 items-center justify-center overflow-hidden rounded-md bg-[radial-gradient(circle_at_50%_35%,var(--card),var(--secondary))] ring-1 ring-inset ring-border sm:size-36">
+          <ArmorPartIcon :part="armor.part" class="size-10 text-muted-foreground/50" />
+          <img
+            v-if="armor.image"
+            :src="imageUrl(armor.image)"
+            :alt="armor.name"
+            class="absolute inset-0 size-full object-contain p-2"
+            @error="hideImage"
+          />
         </div>
-        <div>
-          <h1 class="text-lg font-bold text-foreground">{{ armor.name }}</h1>
-          <p class="text-xs text-muted-foreground mt-1">{{ armor.setName }} | {{ getPartName(armor.part) }}</p>
-        </div>
+
+        <dl class="flex flex-1 flex-col divide-y divide-border rounded-md border border-border bg-card">
+          <div class="flex flex-1 items-center justify-between px-3 sm:px-4">
+            <dt class="text-xs text-muted-foreground">防禦力 <span class="text-[0.625rem]">（滿級）</span></dt>
+            <dd class="font-num text-2xl font-semibold tabular-nums text-foreground">{{ armor.defense }}</dd>
+          </div>
+          <div class="flex flex-1 items-center justify-between px-3 sm:px-4">
+            <dt class="text-xs text-muted-foreground">漂移鑲嵌槽</dt>
+            <dd class="flex items-center gap-1">
+              <template v-if="armor.driftstoneSlots > 0">
+                <Gem
+                  v-for="i in armor.driftstoneSlots"
+                  :key="i"
+                  class="size-4 text-stone"
+                  aria-hidden="true"
+                />
+                <span class="ml-1 font-num text-2xl font-semibold tabular-nums text-foreground">{{ armor.driftstoneSlots }}</span>
+              </template>
+              <span v-else class="text-sm text-muted-foreground">無</span>
+            </dd>
+          </div>
+          <div class="flex flex-1 items-center justify-between gap-3 px-3 sm:px-4">
+            <dt class="text-xs text-muted-foreground">系列</dt>
+            <dd class="flex min-w-0 items-center gap-1.5 text-sm font-medium text-foreground">
+              <img
+                v-if="getMonsterIconKey(armor.id)"
+                :src="imageUrl(`/images/monsters/${getMonsterIconKey(armor.id)}.webp`)"
+                class="size-5 flex-shrink-0 object-contain"
+                alt=""
+                @error="hideImage"
+              />
+              <span class="truncate">{{ hasSet ? armor.setName : '—' }}</span>
+            </dd>
+          </div>
+        </dl>
       </div>
 
-      <!-- Defense -->
-      <section class="mb-4">
-        <h2 class="text-sm font-semibold text-primary mb-2">防禦力</h2>
-        <div class="bg-card rounded-lg p-3 border border-border">
-          <span class="text-2xl font-bold text-foreground">{{ armor.defense }}</span>
-          <span class="text-xs text-muted-foreground ml-1">（滿級）</span>
-        </div>
-      </section>
-
       <!-- Skills -->
-      <section v-if="armor.skills.length" class="mb-4">
-        <h2 class="text-sm font-semibold text-primary mb-2">技能</h2>
-        <div class="flex flex-col gap-2">
-          <NuxtLink
-            v-for="skill in armor.skills"
-            :key="skill.skillId"
-            :to="`/skills/${skill.skillId}`"
-            class="flex items-center justify-between p-3 rounded-lg bg-card border border-border hover:border-primary/40 transition-colors"
-          >
-            <span class="text-sm text-foreground">{{ skillStore.getById(skill.skillId)?.name || skill.skillId }}</span>
-            <SkillBadge :name="skillStore.getById(skill.skillId)?.name || skill.skillId" :level="skill.level" />
-          </NuxtLink>
-        </div>
-      </section>
-
-      <!-- Driftstone Slots -->
-      <section class="mb-4">
-        <h2 class="text-sm font-semibold text-primary mb-2">漂移鑲嵌槽</h2>
-        <div class="bg-card rounded-lg p-3 border border-border flex items-center gap-2">
-          <template v-if="armor.driftstoneSlots > 0">
-            <div class="flex gap-1.5">
-              <div
-                v-for="i in armor.driftstoneSlots"
-                :key="i"
-                class="w-5 h-5 rounded-full bg-primary/20 border-2 border-primary/60 flex items-center justify-center"
-              >
-                <div class="w-2 h-2 rounded-full bg-primary/80" />
-              </div>
-            </div>
-            <span class="text-sm text-foreground">{{ armor.driftstoneSlots }} 個插槽</span>
-          </template>
-          <span v-else class="text-sm text-muted-foreground">無</span>
-        </div>
+      <section v-if="armor.skills.length">
+        <SectionHeading title="技能" en="Skills" />
+        <ul class="divide-y divide-border overflow-hidden rounded-md border border-border bg-card">
+          <li v-for="skill in armor.skills" :key="skill.skillId">
+            <NuxtLink
+              :to="`/skills/${skill.skillId}`"
+              class="group flex min-h-12 items-center gap-3 px-3 py-2.5 transition-colors hover:bg-secondary/70 sm:px-4"
+            >
+              <span class="flex-1 text-sm font-medium text-foreground">{{ skillStore.getById(skill.skillId)?.name || skill.skillId }}</span>
+              <span class="font-num tabular-nums text-foreground">
+                <span class="text-[0.6875rem] font-medium text-muted-foreground">Lv</span>
+                <span class="text-lg font-semibold">{{ skill.level }}</span>
+              </span>
+              <ChevronRight class="size-4 text-muted-foreground transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
+            </NuxtLink>
+          </li>
+        </ul>
       </section>
     </template>
 
-    <div v-else class="text-center py-16 text-muted-foreground">
-      找不到此防具
+    <div v-else class="py-24 text-center">
+      <p class="text-sm text-muted-foreground">找不到此防具</p>
+      <NuxtLink to="/armor" class="mt-3 inline-flex h-11 items-center text-sm font-medium text-primary">返回防具列表</NuxtLink>
     </div>
   </div>
 </template>

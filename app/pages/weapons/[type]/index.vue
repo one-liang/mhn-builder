@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useEquipmentStore, getWeaponTypeName } from '~/stores/equipment'
+import { useEquipmentStore, getWeaponTypeName, type Weapon } from '~/stores/equipment'
 import { useSkillStore } from '~/stores/skill'
 
 const route = useRoute()
@@ -27,31 +27,53 @@ const elementNames: Record<string, string> = {
 function resolveSkillName(skillId: string) {
   return skillStore.getById(skillId)?.name || skillId
 }
+
+function weaponStats(weapon: Weapon) {
+  const stats: { label: string; value: string | number; dot?: string; tone?: 'positive' | 'negative' }[] = [
+    { label: '攻擊', value: weapon.attack },
+  ]
+  if (weapon.element) {
+    stats.push({
+      label: elementNames[weapon.element.type] || weapon.element.type,
+      value: weapon.element.value,
+      dot: `var(--color-element-${weapon.element.type})`,
+    })
+  }
+  if (weapon.affinity) {
+    stats.push({
+      label: '會心',
+      value: `${weapon.affinity > 0 ? '+' : ''}${weapon.affinity}%`,
+      tone: weapon.affinity > 0 ? 'positive' : 'negative',
+    })
+  }
+  return stats
+}
 </script>
 
 <template>
-  <div class="px-4 py-4 max-w-lg mx-auto">
-    <NuxtLink to="/weapons" class="inline-flex items-center gap-1 text-xs text-muted-foreground hover:text-primary mb-4">
-      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
-      返回武器類型
-    </NuxtLink>
+  <div class="mx-auto max-w-2xl px-4 sm:px-6">
+    <PageHeader
+      :title="typeName"
+      eyebrow="Weapons"
+      :count="weapons.length"
+      count-label="把"
+      :back="{ to: '/weapons', label: '武器類型' }"
+    />
 
-    <h1 class="text-xl font-bold text-foreground mb-4">{{ typeName }}</h1>
+    <ul v-if="weapons.length" class="divide-y divide-border overflow-hidden rounded-md border border-border bg-card">
+      <li v-for="weapon in weapons" :key="weapon.id">
+        <EquipmentCard
+          :id="weapon.id"
+          :name="weapon.name"
+          :skills="weapon.skills.map(s => ({ ...s, name: resolveSkillName(s.skillId) }))"
+          :image="weapon.image"
+          :weapon-type="type"
+          :to="`/weapons/${type}/${weapon.id}`"
+          :stats="weaponStats(weapon)"
+        />
+      </li>
+    </ul>
 
-    <div class="flex flex-col gap-2">
-      <EquipmentCard
-        v-for="weapon in weapons"
-        :key="weapon.id"
-        :id="weapon.id"
-        :name="weapon.name"
-        :skills="weapon.skills.map(s => ({ ...s, name: resolveSkillName(s.skillId) }))"
-        :image="weapon.image"
-        :weapon-type="type"
-        :to="`/weapons/${type}/${weapon.id}`"
-        :subtitle="`攻擊 ${weapon.attack}${weapon.element ? ` | ${elementNames[weapon.element.type] || weapon.element.type} ${weapon.element.value}` : ''}${weapon.affinity ? ` | 會心 ${weapon.affinity > 0 ? '+' : ''}${weapon.affinity}%` : ''}`"
-      />
-    </div>
-
-    <p v-if="!weapons.length" class="text-center text-muted-foreground py-8">暫無資料</p>
+    <p v-else class="py-16 text-center text-sm text-muted-foreground">暫無資料</p>
   </div>
 </template>
