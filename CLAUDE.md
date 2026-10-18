@@ -84,3 +84,10 @@ Armor pieces (e.g., `data/armor/head.json`) contain: `id`, `name`, `rarity`, `de
 - **Data is static JSON** — no backend or API calls; all data lives in `data/`.
 - **Build state hydration** — `useBuildStore.hydrate()` must be called on the build page to load equipment stores, then restore state from URL params (takes priority) or localStorage.
 - Driftstone skills always contribute **Lv1** per slot regardless of the underlying skill's max level.
+
+## Agent Skills
+
+Project skills live in `.claude/skills/` (OpenSpec is no longer used):
+
+- **mattpocock/skills** — engineering/productivity skills (`/grill-with-docs`, `/tdd`, `/diagnosing-bugs`, `/to-spec`, …), installed via `npx skills add mattpocock/skills -a claude-code --copy`; versions pinned in `skills-lock.json`, update with `npx skills update`. Run `/setup-matt-pocock-skills` once to configure issue tracker and docs location.
+- **pbakaus/impeccable** — frontend design skill (`/impeccable <command> <target>`) plus agents in `.claude/agents/`, installed via `npx impeccable install --providers=claude --scope=project`; update with `npx impeccable update`. Its engine binary is gitignored and downloaded on first run. Run `/impeccable init` once to set up design context.

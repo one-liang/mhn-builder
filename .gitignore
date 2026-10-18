@@ -22,3 +22,9 @@ logs
 .env
 .env.*
 !.env.example
+
+# Claude Code local settings
+.claude/settings.local.json
+
+# Impeccable engine binary (downloaded on first run)
+.claude/skills/impeccable/scripts/bin/
