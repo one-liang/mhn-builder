@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { useEquipmentStore, getWeaponTypeName, getWeaponTypeIconName } from '~/stores/equipment'
+import { ChevronRight } from 'lucide-vue-next'
+import { useEquipmentStore } from '~/stores/equipment'
 
 useSeoMeta({
   title: '武器一覽 | 最強獵人 - MHN 配裝模擬器',
@@ -10,33 +11,32 @@ useSeoMeta({
 
 const equipmentStore = useEquipmentStore()
 await equipmentStore.load()
-const { imageUrl } = useImageUrl()
+
+const total = computed(() => equipmentStore.weaponTypes.reduce((n, wt) => n + wt.count, 0))
 </script>
 
 <template>
-  <div class="px-4 py-4 max-w-lg mx-auto">
-    <h1 class="text-xl font-bold text-foreground mb-4">武器類型</h1>
+  <div class="max-w-3xl mx-auto md:px-6 pb-8">
+    <PageHead title="武器">
+      <span class="stamp text-[15px] font-bold text-ink">{{ equipmentStore.weaponTypes.length }}</span> 種武器，
+      共 <span class="stamp text-[15px] font-bold text-ink">{{ total }}</span> 把
+    </PageHead>
 
-    <div class="flex flex-col gap-2">
-      <NuxtLink
-        v-for="wt in equipmentStore.weaponTypes"
-        :key="wt.type"
-        :to="`/weapons/${wt.type}`"
-        class="flex items-center justify-between p-4 rounded-lg bg-card border border-border hover:border-primary/40 transition-colors min-h-[44px]"
-      >
-        <div class="flex items-center gap-3">
-          <img
-            :src="imageUrl(`/images/weapon-types/${getWeaponTypeIconName(wt.type)}.svg`)"
-            class="w-6 h-6 flex-shrink-0 dark:invert"
-            :alt="wt.name"
-          />
-          <div>
-            <h2 class="text-sm font-semibold text-foreground">{{ wt.name }}</h2>
-            <p class="text-xs text-muted-foreground">{{ wt.count }} 把武器</p>
-          </div>
-        </div>
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-muted-foreground"><path d="m9 18 6-6-6-6"/></svg>
-      </NuxtLink>
-    </div>
+    <ul class="grid sm:grid-cols-2 bg-panel border-y md:border md:rounded-md border-rule divide-y divide-rule sm:divide-y-0 sm:gap-px sm:bg-rule overflow-hidden">
+      <li v-for="wt in equipmentStore.weaponTypes" :key="wt.type" class="bg-panel">
+        <NuxtLink
+          :to="`/weapons/${wt.type}`"
+          class="flex items-center gap-4 pl-4 pr-3 h-[68px] transition-colors duration-150 hover:bg-inset"
+        >
+          <span class="flex items-center justify-center size-11 rounded-md bg-shell text-shell-ink flex-shrink-0">
+            <WeaponTypeIcon :type="wt.type" class="size-6" aria-hidden="true" />
+          </span>
+          <span class="flex-1 min-w-0 text-[17px] font-bold">{{ wt.name }}</span>
+          <span class="stamp text-[22px] font-extrabold leading-none">{{ wt.count }}</span>
+          <span class="text-[12px] text-ink-2 -ml-2">把</span>
+          <ChevronRight :size="18" :stroke-width="2" class="text-ink-3" aria-hidden="true" />
+        </NuxtLink>
+      </li>
+    </ul>
   </div>
 </template>

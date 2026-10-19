@@ -1,8 +1,9 @@
 <script setup lang="ts">
+import { Check, Gem } from 'lucide-vue-next'
 import type { Armor, Weapon } from '~/stores/equipment'
 import { useEquipmentStore, getPartName } from '~/stores/equipment'
 import { useSkillStore } from '~/stores/skill'
-import type { BuildSlot } from '~/stores/build'
+import { useBuildStore, type BuildSlot } from '~/stores/build'
 
 type SelectableItem = Weapon | Armor
 
@@ -18,6 +19,7 @@ const emit = defineEmits<{
 
 const equipmentStore = useEquipmentStore()
 const skillStore = useSkillStore()
+const buildStore = useBuildStore()
 const { imageUrl } = useImageUrl()
 
 const search = ref('')
@@ -29,7 +31,7 @@ const WEAPON_TYPES = [
   { id: 'great-sword', name: '大劍' },
   { id: 'long-sword', name: '太刀' },
   { id: 'sword-and-shield', name: '單手劍' },
-  { id: 'dual-blades', name: '雙刀' },
+  { id: 'dual-blades', name: '雙劍' },
   { id: 'hammer', name: '大錘' },
   { id: 'hunting-horn', name: '狩獵笛' },
   { id: 'lance', name: '長槍' },
@@ -71,6 +73,11 @@ const slotLabel = computed(() => {
   return `${getPartName(activeArmorSlot.value)}防具`
 })
 
+const targetSlot = computed<BuildSlot>(() =>
+  isWeaponSlot.value ? 'weapon' : (activeArmorSlot.value as BuildSlot)
+)
+const current = computed(() => buildStore[targetSlot.value])
+
 const allWeapons = computed<Weapon[]>(() =>
   Object.values(equipmentStore.weapons).flat()
 )
@@ -96,7 +103,7 @@ const filteredItems = computed(() => {
 })
 
 function itemSkills(item: SelectableItem): { id: string; name: string; level: number }[] {
-  return item.skills.slice(0, 3).map((s) => ({
+  return item.skills.map((s) => ({
     id: s.skillId,
     name: skillStore.getById(s.skillId)?.name ?? s.skillId,
     level: s.level,
@@ -118,167 +125,101 @@ function onClear() {
   emit('select', null, actualSlot)
   close()
 }
-
-function onKeydown(e: KeyboardEvent) {
-  if (e.key === 'Escape' && props.open) close()
-}
-
-onMounted(() => {
-  window.addEventListener('keydown', onKeydown)
-})
-onBeforeUnmount(() => {
-  window.removeEventListener('keydown', onKeydown)
-})
 </script>
 
 <template>
-  <Teleport to="body">
-    <Transition name="fade">
-      <div
-        v-if="open"
-        class="fixed inset-0 z-[100] flex items-end sm:items-center justify-center"
-        role="dialog"
-        aria-modal="true"
-      >
-        <div class="absolute inset-0 bg-black/70 backdrop-blur-sm" @click="close" />
-
-        <div
-          class="relative flex flex-col w-full sm:max-w-lg sm:mx-4 h-[100dvh] sm:h-[80dvh] sm:rounded-xl bg-card border border-border shadow-2xl overflow-hidden"
-        >
-          <!-- Header -->
-          <div class="flex items-center justify-between px-4 h-12 border-b border-border">
-            <h2 class="text-sm font-semibold text-foreground">選擇{{ slotLabel }}</h2>
-            <button
-              class="p-2 -mr-2 text-muted-foreground hover:text-foreground transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center"
-              aria-label="關閉"
-              @click="close"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
-            </button>
-          </div>
-
-          <!-- Search + category filters -->
-          <div class="px-3 pt-3 pb-2 border-b border-border flex flex-col gap-2">
-            <input
-              v-model="search"
-              type="text"
-              :placeholder="`搜尋${slotLabel}名稱...`"
-              class="w-full px-3 py-2 rounded-lg bg-secondary border border-border text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary/60 min-h-[44px]"
-            />
-            <!-- Weapon type filter pills -->
-            <div v-if="isWeaponSlot" class="flex gap-1.5 overflow-x-auto sm:overflow-x-visible sm:flex-wrap pb-0.5 sm:pb-0 scrollbar-none">
-              <button
-                v-for="wt in WEAPON_TYPES"
-                :key="wt.id"
-                class="flex-shrink-0 px-2.5 py-1 rounded-full text-[11px] font-medium border transition-all cursor-pointer whitespace-nowrap"
-                :class="activeWeaponType === wt.id
-                  ? 'bg-primary text-primary-foreground border-primary'
-                  : 'bg-secondary text-muted-foreground border-border hover:border-primary/50'"
-                @click="activeWeaponType = wt.id"
-              >
-                {{ wt.name }}
-              </button>
-            </div>
-            <!-- Armor slot tabs -->
-            <div v-else class="flex gap-1.5 overflow-x-auto sm:overflow-x-visible sm:flex-wrap pb-0.5 sm:pb-0 scrollbar-none">
-              <button
-                v-for="slot in ARMOR_SLOTS"
-                :key="slot.id"
-                class="flex-shrink-0 px-2.5 py-1 rounded-full text-[11px] font-medium border transition-all cursor-pointer whitespace-nowrap"
-                :class="activeArmorSlot === slot.id
-                  ? 'bg-primary text-primary-foreground border-primary'
-                  : 'bg-secondary text-muted-foreground border-border hover:border-primary/50'"
-                @click="activeArmorSlot = slot.id"
-              >
-                {{ slot.name }}
-              </button>
-            </div>
-          </div>
-
-          <!-- List -->
-          <div class="flex-1 overflow-y-auto p-3 flex flex-col gap-1.5">
-            <!-- Clear option -->
-            <button
-              class="w-full py-2 mb-1 rounded-lg border border-dashed border-border hover:border-primary/50 text-sm text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
-              @click="onClear"
-            >
-              取消選擇
-            </button>
-
-            <div
-              v-for="item in filteredItems"
-              :key="item.id"
-              role="button"
-              tabindex="0"
-              class="p-3 rounded-lg bg-secondary/40 border border-border hover:border-primary/40 transition-colors cursor-pointer"
-              @click="onSelect(item)"
-              @keydown.enter="onSelect(item)"
-              @keydown.space.prevent="onSelect(item)"
-            >
-              <div class="flex items-start gap-3">
-                <!-- Weapon: show item image -->
-                <div
-                  v-if="isWeaponSlot"
-                  class="flex-shrink-0 w-12 h-12 rounded-md bg-secondary overflow-hidden"
-                >
-                  <img
-                    :src="imageUrl((item as Weapon).image)"
-                    :alt="item.name"
-                    class="w-full h-full object-cover"
-                    loading="lazy"
-                    @error="($event.target as HTMLImageElement).style.display = 'none'"
-                  />
-                </div>
-                <!-- Armor: show part icon -->
-                <div
-                  v-else
-                  class="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-md bg-secondary text-primary/80"
-                >
-                  <ArmorPartIcon :part="activeArmorSlot" class="w-5 h-5" />
-                </div>
-
-                <div class="min-w-0 flex-1">
-                  <div class="text-sm font-medium text-foreground truncate">{{ item.name }}</div>
-                  <div v-if="itemSkills(item).length" class="flex flex-wrap gap-1 mt-1.5">
-                    <span
-                      v-for="s in itemSkills(item)"
-                      :key="s.id"
-                      class="inline-flex items-center px-1.5 py-0.5 text-[10px] font-medium rounded bg-primary/15 text-primary border border-primary/20"
-                    >
-                      {{ s.name }}<template v-if="s.level > 0"> Lv{{ s.level }}</template>
-                    </span>
-                  </div>
-                  <!-- Driftstone slot count indicator -->
-                  <div
-                    v-if="!isWeaponSlot && 'driftstoneSlots' in item && (item as Armor).driftstoneSlots > 0"
-                    class="flex items-center gap-1 mt-1"
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="text-primary/60"><path d="M6 3h12l4 6-10 13L2 9Z"/><path d="M11 3 8 9l4 13 4-13-3-6"/><path d="M2 9h20"/></svg>
-                    <span class="text-[10px] text-primary/70 font-medium">{{ (item as Armor).driftstoneSlots }} 漂移槽</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <p v-if="!filteredItems.length" class="text-center text-muted-foreground py-8 text-sm">
-              找不到符合條件的{{ slotLabel }}
-            </p>
-          </div>
-        </div>
+  <SheetDialog
+    :open="open"
+    :title="`選擇${slotLabel}`"
+    @update:open="emit('update:open', $event)"
+  >
+    <template #controls>
+      <div class="px-4 pt-3 pb-1">
+        <SearchField
+          v-model="search"
+          :label="`搜尋${slotLabel}`"
+          :placeholder="`搜尋${slotLabel}名稱`"
+          autofocus
+        />
       </div>
-    </Transition>
-  </Teleport>
-</template>
+      <FilterTabs
+        v-if="isWeaponSlot"
+        v-model="activeWeaponType"
+        :items="WEAPON_TYPES"
+        label="武器類型"
+      >
+        <template #icon="{ item }">
+          <WeaponTypeIcon v-if="item.id !== 'all'" :type="item.id" class="size-4" aria-hidden="true" />
+        </template>
+      </FilterTabs>
+      <FilterTabs
+        v-else
+        v-model="activeArmorSlot"
+        :items="ARMOR_SLOTS"
+        label="防具部位"
+      >
+        <template #icon="{ item }">
+          <ArmorPartIcon :part="item.id" class="size-4" aria-hidden="true" />
+        </template>
+      </FilterTabs>
+    </template>
 
-<style scoped>
-.scrollbar-none { scrollbar-width: none; -ms-overflow-style: none; }
-.scrollbar-none::-webkit-scrollbar { display: none; }
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.2s ease;
-}
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
-}
-</style>
+    <ul class="divide-y divide-rule">
+      <li v-for="item in filteredItems" :key="item.id">
+        <button
+          type="button"
+          class="w-full flex items-center gap-3 px-4 py-2.5 min-h-[68px] text-left transition-colors duration-150 hover:bg-inset"
+          :class="current?.id === item.id ? 'bg-inset' : ''"
+          :aria-current="current?.id === item.id ? 'true' : undefined"
+          @click="onSelect(item)"
+        >
+          <span class="plate flex items-center justify-center size-12 flex-shrink-0 overflow-hidden">
+            <img
+              :src="imageUrl(item.image)"
+              :alt="item.name"
+              width="48"
+              height="48"
+              class="size-full object-contain"
+              loading="lazy"
+              @error="($event.target as HTMLImageElement).style.visibility = 'hidden'"
+            />
+          </span>
+          <span class="flex-1 min-w-0">
+            <span class="block text-[15px] font-bold leading-snug truncate">{{ item.name }}</span>
+            <span class="flex flex-wrap gap-x-3 gap-y-0.5 mt-0.5 text-[13px] text-ink-2">
+              <SkillBadge v-for="s in itemSkills(item)" :key="s.id" :name="s.name" :level="s.level" />
+              <span
+                v-if="!isWeaponSlot && (item as Armor).driftstoneSlots > 0"
+                class="inline-flex items-center gap-1 whitespace-nowrap"
+              >
+                <Gem :size="13" :stroke-width="2" aria-hidden="true" />
+                漂流石槽 <span class="stamp font-bold text-ink text-[14px] leading-none">{{ (item as Armor).driftstoneSlots }}</span>
+              </span>
+            </span>
+          </span>
+          <span
+            v-if="current?.id === item.id"
+            class="flex items-center gap-1 text-[12px] font-bold text-ink flex-shrink-0"
+          >
+            <Check :size="16" :stroke-width="2.5" aria-hidden="true" />裝備中
+          </span>
+        </button>
+      </li>
+    </ul>
+
+    <p v-if="!filteredItems.length" class="px-4 py-12 text-center text-[14px] text-ink-2">
+      <template v-if="search.trim()">找不到名稱含「{{ search.trim() }}」的{{ slotLabel }}</template>
+      <template v-else>這個分類目前沒有{{ slotLabel }}資料</template>
+    </p>
+
+    <template v-if="current" #footer>
+      <button
+        type="button"
+        class="w-full h-11 rounded-sm border border-rule-strong text-[14px] font-bold text-ink hover:bg-inset transition-colors duration-200"
+        @click="onClear"
+      >
+        卸下目前的{{ slotLabel }}
+      </button>
+    </template>
+  </SheetDialog>
+</template>

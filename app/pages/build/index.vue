@@ -1,5 +1,7 @@
 <script setup lang="ts">
+import { ChevronDown, Link2, RotateCcw, Trash2, WandSparkles } from 'lucide-vue-next'
 import type { Armor, Weapon } from '~/stores/equipment'
+import { getPartName } from '~/stores/equipment'
 import { useBuildStore, type BuildSlot, type ArmorSlot } from '~/stores/build'
 import { useSkillStore } from '~/stores/skill'
 import { useAutoBuildStore } from '~/stores/autoBuild'
@@ -12,6 +14,7 @@ useSeoMeta({
 })
 
 const route = useRoute()
+const config = useRuntimeConfig()
 const buildStore = useBuildStore()
 const skillStore = useSkillStore()
 const autoBuildStore = useAutoBuildStore()
@@ -27,6 +30,10 @@ const queryParams = computed(() => {
 
 await buildStore.hydrate(queryParams.value)
 
+const SLOTS: BuildSlot[] = ['weapon', 'head', 'chest', 'arms', 'waist', 'legs']
+const ARMOR_SLOTS: ArmorSlot[] = ['head', 'chest', 'arms', 'waist', 'legs']
+
+// ── Equipment selector ────────────────────────────────────────────────
 const selectorOpen = ref(false)
 const activeSlot = ref<BuildSlot | null>(null)
 
@@ -41,7 +48,7 @@ function onSelect(item: Weapon | Armor | null, actualSlot?: string) {
   buildStore.setSlot(targetSlot, item)
 }
 
-// Driftstone skill picker
+// ── Driftstone picker ─────────────────────────────────────────────────
 const driftstonePickerOpen = ref(false)
 const activeDriftstoneTarget = ref<{ armorSlot: ArmorSlot; slotIndex: number } | null>(null)
 
@@ -59,38 +66,63 @@ function onDriftstoneSkillSelect(skillId: string | null) {
   )
 }
 
-function getDriftstoneSkillName(armorSlot: ArmorSlot, idx: number): string | null {
-  const id = buildStore.driftstoneSkills[armorSlot]?.[idx]
-  return id ? (skillStore.getById(id)?.name ?? id) : null
-}
-
-// Set of skill IDs that come from any driftstone slot (for summary attribution)
-const driftstoneSkillIds = computed(() => {
-  const ids = new Set<string>()
-  for (const slot of (['head', 'chest', 'arms', 'waist', 'legs'] as ArmorSlot[])) {
-    for (const skillId of buildStore.driftstoneSkills[slot]) {
-      if (skillId) ids.add(skillId)
-    }
-  }
-  return ids
+const activeDriftstoneSkillId = computed(() => {
+  const t = activeDriftstoneTarget.value
+  return t ? buildStore.driftstoneSkills[t.armorSlot]?.[t.slotIndex] ?? null : null
 })
 
-const toastVisible = ref(false)
-const toastMessage = ref('')
+const activeDriftstoneLabel = computed(() => {
+  const t = activeDriftstoneTarget.value
+  return t ? `${getPartName(t.armorSlot)}第 ${t.slotIndex + 1} 槽` : ''
+})
+
+function socketsFor(slot: BuildSlot): (string | null)[] {
+  if (slot === 'weapon') return []
+  const piece = buildStore[slot]
+  if (!piece || piece.driftstoneSlots <= 0) return []
+  return Array.from({ length: piece.driftstoneSlots }, (_, i) => {
+    const id = buildStore.driftstoneSkills[slot]?.[i]
+    return id ? (skillStore.getById(id)?.name ?? id) : null
+  })
+}
+
+// ── Status line ───────────────────────────────────────────────────────
+const equippedCount = computed(() => SLOTS.filter(s => buildStore[s]).length)
+const skillCount = computed(() => buildStore.skillSummary.length)
+const maxedCount = computed(() => buildStore.skillSummary.filter(e => e.total >= e.max).length)
+const socketCount = computed(() =>
+  ARMOR_SLOTS.reduce((n, s) => n + (buildStore[s]?.driftstoneSlots ?? 0), 0)
+)
+const filledSocketCount = computed(() =>
+  ARMOR_SLOTS.reduce(
+    (n, s) => n + buildStore.driftstoneSkills[s].slice(0, buildStore[s]?.driftstoneSlots ?? 0).filter(Boolean).length,
+    0
+  )
+)
+
+// ── Auto-build ────────────────────────────────────────────────────────
+const autoOpen = ref(autoBuildStore.targetSkills.length > 0 || autoBuildStore.hasRun)
+
+function onAutoBuildSearchComplete() {
+  nextTick(() => {
+    document.getElementById('gear-list')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  })
+}
+
+// ── Toast ─────────────────────────────────────────────────────────────
+const toast = ref<{ message: string; undo?: () => void } | null>(null)
 let toastTimer: ReturnType<typeof setTimeout> | null = null
 
-function showToast(message: string) {
-  toastMessage.value = message
-  toastVisible.value = true
+function showToast(message: string, undo?: () => void) {
+  toast.value = { message, undo }
   if (toastTimer) clearTimeout(toastTimer)
-  toastTimer = setTimeout(() => {
-    toastVisible.value = false
-  }, 2200)
+  toastTimer = setTimeout(() => { toast.value = null }, undo ? 5000 : 2400)
 }
 
 async function shareBuild() {
   if (typeof window === 'undefined') return
-  const url = buildStore.toShareUrl(window.location.origin)
+  const base = config.app.baseURL.replace(/\/$/, '')
+  const url = buildStore.toShareUrl(window.location.origin, `${base}/build`)
   try {
     if (navigator.clipboard && window.isSecureContext) {
       await navigator.clipboard.writeText(url)
@@ -104,278 +136,180 @@ async function shareBuild() {
       document.execCommand('copy')
       document.body.removeChild(el)
     }
-    showToast('已複製連結！')
+    showToast('已複製分享連結')
   } catch {
-    showToast('複製失敗，請手動複製網址列')
+    showToast('無法複製，請直接複製網址列')
   }
 }
 
 function resetBuild() {
+  const snapshot = buildStore.serialize()
   buildStore.clearAll()
-  showToast('已清除配裝')
-}
-
-function onAutoBuildSearchComplete() {
-  nextTick(() => {
-    document.getElementById('equipment-section')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  showToast('已清除配裝', () => {
+    buildStore.deserialize(snapshot)
+    toast.value = null
   })
 }
-
-const armorSlots: ArmorSlot[] = ['head', 'chest', 'arms', 'waist', 'legs']
-const skillEntries = computed(() => buildStore.skillSummary)
 </script>
 
 <template>
-  <div class="max-w-lg mx-auto">
-    <!-- Header -->
-    <div class="sticky top-12 z-10 flex items-center justify-between px-4 py-3 bg-background border-b border-border/40">
-      <div>
-        <h1 class="text-xl font-bold text-foreground">配裝模擬器</h1>
-        <p class="text-xs text-muted-foreground mt-0.5">組合裝備，即時技能計算</p>
-      </div>
-      <button
-        v-if="!buildStore.isEmpty"
-        class="flex items-center gap-1 px-2.5 py-1 text-[11px] font-medium rounded-md border border-destructive/50 text-destructive hover:bg-destructive/15 transition-all cursor-pointer min-h-[32px]"
-        @click="resetBuild"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4h6v2"/></svg>
-        清除配裝
-      </button>
-    </div>
-
-    <!-- Content area (uses layout's outer scroll) -->
-    <div class="px-4">
-      <!-- Auto-build panel -->
-      <div class="py-2">
-        <AutoBuildPanel @search-complete="onAutoBuildSearchComplete" />
-      </div>
-
-      <!-- Equipment section -->
-      <div id="equipment-section" class="py-2 flex flex-col gap-2" style="scroll-margin-top: 112px">
-        <!-- Weapon slot with lock button -->
-        <div class="flex items-stretch gap-2">
-          <button
-            class="flex-shrink-0 w-9 flex items-center justify-center rounded-lg border transition-all cursor-pointer"
-            :class="autoBuildStore.isLocked('weapon')
-              ? 'bg-primary/15 border-primary/50 text-primary'
-              : 'bg-card/40 border-border/40 text-muted-foreground/30 hover:text-muted-foreground hover:border-border'"
-            :aria-label="autoBuildStore.isLocked('weapon') ? '解除鎖定武器' : '鎖定武器'"
-            @click="autoBuildStore.toggleLock('weapon')"
-          >
-            <svg v-if="autoBuildStore.isLocked('weapon')" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-            <svg v-else xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 9.9-1"/></svg>
-          </button>
-          <BuildSlot
-            class="flex-1 min-w-0"
-            slot-type="weapon"
-            :item="buildStore.weapon"
-            @open="openSelector('weapon')"
-          />
+  <div class="max-w-6xl mx-auto md:px-6 lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(0,27rem)] lg:gap-8 lg:items-start">
+    <!-- Gear column -->
+    <div>
+      <header class="flex items-center justify-between gap-3 px-4 md:px-0 pt-3 pb-3">
+        <div class="min-w-0 flex items-baseline gap-3">
+          <h1 class="text-[20px] leading-none font-black tracking-[0.04em] flex-shrink-0">配裝</h1>
+          <p class="text-[13px] text-ink-2 truncate">
+            <span class="stamp text-[15px] font-bold text-ink">{{ equippedCount }}/6</span> 件
+            <span class="mx-1 text-rule-strong" aria-hidden="true">|</span>
+            技能 <span class="stamp text-[15px] font-bold text-ink">{{ skillCount }}</span>
+            <template v-if="skillCount">
+              <span class="mx-1 text-rule-strong" aria-hidden="true">|</span>
+              滿級 <span class="stamp text-[15px] font-bold text-ink">{{ maxedCount }}</span>
+            </template>
+          </p>
         </div>
-
-        <!-- Armor slots with inline driftstone circles -->
-        <div
-          v-for="s in armorSlots"
-          :key="s"
-          class="flex items-stretch gap-2"
-        >
-          <!-- Lock button -->
+        <div class="flex items-center gap-2 flex-shrink-0">
           <button
-            class="flex-shrink-0 w-9 flex items-center justify-center rounded-lg border transition-all cursor-pointer"
-            :class="autoBuildStore.isLocked(s)
-              ? 'bg-primary/15 border-primary/50 text-primary'
-              : 'bg-card/40 border-border/40 text-muted-foreground/30 hover:text-muted-foreground hover:border-border'"
-            :aria-label="autoBuildStore.isLocked(s) ? `解除鎖定${s}` : `鎖定${s}`"
-            @click="autoBuildStore.toggleLock(s)"
+            v-if="!buildStore.isEmpty"
+            type="button"
+            class="flex items-center gap-1.5 h-11 px-3 -mr-1 rounded-sm text-[14px] font-medium text-ink-2 hover:text-danger hover:bg-inset transition-colors duration-200"
+            @click="resetBuild"
           >
-            <svg v-if="autoBuildStore.isLocked(s)" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-            <svg v-else xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 9.9-1"/></svg>
+            <Trash2 :size="15" :stroke-width="2" aria-hidden="true" />
+            清除
           </button>
-          <!-- Armor slot (flex-1) -->
+          <button
+            type="button"
+            class="hidden lg:flex items-center gap-2 h-11 px-4 rounded-sm bg-forge text-forge-ink text-[14px] font-bold hover:bg-forge-hover transition-colors duration-200 disabled:opacity-45"
+            :disabled="buildStore.isEmpty"
+            @click="shareBuild"
+          >
+            <Link2 :size="16" :stroke-width="2.25" aria-hidden="true" />
+            複製分享連結
+          </button>
+        </div>
+      </header>
+
+      <!-- Auto-build -->
+      <section aria-labelledby="auto-h" class="px-4 md:px-0 mb-3">
+        <h2 id="auto-h">
+          <button
+            type="button"
+            class="w-full flex items-center gap-3 h-12 px-3 rounded-md border transition-colors duration-200"
+            :class="autoOpen ? 'border-shell bg-shell text-shell-ink rounded-b-none' : 'border-rule-strong bg-panel hover:border-ink-2'"
+            :aria-expanded="autoOpen"
+            aria-controls="auto-panel"
+            @click="autoOpen = !autoOpen"
+          >
+            <WandSparkles :size="18" :stroke-width="2" aria-hidden="true" />
+            <span class="text-[15px] font-bold">自動配裝</span>
+            <span class="text-[13px] font-normal truncate" :class="autoOpen ? 'text-shell-ink-2' : 'text-ink-2'">
+              <template v-if="autoBuildStore.targetSkills.length">已設 {{ autoBuildStore.targetSkills.length }} 項目標技能</template>
+              <template v-else>選技能，自動找出防具組合</template>
+            </span>
+            <ChevronDown
+              :size="18"
+              :stroke-width="2"
+              class="ml-auto flex-shrink-0 transition-transform duration-200"
+              :class="autoOpen ? 'rotate-180' : ''"
+              aria-hidden="true"
+            />
+          </button>
+        </h2>
+        <div v-show="autoOpen" id="auto-panel" class="[&>div:first-child]:rounded-t-none [&>div:first-child]:border-t-0">
+          <AutoBuildPanel @search-complete="onAutoBuildSearchComplete" />
+        </div>
+      </section>
+
+      <!-- Gear -->
+      <section aria-labelledby="gear-h" class="md:mb-8">
+        <div class="flex items-baseline justify-between px-4 md:px-0 pb-2">
+          <h2 id="gear-h" class="text-[15px] font-bold">裝備</h2>
+          <p v-if="socketCount" class="text-[13px] text-ink-2">
+            漂流石槽 <span class="stamp text-[15px] font-bold text-ink">{{ filledSocketCount }}/{{ socketCount }}</span>
+          </p>
+        </div>
+        <ol
+          id="gear-list"
+          class="bg-panel border-y md:border md:rounded-md border-rule divide-y divide-rule scroll-mt-20"
+        >
           <BuildSlot
-            class="flex-1 min-w-0"
+            v-for="s in SLOTS"
+            :key="s"
             :slot-type="s"
             :item="buildStore[s]"
+            :locked="autoBuildStore.isLocked(s)"
+            :sockets="socketsFor(s)"
             @open="openSelector(s)"
+            @toggle-lock="autoBuildStore.toggleLock(s)"
+            @open-socket="(i) => openDriftstoneSkill(s as ArmorSlot, i)"
           />
-
-          <!-- Driftstone slot circles (only when armor equipped AND has slots) -->
-          <template v-if="buildStore[s] && buildStore[s]!.driftstoneSlots > 0">
-            <button
-              v-for="i in buildStore[s]!.driftstoneSlots"
-              :key="i"
-              class="flex-shrink-0 w-14 flex flex-col items-center justify-center gap-0.5 rounded-lg border transition-all cursor-pointer"
-              :class="getDriftstoneSkillName(s, i - 1)
-                ? 'bg-primary/15 border-primary/50 hover:bg-primary/25'
-                : 'bg-card/40 border-dashed border-border/60 hover:border-primary/50'"
-              :title="getDriftstoneSkillName(s, i - 1) ?? undefined"
-              :aria-label="`漂移槽 ${i}：${getDriftstoneSkillName(s, i - 1) ?? '空'}`"
-              @click="openDriftstoneSkill(s, i - 1)"
-            >
-              <!-- Gem icon -->
-              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" :class="getDriftstoneSkillName(s, i - 1) ? 'text-primary' : 'text-muted-foreground/40'"><path d="M6 3h12l4 6-10 13L2 9Z"/><path d="M11 3 8 9l4 13 4-13-3-6"/><path d="M2 9h20"/></svg>
-              <!-- Skill name (first 4 chars) or + -->
-              <span
-                v-if="getDriftstoneSkillName(s, i - 1)"
-                class="text-[9px] font-medium text-primary leading-tight text-center w-full px-1 truncate"
-              >
-                {{ getDriftstoneSkillName(s, i - 1)!.slice(0, 4) }}
-              </span>
-              <span
-                v-else
-                class="text-[9px] text-muted-foreground/40 leading-tight"
-              >+</span>
-            </button>
-          </template>
-        </div>
-      </div>
-
-      <!-- Divider between equipment and skill summary -->
-      <div class="border-t border-border/40" />
-
-      <!-- Skill section (game-style: hex icon + dotted spacer + level bars) -->
-      <div class="py-3 flex flex-col gap-3">
-        <div
-          v-if="!skillEntries.length"
-          class="py-4 text-center"
-        >
-          <p class="text-sm text-muted-foreground">尚未選擇裝備，開始組合你的配裝吧！</p>
-        </div>
-
-        <div
-          v-for="entry in skillEntries"
-          :key="entry.id"
-          class="flex items-center gap-3"
-        >
-          <!-- Hexagonal icon badge -->
-          <div class="flex-shrink-0 relative w-[46px] h-[46px] flex items-center justify-center">
-            <svg
-              viewBox="0 0 46 46"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              class="absolute inset-0 w-full h-full"
-              :class="entry.overflow ? 'text-destructive/30' : 'text-muted-foreground/30'"
-            >
-              <polygon
-                points="23,2 42,12.5 42,33.5 23,44 4,33.5 4,12.5"
-                stroke="currentColor"
-                stroke-width="1.5"
-                fill="currentColor"
-                fill-opacity="0.08"
-              />
-            </svg>
-            <!-- Overflow icon -->
-            <svg
-              v-if="entry.overflow"
-              xmlns="http://www.w3.org/2000/svg"
-              width="17"
-              height="17"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="relative z-10 text-destructive/70"
-              aria-label="技能超過最高等級"
-            ><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" x2="12" y1="9" y2="13"/><line x1="12" x2="12.01" y1="17" y2="17"/></svg>
-            <!-- Gem icon for driftstone skills -->
-            <svg
-              v-else-if="driftstoneSkillIds.has(entry.id)"
-              xmlns="http://www.w3.org/2000/svg"
-              width="17"
-              height="17"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.8"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="relative z-10 text-primary/60"
-            ><path d="M6 3h12l4 6-10 13L2 9Z"/><path d="M11 3 8 9l4 13 4-13-3-6"/><path d="M2 9h20"/></svg>
-            <!-- Default skill icon -->
-            <svg
-              v-else
-              xmlns="http://www.w3.org/2000/svg"
-              width="17"
-              height="17"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.8"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="relative z-10 text-muted-foreground/60"
-            ><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>
-          </div>
-
-          <!-- Skill content -->
-          <div class="flex-1 min-w-0">
-            <!-- Name + dotted spacer + Lv -->
-            <div class="flex items-center gap-1 min-w-0">
-              <span
-                class="text-sm font-medium flex-shrink-0"
-                :class="entry.overflow ? 'text-destructive' : 'text-foreground'"
-              >{{ entry.name }}</span>
-              <div
-                class="flex-1 self-center"
-                style="border-bottom: 1.5px dotted; opacity: 0.25; margin: 0 4px 1px;"
-              />
-              <span
-                class="text-sm font-bold flex-shrink-0"
-                :class="entry.overflow ? 'text-destructive' : 'text-foreground'"
-              >Lv {{ entry.total }}</span>
-            </div>
-            <!-- Segment bars -->
-            <div class="flex gap-1 mt-1.5" aria-hidden="true">
-              <span
-                v-for="i in entry.max"
-                :key="i"
-                class="h-1.5 w-5"
-                :class="i <= Math.min(entry.total, entry.max)
-                  ? (entry.overflow ? 'bg-destructive/70' : 'bg-primary')
-                  : 'bg-muted-foreground/20'"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
+        </ol>
+      </section>
     </div>
 
-    <!-- Share button -->
-    <div class="px-4 py-3 border-t border-border/40">
+    <!-- Ledger column -->
+    <section aria-labelledby="ledger-h" class="px-4 md:px-0 pt-6 lg:pt-3 lg:sticky lg:top-[72px] pb-6">
+      <div class="flex items-baseline justify-between pb-2">
+        <h2 id="ledger-h" class="text-[15px] font-bold">技能</h2>
+        <p class="flex items-center gap-2 text-[12px] text-ink-2" aria-hidden="true">
+          <span>起步</span>
+          <span class="grid grid-cols-5 gap-[2px] w-14 h-2">
+            <span class="bg-t1" /><span class="bg-t2" /><span class="bg-t3" /><span class="bg-t4" /><span class="bg-t5" />
+          </span>
+          <span>滿級</span>
+        </p>
+      </div>
+      <SkillLedger />
+    </section>
+
+    <!-- Share dock (phones and tablets) -->
+    <div
+      class="lg:hidden sticky z-30 px-4 md:px-0 py-3 bg-ground/95 backdrop-blur-[2px] border-t border-rule"
+      style="bottom: calc(60px + env(safe-area-inset-bottom, 0px))"
+    >
       <button
-        class="w-full flex items-center justify-center gap-2 h-10 rounded-lg bg-primary text-primary-foreground text-sm font-semibold hover:brightness-110 transition-all cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed"
+        type="button"
+        class="w-full flex items-center justify-center gap-2 h-12 rounded-sm bg-forge text-forge-ink text-[16px] font-bold hover:bg-forge-hover transition-colors duration-200 disabled:opacity-45"
         :disabled="buildStore.isEmpty"
         @click="shareBuild"
       >
-        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" x2="12" y1="2" y2="15"/></svg>
-        分享配裝
+        <Link2 :size="18" :stroke-width="2.25" aria-hidden="true" />
+        複製分享連結
       </button>
     </div>
 
-    <!-- Equipment selector modal -->
     <EquipmentSelector
       v-model:open="selectorOpen"
       :slot-type="activeSlot"
       @select="onSelect"
     />
 
-    <!-- Driftstone skill picker modal -->
     <DriftstoneSkillPicker
       v-model:open="driftstonePickerOpen"
+      :current-skill-id="activeDriftstoneSkillId"
+      :slot-label="activeDriftstoneLabel"
       @select="onDriftstoneSkillSelect"
     />
 
-    <!-- Toast -->
     <Teleport to="body">
       <Transition name="toast">
         <div
-          v-if="toastVisible"
-          class="fixed z-[110] left-1/2 bottom-20 -translate-x-1/2 px-4 py-2 rounded-lg bg-primary text-primary-foreground text-sm font-medium shadow-lg"
+          v-if="toast"
+          class="fixed z-[110] left-1/2 -translate-x-1/2 bottom-[calc(140px+env(safe-area-inset-bottom,0px))] lg:bottom-8 flex items-center gap-1 pl-4 pr-0.5 h-12 rounded-sm bg-shell text-shell-ink text-[14px] font-medium"
+          style="box-shadow: var(--pop-shadow)"
           role="status"
         >
-          {{ toastMessage }}
+          <span class="pr-2">{{ toast.message }}</span>
+          <button
+            v-if="toast.undo"
+            type="button"
+            class="flex items-center gap-1.5 h-11 px-3 rounded-sm text-shell-ink font-bold hover:bg-shell-raised"
+            @click="toast.undo()"
+          >
+            <RotateCcw :size="15" :stroke-width="2.25" aria-hidden="true" />復原
+          </button>
         </div>
       </Transition>
     </Teleport>
@@ -385,11 +319,11 @@ const skillEntries = computed(() => buildStore.skillSummary)
 <style scoped>
 .toast-enter-active,
 .toast-leave-active {
-  transition: all 0.25s ease;
+  transition: opacity 240ms var(--ease-out-quint), transform 240ms var(--ease-out-quint);
 }
 .toast-enter-from,
 .toast-leave-to {
   opacity: 0;
-  transform: translate(-50%, 8px);
+  transform: translate(-50%, 10px);
 }
 </style>

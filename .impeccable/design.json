@@ -1,0 +1,1302 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-19T05:43:19.581Z",
+  "title": "Design System: 最強獵人 (The Strongest Hunter)",
+  "extensions": {
+    "colorMeta": {
+      "ground": {
+        "role": "neutral",
+        "displayName": "Bench Ground",
+        "canonical": "#E4E8EB",
+        "mode": "day",
+        "cssVar": "--ground",
+        "tonalRamp": [
+          "#090C0D",
+          "#222427",
+          "#3D4043",
+          "#5B5E61",
+          "#7A7E80",
+          "#9B9FA2",
+          "#C1C5C8",
+          "#EBEFF2"
+        ]
+      },
+      "panel": {
+        "role": "neutral",
+        "displayName": "Worked Panel",
+        "canonical": "#F4F6F7",
+        "mode": "day",
+        "cssVar": "--panel",
+        "tonalRamp": [
+          "#0A0B0C",
+          "#232425",
+          "#3E4041",
+          "#5C5E5F",
+          "#7C7D7E",
+          "#9D9FA0",
+          "#C2C4C5",
+          "#EDEFF0"
+        ]
+      },
+      "inset": {
+        "role": "neutral",
+        "displayName": "Recessed Inset",
+        "canonical": "#DCE2E6",
+        "mode": "day",
+        "cssVar": "--inset",
+        "tonalRamp": [
+          "#080C0E",
+          "#202528",
+          "#3C4044",
+          "#595E62",
+          "#797E82",
+          "#9A9FA3",
+          "#BFC5C9",
+          "#E9EFF3"
+        ]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Hairline Rule",
+        "canonical": "#C6CED5",
+        "mode": "day",
+        "cssVar": "--rule",
+        "tonalRamp": [
+          "#070C10",
+          "#1F252A",
+          "#3A4146",
+          "#585F65",
+          "#777E85",
+          "#989FA6",
+          "#BDC5CC",
+          "#E7F0F7"
+        ]
+      },
+      "rule-strong": {
+        "role": "neutral",
+        "displayName": "Strong Rule",
+        "canonical": "#9AA6B0",
+        "mode": "day",
+        "cssVar": "--rule-strong",
+        "tonalRamp": [
+          "#050C13",
+          "#1C252D",
+          "#37414A",
+          "#545F68",
+          "#737F88",
+          "#94A0AA",
+          "#BAC6D0",
+          "#E4F0FB"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#111B25",
+        "mode": "day",
+        "cssVar": "--ink",
+        "tonalRamp": [
+          "#040C15",
+          "#1B2530",
+          "#36414C",
+          "#535F6B",
+          "#727F8C",
+          "#93A0AD",
+          "#B8C6D4",
+          "#E2F0FF"
+        ]
+      },
+      "ink-2": {
+        "role": "neutral",
+        "displayName": "Ink Secondary",
+        "canonical": "#46535F",
+        "mode": "day",
+        "cssVar": "--ink-2",
+        "tonalRamp": [
+          "#030C15",
+          "#1A2530",
+          "#35414D",
+          "#525F6C",
+          "#717F8C",
+          "#92A0AE",
+          "#B7C6D4",
+          "#E1F1FF"
+        ]
+      },
+      "ink-3": {
+        "role": "neutral",
+        "displayName": "Ink Tertiary",
+        "canonical": "#55626E",
+        "mode": "day",
+        "cssVar": "--ink-3",
+        "tonalRamp": [
+          "#030C15",
+          "#1A2530",
+          "#35414C",
+          "#525F6B",
+          "#727F8C",
+          "#92A0AD",
+          "#B7C6D4",
+          "#E1F1FF"
+        ]
+      },
+      "shell": {
+        "role": "secondary",
+        "displayName": "Blued Steel",
+        "canonical": "#182C42",
+        "mode": "day",
+        "cssVar": "--shell",
+        "tonalRamp": [
+          "#000B1E",
+          "#11253B",
+          "#2D4159",
+          "#4A6078",
+          "#69809A",
+          "#89A1BC",
+          "#AEC7E3",
+          "#E3F0FF"
+        ]
+      },
+      "shell-raised": {
+        "role": "secondary",
+        "displayName": "Blued Steel Raised",
+        "canonical": "#24405E",
+        "mode": "day",
+        "cssVar": "--shell-raised",
+        "tonalRamp": [
+          "#000B1E",
+          "#092541",
+          "#264260",
+          "#436080",
+          "#6280A2",
+          "#82A2C5",
+          "#A7C8EC",
+          "#E3F0FF"
+        ]
+      },
+      "shell-rule": {
+        "role": "secondary",
+        "displayName": "Blued Steel Rule",
+        "canonical": "#2E4A68",
+        "mode": "day",
+        "cssVar": "--shell-rule",
+        "tonalRamp": [
+          "#000B1D",
+          "#092540",
+          "#26425F",
+          "#43607F",
+          "#6280A1",
+          "#83A2C4",
+          "#A7C8EB",
+          "#E3F0FF"
+        ]
+      },
+      "shell-ink": {
+        "role": "secondary",
+        "displayName": "Shell Ink",
+        "canonical": "#EAF0F4",
+        "mode": "day",
+        "cssVar": "--shell-ink",
+        "tonalRamp": [
+          "#080C0E",
+          "#202528",
+          "#3C4044",
+          "#595E62",
+          "#797E82",
+          "#9A9FA3",
+          "#BFC5C9",
+          "#E9EFF3"
+        ]
+      },
+      "shell-ink-2": {
+        "role": "secondary",
+        "displayName": "Shell Ink Secondary",
+        "canonical": "#A9B9C8",
+        "mode": "day",
+        "cssVar": "--shell-ink-2",
+        "tonalRamp": [
+          "#030C16",
+          "#192531",
+          "#34414E",
+          "#515F6D",
+          "#707F8D",
+          "#91A1AF",
+          "#B6C6D6",
+          "#E1F1FF"
+        ]
+      },
+      "forge": {
+        "role": "primary",
+        "displayName": "Forge Orange",
+        "canonical": "#C4410C",
+        "mode": "day",
+        "cssVar": "--forge",
+        "tonalRamp": [
+          "#1C0300",
+          "#440F00",
+          "#711F00",
+          "#A23100",
+          "#D04C1D",
+          "#F77044",
+          "#FFAD93",
+          "#FFE9E2"
+        ]
+      },
+      "forge-hover": {
+        "role": "primary",
+        "displayName": "Forge Orange Hover",
+        "canonical": "#A83709",
+        "mode": "day",
+        "cssVar": "--forge-hover",
+        "tonalRamp": [
+          "#1C0300",
+          "#440F00",
+          "#712000",
+          "#A23100",
+          "#C8542E",
+          "#EE7751",
+          "#FFAD92",
+          "#FFE9E2"
+        ]
+      },
+      "forge-ink": {
+        "role": "primary",
+        "displayName": "Forge Ink",
+        "canonical": "#FFFFFF",
+        "mode": "day",
+        "cssVar": "--forge-ink",
+        "tonalRamp": [
+          "#0B0B0B",
+          "#242424",
+          "#404040",
+          "#5D5D5D",
+          "#7D7D7D",
+          "#9E9E9E",
+          "#C4C4C4",
+          "#EEEEEE"
+        ]
+      },
+      "danger": {
+        "role": "tertiary",
+        "displayName": "Danger Red",
+        "canonical": "#B0202E",
+        "mode": "day",
+        "cssVar": "--danger",
+        "tonalRamp": [
+          "#1F0002",
+          "#4B0009",
+          "#7C0016",
+          "#AB1A2A",
+          "#D24449",
+          "#F9696A",
+          "#FFAAA6",
+          "#FFE8E7"
+        ]
+      },
+      "focus": {
+        "role": "neutral",
+        "displayName": "Focus Ink",
+        "canonical": "#111B25",
+        "mode": "day",
+        "cssVar": "--focus",
+        "tonalRamp": [
+          "#040C15",
+          "#1B2530",
+          "#36414C",
+          "#535F6B",
+          "#727F8C",
+          "#93A0AD",
+          "#B8C6D4",
+          "#E2F0FF"
+        ]
+      },
+      "t1": {
+        "role": "tertiary",
+        "displayName": "Temper Straw",
+        "canonical": "#A88317",
+        "mode": "day",
+        "cssVar": "--t1",
+        "tonalRamp": [
+          "#110A00",
+          "#2F2200",
+          "#513C00",
+          "#755900",
+          "#9C7800",
+          "#BF9936",
+          "#E6BF60",
+          "#FFEDC3"
+        ]
+      },
+      "t2": {
+        "role": "tertiary",
+        "displayName": "Temper Bronze",
+        "canonical": "#A9652A",
+        "mode": "day",
+        "cssVar": "--t2",
+        "tonalRamp": [
+          "#160700",
+          "#3A1B00",
+          "#613100",
+          "#8C4A02",
+          "#AF6A30",
+          "#D38C53",
+          "#FCB178",
+          "#FFEADB"
+        ]
+      },
+      "t3": {
+        "role": "tertiary",
+        "displayName": "Temper Peacock",
+        "canonical": "#8E4568",
+        "mode": "day",
+        "cssVar": "--t3",
+        "tonalRamp": [
+          "#1D000E",
+          "#46002A",
+          "#682246",
+          "#8A4164",
+          "#AD6184",
+          "#D182A6",
+          "#FAA7CC",
+          "#FFE7F1"
+        ]
+      },
+      "t4": {
+        "role": "tertiary",
+        "displayName": "Temper Purple",
+        "canonical": "#6B3D9A",
+        "mode": "day",
+        "cssVar": "--t4",
+        "tonalRamp": [
+          "#130025",
+          "#330057",
+          "#52217D",
+          "#7043A0",
+          "#9163C4",
+          "#B385E8",
+          "#D4B2FF",
+          "#F2EAFF"
+        ]
+      },
+      "t5": {
+        "role": "tertiary",
+        "displayName": "Temper Blue",
+        "canonical": "#2A5AA6",
+        "mode": "day",
+        "cssVar": "--t5",
+        "tonalRamp": [
+          "#000924",
+          "#002055",
+          "#0A3B84",
+          "#2B5BA7",
+          "#4B7CCB",
+          "#6B9EF0",
+          "#A1C6FF",
+          "#E5EFFF"
+        ]
+      },
+      "spent": {
+        "role": "tertiary",
+        "displayName": "Spent Grey",
+        "canonical": "#7C8790",
+        "mode": "day",
+        "cssVar": "--spent",
+        "tonalRamp": [
+          "#050C12",
+          "#1C252C",
+          "#374149",
+          "#555F68",
+          "#747F88",
+          "#95A0A9",
+          "#BAC6D0",
+          "#E4F0FA"
+        ]
+      },
+      "cell": {
+        "role": "neutral",
+        "displayName": "Unlit Cell",
+        "canonical": "#D5DCE1",
+        "mode": "day",
+        "cssVar": "--cell",
+        "tonalRamp": [
+          "#070C0F",
+          "#202528",
+          "#3B4145",
+          "#595F63",
+          "#787E83",
+          "#999FA4",
+          "#BEC5CA",
+          "#E8F0F5"
+        ]
+      },
+      "cell-edge": {
+        "role": "neutral",
+        "displayName": "Unlit Cell Edge",
+        "canonical": "#A8B3BC",
+        "mode": "day",
+        "cssVar": "--cell-edge",
+        "tonalRamp": [
+          "#050C12",
+          "#1D252C",
+          "#384149",
+          "#555F67",
+          "#747F87",
+          "#95A0A9",
+          "#BBC6CF",
+          "#E5F0FA"
+        ]
+      },
+      "ground-night": {
+        "role": "neutral",
+        "displayName": "Bench Ground (night)",
+        "canonical": "#0B121A",
+        "mode": "night",
+        "cssVar": "--ground",
+        "tonalRamp": [
+          "#060C13",
+          "#1D252E",
+          "#38414A",
+          "#565F69",
+          "#757E89",
+          "#969FAB",
+          "#BBC5D1",
+          "#E5F0FC"
+        ]
+      },
+      "panel-night": {
+        "role": "neutral",
+        "displayName": "Worked Panel (night)",
+        "canonical": "#13202E",
+        "mode": "night",
+        "cssVar": "--panel",
+        "tonalRamp": [
+          "#020C18",
+          "#182533",
+          "#334151",
+          "#505F70",
+          "#6F7F91",
+          "#90A0B3",
+          "#B5C6D9",
+          "#E3F0FF"
+        ]
+      },
+      "inset-night": {
+        "role": "neutral",
+        "displayName": "Recessed Inset (night)",
+        "canonical": "#1A2A3B",
+        "mode": "night",
+        "cssVar": "--inset",
+        "tonalRamp": [
+          "#010C1B",
+          "#152536",
+          "#304154",
+          "#4E5F73",
+          "#6D7F94",
+          "#8DA1B6",
+          "#B2C7DD",
+          "#E3F0FF"
+        ]
+      },
+      "rule-night": {
+        "role": "neutral",
+        "displayName": "Hairline Rule (night)",
+        "canonical": "#24364A",
+        "mode": "night",
+        "cssVar": "--rule",
+        "tonalRamp": [
+          "#000B1C",
+          "#142538",
+          "#2F4156",
+          "#4C6075",
+          "#6B7F96",
+          "#8CA1B9",
+          "#B1C7E0",
+          "#E3F0FF"
+        ]
+      },
+      "rule-strong-night": {
+        "role": "neutral",
+        "displayName": "Strong Rule (night)",
+        "canonical": "#3A5068",
+        "mode": "night",
+        "cssVar": "--rule-strong",
+        "tonalRamp": [
+          "#000B1D",
+          "#11253B",
+          "#2C4259",
+          "#496079",
+          "#68809A",
+          "#89A1BC",
+          "#AEC7E3",
+          "#E3F0FF"
+        ]
+      },
+      "ink-night": {
+        "role": "neutral",
+        "displayName": "Ink (night)",
+        "canonical": "#E7EDF1",
+        "mode": "night",
+        "cssVar": "--ink",
+        "tonalRamp": [
+          "#080C0E",
+          "#202528",
+          "#3C4044",
+          "#595E62",
+          "#797E82",
+          "#9A9FA3",
+          "#BFC5C9",
+          "#E9EFF3"
+        ]
+      },
+      "ink-2-night": {
+        "role": "neutral",
+        "displayName": "Ink Secondary (night)",
+        "canonical": "#9AAAB8",
+        "mode": "night",
+        "cssVar": "--ink-2",
+        "tonalRamp": [
+          "#030C16",
+          "#192630",
+          "#34424D",
+          "#51606C",
+          "#707F8D",
+          "#91A1AF",
+          "#B6C6D5",
+          "#E1F1FF"
+        ]
+      },
+      "ink-3-night": {
+        "role": "neutral",
+        "displayName": "Ink Tertiary (night)",
+        "canonical": "#8495A4",
+        "mode": "night",
+        "cssVar": "--ink-3",
+        "tonalRamp": [
+          "#020C17",
+          "#182632",
+          "#33424F",
+          "#50606E",
+          "#6F808E",
+          "#90A1B0",
+          "#B5C7D6",
+          "#E1F1FF"
+        ]
+      },
+      "shell-night": {
+        "role": "secondary",
+        "displayName": "Blued Steel (night)",
+        "canonical": "#13263A",
+        "mode": "night",
+        "cssVar": "--shell",
+        "tonalRamp": [
+          "#000B1D",
+          "#122539",
+          "#2D4157",
+          "#4B6077",
+          "#6A8098",
+          "#8AA1BA",
+          "#AFC7E1",
+          "#E3F0FF"
+        ]
+      },
+      "shell-raised-night": {
+        "role": "secondary",
+        "displayName": "Blued Steel Raised (night)",
+        "canonical": "#1F3A56",
+        "mode": "night",
+        "cssVar": "--shell-raised",
+        "tonalRamp": [
+          "#000B1D",
+          "#0A2540",
+          "#26425E",
+          "#44607E",
+          "#6380A0",
+          "#83A2C3",
+          "#A8C8EA",
+          "#E3F0FF"
+        ]
+      },
+      "shell-rule-night": {
+        "role": "secondary",
+        "displayName": "Blued Steel Rule (night)",
+        "canonical": "#284561",
+        "mode": "night",
+        "cssVar": "--shell-rule",
+        "tonalRamp": [
+          "#000C1C",
+          "#08253F",
+          "#25425E",
+          "#43617E",
+          "#6181A0",
+          "#82A2C2",
+          "#A7C8EA",
+          "#E2F0FF"
+        ]
+      },
+      "forge-night": {
+        "role": "primary",
+        "displayName": "Forge Orange (night)",
+        "canonical": "#FF6A2A",
+        "mode": "night",
+        "cssVar": "--forge",
+        "tonalRamp": [
+          "#1B0300",
+          "#421200",
+          "#6F2300",
+          "#9F3700",
+          "#D14B00",
+          "#FE6929",
+          "#FFAD8F",
+          "#FFE9E1"
+        ]
+      },
+      "forge-hover-night": {
+        "role": "primary",
+        "displayName": "Forge Orange Hover (night)",
+        "canonical": "#FF8550",
+        "mode": "night",
+        "cssVar": "--forge-hover",
+        "tonalRamp": [
+          "#1A0400",
+          "#411300",
+          "#6D2600",
+          "#9C3A00",
+          "#C95418",
+          "#EF7742",
+          "#FFAD8C",
+          "#FFE9E1"
+        ]
+      },
+      "forge-ink-night": {
+        "role": "primary",
+        "displayName": "Forge Ink (night)",
+        "canonical": "#1A0A03",
+        "mode": "night",
+        "cssVar": "--forge-ink",
+        "tonalRamp": [
+          "#160701",
+          "#311F15",
+          "#4E3B30",
+          "#6E584D",
+          "#8E786C",
+          "#B0998D",
+          "#D7BEB2",
+          "#FFEADE"
+        ]
+      },
+      "danger-night": {
+        "role": "tertiary",
+        "displayName": "Danger Red (night)",
+        "canonical": "#FF7B84",
+        "mode": "night",
+        "cssVar": "--danger",
+        "tonalRamp": [
+          "#1F0003",
+          "#4A0010",
+          "#7B0020",
+          "#A5273A",
+          "#CB4C59",
+          "#F16F79",
+          "#FFA9AC",
+          "#FFE8E8"
+        ]
+      },
+      "focus-night": {
+        "role": "neutral",
+        "displayName": "Focus Ink (night)",
+        "canonical": "#E7EDF1",
+        "mode": "night",
+        "cssVar": "--focus",
+        "tonalRamp": [
+          "#080C0E",
+          "#202528",
+          "#3C4044",
+          "#595E62",
+          "#797E82",
+          "#9A9FA3",
+          "#BFC5C9",
+          "#E9EFF3"
+        ]
+      },
+      "t1-night": {
+        "role": "tertiary",
+        "displayName": "Temper Straw (night)",
+        "canonical": "#E6BE52",
+        "mode": "night",
+        "cssVar": "--t1",
+        "tonalRamp": [
+          "#110A00",
+          "#2F2200",
+          "#503D00",
+          "#745A00",
+          "#9A7800",
+          "#C09924",
+          "#E7BF53",
+          "#FFEDC1"
+        ]
+      },
+      "t2-night": {
+        "role": "tertiary",
+        "displayName": "Temper Bronze (night)",
+        "canonical": "#D98E4C",
+        "mode": "night",
+        "cssVar": "--t2",
+        "tonalRamp": [
+          "#160700",
+          "#391B00",
+          "#603200",
+          "#8A4B00",
+          "#B16923",
+          "#D58B49",
+          "#FEB16F",
+          "#FFEADA"
+        ]
+      },
+      "t3-night": {
+        "role": "tertiary",
+        "displayName": "Temper Peacock (night)",
+        "canonical": "#CB6D97",
+        "mode": "night",
+        "cssVar": "--t3",
+        "tonalRamp": [
+          "#1D000D",
+          "#470028",
+          "#6E1845",
+          "#913964",
+          "#B65A84",
+          "#DB7BA5",
+          "#FFA4CB",
+          "#FFE7F0"
+        ]
+      },
+      "t4-night": {
+        "role": "tertiary",
+        "displayName": "Temper Purple (night)",
+        "canonical": "#A07FE0",
+        "mode": "night",
+        "cssVar": "--t4",
+        "tonalRamp": [
+          "#110028",
+          "#2F005D",
+          "#4B267F",
+          "#6947A2",
+          "#8967C6",
+          "#AA89EB",
+          "#CCB6FF",
+          "#F0EBFF"
+        ]
+      },
+      "t5-night": {
+        "role": "tertiary",
+        "displayName": "Temper Blue (night)",
+        "canonical": "#5E97EE",
+        "mode": "night",
+        "cssVar": "--t5",
+        "tonalRamp": [
+          "#000924",
+          "#002053",
+          "#003A88",
+          "#245BAC",
+          "#447CD1",
+          "#659EF6",
+          "#A0C6FF",
+          "#E5EFFF"
+        ]
+      },
+      "spent-night": {
+        "role": "tertiary",
+        "displayName": "Spent Grey (night)",
+        "canonical": "#6B7782",
+        "mode": "night",
+        "cssVar": "--spent",
+        "tonalRamp": [
+          "#040C14",
+          "#1B252E",
+          "#36414B",
+          "#545F6A",
+          "#737F8A",
+          "#94A0AC",
+          "#B9C6D2",
+          "#E3F0FD"
+        ]
+      },
+      "cell-night": {
+        "role": "neutral",
+        "displayName": "Unlit Cell (night)",
+        "canonical": "#1C2C3D",
+        "mode": "night",
+        "cssVar": "--cell",
+        "tonalRamp": [
+          "#010C1A",
+          "#152536",
+          "#314153",
+          "#4E5F73",
+          "#6D7F94",
+          "#8DA1B6",
+          "#B2C7DD",
+          "#E3F0FF"
+        ]
+      },
+      "cell-edge-night": {
+        "role": "neutral",
+        "displayName": "Unlit Cell Edge (night)",
+        "canonical": "#3A5068",
+        "mode": "night",
+        "cssVar": "--cell-edge",
+        "tonalRamp": [
+          "#000B1D",
+          "#11253B",
+          "#2C4259",
+          "#496079",
+          "#68809A",
+          "#89A1BC",
+          "#AEC7E3",
+          "#E3F0FF"
+        ]
+      },
+      "stone-red": {
+        "role": "tertiary",
+        "displayName": "Driftstone Red",
+        "canonical": "#C8352B",
+        "mode": "both",
+        "cssVar": "--color-stone-red",
+        "tonalRamp": [
+          "#1F0000",
+          "#4B0001",
+          "#7D0002",
+          "#AE1511",
+          "#D54236",
+          "#FD6758",
+          "#FFAB9F",
+          "#FFE9E5"
+        ]
+      },
+      "stone-blue": {
+        "role": "tertiary",
+        "displayName": "Driftstone Blue",
+        "canonical": "#2F5FC4",
+        "mode": "both",
+        "cssVar": "--color-stone-blue",
+        "tonalRamp": [
+          "#00052C",
+          "#001961",
+          "#073496",
+          "#2756BA",
+          "#4578DF",
+          "#699BFF",
+          "#A5C4FF",
+          "#E6EFFF"
+        ]
+      },
+      "stone-black": {
+        "role": "tertiary",
+        "displayName": "Driftstone Black",
+        "canonical": "#23272B",
+        "mode": "both",
+        "cssVar": "--color-stone-black",
+        "tonalRamp": [
+          "#080C0F",
+          "#212428",
+          "#3C4045",
+          "#5A5E63",
+          "#797E83",
+          "#9A9FA4",
+          "#BFC5CA",
+          "#EAEFF5"
+        ]
+      },
+      "stone-white": {
+        "role": "tertiary",
+        "displayName": "Driftstone White",
+        "canonical": "#F2F2EE",
+        "mode": "both",
+        "cssVar": "--color-stone-white",
+        "tonalRamp": [
+          "#0B0B09",
+          "#242421",
+          "#40403D",
+          "#5E5E5A",
+          "#7D7D7A",
+          "#9F9F9B",
+          "#C4C4C0",
+          "#EFEFEB"
+        ]
+      },
+      "stone-yellow": {
+        "role": "tertiary",
+        "displayName": "Driftstone Yellow",
+        "canonical": "#E3B521",
+        "mode": "both",
+        "cssVar": "--color-stone-yellow",
+        "tonalRamp": [
+          "#100A00",
+          "#2E2200",
+          "#503D00",
+          "#745A00",
+          "#9A7800",
+          "#C29900",
+          "#ECBE30",
+          "#FFEDC0"
+        ]
+      },
+      "stone-sky": {
+        "role": "tertiary",
+        "displayName": "Driftstone Sky",
+        "canonical": "#38A9D6",
+        "mode": "both",
+        "cssVar": "--color-stone-sky",
+        "tonalRamp": [
+          "#000D15",
+          "#002838",
+          "#00465E",
+          "#006788",
+          "#0089B4",
+          "#3CACD9",
+          "#6CD2FF",
+          "#DBF3FF"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "The 最強獵人 wordmark on the home band only; 64px at ≥768px."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Page titles; 24px on equipment detail, 28px on skill detail, 20px on the build page."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Section headings (裝備, 技能, 資料庫); on detail pages and pickers set on a 2px ink rule."
+      },
+      "item-title": {
+        "displayName": "Item Title",
+        "purpose": "Equipment, slot and skill names in rows; 17px on index rows, 15px in selectors."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Descriptions and level effects, 60 to 65ch; palt off."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Field labels above values, meta lines (12 to 13px, ink-2), nav labels."
+      },
+      "button": {
+        "displayName": "Button",
+        "purpose": "Solid and outline buttons; the phone share dock uses 16px, the desktop header 14px."
+      },
+      "numeral-spec": {
+        "displayName": "Stamped Numeral, Spec",
+        "purpose": "Big values on spec strips (攻擊力, 防禦力, 漂流石槽)."
+      },
+      "numeral": {
+        "displayName": "Stamped Numeral",
+        "purpose": "Ledger values and auto-build plan percentages; /max follows at 15px/600 ink-2."
+      },
+      "numeral-inline": {
+        "displayName": "Stamped Numeral, Inline",
+        "purpose": "Counts inside 13px CJK status lines and Lv tags (14px)."
+      },
+      "brand-wordmark": {
+        "displayName": "Brand Wordmark",
+        "purpose": "最強獵人 in the 56px shell band."
+      },
+      "brand-mark": {
+        "displayName": "Maker's Mark",
+        "purpose": "MHN in a 1.5px shell-ink-2 frame, 22px tall, 2px radius; the only uppercase tracked Latin."
+      }
+    },
+    "shadows": [
+      {
+        "name": "sheet",
+        "value": "0 -12px 32px -8px rgb(17 27 37 / 0.28)",
+        "purpose": "Bottom sheet and centred dialog panel (daylight), over a 60% dark scrim."
+      },
+      {
+        "name": "sheet-night",
+        "value": "0 -12px 32px -8px rgb(0 0 0 / 0.6)",
+        "purpose": "Sheet shadow in forge-at-night mode."
+      },
+      {
+        "name": "pop",
+        "value": "0 10px 28px -10px rgb(17 27 37 / 0.35)",
+        "purpose": "Toast and the saved-build plate lifted off the home band (daylight)."
+      },
+      {
+        "name": "pop-night",
+        "value": "0 10px 28px -10px rgb(0 0 0 / 0.7)",
+        "purpose": "Pop shadow in forge-at-night mode."
+      },
+      {
+        "name": "spent-edge",
+        "value": "inset 0 0 0 1px var(--spent)",
+        "purpose": "Outline of a spent overflow cell; an edge, not elevation."
+      },
+      {
+        "name": "focus-outline",
+        "value": "outline: 2px solid var(--focus); outline-offset: 2px",
+        "purpose": "Global :focus-visible treatment."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out-quint",
+        "value": "cubic-bezier(0.22, 1, 0.36, 1)",
+        "purpose": "Movement: temper heat, sheet rise, toast, ledger enter/leave."
+      },
+      {
+        "name": "ease-standard",
+        "value": "cubic-bezier(0.4, 0, 0.2, 1)",
+        "purpose": "Colour transitions on rows, buttons, tabs (Tailwind default)."
+      },
+      {
+        "name": "duration-row",
+        "value": "150ms",
+        "purpose": "Row and tile hover fills and border shifts."
+      },
+      {
+        "name": "duration-control",
+        "value": "200ms",
+        "purpose": "Buttons, tabs, inputs, chevron rotation, switch thumb."
+      },
+      {
+        "name": "duration-toast",
+        "value": "240ms",
+        "purpose": "Toast rise (10px) and sheet scrim fade."
+      },
+      {
+        "name": "duration-ledger",
+        "value": "280ms",
+        "purpose": "Ledger rows entering/leaving (8px slide + fade) and moving."
+      },
+      {
+        "name": "duration-sheet",
+        "value": "320ms",
+        "purpose": "Sheet panel rising 24px into place."
+      },
+      {
+        "name": "duration-temper",
+        "value": "640ms",
+        "purpose": "A newly lit temper cell heating from forge orange through t1 (35%) to its resting oxide colour."
+      },
+      {
+        "name": "stagger-temper",
+        "value": "45ms",
+        "purpose": "Delay between successive heating cells."
+      },
+      {
+        "name": "temper-keyframes",
+        "value": "@keyframes temper { 0% { background-color: var(--forge); box-shadow: 0 0 0 1px var(--forge); } 35% { background-color: var(--t1); box-shadow: 0 0 0 1px transparent; } 100% { background-color: var(--cell-colour); } }",
+        "purpose": "Runs only on change or on a newly arrived skill, never on first paint."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "0.01ms",
+        "purpose": "All animation and transition durations under prefers-reduced-motion: reduce."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "phone",
+        "value": "375px",
+        "note": "Design target 375 to 428px; 16px gutter, full-bleed lists, bottom tab bar, share dock."
+      },
+      {
+        "name": "sm",
+        "value": "640px",
+        "note": "Weapon-type list 2 columns; skill chip grids 3 columns."
+      },
+      {
+        "name": "md",
+        "value": "768px",
+        "note": "Tabs move into the shell band; sheets centre (max 576px, 82dvh); lists box with 1px rule + 4px radius; 24px gutter."
+      },
+      {
+        "name": "lg",
+        "value": "1024px",
+        "note": "Build page splits into gear + 432px sticky ledger (top 72px); share moves into the gear header."
+      },
+      {
+        "name": "container-wide",
+        "value": "1152px",
+        "note": "Shell band and build page max width."
+      },
+      {
+        "name": "container-read",
+        "value": "768px",
+        "note": "Browse and detail pages max width."
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button (Forge)",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The one forge-orange action per screen: 複製分享連結 on the build page, 開始配裝 on home.",
+      "html": "<button type=\"button\" class=\"ds-btn-forge\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M9 17H7A5 5 0 0 1 7 7h2\"/><path d=\"M15 7h2a5 5 0 1 1 0 10h-2\"/><line x1=\"8\" x2=\"16\" y1=\"12\" y2=\"12\"/></svg>複製分享連結</button>",
+      "css": ".ds-btn-forge{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:48px;padding:0 20px;border:0;border-radius:3px;background:var(--forge,#C4410C);color:var(--forge-ink,#FFFFFF);font:700 16px/1 'Noto Sans TC',ui-sans-serif,system-ui,sans-serif;cursor:pointer;transition:background-color 200ms cubic-bezier(0.4,0,0.2,1)}.ds-btn-forge:hover{background:var(--forge-hover,#A83709)}.ds-btn-forge:focus-visible{outline:2px solid var(--focus,#111B25);outline-offset:2px}.ds-btn-forge:disabled{opacity:.45;cursor:not-allowed}"
+    },
+    {
+      "name": "Secondary Button (Blued Steel)",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Every other solid action: 開始搜尋, 套用選擇. Shell navy, never forge.",
+      "html": "<button type=\"button\" class=\"ds-btn-shell\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m21 21-4.34-4.34\"/><circle cx=\"11\" cy=\"11\" r=\"8\"/></svg>開始搜尋</button>",
+      "css": ".ds-btn-shell{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:48px;padding:0 20px;border:0;border-radius:3px;background:var(--shell,#182C42);color:var(--shell-ink,#EAF0F4);font:700 15px/1 'Noto Sans TC',ui-sans-serif,system-ui,sans-serif;cursor:pointer;transition:background-color 200ms cubic-bezier(0.4,0,0.2,1)}.ds-btn-shell:hover{background:var(--shell-raised,#24405E)}.ds-btn-shell:focus-visible{outline:2px solid var(--focus,#111B25);outline-offset:2px}.ds-btn-shell:disabled{opacity:.45;cursor:not-allowed}"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Cancel and remove actions in sheet footers: 取消, 卸下目前的武器, 清空這個漂流石槽.",
+      "html": "<button type=\"button\" class=\"ds-btn-outline\">取消</button>",
+      "css": ".ds-btn-outline{display:inline-flex;align-items:center;justify-content:center;height:48px;padding:0 16px;border:1px solid var(--rule-strong,#9AA6B0);border-radius:3px;background:transparent;color:var(--ink,#111B25);font:700 15px/1 'Noto Sans TC',ui-sans-serif,system-ui,sans-serif;cursor:pointer;transition:background-color 200ms cubic-bezier(0.4,0,0.2,1)}.ds-btn-outline:hover{background:var(--inset,#DCE2E6)}.ds-btn-outline:focus-visible{outline:2px solid var(--focus,#111B25);outline-offset:2px}"
+    },
+    {
+      "name": "Search Field",
+      "kind": "input",
+      "refersTo": "input-search",
+      "description": "Recessed 44px search on inset; focus shifts the border to the focus colour and lifts the fill to panel.",
+      "html": "<label class=\"ds-search\"><span class=\"ds-sr\">搜尋技能</span><span class=\"ds-search-ico\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m21 21-4.34-4.34\"/><circle cx=\"11\" cy=\"11\" r=\"8\"/></svg></span><input class=\"ds-search-input\" type=\"search\" placeholder=\"搜尋技能名稱\" autocomplete=\"off\"></label>",
+      "css": ".ds-search{position:relative;display:flex;align-items:center;width:100%;max-width:360px}.ds-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}.ds-search-ico{position:absolute;left:12px;display:flex;color:var(--ink-3,#55626E);pointer-events:none}.ds-search-input{width:100%;height:44px;padding:0 40px;border:1px solid var(--rule,#C6CED5);border-radius:3px;background:var(--inset,#DCE2E6);color:var(--ink,#111B25);font:400 15px/1.55 'Noto Sans TC',ui-sans-serif,system-ui,sans-serif;outline:none;caret-color:var(--forge,#C4410C);transition:border-color 200ms cubic-bezier(0.4,0,0.2,1),background-color 200ms cubic-bezier(0.4,0,0.2,1)}.ds-search-input::placeholder{color:var(--ink-3,#55626E);opacity:1}.ds-search-input:focus,.ds-search-input:focus-visible{border-color:var(--focus,#111B25);background:var(--panel,#F4F6F7)}"
+    },
+    {
+      "name": "Shell Band with Maker's Mark",
+      "kind": "nav",
+      "refersTo": "shell-band",
+      "description": "Sticky 56px blued-steel header: 最強獵人 wordmark, the stamped MHN mark, and the theme toggle.",
+      "html": "<header class=\"ds-band\"><a class=\"ds-brand\" href=\"#\" aria-label=\"最強獵人 首頁\"><span class=\"ds-wordmark\">最強獵人</span><span class=\"ds-mark\" aria-hidden=\"true\">MHN</span></a><button type=\"button\" class=\"ds-band-btn\" aria-label=\"切換為暗色模式\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401\"/></svg></button></header>",
+      "css": ".ds-band{display:flex;align-items:center;gap:16px;height:56px;padding:0 8px 0 16px;background:var(--shell,#182C42);color:var(--shell-ink,#EAF0F4);border-bottom:1px solid var(--shell-rule,#2E4A68)}.ds-brand{display:flex;align-items:center;gap:10px;margin-right:auto;color:inherit;text-decoration:none}.ds-wordmark{font:900 19px/1 'Noto Sans TC',ui-sans-serif,system-ui,sans-serif;letter-spacing:.08em}.ds-mark{display:flex;align-items:center;height:22px;padding:0 6px;border:1.5px solid var(--shell-ink-2,#A9B9C8);border-radius:2px;color:var(--shell-ink-2,#A9B9C8);font:700 12px/1 'Saira Condensed','Noto Sans TC',ui-sans-serif,sans-serif;letter-spacing:.16em;text-transform:uppercase;font-variant-numeric:tabular-nums lining-nums}.ds-brand:focus-visible,.ds-band-btn:focus-visible{outline:2px solid var(--shell-ink,#EAF0F4);outline-offset:2px}.ds-band-btn{display:flex;align-items:center;justify-content:center;width:44px;height:44px;border:0;border-radius:3px;background:transparent;color:var(--shell-ink-2,#A9B9C8);cursor:pointer;transition:background-color 200ms cubic-bezier(0.4,0,0.2,1),color 200ms cubic-bezier(0.4,0,0.2,1)}.ds-band-btn:hover{background:var(--shell-raised,#24405E);color:var(--shell-ink,#EAF0F4)}"
+    },
+    {
+      "name": "Bottom Tab Bar",
+      "kind": "nav",
+      "refersTo": "nav-tab",
+      "description": "Phone navigation: five equal 60px tabs on blued steel; the active tab fills shell-raised with a 3px top bar. Weapon and armor tabs use the official glyphs.",
+      "html": "<nav class=\"ds-tabs\" aria-label=\"主要導覽\"><a href=\"#\" class=\"ds-tab is-active\" aria-current=\"page\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 10H6a4 4 0 0 1-4-4 1 1 0 0 1 1-1h4\"/><path d=\"M7 5a1 1 0 0 1 1-1h13a1 1 0 0 1 1 1 7 7 0 0 1-7 7H8a1 1 0 0 1-1-1z\"/><path d=\"M9 12v5\"/><path d=\"M15 12v5\"/><path d=\"M5 20a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3 1 1 0 0 1-1 1H6a1 1 0 0 1-1-1\"/></svg><span>配裝</span></a><a href=\"#\" class=\"ds-tab\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><path d=\"M17.6282 3.33431L17.6312 3.33054C17.6312 3.33054 17.1758 3.25402 16.4345 3.21875C15.9438 3.41607 15.3743 3.68017 14.8236 4.0178C13.9968 4.52499 12.9802 5.15971 12.1121 5.93174C11.2853 6.66627 10.9725 7.07216 10.5403 7.65888C9.61898 8.91183 9.58748 9.41527 9.52296 9.77915C9.46742 10.095 9.46817 15.9314 9.46892 17.4785L10.3025 17.1003C10.2942 15.6868 10.268 10.651 10.3047 10.026C10.3475 9.29748 10.4653 8.97637 11.022 8.16307C11.5787 7.34977 11.9441 7.14869 12.5736 6.54472C13.4792 5.6759 14.7029 4.90537 15.67 4.36143C16.3992 3.95103 17.0347 3.67792 17.5021 3.50311C17.5712 3.41082 17.6154 3.35156 17.6274 3.33581L17.6282 3.33431Z\" fill=\"currentColor\" fill-opacity=\"0.6\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12.6738 8.66797C11.0495 8.66797 10.997 11.1716 12.7181 11.1716C14.4392 11.1716 14.3995 8.66797 12.6738 8.66797ZM12.7043 9.41825C12.029 9.41825 12.0065 10.4596 12.7223 10.4596C13.438 10.4596 13.4223 9.41825 12.7043 9.41825Z\" fill=\"currentColor\" fill-opacity=\"0.6\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12.6738 12.2676C11.0495 12.2676 10.997 14.7712 12.7181 14.7712C14.4392 14.7712 14.4002 12.2676 12.6738 12.2676ZM12.7043 13.0178C12.029 13.0178 12.0065 14.0592 12.7223 14.0592C13.438 14.0592 13.4223 13.0178 12.7043 13.0178Z\" fill=\"currentColor\" fill-opacity=\"0.6\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M15.8016 5.90208C16.215 5.23734 17.1604 3.96262 17.5055 3.50195C17.0381 3.67676 16.4026 3.94985 15.6733 4.36025C14.7062 4.90421 13.4825 5.67399 12.577 6.54356C12.4032 6.71028 12.2496 6.84632 12.1066 6.97299C11.7315 7.3052 11.429 7.57312 11.0254 8.16191C10.4679 8.97521 10.3509 9.29707 10.3081 10.0248C10.2714 10.6498 10.2976 15.6857 10.3059 17.0992L14.9831 14.9752C14.9831 14.9752 14.4159 14.2451 14.3761 13.7455C14.2816 12.56 14.2823 10.1231 14.4331 9.0915C14.5817 8.07112 15.0071 7.1798 15.8016 5.90283V5.90208ZM12.6735 8.6676C11.0491 8.6676 10.9966 11.1713 12.7177 11.1713C14.4389 11.1713 14.3991 8.6676 12.6735 8.6676ZM12.6735 12.2689C11.0491 12.2689 10.9966 14.7726 12.7177 14.7726C14.4389 14.7726 14.3999 12.2689 12.6735 12.2689Z\" fill=\"currentColor\" fill-opacity=\"0.4\"/><path d=\"M17.5357 18.4514C17.5252 18.4514 16.6714 18.4626 16.6684 18.4626C16.5281 18.4626 15.8266 18.3981 15.8251 18.3974C15.8206 18.3959 15.8063 18.3898 15.7868 18.3801C15.7081 18.3403 15.471 18.1137 15.4057 18.0297C15.3022 17.8962 15.2039 17.7379 15.1213 17.5713C15.0643 17.4557 14.9225 17.0416 14.8978 16.9148C14.8595 16.7137 14.8265 16.4624 14.8002 16.166C14.7927 16.0767 14.8115 15.9004 14.8115 15.9004L15.2917 15.6566L16.1567 15.2634L15.5745 14.5132C15.3547 14.2281 15.1348 13.8237 15.1228 13.6834C15.0298 12.5189 15.0381 10.1338 15.1746 9.19672C15.3592 7.92876 15.7028 7.41182 16.138 6.75758C16.2347 6.61202 16.3353 6.46123 16.4373 6.29616C16.9243 5.51287 18.2185 3.79701 18.232 3.77974L18.9883 2.77813L17.7481 2.58606C17.709 2.58006 16.7719 2.4375 15.4402 2.4375C14.1085 2.4375 12.2575 2.57631 10.5214 3.2388C7.9322 4.22916 6.22608 7.17098 6.15482 7.29628L6.1443 7.31428L6.1353 7.33305C6.05428 7.49436 5.34077 8.94163 5.16669 9.98676C5.04065 10.7393 5.0519 15.3775 5.08267 19.1364L5.09242 20.2903L6.14355 19.8131L10.1103 18.0117L11.1621 17.5338C11.2589 17.9569 11.3557 18.3163 11.4502 18.6014C11.511 18.7845 11.7969 19.3704 11.8846 19.5302C12.0887 19.9024 12.3168 20.2956 12.6597 20.6497C12.8 20.7952 13.4715 21.2559 13.6838 21.3339C14.1062 21.4892 14.7792 21.5642 15.7411 21.5642C15.7411 21.5642 16.5176 21.5432 16.6677 21.5432C16.6782 21.5432 17.55 21.4922 17.5642 21.4914C17.9476 21.4599 18.2447 21.1442 18.253 20.7593L18.2852 19.2174C18.2897 19.0103 18.208 18.8107 18.0602 18.6659C17.9199 18.5286 17.7308 18.4521 17.5357 18.4521V18.4514ZM9.79965 17.3282L9.64959 17.3965V17.3882L9.47102 17.4775L5.83218 19.1304C5.81268 16.7723 5.77742 10.8788 5.90572 10.1106C6.06628 9.14646 6.80529 7.66916 6.80529 7.66916C6.80529 7.66916 8.41989 4.84588 10.7893 3.94254C12.3716 3.33934 14.1107 3.19078 15.4402 3.19078C16.2708 3.19078 16.9393 3.24855 17.3114 3.28982C17.3159 3.28982 17.3196 3.29057 17.3241 3.29132C17.3414 3.29357 17.3587 3.29507 17.3744 3.29732C17.3812 3.29807 17.3879 3.29882 17.3947 3.29957C17.4022 3.30032 17.4104 3.30107 17.4172 3.30257C17.556 3.31907 17.6333 3.33107 17.6333 3.33107C17.6333 3.33107 16.3113 5.08222 15.8003 5.90302C15.0058 7.17999 14.5804 8.07131 14.4318 9.09169C14.2818 10.1241 14.2803 12.5602 14.3748 13.7456C14.4146 14.2453 14.9818 14.9753 14.9818 14.9753L9.7989 17.329L9.79965 17.3282ZM11.8599 17.2172L14.0537 16.232C14.0777 16.5052 14.1122 16.8 14.1617 17.0558L12.163 18.3651C12.0467 18.0124 11.9394 17.575 11.8606 17.2164L11.8599 17.2172ZM13.1991 20.1283C12.9133 19.8326 12.713 19.4807 12.5419 19.1687L14.4491 17.9044C14.5504 18.1085 14.6734 18.3096 14.813 18.4896L13.1991 20.1283ZM15.8003 20.814C15.7808 20.814 15.7606 20.814 15.7411 20.814C15.0516 20.814 14.3335 20.7735 13.9427 20.6295L15.45 19.0507C15.4912 19.0717 15.5332 19.0899 15.576 19.1057C15.6345 19.1267 15.7118 19.1439 15.8011 19.1574V20.814H15.8003ZM17.5027 20.7435C17.5027 20.7435 17.1546 20.772 16.6677 20.793V19.2129L17.535 19.2017L17.5027 20.7435Z\" fill=\"currentColor\"/></svg><span>武器</span></a><a href=\"#\" class=\"ds-tab\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 28 28\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M19.0928 2.0752C19.3384 2.27695 22.8362 5.20711 23.3184 5.61035C23.7849 6.00058 23.8242 6.02891 23.8262 6.03027C23.8262 6.03027 23.8174 6.38074 23.8174 6.57324V13.8965C23.8174 14.2201 23.66 14.5879 23.4326 14.8154L19.1016 19.1465V21.9551H19.9414C19.9414 21.9551 20.0895 22.0954 20.2119 22.2178L20.7988 22.8047C20.9209 22.9181 21.0608 23.0656 21.0615 23.0664V26.1729H7.86621V23.1016L9.02148 21.9385H9.89648V20.5029L4.56738 15.1738C4.44479 15.0599 4.18262 14.7715 4.18262 14.7715V12.0947H6.43945V10.2129L5.38965 9.32031V6.51172L7.75195 4.84961H7.76953C8.15453 4.57836 8.59258 4.27191 8.76758 4.14941L11.6553 2.09277C11.7591 2.01495 12.0154 1.83601 12.0225 1.83105H18.7861C18.7954 1.8385 19.0498 2.04084 19.0928 2.0752ZM9.56348 22.8291C9.46737 22.8292 9.32784 22.8814 9.25781 22.9512L8.87207 23.3359C8.80219 23.4059 8.75008 23.5377 8.75 23.6426V25.1211C8.75 25.2173 8.82864 25.2958 8.9248 25.2959H9.38867C9.48488 25.2958 9.56348 25.2173 9.56348 25.1211V24.5781C9.56387 24.4824 9.64249 24.4036 9.73828 24.4033H10.7627C10.8586 24.4035 10.9371 24.4823 10.9375 24.5781V25.1211C10.9375 25.2173 11.0161 25.2958 11.1123 25.2959H11.6904C11.7864 25.2956 11.8652 25.2172 11.8652 25.1211V24.5781C11.8656 24.4822 11.944 24.4033 12.04 24.4033H13.0547C13.1507 24.4034 13.2301 24.4822 13.2305 24.5781V25.1211C13.2305 25.2173 13.309 25.2959 13.4053 25.2959H15.3389C15.435 25.2958 15.5137 25.2173 15.5137 25.1211V24.5781C15.5141 24.4823 15.5926 24.4035 15.6885 24.4033H16.7041C16.7999 24.4036 16.8785 24.4824 16.8789 24.5781V25.1211C16.8789 25.2173 16.9575 25.2959 17.0537 25.2959H17.6836C17.7798 25.2958 17.8584 25.2173 17.8584 25.1211V24.5781C17.8588 24.4822 17.9382 24.4033 18.0342 24.4033H19.0752C19.1711 24.4035 19.2496 24.4823 19.25 24.5781V25.1211C19.25 25.2173 19.3286 25.2958 19.4248 25.2959H20.0117C20.1077 25.2956 20.1865 25.2172 20.1865 25.1211V23.6074C20.1864 23.5112 20.1334 23.3707 20.0635 23.3008L19.7051 22.9512C19.6351 22.8812 19.5034 22.8291 19.3984 22.8291H9.56348ZM13.9561 19.4248C13.86 19.4249 13.7205 19.4772 13.6504 19.5469C13.6504 19.5469 12.8371 20.3435 12.8105 20.3613C12.5831 20.615 12.4338 20.7284 12.2852 20.7285H10.9551C10.7365 20.7285 10.7627 20.9125 10.7627 21.0176V21.8047C10.7714 21.8922 10.8501 21.9707 10.9463 21.9707H11.2441V21.9824H12.5654V21.9707H12.9854V21.9736H14.3066V21.9707H14.7354V21.9736H16.0566V21.9707H16.4766V21.9736H17.7979V21.9707H18.0605C18.1565 21.9704 18.2354 21.892 18.2354 21.7959V19.5996C18.2351 19.5037 18.1564 19.4251 18.0605 19.4248H13.9561ZM17.3428 9.16113C17.2466 9.16113 17.1062 9.21333 17.0361 9.2832L16.5635 9.75586C16.4936 9.82582 16.4415 9.95758 16.4414 10.0625V12.792C16.4414 12.8881 16.3627 12.9666 16.2666 12.9668H5.23242C5.1363 12.9669 5.05775 13.0465 5.05762 13.1426V14.2451C5.05775 14.3412 5.10995 14.4807 5.17969 14.5508L10.2285 19.5996C10.2898 19.6783 10.325 19.7226 10.4824 19.7227H11.7158C11.8383 19.7226 11.9701 19.5993 12.04 19.5293L18.8301 12.748C18.9002 12.6783 19.0319 12.626 19.1367 12.626H19.5039C19.6 12.6259 19.7395 12.5736 19.8096 12.5039L20.5801 11.7334C20.6498 11.6634 20.702 11.5325 20.7021 11.4277V10.2637C20.7021 10.1674 20.65 10.027 20.5801 9.95703L19.9062 9.2832C19.8362 9.21334 19.7045 9.16116 19.5996 9.16113H17.3428ZM22.1289 10.5088C22.0327 10.5088 21.9542 10.5875 21.9541 10.6836V11.9434C21.9541 12.0395 21.901 12.1799 21.8311 12.25L20.3262 13.7549C20.2563 13.8247 20.1254 13.8768 20.0205 13.877H19.6523C19.5562 13.877 19.4167 13.9302 19.3467 14L14.9893 18.3574C14.9193 18.4274 14.945 18.4794 15.041 18.4795H18.3398C18.4361 18.4795 18.5765 18.4274 18.6465 18.3574L22.8203 14.1836C22.8902 14.1135 22.9424 13.9818 22.9424 13.877V10.6836C22.9422 10.5875 22.8637 10.5089 22.7676 10.5088H22.1289ZM19.0576 10.1064C19.1538 10.1065 19.2943 10.1586 19.3643 10.2285L19.5391 10.4033C19.609 10.4733 19.6611 10.605 19.6611 10.71V10.9551C19.661 11.0511 19.6088 11.1907 19.5391 11.2607L19.3643 11.4355C19.2943 11.5055 19.1626 11.5585 19.0576 11.5586H18.8125C18.7163 11.5586 18.5759 11.5055 18.5059 11.4355L18.3311 11.2607C18.2613 11.1907 18.2091 11.0599 18.209 10.9551V10.71C18.2091 10.6137 18.2611 10.4733 18.3311 10.4033L18.5059 10.2285C18.5759 10.1586 18.7076 10.1065 18.8125 10.1064H19.0576ZM8.20801 5.73145C8.11186 5.73145 7.96261 5.77479 7.88379 5.83594L6.40527 6.86816C6.32663 6.92059 6.25605 7.05222 6.25586 7.14844V8.74121C6.25592 8.83742 6.31776 8.96903 6.3877 9.03027L6.61523 9.22266C6.68527 9.28373 6.83356 9.33582 6.92969 9.33594H15.0234C15.1196 9.3359 15.2601 9.28379 15.3301 9.21387L16.5205 8.02344C16.5906 7.9537 16.7214 7.9014 16.8262 7.90137H20.1162C20.2124 7.9014 20.3528 7.9535 20.4229 8.02344L21.7002 9.31836C21.7702 9.38836 21.8841 9.38836 21.9541 9.31836L22.8203 8.46973C22.8902 8.39963 22.9512 8.26796 22.9512 8.17188C22.9422 8.09319 22.881 7.97149 22.7939 7.92773L19.084 5.81836C18.9965 5.76589 18.8472 5.73147 18.751 5.73145H8.20801ZM12.4863 2.71191C12.3901 2.71191 12.2409 2.7562 12.1621 2.81738L9.27539 4.86426C9.19676 4.91668 9.21371 4.96957 9.30957 4.96973L19.0225 4.95215C19.1187 4.95218 19.268 4.99631 19.3555 5.04004L22.8027 7.11328C22.89 7.1656 22.9597 7.12226 22.96 7.02637V6.57129C22.9424 6.47515 22.8813 6.35241 22.7939 6.30859L18.5938 2.7998C18.5064 2.74742 18.358 2.71205 18.2617 2.71191H12.4863Z\"/></svg><span>防具</span></a><a href=\"#\" class=\"ds-tab\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z\"/></svg><span>技能</span></a><a href=\"#\" class=\"ds-tab\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M10.5 3 8 9l4 13 4-13-2.5-6\"/><path d=\"M17 3a2 2 0 0 1 1.6.8l3 4a2 2 0 0 1 .013 2.382l-7.99 10.986a2 2 0 0 1-3.247 0l-7.99-10.986A2 2 0 0 1 2.4 7.8l2.998-3.997A2 2 0 0 1 7 3z\"/><path d=\"M2 9h20\"/></svg><span>漂流石</span></a></nav>",
+      "css": ".ds-tabs{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));height:60px;max-width:576px;background:var(--shell,#182C42);border-top:1px solid var(--shell-rule,#2E4A68);color:var(--shell-ink-2,#A9B9C8)}.ds-tab{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;color:inherit;text-decoration:none;font:500 12px/1 'Noto Sans TC',ui-sans-serif,system-ui,sans-serif;transition:color 200ms cubic-bezier(0.4,0,0.2,1),background-color 200ms cubic-bezier(0.4,0,0.2,1)}.ds-tab:hover{color:var(--shell-ink,#EAF0F4)}.ds-tab:focus-visible{outline:2px solid var(--shell-ink,#EAF0F4);outline-offset:-2px}.ds-tab.is-active{background:var(--shell-raised,#24405E);color:var(--shell-ink,#EAF0F4)}.ds-tab.is-active::before{content:\"\";position:absolute;left:12px;right:12px;top:0;height:3px;background:var(--shell-ink,#EAF0F4)}"
+    },
+    {
+      "name": "Filter Tabs with Stone Swatches",
+      "kind": "chip",
+      "refersTo": "filter-tab",
+      "description": "Scrolling 44px filter strip; active is bold ink with a 3px ink underline. Driftstone filters carry 12px rotated swatches; prime is a hollow ink diamond.",
+      "html": "<div class=\"ds-ftabs\" role=\"group\" aria-label=\"漂流石種類\"><button type=\"button\" class=\"ds-ftab is-active\" aria-pressed=\"true\">全部</button><button type=\"button\" class=\"ds-ftab\" aria-pressed=\"false\"><span class=\"ds-swatch\" style=\"background:var(--color-stone-red,#C8352B)\"></span>紅</button><button type=\"button\" class=\"ds-ftab\" aria-pressed=\"false\"><span class=\"ds-swatch\" style=\"background:var(--color-stone-blue,#2F5FC4)\"></span>藍</button><button type=\"button\" class=\"ds-ftab\" aria-pressed=\"false\"><span class=\"ds-swatch\" style=\"background:var(--color-stone-black,#23272B)\"></span>黑</button><button type=\"button\" class=\"ds-ftab\" aria-pressed=\"false\"><span class=\"ds-swatch\" style=\"background:var(--color-stone-white,#F2F2EE)\"></span>白</button><button type=\"button\" class=\"ds-ftab\" aria-pressed=\"false\"><span class=\"ds-swatch\" style=\"background:var(--color-stone-yellow,#E3B521)\"></span>黃</button><button type=\"button\" class=\"ds-ftab\" aria-pressed=\"false\"><span class=\"ds-swatch\" style=\"background:var(--color-stone-sky,#38A9D6)\"></span>水藍</button><button type=\"button\" class=\"ds-ftab\" aria-pressed=\"false\"><span class=\"ds-swatch ds-prime\"><span></span></span>純石</button></div>",
+      "css": ".ds-ftabs{display:flex;overflow-x:auto;padding:0 8px;scrollbar-width:none;background:var(--ground,#E4E8EB)}.ds-ftabs::-webkit-scrollbar{display:none}.ds-ftab{position:relative;flex-shrink:0;display:flex;align-items:center;gap:6px;height:44px;padding:0 12px;border:0;background:transparent;color:var(--ink-2,#46535F);font:400 14px/1 'Noto Sans TC',ui-sans-serif,system-ui,sans-serif;white-space:nowrap;cursor:pointer;transition:color 200ms cubic-bezier(0.4,0,0.2,1)}.ds-ftab:hover{color:var(--ink,#111B25)}.ds-ftab:focus-visible{outline:2px solid var(--focus,#111B25);outline-offset:-2px}.ds-ftab::after{content:\"\";position:absolute;left:8px;right:8px;bottom:0;height:3px;background:transparent;transition:background-color 200ms cubic-bezier(0.4,0,0.2,1)}.ds-ftab.is-active{color:var(--ink,#111B25);font-weight:700}.ds-ftab.is-active::after{background:var(--ink,#111B25)}.ds-swatch{display:inline-block;width:12px;height:12px;transform:rotate(45deg);box-shadow:0 0 0 1px color-mix(in srgb,var(--ink,#111B25) 30%,transparent)}.ds-prime{display:inline-flex;align-items:center;justify-content:center;background:transparent;box-shadow:0 0 0 1.5px var(--ink,#111B25)}.ds-prime>span{width:4px;height:4px;background:var(--ink,#111B25)}"
+    },
+    {
+      "name": "Selectable Skill Chip",
+      "kind": "chip",
+      "refersTo": "chip-select",
+      "description": "Picker tiles in a 2 to 3 column grid. Selected fills shell navy with a check; marked-for-removal is danger and struck; blocked (at the 6-skill cap) fades to ink-3.",
+      "html": "<div class=\"ds-chips\"><button type=\"button\" class=\"ds-chip is-selected\" aria-pressed=\"true\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M20 6 9 17l-5-5\"/></svg>攻擊</button><button type=\"button\" class=\"ds-chip\" aria-pressed=\"false\">弱點特效</button><button type=\"button\" class=\"ds-chip is-removing\" aria-pressed=\"true\">看破</button><button type=\"button\" class=\"ds-chip is-blocked\" aria-pressed=\"false\" aria-disabled=\"true\">超會心</button></div>",
+      "css": ".ds-chips{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;max-width:360px}.ds-chip{display:flex;align-items:center;gap:6px;min-height:48px;padding:8px 12px;border:1px solid var(--rule,#C6CED5);border-radius:3px;background:var(--panel,#F4F6F7);color:var(--ink,#111B25);font:400 14px/1.375 'Noto Sans TC',ui-sans-serif,system-ui,sans-serif;text-align:left;cursor:pointer;transition:border-color 150ms cubic-bezier(0.4,0,0.2,1),background-color 150ms cubic-bezier(0.4,0,0.2,1)}.ds-chip svg{flex-shrink:0}.ds-chip:hover{border-color:var(--ink-2,#46535F)}.ds-chip:focus-visible{outline:2px solid var(--focus,#111B25);outline-offset:2px}.ds-chip.is-selected{background:var(--shell,#182C42);border-color:var(--shell,#182C42);color:var(--shell-ink,#EAF0F4);font-weight:700}.ds-chip.is-removing{border-color:var(--danger,#B0202E);color:var(--danger,#B0202E);text-decoration:line-through}.ds-chip.is-blocked{color:var(--ink-3,#55626E);opacity:.6;cursor:not-allowed}.ds-chip.is-blocked:hover{border-color:var(--rule,#C6CED5)}"
+    },
+    {
+      "name": "Temper Bar in the Skill Ledger",
+      "kind": "custom",
+      "refersTo": "temper-cell",
+      "description": "The signature: one cell per level coloured by ceil(i/max×5) along t1 to t5, a 2px max stop, spent hatch past it. Hover the ledger to replay the heat on the cells that just lit (弱點特效 going 1 → 3).",
+      "html": "<ul class=\"ds-ledger\"><li><button type=\"button\" class=\"ds-lrow\" aria-expanded=\"false\"><span class=\"ds-lname\">攻擊</span><span class=\"ds-bar\" role=\"img\" aria-label=\"等級 5 / 5\"><span class=\"ds-cell\" style=\"--c:var(--t1,#A88317);background:var(--c)\"></span><span class=\"ds-cell\" style=\"--c:var(--t2,#A9652A);background:var(--c)\"></span><span class=\"ds-cell\" style=\"--c:var(--t3,#8E4568);background:var(--c)\"></span><span class=\"ds-cell\" style=\"--c:var(--t4,#6B3D9A);background:var(--c)\"></span><span class=\"ds-cell\" style=\"--c:var(--t5,#2A5AA6);background:var(--c)\"></span><span class=\"ds-stop\" aria-hidden=\"true\"></span></span><span class=\"ds-lval\"><b>5</b><i>/5</i></span><span class=\"ds-lchev\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\"/></svg></span></button></li><li><button type=\"button\" class=\"ds-lrow\" aria-expanded=\"false\"><span class=\"ds-lname\">弱點特效</span><span class=\"ds-bar\" role=\"img\" aria-label=\"等級 3 / 5\"><span class=\"ds-cell\" style=\"--c:var(--t1,#A88317);background:var(--c)\"></span><span class=\"ds-cell ds-heat\" style=\"--c:var(--t2,#A9652A);background:var(--c);--d:0ms\"></span><span class=\"ds-cell ds-heat\" style=\"--c:var(--t3,#8E4568);background:var(--c);--d:45ms\"></span><span class=\"ds-cell is-off\"></span><span class=\"ds-cell is-off\"></span><span class=\"ds-stop\" aria-hidden=\"true\"></span></span><span class=\"ds-lval\"><b>3</b><i>/5</i></span><span class=\"ds-lchev\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\"/></svg></span></button></li><li><button type=\"button\" class=\"ds-lrow\" aria-expanded=\"false\"><span class=\"ds-lname\">火耐性<span class=\"ds-lover\">超出上限 1 級</span></span><span class=\"ds-bar\" role=\"img\" aria-label=\"等級 4 / 3\"><span class=\"ds-cell\" style=\"--c:var(--t2,#A9652A);background:var(--c)\"></span><span class=\"ds-cell\" style=\"--c:var(--t4,#6B3D9A);background:var(--c)\"></span><span class=\"ds-cell\" style=\"--c:var(--t5,#2A5AA6);background:var(--c)\"></span><span class=\"ds-stop is-over\" aria-hidden=\"true\"></span><span class=\"ds-cell ds-spent\"></span></span><span class=\"ds-lval\"><b class=\"is-over\">4</b><i>/3</i></span><span class=\"ds-lchev\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\"/></svg></span></button></li></ul>",
+      "css": ".ds-ledger{list-style:none;margin:0;padding:0;max-width:432px;background:var(--panel,#F4F6F7);border:1px solid var(--rule,#C6CED5);border-radius:4px;overflow:hidden;color:var(--ink,#111B25)}.ds-ledger li+li{border-top:1px solid var(--rule,#C6CED5)}.ds-lrow{width:100%;display:grid;grid-template-columns:minmax(0,1fr) minmax(6.5rem,auto) 3.25rem 1rem;align-items:center;column-gap:10px;min-height:52px;padding:8px 12px 8px 16px;border:0;background:transparent;color:inherit;text-align:left;cursor:pointer;transition:background-color 150ms cubic-bezier(0.4,0,0.2,1)}.ds-lrow:hover{background:var(--inset,#DCE2E6)}.ds-lrow:focus-visible{outline:2px solid var(--focus,#111B25);outline-offset:-2px}.ds-lname{min-width:0;font:500 15px/1.375 'Noto Sans TC',ui-sans-serif,system-ui,sans-serif}.ds-lover{display:block;font:700 12px/1.25 'Noto Sans TC',ui-sans-serif,system-ui,sans-serif;color:var(--danger,#B0202E)}.ds-bar{display:inline-flex;align-items:center;gap:3px}.ds-cell{width:16px;height:10px;border-radius:1px}.ds-cell.is-off{background:var(--cell,#D5DCE1);box-shadow:inset 0 0 0 1px var(--cell-edge,#A8B3BC)}.ds-spent{background:repeating-linear-gradient(135deg,var(--spent,#7C8790) 0 2px,transparent 2px 4px);box-shadow:inset 0 0 0 1px var(--spent,#7C8790)}.ds-stop{width:2px;height:16px;margin:0 2px;background:var(--rule-strong,#9AA6B0)}.ds-stop.is-over{background:var(--ink,#111B25)}.ds-lval{text-align:right;white-space:nowrap;font-family:'Saira Condensed','Noto Sans TC',ui-sans-serif,sans-serif;font-variant-numeric:tabular-nums lining-nums;letter-spacing:.01em;line-height:1}.ds-lval b{font-size:22px;font-weight:800}.ds-lval b.is-over{color:var(--danger,#B0202E)}.ds-lval i{font-style:normal;font-size:15px;font-weight:600;color:var(--ink-2,#46535F)}.ds-lchev{display:flex;color:var(--ink-3,#55626E)}.ds-ledger:hover .ds-heat{animation:ds-temper 640ms cubic-bezier(0.22,1,0.36,1) both;animation-delay:var(--d,0ms)}@keyframes ds-temper{0%{background-color:var(--forge,#C4410C);box-shadow:0 0 0 1px var(--forge,#C4410C)}35%{background-color:var(--t1,#A88317);box-shadow:0 0 0 1px transparent}100%{background-color:var(--c)}}@media (prefers-reduced-motion:reduce){.ds-ledger:hover .ds-heat{animation:none}}"
+    },
+    {
+      "name": "Build Slot with Driftstone Sockets",
+      "kind": "custom",
+      "refersTo": "socket-filled",
+      "description": "76px gear row: art on a steel plate with its part-glyph tag (shown here with the glyph fallback), name and skills, vertical-CJK driftstone sockets (filled shell / empty dashed), and a 44px lock column (locked = shell).",
+      "html": "<ul class=\"ds-slots\"><li class=\"ds-slot\"><button type=\"button\" class=\"ds-slot-main\" aria-label=\"腕部：火龍腕甲，點擊更換\"><span class=\"ds-plate\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 28 28\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M17.7017 4.0166H20.2651V7.83984L19.7397 8.71484L19.7485 22.1113V22.1201H21.0962V25.3145H7.90088V22.1201H9.21338V13.248C9.16655 13.2339 6.92451 10.6556 6.90381 10.6318V4.55078H9.29248C9.29248 4.55078 9.29248 2.714 9.29248 2.69531C9.29248 2.68656 17.7017 2.69531 17.7017 2.69531V4.0166ZM8.95947 23.0127C8.86344 23.013 8.78467 23.0914 8.78467 23.1875V24.29C8.78472 24.3861 8.86347 24.4646 8.95947 24.4648H20.064C20.1601 24.4647 20.2387 24.3862 20.2388 24.29V23.1875C20.2388 23.0914 20.1601 23.0129 20.0728 23.0127H8.95947ZM10.3071 17.3076C10.211 17.3078 10.1323 17.3863 10.1323 17.4824V21.5166C10.1325 21.6213 10.2111 21.6913 10.3071 21.6914H18.7075C18.8036 21.6913 18.8821 21.6126 18.8823 21.5166V17.4824C18.8823 17.3862 18.8037 17.3077 18.7075 17.3076H10.3071ZM11.8296 19.0049C11.9258 19.0049 12.0052 19.0835 12.0054 19.1797V19.959C12.0052 20.0551 11.9257 20.1338 11.8296 20.1338H11.0513C10.9551 20.1338 10.8766 20.0551 10.8765 19.959V19.1797C10.8766 19.0835 10.9551 19.0049 11.0513 19.0049H11.8296ZM13.8774 19.0049C13.9736 19.0049 14.0521 19.0836 14.0522 19.1797V19.959C14.0521 20.0551 13.9736 20.1338 13.8774 20.1338H13.0991C13.003 20.1338 12.9235 20.0551 12.9233 19.959V19.1797C12.9235 19.0835 13.003 19.0049 13.0991 19.0049H13.8774ZM15.9165 19.0049C16.0125 19.0051 16.0912 19.0837 16.0913 19.1797V19.959C16.0911 20.055 16.0125 20.1336 15.9165 20.1338H15.1372C15.0411 20.1337 14.9626 20.055 14.9624 19.959V19.1797C14.9625 19.0836 15.0411 19.005 15.1372 19.0049H15.9165ZM17.9458 19.0049C18.042 19.0049 18.1214 19.0835 18.1216 19.1797V19.959C18.1214 20.0551 18.042 20.1338 17.9458 20.1338H17.1675C17.0713 20.1338 16.9928 20.0551 16.9927 19.959V19.1797C16.9928 19.0835 17.0713 19.0049 17.1675 19.0049H17.9458ZM10.3159 14.5596C10.2199 14.5597 10.1414 14.6384 10.1411 14.7344V15.8115C10.1414 15.9075 10.2199 15.9862 10.3159 15.9863H18.7163C18.8123 15.9862 18.8909 15.9075 18.8911 15.8115V14.7256C18.8908 14.6383 18.8123 14.5597 18.7163 14.5596H10.3159ZM10.3071 8.78516C10.211 8.7853 10.1323 8.8638 10.1323 8.95996V13.0635C10.1323 13.1596 10.211 13.2381 10.3071 13.2383H18.7075C18.8037 13.2382 18.8823 13.1597 18.8823 13.0635V8.95996C18.8823 8.86376 18.8037 8.78523 18.7075 8.78516H10.3071ZM7.9624 5.44238C7.86624 5.44241 7.7877 5.52104 7.7876 5.61719V10.124C7.78774 10.2201 7.83982 10.3509 7.90088 10.4209L9.10889 11.8213C9.13486 11.8559 9.16076 11.8737 9.17822 11.874C9.20447 11.874 9.22217 11.8474 9.22217 11.7861V5.61719C9.22206 5.52103 9.14355 5.44238 9.04736 5.44238H7.9624ZM11.8296 10.4121C11.9257 10.4121 12.0052 10.4908 12.0054 10.5869V11.3662C12.0052 11.4624 11.9258 11.541 11.8296 11.541H11.0513C10.9551 11.541 10.8766 11.4624 10.8765 11.3662V10.5869C10.8766 10.4908 10.9551 10.4121 11.0513 10.4121H11.8296ZM13.8774 10.4121C13.9736 10.4121 14.0521 10.4908 14.0522 10.5869V11.3662C14.0521 11.4623 13.9736 11.541 13.8774 11.541H13.0991C13.0029 11.541 12.9235 11.4624 12.9233 11.3662V10.5869C12.9235 10.4908 13.003 10.4121 13.0991 10.4121H13.8774ZM15.9165 10.4121C16.0125 10.4123 16.0911 10.4909 16.0913 10.5869V11.3662C16.0912 11.4622 16.0125 11.5408 15.9165 11.541H15.1372C15.0411 11.5409 14.9625 11.4623 14.9624 11.3662V10.5869C14.9626 10.4909 15.0411 10.4122 15.1372 10.4121H15.9165ZM17.9458 10.4121C18.0419 10.4121 18.1214 10.4908 18.1216 10.5869V11.3662C18.1215 11.4624 18.042 11.541 17.9458 11.541H17.1675C17.0713 11.541 16.9928 11.4624 16.9927 11.3662V10.5869C16.9928 10.4908 17.0713 10.4121 17.1675 10.4121H17.9458ZM10.3423 3.58691C10.2461 3.58699 10.1675 3.66649 10.1675 3.7627V7.69141C10.1764 7.78744 10.2462 7.86614 10.3423 7.86621H11.3491C11.445 7.86597 11.5237 7.78734 11.5239 7.69141V3.7627C11.5239 3.6666 11.4452 3.58716 11.3491 3.58691H10.3423ZM12.9673 3.58691C12.8711 3.58699 12.7925 3.66649 12.7925 3.7627V7.69141C12.8014 7.78744 12.88 7.86613 12.9673 7.86621H13.9741C14.07 7.86597 14.1487 7.78734 14.1489 7.69141V3.7627C14.1489 3.6666 14.0702 3.58716 13.9741 3.58691H12.9673ZM15.5923 3.58691C15.4961 3.58699 15.4175 3.66649 15.4175 3.7627V7.69141C15.4264 7.78744 15.505 7.86613 15.5923 7.86621H16.5991C16.695 7.86597 16.7737 7.78734 16.7739 7.69141V3.7627C16.7739 3.6666 16.6952 3.58716 16.5991 3.58691H15.5923ZM18.2261 4.90918C18.1299 4.90924 18.0513 4.98777 18.0513 5.08398V7.69141C18.0514 7.78755 18.1299 7.86615 18.2261 7.86621H19.2329C19.3289 7.86595 19.4076 7.78743 19.4077 7.69141V5.08398C19.4077 4.9879 19.3289 4.90944 19.2329 4.90918H18.2261Z\"/></svg><span class=\"ds-tag\"><svg width=\"12\" height=\"12\" viewBox=\"0 0 28 28\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M17.7017 4.0166H20.2651V7.83984L19.7397 8.71484L19.7485 22.1113V22.1201H21.0962V25.3145H7.90088V22.1201H9.21338V13.248C9.16655 13.2339 6.92451 10.6556 6.90381 10.6318V4.55078H9.29248C9.29248 4.55078 9.29248 2.714 9.29248 2.69531C9.29248 2.68656 17.7017 2.69531 17.7017 2.69531V4.0166ZM8.95947 23.0127C8.86344 23.013 8.78467 23.0914 8.78467 23.1875V24.29C8.78472 24.3861 8.86347 24.4646 8.95947 24.4648H20.064C20.1601 24.4647 20.2387 24.3862 20.2388 24.29V23.1875C20.2388 23.0914 20.1601 23.0129 20.0728 23.0127H8.95947ZM10.3071 17.3076C10.211 17.3078 10.1323 17.3863 10.1323 17.4824V21.5166C10.1325 21.6213 10.2111 21.6913 10.3071 21.6914H18.7075C18.8036 21.6913 18.8821 21.6126 18.8823 21.5166V17.4824C18.8823 17.3862 18.8037 17.3077 18.7075 17.3076H10.3071ZM11.8296 19.0049C11.9258 19.0049 12.0052 19.0835 12.0054 19.1797V19.959C12.0052 20.0551 11.9257 20.1338 11.8296 20.1338H11.0513C10.9551 20.1338 10.8766 20.0551 10.8765 19.959V19.1797C10.8766 19.0835 10.9551 19.0049 11.0513 19.0049H11.8296ZM13.8774 19.0049C13.9736 19.0049 14.0521 19.0836 14.0522 19.1797V19.959C14.0521 20.0551 13.9736 20.1338 13.8774 20.1338H13.0991C13.003 20.1338 12.9235 20.0551 12.9233 19.959V19.1797C12.9235 19.0835 13.003 19.0049 13.0991 19.0049H13.8774ZM15.9165 19.0049C16.0125 19.0051 16.0912 19.0837 16.0913 19.1797V19.959C16.0911 20.055 16.0125 20.1336 15.9165 20.1338H15.1372C15.0411 20.1337 14.9626 20.055 14.9624 19.959V19.1797C14.9625 19.0836 15.0411 19.005 15.1372 19.0049H15.9165ZM17.9458 19.0049C18.042 19.0049 18.1214 19.0835 18.1216 19.1797V19.959C18.1214 20.0551 18.042 20.1338 17.9458 20.1338H17.1675C17.0713 20.1338 16.9928 20.0551 16.9927 19.959V19.1797C16.9928 19.0835 17.0713 19.0049 17.1675 19.0049H17.9458ZM10.3159 14.5596C10.2199 14.5597 10.1414 14.6384 10.1411 14.7344V15.8115C10.1414 15.9075 10.2199 15.9862 10.3159 15.9863H18.7163C18.8123 15.9862 18.8909 15.9075 18.8911 15.8115V14.7256C18.8908 14.6383 18.8123 14.5597 18.7163 14.5596H10.3159ZM10.3071 8.78516C10.211 8.7853 10.1323 8.8638 10.1323 8.95996V13.0635C10.1323 13.1596 10.211 13.2381 10.3071 13.2383H18.7075C18.8037 13.2382 18.8823 13.1597 18.8823 13.0635V8.95996C18.8823 8.86376 18.8037 8.78523 18.7075 8.78516H10.3071ZM7.9624 5.44238C7.86624 5.44241 7.7877 5.52104 7.7876 5.61719V10.124C7.78774 10.2201 7.83982 10.3509 7.90088 10.4209L9.10889 11.8213C9.13486 11.8559 9.16076 11.8737 9.17822 11.874C9.20447 11.874 9.22217 11.8474 9.22217 11.7861V5.61719C9.22206 5.52103 9.14355 5.44238 9.04736 5.44238H7.9624ZM11.8296 10.4121C11.9257 10.4121 12.0052 10.4908 12.0054 10.5869V11.3662C12.0052 11.4624 11.9258 11.541 11.8296 11.541H11.0513C10.9551 11.541 10.8766 11.4624 10.8765 11.3662V10.5869C10.8766 10.4908 10.9551 10.4121 11.0513 10.4121H11.8296ZM13.8774 10.4121C13.9736 10.4121 14.0521 10.4908 14.0522 10.5869V11.3662C14.0521 11.4623 13.9736 11.541 13.8774 11.541H13.0991C13.0029 11.541 12.9235 11.4624 12.9233 11.3662V10.5869C12.9235 10.4908 13.003 10.4121 13.0991 10.4121H13.8774ZM15.9165 10.4121C16.0125 10.4123 16.0911 10.4909 16.0913 10.5869V11.3662C16.0912 11.4622 16.0125 11.5408 15.9165 11.541H15.1372C15.0411 11.5409 14.9625 11.4623 14.9624 11.3662V10.5869C14.9626 10.4909 15.0411 10.4122 15.1372 10.4121H15.9165ZM17.9458 10.4121C18.0419 10.4121 18.1214 10.4908 18.1216 10.5869V11.3662C18.1215 11.4624 18.042 11.541 17.9458 11.541H17.1675C17.0713 11.541 16.9928 11.4624 16.9927 11.3662V10.5869C16.9928 10.4908 17.0713 10.4121 17.1675 10.4121H17.9458ZM10.3423 3.58691C10.2461 3.58699 10.1675 3.66649 10.1675 3.7627V7.69141C10.1764 7.78744 10.2462 7.86614 10.3423 7.86621H11.3491C11.445 7.86597 11.5237 7.78734 11.5239 7.69141V3.7627C11.5239 3.6666 11.4452 3.58716 11.3491 3.58691H10.3423ZM12.9673 3.58691C12.8711 3.58699 12.7925 3.66649 12.7925 3.7627V7.69141C12.8014 7.78744 12.88 7.86613 12.9673 7.86621H13.9741C14.07 7.86597 14.1487 7.78734 14.1489 7.69141V3.7627C14.1489 3.6666 14.0702 3.58716 13.9741 3.58691H12.9673ZM15.5923 3.58691C15.4961 3.58699 15.4175 3.66649 15.4175 3.7627V7.69141C15.4264 7.78744 15.505 7.86613 15.5923 7.86621H16.5991C16.695 7.86597 16.7737 7.78734 16.7739 7.69141V3.7627C16.7739 3.6666 16.6952 3.58716 16.5991 3.58691H15.5923ZM18.2261 4.90918C18.1299 4.90924 18.0513 4.98777 18.0513 5.08398V7.69141C18.0514 7.78755 18.1299 7.86615 18.2261 7.86621H19.2329C19.3289 7.86595 19.4076 7.78743 19.4077 7.69141V5.08398C19.4077 4.9879 19.3289 4.90944 19.2329 4.90918H18.2261Z\"/></svg></span></span><span class=\"ds-slot-text\"><span class=\"ds-slot-label\">腕部</span><span class=\"ds-slot-name\">火龍腕甲</span><span class=\"ds-slot-skills\"><span>火耐性 <b>Lv1</b></span><span>攻擊 <b>Lv1</b></span></span></span></button><span class=\"ds-sockets\"><button type=\"button\" class=\"ds-socket is-filled\" aria-label=\"腕部漂流石槽 1：攻擊 Lv1\"><span class=\"ds-vert\">攻擊</span></button><button type=\"button\" class=\"ds-socket\" aria-label=\"腕部漂流石槽 2：空\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14\"/><path d=\"M12 5v14\"/></svg><span class=\"ds-vert ds-vert-1\">漂流石</span></button></span><button type=\"button\" class=\"ds-lock is-locked\" aria-pressed=\"true\" aria-label=\"解除鎖定腕部\"><svg width=\"17\" height=\"17\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect width=\"18\" height=\"11\" x=\"3\" y=\"11\" rx=\"2\" ry=\"2\"/><path d=\"M7 11V7a5 5 0 0 1 10 0v4\"/></svg></button></li></ul>",
+      "css": ".ds-slots{list-style:none;margin:0;padding:0;max-width:430px;background:var(--panel,#F4F6F7);border-top:1px solid var(--rule,#C6CED5);border-bottom:1px solid var(--rule,#C6CED5);color:var(--ink,#111B25)}.ds-slot{display:flex;align-items:stretch;min-height:76px}.ds-slot-main{flex:1;min-width:0;display:flex;align-items:center;gap:12px;padding:10px 8px 10px 16px;border:0;background:transparent;color:inherit;text-align:left;cursor:pointer;transition:background-color 150ms cubic-bezier(0.4,0,0.2,1)}.ds-slot-main:hover{background:var(--inset,#DCE2E6)}.ds-slot-main:focus-visible,.ds-socket:focus-visible,.ds-lock:focus-visible{outline:2px solid var(--focus,#111B25);outline-offset:-2px}.ds-plate{position:relative;flex-shrink:0;display:flex;align-items:center;justify-content:center;width:52px;height:52px;overflow:hidden;background:var(--inset,#DCE2E6);border:1px solid var(--rule,#C6CED5);border-radius:4px;color:var(--ink-2,#46535F)}.ds-tag{position:absolute;left:0;bottom:0;display:flex;align-items:center;justify-content:center;width:18px;height:18px;background:var(--shell,#182C42);color:var(--shell-ink,#EAF0F4);border-top-right-radius:3px}.ds-slot-text{flex:1;min-width:0;font-family:'Noto Sans TC',ui-sans-serif,system-ui,sans-serif}.ds-slot-label{display:block;font-size:12px;line-height:1.25;color:var(--ink-2,#46535F)}.ds-slot-name{display:block;font-size:16px;font-weight:700;line-height:1.375;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.ds-slot-skills{display:flex;flex-wrap:wrap;column-gap:10px;font-size:13px;line-height:1.375;color:var(--ink-2,#46535F)}.ds-slot-skills b{font:700 14px/1 'Saira Condensed','Noto Sans TC',ui-sans-serif,sans-serif;color:var(--ink,#111B25);font-variant-numeric:tabular-nums lining-nums}.ds-sockets{display:flex;align-items:stretch;gap:4px;padding:8px 6px 8px 0}.ds-socket{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-width:44px;padding:4px;border:1px dashed var(--rule-strong,#9AA6B0);border-radius:3px;background:transparent;color:var(--ink-2,#46535F);font:400 12px/1 'Noto Sans TC',ui-sans-serif,system-ui,sans-serif;cursor:pointer;transition:border-color 150ms cubic-bezier(0.4,0,0.2,1),color 150ms cubic-bezier(0.4,0,0.2,1),background-color 150ms cubic-bezier(0.4,0,0.2,1)}.ds-socket:hover{color:var(--ink,#111B25);border-color:var(--ink-2,#46535F)}.ds-socket.is-filled{border:1px solid var(--shell,#182C42);background:var(--shell,#182C42);color:var(--shell-ink,#EAF0F4);font-size:11.5px;font-weight:700}.ds-socket.is-filled:hover{background:var(--shell-raised,#24405E)}.ds-vert{writing-mode:vertical-rl;text-orientation:upright;inline-size:4.3em;line-height:1.08;line-break:strict}.ds-vert-1{inline-size:auto;white-space:nowrap;line-height:1}.ds-lock{display:flex;align-items:center;justify-content:center;width:44px;flex-shrink:0;border:0;border-left:1px solid var(--rule,#C6CED5);background:transparent;color:var(--ink-3,#55626E);cursor:pointer;transition:background-color 150ms cubic-bezier(0.4,0,0.2,1),color 150ms cubic-bezier(0.4,0,0.2,1)}.ds-lock:hover{color:var(--ink,#111B25);background:var(--inset,#DCE2E6)}.ds-lock.is-locked{background:var(--shell,#182C42);color:var(--shell-ink,#EAF0F4)}"
+    }
+  ],
+  "narrative": {
+    "northStar": "鍛冶回火 Forge & Temper",
+    "overview": "The build is forged work on the smithy bench. The page is a sheet of cold-rolled steel by day and soot-blued steel by night; a deep blued-steel band carries the brand and navigation like the tang of a blade, stamped with a maker's mark. Every skill level is drawn as a heat-temper oxide band, straw through bronze, peacock and purple to blue, so a maxed skill reads as a fully tempered bar and levels past the cap spill beyond a visible stop as spent, overheated grey. When gear changes, the affected cells re-heat from forge orange back to their resting oxide colour. That one moment is the system's signature.\n\nThe interface is dense and plain on purpose: a phone in one hand, outdoors, between hunts. Lists are divided by hairline steel rules rather than floated cards; numbers are set as condensed punch-stamped figures that can be read at a glance; CJK is a workhorse Hei that carries hierarchy through weight. Colour is rationed. The temper scale is the only data palette, forge orange marks the single primary action on a screen, and blued-steel navy carries everything else that must look solid or selected. Official game imagery (equipment art, weapon-type and armor-part glyphs, the skill icon) is the content colour on the page and sits on machined steel plates.\n\nIt must not read as the old parchment, gold and Cinzel look, as a generic SaaS dashboard, as a flashy hard-to-read game skin, or as a knock-off of the in-game MHN interface.",
+    "keyCharacteristics": [
+      "Steel ground, steel panel, recessed steel inset: depth by tone and 1px rules, not by shadow.",
+      "A blued-steel shell band (header, bottom tab bar, sheet title bars) carries brand, navigation and selection.",
+      "Skill levels as temper bars: one cell per level, oxide colour by position, a visible max stop, a spent hatch for overflow.",
+      "Condensed stamped numerals (Saira Condensed, tabular) beside a Hei CJK workhorse (Noto Sans TC).",
+      "One forge-orange action per screen; everything else solid is shell navy.",
+      "Machined corners of 1 to 6px; dashed borders mean empty or add.",
+      "Daylight is the default; dark is \"forge at night\"."
+    ],
+    "rules": [
+      {
+        "name": "The Temper-Only-Data Rule",
+        "body": "t1 to t5 appear only where they encode a skill level: temper cells and the legend that explains them. Never on borders, icons, badges, backgrounds, hovers, or charts of any other quantity.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Forge Rule",
+        "body": "One forge-orange control per screen, and it is the primary action. Every other solid action is shell navy; forge otherwise appears only as heat (caret, temper flash).",
+        "section": "colors"
+      },
+      {
+        "name": "The Blued Selection Rule",
+        "body": "Selected, filled, locked and on states are shown by filling with shell navy and switching to shell ink, never by tinting with an accent colour.",
+        "section": "colors"
+      },
+      {
+        "name": "The Stamped Figure Rule",
+        "body": "Every numeral that is data (levels, counts, stats, Lv tags, n/max fractions) is set in Saira Condensed with tabular lining figures, one weight step heavier than the CJK beside it. CJK is never set in Saira.",
+        "section": "typography"
+      },
+      {
+        "name": "The Weight-Not-Size Rule",
+        "body": "UI text lives between 12 and 17px and takes its hierarchy from weight (900, 700, 500, 400) and ink step; only the home wordmark exceeds 30px. Uppercase tracked Latin is reserved for the MHN maker's mark.",
+        "section": "typography"
+      },
+      {
+        "name": "The Fixed Column Rule",
+        "body": "The skill ledger is a fixed grid (name, temper bar at least 6.5rem, Lv/max 3.25rem, chevron 1rem, 10px gaps) in catalogue order. Swapping gear changes values in place; rows never reshuffle.",
+        "section": "layout"
+      },
+      {
+        "name": "The Thumb Dock Rule",
+        "body": "Below 1024px the primary action docks full-width at the bottom, directly above the tab bar, where the thumb already is.",
+        "section": "layout"
+      },
+      {
+        "name": "The Flat Bench Rule",
+        "body": "Anything resting on the page is flat and separated by rules and tone. A shadow means the thing has been lifted: a sheet, a toast, or the saved build on the home band.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Machined Corner Rule",
+        "body": "Corners stay between 1 and 6px; 3px on controls, 4px on containers.",
+        "section": "shapes"
+      },
+      {
+        "name": "The Dashed-Is-Empty Rule",
+        "body": "A dashed border always means \"nothing here yet, tap to fill\"; it is never decoration.",
+        "section": "shapes"
+      }
+    ],
+    "dos": [
+      "Do draw every skill level as temper cells: one cell per level, as many cells as the skill's max, coloured by `ceil(i / max × 5)` along t1 to t5, a 2px max stop after the last cell, and overflow as spent-hatch cells past the stop.",
+      "Do give forge orange to exactly one control per screen, the primary action (複製分享連結 on the build page, 開始配裝 on home), and make every other solid action shell navy.",
+      "Do set data numerals in Saira Condensed (`.stamp`, tabular lining figures) one weight heavier than the CJK beside them: 15px/700 inline, 22px/800 in the ledger and plan tiles, 30px/800 on spec strips.",
+      "Do show selected, filled, locked and on states by filling with shell navy and switching to shell ink.",
+      "Do set equipment art on the steel plate (inset, 1px rule, 4px radius) and tint official weapon-type and armor-part glyphs with currentColor.",
+      "Do mark empty slots, empty sockets, add actions and empty states with a 1px dashed rule-strong border.",
+      "Do keep touch targets at least 44px, primary actions 48px, and the phone gutter 16px.",
+      "Do heat temper cells only when a level changes or a skill first arrives (640ms, 45ms stagger, ease-out-quint), and make it instant under reduced motion.",
+      "Do design for daylight first and give every new colour token both a daylight and a night value."
+    ],
+    "donts": [
+      "Don't use t1 to t5 anywhere except to encode a skill level: no temper-coloured borders, icons, badges, backgrounds, or charts of other quantities.",
+      "Don't add a second forge-orange control, or use forge for links, hovers, selection or decoration.",
+      "Don't drift back to the old parchment, gold and Cinzel look: no warm paper grounds, gold accents or fantasy serif.",
+      "Don't let it read as a generic SaaS dashboard: no floating cards with resting shadows, no gradient buttons, no cards inside cards.",
+      "Don't let it become a flashy game skin or a knock-off of the in-game MHN UI: no glows, metallic or decorative gradients, textured or ornamented frames, or copied in-game panel chrome. The spent hatch is the only gradient.",
+      "Don't put a shadow on anything resting on the page; shadows belong to the sheet, the toast and the saved-build plate on the home band.",
+      "Don't round corners beyond 6px or use pills.",
+      "Don't use the stone colours outside the driftstone swatch, or let them stand in for temper, rarity or element.",
+      "Don't set CJK in Saira Condensed or letterspace CJK body text; uppercase tracked Latin belongs only to the MHN maker's mark.",
+      "Don't reorder ledger rows when gear changes; values update in place in catalogue order."
+    ]
+  }
+}

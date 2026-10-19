@@ -1,70 +1,47 @@
 <script setup lang="ts">
+import { Moon, Sun } from 'lucide-vue-next'
+
 const { isDark, toggle, init } = useTheme()
 onMounted(() => init())
 </script>
 
 <template>
-  <div class="flex flex-col min-h-dvh bg-background">
-    <!-- Top Header -->
-    <header class="sticky top-0 z-50 flex items-center h-12 px-4 border-b border-border bg-card/95 backdrop-blur-sm">
-      <NuxtLink to="/" class="flex items-center gap-2 flex-1 min-w-0">
-        <span
-          class="text-lg font-bold text-primary tracking-wider truncate"
-          style="font-family: var(--font-cinzel)"
-        >最強獵人</span>
-        <span class="hidden sm:block text-xs text-muted-foreground whitespace-nowrap">MHN 配裝模擬器</span>
-      </NuxtLink>
+  <div class="flex flex-col min-h-dvh bg-ground">
+    <a
+      href="#main"
+      class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[200] focus:px-3 focus:py-2 focus:bg-panel focus:text-ink focus:rounded-sm"
+    >跳到主要內容</a>
 
-      <!-- Theme toggle -->
-      <button
-        class="flex items-center justify-center w-9 h-9 rounded-lg border border-border bg-secondary hover:bg-muted transition-colors cursor-pointer"
-        :aria-label="isDark ? '切換至明亮模式' : '切換至暗黑模式'"
-        @click="toggle"
-      >
-        <!-- Sun icon (show in dark mode to switch to light) -->
-        <svg
-          v-if="isDark"
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="text-primary"
-          aria-hidden="true"
+    <header class="sticky top-0 z-50 bg-shell text-shell-ink border-b border-shell-rule">
+      <div class="flex items-center h-14 max-w-6xl mx-auto pl-4 pr-2 md:px-6 gap-4">
+        <NuxtLink to="/" class="flex items-center gap-2.5 min-w-0 mr-auto md:mr-4" aria-label="最強獵人 首頁">
+          <span class="text-[19px] leading-none font-black tracking-[0.08em]">最強獵人</span>
+          <!-- maker's mark, as a smith stamps it into the tang -->
+          <span
+            class="stamp flex items-center h-[22px] px-1.5 border-[1.5px] border-shell-ink-2 rounded-[2px] text-[12px] leading-none font-bold uppercase tracking-[0.16em] text-shell-ink-2"
+            aria-hidden="true"
+          >MHN</span>
+        </NuxtLink>
+
+        <BottomNav variant="top" class="mr-auto" />
+
+        <button
+          type="button"
+          class="flex items-center justify-center size-11 rounded-sm text-shell-ink-2 hover:text-shell-ink hover:bg-shell-raised transition-colors duration-200"
+          :aria-label="isDark ? '切換為亮色模式' : '切換為暗色模式'"
+          :title="isDark ? '亮色模式' : '暗色模式'"
+          @click="toggle"
         >
-          <circle cx="12" cy="12" r="4"/>
-          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
-        </svg>
-        <!-- Moon icon (show in light mode to switch to dark) -->
-        <svg
-          v-else
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="text-primary"
-          aria-hidden="true"
-        >
-          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-        </svg>
-      </button>
+          <Sun v-if="isDark" :size="20" :stroke-width="1.75" aria-hidden="true" />
+          <Moon v-else :size="20" :stroke-width="1.75" aria-hidden="true" />
+        </button>
+      </div>
     </header>
 
-    <!-- Scrollable Content -->
-    <main class="flex-1 pb-16">
+    <main id="main" class="flex-1 pb-[calc(60px+env(safe-area-inset-bottom,0px))] md:pb-0">
       <slot />
     </main>
 
-    <!-- Bottom Tab Navigation -->
-    <BottomNav />
+    <BottomNav variant="bottom" />
   </div>
 </template>
