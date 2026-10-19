@@ -1,150 +1,255 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Noto+Sans+TC:wght@400;500;600;700;900&display=swap');
-
 @import "tailwindcss";
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
+/* =============================================================
+   鍛冶回火 Forge & Temper
+   Cold-rolled steel by day, blued steel by night.
+   Temper oxide colours (straw → bronze → peacock → purple → blue)
+   are the only data palette. Forge orange is reserved for the one
+   primary action on a screen.
+============================================================= */
+
 @theme inline {
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-card: var(--card);
-  --color-card-foreground: var(--card-foreground);
-  --color-popover: var(--popover);
-  --color-popover-foreground: var(--popover-foreground);
-  --color-primary: var(--primary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-secondary: var(--secondary);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-accent: var(--accent);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-destructive: var(--destructive);
-  --color-border: var(--border);
-  --color-input: var(--input);
-  --color-ring: var(--ring);
-  --color-chart-1: var(--chart-1);
-  --color-chart-2: var(--chart-2);
-  --color-chart-3: var(--chart-3);
-  --color-chart-4: var(--chart-4);
-  --color-chart-5: var(--chart-5);
+  --color-ground: var(--ground);
+  --color-panel: var(--panel);
+  --color-inset: var(--inset);
+  --color-rule: var(--rule);
+  --color-rule-strong: var(--rule-strong);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-ink-3: var(--ink-3);
 
-  /* MHN Rarity colors — shared across themes */
-  --color-rarity-1: #6B7280;
-  --color-rarity-2: #65A30D;
-  --color-rarity-3: #0891B2;
-  --color-rarity-4: #2563EB;
-  --color-rarity-5: #9333EA;
-  --color-rarity-6: #D97706;
-  --color-rarity-7: #DC2626;
-  --color-rarity-8: #DB2777;
-  --color-rarity-9: #B45309;
+  --color-shell: var(--shell);
+  --color-shell-raised: var(--shell-raised);
+  --color-shell-rule: var(--shell-rule);
+  --color-shell-ink: var(--shell-ink);
+  --color-shell-ink-2: var(--shell-ink-2);
 
-  /* Element colors */
-  --color-element-fire: #DC2626;
-  --color-element-water: #2563EB;
-  --color-element-thunder: #CA8A04;
-  --color-element-ice: #0891B2;
-  --color-element-dragon: #7C3AED;
-  --color-element-poison: #9333EA;
-  --color-element-paralysis: #CA8A04;
-  --color-element-sleep: #3B82F6;
-  --color-element-blast: #EA580C;
+  --color-forge: var(--forge);
+  --color-forge-hover: var(--forge-hover);
+  --color-forge-ink: var(--forge-ink);
+  --color-danger: var(--danger);
+  --color-focus: var(--focus);
 
-  --font-sans: 'Noto Sans TC', sans-serif;
-  --font-cinzel: 'Cinzel', serif;
+  --color-t1: var(--t1);
+  --color-t2: var(--t2);
+  --color-t3: var(--t3);
+  --color-t4: var(--t4);
+  --color-t5: var(--t5);
+  --color-spent: var(--spent);
+  --color-cell: var(--cell);
+  --color-cell-edge: var(--cell-edge);
+
+  /* Driftstone colours (real stone colours, used only as swatches) */
+  --color-stone-red: #C8352B;
+  --color-stone-blue: #2F5FC4;
+  --color-stone-black: #23272B;
+  --color-stone-white: #F2F2EE;
+  --color-stone-yellow: #E3B521;
+  --color-stone-sky: #38A9D6;
+
+  --font-sans: 'Noto Sans TC', ui-sans-serif, system-ui, sans-serif;
+  --font-stamp: 'Saira Condensed', 'Noto Sans TC', ui-sans-serif, sans-serif;
+
+  --radius-xs: 2px;
+  --radius-sm: 3px;
+  --radius-md: 4px;
+  --radius-lg: 6px;
+
+  --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-/* =============================================
-   VERSION A: 獵人公會 Guild Hall
-   Light mode (default)
-============================================= */
+/* Daylight bench (default) */
 :root {
-  --radius: 0.5rem;
+  color-scheme: light;
 
-  /* Parchment × Forest × Gold */
-  --background: #FDF8F0;
-  --foreground: #1C1408;
-  --card: #FFF8ED;
-  --card-foreground: #1C1408;
-  --popover: #FFF8ED;
-  --popover-foreground: #1C1408;
-  --primary: #8B5E0A;            /* dark gold — 5.4:1 on parchment */
-  --primary-foreground: #FDF8F0;
-  --secondary: #F0E6D0;
-  --secondary-foreground: #3D2A0E;
-  --muted: #EDE0C8;
-  --muted-foreground: #5C4A30;   /* 8:1 on parchment */
-  --accent: #2D5016;             /* forest green */
-  --accent-foreground: #FDF8F0;
-  --destructive: #C0392B;        /* dark red — 5.2:1 on parchment */
-  --border: rgba(160, 110, 20, 0.28);
-  --input: rgba(160, 110, 20, 0.15);
-  --ring: #8B5E0A;
-  --chart-1: #8B5E0A;
-  --chart-2: #2D5016;
-  --chart-3: #1C1408;
-  --chart-4: #F0E6D0;
-  --chart-5: #5C4A30;
+  --ground: #E4E8EB;
+  --panel: #F4F6F7;
+  --inset: #DCE2E6;
+  --rule: #C6CED5;
+  --rule-strong: #9AA6B0;
+  --ink: #111B25;
+  --ink-2: #46535F;
+  --ink-3: #55626E;
+
+  --shell: #182C42;
+  --shell-raised: #24405E;
+  --shell-rule: #2E4A68;
+  --shell-ink: #EAF0F4;
+  --shell-ink-2: #A9B9C8;
+
+  --forge: #C4410C;
+  --forge-hover: #A83709;
+  --forge-ink: #FFFFFF;
+  --danger: #B0202E;
+  --focus: #111B25;
+
+  --t1: #A88317;
+  --t2: #A9652A;
+  --t3: #8E4568;
+  --t4: #6B3D9A;
+  --t5: #2A5AA6;
+  --spent: #7C8790;
+  --cell: #D5DCE1;
+  --cell-edge: #A8B3BC;
+
+  --sheet-shadow: 0 -12px 32px -8px rgb(17 27 37 / 0.28);
+  --pop-shadow: 0 10px 28px -10px rgb(17 27 37 / 0.35);
 }
 
-/* =============================================
-   Dark mode override
-============================================= */
+/* Forge at night */
 .dark {
-  --background: #1A1208;
-  --foreground: #F5E8C8;
-  --card: #2A1C0E;
-  --card-foreground: #F5E8C8;
-  --popover: #2A1C0E;
-  --popover-foreground: #F5E8C8;
-  --primary: #E4B84A;            /* bright gold — 8.9:1 on #1A1208 */
-  --primary-foreground: #1A1208;
-  --secondary: #3D2A1A;
-  --secondary-foreground: #F5E8C8;
-  --muted: #3D2A1A;
-  --muted-foreground: #A89880;   /* 4.8:1 on #1A1208 */
-  --accent: #4A7C2F;             /* brighter forest green */
-  --accent-foreground: #F5E8C8;
-  --destructive: #F87171;        /* 5.9:1 on #2A1C0E */
-  --border: rgba(228, 184, 74, 0.2);
-  --input: rgba(228, 184, 74, 0.15);
-  --ring: #E4B84A;
-  --chart-1: #E4B84A;
-  --chart-2: #4A7C2F;
-  --chart-3: #F5E8C8;
-  --chart-4: #3D2A1A;
-  --chart-5: #A89880;
+  color-scheme: dark;
+
+  --ground: #0B121A;
+  --panel: #13202E;
+  --inset: #1A2A3B;
+  --rule: #24364A;
+  --rule-strong: #3A5068;
+  --ink: #E7EDF1;
+  --ink-2: #9AAAB8;
+  --ink-3: #8495A4;
+
+  --shell: #13263A;
+  --shell-raised: #1F3A56;
+  --shell-rule: #284561;
+  --shell-ink: #EAF0F4;
+  --shell-ink-2: #A9B9C8;
+
+  --forge: #FF6A2A;
+  --forge-hover: #FF8550;
+  --forge-ink: #1A0A03;
+  --danger: #FF7B84;
+  --focus: #E7EDF1;
+
+  --t1: #E6BE52;
+  --t2: #D98E4C;
+  --t3: #CB6D97;
+  --t4: #A07FE0;
+  --t5: #5E97EE;
+  --spent: #6B7782;
+  --cell: #1C2C3D;
+  --cell-edge: #3A5068;
+
+  --sheet-shadow: 0 -12px 32px -8px rgb(0 0 0 / 0.6);
+  --pop-shadow: 0 10px 28px -10px rgb(0 0 0 / 0.7);
 }
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply border-rule;
   }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    scrollbar-color: var(--rule-strong) var(--ground);
+    scrollbar-width: thin;
+  }
+
   body {
-    @apply bg-background text-foreground font-sans antialiased;
+    @apply bg-ground text-ink font-sans antialiased;
+    font-size: 15px;
+    line-height: 1.55;
+    caret-color: var(--forge);
+    font-feature-settings: "palt" 0;
   }
+
+  h1, h2, h3 {
+    text-wrap: balance;
+  }
+
+  ::selection {
+    background: var(--shell);
+    color: var(--shell-ink);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--focus);
+    outline-offset: 2px;
+  }
+
+  input::placeholder {
+    color: var(--ink-3);
+    opacity: 1;
+  }
+
+  button {
+    cursor: pointer;
+  }
+  button:disabled {
+    cursor: not-allowed;
+  }
+
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
       animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
       transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
     }
   }
 }
 
-/* Scrollbar styling */
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: var(--background); }
-::-webkit-scrollbar-thumb {
-  background: rgba(160, 110, 20, 0.3);
-  border-radius: 3px;
-}
-::-webkit-scrollbar-thumb:hover { background: rgba(160, 110, 20, 0.5); }
+@layer components {
+  /* Stamped numerals: condensed punch-set figures, always tabular */
+  .stamp {
+    font-family: var(--font-stamp);
+    font-variant-numeric: tabular-nums lining-nums;
+    letter-spacing: 0.01em;
+  }
 
-.dark ::-webkit-scrollbar-thumb { background: rgba(228, 184, 74, 0.3); }
-.dark ::-webkit-scrollbar-thumb:hover { background: rgba(228, 184, 74, 0.5); }
+  /* Official game icons are single-colour SVG/PNG; tint them with currentColor */
+  .icon-mask {
+    display: inline-block;
+    flex-shrink: 0;
+    background-color: currentColor;
+    -webkit-mask: var(--icon) center / contain no-repeat;
+    mask: var(--icon) center / contain no-repeat;
+  }
+
+  /* Horizontal filter strips scroll without a visible bar */
+  .strip {
+    scrollbar-width: none;
+  }
+  .strip::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Equipment art sits on a machined steel plate */
+  .plate {
+    background: var(--inset);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius-md);
+  }
+}
+
+/* Temper: a newly-lit level cell heats from forge orange to its resting oxide colour */
+@keyframes temper {
+  0% {
+    background-color: var(--forge);
+    box-shadow: 0 0 0 1px var(--forge);
+  }
+  35% {
+    background-color: var(--t1);
+    box-shadow: 0 0 0 1px transparent;
+  }
+  100% {
+    background-color: var(--cell-colour);
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--ground);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--rule-strong);
+  border-radius: 4px;
+  border: 2px solid var(--ground);
+}

@@ -1,84 +1,75 @@
 <script setup lang="ts">
+import { ChevronRight } from 'lucide-vue-next'
+
 interface Skill {
   skillId: string
   level: number
   name?: string
 }
 
-const { imageUrl } = useImageUrl()
-
-const props = defineProps<{
+// One row in an equipment list: art on a steel plate, name, a stat line, skills.
+defineProps<{
   id: string
   name: string
-  nameEn?: string
-  rarity?: number
   skills: Skill[]
   image?: string
   weaponType?: string
   armorPart?: string
   to: string
-  subtitle?: string
+  /** Short facts shown as label/value pairs, e.g. [['攻擊', '1200']] */
+  stats?: [string, string][]
+  setName?: string
   monsterIconKey?: string
 }>()
+
+const { imageUrl } = useImageUrl()
 </script>
 
 <template>
   <NuxtLink
     :to="to"
-    class="flex items-center gap-3 p-3 rounded-lg bg-card border border-border hover:border-primary/40 transition-colors min-h-[44px]"
+    class="flex items-center gap-3 pl-4 pr-3 py-3 min-h-[76px] transition-colors duration-150 hover:bg-inset"
   >
-    <!-- Image / Icon -->
-    <div
-      class="flex-shrink-0 flex items-center justify-center w-14 h-14 rounded-md bg-secondary overflow-hidden"
-    >
+    <span class="plate flex items-center justify-center size-14 flex-shrink-0 overflow-hidden">
       <img
         v-if="image"
         :src="imageUrl(image)"
         :alt="name"
-        class="w-full h-full object-cover"
+        width="56"
+        height="56"
+        class="size-full object-contain"
         loading="lazy"
-        @error="($event.target as HTMLImageElement).style.display = 'none'"
+        @error="($event.target as HTMLImageElement).style.visibility = 'hidden'"
       />
-      <WeaponTypeIcon
-        v-else-if="weaponType"
-        :type="weaponType"
-        class="w-7 h-7 text-primary/80"
-      />
-      <ArmorPartIcon
-        v-else-if="armorPart"
-        :part="armorPart"
-        class="w-7 h-7 text-primary/80"
-      />
-      <svg v-else xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-muted-foreground"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg>
-    </div>
+      <WeaponTypeIcon v-else-if="weaponType" :type="weaponType" class="size-7 text-ink-2" />
+      <ArmorPartIcon v-else-if="armorPart" :part="armorPart" class="size-7 text-ink-2" />
+    </span>
 
-    <!-- Info -->
-    <div class="flex-1 min-w-0">
-      <div class="flex items-center gap-2">
-        <RarityIndicator v-if="rarity" :rarity="rarity" />
-        <h3 class="font-semibold text-sm truncate text-foreground">{{ name }}</h3>
-      </div>
-      <div v-if="monsterIconKey || subtitle" class="flex items-center gap-1 mt-0.5">
+    <span class="flex-1 min-w-0">
+      <span class="flex items-center gap-1.5 min-w-0">
         <img
           v-if="monsterIconKey"
           :src="imageUrl(`/images/monsters/${monsterIconKey}.webp`)"
-          class="w-4 h-4 rounded-sm flex-shrink-0 object-cover"
-          :alt="monsterIconKey"
+          alt=""
+          width="16"
+          height="16"
+          class="size-4 flex-shrink-0 object-contain"
+          loading="lazy"
           @error="($event.target as HTMLImageElement).style.display = 'none'"
         />
-        <p v-if="subtitle" class="text-xs text-muted-foreground">{{ subtitle }}</p>
-      </div>
-      <div v-if="skills.length" class="flex flex-wrap gap-1 mt-1.5">
-        <SkillBadge
-          v-for="skill in skills"
-          :key="skill.skillId"
-          :name="skill.name || skill.skillId"
-          :level="skill.level"
-        />
-      </div>
-    </div>
+        <span class="text-[16px] font-bold leading-snug truncate">{{ name }}</span>
+      </span>
+      <span v-if="stats?.length || setName" class="flex flex-wrap items-baseline gap-x-3 text-[12px] text-ink-2 leading-snug">
+        <span v-if="setName">{{ setName }}</span>
+        <span v-for="[k, v] in stats" :key="k" class="whitespace-nowrap">
+          {{ k }} <span class="stamp text-[15px] font-bold text-ink">{{ v }}</span>
+        </span>
+      </span>
+      <span v-if="skills.length" class="flex flex-wrap gap-x-3 text-[13px] text-ink-2 leading-snug mt-0.5">
+        <SkillBadge v-for="skill in skills" :key="skill.skillId" :name="skill.name || skill.skillId" :level="skill.level" />
+      </span>
+    </span>
 
-    <!-- Arrow -->
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 text-muted-foreground"><path d="m9 18 6-6-6-6"/></svg>
+    <ChevronRight :size="18" :stroke-width="2" class="flex-shrink-0 text-ink-3" aria-hidden="true" />
   </NuxtLink>
 </template>

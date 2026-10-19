@@ -24,34 +24,43 @@ const elementNames: Record<string, string> = {
   poison: '毒', paralysis: '麻', sleep: '眠', blast: '爆',
 }
 
+function statsFor(w: (typeof weapons.value)[number]): [string, string][] {
+  const out: [string, string][] = [['攻擊', String(w.attack)]]
+  if (w.element) out.push([elementNames[w.element.type] || w.element.type, String(w.element.value)])
+  if (w.affinity) out.push(['會心', `${w.affinity > 0 ? '+' : ''}${w.affinity}%`])
+  return out
+}
+
 function resolveSkillName(skillId: string) {
   return skillStore.getById(skillId)?.name || skillId
 }
 </script>
 
 <template>
-  <div class="px-4 py-4 max-w-lg mx-auto">
-    <NuxtLink to="/weapons" class="inline-flex items-center gap-1 text-xs text-muted-foreground hover:text-primary mb-4">
-      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
-      返回武器類型
-    </NuxtLink>
+  <div class="max-w-3xl mx-auto md:px-6 pb-8">
+    <PageHead :title="typeName" back-to="/weapons" back-label="所有武器">
+      共 <span class="stamp text-[15px] font-bold text-ink">{{ weapons.length }}</span> 把
+      <template #aside>
+        <span class="flex items-center justify-center size-12 rounded-md bg-shell text-shell-ink flex-shrink-0">
+          <WeaponTypeIcon :type="type" class="size-7" aria-hidden="true" />
+        </span>
+      </template>
+    </PageHead>
 
-    <h1 class="text-xl font-bold text-foreground mb-4">{{ typeName }}</h1>
+    <ul class="bg-panel border-y md:border md:rounded-md border-rule divide-y divide-rule">
+      <li v-for="weapon in weapons" :key="weapon.id">
+        <EquipmentCard
+          :id="weapon.id"
+          :name="weapon.name"
+          :skills="weapon.skills.map(s => ({ ...s, name: resolveSkillName(s.skillId) }))"
+          :image="weapon.image"
+          :weapon-type="type"
+          :to="`/weapons/${type}/${weapon.id}`"
+          :stats="statsFor(weapon)"
+        />
+      </li>
+    </ul>
 
-    <div class="flex flex-col gap-2">
-      <EquipmentCard
-        v-for="weapon in weapons"
-        :key="weapon.id"
-        :id="weapon.id"
-        :name="weapon.name"
-        :skills="weapon.skills.map(s => ({ ...s, name: resolveSkillName(s.skillId) }))"
-        :image="weapon.image"
-        :weapon-type="type"
-        :to="`/weapons/${type}/${weapon.id}`"
-        :subtitle="`攻擊 ${weapon.attack}${weapon.element ? ` | ${elementNames[weapon.element.type] || weapon.element.type} ${weapon.element.value}` : ''}${weapon.affinity ? ` | 會心 ${weapon.affinity > 0 ? '+' : ''}${weapon.affinity}%` : ''}`"
-      />
-    </div>
-
-    <p v-if="!weapons.length" class="text-center text-muted-foreground py-8">暫無資料</p>
+    <p v-if="!weapons.length" class="px-4 py-12 text-center text-[14px] text-ink-2">這個武器類型目前沒有資料</p>
   </div>
 </template>

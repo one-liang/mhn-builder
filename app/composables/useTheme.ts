@@ -9,6 +9,8 @@ export const useTheme = () => {
   function applyTheme(dark: boolean) {
     if (import.meta.client) {
       document.documentElement.classList.toggle('dark', dark)
+      // Keep the browser chrome on the shell band's colour
+      document.querySelector('meta[name="theme-color"]')?.setAttribute('content', dark ? '#13263A' : '#182C42')
     }
   }
 
