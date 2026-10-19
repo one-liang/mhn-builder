@@ -1,0 +1,103 @@
+# Weekly sync of data/ with the official Monster Hunter Now site (https://monsterhunternow.com).
+#
+# Runs `npm run sync:data`, validates the result, builds the site as a smoke test, and opens (or
+# updates) a single PR from chore/data-sync into main. It never pushes to main; merging the PR
+# triggers deploy.yml as usual.
+#
+# - Requires Settings → Actions → General → Workflow permissions → "Allow GitHub Actions to create
+#   and approve pull requests"; without it the last step fails.
+# - PRs created with GITHUB_TOKEN do not trigger other workflows, so validation and the build run
+#   inside this job, before the PR is opened.
+# - If the sync fails (e.g. the official site changed its markup), the run fails loudly — GitHub
+#   e-mails the owner — and no PR is opened. data/ is only changed after the sync validated it.
+# - When nothing changed upstream, no new PR is opened.
+# - Every run rebuilds chore/data-sync from main and force-pushes it (create-pull-request resets the
+#   branch), so never commit to that branch by hand: put fixes (e.g. skill descriptions) on main, or
+#   merge the PR first. If the open PR has commits this workflow did not make, the run fails before
+#   updating the PR instead of dropping them; merge the PR (or move the commits to main), or close
+#   the PR to discard them, then re-run.
+# - Schedules run from the default branch's copy of this file. GitHub pauses scheduled workflows
+#   in public repos after 60 days without repository activity; re-enable it in the Actions tab.
+
+name: Sync official data
+
+on:
+  schedule:
+    - cron: '23 1 * * 1' # Mondays 01:23 UTC = 09:23 Asia/Taipei
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: data-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Sync official data
+        run: npm run sync:data -- --report "$RUNNER_TEMP/sync-report.md"
+
+      - name: Add report to job summary
+        if: always()
+        run: |
+          if [ -f "$RUNNER_TEMP/sync-report.md" ]; then
+            cat "$RUNNER_TEMP/sync-report.md" >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Validate data
+        run: npm run validate:data
+
+      - name: Build smoke test
+        run: npm run generate
+        env:
+          NUXT_APP_BASE_URL: /mhn-builder/
+
+      # The next step resets chore/data-sync to main + this run's changes. Stop if the open PR has
+      # commits made by hand (they would be dropped). This workflow's commits are committed by
+      # github-actions[bot]; merge commits (the PR's "Update branch" button) only bring in main.
+      - name: Check PR branch for manual commits
+        env:
+          GH_TOKEN: ${{ github.token }}
+          BRANCH: chore/data-sync
+        run: |
+          pr=$(gh api "repos/$GITHUB_REPOSITORY/pulls?head=$GITHUB_REPOSITORY_OWNER:$BRANCH&base=main&state=open" --jq '.[0].number // empty')
+          if [ -z "$pr" ]; then exit 0; fi
+          manual=$(gh api "repos/$GITHUB_REPOSITORY/compare/main...$BRANCH" --jq '.commits[]
+            | select((.parents | length) == 1 and .commit.committer.email != "41898282+github-actions[bot]@users.noreply.github.com")
+            | "\(.sha[0:7]) \(.commit.message | split("\n")[0])"')
+          if [ -z "$manual" ]; then exit 0; fi
+          msg="PR #$pr 的 $BRANCH 分支有不是本 workflow 建立的提交；更新 PR 會從 main 重建該分支並捨棄它們，所以這次沒有更新 PR。請先合併 PR #$pr（或把這些提交移到 main）再重新執行；確定要捨棄的話，關閉 PR #$pr 後重新執行。"
+          echo "::error::$msg"
+          { echo '## PR 未更新'; echo; echo "$msg"; echo; echo "$manual" | sed 's/^/- /'; } >> "$GITHUB_STEP_SUMMARY"
+          exit 1
+
+      - name: Open or update pull request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: chore/data-sync
+          base: main
+          delete-branch: true
+          add-paths: |
+            data/**
+            public/images/**
+            scripts/sync/config/id-maps.json
+          commit-message: 'chore(data): 同步官方資料'
+          title: 'chore(data): 同步官方資料'
+          body-path: ${{ runner.temp }}/sync-report.md

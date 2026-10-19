@@ -24,16 +24,30 @@ class HttpError extends Error {
 /**
  * @param {object} [options]
  * @param {string|null} [options.cacheDir] cache raw HTML here and reuse it on later runs
- * @param {number} [options.concurrency] parallel requests for `map()` (capped at 4)
+ * @param {number} [options.concurrency] max requests in flight across all callers (capped at 4)
  * @param {number} [options.delayMs] pause after each network request inside `map()`
  * @param {(msg: string) => void} [options.log]
  */
 export function createHttp({ cacheDir = null, concurrency = 3, delayMs = 250, log = () => {} } = {}) {
   const stats = { requests: 0, cacheHits: 0, bytes: 0 }
 
-  async function request(url, accept) {
+  // Gate shared by every request of this instance, so concurrent callers (armor and weapons run
+  // in parallel) never exceed `concurrency` requests in flight in total
+  const limit = Math.max(1, Math.min(4, concurrency))
+  let active = 0
+  const waiting = []
+  const acquire = () => (active < limit ? (active++, Promise.resolve()) : new Promise(resolve => waiting.push(resolve)))
+  const release = () => {
+    const next = waiting.shift()
+    if (next) next() // hand the slot straight to the next waiter
+    else active--
+  }
+
+  /** GET `url` and return `read(response)`; the body is read inside the gate and retried with it. */
+  async function request(url, accept, read) {
     let lastError
     for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
+      await acquire()
       try {
         stats.requests++
         const res = await fetch(url, {
@@ -41,14 +55,16 @@ export function createHttp({ cacheDir = null, concurrency = 3, delayMs = 250, lo
           redirect: 'follow',
         })
         if (!res.ok) throw new HttpError(url, res.status)
-        return res
+        return await read(res)
       } catch (err) {
         lastError = err
-        if (err instanceof HttpError && !err.retryable) break
-        if (attempt < MAX_ATTEMPTS) {
-          log(`  retry ${attempt}/${MAX_ATTEMPTS - 1} ${url}: ${err.message}`)
-          await sleep(1000 * 2 ** (attempt - 1))
-        }
+      } finally {
+        release()
+      }
+      if (lastError instanceof HttpError && !lastError.retryable) break
+      if (attempt < MAX_ATTEMPTS) {
+        log(`  retry ${attempt}/${MAX_ATTEMPTS - 1} ${url}: ${lastError.message}`)
+        await sleep(1000 * 2 ** (attempt - 1))
       }
     }
     throw new Error(`GET ${url} failed: ${lastError?.message ?? lastError}`)
@@ -61,8 +77,7 @@ export function createHttp({ cacheDir = null, concurrency = 3, delayMs = 250, lo
       stats.cacheHits++
       return readFileSync(cacheFile, 'utf8')
     }
-    const res = await request(BASE_URL + path, 'text/html,application/xhtml+xml')
-    const text = await res.text()
+    const text = await request(BASE_URL + path, 'text/html,application/xhtml+xml', res => res.text())
     stats.bytes += text.length
     if (cacheFile) {
       mkdirSync(cacheDir, { recursive: true })
@@ -73,10 +88,12 @@ export function createHttp({ cacheDir = null, concurrency = 3, delayMs = 250, lo
 
   /** Download a binary file (absolute URL) into `dest`, creating folders as needed. */
   async function download(url, dest, { expectWebp = false } = {}) {
-    const res = await request(url, 'image/webp,image/*;q=0.8')
-    const buf = Buffer.from(await res.arrayBuffer())
+    const { buf, type } = await request(url, 'image/webp,image/*;q=0.8', async res => ({
+      buf: Buffer.from(await res.arrayBuffer()),
+      type: res.headers.get('content-type'),
+    }))
     if (expectWebp && !(buf.subarray(0, 4).toString('latin1') === 'RIFF' && buf.subarray(8, 12).toString('latin1') === 'WEBP')) {
-      throw new Error(`GET ${url}: response is not a WebP image (${res.headers.get('content-type')})`)
+      throw new Error(`GET ${url}: response is not a WebP image (${type})`)
     }
     stats.bytes += buf.length
     mkdirSync(dirname(dest), { recursive: true })

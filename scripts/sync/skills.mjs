@@ -284,7 +284,11 @@ export async function syncSkills(ctx) {
         ...skills.keptMissingUpstream.map(s => `${s.id} ${s.name}`),
         ...stones.keptMissingUpstream.map(s => `${stoneKey(s.id)} ${s.name}`),
       ],
-      newIds: skillIds.added.slice(addedBefore).map(a => `skill ${a.id} ${skillNames.get(a.id) ?? ''} (official ${a.slug}, default rule)`),
+      newIds: [
+        ...skillIds.added.slice(addedBefore).map(a => `skill ${a.id} ${skillNames.get(a.id) ?? ''} (official ${a.slug}, default rule)`),
+        // colour stone ids are fixed; a new prime stone's id comes from the <kind>-prime rule
+        ...stones.added.filter(s => s.prime).map(s => `${stoneKey(s.id)} ${s.name} (default rule)`),
+      ],
       overridesApplied,
       warnings,
     },

@@ -64,7 +64,7 @@ function sniff(b, n) {
   return 'unknown bytes'
 }
 
-/** null when `abs` is a complete RIFF/WEBP file, 'missing' when absent, else a short problem description. */
+/** null when `abs` is a RIFF/WEBP file that is not truncated, 'missing' when absent, else a short problem description. */
 function inspectWebp(abs) {
   let fd
   try {
@@ -80,9 +80,9 @@ function inspectWebp(abs) {
     if (n < 12 || head.toString('latin1', 0, 4) !== 'RIFF' || head.toString('latin1', 8, 12) !== 'WEBP') {
       return `is not a WebP file (${sniff(head, n)})`
     }
+    // A short file is a broken (partial) download; trailing bytes are harmless, browsers ignore them
     const declared = head.readUInt32LE(4) + 8
     if (declared > stat.size) return `is truncated (RIFF header declares ${declared} bytes, file has ${stat.size})`
-    if (declared < stat.size) return `has ${stat.size - declared} trailing bytes after the RIFF chunk`
     return null
   } catch (e) {
     return `is unreadable (${e.code ?? e.message})`
