@@ -28,7 +28,35 @@ const queryParams = computed(() => {
   return result
 })
 
-await buildStore.hydrate(queryParams.value)
+// The share-link params a build can carry
+const BUILD_PARAM_KEYS = ['w', 'h', 'c', 'a', 'wa', 'l', 'dh', 'dc', 'da', 'dw', 'dl']
+let appliedSearch = ''
+function applyShareParams() {
+  const search = window.location.search
+  if (!search || search === appliedSearch) return
+  const params = Object.fromEntries(new URLSearchParams(search))
+  if (!BUILD_PARAM_KEYS.some(k => params[k])) return
+  appliedSearch = search
+  buildStore.deserialize(params)
+  buildStore.saveToStorage()
+}
+
+// A prerendered page is hydrated against HTML rendered with an empty build, under the
+// query-less path it was rendered at. Changing the build before hydration finishes leaves
+// the DOM showing the empty build, so restore it once the app is ready: this browser's
+// saved build first, then a share link's params on top.
+const nuxtApp = useNuxtApp()
+let restored = !(import.meta.client && nuxtApp.isHydrating)
+if (restored) {
+  await buildStore.hydrate(queryParams.value)
+} else {
+  onNuxtReady(async () => {
+    await buildStore.hydrate({})
+    restored = true
+    applyShareParams()
+  })
+}
+watch(() => route.fullPath, () => { if (import.meta.client && restored) applyShareParams() })
 
 const SLOTS: BuildSlot[] = ['weapon', 'head', 'chest', 'arms', 'waist', 'legs']
 const ARMOR_SLOTS: ArmorSlot[] = ['head', 'chest', 'arms', 'waist', 'legs']
