@@ -1,9 +1,12 @@
 <script setup lang="ts">
+import { Sparkle } from 'lucide-vue-next'
 import { useSkillStore } from '~/stores/skill'
 import driftstoneData from '../../data/driftstone-skills.json'
 
 const props = defineProps<{
   open: boolean
+  currentSkillId?: string | null
+  slotLabel?: string
 }>()
 
 const emit = defineEmits<{
@@ -15,25 +18,23 @@ const skillStore = useSkillStore()
 const search = ref('')
 const activeStone = ref('all')
 
-// Build stone filter list: 全部 + each unique color stone + 純石
+// 全部 + each colour stone + 純石
 const STONE_FILTERS = [
   { id: 'all', name: '全部' },
   ...driftstoneData.stones
     .filter(s => !s.prime)
-    .map(s => ({ id: s.id, name: s.name })),
+    .map(s => ({ id: s.id, name: s.name.replace(/^漂流石【(.+)】$/, '$1') })),
   { id: 'prime', name: '純石' },
 ]
 
 const ACHIEVABLE_IDS = new Set(driftstoneData.achievableSkillIds)
 
-// For each stone id: Set of skill IDs it can provide
 const STONE_SKILL_MAP = new Map<string, Set<string>>()
 for (const stone of driftstoneData.stones) {
   if (!STONE_SKILL_MAP.has(stone.id)) {
     STONE_SKILL_MAP.set(stone.id, new Set(stone.skillIds))
   }
 }
-// Build "prime" pseudo-filter: all skills with a dedicated prime stone
 const primeSkillIds = new Set(
   driftstoneData.stones.filter(s => s.prime).flatMap(s => s.skillIds)
 )
@@ -49,7 +50,6 @@ watch(
 )
 
 const filteredSkills = computed(() => {
-  // Step 1: filter by stone
   let list = skillStore.skills.filter(s => ACHIEVABLE_IDS.has(s.id))
 
   if (activeStone.value !== 'all') {
@@ -61,7 +61,6 @@ const filteredSkills = computed(() => {
     }
   }
 
-  // Step 2: filter by search query
   const q = search.value.trim().toLowerCase()
   if (q) {
     list = list.filter(s =>
@@ -84,110 +83,63 @@ function onClear() {
   emit('select', null)
   close()
 }
-
-function onKeydown(e: KeyboardEvent) {
-  if (e.key === 'Escape' && props.open) close()
-}
-
-onMounted(() => { window.addEventListener('keydown', onKeydown) })
-onBeforeUnmount(() => { window.removeEventListener('keydown', onKeydown) })
 </script>
 
 <template>
-  <Teleport to="body">
-    <Transition name="fade">
-      <div
-        v-if="open"
-        class="fixed inset-0 z-[100] flex items-end sm:items-center justify-center"
-        role="dialog"
-        aria-modal="true"
-      >
-        <div class="absolute inset-0 bg-black/70 backdrop-blur-sm" @click="close" />
-
-        <div
-          class="relative flex flex-col w-full sm:max-w-lg sm:mx-4 h-[100dvh] sm:h-[80dvh] sm:rounded-xl bg-card border border-border shadow-2xl overflow-hidden"
-        >
-          <!-- Header -->
-          <div class="flex items-center justify-between px-4 h-12 border-b border-border">
-            <h2 class="text-sm font-semibold text-foreground">選擇漂流鍊成技能</h2>
-            <button
-              class="p-2 -mr-2 text-muted-foreground hover:text-foreground transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center"
-              aria-label="關閉"
-              @click="close"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
-            </button>
-          </div>
-
-          <!-- Search + stone filter -->
-          <div class="px-3 pt-3 pb-2 border-b border-border flex flex-col gap-2">
-            <input
-              v-model="search"
-              type="text"
-              placeholder="搜尋漂流技能名稱..."
-              class="w-full px-3 py-2 rounded-lg bg-secondary border border-border text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary/60 min-h-[44px]"
-            />
-            <!-- Stone color filter pills -->
-            <div class="flex flex-nowrap gap-1.5 overflow-x-auto sm:flex-wrap sm:overflow-visible pb-0.5 sm:pb-0 scrollbar-none">
-              <button
-                v-for="stone in STONE_FILTERS"
-                :key="stone.id"
-                class="flex-shrink-0 px-2.5 py-1 rounded-full text-[11px] font-medium border transition-all cursor-pointer whitespace-nowrap"
-                :class="activeStone === stone.id
-                  ? 'bg-primary text-primary-foreground border-primary'
-                  : 'bg-secondary text-muted-foreground border-border hover:border-primary/50'"
-                @click="activeStone = stone.id"
-              >
-                {{ stone.name }}
-              </button>
-            </div>
-          </div>
-
-          <!-- Pill grid -->
-          <div class="flex-1 overflow-y-auto px-3 pt-2 pb-3">
-            <!-- Clear option -->
-            <button
-              class="w-full py-2 mb-3 rounded-full border border-dashed border-border hover:border-primary/60 text-sm text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
-              @click="onClear"
-            >
-              清除技能
-            </button>
-
-            <div class="grid grid-cols-2 gap-2">
-              <button
-                v-for="skill in filteredSkills"
-                :key="skill.id"
-                tabindex="0"
-                class="px-3 py-2.5 rounded-full border border-border bg-secondary text-sm font-medium text-foreground text-center hover:border-primary/60 hover:bg-primary/8 transition-colors cursor-pointer leading-snug"
-                @click="onSelect(skill.id)"
-                @keydown.enter="onSelect(skill.id)"
-                @keydown.space.prevent="onSelect(skill.id)"
-              >
-                <span class="truncate block">
-                  {{ skill.name }}<span v-if="primeSkillIds.has(skill.id)" class="text-primary ml-0.5 text-[10px]">✦</span>
-                </span>
-              </button>
-            </div>
-
-            <p v-if="!filteredSkills.length" class="text-center text-muted-foreground py-8 text-sm">
-              找不到符合條件的漂流技能
-            </p>
-          </div>
-        </div>
+  <SheetDialog
+    :open="open"
+    :title="slotLabel ? `${slotLabel}・漂流石技能` : '漂流石技能'"
+    @update:open="emit('update:open', $event)"
+  >
+    <template #controls>
+      <div class="px-4 pt-3 pb-1">
+        <SearchField v-model="search" label="搜尋漂流石技能" placeholder="搜尋技能名稱" autofocus />
       </div>
-    </Transition>
-  </Teleport>
-</template>
+      <FilterTabs v-model="activeStone" :items="STONE_FILTERS" label="漂流石種類">
+        <template #icon="{ item }">
+          <StoneSwatch v-if="item.id !== 'all'" :stone="item.id" />
+        </template>
+      </FilterTabs>
+    </template>
 
-<style scoped>
-.scrollbar-none { scrollbar-width: none; -ms-overflow-style: none; }
-.scrollbar-none::-webkit-scrollbar { display: none; }
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.2s ease;
-}
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
-}
-</style>
+    <p class="px-4 pt-3 text-[13px] text-ink-2">每個漂流石槽固定提供 Lv1。</p>
+
+    <div class="grid grid-cols-2 gap-2 p-4">
+      <button
+        v-for="skill in filteredSkills"
+        :key="skill.id"
+        type="button"
+        class="flex items-center justify-between gap-2 min-h-12 px-3 py-2 rounded-sm border text-left text-[14px] leading-snug transition-colors duration-150"
+        :class="currentSkillId === skill.id
+          ? 'bg-shell text-shell-ink border-shell font-bold'
+          : 'bg-panel border-rule hover:border-ink-2'"
+        :aria-pressed="currentSkillId === skill.id"
+        @click="onSelect(skill.id)"
+      >
+        <span class="min-w-0">{{ skill.name }}</span>
+        <Sparkle
+          v-if="primeSkillIds.has(skill.id)"
+          :size="14"
+          :stroke-width="2"
+          class="flex-shrink-0"
+          :class="currentSkillId === skill.id ? '' : 'text-ink-2'"
+          aria-label="有純石"
+        />
+      </button>
+    </div>
+
+    <p v-if="!filteredSkills.length" class="px-4 pb-12 text-center text-[14px] text-ink-2">
+      找不到符合的漂流石技能
+    </p>
+
+    <template v-if="currentSkillId" #footer>
+      <button
+        type="button"
+        class="w-full h-11 rounded-sm border border-rule-strong text-[14px] font-bold text-ink hover:bg-inset transition-colors duration-200"
+        @click="onClear"
+      >
+        清空這個漂流石槽
+      </button>
+    </template>
+  </SheetDialog>
+</template>

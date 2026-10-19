@@ -15,6 +15,7 @@ const skillStore = useSkillStore()
 await Promise.all([equipmentStore.load(), skillStore.load()])
 
 const activePart = ref<string>('all')
+const search = ref('')
 
 const parts = [
   { id: 'all', name: '全部' },
@@ -26,8 +27,16 @@ const parts = [
 ]
 
 const filteredArmor = computed(() => {
-  if (activePart.value === 'all') return equipmentStore.allArmor
-  return equipmentStore.getArmorByPart(activePart.value as any)
+  const list = activePart.value === 'all'
+    ? equipmentStore.allArmor
+    : equipmentStore.getArmorByPart(activePart.value as any)
+  const q = search.value.trim().toLowerCase()
+  if (!q) return list
+  return list.filter(a =>
+    a.name.toLowerCase().includes(q) ||
+    (a.setName ?? '').toLowerCase().includes(q) ||
+    (a.nameEn ?? '').toLowerCase().includes(q)
+  )
 })
 
 function resolveSkillName(skillId: string) {
@@ -36,52 +45,41 @@ function resolveSkillName(skillId: string) {
 </script>
 
 <template>
-  <div class="px-4 py-4 max-w-lg mx-auto">
-    <h1 class="text-xl font-bold text-foreground mb-4">防具一覽</h1>
+  <div class="max-w-3xl mx-auto md:px-6 pb-8">
+    <PageHead title="防具">
+      共 <span class="stamp text-[15px] font-bold text-ink">{{ equipmentStore.allArmor.length }}</span> 件，
+      目前顯示 <span class="stamp text-[15px] font-bold text-ink">{{ filteredArmor.length }}</span> 件
+    </PageHead>
 
-    <!-- Part Filter -->
-    <div class="flex gap-2 overflow-x-auto pb-2 mb-4 -mx-4 px-4 scrollbar-hide">
-      <button
-        v-for="part in parts"
-        :key="part.id"
-        class="flex-shrink-0 px-3 py-1.5 rounded-full text-xs font-medium transition-colors min-h-[32px]"
-        :class="activePart === part.id
-          ? 'bg-primary text-primary-foreground'
-          : 'bg-secondary text-muted-foreground hover:text-foreground'"
-        @click="activePart = part.id"
-      >
-        {{ part.name }}
-      </button>
+    <div class="sticky top-14 z-20 bg-ground border-b border-rule md:border-0">
+      <div class="px-4 md:px-0 pb-1">
+        <SearchField v-model="search" label="搜尋防具" placeholder="搜尋防具或套裝名稱" />
+      </div>
+      <FilterTabs v-model="activePart" :items="parts" label="防具部位" class="md:px-0 md:-mx-3">
+        <template #icon="{ item }">
+          <ArmorPartIcon v-if="item.id !== 'all'" :part="item.id" class="size-4" aria-hidden="true" />
+        </template>
+      </FilterTabs>
     </div>
 
-    <!-- Armor List -->
-    <div class="flex flex-col gap-2">
-      <EquipmentCard
-        v-for="item in filteredArmor"
-        :key="item.id"
-        :id="item.id"
-        :name="item.name"
-        :skills="item.skills.map(s => ({ ...s, name: resolveSkillName(s.skillId) }))"
-        :image="item.image"
-        :armor-part="item.part"
-        :to="`/armor/${item.id}`"
-        :subtitle="`${item.setName} | ${getPartName(item.part)} | 防禦 ${item.defense}`"
-        :monster-icon-key="getMonsterIconKey(item.id)"
-      />
-    </div>
+    <ul class="bg-panel border-b md:border md:rounded-md md:mt-3 border-rule divide-y divide-rule">
+      <li v-for="item in filteredArmor" :key="item.id">
+        <EquipmentCard
+          :id="item.id"
+          :name="item.name"
+          :skills="item.skills.map(s => ({ ...s, name: resolveSkillName(s.skillId) }))"
+          :image="item.image"
+          :armor-part="item.part"
+          :to="`/armor/${item.id}`"
+          :set-name="[item.setName, getPartName(item.part)].filter(Boolean).join('・')"
+          :stats="[['防禦', String(item.defense)], ...(item.driftstoneSlots ? [['漂流石槽', String(item.driftstoneSlots)] as [string, string]] : [])]"
+          :monster-icon-key="getMonsterIconKey(item.id)"
+        />
+      </li>
+    </ul>
 
-    <p v-if="!filteredArmor.length" class="text-center text-muted-foreground py-8">
-      暫無資料
+    <p v-if="!filteredArmor.length" class="px-4 py-12 text-center text-[14px] text-ink-2">
+      找不到符合的防具
     </p>
   </div>
 </template>
-
-<style scoped>
-.scrollbar-hide::-webkit-scrollbar {
-  display: none;
-}
-.scrollbar-hide {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-</style>

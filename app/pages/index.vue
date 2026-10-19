@@ -1,4 +1,10 @@
 <script setup lang="ts">
+import { ArrowRight, ChevronRight, Gem, Hexagon } from 'lucide-vue-next'
+import { useBuildStore, type BuildSlot } from '~/stores/build'
+import { useEquipmentStore, getPartName } from '~/stores/equipment'
+import { useSkillStore } from '~/stores/skill'
+import driftstoneData from '../../data/driftstone-skills.json'
+
 useSeoMeta({
   title: '最強獵人 - MHN 魔物獵人 Now 配裝模擬器 | 自動配裝・技能計算・漂流石搭配',
   description: '最強獵人是 Monster Hunter Now 最完整的繁體中文配裝模擬器，提供所有武器、防具、技能、漂流石資料查詢，支援自動配裝與技能計算。',
@@ -6,73 +12,153 @@ useSeoMeta({
   ogDescription: '最完整的 MHN 繁體中文配裝模擬器，查詢所有裝備資料、自動配裝、技能計算。',
 })
 
-const quickLinks = [
-  { name: '配裝',   description: '組合裝備・即時技能計算', path: '/build',       icon: 'build'  },
-  { name: '武器',   description: '瀏覽所有武器資料',       path: '/weapons',     icon: 'sword'  },
-  { name: '防具',   description: '瀏覽所有防具資料',       path: '/armor',       icon: 'shield' },
-  { name: '技能',   description: '查詢所有技能效果',       path: '/skills',      icon: 'zap'    },
-  { name: '漂流石', description: '漂流石技能一覽',         path: '/driftstones', icon: 'gem'    },
-]
+const buildStore = useBuildStore()
+const equipmentStore = useEquipmentStore()
+const skillStore = useSkillStore()
+const { imageUrl } = useImageUrl()
+
+await Promise.all([equipmentStore.load(), skillStore.load()])
+
+// The saved build lives in localStorage, so it can only be read in the browser.
+const ready = ref(false)
+onMounted(() => {
+  if (!buildStore.hydrated) buildStore.loadFromStorage()
+  ready.value = true
+})
+
+const SLOTS: BuildSlot[] = ['weapon', 'head', 'chest', 'arms', 'waist', 'legs']
+const hasSaved = computed(() => ready.value && !buildStore.isEmpty)
+const topSkills = computed(() =>
+  [...buildStore.skillSummary]
+    .sort((a, b) => b.total / b.max - a.total / a.max || b.total - a.total)
+    .slice(0, 4)
+)
+
+const weaponCount = computed(() => equipmentStore.weaponTypes.reduce((n, wt) => n + wt.count, 0))
+
+const index = computed(() => [
+  { to: '/weapons', name: '武器', note: `${equipmentStore.weaponTypes.length} 種武器`, count: weaponCount.value, unit: '把', icon: 'weapon' },
+  { to: '/armor', name: '防具', note: '頭・胸・腕・腰・腿', count: equipmentStore.allArmor.length, unit: '件', icon: 'armor' },
+  { to: '/skills', name: '技能', note: '各等級效果與出處', count: skillStore.skills.length, unit: '項', icon: 'skill' },
+  { to: '/driftstones', name: '漂流石', note: '可鍊成的技能', count: driftstoneData.achievableSkillIds.length, unit: '項', icon: 'gem' },
+])
 </script>
 
 <template>
-  <div class="px-4 py-6 max-w-lg mx-auto">
-    <!-- Guild Hall Hero -->
-    <div class="text-center mb-8">
-      <div class="flex items-center gap-3 mb-4">
-        <div class="flex-1 h-px bg-border" />
-        <div class="flex items-center gap-1.5">
-          <div class="w-1 h-1 rounded-full bg-primary/50" />
-          <div class="w-1.5 h-1.5 rounded-full bg-primary/70" />
-          <div class="w-1 h-1 rounded-full bg-primary/50" />
+  <div>
+    <!-- The bench: brand, what it does, and the way in -->
+    <section class="bg-shell text-shell-ink">
+      <div class="max-w-6xl mx-auto px-4 md:px-6 pt-8 pb-8 md:pt-14 md:pb-14 md:grid md:grid-cols-[minmax(0,1fr)_minmax(0,26rem)] md:gap-12 md:items-end">
+        <div>
+          <div class="flex items-end gap-3 md:gap-4">
+            <h1 class="text-[46px] md:text-[64px] leading-none font-black tracking-[0.06em]">最強獵人</h1>
+            <span
+              class="stamp mb-1 flex items-center h-7 md:h-9 px-2 border-2 border-shell-ink-2 rounded-[3px] text-[16px] md:text-[20px] leading-none font-bold uppercase tracking-[0.18em] text-shell-ink-2"
+              aria-hidden="true"
+            >MHN</span>
+          </div>
+          <p class="mt-5 text-[16px] md:text-[18px] leading-relaxed text-shell-ink-2 max-w-[30em]">
+            魔物獵人 Now 繁體中文配裝模擬器。挑武器與五件防具、補上漂流石，技能等級即時算好；也能指定想要的技能，讓它自動找出防具組合。
+          </p>
+          <NuxtLink
+            to="/build"
+            class="mt-6 inline-flex items-center gap-2 h-12 pl-5 pr-4 rounded-sm bg-forge text-forge-ink text-[16px] font-bold hover:bg-forge-hover transition-colors duration-200"
+          >
+            {{ hasSaved ? '繼續上次的配裝' : '開始配裝' }}
+            <ArrowRight :size="18" :stroke-width="2.25" aria-hidden="true" />
+          </NuxtLink>
         </div>
-        <div class="flex-1 h-px bg-border" />
+
+        <!-- Saved build preview, or how to read a temper bar -->
+        <div class="mt-8 md:mt-0">
+          <div v-if="hasSaved" class="bg-panel text-ink rounded-md overflow-hidden" style="box-shadow: var(--pop-shadow)">
+            <div class="flex items-center justify-between px-4 h-11 border-b border-rule">
+              <p class="text-[14px] font-bold">上次的配裝</p>
+              <NuxtLink to="/build" class="flex items-center gap-0.5 h-11 -mr-2 px-2 text-[13px] text-ink-2 hover:text-ink">
+                打開 <ChevronRight :size="15" :stroke-width="2" aria-hidden="true" />
+              </NuxtLink>
+            </div>
+            <ul class="grid grid-cols-6 gap-1.5 px-4 pt-3">
+              <li
+                v-for="s in SLOTS"
+                :key="s"
+                class="aspect-square rounded-sm overflow-hidden flex items-center justify-center"
+                :class="buildStore[s] ? 'plate' : 'border border-dashed border-rule-strong text-ink-3'"
+                :title="buildStore[s]?.name ?? `${s === 'weapon' ? '武器' : getPartName(s)}：未裝備`"
+              >
+                <img v-if="buildStore[s]" :src="imageUrl(buildStore[s]!.image)" :alt="buildStore[s]!.name" class="size-full object-contain" />
+                <ArmorPartIcon v-else-if="s !== 'weapon'" :part="s" class="size-4" aria-hidden="true" />
+                <WeaponTypeIcon v-else type="sword-and-shield" class="size-4" aria-hidden="true" />
+              </li>
+            </ul>
+            <ul class="px-4 py-3 grid gap-1.5">
+              <li
+                v-for="e in topSkills"
+                :key="e.id"
+                class="grid grid-cols-[minmax(0,1fr)_auto_2.75rem] items-center gap-3 text-[14px]"
+              >
+                <span class="truncate">{{ e.name }}</span>
+                <TemperBar :total="e.total" :max="e.max" size="sm" />
+                <span class="stamp text-right font-bold text-[16px]">{{ e.total }}<span class="text-ink-2 text-[13px]">/{{ e.max }}</span></span>
+              </li>
+            </ul>
+          </div>
+
+          <figure v-else class="border border-shell-rule rounded-md px-4 py-4">
+            <figcaption class="text-[14px] font-bold">技能條怎麼看</figcaption>
+            <p class="mt-1 text-[13px] text-shell-ink-2">
+              每一格是一級，格數就是該技能的上限。等級越接近上限，顏色越像回火到底的鋼，從麥稈黃一路走到深藍；滿級的最後一格一定是深藍。
+            </p>
+            <div class="mt-3 grid grid-cols-5 gap-[3px]" aria-hidden="true">
+              <span class="h-3 bg-t1" /><span class="h-3 bg-t2" /><span class="h-3 bg-t3" /><span class="h-3 bg-t4" /><span class="h-3 bg-t5" />
+            </div>
+            <p class="mt-1.5 flex justify-between text-[12px] text-shell-ink-2" aria-hidden="true">
+              <span>剛起步</span><span>滿級</span>
+            </p>
+            <p class="mt-3 flex items-center gap-2 text-[13px] text-shell-ink-2">
+              <span class="w-[2px] h-4 bg-shell-ink" aria-hidden="true" />
+              <span class="spent-demo w-4 h-2.5" aria-hidden="true" />
+              直線是上限；超過的等級會變成灰色斜紋，代表浪費了。
+            </p>
+          </figure>
+        </div>
       </div>
+    </section>
 
-      <h1
-        class="text-3xl font-bold text-primary tracking-widest mb-1.5"
-        style="font-family: var(--font-cinzel)"
-      >最強獵人</h1>
-      <p class="text-sm text-muted-foreground font-medium tracking-wide">MHN 魔物獵人 Now 配裝模擬器</p>
-      <p class="text-xs text-muted-foreground mt-1.5 leading-relaxed">
-        查詢所有裝備・技能・漂流石資料<br />打造你的最強配裝
-      </p>
-
-      <div class="flex items-center gap-3 mt-4">
-        <div class="flex-1 h-px bg-border" />
-        <div class="flex items-center gap-1.5">
-          <div class="w-1 h-1 rounded-full bg-primary/50" />
-          <div class="w-1.5 h-1.5 rounded-full bg-primary/70" />
-          <div class="w-1 h-1 rounded-full bg-primary/50" />
-        </div>
-        <div class="flex-1 h-px bg-border" />
-      </div>
-    </div>
-
-    <!--
-      Quick Links
-      Mobile:  6-column base grid → first 3 items col-span-2 (3 per row),
-               last 2 items col-span-3 (2 per row, each half-width)
-      PC (sm): 5-column grid → each item col-span-1
-    -->
-    <div class="grid grid-cols-6 sm:grid-cols-5 gap-3">
-      <NuxtLink
-        v-for="(link, i) in quickLinks"
-        :key="link.path"
-        :to="link.path"
-        class="flex flex-col items-center gap-2 py-4 px-2 rounded-xl bg-card border border-border hover:border-primary/50 hover:bg-secondary/50 transition-colors cursor-pointer"
-        :class="i < 3 ? 'col-span-2 sm:col-span-1' : 'col-span-3 sm:col-span-1'"
-      >
-        <div class="w-10 h-10 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center text-primary">
-          <svg v-if="link.icon === 'build'" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 17.5 3 6V3h3l11.5 11.5"/><path d="m13 19 6-6"/><path d="m16 16 4 4"/><path d="M19 5c0 3-2 5-4 5.5"/><path d="M15 2c2 0 4 1 4 3 0 .5-.1 1-.3 1.5"/></svg>
-          <svg v-if="link.icon === 'shield'" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg>
-          <svg v-if="link.icon === 'sword'" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="14.5 17.5 3 6 3 3 6 3 17.5 14.5"/><line x1="13" x2="19" y1="19" y2="13"/><line x1="16" x2="20" y1="16" y2="20"/><line x1="19" x2="21" y1="21" y2="19"/></svg>
-          <svg v-if="link.icon === 'zap'" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>
-          <svg v-if="link.icon === 'gem'" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12l4 6-10 13L2 9Z"/><path d="M11 3 8 9l4 13 4-13-3-6"/><path d="M2 9h20"/></svg>
-        </div>
-        <span class="text-xs font-semibold text-foreground text-center leading-tight">{{ link.name }}</span>
-        <span class="text-[10px] text-muted-foreground text-center leading-tight hidden sm:block">{{ link.description }}</span>
-      </NuxtLink>
-    </div>
+    <!-- Reference index -->
+    <section aria-labelledby="ref-h" class="max-w-6xl mx-auto md:px-6 pt-7 pb-10">
+      <h2 id="ref-h" class="px-4 md:px-0 pb-2 text-[15px] font-bold">資料庫</h2>
+      <ul class="grid md:grid-cols-2 gap-px bg-rule border-y md:border md:rounded-md border-rule overflow-hidden">
+        <li v-for="item in index" :key="item.to" class="bg-panel">
+          <NuxtLink
+            :to="item.to"
+            class="flex items-center gap-4 pl-4 pr-3 min-h-[72px] transition-colors duration-150 hover:bg-inset"
+          >
+            <span class="flex items-center justify-center size-11 rounded-md bg-shell text-shell-ink flex-shrink-0">
+              <WeaponTypeIcon v-if="item.icon === 'weapon'" type="long-sword" class="size-6" aria-hidden="true" />
+              <ArmorPartIcon v-else-if="item.icon === 'armor'" part="chest" class="size-6" aria-hidden="true" />
+              <Hexagon v-else-if="item.icon === 'skill'" :size="22" :stroke-width="1.75" aria-hidden="true" />
+              <Gem v-else :size="22" :stroke-width="1.75" aria-hidden="true" />
+            </span>
+            <span class="flex-1 min-w-0">
+              <span class="block text-[17px] font-bold">{{ item.name }}</span>
+              <span class="block text-[13px] text-ink-2">{{ item.note }}</span>
+            </span>
+            <span class="flex items-baseline gap-1">
+              <span class="stamp text-[28px] font-extrabold leading-none">{{ item.count }}</span>
+              <span class="text-[12px] text-ink-2">{{ item.unit }}</span>
+            </span>
+            <ChevronRight :size="18" :stroke-width="2" class="text-ink-3" aria-hidden="true" />
+          </NuxtLink>
+        </li>
+      </ul>
+    </section>
   </div>
 </template>
+
+<style scoped>
+.spent-demo {
+  background: repeating-linear-gradient(135deg, var(--spent) 0 2px, transparent 2px 4px);
+  box-shadow: inset 0 0 0 1px var(--spent);
+}
+</style>
