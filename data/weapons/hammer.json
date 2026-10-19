@@ -2,7 +2,7 @@
   {
     "id": "ore_hammer",
     "name": "鐵鎚",
-    "nameEn": "",
+    "nameEn": "Iron Hammer",
     "type": "hammer",
     "attack": 1912,
     "element": null,
@@ -10,7 +10,7 @@
     "spSkill": "【SP】迴轉攻擊 Lv3",
     "skills": [
       {
-        "skillId": "poison_resistance",
+        "skillId": "poison-resistance",
         "level": 2
       }
     ],
@@ -19,11 +19,11 @@
   {
     "id": "kuluyaku_hammer",
     "name": "搔鳥釘鎚",
-    "nameEn": "",
+    "nameEn": "Kulu Beak",
     "type": "hammer",
     "attack": 1912,
     "element": null,
-    "affinity": 5,
+    "affinity": 30,
     "spSkill": "【SP】迴轉攻擊 Lv3",
     "skills": [
       {
@@ -36,18 +36,18 @@
   {
     "id": "pukeipukei_hammer",
     "name": "花朵鎚",
-    "nameEn": "",
+    "nameEn": "Blooming Hammer",
     "type": "hammer",
-    "attack": 1596,
+    "attack": 1912,
     "element": {
       "type": "poison",
-      "value": 50
+      "value": 417
     },
     "affinity": 0,
     "spSkill": "【SP】迴轉攻擊 Lv3",
     "skills": [
       {
-        "skillId": "sneak_attack",
+        "skillId": "sneak-attack",
         "level": 1
       }
     ],
@@ -56,12 +56,12 @@
   {
     "id": "coral_pukeipukei_hammer",
     "name": "水流花仙",
-    "nameEn": "",
+    "nameEn": "Aqua Flora",
     "type": "hammer",
-    "attack": 1420,
+    "attack": 1463,
     "element": {
       "type": "water",
-      "value": 232
+      "value": 1420
     },
     "affinity": 0,
     "spSkill": "【SP】迴轉攻擊 Lv3",
@@ -76,7 +76,7 @@
   {
     "id": "barroth_hammer",
     "name": "土砂龍鏈枷",
-    "nameEn": "",
+    "nameEn": "Carapace Sledge",
     "type": "hammer",
     "attack": 2103,
     "element": null,
@@ -84,7 +84,7 @@
     "spSkill": "【SP】迴轉攻擊 Lv3",
     "skills": [
       {
-        "skillId": "defense_boost",
+        "skillId": "defense-boost",
         "level": 2
       }
     ],
@@ -93,18 +93,18 @@
   {
     "id": "greatgirros_hammer",
     "name": "凶顎龍鎚",
-    "nameEn": "",
+    "nameEn": "Girros Hammer",
     "type": "hammer",
-    "attack": 1596,
+    "attack": 1912,
     "element": {
       "type": "paralysis",
-      "value": 100
+      "value": 417
     },
     "affinity": 0,
     "spSkill": "【SP】迴轉攻擊 Lv3",
     "skills": [
       {
-        "skillId": "sneak_attack",
+        "skillId": "sneak-attack",
         "level": 1
       }
     ],
@@ -113,18 +113,18 @@
   {
     "id": "tobikadachi_hammer",
     "name": "閃電鎚",
-    "nameEn": "",
+    "nameEn": "Thunder Hammer",
     "type": "hammer",
-    "attack": 1293,
+    "attack": 1549,
     "element": {
       "type": "thunder",
-      "value": 47
+      "value": 1131
     },
     "affinity": 0,
     "spSkill": "【SP】迴轉攻擊 Lv3",
     "skills": [
       {
-        "skillId": "evade_extender",
+        "skillId": "evade-extender",
         "level": 1
       }
     ],
@@ -133,18 +133,18 @@
   {
     "id": "nightshade_paolumu_hammer",
     "name": "夜神大錘",
-    "nameEn": "",
+    "nameEn": "Nyx Hammer",
     "type": "hammer",
-    "attack": 1756,
+    "attack": 2103,
     "element": {
       "type": "sleep",
-      "value": 188
+      "value": 312
     },
     "affinity": 0,
     "spSkill": "【SP】迴轉攻擊 Lv3",
     "skills": [
       {
-        "skillId": "sneak_attack",
+        "skillId": "sneak-attack",
         "level": 1
       }
     ],
@@ -153,18 +153,18 @@
   {
     "id": "jyuratodus_hammer",
     "name": "水流鎚",
-    "nameEn": "",
+    "nameEn": "Aqua Hammer",
     "type": "hammer",
-    "attack": 1293,
+    "attack": 1549,
     "element": {
       "type": "water",
-      "value": 75
+      "value": 1131
     },
     "affinity": 0,
     "spSkill": "【SP】迴轉攻擊 Lv3",
     "skills": [
       {
-        "skillId": "last_stand",
+        "skillId": "last-stand-guard",
         "level": 1
       }
     ],
@@ -173,18 +173,18 @@
   {
     "id": "anjanath_hammer",
     "name": "火焰戰鎚",
-    "nameEn": "",
+    "nameEn": "Blazing Hammer",
     "type": "hammer",
-    "attack": 1293,
+    "attack": 1549,
     "element": {
       "type": "fire",
-      "value": 117
+      "value": 1131
     },
     "affinity": 0,
     "spSkill": "【SP】迴轉攻擊 Lv3",
     "skills": [
       {
-        "skillId": "rising_tide",
+        "skillId": "battle-temper",
         "level": 1
       }
     ],
@@ -193,18 +193,18 @@
   {
     "id": "fulgur_anjanath_hammer",
     "name": "自由雷顎",
-    "nameEn": "",
+    "nameEn": "Grinding Fulgur",
     "type": "hammer",
     "attack": 1434,
     "element": {
       "type": "thunder",
-      "value": 230
+      "value": 1434
     },
-    "affinity": 10,
+    "affinity": 20,
     "spSkill": "【SP】迴轉攻擊 Lv3",
     "skills": [
       {
-        "skillId": "critical_element",
+        "skillId": "critical-element",
         "level": 1
       }
     ],
@@ -213,7 +213,7 @@
   {
     "id": "diablos_hammer",
     "name": "角龍頭鎚",
-    "nameEn": "",
+    "nameEn": "Diablos Sledge",
     "type": "hammer",
     "attack": 2371,
     "element": null,
@@ -230,7 +230,7 @@
   {
     "id": "black_diablos_hammer",
     "name": "混沌戰鎚",
-    "nameEn": "",
+    "nameEn": "Chaos Shatterer",
     "type": "hammer",
     "attack": 2658,
     "element": null,
@@ -247,12 +247,12 @@
   {
     "id": "rathalos_hammer",
     "name": "紅色衝擊",
-    "nameEn": "",
+    "nameEn": "Red Bludgeon",
     "type": "hammer",
-    "attack": 1420,
+    "attack": 1463,
     "element": {
       "type": "fire",
-      "value": 232
+      "value": 1420
     },
     "affinity": 0,
     "spSkill": "【SP】迴轉攻擊 Lv3",
@@ -267,18 +267,18 @@
   {
     "id": "silver_rathalos_hammer",
     "name": "星碎殞落",
-    "nameEn": "",
+    "nameEn": "Leonid Starcrusher",
     "type": "hammer",
-    "attack": 1345,
+    "attack": 1507,
     "element": {
       "type": "fire",
-      "value": 277
+      "value": 1345
     },
-    "affinity": 20,
+    "affinity": 30,
     "spSkill": "【SP】迴轉攻擊 Lv3",
     "skills": [
       {
-        "skillId": "critical_element",
+        "skillId": "critical-element",
         "level": 2
       }
     ],
@@ -287,18 +287,18 @@
   {
     "id": "radobaan_hammer",
     "name": "銳骨鎚",
-    "nameEn": "",
+    "nameEn": "Bone Spike",
     "type": "hammer",
-    "attack": 1596,
+    "attack": 1912,
     "element": {
       "type": "sleep",
-      "value": 100
+      "value": 417
     },
     "affinity": 0,
     "spSkill": "【SP】迴轉攻擊 Lv3",
     "skills": [
       {
-        "skillId": "defense_boost",
+        "skillId": "defense-boost",
         "level": 2
       }
     ],
@@ -307,7 +307,7 @@
   {
     "id": "banbaro_hammer",
     "name": "巨牛大蹄",
-    "nameEn": "",
+    "nameEn": "Mammoth Hoof",
     "type": "hammer",
     "attack": 2113,
     "element": null,
@@ -315,7 +315,7 @@
     "spSkill": "【SP】迴轉攻擊 Lv3",
     "skills": [
       {
-        "skillId": "firm_foothold",
+        "skillId": "firm-foothold",
         "level": 2
       }
     ],
@@ -324,18 +324,18 @@
   {
     "id": "barioth_hammer",
     "name": "冰尖強鎚",
-    "nameEn": "",
+    "nameEn": "Glacial Bash",
     "type": "hammer",
-    "attack": 1191,
+    "attack": 1426,
     "element": {
       "type": "ice",
-      "value": 117
+      "value": 1131
     },
-    "affinity": 5,
+    "affinity": 20,
     "spSkill": "【SP】迴轉攻擊 Lv3",
     "skills": [
       {
-        "skillId": "evade_extender",
+        "skillId": "evade-extender",
         "level": 1
       }
     ],
@@ -344,18 +344,18 @@
   {
     "id": "zinogre_hammer",
     "name": "王錘神雷",
-    "nameEn": "",
+    "nameEn": "Usurper's Thunder",
     "type": "hammer",
-    "attack": 1420,
+    "attack": 1463,
     "element": {
       "type": "thunder",
-      "value": 232
+      "value": 1420
     },
     "affinity": 0,
     "spSkill": "【SP】迴轉攻擊 Lv3",
     "skills": [
       {
-        "skillId": "artful_dodger",
+        "skillId": "artful-dodger",
         "level": 1
       }
     ],
@@ -364,12 +364,12 @@
   {
     "id": "deviljho_hammer",
     "name": "混沌之鎚",
-    "nameEn": "",
+    "nameEn": "Devil's Due",
     "type": "hammer",
-    "attack": 1568,
+    "attack": 1579,
     "element": {
       "type": "dragon",
-      "value": 292
+      "value": 1568
     },
     "affinity": -30,
     "spSkill": "【SP】迴轉攻擊 Lv3",
@@ -384,7 +384,7 @@
   {
     "id": "basarios_hammer",
     "name": "岩龍打擊錘",
-    "nameEn": "",
+    "nameEn": "Basarios Blow",
     "type": "hammer",
     "attack": 2245,
     "element": null,
@@ -401,18 +401,18 @@
   {
     "id": "khezu_hammer",
     "name": "奇怪龍袋錘",
-    "nameEn": "",
+    "nameEn": "Bag o' Horrors",
     "type": "hammer",
-    "attack": 1194,
+    "attack": 1429,
     "element": {
       "type": "thunder",
-      "value": 120
+      "value": 1134
     },
-    "affinity": 5,
+    "affinity": 20,
     "spSkill": "【SP】迴轉攻擊 Lv3",
     "skills": [
       {
-        "skillId": "peak_performance",
+        "skillId": "peak-performance",
         "level": 1
       }
     ],
@@ -421,16 +421,20 @@
   {
     "id": "kushaladaora_hammer",
     "name": "巨大鋼龍錘",
-    "nameEn": "",
+    "nameEn": "Daora's Colossus",
     "type": "hammer",
-    "attack": 1553,
+    "attack": 1861,
     "element": {
       "type": "ice",
-      "value": 238
+      "value": 1210
     },
     "affinity": 0,
     "spSkill": "【SP】迴轉攻擊 Lv3",
     "skills": [
+      {
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
       {
         "skillId": "windproof",
         "level": 2
@@ -441,18 +445,18 @@
   {
     "id": "mizutsune_hammer",
     "name": "狐錘月落棄塵世",
-    "nameEn": "",
+    "nameEn": "Purity Hammer",
     "type": "hammer",
-    "attack": 1436,
+    "attack": 1363,
     "element": {
       "type": "water",
-      "value": 230
+      "value": 1436
     },
-    "affinity": 10,
+    "affinity": 20,
     "spSkill": "【SP】迴轉攻擊 Lv3",
     "skills": [
       {
-        "skillId": "artful_dodger",
+        "skillId": "artful-dodger",
         "level": 1
       }
     ],
@@ -461,16 +465,20 @@
   {
     "id": "teostra_hammer",
     "name": "炎王光明",
-    "nameEn": "",
+    "nameEn": "Teostra Cratergouger",
     "type": "hammer",
-    "attack": 1684,
+    "attack": 2017,
     "element": {
       "type": "blast",
-      "value": 345
+      "value": 522
     },
     "affinity": 0,
     "spSkill": "【SP】迴轉攻擊 Lv3",
     "skills": [
+      {
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
       {
         "skillId": "heroics",
         "level": 2
@@ -481,12 +489,12 @@
   {
     "id": "magnamalo_hammer",
     "name": "禍錘【封】",
-    "nameEn": "",
+    "nameEn": "Sinister Hammer",
     "type": "hammer",
-    "attack": 1516,
+    "attack": 1817,
     "element": {
       "type": "blast",
-      "value": 236
+      "value": 516
     },
     "affinity": 0,
     "spSkill": "【SP】迴轉攻擊 Lv3",
@@ -501,12 +509,12 @@
   {
     "id": "rajang_hammer",
     "name": "怒髮錘",
-    "nameEn": "",
+    "nameEn": "Mane Malice",
     "type": "hammer",
-    "attack": 1568,
+    "attack": 1579,
     "element": {
       "type": "thunder",
-      "value": 292
+      "value": 1568
     },
     "affinity": -30,
     "spSkill": "【SP】迴轉攻擊 Lv3",
@@ -521,16 +529,20 @@
   {
     "id": "nergigante_hammer",
     "name": "潰滅一擊",
-    "nameEn": "",
+    "nameEn": "Obliteration's Footfall",
     "type": "hammer",
-    "attack": 1553,
+    "attack": 1861,
     "element": {
       "type": "dragon",
-      "value": 238
+      "value": 1210
     },
     "affinity": 0,
     "spSkill": "【SP】迴轉攻擊 Lv3",
     "skills": [
+      {
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
       {
         "skillId": "partbreaker",
         "level": 2
@@ -541,18 +553,18 @@
   {
     "id": "volvidon_hammer",
     "name": "束縛之力",
-    "nameEn": "",
+    "nameEn": "Binding Bludgeon",
     "type": "hammer",
-    "attack": 1516,
+    "attack": 1817,
     "element": {
       "type": "paralysis",
-      "value": 176
+      "value": 516
     },
     "affinity": 0,
     "spSkill": "【SP】迴轉攻擊 Lv3",
     "skills": [
       {
-        "skillId": "evade_extender",
+        "skillId": "evade-extender",
         "level": 1
       }
     ],
@@ -561,18 +573,18 @@
   {
     "id": "somnacanth_hammer",
     "name": "人魚擊錘",
-    "nameEn": "",
+    "nameEn": "Frilled Blow",
     "type": "hammer",
-    "attack": 1567,
+    "attack": 1878,
     "element": {
       "type": "sleep",
-      "value": 236
+      "value": 516
     },
     "affinity": -15,
     "spSkill": "【SP】迴轉攻擊 Lv3",
     "skills": [
       {
-        "skillId": "evade_extender",
+        "skillId": "evade-extender",
         "level": 1
       }
     ],
@@ -581,7 +593,7 @@
   {
     "id": "tigrex_hammer",
     "name": "轟龍紋錘",
-    "nameEn": "",
+    "nameEn": "Striped Striker",
     "type": "hammer",
     "attack": 2633,
     "element": null,
@@ -589,7 +601,7 @@
     "spSkill": "【SP】迴轉攻擊 Lv3",
     "skills": [
       {
-        "skillId": "brutal_strike",
+        "skillId": "maximum-might",
         "level": 1
       }
     ],
@@ -598,7 +610,7 @@
   {
     "id": "chatacabra_hammer",
     "name": "纏蛙大錘",
-    "nameEn": "",
+    "nameEn": "Chata Clobberer",
     "type": "hammer",
     "attack": 2197,
     "element": null,
@@ -606,7 +618,7 @@
     "spSkill": "【SP】迴轉攻擊 Lv3",
     "skills": [
       {
-        "skillId": "armor_up",
+        "skillId": "defense-ready",
         "level": 1
       }
     ],
@@ -615,7 +627,7 @@
   {
     "id": "arzuros_hammer",
     "name": "烙印熊錘【壹之型】",
-    "nameEn": "",
+    "nameEn": "Unbearable Hammer",
     "type": "hammer",
     "attack": 2361,
     "element": null,
@@ -623,7 +635,7 @@
     "spSkill": "【SP】迴轉攻擊 Lv3",
     "skills": [
       {
-        "skillId": "special_boost",
+        "skillId": "special-boost",
         "level": 2
       }
     ],
@@ -632,18 +644,18 @@
   {
     "id": "glavenus_hammer",
     "name": "灼炎之吞噬者",
-    "nameEn": "",
+    "nameEn": "Scorching Isshata",
     "type": "hammer",
-    "attack": 1568,
+    "attack": 1579,
     "element": {
       "type": "fire",
-      "value": 292
+      "value": 1568
     },
     "affinity": -30,
     "spSkill": "【SP】迴轉攻擊 Lv3",
     "skills": [
       {
-        "skillId": "brutal_strike",
+        "skillId": "maximum-might",
         "level": 1
       }
     ],
@@ -652,18 +664,22 @@
   {
     "id": "chameleos_hammer",
     "name": "幻惑之迪亞瑪爾特",
-    "nameEn": "",
+    "nameEn": "Diamalto's Dream",
     "type": "hammer",
-    "attack": 1741,
+    "attack": 2086,
     "element": {
       "type": "poison",
-      "value": 347
+      "value": 526
     },
     "affinity": 0,
     "spSkill": "【SP】迴轉攻擊 Lv3",
     "skills": [
       {
-        "skillId": "abnormal_status_enhancement",
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
+      {
+        "skillId": "status-sneak-attack",
         "level": 2
       }
     ],
@@ -672,18 +688,18 @@
   {
     "id": "greatwroggi_hammer",
     "name": "毒狗龍蝕錘",
-    "nameEn": "",
+    "nameEn": "Wroggi Hammer",
     "type": "hammer",
-    "attack": 1647,
+    "attack": 1973,
     "element": {
       "type": "poison",
-      "value": 66
+      "value": 319
     },
     "affinity": 10,
     "spSkill": "【SP】迴轉攻擊 Lv3",
     "skills": [
       {
-        "skillId": "lock_on",
+        "skillId": "lock-on",
         "level": 1
       }
     ],
@@ -692,7 +708,7 @@
   {
     "id": "bishaten_hammer",
     "name": "天具･五鈷錘",
-    "nameEn": "",
+    "nameEn": "Five-Pronged Hammer",
     "type": "hammer",
     "attack": 2113,
     "element": null,
@@ -700,7 +716,7 @@
     "spSkill": "【SP】迴轉攻擊 Lv3",
     "skills": [
       {
-        "skillId": "multi_attack_boost",
+        "skillId": "group-hunt-attack",
         "level": 2
       }
     ],
@@ -709,11 +725,11 @@
   {
     "id": "nargacuga_hammer",
     "name": "隱密破擊者",
-    "nameEn": "",
+    "nameEn": "Hidden Breaker",
     "type": "hammer",
     "attack": 2082,
     "element": null,
-    "affinity": 25,
+    "affinity": 40,
     "spSkill": "【SP】迴轉攻擊 Lv3",
     "skills": [
       {
@@ -726,7 +742,7 @@
   {
     "id": "garangolm_hammer",
     "name": "剛纏獸之錘",
-    "nameEn": "",
+    "nameEn": "Golm Gavel",
     "type": "hammer",
     "attack": 2371,
     "element": null,
@@ -734,7 +750,7 @@
     "spSkill": "【SP】迴轉攻擊 Lv3",
     "skills": [
       {
-        "skillId": "disable_perfect_evade",
+        "skillId": "resolute",
         "level": 1
       }
     ],
@@ -743,18 +759,18 @@
   {
     "id": "lunagaron_hammer",
     "name": "冷月之碎錘",
-    "nameEn": "",
+    "nameEn": "Hammer of Winter Moon",
     "type": "hammer",
-    "attack": 1458,
+    "attack": 1222,
     "element": {
       "type": "ice",
-      "value": 164
+      "value": 1458
     },
     "affinity": 0,
     "spSkill": "【SP】迴轉攻擊 Lv3",
     "skills": [
       {
-        "skillId": "high_performance_ice",
+        "skillId": "hi-ice",
         "level": 1
       }
     ],
@@ -763,18 +779,18 @@
   {
     "id": "espinas_hammer",
     "name": "薔薇大錘",
-    "nameEn": "",
+    "nameEn": "Rosenhammer",
     "type": "hammer",
     "attack": 1434,
     "element": {
       "type": "fire",
-      "value": 230
+      "value": 1434
     },
-    "affinity": 10,
+    "affinity": 20,
     "spSkill": "【SP】迴轉攻擊 Lv3",
     "skills": [
       {
-        "skillId": "part_break_special_boost",
+        "skillId": "special-partbreaker",
         "level": 2
       }
     ],
@@ -783,18 +799,22 @@
   {
     "id": "malzeno_hammer",
     "name": "碎咬之巨擊",
-    "nameEn": "",
+    "nameEn": "Tooth Grinder",
     "type": "hammer",
-    "attack": 1622,
+    "attack": 1444,
     "element": {
       "type": "dragon",
-      "value": 334
+      "value": 1622
     },
     "affinity": 0,
     "spSkill": "【SP】迴轉攻擊 Lv3",
     "skills": [
       {
-        "skillId": "high_performance_dragon",
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
+      {
+        "skillId": "hi-dragon",
         "level": 1
       }
     ],
@@ -803,18 +823,18 @@
   {
     "id": "gossharag_hammer",
     "name": "雪鬼獸大錘",
-    "nameEn": "",
+    "nameEn": "Yeti Hammer",
     "type": "hammer",
-    "attack": 1492,
+    "attack": 1570,
     "element": {
       "type": "ice",
-      "value": 147
+      "value": 1492
     },
     "affinity": -30,
     "spSkill": "【SP】迴轉攻擊 Lv3",
     "skills": [
       {
-        "skillId": "brutal_strike",
+        "skillId": "maximum-might",
         "level": 1
       }
     ],
@@ -823,18 +843,18 @@
   {
     "id": "astalos_hammer",
     "name": "電龍碎雷電蘇瑪努斯",
-    "nameEn": "",
+    "nameEn": "Astalos Sparkler",
     "type": "hammer",
-    "attack": 1436,
+    "attack": 1363,
     "element": {
       "type": "thunder",
-      "value": 230
+      "value": 1436
     },
-    "affinity": 10,
+    "affinity": 20,
     "spSkill": "【SP】迴轉攻擊 Lv3",
     "skills": [
       {
-        "skillId": "thunder_attack",
+        "skillId": "thunder-attack",
         "level": 1
       }
     ],
@@ -843,18 +863,18 @@
   {
     "id": "almudron_hammer",
     "name": "泥翁大醉錘",
-    "nameEn": "",
+    "nameEn": "Almudron Hammer",
     "type": "hammer",
-    "attack": 1458,
+    "attack": 1222,
     "element": {
       "type": "water",
-      "value": 164
+      "value": 1458
     },
     "affinity": 0,
     "spSkill": "【SP】迴轉攻擊 Lv3",
     "skills": [
       {
-        "skillId": "water_attack",
+        "skillId": "water-attack",
         "level": 1
       }
     ],
@@ -863,15 +883,15 @@
   {
     "id": "seregios_hammer",
     "name": "大錘大陵五",
-    "nameEn": "",
+    "nameEn": "Matraca Hammer",
     "type": "hammer",
     "attack": 2335,
     "element": null,
-    "affinity": 15,
+    "affinity": 30,
     "spSkill": "【SP】迴轉攻擊 Lv3",
     "skills": [
       {
-        "skillId": "powerhouse",
+        "skillId": "attack-activation",
         "level": 1
       }
     ],
@@ -880,7 +900,7 @@
   {
     "id": "bone_hammer",
     "name": "岩骨鎚",
-    "nameEn": "",
+    "nameEn": "Bone Bludgeon",
     "type": "hammer",
     "attack": 1912,
     "element": null,
@@ -888,10 +908,122 @@
     "spSkill": "【SP】迴轉攻擊 Lv3",
     "skills": [
       {
-        "skillId": "concentration",
+        "skillId": "sp-meter-boost",
         "level": 1
       }
     ],
     "image": "/images/weapons/bone_hammer.webp"
+  },
+  {
+    "id": "stygian_zinogre_hammer",
+    "name": "獄錘龍額",
+    "nameEn": "Brimstren Drakemaw",
+    "type": "hammer",
+    "attack": 1506,
+    "element": {
+      "type": "dragon",
+      "value": 1506
+    },
+    "affinity": 0,
+    "spSkill": "【SP】迴轉攻擊 Lv3",
+    "skills": [
+      {
+        "skillId": "dragon-attack",
+        "level": 1
+      },
+      {
+        "skillId": "dragon-attack-peak",
+        "level": 1
+      }
+    ],
+    "image": "/images/weapons/stygian_zinogre_hammer.webp"
+  },
+  {
+    "id": "aurora_somnacanth_hammer",
+    "name": "雪花之瓊妃猛擊",
+    "nameEn": "Bloom Snow Blow",
+    "type": "hammer",
+    "attack": 1450,
+    "element": {
+      "type": "ice",
+      "value": 1614
+    },
+    "affinity": -20,
+    "spSkill": "【SP】迴轉攻擊 Lv3",
+    "skills": [
+      {
+        "skillId": "sp-overdrive",
+        "level": 1
+      }
+    ],
+    "image": "/images/weapons/aurora_somnacanth_hammer.webp"
+  },
+  {
+    "id": "shogunceanataur_hammer",
+    "name": "將軍蟹頭甲斧錘",
+    "nameEn": "Ceanataur Head Axe",
+    "type": "hammer",
+    "attack": 2015,
+    "element": {
+      "type": "water",
+      "value": 752
+    },
+    "affinity": 0,
+    "spSkill": "【SP】迴轉攻擊 Lv3",
+    "skills": [
+      {
+        "skillId": "follow-up",
+        "level": 1
+      }
+    ],
+    "image": "/images/weapons/shogunceanataur_hammer.webp"
+  },
+  {
+    "id": "velkhana_hammer",
+    "name": "冰軍極地",
+    "nameEn": "Victorious Northlein",
+    "type": "hammer",
+    "attack": 1444,
+    "element": {
+      "type": "ice",
+      "value": 1622
+    },
+    "affinity": 0,
+    "spSkill": "【SP】迴轉攻擊 Lv3",
+    "skills": [
+      {
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
+      {
+        "skillId": "ice-attack",
+        "level": 1
+      },
+      {
+        "skillId": "ice-attack-peak",
+        "level": 1
+      }
+    ],
+    "image": "/images/weapons/velkhana_hammer.webp"
+  },
+  {
+    "id": "brachydios_hammer",
+    "name": "碎龍之尾",
+    "nameEn": "Dios Tailhammer",
+    "type": "hammer",
+    "attack": 2007,
+    "element": {
+      "type": "blast",
+      "value": 416
+    },
+    "affinity": 10,
+    "spSkill": "【SP】迴轉攻擊 Lv3",
+    "skills": [
+      {
+        "skillId": "follow-up-blast",
+        "level": 1
+      }
+    ],
+    "image": "/images/weapons/brachydios_hammer.webp"
   }
 ]

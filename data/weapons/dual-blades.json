@@ -2,7 +2,7 @@
   {
     "id": "ore_dualblades",
     "name": "雙匕",
-    "nameEn": "",
+    "nameEn": "Matched Slicers",
     "type": "dual-blades",
     "attack": 1912,
     "element": null,
@@ -10,7 +10,7 @@
     "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
-        "skillId": "poison_resistance",
+        "skillId": "poison-resistance",
         "level": 2
       }
     ],
@@ -19,11 +19,11 @@
   {
     "id": "kuluyaku_dualblades",
     "name": "釘鉤小刀",
-    "nameEn": "",
+    "nameEn": "Rending Beaks",
     "type": "dual-blades",
     "attack": 1912,
     "element": null,
-    "affinity": 10,
+    "affinity": 30,
     "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
@@ -36,18 +36,18 @@
   {
     "id": "tobikadachi_dualblades",
     "name": "脈衝戰斧",
-    "nameEn": "",
+    "nameEn": "Pulsar Hatchets",
     "type": "dual-blades",
-    "attack": 1293,
+    "attack": 1549,
     "element": {
       "type": "thunder",
-      "value": 47
+      "value": 1131
     },
     "affinity": 0,
     "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
-        "skillId": "evade_extender",
+        "skillId": "evade-extender",
         "level": 1
       }
     ],
@@ -56,18 +56,22 @@
   {
     "id": "viper_tobikadachi_dualblades",
     "name": "朱赤毒之爪",
-    "nameEn": "",
+    "nameEn": "Crimson Viperclaws",
     "type": "dual-blades",
-    "attack": 1776,
+    "attack": 2127,
     "element": {
       "type": "poison",
-      "value": 201
+      "value": 364
     },
     "affinity": 10,
     "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
-        "skillId": "burst_secret",
+        "skillId": "burst",
+        "level": 1
+      },
+      {
+        "skillId": "burst-peak",
         "level": 1
       }
     ],
@@ -76,18 +80,18 @@
   {
     "id": "jyuratodus_dualblades",
     "name": "泥岩利劍",
-    "nameEn": "",
+    "nameEn": "Madness Pangas",
     "type": "dual-blades",
-    "attack": 1293,
+    "attack": 1549,
     "element": {
       "type": "water",
-      "value": 75
+      "value": 1131
     },
     "affinity": 0,
     "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
-        "skillId": "last_stand",
+        "skillId": "last-stand-guard",
         "level": 1
       }
     ],
@@ -96,18 +100,18 @@
   {
     "id": "anjanath_dualblades",
     "name": "火焰戰斧",
-    "nameEn": "",
+    "nameEn": "Blazing Hatchets",
     "type": "dual-blades",
-    "attack": 1293,
+    "attack": 1549,
     "element": {
       "type": "fire",
-      "value": 117
+      "value": 1131
     },
     "affinity": 0,
     "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
-        "skillId": "rising_tide",
+        "skillId": "battle-temper",
         "level": 1
       }
     ],
@@ -116,18 +120,18 @@
   {
     "id": "fulgur_anjanath_dualblades",
     "name": "旋風雷顎",
-    "nameEn": "",
+    "nameEn": "Fulguring Tornado",
     "type": "dual-blades",
     "attack": 1434,
     "element": {
       "type": "thunder",
-      "value": 230
+      "value": 1434
     },
-    "affinity": 10,
+    "affinity": 20,
     "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
-        "skillId": "critical_element",
+        "skillId": "critical-element",
         "level": 1
       }
     ],
@@ -136,18 +140,18 @@
   {
     "id": "legiana_dualblades",
     "name": "冰結小刀",
-    "nameEn": "",
+    "nameEn": "Freeze Daggers",
     "type": "dual-blades",
-    "attack": 1420,
+    "attack": 1463,
     "element": {
       "type": "ice",
-      "value": 232
+      "value": 1420
     },
     "affinity": 0,
     "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
-        "skillId": "divine_blessing",
+        "skillId": "divine-blessing",
         "level": 2
       }
     ],
@@ -156,7 +160,7 @@
   {
     "id": "diablos_dualblades",
     "name": "角龍手斧",
-    "nameEn": "",
+    "nameEn": "Diablos Hatchets",
     "type": "dual-blades",
     "attack": 2371,
     "element": null,
@@ -173,7 +177,7 @@
   {
     "id": "black_diablos_dualblades",
     "name": "命運棍棒",
-    "nameEn": "",
+    "nameEn": "Thanatos Mauls",
     "type": "dual-blades",
     "attack": 2658,
     "element": null,
@@ -190,16 +194,20 @@
   {
     "id": "rathalos_dualblades",
     "name": "雌雄焰刀",
-    "nameEn": "",
+    "nameEn": "Twin Flames",
     "type": "dual-blades",
-    "attack": 1420,
+    "attack": 1463,
     "element": {
       "type": "fire",
-      "value": 232
+      "value": 1420
     },
     "affinity": 0,
     "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
+      {
+        "skillId": "health-boost",
+        "level": 1
+      },
       {
         "skillId": "earplugs",
         "level": 1
@@ -210,19 +218,23 @@
   {
     "id": "silver_rathalos_dualblades",
     "name": "金銀龍對劍",
-    "nameEn": "",
+    "nameEn": "Wyvern Strife",
     "type": "dual-blades",
-    "attack": 1345,
+    "attack": 1507,
     "element": {
       "type": "fire",
-      "value": 277
+      "value": 1345
     },
-    "affinity": 20,
+    "affinity": 30,
     "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
-        "skillId": "critical_element",
+        "skillId": "critical-element",
         "level": 2
+      },
+      {
+        "skillId": "follow-up-poison",
+        "level": 1
       }
     ],
     "image": "/images/weapons/silver_rathalos_dualblades.webp"
@@ -230,7 +242,7 @@
   {
     "id": "banbaro_dualblades",
     "name": "巨牛大骨",
-    "nameEn": "",
+    "nameEn": "Mammoth Direbones",
     "type": "dual-blades",
     "attack": 2113,
     "element": null,
@@ -238,7 +250,7 @@
     "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
-        "skillId": "firm_foothold",
+        "skillId": "firm-foothold",
         "level": 2
       }
     ],
@@ -247,18 +259,18 @@
   {
     "id": "barioth_dualblades",
     "name": "暗霧蘊劍",
-    "nameEn": "",
+    "nameEn": "Blizzarioths",
     "type": "dual-blades",
-    "attack": 1191,
+    "attack": 1426,
     "element": {
       "type": "ice",
-      "value": 117
+      "value": 1131
     },
-    "affinity": 5,
+    "affinity": 20,
     "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
-        "skillId": "evade_extender",
+        "skillId": "evade-extender",
         "level": 1
       }
     ],
@@ -267,18 +279,18 @@
   {
     "id": "zinogre_dualblades",
     "name": "王雙刃雷神",
-    "nameEn": "",
+    "nameEn": "Usurper's Fulgur",
     "type": "dual-blades",
-    "attack": 1420,
+    "attack": 1463,
     "element": {
       "type": "thunder",
-      "value": 232
+      "value": 1420
     },
     "affinity": 0,
     "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
-        "skillId": "artful_dodger",
+        "skillId": "artful-dodger",
         "level": 1
       }
     ],
@@ -287,18 +299,18 @@
   {
     "id": "tzitziyaku_dualblades",
     "name": "閃耀小刀",
-    "nameEn": "",
+    "nameEn": "Luminous Daggers",
     "type": "dual-blades",
-    "attack": 1588,
+    "attack": 1903,
     "element": {
       "type": "thunder",
-      "value": 38
+      "value": 785
     },
     "affinity": 0,
     "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
-        "skillId": "lock_on",
+        "skillId": "lock-on",
         "level": 1
       }
     ],
@@ -307,15 +319,15 @@
   {
     "id": "odogaron_dualblades",
     "name": "慘爪戰斧",
-    "nameEn": "",
+    "nameEn": "Garon Hatchets",
     "type": "dual-blades",
     "attack": 2059,
     "element": null,
-    "affinity": 5,
+    "affinity": 20,
     "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
-        "skillId": "perfect_evade_sp_charge",
+        "skillId": "sp-meter-boost-dodge",
         "level": 1
       }
     ],
@@ -324,18 +336,18 @@
   {
     "id": "ebony_odogaron_dualblades",
     "name": "冥府鎖鐮",
-    "nameEn": "",
+    "nameEn": "Nether Chainblades",
     "type": "dual-blades",
-    "attack": 1436,
+    "attack": 1363,
     "element": {
       "type": "dragon",
-      "value": 230
+      "value": 1436
     },
-    "affinity": 10,
+    "affinity": 20,
     "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
-        "skillId": "critical_boost",
+        "skillId": "critical-boost",
         "level": 1
       }
     ],
@@ -344,12 +356,12 @@
   {
     "id": "deviljho_dualblades",
     "name": "憤怒的雙刀",
-    "nameEn": "",
+    "nameEn": "Wrath & Rancor",
     "type": "dual-blades",
-    "attack": 1568,
+    "attack": 1579,
     "element": {
       "type": "dragon",
-      "value": 292
+      "value": 1568
     },
     "affinity": -30,
     "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
@@ -364,18 +376,18 @@
   {
     "id": "khezu_dualblades",
     "name": "奇怪龍短劍",
-    "nameEn": "",
+    "nameEn": "Khezu Daggers",
     "type": "dual-blades",
-    "attack": 1194,
+    "attack": 1429,
     "element": {
       "type": "thunder",
-      "value": 120
+      "value": 1134
     },
-    "affinity": 5,
+    "affinity": 20,
     "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
-        "skillId": "peak_performance",
+        "skillId": "peak-performance",
         "level": 1
       }
     ],
@@ -384,16 +396,20 @@
   {
     "id": "kushaladaora_dualblades",
     "name": "天狼鋼龍劍",
-    "nameEn": "",
+    "nameEn": "Daora's Hook",
     "type": "dual-blades",
-    "attack": 1553,
+    "attack": 1861,
     "element": {
       "type": "ice",
-      "value": 238
+      "value": 1210
     },
     "affinity": 0,
     "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
+      {
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
       {
         "skillId": "windproof",
         "level": 2
@@ -404,18 +420,18 @@
   {
     "id": "mizutsune_dualblades",
     "name": "狐雙刃拂曉夢如空",
-    "nameEn": "",
+    "nameEn": "Morning Dawn",
     "type": "dual-blades",
-    "attack": 1436,
+    "attack": 1363,
     "element": {
       "type": "water",
-      "value": 230
+      "value": 1436
     },
-    "affinity": 10,
+    "affinity": 20,
     "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
-        "skillId": "artful_dodger",
+        "skillId": "artful-dodger",
         "level": 1
       }
     ],
@@ -424,18 +440,18 @@
   {
     "id": "aknosom_dualblades",
     "name": "傘之雙劍",
-    "nameEn": "",
+    "nameEn": "Schirmscorn",
     "type": "dual-blades",
-    "attack": 1588,
+    "attack": 1903,
     "element": {
       "type": "fire",
-      "value": 59
+      "value": 785
     },
     "affinity": 0,
     "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
-        "skillId": "lock_on",
+        "skillId": "lock-on",
         "level": 1
       }
     ],
@@ -444,12 +460,12 @@
   {
     "id": "magnamalo_dualblades",
     "name": "禍刃【封】",
-    "nameEn": "",
+    "nameEn": "Sinister Blades",
     "type": "dual-blades",
-    "attack": 1516,
+    "attack": 1817,
     "element": {
       "type": "blast",
-      "value": 236
+      "value": 516
     },
     "affinity": 0,
     "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
@@ -464,18 +480,18 @@
   {
     "id": "rajang_dualblades",
     "name": "鬥鬼【高丸】",
-    "nameEn": "",
+    "nameEn": "Suzuka Takamaru",
     "type": "dual-blades",
-    "attack": 1568,
+    "attack": 1579,
     "element": {
       "type": "thunder",
-      "value": 292
+      "value": 1568
     },
     "affinity": -30,
     "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
-        "skillId": "power_prolonger",
+        "skillId": "power-prolonger",
         "level": 2
       }
     ],
@@ -484,16 +500,20 @@
   {
     "id": "nergigante_dualblades",
     "name": "殘滅之爪",
-    "nameEn": "",
+    "nameEn": "Decimation Claws",
     "type": "dual-blades",
-    "attack": 1553,
+    "attack": 1861,
     "element": {
       "type": "dragon",
-      "value": 238
+      "value": 1210
     },
     "affinity": 0,
     "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
+      {
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
       {
         "skillId": "partbreaker",
         "level": 2
@@ -504,18 +524,18 @@
   {
     "id": "lagombi_dualblades",
     "name": "冰雪雙劍",
-    "nameEn": "",
+    "nameEn": "Snow Slicers",
     "type": "dual-blades",
-    "attack": 1588,
+    "attack": 1903,
     "element": {
       "type": "ice",
-      "value": 38
+      "value": 785
     },
     "affinity": 0,
     "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
-        "skillId": "lock_on",
+        "skillId": "lock-on",
         "level": 1
       }
     ],
@@ -524,18 +544,18 @@
   {
     "id": "somnacanth_dualblades",
     "name": "人魚之爪",
-    "nameEn": "",
+    "nameEn": "Frilled Claw",
     "type": "dual-blades",
-    "attack": 1567,
+    "attack": 1878,
     "element": {
       "type": "sleep",
-      "value": 236
+      "value": 516
     },
     "affinity": -15,
     "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
-        "skillId": "evade_extender",
+        "skillId": "evade-extender",
         "level": 1
       }
     ],
@@ -544,7 +564,7 @@
   {
     "id": "tigrex_dualblades",
     "name": "轟龍鏈劍",
-    "nameEn": "",
+    "nameEn": "Rex Chain",
     "type": "dual-blades",
     "attack": 2633,
     "element": null,
@@ -552,7 +572,7 @@
     "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
-        "skillId": "brutal_strike",
+        "skillId": "maximum-might",
         "level": 1
       }
     ],
@@ -561,7 +581,7 @@
   {
     "id": "brute_tigrex_dualblades",
     "name": "劫難鏈劍",
-    "nameEn": "",
+    "nameEn": "Accursed Chain",
     "type": "dual-blades",
     "attack": 2633,
     "element": null,
@@ -569,7 +589,7 @@
     "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
-        "skillId": "power_prolonger",
+        "skillId": "power-prolonger",
         "level": 3
       }
     ],
@@ -578,18 +598,22 @@
   {
     "id": "kirin_dualblades",
     "name": "迅雷",
-    "nameEn": "",
+    "nameEn": "Monarch",
     "type": "dual-blades",
-    "attack": 1622,
+    "attack": 1444,
     "element": {
       "type": "thunder",
-      "value": 334
+      "value": 1622
     },
     "affinity": 0,
     "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
-        "skillId": "latent_power",
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
+      {
+        "skillId": "latent-power",
         "level": 1
       }
     ],
@@ -598,18 +622,18 @@
   {
     "id": "bazelgeuse_dualblades",
     "name": "爆鱗手斧",
-    "nameEn": "",
+    "nameEn": "Rookslayer Handaxes",
     "type": "dual-blades",
-    "attack": 1942,
+    "attack": 2327,
     "element": {
       "type": "blast",
-      "value": 201
+      "value": 309
     },
     "affinity": -30,
     "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
-        "skillId": "brutal_strike",
+        "skillId": "maximum-might",
         "level": 1
       }
     ],
@@ -618,7 +642,7 @@
   {
     "id": "arzuros_dualblades",
     "name": "青熊雙鉞",
-    "nameEn": "",
+    "nameEn": "Cerulean Axes",
     "type": "dual-blades",
     "attack": 2361,
     "element": null,
@@ -626,7 +650,7 @@
     "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
-        "skillId": "special_boost",
+        "skillId": "special-boost",
         "level": 2
       }
     ],
@@ -635,18 +659,18 @@
   {
     "id": "glavenus_dualblades",
     "name": "灼炎之保存者",
-    "nameEn": "",
+    "nameEn": "Smoldering Cities",
     "type": "dual-blades",
-    "attack": 1568,
+    "attack": 1579,
     "element": {
       "type": "fire",
-      "value": 292
+      "value": 1568
     },
     "affinity": -30,
     "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
-        "skillId": "brutal_strike",
+        "skillId": "maximum-might",
         "level": 1
       }
     ],
@@ -655,18 +679,22 @@
   {
     "id": "chameleos_dualblades",
     "name": "雙劍霞龍",
-    "nameEn": "",
+    "nameEn": "Dual Chameleos",
     "type": "dual-blades",
-    "attack": 1741,
+    "attack": 2086,
     "element": {
       "type": "poison",
-      "value": 347
+      "value": 526
     },
     "affinity": 0,
     "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
-        "skillId": "abnormal_status_enhancement",
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
+      {
+        "skillId": "status-sneak-attack",
         "level": 2
       }
     ],
@@ -675,18 +703,18 @@
   {
     "id": "greatwroggi_dualblades",
     "name": "亡命之徒",
-    "nameEn": "",
+    "nameEn": "Desperado",
     "type": "dual-blades",
-    "attack": 1647,
+    "attack": 1973,
     "element": {
       "type": "poison",
-      "value": 66
+      "value": 319
     },
     "affinity": 10,
     "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
-        "skillId": "lock_on",
+        "skillId": "lock-on",
         "level": 1
       }
     ],
@@ -695,18 +723,18 @@
   {
     "id": "beotodus_dualblades",
     "name": "冰魚龍戰斧",
-    "nameEn": "",
+    "nameEn": "Beo Hatchets",
     "type": "dual-blades",
-    "attack": 1293,
+    "attack": 1549,
     "element": {
       "type": "ice",
-      "value": 117
+      "value": 1131
     },
     "affinity": 0,
     "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
-        "skillId": "bravery",
+        "skillId": "valor",
         "level": 1
       }
     ],
@@ -715,11 +743,11 @@
   {
     "id": "nargacuga_dualblades",
     "name": "隱密直柄斧",
-    "nameEn": "",
+    "nameEn": "Hidden Tomahawk",
     "type": "dual-blades",
     "attack": 2082,
     "element": null,
-    "affinity": 25,
+    "affinity": 40,
     "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
@@ -732,7 +760,7 @@
   {
     "id": "garangolm_dualblades",
     "name": "剛纏獸之對",
-    "nameEn": "",
+    "nameEn": "Golm Golm",
     "type": "dual-blades",
     "attack": 2371,
     "element": null,
@@ -740,7 +768,7 @@
     "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
-        "skillId": "disable_perfect_evade",
+        "skillId": "resolute",
         "level": 1
       }
     ],
@@ -749,18 +777,18 @@
   {
     "id": "lunagaron_dualblades",
     "name": "冷月之朱爪",
-    "nameEn": "",
+    "nameEn": "Frostmoon Bloodclaws",
     "type": "dual-blades",
-    "attack": 1458,
+    "attack": 1222,
     "element": {
       "type": "ice",
-      "value": 164
+      "value": 1458
     },
     "affinity": 0,
     "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
-        "skillId": "high_performance_ice",
+        "skillId": "hi-ice",
         "level": 1
       }
     ],
@@ -769,18 +797,18 @@
   {
     "id": "espinas_dualblades",
     "name": "薔薇獠牙",
-    "nameEn": "",
+    "nameEn": "Rosenzahn",
     "type": "dual-blades",
     "attack": 1434,
     "element": {
       "type": "fire",
-      "value": 230
+      "value": 1434
     },
-    "affinity": 10,
+    "affinity": 20,
     "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
-        "skillId": "part_break_special_boost",
+        "skillId": "special-partbreaker",
         "level": 2
       }
     ],
@@ -789,18 +817,22 @@
   {
     "id": "malzeno_dualblades",
     "name": "血爪之創傷",
-    "nameEn": "",
+    "nameEn": "Bloody Nails Wunde",
     "type": "dual-blades",
-    "attack": 1622,
+    "attack": 1444,
     "element": {
       "type": "dragon",
-      "value": 334
+      "value": 1622
     },
     "affinity": 0,
     "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
-        "skillId": "high_performance_dragon",
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
+      {
+        "skillId": "hi-dragon",
         "level": 1
       }
     ],
@@ -809,18 +841,18 @@
   {
     "id": "quematrice_dualblades",
     "name": "炎尾雙刃",
-    "nameEn": "",
+    "nameEn": "Quematrice Silexes",
     "type": "dual-blades",
-    "attack": 1458,
+    "attack": 1222,
     "element": {
       "type": "fire",
-      "value": 68
+      "value": 1458
     },
     "affinity": 0,
     "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
-        "skillId": "bravery",
+        "skillId": "valor",
         "level": 1
       }
     ],
@@ -829,18 +861,18 @@
   {
     "id": "astalos_dualblades",
     "name": "孤高雙光劍",
-    "nameEn": "",
+    "nameEn": "Twin Wyvern Beams",
     "type": "dual-blades",
-    "attack": 1436,
+    "attack": 1363,
     "element": {
       "type": "thunder",
-      "value": 230
+      "value": 1436
     },
-    "affinity": 10,
+    "affinity": 20,
     "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
-        "skillId": "thunder_attack",
+        "skillId": "thunder-attack",
         "level": 1
       }
     ],
@@ -849,18 +881,18 @@
   {
     "id": "almudron_dualblades",
     "name": "泥翁雙斬劍",
-    "nameEn": "",
+    "nameEn": "Mud Ripper",
     "type": "dual-blades",
-    "attack": 1458,
+    "attack": 1222,
     "element": {
       "type": "water",
-      "value": 164
+      "value": 1458
     },
     "affinity": 0,
     "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
-        "skillId": "water_attack",
+        "skillId": "water-attack",
         "level": 1
       }
     ],
@@ -869,15 +901,15 @@
   {
     "id": "seregios_dualblades",
     "name": "巨顎軒轅十二",
-    "nameEn": "",
+    "nameEn": "Zakun Twins",
     "type": "dual-blades",
     "attack": 2335,
     "element": null,
-    "affinity": 15,
+    "affinity": 30,
     "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
-        "skillId": "powerhouse",
+        "skillId": "attack-activation",
         "level": 1
       }
     ],
@@ -886,7 +918,7 @@
   {
     "id": "bone_dualblades",
     "name": "骨斧",
-    "nameEn": "",
+    "nameEn": "Bone Hatchets",
     "type": "dual-blades",
     "attack": 1912,
     "element": null,
@@ -894,10 +926,122 @@
     "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
     "skills": [
       {
-        "skillId": "concentration",
+        "skillId": "sp-meter-boost",
         "level": 1
       }
     ],
     "image": "/images/weapons/bone_dualblades.webp"
+  },
+  {
+    "id": "stygian_zinogre_dualblades",
+    "name": "龍氣獄爪",
+    "nameEn": "Drakespirit Hellclaws",
+    "type": "dual-blades",
+    "attack": 1506,
+    "element": {
+      "type": "dragon",
+      "value": 1506
+    },
+    "affinity": 0,
+    "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
+    "skills": [
+      {
+        "skillId": "dragon-attack",
+        "level": 1
+      },
+      {
+        "skillId": "dragon-attack-peak",
+        "level": 1
+      }
+    ],
+    "image": "/images/weapons/stygian_zinogre_dualblades.webp"
+  },
+  {
+    "id": "aurora_somnacanth_dualblades",
+    "name": "雪花之瓊妃抱擁",
+    "nameEn": "Bloom Snow Claws",
+    "type": "dual-blades",
+    "attack": 1450,
+    "element": {
+      "type": "ice",
+      "value": 1614
+    },
+    "affinity": -20,
+    "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
+    "skills": [
+      {
+        "skillId": "sp-overdrive",
+        "level": 1
+      }
+    ],
+    "image": "/images/weapons/aurora_somnacanth_dualblades.webp"
+  },
+  {
+    "id": "shogunceanataur_dualblades",
+    "name": "六刃雙刀",
+    "nameEn": "Bladed Edges",
+    "type": "dual-blades",
+    "attack": 2015,
+    "element": {
+      "type": "water",
+      "value": 752
+    },
+    "affinity": 0,
+    "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
+    "skills": [
+      {
+        "skillId": "follow-up",
+        "level": 1
+      }
+    ],
+    "image": "/images/weapons/shogunceanataur_dualblades.webp"
+  },
+  {
+    "id": "velkhana_dualblades",
+    "name": "冰聖幽冥",
+    "nameEn": "Untouched Hel",
+    "type": "dual-blades",
+    "attack": 1444,
+    "element": {
+      "type": "ice",
+      "value": 1622
+    },
+    "affinity": 0,
+    "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
+    "skills": [
+      {
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
+      {
+        "skillId": "ice-attack",
+        "level": 1
+      },
+      {
+        "skillId": "ice-attack-peak",
+        "level": 1
+      }
+    ],
+    "image": "/images/weapons/velkhana_dualblades.webp"
+  },
+  {
+    "id": "brachydios_dualblades",
+    "name": "碎龍利劍",
+    "nameEn": "Brachydios Blasters",
+    "type": "dual-blades",
+    "attack": 2007,
+    "element": {
+      "type": "blast",
+      "value": 416
+    },
+    "affinity": 10,
+    "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
+    "skills": [
+      {
+        "skillId": "follow-up-blast",
+        "level": 1
+      }
+    ],
+    "image": "/images/weapons/brachydios_dualblades.webp"
   }
 ]

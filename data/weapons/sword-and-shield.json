@@ -2,7 +2,7 @@
   {
     "id": "ore_swordshield",
     "name": "獵人小刀",
-    "nameEn": "",
+    "nameEn": "Hunter's Knife",
     "type": "sword-and-shield",
     "attack": 1912,
     "element": null,
@@ -10,7 +10,7 @@
     "spSkill": "【SP】精準突擊連擊 Lv3",
     "skills": [
       {
-        "skillId": "poison_resistance",
+        "skillId": "poison-resistance",
         "level": 2
       }
     ],
@@ -19,18 +19,18 @@
   {
     "id": "greatjagras_swordshield",
     "name": "凶豺龍銳劍",
-    "nameEn": "",
+    "nameEn": "Jagras Edge",
     "type": "sword-and-shield",
-    "attack": 1373,
+    "attack": 1644,
     "element": {
       "type": "water",
-      "value": 25
+      "value": 754
     },
     "affinity": 0,
     "spSkill": "【SP】精準突擊連擊 Lv3",
     "skills": [
       {
-        "skillId": "health_boost",
+        "skillId": "health-boost",
         "level": 2
       }
     ],
@@ -39,18 +39,18 @@
   {
     "id": "pukeipukei_swordshield",
     "name": "花朵小刀",
-    "nameEn": "",
+    "nameEn": "Blooming Knife",
     "type": "sword-and-shield",
-    "attack": 1596,
+    "attack": 1912,
     "element": {
       "type": "poison",
-      "value": 50
+      "value": 417
     },
     "affinity": 0,
     "spSkill": "【SP】精準突擊連擊 Lv3",
     "skills": [
       {
-        "skillId": "sneak_attack",
+        "skillId": "sneak-attack",
         "level": 1
       }
     ],
@@ -59,12 +59,12 @@
   {
     "id": "coral_pukeipukei_swordshield",
     "name": "潟湖盛開",
-    "nameEn": "",
+    "nameEn": "Laguna Blossom",
     "type": "sword-and-shield",
-    "attack": 1420,
+    "attack": 1463,
     "element": {
       "type": "water",
-      "value": 232
+      "value": 1420
     },
     "affinity": 0,
     "spSkill": "【SP】精準突擊連擊 Lv3",
@@ -79,7 +79,7 @@
   {
     "id": "barroth_swordshield",
     "name": "土砂龍銳劍",
-    "nameEn": "",
+    "nameEn": "Carapace Edge",
     "type": "sword-and-shield",
     "attack": 2103,
     "element": null,
@@ -87,7 +87,7 @@
     "spSkill": "【SP】精準突擊連擊 Lv3",
     "skills": [
       {
-        "skillId": "defense_boost",
+        "skillId": "defense-boost",
         "level": 2
       }
     ],
@@ -96,18 +96,18 @@
   {
     "id": "greatgirros_swordshield",
     "name": "凶顎龍小刀",
-    "nameEn": "",
+    "nameEn": "Girros Knife",
     "type": "sword-and-shield",
-    "attack": 1596,
+    "attack": 1912,
     "element": {
       "type": "paralysis",
-      "value": 100
+      "value": 417
     },
     "affinity": 0,
     "spSkill": "【SP】精準突擊連擊 Lv3",
     "skills": [
       {
-        "skillId": "sneak_attack",
+        "skillId": "sneak-attack",
         "level": 1
       }
     ],
@@ -116,18 +116,18 @@
   {
     "id": "tobikadachi_swordshield",
     "name": "閃雷銳劍",
-    "nameEn": "",
+    "nameEn": "Thunder Edge",
     "type": "sword-and-shield",
-    "attack": 1293,
+    "attack": 1549,
     "element": {
       "type": "thunder",
-      "value": 47
+      "value": 1131
     },
     "affinity": 0,
     "spSkill": "【SP】精準突擊連擊 Lv3",
     "skills": [
       {
-        "skillId": "evade_extender",
+        "skillId": "evade-extender",
         "level": 1
       }
     ],
@@ -136,7 +136,7 @@
   {
     "id": "paolumu_swordshield",
     "name": "浮空龍小刀",
-    "nameEn": "",
+    "nameEn": "Lumu Knife",
     "type": "sword-and-shield",
     "attack": 2113,
     "element": null,
@@ -144,7 +144,7 @@
     "spSkill": "【SP】精準突擊連擊 Lv3",
     "skills": [
       {
-        "skillId": "divine_blessing",
+        "skillId": "divine-blessing",
         "level": 2
       }
     ],
@@ -153,18 +153,18 @@
   {
     "id": "nightshade_paolumu_swordshield",
     "name": "夜神戰斧",
-    "nameEn": "",
+    "nameEn": "Nyx Tabar",
     "type": "sword-and-shield",
-    "attack": 1756,
+    "attack": 2103,
     "element": {
       "type": "sleep",
-      "value": 188
+      "value": 312
     },
     "affinity": 0,
     "spSkill": "【SP】精準突擊連擊 Lv3",
     "skills": [
       {
-        "skillId": "sneak_attack",
+        "skillId": "sneak-attack",
         "level": 1
       }
     ],
@@ -173,18 +173,18 @@
   {
     "id": "jyuratodus_swordshield",
     "name": "水流小刀",
-    "nameEn": "",
+    "nameEn": "Aqua Messer",
     "type": "sword-and-shield",
-    "attack": 1293,
+    "attack": 1549,
     "element": {
       "type": "water",
-      "value": 75
+      "value": 1131
     },
     "affinity": 0,
     "spSkill": "【SP】精準突擊連擊 Lv3",
     "skills": [
       {
-        "skillId": "last_stand",
+        "skillId": "last-stand-guard",
         "level": 1
       }
     ],
@@ -193,18 +193,18 @@
   {
     "id": "anjanath_swordshield",
     "name": "火焰銳劍",
-    "nameEn": "",
+    "nameEn": "Blazing Edge",
     "type": "sword-and-shield",
-    "attack": 1293,
+    "attack": 1549,
     "element": {
       "type": "fire",
-      "value": 117
+      "value": 1131
     },
     "affinity": 0,
     "spSkill": "【SP】精準突擊連擊 Lv3",
     "skills": [
       {
-        "skillId": "rising_tide",
+        "skillId": "battle-temper",
         "level": 1
       }
     ],
@@ -213,18 +213,18 @@
   {
     "id": "fulgur_anjanath_swordshield",
     "name": "追尋者雷顎劍",
-    "nameEn": "",
+    "nameEn": "Donnersieger",
     "type": "sword-and-shield",
     "attack": 1434,
     "element": {
       "type": "thunder",
-      "value": 230
+      "value": 1434
     },
-    "affinity": 10,
+    "affinity": 20,
     "spSkill": "【SP】精準突擊連擊 Lv3",
     "skills": [
       {
-        "skillId": "critical_element",
+        "skillId": "critical-element",
         "level": 1
       }
     ],
@@ -233,18 +233,18 @@
   {
     "id": "rathian_swordshield",
     "name": "公主細劍",
-    "nameEn": "",
+    "nameEn": "Princess Rapier",
     "type": "sword-and-shield",
-    "attack": 1516,
+    "attack": 1817,
     "element": {
       "type": "poison",
-      "value": 236
+      "value": 516
     },
     "affinity": 0,
     "spSkill": "【SP】精準突擊連擊 Lv3",
     "skills": [
       {
-        "skillId": "health_boost",
+        "skillId": "health-boost",
         "level": 2
       }
     ],
@@ -253,18 +253,18 @@
   {
     "id": "pink_rathian_swordshield",
     "name": "女王薔薇",
-    "nameEn": "",
+    "nameEn": "Queen Rose",
     "type": "sword-and-shield",
-    "attack": 1756,
+    "attack": 2103,
     "element": {
       "type": "poison",
-      "value": 188
+      "value": 312
     },
     "affinity": 0,
     "spSkill": "【SP】精準突擊連擊 Lv3",
     "skills": [
       {
-        "skillId": "evade_extender",
+        "skillId": "evade-extender",
         "level": 1
       }
     ],
@@ -273,18 +273,18 @@
   {
     "id": "gold_rathian_swordshield",
     "name": "瘋狂玫瑰",
-    "nameEn": "",
+    "nameEn": "Lunatic Rose",
     "type": "sword-and-shield",
-    "attack": 1675,
+    "attack": 2007,
     "element": {
       "type": "poison",
-      "value": 273
+      "value": 416
     },
-    "affinity": 20,
+    "affinity": 30,
     "spSkill": "【SP】精準突擊連擊 Lv3",
     "skills": [
       {
-        "skillId": "pursuit_poison",
+        "skillId": "follow-up-poison",
         "level": 2
       }
     ],
@@ -293,18 +293,18 @@
   {
     "id": "legiana_swordshield",
     "name": "優雅鬥士",
-    "nameEn": "",
+    "nameEn": "Glacial Grace",
     "type": "sword-and-shield",
-    "attack": 1420,
+    "attack": 1463,
     "element": {
       "type": "ice",
-      "value": 232
+      "value": 1420
     },
     "affinity": 0,
     "spSkill": "【SP】精準突擊連擊 Lv3",
     "skills": [
       {
-        "skillId": "divine_blessing",
+        "skillId": "divine-blessing",
         "level": 2
       }
     ],
@@ -313,7 +313,7 @@
   {
     "id": "diablos_swordshield",
     "name": "角龍棒",
-    "nameEn": "",
+    "nameEn": "Studded Club",
     "type": "sword-and-shield",
     "attack": 2371,
     "element": null,
@@ -330,12 +330,12 @@
   {
     "id": "rathalos_swordshield",
     "name": "火炎小刀",
-    "nameEn": "",
+    "nameEn": "Flame Knife",
     "type": "sword-and-shield",
-    "attack": 1420,
+    "attack": 1463,
     "element": {
       "type": "fire",
-      "value": 232
+      "value": 1420
     },
     "affinity": 0,
     "spSkill": "【SP】精準突擊連擊 Lv3",
@@ -350,19 +350,24 @@
   {
     "id": "azure_rathalos_swordshield",
     "name": "蒼色日冕短劍",
-    "nameEn": "",
+    "nameEn": "Blue Corona",
     "type": "sword-and-shield",
-    "attack": 1682,
+    "attack": 2015,
     "element": {
       "type": "fire",
-      "value": 134
+      "value": 752
     },
     "affinity": 0,
     "spSkill": "【SP】精準突擊連擊 Lv3",
     "skills": [
       {
-        "skillId": "special_boost",
+        "skillId": "special-boost",
         "level": 1
+      },
+      {
+        "skillId": "special-boost-peak",
+        "level": 1,
+        "requiredCustomEnhancementLevel": 10
       }
     ],
     "image": "/images/weapons/azure_rathalos_swordshield.webp"
@@ -370,18 +375,18 @@
   {
     "id": "silver_rathalos_swordshield",
     "name": "白金黎明",
-    "nameEn": "",
+    "nameEn": "Platinum Dawn",
     "type": "sword-and-shield",
-    "attack": 1345,
+    "attack": 1507,
     "element": {
       "type": "fire",
-      "value": 277
+      "value": 1345
     },
-    "affinity": 20,
+    "affinity": 30,
     "spSkill": "【SP】精準突擊連擊 Lv3",
     "skills": [
       {
-        "skillId": "critical_element",
+        "skillId": "critical-element",
         "level": 2
       }
     ],
@@ -390,18 +395,18 @@
   {
     "id": "radobaan_swordshield",
     "name": "尖刺銳劍",
-    "nameEn": "",
+    "nameEn": "Spiked Edge",
     "type": "sword-and-shield",
-    "attack": 1596,
+    "attack": 1912,
     "element": {
       "type": "sleep",
-      "value": 100
+      "value": 417
     },
     "affinity": 0,
     "spSkill": "【SP】精準突擊連擊 Lv3",
     "skills": [
       {
-        "skillId": "defense_boost",
+        "skillId": "defense-boost",
         "level": 2
       }
     ],
@@ -410,18 +415,18 @@
   {
     "id": "barioth_swordshield",
     "name": "冰尖利刃",
-    "nameEn": "",
+    "nameEn": "Icicle Spike",
     "type": "sword-and-shield",
-    "attack": 1191,
+    "attack": 1426,
     "element": {
       "type": "ice",
-      "value": 117
+      "value": 1131
     },
-    "affinity": 5,
+    "affinity": 20,
     "spSkill": "【SP】精準突擊連擊 Lv3",
     "skills": [
       {
-        "skillId": "evade_extender",
+        "skillId": "evade-extender",
         "level": 1
       }
     ],
@@ -430,18 +435,18 @@
   {
     "id": "zinogre_swordshield",
     "name": "王劍疾雷",
-    "nameEn": "",
+    "nameEn": "Usurper's Firebolt",
     "type": "sword-and-shield",
-    "attack": 1420,
+    "attack": 1463,
     "element": {
       "type": "thunder",
-      "value": 232
+      "value": 1420
     },
     "affinity": 0,
     "spSkill": "【SP】精準突擊連擊 Lv3",
     "skills": [
       {
-        "skillId": "artful_dodger",
+        "skillId": "artful-dodger",
         "level": 1
       }
     ],
@@ -450,18 +455,18 @@
   {
     "id": "deviljho_swordshield",
     "name": "致命暴龍",
-    "nameEn": "",
+    "nameEn": "Fatal Jho",
     "type": "sword-and-shield",
-    "attack": 1568,
+    "attack": 1579,
     "element": {
       "type": "dragon",
-      "value": 292
+      "value": 1568
     },
     "affinity": -30,
     "spSkill": "【SP】精準突擊連擊 Lv3",
     "skills": [
       {
-        "skillId": "airborne",
+        "skillId": "skyward-striker",
         "level": 2
       }
     ],
@@ -470,18 +475,18 @@
   {
     "id": "khezu_swordshield",
     "name": "奇怪龍薙刀",
-    "nameEn": "",
+    "nameEn": "Khezu Razor",
     "type": "sword-and-shield",
-    "attack": 1194,
+    "attack": 1429,
     "element": {
       "type": "thunder",
-      "value": 120
+      "value": 1134
     },
-    "affinity": 5,
+    "affinity": 20,
     "spSkill": "【SP】精準突擊連擊 Lv3",
     "skills": [
       {
-        "skillId": "peak_performance",
+        "skillId": "peak-performance",
         "level": 1
       }
     ],
@@ -490,16 +495,20 @@
   {
     "id": "kushaladaora_swordshield",
     "name": "鋼龍皇冰劍",
-    "nameEn": "",
+    "nameEn": "Daora's Razor",
     "type": "sword-and-shield",
-    "attack": 1553,
+    "attack": 1861,
     "element": {
       "type": "ice",
-      "value": 238
+      "value": 1210
     },
     "affinity": 0,
     "spSkill": "【SP】精準突擊連擊 Lv3",
     "skills": [
+      {
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
       {
         "skillId": "windproof",
         "level": 2
@@ -510,18 +519,18 @@
   {
     "id": "mizutsune_swordshield",
     "name": "狐扇落花情依依",
-    "nameEn": "",
+    "nameEn": "Hana no Nagoriwo",
     "type": "sword-and-shield",
-    "attack": 1436,
+    "attack": 1363,
     "element": {
       "type": "water",
-      "value": 230
+      "value": 1436
     },
-    "affinity": 10,
+    "affinity": 20,
     "spSkill": "【SP】精準突擊連擊 Lv3",
     "skills": [
       {
-        "skillId": "artful_dodger",
+        "skillId": "artful-dodger",
         "level": 1
       }
     ],
@@ -530,16 +539,20 @@
   {
     "id": "teostra_swordshield",
     "name": "炎王紋章",
-    "nameEn": "",
+    "nameEn": "Teostra's Emblem",
     "type": "sword-and-shield",
-    "attack": 1684,
+    "attack": 2017,
     "element": {
       "type": "blast",
-      "value": 345
+      "value": 522
     },
     "affinity": 0,
     "spSkill": "【SP】精準突擊連擊 Lv3",
     "skills": [
+      {
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
       {
         "skillId": "heroics",
         "level": 2
@@ -550,12 +563,12 @@
   {
     "id": "magnamalo_swordshield",
     "name": "禍劍【封】",
-    "nameEn": "",
+    "nameEn": "Sinister Sword",
     "type": "sword-and-shield",
-    "attack": 1516,
+    "attack": 1817,
     "element": {
       "type": "blast",
-      "value": 236
+      "value": 516
     },
     "affinity": 0,
     "spSkill": "【SP】精準突擊連擊 Lv3",
@@ -570,12 +583,12 @@
   {
     "id": "rajang_swordshield",
     "name": "金獸棍",
-    "nameEn": "",
+    "nameEn": "Rajang Club",
     "type": "sword-and-shield",
-    "attack": 1568,
+    "attack": 1579,
     "element": {
       "type": "thunder",
-      "value": 292
+      "value": 1568
     },
     "affinity": -30,
     "spSkill": "【SP】精準突擊連擊 Lv3",
@@ -590,16 +603,20 @@
   {
     "id": "nergigante_swordshield",
     "name": "殲滅之尖兵",
-    "nameEn": "",
+    "nameEn": "Eradication Vanguard",
     "type": "sword-and-shield",
-    "attack": 1553,
+    "attack": 1861,
     "element": {
       "type": "dragon",
-      "value": 238
+      "value": 1210
     },
     "affinity": 0,
     "spSkill": "【SP】精準突擊連擊 Lv3",
     "skills": [
+      {
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
       {
         "skillId": "partbreaker",
         "level": 2
@@ -610,7 +627,7 @@
   {
     "id": "tigrex_swordshield",
     "name": "轟龍爪",
-    "nameEn": "",
+    "nameEn": "Rex Talon",
     "type": "sword-and-shield",
     "attack": 2633,
     "element": null,
@@ -618,7 +635,7 @@
     "spSkill": "【SP】精準突擊連擊 Lv3",
     "skills": [
       {
-        "skillId": "brutal_strike",
+        "skillId": "maximum-might",
         "level": 1
       }
     ],
@@ -627,7 +644,7 @@
   {
     "id": "brute_tigrex_swordshield",
     "name": "劫難爪",
-    "nameEn": "",
+    "nameEn": "Accursed Claw",
     "type": "sword-and-shield",
     "attack": 2633,
     "element": null,
@@ -635,7 +652,7 @@
     "spSkill": "【SP】精準突擊連擊 Lv3",
     "skills": [
       {
-        "skillId": "perfect_evade_attack_boost",
+        "skillId": "aggressive-dodger",
         "level": 5
       }
     ],
@@ -644,18 +661,22 @@
   {
     "id": "kirin_swordshield",
     "name": "雷刀",
-    "nameEn": "",
+    "nameEn": "Fulminator",
     "type": "sword-and-shield",
-    "attack": 1622,
+    "attack": 1444,
     "element": {
       "type": "thunder",
-      "value": 334
+      "value": 1622
     },
     "affinity": 0,
     "spSkill": "【SP】精準突擊連擊 Lv3",
     "skills": [
       {
-        "skillId": "latent_power",
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
+      {
+        "skillId": "latent-power",
         "level": 1
       }
     ],
@@ -664,7 +685,7 @@
   {
     "id": "chatacabra_swordshield",
     "name": "纏蛙棒",
-    "nameEn": "",
+    "nameEn": "Chata Club",
     "type": "sword-and-shield",
     "attack": 2197,
     "element": null,
@@ -672,7 +693,7 @@
     "spSkill": "【SP】精準突擊連擊 Lv3",
     "skills": [
       {
-        "skillId": "armor_up",
+        "skillId": "defense-ready",
         "level": 1
       }
     ],
@@ -681,18 +702,18 @@
   {
     "id": "glavenus_swordshield",
     "name": "斬龍戰狂",
-    "nameEn": "",
+    "nameEn": "Glavenus Razor",
     "type": "sword-and-shield",
-    "attack": 1568,
+    "attack": 1579,
     "element": {
       "type": "fire",
-      "value": 292
+      "value": 1568
     },
     "affinity": -30,
     "spSkill": "【SP】精準突擊連擊 Lv3",
     "skills": [
       {
-        "skillId": "brutal_strike",
+        "skillId": "maximum-might",
         "level": 1
       }
     ],
@@ -701,18 +722,18 @@
   {
     "id": "greatwroggi_swordshield",
     "name": "污濁男爵",
-    "nameEn": "",
+    "nameEn": "Dirty Baron",
     "type": "sword-and-shield",
-    "attack": 1647,
+    "attack": 1973,
     "element": {
       "type": "poison",
-      "value": 66
+      "value": 319
     },
     "affinity": 10,
     "spSkill": "【SP】精準突擊連擊 Lv3",
     "skills": [
       {
-        "skillId": "lock_on",
+        "skillId": "lock-on",
         "level": 1
       }
     ],
@@ -721,7 +742,7 @@
   {
     "id": "bishaten_swordshield",
     "name": "天具･調伏之劍",
-    "nameEn": "",
+    "nameEn": "Exorcising Sword",
     "type": "sword-and-shield",
     "attack": 2113,
     "element": null,
@@ -729,7 +750,7 @@
     "spSkill": "【SP】精準突擊連擊 Lv3",
     "skills": [
       {
-        "skillId": "multi_attack_boost",
+        "skillId": "group-hunt-attack",
         "level": 2
       }
     ],
@@ -738,11 +759,11 @@
   {
     "id": "nargacuga_swordshield",
     "name": "隱密銳劍",
-    "nameEn": "",
+    "nameEn": "Hidden Edge",
     "type": "sword-and-shield",
     "attack": 2082,
     "element": null,
-    "affinity": 25,
+    "affinity": 40,
     "spSkill": "【SP】精準突擊連擊 Lv3",
     "skills": [
       {
@@ -755,18 +776,22 @@
   {
     "id": "namielle_swordshield",
     "name": "水蛇衝突",
-    "nameEn": "",
+    "nameEn": "Hydros Discus",
     "type": "sword-and-shield",
-    "attack": 1335,
+    "attack": 1591,
     "element": {
       "type": "water",
-      "value": 276
+      "value": 1335
     },
-    "affinity": 15,
+    "affinity": 20,
     "spSkill": "【SP】精準突擊連擊 Lv3",
     "skills": [
       {
-        "skillId": "weakness_exploit",
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
+      {
+        "skillId": "weakness-exploit",
         "level": 1
       }
     ],
@@ -775,7 +800,7 @@
   {
     "id": "garangolm_swordshield",
     "name": "剛纏獸之劍",
-    "nameEn": "",
+    "nameEn": "Golm Sword",
     "type": "sword-and-shield",
     "attack": 2371,
     "element": null,
@@ -783,7 +808,7 @@
     "spSkill": "【SP】精準突擊連擊 Lv3",
     "skills": [
       {
-        "skillId": "disable_perfect_evade",
+        "skillId": "resolute",
         "level": 1
       }
     ],
@@ -792,18 +817,18 @@
   {
     "id": "lunagaron_swordshield",
     "name": "冷月之手斧",
-    "nameEn": "",
+    "nameEn": "Frostmoon Hatchet",
     "type": "sword-and-shield",
-    "attack": 1458,
+    "attack": 1222,
     "element": {
       "type": "ice",
-      "value": 164
+      "value": 1458
     },
     "affinity": 0,
     "spSkill": "【SP】精準突擊連擊 Lv3",
     "skills": [
       {
-        "skillId": "high_performance_ice",
+        "skillId": "hi-ice",
         "level": 1
       }
     ],
@@ -812,18 +837,18 @@
   {
     "id": "espinas_swordshield",
     "name": "薔薇小刀",
-    "nameEn": "",
+    "nameEn": "Rosenmesser",
     "type": "sword-and-shield",
     "attack": 1434,
     "element": {
       "type": "fire",
-      "value": 230
+      "value": 1434
     },
-    "affinity": 10,
+    "affinity": 20,
     "spSkill": "【SP】精準突擊連擊 Lv3",
     "skills": [
       {
-        "skillId": "part_break_special_boost",
+        "skillId": "special-partbreaker",
         "level": 2
       }
     ],
@@ -832,18 +857,22 @@
   {
     "id": "malzeno_swordshield",
     "name": "血宴之蠟燭",
-    "nameEn": "",
+    "nameEn": "Bloodlust Blade",
     "type": "sword-and-shield",
-    "attack": 1622,
+    "attack": 1444,
     "element": {
       "type": "dragon",
-      "value": 334
+      "value": 1622
     },
     "affinity": 0,
     "spSkill": "【SP】精準突擊連擊 Lv3",
     "skills": [
       {
-        "skillId": "high_performance_dragon",
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
+      {
+        "skillId": "hi-dragon",
         "level": 1
       }
     ],
@@ -852,18 +881,18 @@
   {
     "id": "quematrice_swordshield",
     "name": "炎尾劍",
-    "nameEn": "",
+    "nameEn": "Quematrice Cuchillo",
     "type": "sword-and-shield",
-    "attack": 1458,
+    "attack": 1222,
     "element": {
       "type": "fire",
-      "value": 68
+      "value": 1458
     },
     "affinity": 0,
     "spSkill": "【SP】精準突擊連擊 Lv3",
     "skills": [
       {
-        "skillId": "bravery",
+        "skillId": "valor",
         "level": 1
       }
     ],
@@ -872,18 +901,18 @@
   {
     "id": "gossharag_swordshield",
     "name": "雪鬼獸菜刀",
-    "nameEn": "",
+    "nameEn": "Mincing Blade",
     "type": "sword-and-shield",
-    "attack": 1492,
+    "attack": 1570,
     "element": {
       "type": "ice",
-      "value": 147
+      "value": 1492
     },
     "affinity": -30,
     "spSkill": "【SP】精準突擊連擊 Lv3",
     "skills": [
       {
-        "skillId": "brutal_strike",
+        "skillId": "maximum-might",
         "level": 1
       }
     ],
@@ -892,18 +921,18 @@
   {
     "id": "astalos_swordshield",
     "name": "薩爾加納斯刺劍",
-    "nameEn": "",
+    "nameEn": "Sarganas Rapier",
     "type": "sword-and-shield",
-    "attack": 1436,
+    "attack": 1363,
     "element": {
       "type": "thunder",
-      "value": 230
+      "value": 1436
     },
-    "affinity": 10,
+    "affinity": 20,
     "spSkill": "【SP】精準突擊連擊 Lv3",
     "skills": [
       {
-        "skillId": "thunder_attack",
+        "skillId": "thunder-attack",
         "level": 1
       }
     ],
@@ -912,15 +941,15 @@
   {
     "id": "seregios_swordshield",
     "name": "銳牙星宿一",
-    "nameEn": "",
+    "nameEn": "Naab Sword",
     "type": "sword-and-shield",
     "attack": 2335,
     "element": null,
-    "affinity": 15,
+    "affinity": 30,
     "spSkill": "【SP】精準突擊連擊 Lv3",
     "skills": [
       {
-        "skillId": "powerhouse",
+        "skillId": "attack-activation",
         "level": 1
       }
     ],
@@ -929,7 +958,7 @@
   {
     "id": "bone_swordshield",
     "name": "骨製曲刀",
-    "nameEn": "",
+    "nameEn": "Bone Kukri",
     "type": "sword-and-shield",
     "attack": 1912,
     "element": null,
@@ -937,10 +966,82 @@
     "spSkill": "【SP】精準突擊連擊 Lv3",
     "skills": [
       {
-        "skillId": "concentration",
+        "skillId": "sp-meter-boost",
         "level": 1
       }
     ],
     "image": "/images/weapons/bone_swordshield.webp"
+  },
+  {
+    "id": "stygian_zinogre_swordshield",
+    "name": "獄劍龍鱗",
+    "nameEn": "Brimstren Drakescale",
+    "type": "sword-and-shield",
+    "attack": 1506,
+    "element": {
+      "type": "dragon",
+      "value": 1506
+    },
+    "affinity": 0,
+    "spSkill": "【SP】精準突擊連擊 Lv3",
+    "skills": [
+      {
+        "skillId": "dragon-attack",
+        "level": 1
+      },
+      {
+        "skillId": "dragon-attack-peak",
+        "level": 1
+      }
+    ],
+    "image": "/images/weapons/stygian_zinogre_swordshield.webp"
+  },
+  {
+    "id": "velkhana_swordshield",
+    "name": "冰帝穹宮",
+    "nameEn": "Noble Ana Palas",
+    "type": "sword-and-shield",
+    "attack": 1444,
+    "element": {
+      "type": "ice",
+      "value": 1622
+    },
+    "affinity": 0,
+    "spSkill": "【SP】精準突擊連擊 Lv3",
+    "skills": [
+      {
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
+      {
+        "skillId": "ice-attack",
+        "level": 1
+      },
+      {
+        "skillId": "ice-attack-peak",
+        "level": 1
+      }
+    ],
+    "image": "/images/weapons/velkhana_swordshield.webp"
+  },
+  {
+    "id": "brachydios_swordshield",
+    "name": "碎龍銳劍",
+    "nameEn": "Dios Edge",
+    "type": "sword-and-shield",
+    "attack": 2007,
+    "element": {
+      "type": "blast",
+      "value": 416
+    },
+    "affinity": 10,
+    "spSkill": "【SP】精準突擊連擊 Lv3",
+    "skills": [
+      {
+        "skillId": "follow-up-blast",
+        "level": 1
+      }
+    ],
+    "image": "/images/weapons/brachydios_swordshield.webp"
   }
 ]

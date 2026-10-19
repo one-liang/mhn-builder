@@ -209,7 +209,12 @@
     "seregios": "seregios",
     "radobaan": "radobaan",
     "banbaro": "banbaro",
-    "barioth": "barioth"
+    "barioth": "barioth",
+    "shogunceanataur": "shogunceanataur",
+    "stygian_zinogre": "stygian-zinogre",
+    "velkhana": "velkhana",
+    "brachydios": "brachydios",
+    "aurora_somnacanth": "aurora-somnacanth"
   },
   "excludedSkillKinds": [
     "carnival_2024"

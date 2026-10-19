@@ -2,7 +2,7 @@
   {
     "id": "ore_switchaxe",
     "name": "鐵製試作劍斧",
-    "nameEn": "",
+    "nameEn": "Proto Iron Axe",
     "type": "switch-axe",
     "attack": 1912,
     "element": null,
@@ -10,7 +10,7 @@
     "spSkill": "【SP】零距離解放突刺 Lv3",
     "skills": [
       {
-        "skillId": "poison_resistance",
+        "skillId": "poison-resistance",
         "level": 2
       }
     ],
@@ -23,18 +23,18 @@
   {
     "id": "greatjagras_switchaxe",
     "name": "凶豺龍劍斧",
-    "nameEn": "",
+    "nameEn": "Jagras Axe",
     "type": "switch-axe",
-    "attack": 1373,
+    "attack": 1644,
     "element": {
       "type": "water",
-      "value": 38
+      "value": 754
     },
     "affinity": 0,
     "spSkill": "【SP】零距離解放突刺 Lv3",
     "skills": [
       {
-        "skillId": "health_boost",
+        "skillId": "health-boost",
         "level": 2
       }
     ],
@@ -47,18 +47,18 @@
   {
     "id": "pukeipukei_switchaxe",
     "name": "曼陀羅花園",
-    "nameEn": "",
+    "nameEn": "Datura Garden",
     "type": "switch-axe",
-    "attack": 1596,
+    "attack": 1912,
     "element": {
       "type": "poison",
-      "value": 100
+      "value": 417
     },
     "affinity": 0,
     "spSkill": "【SP】零距離解放突刺 Lv3",
     "skills": [
       {
-        "skillId": "sneak_attack",
+        "skillId": "sneak-attack",
         "level": 1
       }
     ],
@@ -71,12 +71,12 @@
   {
     "id": "coral_pukeipukei_switchaxe",
     "name": "涌湍礁湖",
-    "nameEn": "",
+    "nameEn": "Deep Lagoon",
     "type": "switch-axe",
-    "attack": 1420,
+    "attack": 1463,
     "element": {
       "type": "water",
-      "value": 232
+      "value": 1420
     },
     "affinity": 0,
     "spSkill": "【SP】零距離解放突刺 Lv3",
@@ -95,7 +95,7 @@
   {
     "id": "barroth_switchaxe",
     "name": "土砂龍斧",
-    "nameEn": "",
+    "nameEn": "Carapace Axe",
     "type": "switch-axe",
     "attack": 2103,
     "element": null,
@@ -103,7 +103,7 @@
     "spSkill": "【SP】零距離解放突刺 Lv3",
     "skills": [
       {
-        "skillId": "defense_boost",
+        "skillId": "defense-boost",
         "level": 2
       }
     ],
@@ -116,18 +116,18 @@
   {
     "id": "tobikadachi_switchaxe",
     "name": "閃電斧",
-    "nameEn": "",
+    "nameEn": "Thunder Axe",
     "type": "switch-axe",
-    "attack": 1293,
+    "attack": 1549,
     "element": {
       "type": "thunder",
-      "value": 47
+      "value": 1131
     },
     "affinity": 0,
     "spSkill": "【SP】零距離解放突刺 Lv3",
     "skills": [
       {
-        "skillId": "evade_extender",
+        "skillId": "evade-extender",
         "level": 1
       }
     ],
@@ -140,7 +140,7 @@
   {
     "id": "paolumu_switchaxe",
     "name": "浮空龍大斧",
-    "nameEn": "",
+    "nameEn": "Lumu Axe",
     "type": "switch-axe",
     "attack": 2113,
     "element": null,
@@ -148,7 +148,7 @@
     "spSkill": "【SP】零距離解放突刺 Lv3",
     "skills": [
       {
-        "skillId": "divine_blessing",
+        "skillId": "divine-blessing",
         "level": 2
       }
     ],
@@ -161,18 +161,18 @@
   {
     "id": "nightshade_paolumu_switchaxe",
     "name": "夜神斬斧",
-    "nameEn": "",
+    "nameEn": "Nyx Smasher",
     "type": "switch-axe",
-    "attack": 1756,
+    "attack": 2103,
     "element": {
       "type": "sleep",
-      "value": 188
+      "value": 312
     },
     "affinity": 0,
     "spSkill": "【SP】零距離解放突刺 Lv3",
     "skills": [
       {
-        "skillId": "sneak_attack",
+        "skillId": "sneak-attack",
         "level": 1
       }
     ],
@@ -185,18 +185,18 @@
   {
     "id": "jyuratodus_switchaxe",
     "name": "泥岩戰斧",
-    "nameEn": "",
+    "nameEn": "Madness Axe",
     "type": "switch-axe",
-    "attack": 1293,
+    "attack": 1549,
     "element": {
       "type": "water",
-      "value": 75
+      "value": 1131
     },
     "affinity": 0,
     "spSkill": "【SP】零距離解放突刺 Lv3",
     "skills": [
       {
-        "skillId": "last_stand",
+        "skillId": "last-stand-guard",
         "level": 1
       }
     ],
@@ -209,18 +209,18 @@
   {
     "id": "anjanath_switchaxe",
     "name": "蠻顎龍斬斧",
-    "nameEn": "",
+    "nameEn": "Flammenbeil",
     "type": "switch-axe",
-    "attack": 1293,
+    "attack": 1549,
     "element": {
       "type": "fire",
-      "value": 117
+      "value": 1131
     },
     "affinity": 0,
     "spSkill": "【SP】零距離解放突刺 Lv3",
     "skills": [
       {
-        "skillId": "rising_tide",
+        "skillId": "battle-temper",
         "level": 1
       }
     ],
@@ -233,18 +233,18 @@
   {
     "id": "fulgur_anjanath_switchaxe",
     "name": "破軍雷顎劍斧",
-    "nameEn": "",
+    "nameEn": "Donnerbeil",
     "type": "switch-axe",
     "attack": 1434,
     "element": {
       "type": "thunder",
-      "value": 230
+      "value": 1434
     },
-    "affinity": 10,
+    "affinity": 20,
     "spSkill": "【SP】零距離解放突刺 Lv3",
     "skills": [
       {
-        "skillId": "critical_element",
+        "skillId": "critical-element",
         "level": 1
       }
     ],
@@ -257,18 +257,18 @@
   {
     "id": "rathian_switchaxe",
     "name": "龍姬的斬擊斧",
-    "nameEn": "",
+    "nameEn": "Dragonmaiden Axe",
     "type": "switch-axe",
-    "attack": 1516,
+    "attack": 1817,
     "element": {
       "type": "poison",
-      "value": 236
+      "value": 516
     },
     "affinity": 0,
     "spSkill": "【SP】零距離解放突刺 Lv3",
     "skills": [
       {
-        "skillId": "health_boost",
+        "skillId": "health-boost",
         "level": 2
       }
     ],
@@ -281,18 +281,18 @@
   {
     "id": "gold_rathian_switchaxe",
     "name": "煌戰之金劍斧",
-    "nameEn": "",
+    "nameEn": "Golden Crescent",
     "type": "switch-axe",
-    "attack": 1675,
+    "attack": 2007,
     "element": {
       "type": "poison",
-      "value": 273
+      "value": 416
     },
-    "affinity": 20,
+    "affinity": 30,
     "spSkill": "【SP】零距離解放突刺 Lv3",
     "skills": [
       {
-        "skillId": "pursuit_poison",
+        "skillId": "follow-up-poison",
         "level": 2
       }
     ],
@@ -305,18 +305,18 @@
   {
     "id": "legiana_switchaxe",
     "name": "優雅戰斧",
-    "nameEn": "",
+    "nameEn": "Glacial Axe",
     "type": "switch-axe",
-    "attack": 1420,
+    "attack": 1463,
     "element": {
       "type": "ice",
-      "value": 232
+      "value": 1420
     },
     "affinity": 0,
     "spSkill": "【SP】零距離解放突刺 Lv3",
     "skills": [
       {
-        "skillId": "divine_blessing",
+        "skillId": "divine-blessing",
         "level": 2
       }
     ],
@@ -329,7 +329,7 @@
   {
     "id": "diablos_switchaxe",
     "name": "爆鎚戰斧",
-    "nameEn": "",
+    "nameEn": "Diablos Axe",
     "type": "switch-axe",
     "attack": 2371,
     "element": null,
@@ -350,7 +350,7 @@
   {
     "id": "black_diablos_switchaxe",
     "name": "命運劍斧",
-    "nameEn": "",
+    "nameEn": "Axe of Thanatos",
     "type": "switch-axe",
     "attack": 2658,
     "element": null,
@@ -371,12 +371,12 @@
   {
     "id": "rathalos_switchaxe",
     "name": "火龍劍斧",
-    "nameEn": "",
+    "nameEn": "Rathalos Axe",
     "type": "switch-axe",
-    "attack": 1420,
+    "attack": 1463,
     "element": {
       "type": "fire",
-      "value": 232
+      "value": 1420
     },
     "affinity": 0,
     "spSkill": "【SP】零距離解放突刺 Lv3",
@@ -395,19 +395,24 @@
   {
     "id": "azure_rathalos_switchaxe",
     "name": "藍牙蒼炎斧",
-    "nameEn": "",
+    "nameEn": "Azure Rathbringer",
     "type": "switch-axe",
-    "attack": 1682,
+    "attack": 2015,
     "element": {
       "type": "fire",
-      "value": 134
+      "value": 752
     },
     "affinity": 0,
     "spSkill": "【SP】零距離解放突刺 Lv3",
     "skills": [
       {
-        "skillId": "special_boost",
+        "skillId": "special-boost",
         "level": 1
+      },
+      {
+        "skillId": "special-boost-peak",
+        "level": 1,
+        "requiredCustomEnhancementLevel": 10
       }
     ],
     "image": "/images/weapons/azure_rathalos_switchaxe.webp",
@@ -419,18 +424,18 @@
   {
     "id": "silver_rathalos_switchaxe",
     "name": "銀牙煌龍斧",
-    "nameEn": "",
+    "nameEn": "Silver Rathbringer",
     "type": "switch-axe",
-    "attack": 1345,
+    "attack": 1507,
     "element": {
       "type": "fire",
-      "value": 277
+      "value": 1345
     },
-    "affinity": 20,
+    "affinity": 30,
     "spSkill": "【SP】零距離解放突刺 Lv3",
     "skills": [
       {
-        "skillId": "critical_element",
+        "skillId": "critical-element",
         "level": 2
       }
     ],
@@ -443,7 +448,7 @@
   {
     "id": "banbaro_switchaxe",
     "name": "巨牛大劍斧",
-    "nameEn": "",
+    "nameEn": "Mammoth Halberd",
     "type": "switch-axe",
     "attack": 2113,
     "element": null,
@@ -451,7 +456,7 @@
     "spSkill": "【SP】零距離解放突刺 Lv3",
     "skills": [
       {
-        "skillId": "firm_foothold",
+        "skillId": "firm-foothold",
         "level": 2
       }
     ],
@@ -464,18 +469,18 @@
   {
     "id": "barioth_switchaxe",
     "name": "琥珀碎斷",
-    "nameEn": "",
+    "nameEn": "Amber Slash",
     "type": "switch-axe",
-    "attack": 1191,
+    "attack": 1426,
     "element": {
       "type": "ice",
-      "value": 117
+      "value": 1131
     },
-    "affinity": 5,
+    "affinity": 20,
     "spSkill": "【SP】零距離解放突刺 Lv3",
     "skills": [
       {
-        "skillId": "evade_extender",
+        "skillId": "evade-extender",
         "level": 1
       }
     ],
@@ -488,18 +493,18 @@
   {
     "id": "zinogre_switchaxe",
     "name": "迅雷劍斧",
-    "nameEn": "",
+    "nameEn": "Thundercleave",
     "type": "switch-axe",
-    "attack": 1420,
+    "attack": 1463,
     "element": {
       "type": "thunder",
-      "value": 232
+      "value": 1420
     },
     "affinity": 0,
     "spSkill": "【SP】零距離解放突刺 Lv3",
     "skills": [
       {
-        "skillId": "artful_dodger",
+        "skillId": "artful-dodger",
         "level": 1
       }
     ],
@@ -512,18 +517,18 @@
   {
     "id": "deviljho_switchaxe",
     "name": "暴君",
-    "nameEn": "",
+    "nameEn": "Tyrannos",
     "type": "switch-axe",
-    "attack": 1568,
+    "attack": 1579,
     "element": {
       "type": "dragon",
-      "value": 292
+      "value": 1568
     },
     "affinity": -30,
     "spSkill": "【SP】零距離解放突刺 Lv3",
     "skills": [
       {
-        "skillId": "morph_boost",
+        "skillId": "morph-boost",
         "level": 1
       }
     ],
@@ -536,18 +541,18 @@
   {
     "id": "khezu_switchaxe",
     "name": "奇怪龍萬用斧",
-    "nameEn": "",
+    "nameEn": "Khezu Axe",
     "type": "switch-axe",
-    "attack": 1194,
+    "attack": 1429,
     "element": {
       "type": "thunder",
-      "value": 120
+      "value": 1134
     },
-    "affinity": 5,
+    "affinity": 20,
     "spSkill": "【SP】零距離解放突刺 Lv3",
     "skills": [
       {
-        "skillId": "peak_performance",
+        "skillId": "peak-performance",
         "level": 1
       }
     ],
@@ -560,16 +565,20 @@
   {
     "id": "kushaladaora_switchaxe",
     "name": "鋼龍之翼",
-    "nameEn": "",
+    "nameEn": "Daora's Janah",
     "type": "switch-axe",
-    "attack": 1553,
+    "attack": 1861,
     "element": {
       "type": "ice",
-      "value": 238
+      "value": 1210
     },
     "affinity": 0,
     "spSkill": "【SP】零距離解放突刺 Lv3",
     "skills": [
+      {
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
       {
         "skillId": "windproof",
         "level": 2
@@ -584,18 +593,18 @@
   {
     "id": "mizutsune_switchaxe",
     "name": "狐斬擊斧子規招別離",
-    "nameEn": "",
+    "nameEn": "Fond Farewell",
     "type": "switch-axe",
-    "attack": 1436,
+    "attack": 1363,
     "element": {
       "type": "water",
-      "value": 230
+      "value": 1436
     },
-    "affinity": 10,
+    "affinity": 20,
     "spSkill": "【SP】零距離解放突刺 Lv3",
     "skills": [
       {
-        "skillId": "artful_dodger",
+        "skillId": "artful-dodger",
         "level": 1
       }
     ],
@@ -608,16 +617,20 @@
   {
     "id": "teostra_switchaxe",
     "name": "炎王城塞",
-    "nameEn": "",
+    "nameEn": "Teostra's Castle",
     "type": "switch-axe",
-    "attack": 1684,
+    "attack": 2017,
     "element": {
       "type": "blast",
-      "value": 345
+      "value": 522
     },
     "affinity": 0,
     "spSkill": "【SP】零距離解放突刺 Lv3",
     "skills": [
+      {
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
       {
         "skillId": "heroics",
         "level": 2
@@ -632,18 +645,18 @@
   {
     "id": "aknosom_switchaxe",
     "name": "傘之旗",
-    "nameEn": "",
+    "nameEn": "Axenosom",
     "type": "switch-axe",
-    "attack": 1588,
+    "attack": 1903,
     "element": {
       "type": "fire",
-      "value": 59
+      "value": 785
     },
     "affinity": 0,
     "spSkill": "【SP】零距離解放突刺 Lv3",
     "skills": [
       {
-        "skillId": "lock_on",
+        "skillId": "lock-on",
         "level": 1
       }
     ],
@@ -656,12 +669,12 @@
   {
     "id": "magnamalo_switchaxe",
     "name": "禍斧【封】",
-    "nameEn": "",
+    "nameEn": "Sinister Axe",
     "type": "switch-axe",
-    "attack": 1516,
+    "attack": 1817,
     "element": {
       "type": "blast",
-      "value": 236
+      "value": 516
     },
     "affinity": 0,
     "spSkill": "【SP】零距離解放突刺 Lv3",
@@ -680,18 +693,18 @@
   {
     "id": "rajang_switchaxe",
     "name": "金剛角斧",
-    "nameEn": "",
+    "nameEn": "Undying Axe",
     "type": "switch-axe",
-    "attack": 1568,
+    "attack": 1579,
     "element": {
       "type": "thunder",
-      "value": 292
+      "value": 1568
     },
     "affinity": -30,
     "spSkill": "【SP】零距離解放突刺 Lv3",
     "skills": [
       {
-        "skillId": "fighting_spirit",
+        "skillId": "fighting-spirit",
         "level": 1
       }
     ],
@@ -704,16 +717,20 @@
   {
     "id": "nergigante_switchaxe",
     "name": "斷滅的一閃",
-    "nameEn": "",
+    "nameEn": "Dying Light",
     "type": "switch-axe",
-    "attack": 1553,
+    "attack": 1861,
     "element": {
       "type": "dragon",
-      "value": 238
+      "value": 1210
     },
     "affinity": 0,
     "spSkill": "【SP】零距離解放突刺 Lv3",
     "skills": [
+      {
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
       {
         "skillId": "partbreaker",
         "level": 2
@@ -728,18 +745,18 @@
   {
     "id": "lagombi_switchaxe",
     "name": "白兔斬擊斧",
-    "nameEn": "",
+    "nameEn": "Longear Axe",
     "type": "switch-axe",
-    "attack": 1588,
+    "attack": 1903,
     "element": {
       "type": "ice",
-      "value": 38
+      "value": 785
     },
     "affinity": 0,
     "spSkill": "【SP】零距離解放突刺 Lv3",
     "skills": [
       {
-        "skillId": "lock_on",
+        "skillId": "lock-on",
         "level": 1
       }
     ],
@@ -752,18 +769,18 @@
   {
     "id": "volvidon_switchaxe",
     "name": "甲旋",
-    "nameEn": "",
+    "nameEn": "Binding Roller",
     "type": "switch-axe",
-    "attack": 1516,
+    "attack": 1817,
     "element": {
       "type": "paralysis",
-      "value": 176
+      "value": 516
     },
     "affinity": 0,
     "spSkill": "【SP】零距離解放突刺 Lv3",
     "skills": [
       {
-        "skillId": "evade_extender",
+        "skillId": "evade-extender",
         "level": 1
       }
     ],
@@ -776,7 +793,7 @@
   {
     "id": "tigrex_switchaxe",
     "name": "轟龍掠奪者",
-    "nameEn": "",
+    "nameEn": "Rex Raider",
     "type": "switch-axe",
     "attack": 2633,
     "element": null,
@@ -784,7 +801,7 @@
     "spSkill": "【SP】零距離解放突刺 Lv3",
     "skills": [
       {
-        "skillId": "brutal_strike",
+        "skillId": "maximum-might",
         "level": 1
       }
     ],
@@ -797,7 +814,7 @@
   {
     "id": "brute_tigrex_switchaxe",
     "name": "劫難掠奪者",
-    "nameEn": "",
+    "nameEn": "Accursed Raider",
     "type": "switch-axe",
     "attack": 2633,
     "element": null,
@@ -805,7 +822,7 @@
     "spSkill": "【SP】零距離解放突刺 Lv3",
     "skills": [
       {
-        "skillId": "armor_up",
+        "skillId": "defense-ready",
         "level": 3
       }
     ],
@@ -818,18 +835,22 @@
   {
     "id": "kirin_switchaxe",
     "name": "雷斧",
-    "nameEn": "",
+    "nameEn": "Peal",
     "type": "switch-axe",
-    "attack": 1622,
+    "attack": 1444,
     "element": {
       "type": "thunder",
-      "value": 334
+      "value": 1622
     },
     "affinity": 0,
     "spSkill": "【SP】零距離解放突刺 Lv3",
     "skills": [
       {
-        "skillId": "latent_power",
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
+      {
+        "skillId": "latent-power",
         "level": 1
       }
     ],
@@ -842,12 +863,12 @@
   {
     "id": "bazelgeuse_switchaxe",
     "name": "爆鱗龍劍斧",
-    "nameEn": "",
+    "nameEn": "Bazel Raider",
     "type": "switch-axe",
-    "attack": 1942,
+    "attack": 2327,
     "element": {
       "type": "blast",
-      "value": 201
+      "value": 309
     },
     "affinity": -30,
     "spSkill": "【SP】零距離解放突刺 Lv3",
@@ -866,7 +887,7 @@
   {
     "id": "arzuros_switchaxe",
     "name": "青熊斧",
-    "nameEn": "",
+    "nameEn": "Arzuros Axe",
     "type": "switch-axe",
     "attack": 2361,
     "element": null,
@@ -874,7 +895,7 @@
     "spSkill": "【SP】零距離解放突刺 Lv3",
     "skills": [
       {
-        "skillId": "special_boost",
+        "skillId": "special-boost",
         "level": 2
       }
     ],
@@ -887,18 +908,18 @@
   {
     "id": "glavenus_switchaxe",
     "name": "斬龍斬斧",
-    "nameEn": "",
+    "nameEn": "Glavenus Smasher",
     "type": "switch-axe",
-    "attack": 1568,
+    "attack": 1579,
     "element": {
       "type": "fire",
-      "value": 292
+      "value": 1568
     },
     "affinity": -30,
     "spSkill": "【SP】零距離解放突刺 Lv3",
     "skills": [
       {
-        "skillId": "brutal_strike",
+        "skillId": "maximum-might",
         "level": 1
       }
     ],
@@ -911,18 +932,22 @@
   {
     "id": "chameleos_switchaxe",
     "name": "幻視之巴羅爾",
-    "nameEn": "",
+    "nameEn": "Balor's Mirage",
     "type": "switch-axe",
-    "attack": 1741,
+    "attack": 2086,
     "element": {
       "type": "poison",
-      "value": 347
+      "value": 526
     },
     "affinity": 0,
     "spSkill": "【SP】零距離解放突刺 Lv3",
     "skills": [
       {
-        "skillId": "abnormal_status_enhancement",
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
+      {
+        "skillId": "status-sneak-attack",
         "level": 2
       }
     ],
@@ -935,7 +960,7 @@
   {
     "id": "bishaten_switchaxe",
     "name": "天具･法輪之斧",
-    "nameEn": "",
+    "nameEn": "Wheel Axe",
     "type": "switch-axe",
     "attack": 2113,
     "element": null,
@@ -943,7 +968,7 @@
     "spSkill": "【SP】零距離解放突刺 Lv3",
     "skills": [
       {
-        "skillId": "multi_attack_boost",
+        "skillId": "group-hunt-attack",
         "level": 2
       }
     ],
@@ -956,11 +981,11 @@
   {
     "id": "nargacuga_switchaxe",
     "name": "隱密戰斧",
-    "nameEn": "",
+    "nameEn": "Hidden Axe",
     "type": "switch-axe",
     "attack": 2082,
     "element": null,
-    "affinity": 25,
+    "affinity": 40,
     "spSkill": "【SP】零距離解放突刺 Lv3",
     "skills": [
       {
@@ -977,18 +1002,22 @@
   {
     "id": "namielle_switchaxe",
     "name": "暴君‧橫裂",
-    "nameEn": "",
+    "nameEn": "Black Strobila",
     "type": "switch-axe",
-    "attack": 1335,
+    "attack": 1591,
     "element": {
       "type": "water",
-      "value": 276
+      "value": 1335
     },
-    "affinity": 15,
+    "affinity": 20,
     "spSkill": "【SP】零距離解放突刺 Lv3",
     "skills": [
       {
-        "skillId": "weakness_exploit",
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
+      {
+        "skillId": "weakness-exploit",
         "level": 1
       }
     ],
@@ -1001,7 +1030,7 @@
   {
     "id": "garangolm_switchaxe",
     "name": "剛纏獸之斧",
-    "nameEn": "",
+    "nameEn": "Golm Axe",
     "type": "switch-axe",
     "attack": 2371,
     "element": null,
@@ -1009,7 +1038,7 @@
     "spSkill": "【SP】零距離解放突刺 Lv3",
     "skills": [
       {
-        "skillId": "disable_perfect_evade",
+        "skillId": "resolute",
         "level": 1
       }
     ],
@@ -1022,18 +1051,18 @@
   {
     "id": "lunagaron_switchaxe",
     "name": "冷月之斬擊斧",
-    "nameEn": "",
+    "nameEn": "Frostmoon Eclipser",
     "type": "switch-axe",
-    "attack": 1458,
+    "attack": 1222,
     "element": {
       "type": "ice",
-      "value": 164
+      "value": 1458
     },
     "affinity": 0,
     "spSkill": "【SP】零距離解放突刺 Lv3",
     "skills": [
       {
-        "skillId": "high_performance_ice",
+        "skillId": "hi-ice",
         "level": 1
       }
     ],
@@ -1046,18 +1075,18 @@
   {
     "id": "espinas_switchaxe",
     "name": "薔薇刺斧",
-    "nameEn": "",
+    "nameEn": "Rosenacanta",
     "type": "switch-axe",
     "attack": 1434,
     "element": {
       "type": "fire",
-      "value": 230
+      "value": 1434
     },
-    "affinity": 10,
+    "affinity": 20,
     "spSkill": "【SP】零距離解放突刺 Lv3",
     "skills": [
       {
-        "skillId": "part_break_special_boost",
+        "skillId": "special-partbreaker",
         "level": 2
       }
     ],
@@ -1070,18 +1099,22 @@
   {
     "id": "malzeno_switchaxe",
     "name": "五裂之拷問",
-    "nameEn": "",
+    "nameEn": "Fracturing Falter",
     "type": "switch-axe",
-    "attack": 1622,
+    "attack": 1444,
     "element": {
       "type": "dragon",
-      "value": 334
+      "value": 1622
     },
     "affinity": 0,
     "spSkill": "【SP】零距離解放突刺 Lv3",
     "skills": [
       {
-        "skillId": "high_performance_dragon",
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
+      {
+        "skillId": "hi-dragon",
         "level": 1
       }
     ],
@@ -1094,18 +1127,18 @@
   {
     "id": "astalos_switchaxe",
     "name": "高級電龍翡翠斬擊斧",
-    "nameEn": "",
+    "nameEn": "High Raijard",
     "type": "switch-axe",
-    "attack": 1436,
+    "attack": 1363,
     "element": {
       "type": "thunder",
-      "value": 230
+      "value": 1436
     },
-    "affinity": 10,
+    "affinity": 20,
     "spSkill": "【SP】零距離解放突刺 Lv3",
     "skills": [
       {
-        "skillId": "thunder_attack",
+        "skillId": "thunder-attack",
         "level": 1
       }
     ],
@@ -1118,18 +1151,18 @@
   {
     "id": "almudron_switchaxe",
     "name": "泥翁封劍斧",
-    "nameEn": "",
+    "nameEn": "Almudron Axe",
     "type": "switch-axe",
-    "attack": 1458,
+    "attack": 1222,
     "element": {
       "type": "water",
-      "value": 164
+      "value": 1458
     },
     "affinity": 0,
     "spSkill": "【SP】零距離解放突刺 Lv3",
     "skills": [
       {
-        "skillId": "water_attack",
+        "skillId": "water-attack",
         "level": 1
       }
     ],
@@ -1142,15 +1175,15 @@
   {
     "id": "seregios_switchaxe",
     "name": "斬擊斧畢宿五",
-    "nameEn": "",
+    "nameEn": "Aksa Switch",
     "type": "switch-axe",
     "attack": 2335,
     "element": null,
-    "affinity": 15,
+    "affinity": 30,
     "spSkill": "【SP】零距離解放突刺 Lv3",
     "skills": [
       {
-        "skillId": "powerhouse",
+        "skillId": "attack-activation",
         "level": 1
       }
     ],
@@ -1163,7 +1196,7 @@
   {
     "id": "bone_switchaxe",
     "name": "骨製劍斧",
-    "nameEn": "",
+    "nameEn": "Bone Axe",
     "type": "switch-axe",
     "attack": 1912,
     "element": null,
@@ -1171,11 +1204,95 @@
     "spSkill": "【SP】零距離解放突刺 Lv3",
     "skills": [
       {
-        "skillId": "concentration",
+        "skillId": "sp-meter-boost",
         "level": 1
       }
     ],
     "image": "/images/weapons/bone_switchaxe.webp",
+    "phial": {
+      "name": "強擊瓶",
+      "description": "劍模式時的攻擊力上升"
+    }
+  },
+  {
+    "id": "stygian_zinogre_switchaxe",
+    "name": "獄界斬裂斧",
+    "nameEn": "Infernal Cleave-axe",
+    "type": "switch-axe",
+    "attack": 1506,
+    "element": {
+      "type": "dragon",
+      "value": 1506
+    },
+    "affinity": 0,
+    "spSkill": "【SP】零距離解放突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "dragon-attack",
+        "level": 1
+      },
+      {
+        "skillId": "dragon-attack-peak",
+        "level": 1
+      }
+    ],
+    "image": "/images/weapons/stygian_zinogre_switchaxe.webp",
+    "phial": {
+      "name": "強擊瓶",
+      "description": "劍模式時的攻擊力上升"
+    }
+  },
+  {
+    "id": "velkhana_switchaxe",
+    "name": "冰魔揚軍",
+    "nameEn": "Wicked Niddoq",
+    "type": "switch-axe",
+    "attack": 1444,
+    "element": {
+      "type": "ice",
+      "value": 1622
+    },
+    "affinity": 0,
+    "spSkill": "【SP】零距離解放突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
+      {
+        "skillId": "ice-attack",
+        "level": 1
+      },
+      {
+        "skillId": "ice-attack-peak",
+        "level": 1
+      }
+    ],
+    "image": "/images/weapons/velkhana_switchaxe.webp",
+    "phial": {
+      "name": "強擊瓶",
+      "description": "劍模式時的攻擊力上升"
+    }
+  },
+  {
+    "id": "brachydios_switchaxe",
+    "name": "碎龍斬斧",
+    "nameEn": "Dios Smasher",
+    "type": "switch-axe",
+    "attack": 2007,
+    "element": {
+      "type": "blast",
+      "value": 416
+    },
+    "affinity": 10,
+    "spSkill": "【SP】零距離解放突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "follow-up-blast",
+        "level": 1
+      }
+    ],
+    "image": "/images/weapons/brachydios_switchaxe.webp",
     "phial": {
       "name": "強擊瓶",
       "description": "劍模式時的攻擊力上升"

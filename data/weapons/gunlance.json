@@ -2,7 +2,7 @@
   {
     "id": "ore_gunlance",
     "name": "鐵銃槍",
-    "nameEn": "",
+    "nameEn": "Iron Gunlance",
     "type": "gunlance",
     "attack": 1912,
     "element": null,
@@ -10,7 +10,7 @@
     "spSkill": "【SP】龍擊砲 Lv3",
     "skills": [
       {
-        "skillId": "poison_resistance",
+        "skillId": "poison-resistance",
         "level": 2
       }
     ],
@@ -23,18 +23,18 @@
   {
     "id": "greatjagras_gunlance",
     "name": "牙龍銃槍",
-    "nameEn": "",
+    "nameEn": "Jagras Gunlance",
     "type": "gunlance",
-    "attack": 1373,
+    "attack": 1644,
     "element": {
       "type": "water",
-      "value": 38
+      "value": 754
     },
     "affinity": 0,
     "spSkill": "【SP】龍擊砲 Lv3",
     "skills": [
       {
-        "skillId": "health_boost",
+        "skillId": "health-boost",
         "level": 2
       }
     ],
@@ -47,7 +47,7 @@
   {
     "id": "barroth_gunlance",
     "name": "土砂龍銃槍",
-    "nameEn": "",
+    "nameEn": "Carapace Cannon",
     "type": "gunlance",
     "attack": 2103,
     "element": null,
@@ -55,7 +55,7 @@
     "spSkill": "【SP】龍擊砲 Lv3",
     "skills": [
       {
-        "skillId": "defense_boost",
+        "skillId": "defense-boost",
         "level": 2
       }
     ],
@@ -68,18 +68,18 @@
   {
     "id": "greatgirros_gunlance",
     "name": "牙龍銃槍【黃牙】",
-    "nameEn": "",
+    "nameEn": "Girros Gunlance",
     "type": "gunlance",
-    "attack": 1596,
+    "attack": 1912,
     "element": {
       "type": "paralysis",
-      "value": 100
+      "value": 417
     },
     "affinity": 0,
     "spSkill": "【SP】龍擊砲 Lv3",
     "skills": [
       {
-        "skillId": "sneak_attack",
+        "skillId": "sneak-attack",
         "level": 1
       }
     ],
@@ -92,18 +92,22 @@
   {
     "id": "viper_tobikadachi_gunlance",
     "name": "飛毒銃槍紅火花",
-    "nameEn": "",
+    "nameEn": "Crimson Ember",
     "type": "gunlance",
-    "attack": 1776,
+    "attack": 2127,
     "element": {
       "type": "paralysis",
-      "value": 201
+      "value": 364
     },
     "affinity": 10,
     "spSkill": "【SP】龍擊砲 Lv3",
     "skills": [
       {
-        "skillId": "burst_secret",
+        "skillId": "burst",
+        "level": 1
+      },
+      {
+        "skillId": "burst-peak",
         "level": 1
       }
     ],
@@ -116,18 +120,18 @@
   {
     "id": "tobikadachi_gunlance",
     "name": "脈衝銃槍",
-    "nameEn": "",
+    "nameEn": "Pulsar Gunlance",
     "type": "gunlance",
-    "attack": 1293,
+    "attack": 1549,
     "element": {
       "type": "thunder",
-      "value": 47
+      "value": 1131
     },
     "affinity": 0,
     "spSkill": "【SP】龍擊砲 Lv3",
     "skills": [
       {
-        "skillId": "evade_extender",
+        "skillId": "evade-extender",
         "level": 1
       }
     ],
@@ -140,18 +144,18 @@
   {
     "id": "anjanath_gunlance",
     "name": "火焰銃槍",
-    "nameEn": "",
+    "nameEn": "Blazing Gunlance",
     "type": "gunlance",
-    "attack": 1293,
+    "attack": 1549,
     "element": {
       "type": "fire",
-      "value": 117
+      "value": 1131
     },
     "affinity": 0,
     "spSkill": "【SP】龍擊砲 Lv3",
     "skills": [
       {
-        "skillId": "rising_tide",
+        "skillId": "battle-temper",
         "level": 1
       }
     ],
@@ -164,18 +168,18 @@
   {
     "id": "jyuratodus_gunlance",
     "name": "泥岩銃槍",
-    "nameEn": "",
+    "nameEn": "Madness Gunlance",
     "type": "gunlance",
-    "attack": 1293,
+    "attack": 1549,
     "element": {
       "type": "water",
-      "value": 75
+      "value": 1131
     },
     "affinity": 0,
     "spSkill": "【SP】龍擊砲 Lv3",
     "skills": [
       {
-        "skillId": "last_stand",
+        "skillId": "last-stand-guard",
         "level": 1
       }
     ],
@@ -188,18 +192,18 @@
   {
     "id": "fulgur_anjanath_gunlance",
     "name": "騰躍雷顎",
-    "nameEn": "",
+    "nameEn": "Ending Fulgur",
     "type": "gunlance",
     "attack": 1434,
     "element": {
       "type": "thunder",
-      "value": 230
+      "value": 1434
     },
-    "affinity": 10,
+    "affinity": 20,
     "spSkill": "【SP】龍擊砲 Lv3",
     "skills": [
       {
-        "skillId": "critical_element",
+        "skillId": "critical-element",
         "level": 1
       }
     ],
@@ -212,18 +216,18 @@
   {
     "id": "rathian_gunlance",
     "name": "公主銃槍",
-    "nameEn": "",
+    "nameEn": "Princess Panoply",
     "type": "gunlance",
-    "attack": 1516,
+    "attack": 1817,
     "element": {
       "type": "poison",
-      "value": 236
+      "value": 516
     },
     "affinity": 0,
     "spSkill": "【SP】龍擊砲 Lv3",
     "skills": [
       {
-        "skillId": "health_boost",
+        "skillId": "health-boost",
         "level": 2
       }
     ],
@@ -236,18 +240,18 @@
   {
     "id": "pink_rathian_gunlance",
     "name": "薔薇銃槍",
-    "nameEn": "",
+    "nameEn": "Rose Burst",
     "type": "gunlance",
-    "attack": 1756,
+    "attack": 2103,
     "element": {
       "type": "poison",
-      "value": 188
+      "value": 312
     },
     "affinity": 0,
     "spSkill": "【SP】龍擊砲 Lv3",
     "skills": [
       {
-        "skillId": "evade_extender",
+        "skillId": "evade-extender",
         "level": 1
       }
     ],
@@ -260,18 +264,18 @@
   {
     "id": "gold_rathian_gunlance",
     "name": "女王爆裂銃槍",
-    "nameEn": "",
+    "nameEn": "Queen's Panoply",
     "type": "gunlance",
-    "attack": 1675,
+    "attack": 2007,
     "element": {
       "type": "poison",
-      "value": 273
+      "value": 416
     },
-    "affinity": 20,
+    "affinity": 30,
     "spSkill": "【SP】龍擊砲 Lv3",
     "skills": [
       {
-        "skillId": "pursuit_poison",
+        "skillId": "follow-up-poison",
         "level": 2
       }
     ],
@@ -284,7 +288,7 @@
   {
     "id": "diablos_gunlance",
     "name": "角龍銃槍",
-    "nameEn": "",
+    "nameEn": "Diablos Gunlance",
     "type": "gunlance",
     "attack": 2371,
     "element": null,
@@ -305,18 +309,18 @@
   {
     "id": "legiana_gunlance",
     "name": "優雅銃槍",
-    "nameEn": "",
+    "nameEn": "Glacial Gunlance",
     "type": "gunlance",
-    "attack": 1420,
+    "attack": 1463,
     "element": {
       "type": "ice",
-      "value": 232
+      "value": 1420
     },
     "affinity": 0,
     "spSkill": "【SP】龍擊砲 Lv3",
     "skills": [
       {
-        "skillId": "divine_blessing",
+        "skillId": "divine-blessing",
         "level": 2
       }
     ],
@@ -329,12 +333,12 @@
   {
     "id": "rathalos_gunlance",
     "name": "火龍銃槍",
-    "nameEn": "",
+    "nameEn": "Rath Gunlance",
     "type": "gunlance",
-    "attack": 1420,
+    "attack": 1463,
     "element": {
       "type": "fire",
-      "value": 232
+      "value": 1420
     },
     "affinity": 0,
     "spSkill": "【SP】龍擊砲 Lv3",
@@ -353,19 +357,24 @@
   {
     "id": "azure_rathalos_gunlance",
     "name": "藍色城塔",
-    "nameEn": "",
+    "nameEn": "Blue Rook",
     "type": "gunlance",
-    "attack": 1682,
+    "attack": 2015,
     "element": {
       "type": "fire",
-      "value": 134
+      "value": 752
     },
     "affinity": 0,
     "spSkill": "【SP】龍擊砲 Lv3",
     "skills": [
       {
-        "skillId": "special_boost",
+        "skillId": "special-boost",
         "level": 1
+      },
+      {
+        "skillId": "special-boost-peak",
+        "level": 1,
+        "requiredCustomEnhancementLevel": 10
       }
     ],
     "image": "/images/weapons/azure_rathalos_gunlance.webp",
@@ -377,18 +386,18 @@
   {
     "id": "silver_rathalos_gunlance",
     "name": "古戰車銃槍",
-    "nameEn": "",
+    "nameEn": "Chariot Gun",
     "type": "gunlance",
-    "attack": 1345,
+    "attack": 1507,
     "element": {
       "type": "fire",
-      "value": 277
+      "value": 1345
     },
-    "affinity": 20,
+    "affinity": 30,
     "spSkill": "【SP】龍擊砲 Lv3",
     "skills": [
       {
-        "skillId": "critical_element",
+        "skillId": "critical-element",
         "level": 2
       }
     ],
@@ -401,7 +410,7 @@
   {
     "id": "banbaro_gunlance",
     "name": "巨牛大銃槍",
-    "nameEn": "",
+    "nameEn": "Mammoth Gunlance",
     "type": "gunlance",
     "attack": 2113,
     "element": null,
@@ -409,7 +418,7 @@
     "spSkill": "【SP】龍擊砲 Lv3",
     "skills": [
       {
-        "skillId": "firm_foothold",
+        "skillId": "firm-foothold",
         "level": 2
       }
     ],
@@ -422,18 +431,18 @@
   {
     "id": "barioth_gunlance",
     "name": "雙鬥冰牙",
-    "nameEn": "",
+    "nameEn": "Twinfang",
     "type": "gunlance",
-    "attack": 1191,
+    "attack": 1426,
     "element": {
       "type": "ice",
-      "value": 117
+      "value": 1131
     },
-    "affinity": 5,
+    "affinity": 20,
     "spSkill": "【SP】龍擊砲 Lv3",
     "skills": [
       {
-        "skillId": "evade_extender",
+        "skillId": "evade-extender",
         "level": 1
       }
     ],
@@ -446,18 +455,18 @@
   {
     "id": "zinogre_gunlance",
     "name": "王銃槍豪雷",
-    "nameEn": "",
+    "nameEn": "Usurper's Roar",
     "type": "gunlance",
-    "attack": 1420,
+    "attack": 1463,
     "element": {
       "type": "thunder",
-      "value": 232
+      "value": 1420
     },
     "affinity": 0,
     "spSkill": "【SP】龍擊砲 Lv3",
     "skills": [
       {
-        "skillId": "artful_dodger",
+        "skillId": "artful-dodger",
         "level": 1
       }
     ],
@@ -470,12 +479,12 @@
   {
     "id": "deviljho_gunlance",
     "name": "愚欲的銃槍",
-    "nameEn": "",
+    "nameEn": "Ravenous Gunlance",
     "type": "gunlance",
-    "attack": 1568,
+    "attack": 1579,
     "element": {
       "type": "dragon",
-      "value": 292
+      "value": 1568
     },
     "affinity": -30,
     "spSkill": "【SP】龍擊砲 Lv3",
@@ -494,18 +503,18 @@
   {
     "id": "khezu_gunlance",
     "name": "奇怪龍雷光槍",
-    "nameEn": "",
+    "nameEn": "Full Voltage",
     "type": "gunlance",
-    "attack": 1194,
+    "attack": 1429,
     "element": {
       "type": "thunder",
-      "value": 120
+      "value": 1134
     },
-    "affinity": 5,
+    "affinity": 20,
     "spSkill": "【SP】龍擊砲 Lv3",
     "skills": [
       {
-        "skillId": "peak_performance",
+        "skillId": "peak-performance",
         "level": 1
       }
     ],
@@ -518,16 +527,20 @@
   {
     "id": "kushaladaora_gunlance",
     "name": "鋼龍爪銃槍",
-    "nameEn": "",
+    "nameEn": "Daora's Brigia",
     "type": "gunlance",
-    "attack": 1553,
+    "attack": 1861,
     "element": {
       "type": "ice",
-      "value": 238
+      "value": 1210
     },
     "affinity": 0,
     "spSkill": "【SP】龍擊砲 Lv3",
     "skills": [
+      {
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
       {
         "skillId": "windproof",
         "level": 2
@@ -542,18 +555,18 @@
   {
     "id": "mizutsune_gunlance",
     "name": "狐燈槍浮世沐絕行",
-    "nameEn": "",
+    "nameEn": "Ukiyo no Yamiwo",
     "type": "gunlance",
-    "attack": 1436,
+    "attack": 1363,
     "element": {
       "type": "water",
-      "value": 230
+      "value": 1436
     },
-    "affinity": 10,
+    "affinity": 20,
     "spSkill": "【SP】龍擊砲 Lv3",
     "skills": [
       {
-        "skillId": "artful_dodger",
+        "skillId": "artful-dodger",
         "level": 1
       }
     ],
@@ -566,18 +579,18 @@
   {
     "id": "aknosom_gunlance",
     "name": "傘之銃槍",
-    "nameEn": "",
+    "nameEn": "Aknosom Gunlance",
     "type": "gunlance",
-    "attack": 1588,
+    "attack": 1903,
     "element": {
       "type": "fire",
-      "value": 59
+      "value": 785
     },
     "affinity": 0,
     "spSkill": "【SP】龍擊砲 Lv3",
     "skills": [
       {
-        "skillId": "lock_on",
+        "skillId": "lock-on",
         "level": 1
       }
     ],
@@ -590,12 +603,12 @@
   {
     "id": "magnamalo_gunlance",
     "name": "禍砲槍【封】",
-    "nameEn": "",
+    "nameEn": "Sinister Gunlance",
     "type": "gunlance",
-    "attack": 1516,
+    "attack": 1817,
     "element": {
       "type": "blast",
-      "value": 236
+      "value": 516
     },
     "affinity": 0,
     "spSkill": "【SP】龍擊砲 Lv3",
@@ -614,18 +627,18 @@
   {
     "id": "rajang_gunlance",
     "name": "鬼銃槍",
-    "nameEn": "",
+    "nameEn": "Demon Gunlance",
     "type": "gunlance",
-    "attack": 1568,
+    "attack": 1579,
     "element": {
       "type": "thunder",
-      "value": 292
+      "value": 1568
     },
     "affinity": -30,
     "spSkill": "【SP】龍擊砲 Lv3",
     "skills": [
       {
-        "skillId": "guarding_reload",
+        "skillId": "load-guard",
         "level": 1
       }
     ],
@@ -638,16 +651,20 @@
   {
     "id": "nergigante_gunlance",
     "name": "燒滅種火",
-    "nameEn": "",
+    "nameEn": "Eradication Flame",
     "type": "gunlance",
-    "attack": 1553,
+    "attack": 1861,
     "element": {
       "type": "dragon",
-      "value": 238
+      "value": 1210
     },
     "affinity": 0,
     "spSkill": "【SP】龍擊砲 Lv3",
     "skills": [
+      {
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
       {
         "skillId": "partbreaker",
         "level": 2
@@ -662,18 +679,18 @@
   {
     "id": "lagombi_gunlance",
     "name": "白兔銃槍",
-    "nameEn": "",
+    "nameEn": "Lagomberator",
     "type": "gunlance",
-    "attack": 1588,
+    "attack": 1903,
     "element": {
       "type": "ice",
-      "value": 38
+      "value": 785
     },
     "affinity": 0,
     "spSkill": "【SP】龍擊砲 Lv3",
     "skills": [
       {
-        "skillId": "lock_on",
+        "skillId": "lock-on",
         "level": 1
       }
     ],
@@ -686,18 +703,18 @@
   {
     "id": "volvidon_gunlance",
     "name": "破壞射擊",
-    "nameEn": "",
+    "nameEn": "Shattershot",
     "type": "gunlance",
-    "attack": 1516,
+    "attack": 1817,
     "element": {
       "type": "paralysis",
-      "value": 176
+      "value": 516
     },
     "affinity": 0,
     "spSkill": "【SP】龍擊砲 Lv3",
     "skills": [
       {
-        "skillId": "evade_extender",
+        "skillId": "evade-extender",
         "level": 1
       }
     ],
@@ -710,7 +727,7 @@
   {
     "id": "tigrex_gunlance",
     "name": "轟龍爆破銃槍",
-    "nameEn": "",
+    "nameEn": "Tiger Blast",
     "type": "gunlance",
     "attack": 2633,
     "element": null,
@@ -718,7 +735,7 @@
     "spSkill": "【SP】龍擊砲 Lv3",
     "skills": [
       {
-        "skillId": "brutal_strike",
+        "skillId": "maximum-might",
         "level": 1
       }
     ],
@@ -731,7 +748,7 @@
   {
     "id": "brute_tigrex_gunlance",
     "name": "劫難爆破銃槍",
-    "nameEn": "",
+    "nameEn": "Accursed Blast",
     "type": "gunlance",
     "attack": 2633,
     "element": null,
@@ -739,7 +756,7 @@
     "spSkill": "【SP】龍擊砲 Lv3",
     "skills": [
       {
-        "skillId": "perfect_evade_attack_boost",
+        "skillId": "aggressive-dodger",
         "level": 5
       }
     ],
@@ -752,12 +769,12 @@
   {
     "id": "bazelgeuse_gunlance",
     "name": "爆鱗龍銃槍",
-    "nameEn": "",
+    "nameEn": "Bazel Buster",
     "type": "gunlance",
-    "attack": 1942,
+    "attack": 2327,
     "element": {
       "type": "blast",
-      "value": 201
+      "value": 309
     },
     "affinity": -30,
     "spSkill": "【SP】龍擊砲 Lv3",
@@ -776,18 +793,18 @@
   {
     "id": "glavenus_gunlance",
     "name": "斬龍破壞砲",
-    "nameEn": "",
+    "nameEn": "Glavenus Buster",
     "type": "gunlance",
-    "attack": 1568,
+    "attack": 1579,
     "element": {
       "type": "fire",
-      "value": 292
+      "value": 1568
     },
     "affinity": -30,
     "spSkill": "【SP】龍擊砲 Lv3",
     "skills": [
       {
-        "skillId": "brutal_strike",
+        "skillId": "maximum-might",
         "level": 1
       }
     ],
@@ -800,18 +817,22 @@
   {
     "id": "chameleos_gunlance",
     "name": "劇毒香氣",
-    "nameEn": "",
+    "nameEn": "Venomous Attar",
     "type": "gunlance",
-    "attack": 1741,
+    "attack": 2086,
     "element": {
       "type": "poison",
-      "value": 347
+      "value": 526
     },
     "affinity": 0,
     "spSkill": "【SP】龍擊砲 Lv3",
     "skills": [
       {
-        "skillId": "abnormal_status_enhancement",
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
+      {
+        "skillId": "status-sneak-attack",
         "level": 2
       }
     ],
@@ -824,11 +845,11 @@
   {
     "id": "nargacuga_gunlance",
     "name": "隱密加農砲",
-    "nameEn": "",
+    "nameEn": "Hidden Cannon",
     "type": "gunlance",
     "attack": 2082,
     "element": null,
-    "affinity": 25,
+    "affinity": 40,
     "spSkill": "【SP】龍擊砲 Lv3",
     "skills": [
       {
@@ -845,18 +866,22 @@
   {
     "id": "namielle_gunlance",
     "name": "暴君‧水碟",
-    "nameEn": "",
+    "nameEn": "Black Ephyra",
     "type": "gunlance",
-    "attack": 1335,
+    "attack": 1591,
     "element": {
       "type": "water",
-      "value": 276
+      "value": 1335
     },
-    "affinity": 15,
+    "affinity": 20,
     "spSkill": "【SP】龍擊砲 Lv3",
     "skills": [
       {
-        "skillId": "weakness_exploit",
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
+      {
+        "skillId": "weakness-exploit",
         "level": 1
       }
     ],
@@ -869,7 +894,7 @@
   {
     "id": "garangolm_gunlance",
     "name": "剛纏獸刺刀",
-    "nameEn": "",
+    "nameEn": "Golm Benedictus",
     "type": "gunlance",
     "attack": 2371,
     "element": null,
@@ -877,7 +902,7 @@
     "spSkill": "【SP】龍擊砲 Lv3",
     "skills": [
       {
-        "skillId": "disable_perfect_evade",
+        "skillId": "resolute",
         "level": 1
       }
     ],
@@ -890,18 +915,18 @@
   {
     "id": "lunagaron_gunlance",
     "name": "冷月之銃槍",
-    "nameEn": "",
+    "nameEn": "Frostmoon Gunlance",
     "type": "gunlance",
-    "attack": 1458,
+    "attack": 1222,
     "element": {
       "type": "ice",
-      "value": 164
+      "value": 1458
     },
     "affinity": 0,
     "spSkill": "【SP】龍擊砲 Lv3",
     "skills": [
       {
-        "skillId": "high_performance_ice",
+        "skillId": "hi-ice",
         "level": 1
       }
     ],
@@ -914,18 +939,18 @@
   {
     "id": "espinas_gunlance",
     "name": "薔薇大砲",
-    "nameEn": "",
+    "nameEn": "Rosenkanone",
     "type": "gunlance",
-    "attack": 1756,
+    "attack": 2103,
     "element": {
       "type": "poison",
-      "value": 183
+      "value": 294
     },
-    "affinity": 10,
+    "affinity": 20,
     "spSkill": "【SP】龍擊砲 Lv3",
     "skills": [
       {
-        "skillId": "part_break_special_boost",
+        "skillId": "special-partbreaker",
         "level": 2
       }
     ],
@@ -938,18 +963,22 @@
   {
     "id": "malzeno_gunlance",
     "name": "灼熱之悲鳴",
-    "nameEn": "",
+    "nameEn": "Scorched Schleien",
     "type": "gunlance",
-    "attack": 1622,
+    "attack": 1444,
     "element": {
       "type": "dragon",
-      "value": 334
+      "value": 1622
     },
     "affinity": 0,
     "spSkill": "【SP】龍擊砲 Lv3",
     "skills": [
       {
-        "skillId": "high_performance_dragon",
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
+      {
+        "skillId": "hi-dragon",
         "level": 1
       }
     ],
@@ -962,18 +991,18 @@
   {
     "id": "quematrice_gunlance",
     "name": "炎尾巨砲",
-    "nameEn": "",
+    "nameEn": "Quematrice Culebrina",
     "type": "gunlance",
-    "attack": 1458,
+    "attack": 1222,
     "element": {
       "type": "fire",
-      "value": 68
+      "value": 1458
     },
     "affinity": 0,
     "spSkill": "【SP】龍擊砲 Lv3",
     "skills": [
       {
-        "skillId": "bravery",
+        "skillId": "valor",
         "level": 1
       }
     ],
@@ -986,18 +1015,18 @@
   {
     "id": "astalos_gunlance",
     "name": "黑暗戰車",
-    "nameEn": "",
+    "nameEn": "Dark Chariot",
     "type": "gunlance",
-    "attack": 1436,
+    "attack": 1363,
     "element": {
       "type": "thunder",
-      "value": 230
+      "value": 1436
     },
-    "affinity": 10,
+    "affinity": 20,
     "spSkill": "【SP】龍擊砲 Lv3",
     "skills": [
       {
-        "skillId": "thunder_attack",
+        "skillId": "thunder-attack",
         "level": 1
       }
     ],
@@ -1010,18 +1039,18 @@
   {
     "id": "almudron_gunlance",
     "name": "泥翁濘銃槍",
-    "nameEn": "",
+    "nameEn": "Almudron Gunlance",
     "type": "gunlance",
-    "attack": 1458,
+    "attack": 1222,
     "element": {
       "type": "water",
-      "value": 164
+      "value": 1458
     },
     "affinity": 0,
     "spSkill": "【SP】龍擊砲 Lv3",
     "skills": [
       {
-        "skillId": "water_attack",
+        "skillId": "water-attack",
         "level": 1
       }
     ],
@@ -1034,15 +1063,15 @@
   {
     "id": "seregios_gunlance",
     "name": "銃槍敗臼一",
-    "nameEn": "",
+    "nameEn": "Jaya Gunlance",
     "type": "gunlance",
     "attack": 2335,
     "element": null,
-    "affinity": 15,
+    "affinity": 30,
     "spSkill": "【SP】龍擊砲 Lv3",
     "skills": [
       {
-        "skillId": "powerhouse",
+        "skillId": "attack-activation",
         "level": 1
       }
     ],
@@ -1055,7 +1084,7 @@
   {
     "id": "bone_gunlance",
     "name": "骨銃槍",
-    "nameEn": "",
+    "nameEn": "Bone Gunlance",
     "type": "gunlance",
     "attack": 1912,
     "element": null,
@@ -1063,7 +1092,7 @@
     "spSkill": "【SP】龍擊砲 Lv3",
     "skills": [
       {
-        "skillId": "concentration",
+        "skillId": "sp-meter-boost",
         "level": 1
       }
     ],
@@ -1071,6 +1100,114 @@
     "shellingType": {
       "name": "放射型",
       "description": "前方攻擊範圍廣，蓄力的威力高"
+    }
+  },
+  {
+    "id": "pukeipukei_gunlance",
+    "name": "毒妖鳥銃槍",
+    "nameEn": "Pukei Gunlance",
+    "type": "gunlance",
+    "attack": 1912,
+    "element": {
+      "type": "poison",
+      "value": 417
+    },
+    "affinity": 0,
+    "spSkill": "【SP】龍擊砲 Lv3",
+    "skills": [
+      {
+        "skillId": "sneak-attack",
+        "level": 1
+      }
+    ],
+    "image": "/images/weapons/pukeipukei_gunlance.webp",
+    "shellingType": {
+      "name": "擴散型",
+      "description": "砲擊和龍擊砲的威力高"
+    }
+  },
+  {
+    "id": "stygian_zinogre_gunlance",
+    "name": "獄銃槍龍血",
+    "nameEn": "Brimstren Drakeblood",
+    "type": "gunlance",
+    "attack": 1506,
+    "element": {
+      "type": "dragon",
+      "value": 1506
+    },
+    "affinity": 0,
+    "spSkill": "【SP】龍擊砲 Lv3",
+    "skills": [
+      {
+        "skillId": "dragon-attack",
+        "level": 1
+      },
+      {
+        "skillId": "dragon-attack-peak",
+        "level": 1
+      }
+    ],
+    "image": "/images/weapons/stygian_zinogre_gunlance.webp",
+    "shellingType": {
+      "name": "通常型",
+      "description": "裝填數多，全彈發射的威力高"
+    }
+  },
+  {
+    "id": "velkhana_gunlance",
+    "name": "冰砦血仇",
+    "nameEn": "Vorpal Icefort",
+    "type": "gunlance",
+    "attack": 1444,
+    "element": {
+      "type": "ice",
+      "value": 1622
+    },
+    "affinity": 0,
+    "spSkill": "【SP】龍擊砲 Lv3",
+    "skills": [
+      {
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
+      {
+        "skillId": "ice-attack",
+        "level": 1
+      },
+      {
+        "skillId": "ice-attack-peak",
+        "level": 1
+      }
+    ],
+    "image": "/images/weapons/velkhana_gunlance.webp",
+    "shellingType": {
+      "name": "通常型",
+      "description": "裝填數多，全彈發射的威力高"
+    }
+  },
+  {
+    "id": "brachydios_gunlance",
+    "name": "碎龍破壞砲",
+    "nameEn": "Brachydios Buster",
+    "type": "gunlance",
+    "attack": 2007,
+    "element": {
+      "type": "blast",
+      "value": 416
+    },
+    "affinity": 10,
+    "spSkill": "【SP】龍擊砲 Lv3",
+    "skills": [
+      {
+        "skillId": "follow-up-blast",
+        "level": 1
+      }
+    ],
+    "image": "/images/weapons/brachydios_gunlance.webp",
+    "shellingType": {
+      "name": "通常型",
+      "description": "裝填數多，全彈發射的威力高"
     }
   }
 ]
