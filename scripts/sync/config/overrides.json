@@ -1,0 +1,9 @@
+{
+  "$comment": [
+    "Manual corrections applied AFTER fetching official data. Use only when the official site is wrong or a field must stay hand-maintained.",
+    "Shape: { \"<dataset>\": { \"<record id>\": { \"<field>\": <value> } } }. Datasets: armor, weapons, skills. Each override is listed in the sync report."
+  ],
+  "armor": {},
+  "weapons": {},
+  "skills": {}
+}
