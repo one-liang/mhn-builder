@@ -47,7 +47,6 @@ export interface BuildResult {
 export interface AutoBuildResult {
   builds: BuildResult[]
   searchedCombos: number
-  elapsedMs: number
 }
 
 interface SkillRecord {
@@ -318,7 +317,6 @@ export function runAutoBuild(
   allArmor: Record<ArmorPart, Armor[]>,
   skillMap: Map<string, SkillRecord>,
 ): AutoBuildResult {
-  const t0 = performance.now()
   const topN = request.topK ?? 3
   const includeDriftstones = request.includeDriftstones ?? false
   const driftstoneSkillIds = request.driftstoneSkillIds ?? new Set<string>()
@@ -427,6 +425,5 @@ export function runAutoBuild(
   return {
     builds,
     searchedCombos,
-    elapsedMs: Math.round(performance.now() - t0),
   }
 }

@@ -62,13 +62,6 @@ function swapsFromBest(r: BuildResult): { part: string; name: string }[] {
     .filter(p => r.armor[p]?.id !== best.armor[p]?.id)
     .map(p => ({ part: getPartName(p), name: r.armor[p]?.name ?? '不裝備' }))
 }
-
-const searchedLabel = computed(() => autoBuildStore.searchedCombos.toLocaleString('zh-TW'))
-const elapsedLabel = computed(() =>
-  autoBuildStore.elapsedMs < 1000
-    ? `${Math.round(autoBuildStore.elapsedMs)} 毫秒`
-    : `${(autoBuildStore.elapsedMs / 1000).toFixed(1)} 秒`
-)
 </script>
 
 <template>
@@ -83,9 +76,7 @@ const elapsedLabel = computed(() =>
       <template v-else>
         <fieldset class="p-4 pb-3">
           <legend class="sr-only">搜尋結果</legend>
-          <p class="text-[13px] text-ink-2 mb-2">
-            搜尋 <span class="stamp text-[15px] font-bold text-ink">{{ searchedLabel }}</span> 組合，耗時 {{ elapsedLabel }}。點選方案即套用到下方裝備。
-          </p>
+          <p class="text-[13px] text-ink-2 mb-2">點選方案即套用到下方裝備。</p>
           <div class="grid gap-2" :class="autoBuildStore.results.length > 1 ? 'grid-cols-3' : 'grid-cols-1'">
             <button
               v-for="r in autoBuildStore.results"

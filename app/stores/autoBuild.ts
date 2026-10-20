@@ -25,8 +25,6 @@ export const useAutoBuildStore = defineStore('autoBuild', () => {
   const results = ref<BuildResult[]>([])
   const isRunning = ref(false)
   const hasRun = ref(false)
-  const searchedCombos = ref(0)
-  const elapsedMs = ref(0)
   const error = ref<string | null>(null)
   const appliedRank = ref<number | null>(null)
 
@@ -112,8 +110,6 @@ export const useAutoBuildStore = defineStore('autoBuild', () => {
         skillMap,
       )
       results.value = result.builds
-      searchedCombos.value = result.searchedCombos
-      elapsedMs.value = result.elapsedMs
       hasRun.value = true
 
       // Auto-apply the best result
@@ -161,8 +157,6 @@ export const useAutoBuildStore = defineStore('autoBuild', () => {
     results,
     isRunning,
     hasRun,
-    searchedCombos,
-    elapsedMs,
     error,
     appliedRank,
     // Lock state
