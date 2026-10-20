@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { Sparkle } from 'lucide-vue-next'
 import { useSkillStore } from '~/stores/skill'
+import { searchList } from '~/lib/search'
 import driftstoneData from '../../data/driftstone-skills.json'
 
 const props = defineProps<{
@@ -61,13 +62,7 @@ const filteredSkills = computed(() => {
     }
   }
 
-  const q = search.value.trim().toLowerCase()
-  if (q) {
-    list = list.filter(s =>
-      s.name.toLowerCase().includes(q) || (s.nameEn ?? '').toLowerCase().includes(q)
-    )
-  }
-  return list
+  return searchList(list, search.value, s => ({ primary: s.name, others: [s.nameEn] }))
 })
 
 function close() {

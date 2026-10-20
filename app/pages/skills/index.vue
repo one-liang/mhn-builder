@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ChevronRight } from 'lucide-vue-next'
 import { useSkillStore } from '~/stores/skill'
+import { searchList } from '~/lib/search'
 
 useSeoMeta({
   title: '技能一覽 | 最強獵人 - MHN 配裝模擬器',
@@ -13,18 +14,14 @@ const skillStore = useSkillStore()
 await skillStore.load()
 
 const activeCategory = ref('all')
-const searchQuery = ref('')
+const searchQuery = useQuerySearch()
 
-const filteredSkills = computed(() => {
-  let result = skillStore.getByCategory(activeCategory.value)
-  if (searchQuery.value.trim()) {
-    const q = searchQuery.value.trim().toLowerCase()
-    result = result.filter(
-      s => s.name.includes(q) || s.nameEn.toLowerCase().includes(q) || s.description.includes(q)
-    )
-  }
-  return result
-})
+const filteredSkills = computed(() =>
+  searchList(skillStore.getByCategory(activeCategory.value), searchQuery.value, s => ({
+    primary: s.name,
+    others: [s.nameEn, s.description],
+  }))
+)
 </script>
 
 <template>

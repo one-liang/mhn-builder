@@ -4,6 +4,8 @@ import type { Armor, Weapon } from '~/stores/equipment'
 import { useEquipmentStore, getPartName } from '~/stores/equipment'
 import { useSkillStore } from '~/stores/skill'
 import { useBuildStore, type BuildSlot } from '~/stores/build'
+import { monsterOfArmor, monsterOfWeapon, monsterTermsOf } from '~/lib/monsters'
+import { searchList } from '~/lib/search'
 
 type SelectableItem = Weapon | Armor
 
@@ -92,15 +94,20 @@ const items = computed<SelectableItem[]>(() => {
   return equipmentStore.getArmorByPart(activeArmorSlot.value as Armor['part'])
 })
 
-const filteredItems = computed(() => {
-  const q = search.value.trim().toLowerCase()
-  if (!q) return items.value
-  return items.value.filter((item) => {
-    const name = item.name.toLowerCase()
-    const nameEn = (item.nameEn || '').toLowerCase()
-    return name.includes(q) || nameEn.includes(q)
-  })
-})
+function monsterOf(item: SelectableItem) {
+  return isWeaponSlot.value ? monsterOfWeapon(item.id) : monsterOfArmor(item.id)
+}
+
+const filteredItems = computed(() =>
+  searchList(items.value, search.value, item => ({
+    primary: item.name,
+    others: [
+      item.nameEn,
+      ...('setName' in item ? [item.setName, item.setNameEn] : []),
+      ...monsterTermsOf(monsterOf(item)),
+    ],
+  }))
+)
 
 function itemSkills(item: SelectableItem): { id: string; name: string; level: number }[] {
   return item.skills.map((s) => ({
@@ -138,7 +145,7 @@ function onClear() {
         <SearchField
           v-model="search"
           :label="`搜尋${slotLabel}`"
-          :placeholder="`搜尋${slotLabel}名稱`"
+          :placeholder="`搜尋${slotLabel}或魔物名稱`"
           autofocus
         />
       </div>
@@ -173,7 +180,7 @@ function onClear() {
           :aria-current="current?.id === item.id ? 'true' : undefined"
           @click="onSelect(item)"
         >
-          <span class="plate flex items-center justify-center size-12 flex-shrink-0 overflow-hidden">
+          <span class="relative plate flex items-center justify-center size-12 flex-shrink-0">
             <img
               :src="imageUrl(item.image)"
               :alt="item.name"
@@ -182,6 +189,15 @@ function onClear() {
               class="size-full object-contain"
               loading="lazy"
               @error="($event.target as HTMLImageElement).style.visibility = 'hidden'"
+            />
+            <img
+              v-if="monsterOf(item)"
+              :src="imageUrl(monsterOf(item)!.icon)"
+              :alt="monsterOf(item)!.name"
+              width="22"
+              height="22"
+              class="absolute -right-1 -bottom-1 size-[22px] rounded-full bg-panel border border-rule object-contain p-px"
+              loading="lazy"
             />
           </span>
           <span class="flex-1 min-w-0">
@@ -208,7 +224,7 @@ function onClear() {
     </ul>
 
     <p v-if="!filteredItems.length" class="px-4 py-12 text-center text-[14px] text-ink-2">
-      <template v-if="search.trim()">找不到名稱含「{{ search.trim() }}」的{{ slotLabel }}</template>
+      <template v-if="search.trim()">找不到符合「{{ search.trim() }}」的{{ slotLabel }}</template>
       <template v-else>這個分類目前沒有{{ slotLabel }}資料</template>
     </p>
 

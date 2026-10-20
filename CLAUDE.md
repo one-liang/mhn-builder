@@ -46,6 +46,7 @@ data/
   skills.json
   driftstone-skills.json
   armor-monsters.json  # Armor id prefix -> set icon key (public/images/monsters/<key>.webp)
+  monsters.json        # Official monsters (names, crest icon, hand-kept search aliases) + armor set / weapon -> monster links
   materials.json       # Hand-maintained, not synced (unused by the UI)
 scripts/
   sync/           # Official data sync (`npm run sync:data`), zero-dependency Node ESM
@@ -94,6 +95,11 @@ Armor pieces (e.g., `data/armor/head.json`) contain: `id`, `name`, `nameEn`, `se
 - **Keep-missing policy** — records that disappear upstream are kept unchanged and listed in the report; existing records keep their position and new ones are appended in official order.
 - **`config/overrides.json`** — manual field corrections applied on top of official data (`{ dataset: { id: { field: value } } }`). Official data wins everywhere else — e.g. `skills.json` `description` is generated from the official level text (Lv1～max ranges, or the Lv1 text when the wording changes between levels).
 - **`data/armor-monsters.json`** — new sets get an entry (icon = the set's chest image); `leather`/`alloy` icons are hand-picked.
+- **`data/monsters.json`** (`monsters.mjs`) — built from the `monsters` object both list islands embed: names, crest (`public/images/monster-crests/<id>.webp`), and armor set / weapon links via each record's official `series` (`SERIES_<MONSTERID>`; material series such as ore/bone have no monster). `aliases` is hand-maintained (search nicknames) and preserved across syncs.
+
+### Search (`app/lib/search.ts`, `app/lib/monsters.ts`)
+
+Every list filter and the header's site search (`SiteSearch.vue`, also opened with `/`) share `searchList()`: whitespace tokens, each must be a substring of the record's name or one of its other terms (English name, set name, and its monster's names/aliases), width/case folded. List pages keep the query in `?q=` via `useQuerySearch()`.
 - **Weekly Action** (`.github/workflows/sync-data.yml`) — Mondays 09:23 Asia/Taipei + manual dispatch: sync, `validate:data`, `npm run generate`, then opens/updates one PR `chore/data-sync` → `main` with the report as its body. It never pushes to `main`; merging the PR deploys. Each run rebuilds `chore/data-sync` from `main` and force-pushes it, so hand edits go on `main` (normally into `config/overrides.json`), never onto that branch. If the open PR has commits the workflow did not make, the run fails before the PR step rather than dropping them.
 
 ## Key Conventions

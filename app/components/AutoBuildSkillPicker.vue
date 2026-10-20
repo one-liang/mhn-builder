@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { Check, ChevronDown } from 'lucide-vue-next'
 import { useSkillStore } from '~/stores/skill'
+import { searchList } from '~/lib/search'
 
 const props = defineProps<{
   open: boolean
@@ -40,13 +41,11 @@ watch(
   }
 )
 
-const searchResults = computed(() => {
-  const q = search.value.trim().toLowerCase()
-  if (!q) return []
-  return skillStore.skills.filter(s =>
-    s.name.toLowerCase().includes(q) || (s.nameEn ?? '').toLowerCase().includes(q)
-  )
-})
+const searchResults = computed(() =>
+  search.value.trim()
+    ? searchList(skillStore.skills, search.value, s => ({ primary: s.name, others: [s.nameEn] }))
+    : []
+)
 
 const skillsPerCategory = computed(() =>
   Object.fromEntries(

@@ -2,6 +2,7 @@
 import { ArrowLeft, ChevronRight } from 'lucide-vue-next'
 import { useEquipmentStore, getWeaponTypeName } from '~/stores/equipment'
 import { useSkillStore } from '~/stores/skill'
+import { monsterOfWeapon } from '~/lib/monsters'
 
 const route = useRoute()
 const type = route.params.type as string
@@ -14,6 +15,7 @@ await Promise.all([equipmentStore.load(), skillStore.load()])
 
 const weapon = computed(() => equipmentStore.getWeaponById(type, slug))
 const { imageUrl } = useImageUrl()
+const monster = computed(() => (weapon.value ? monsterOfWeapon(weapon.value.id) : null))
 
 useSeoMeta({
   title: () => weapon.value ? `${weapon.value.name} | 最強獵人 - MHN 配裝模擬器` : '武器詳情 | 最強獵人',
@@ -58,6 +60,14 @@ const elementNames: Record<string, string> = {
           <h1 class="text-[24px] leading-tight font-black tracking-[0.03em]">{{ weapon.name }}</h1>
           <p class="mt-1 flex items-center gap-1.5 text-[13px] text-ink-2">
             <WeaponTypeIcon :type="type" class="size-4" aria-hidden="true" />{{ typeName }}
+            <template v-if="monster">
+              <span class="text-rule-strong" aria-hidden="true">|</span>
+              <img :src="imageUrl(monster.icon)" alt="" width="20" height="20" class="size-5 object-contain" />
+              <NuxtLink
+                :to="`/weapons?q=${encodeURIComponent(monster.name)}`"
+                class="underline underline-offset-4 decoration-rule-strong hover:text-ink"
+              >{{ monster.name }}</NuxtLink>
+            </template>
           </p>
         </div>
       </header>

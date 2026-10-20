@@ -6,7 +6,7 @@
 /** GitHub caps PR bodies at 65,536 characters; stay well below. */
 export const REPORT_LIMIT = 60000
 
-const DATASET_LABEL = { skills: '技能／漂流石', armor: '防具', weapons: '武器' }
+const DATASET_LABEL = { skills: '技能／漂流石', armor: '防具', weapons: '武器', monsters: '魔物' }
 const IMAGE_MODE = { downloaded: '已下載', pending: '待下載（dry-run）', skipped: '已略過（--skip-images）' }
 
 /** Successively smaller limits, tried until the report fits. */
