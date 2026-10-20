@@ -46,14 +46,18 @@ function applyShareParams() {
 // the DOM showing the empty build, so restore it once the app is ready: this browser's
 // saved build first, then a share link's params on top.
 const nuxtApp = useNuxtApp()
+const autoOpen = ref(autoBuildStore.targetSkills.length > 0 || autoBuildStore.hasRun)
 let restored = !(import.meta.client && nuxtApp.isHydrating)
 if (restored) {
   await buildStore.hydrate(queryParams.value)
+  autoBuildStore.restoreSettings()
 } else {
   onNuxtReady(async () => {
     await buildStore.hydrate({})
     restored = true
     applyShareParams()
+    autoBuildStore.restoreSettings()
+    if (autoBuildStore.targetSkills.length) autoOpen.value = true
   })
 }
 watch(() => route.fullPath, () => { if (import.meta.client && restored) applyShareParams() })
@@ -128,8 +132,6 @@ const filledSocketCount = computed(() =>
   )
 )
 
-// ── Auto-build ────────────────────────────────────────────────────────
-const autoOpen = ref(autoBuildStore.targetSkills.length > 0 || autoBuildStore.hasRun)
 
 function onAutoBuildSearchComplete() {
   nextTick(() => {
@@ -234,7 +236,7 @@ function resetBuild() {
             <span class="text-[15px] font-bold">自動配裝</span>
             <span class="text-[13px] font-normal truncate" :class="autoOpen ? 'text-shell-ink-2' : 'text-ink-2'">
               <template v-if="autoBuildStore.targetSkills.length">已設 {{ autoBuildStore.targetSkills.length }} 項目標技能</template>
-              <template v-else>選技能，自動找出防具組合</template>
+              <template v-else>選技能，自動找出武器與防具組合</template>
             </span>
             <ChevronDown
               :size="18"

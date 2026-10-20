@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import { LoaderCircle, Lock, Plus, Search, SlidersHorizontal, X } from 'lucide-vue-next'
+import { Lock, Plus, Search, SlidersHorizontal, X } from 'lucide-vue-next'
 import { useAutoBuildStore } from '~/stores/autoBuild'
 import { useSkillStore } from '~/stores/skill'
-import { getPartName } from '~/stores/equipment'
+import { getPartName, getWeaponTypeName, WEAPON_TYPES } from '~/stores/equipment'
+import { useBuildStore } from '~/stores/build'
 import type { BuildResult } from '~/stores/autoBuild'
 
 const emit = defineEmits<{
@@ -11,6 +12,7 @@ const emit = defineEmits<{
 
 const autoBuildStore = useAutoBuildStore()
 const skillStore = useSkillStore()
+const buildStore = useBuildStore()
 
 const skillPickerOpen = ref(false)
 const includeId = useId()
@@ -58,16 +60,50 @@ function missingTotal(r: BuildResult) {
 function swapsFromBest(r: BuildResult): { part: string; name: string }[] {
   const best = autoBuildStore.results[0]
   if (!best || best.rank === r.rank) return []
-  return PARTS
+  const swaps = PARTS
     .filter(p => r.armor[p]?.id !== best.armor[p]?.id)
     .map(p => ({ part: getPartName(p), name: r.armor[p]?.name ?? '不裝備' }))
+  if (r.weapon?.id !== best.weapon?.id) swaps.unshift({ part: '武器', name: r.weapon?.name ?? '不裝備' })
+  return swaps
 }
+
+const weaponTypes = WEAPON_TYPES.map(type => ({ type, name: getWeaponTypeName(type) }))
+
+// Weapon skills that only appear after custom enhancement, on the applied plan's weapon
+const enhancementNotes = computed(() => {
+  const w = appliedResult.value?.weapon
+  if (!w) return []
+  return w.skills
+    .filter(s => s.requiredCustomEnhancementLevel)
+    .map(s => ({
+      id: s.skillId,
+      name: skillStore.getById(s.skillId)?.name ?? s.skillId,
+      level: s.requiredCustomEnhancementLevel!,
+    }))
+})
 </script>
 
 <template>
   <div class="bg-panel border border-rule rounded-md">
+    <!-- Searching: placeholder plans and a way out -->
+    <div v-if="autoBuildStore.isRunning" class="p-4" role="status" aria-live="polite">
+      <p class="sr-only">搜尋中</p>
+      <div class="grid grid-cols-3 gap-2" aria-hidden="true">
+        <div v-for="i in 3" :key="i" class="skeleton h-[104px] rounded-sm" />
+      </div>
+      <div class="skeleton mt-3 h-4 w-2/3 rounded-sm" aria-hidden="true" />
+      <button
+        type="button"
+        class="mt-4 w-full flex items-center justify-center gap-2 h-12 rounded-sm border border-rule-strong text-[15px] font-bold text-ink hover:bg-inset transition-colors duration-200"
+        @click="autoBuildStore.cancel()"
+      >
+        <X :size="18" :stroke-width="2.25" aria-hidden="true" />
+        取消搜尋
+      </button>
+    </div>
+
     <!-- Results -->
-    <template v-if="autoBuildStore.hasRun">
+    <template v-else-if="autoBuildStore.hasRun">
       <div v-if="!autoBuildStore.results.length" class="p-4">
         <p class="text-[15px] font-bold">找不到符合條件的配裝</p>
         <p class="mt-1 text-[14px] text-ink-2">試著降低目標等級、減少目標技能，或解除部位鎖定。</p>
@@ -120,6 +156,17 @@ function swapsFromBest(r: BuildResult): { part: string; name: string }[] {
             </button>
           </div>
         </fieldset>
+
+        <div v-if="appliedResult?.weapon" class="px-4 pb-3 text-[14px]">
+          <p>
+            <span class="text-ink-2">武器</span>
+            <span class="ml-1.5 font-bold">{{ appliedResult.weapon.name }}</span>
+            <span class="ml-1.5 text-[13px] text-ink-2">攻擊 <span class="stamp text-[14px] font-bold text-ink">{{ appliedResult.weapon.attack }}</span></span>
+          </p>
+          <p v-for="n in enhancementNotes" :key="n.id" class="mt-0.5 text-[13px] text-ink-2">
+            {{ n.name }}需強化 <span class="stamp text-[14px] font-bold text-ink">Lv{{ n.level }}</span>
+          </p>
+        </div>
 
         <div v-if="appliedResult && appliedResult.unmetSkills.length" class="px-4 pb-3">
           <p class="text-[13px] font-bold text-danger">還差</p>
@@ -199,10 +246,37 @@ function swapsFromBest(r: BuildResult): { part: string; name: string }[] {
           {{ autoBuildStore.targetSkills.length ? '加入或移除目標技能' : '選擇想要的技能' }}
         </button>
 
+        <div v-if="autoBuildStore.weaponLocked" class="flex items-center gap-1.5 text-[14px]">
+          <Lock :size="14" :stroke-width="2" class="text-ink-2" aria-hidden="true" />
+          <span class="text-ink-2">武器已鎖定</span>
+          <span class="font-bold truncate">{{ buildStore.weapon?.name ?? '不裝備武器' }}</span>
+        </div>
+        <fieldset v-else>
+          <legend class="text-[14px] font-bold">武器類型</legend>
+          <div class="strip -mx-4 px-4 mt-1.5 flex gap-1.5 overflow-x-auto md:mx-0 md:px-0 md:grid md:grid-cols-7 md:overflow-visible">
+            <button
+              v-for="wt in weaponTypes"
+              :key="wt.type"
+              type="button"
+              class="flex-shrink-0 flex flex-col items-center justify-center gap-1 w-16 md:w-auto h-16 rounded-sm border text-[12px] transition-colors duration-150"
+              :class="autoBuildStore.weaponType === wt.type
+                ? 'bg-shell border-shell text-shell-ink font-bold'
+                : 'border-rule text-ink-2 hover:text-ink hover:border-ink-2'"
+              :aria-pressed="autoBuildStore.weaponType === wt.type"
+              @click="autoBuildStore.weaponType = wt.type"
+            >
+              <WeaponTypeIcon :type="wt.type" class="size-6" aria-hidden="true" />
+              {{ wt.name }}
+            </button>
+          </div>
+        </fieldset>
+
         <div class="flex items-center justify-between gap-3">
           <label :for="includeId" class="text-[14px] cursor-pointer">
             用漂流石補足技能
-            <span class="block text-[12px] text-ink-2">會自動填入空的漂流石槽</span>
+            <span class="block text-[12px] text-ink-2">
+              {{ autoBuildStore.includeDriftstones ? '會自動填入漂流石槽' : '只看武器與防具本身的技能，保留你原本的漂流石' }}
+            </span>
           </label>
           <button
             :id="includeId"
@@ -234,12 +308,11 @@ function swapsFromBest(r: BuildResult): { part: string; name: string }[] {
         <button
           type="button"
           class="w-full flex items-center justify-center gap-2 h-12 rounded-sm bg-shell text-shell-ink text-[15px] font-bold transition-colors duration-200 hover:bg-shell-raised disabled:opacity-45"
-          :disabled="autoBuildStore.isRunning || autoBuildStore.targetSkills.length === 0"
+          :disabled="autoBuildStore.targetSkills.length === 0 || autoBuildStore.needsWeaponType"
           @click="autoBuildStore.run()"
         >
-          <LoaderCircle v-if="autoBuildStore.isRunning" :size="18" class="animate-spin" aria-hidden="true" />
-          <Search v-else :size="18" :stroke-width="2.25" aria-hidden="true" />
-          {{ autoBuildStore.isRunning ? '搜尋中…' : '開始搜尋' }}
+          <Search :size="18" :stroke-width="2.25" aria-hidden="true" />
+          {{ autoBuildStore.needsWeaponType && autoBuildStore.targetSkills.length ? '先選武器類型' : '開始搜尋' }}
         </button>
       </div>
     </template>

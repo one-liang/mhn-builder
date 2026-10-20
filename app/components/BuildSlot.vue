@@ -47,6 +47,7 @@ const skills = computed(() => {
     id: s.skillId,
     name: skillStore.getById(s.skillId)?.name ?? s.skillId,
     level: s.level,
+    enhance: 'requiredCustomEnhancementLevel' in s ? s.requiredCustomEnhancementLevel : undefined,
   }))
 })
 </script>
@@ -93,7 +94,7 @@ const skills = computed(() => {
         <template v-if="item">
           <span class="block text-[16px] font-bold leading-snug truncate">{{ item.name }}</span>
           <span v-if="skills.length" class="flex flex-wrap gap-x-2.5 text-[13px] text-ink-2 leading-snug">
-            <SkillBadge v-for="s in skills" :key="s.id" :name="s.name" :level="s.level" />
+            <SkillBadge v-for="s in skills" :key="s.id" :name="s.name" :level="s.level" :enhance="s.enhance" />
           </span>
         </template>
         <span v-else class="block text-[15px] text-ink-3 leading-snug">未裝備・點此選擇</span>

@@ -218,11 +218,31 @@
     display: none;
   }
 
+  /* Loading placeholder: breathes with opacity only */
+  .skeleton {
+    background: var(--inset);
+    animation: skeleton-breathe 1.2s ease-in-out infinite alternate;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .skeleton {
+      animation: none;
+    }
+  }
+
   /* Equipment art sits on a machined steel plate */
   .plate {
     background: var(--inset);
     border: 1px solid var(--rule);
     border-radius: var(--radius-md);
+  }
+}
+
+@keyframes skeleton-breathe {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.45;
   }
 }
 
