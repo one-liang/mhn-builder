@@ -74,6 +74,7 @@ function resolveSkillName(skillId: string) {
         <EquipmentCard
           :id="item.id"
           :name="item.name"
+          :unofficial="item.source === 'manual'"
           :skills="item.skills.map(s => ({ ...s, name: resolveSkillName(s.skillId) }))"
           :image="item.image"
           :armor-part="item.part"

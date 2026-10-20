@@ -1,0 +1,40 @@
+{
+  "$comment": [
+    "Hand-entered gear the official site does not list (Guardian / New Year / other event armor and weapons).",
+    "Each record has exactly the fields of data/armor/<part>.json or data/weapons/<type>.json records, plus \"source\": \"manual\" (added by the sync if missing).",
+    "Ids: armor \"ev-<set>-<part>\" (kebab-case), weapons \"ev_<name>\" (snake_case), so they never collide with official ids.",
+    "image: the official art when you have it (public/images/armor|weapons/<id>.webp), otherwise any existing /images/**.webp such as a monster crest.",
+    "The sync appends these after the official records; removing one here removes it from data/. When the official site later lists the same gear by name, the sync report says so.",
+    "_example shows the shape and is ignored."
+  ],
+  "_example": {
+    "armor": {
+      "id": "ev-guardian-rathalos-head",
+      "name": "守護者火龍頭盔",
+      "nameEn": "Guardian Rathalos Helm",
+      "setName": "守護者火龍",
+      "setNameEn": "Guardian Rathalos",
+      "part": "head",
+      "defense": 300,
+      "skills": [{ "skillId": "attack-boost", "level": 1 }],
+      "driftstoneSlots": 1,
+      "image": "/images/monster-crests/rathalos.webp",
+      "source": "manual"
+    },
+    "weapon": {
+      "id": "ev_guardian_rathalos_longsword",
+      "name": "守護者火龍太刀",
+      "nameEn": "Guardian Rathalos Long Sword",
+      "type": "long-sword",
+      "attack": 1500,
+      "element": { "type": "fire", "value": 500 },
+      "affinity": 0,
+      "spSkill": null,
+      "skills": [{ "skillId": "attack-boost", "level": 1 }],
+      "image": "/images/monster-crests/rathalos.webp",
+      "source": "manual"
+    }
+  },
+  "armor": [],
+  "weapons": []
+}

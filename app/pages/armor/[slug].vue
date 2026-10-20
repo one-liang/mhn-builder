@@ -64,6 +64,7 @@ useSeoMeta({
         </span>
         <div class="min-w-0">
           <h1 class="text-[24px] leading-tight font-black tracking-[0.03em]">{{ armor.name }}</h1>
+          <p v-if="armor.source === 'manual'" class="mt-1 inline-block px-1.5 py-px rounded-sm border border-rule-strong text-[12px] text-ink-2">非官方資料：官方網站沒有列出，依遊戲內資訊手動輸入</p>
           <p class="mt-1 flex items-center gap-1.5 text-[13px] text-ink-2">
             <img
               v-if="setIcon"

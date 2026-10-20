@@ -22,6 +22,8 @@ export interface Armor {
   skills: ArmorSkill[]
   driftstoneSlots: number
   image: string
+  /** "manual": hand-entered event gear from scripts/sync/config/extra-gear.json, not official data. */
+  source?: 'manual'
 }
 
 interface WeaponElement {
@@ -72,6 +74,8 @@ export interface Weapon {
   shellingType?: WeaponPhial | null
   melodies?: WeaponMelody[]
   kinsect?: WeaponKinsect | null
+  /** "manual": hand-entered event gear from scripts/sync/config/extra-gear.json, not official data. */
+  source?: 'manual'
 }
 
 type ArmorPart = 'head' | 'chest' | 'arms' | 'waist' | 'legs'

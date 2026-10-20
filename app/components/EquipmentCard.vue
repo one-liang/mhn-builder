@@ -22,6 +22,8 @@ defineProps<{
   /** Crest of the monster the piece is made from (or a set icon), shown on the art's corner. */
   monsterIcon?: string
   monsterName?: string
+  /** Hand-entered event gear, not from the official site */
+  unofficial?: boolean
 }>()
 
 const { imageUrl } = useImageUrl()
@@ -61,6 +63,7 @@ const { imageUrl } = useImageUrl()
     <span class="flex-1 min-w-0">
       <span class="flex items-center gap-1.5 min-w-0">
         <span class="text-[16px] font-bold leading-snug truncate">{{ name }}</span>
+        <span v-if="unofficial" class="flex-shrink-0 px-1.5 py-px rounded-sm border border-rule-strong text-[11px] text-ink-2" title="官方網站沒有列出，依遊戲內資訊手動輸入">非官方資料</span>
       </span>
       <span v-if="stats?.length || setName || monsterName" class="flex flex-wrap items-baseline gap-x-3 text-[12px] text-ink-2 leading-snug">
         <span v-if="setName">{{ setName }}</span>
