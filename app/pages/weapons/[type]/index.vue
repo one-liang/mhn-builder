@@ -65,28 +65,27 @@ function resolveSkillName(skillId: string) {
 </script>
 
 <template>
-  <div class="max-w-3xl mx-auto md:px-6 pb-8">
+  <div class="max-w-3xl mx-auto md:px-6 pb-10">
     <PageHead :title="typeName" back-to="/weapons" back-label="所有武器">
-      共 <span class="stamp text-[15px] font-bold text-ink">{{ allOfType.length }}</span> 把<template v-if="weapons.length !== allOfType.length">，
-      目前顯示 <span class="stamp text-[15px] font-bold text-ink">{{ weapons.length }}</span> 把</template>
+      共 <span class="stamp font-bold text-ink">{{ allOfType.length }}</span> 把<template v-if="weapons.length !== allOfType.length">，顯示 <span class="stamp font-bold text-ink">{{ weapons.length }}</span> 把</template>
       <template #aside>
-        <span class="flex items-center justify-center size-12 rounded-md bg-shell text-shell-ink flex-shrink-0">
+        <span class="flex items-center justify-center size-14 rounded-full bg-shell text-shell-ink flex-shrink-0">
           <WeaponTypeIcon :type="type" class="size-7" aria-hidden="true" />
         </span>
       </template>
     </PageHead>
 
-    <div class="sticky top-14 z-20 bg-ground px-4 md:px-0 pb-2">
+    <div class="sticky top-14 md:top-16 z-20 bg-ground px-4 md:px-0 pb-3">
       <SearchField v-model="search" :label="`搜尋${typeName}`" placeholder="搜尋武器或魔物，例如「銀火」" />
     </div>
-    <div class="pb-2 border-b border-rule md:border-0">
+    <div class="pb-4">
       <div ref="strip" class="strip flex gap-1 overflow-x-auto px-4 md:px-0 md:flex-wrap md:overflow-visible" role="group" aria-label="依魔物篩選">
         <button
           v-for="m in monsters"
           :key="m.id"
           type="button"
-          class="flex-shrink-0 flex flex-col items-center gap-0.5 w-[60px] py-1 rounded-sm border transition-colors duration-150"
-          :class="monsterFilter === m.id ? 'border-ink bg-inset' : 'border-transparent hover:bg-inset'"
+          class="crest flex-shrink-0 flex flex-col items-center gap-1 w-16 pt-1.5 pb-1 rounded-[16px]"
+          :class="monsterFilter === m.id ? 'bg-inset ring-2 ring-ink ring-inset' : 'hover:bg-inset'"
           :aria-pressed="monsterFilter === m.id"
           @click="toggleMonster(m.id)"
         >
@@ -96,7 +95,7 @@ function resolveSkillName(skillId: string) {
       </div>
     </div>
 
-    <ul class="bg-panel border-b md:border md:rounded-md md:mt-3 border-rule divide-y divide-rule">
+    <ul v-if="weapons.length" class="card mx-4 md:mx-0 overflow-hidden divide-y divide-rule">
       <li v-for="weapon in weapons" :key="weapon.id">
         <EquipmentCard
           :id="weapon.id"
@@ -113,8 +112,17 @@ function resolveSkillName(skillId: string) {
       </li>
     </ul>
 
-    <p v-if="!weapons.length" class="px-4 py-12 text-center text-[14px] text-ink-2">
+    <p v-else class="card mx-4 md:mx-0 px-4 py-12 text-center text-[14px] text-ink-2">
       {{ allOfType.length ? '找不到符合條件的武器' : '這個武器類型目前沒有資料' }}
     </p>
   </div>
 </template>
+
+<style scoped>
+.crest {
+  transition: transform 180ms var(--ease-out-quint);
+}
+.crest:active {
+  transform: scale(0.94);
+}
+</style>

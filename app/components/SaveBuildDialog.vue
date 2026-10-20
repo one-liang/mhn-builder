@@ -43,7 +43,7 @@ function save() {
         <p class="mt-1 text-[14px] text-ink-2">先刪除不需要的配裝，再回來儲存。</p>
         <NuxtLink
           to="/my-builds"
-          class="mt-4 flex items-center justify-center h-12 rounded-sm border border-rule-strong text-[15px] font-bold hover:bg-inset transition-colors duration-200"
+          class="btn btn-secondary w-full mt-4"
           @click="open = false"
         >前往我的配裝</NuxtLink>
       </template>
@@ -57,12 +57,12 @@ function save() {
           autocomplete="off"
           enterkeyhint="done"
           data-autofocus
-          class="mt-1.5 w-full h-12 px-3 rounded-sm bg-inset border border-rule text-[16px] text-ink outline-none transition-colors duration-200 focus:border-focus focus:bg-panel"
+          class="mt-2 w-full h-12 px-4 rounded-[14px] bg-inset text-[16px] text-ink outline-none focus:ring-2 focus:ring-ink"
         />
         <p class="mt-2 text-[13px] text-ink-2">存在這台裝置的瀏覽器裡，換裝置可以在我的配裝匯出、匯入。</p>
         <button
           type="submit"
-          class="mt-4 w-full h-12 rounded-sm bg-shell text-shell-ink text-[15px] font-bold hover:bg-shell-raised transition-colors duration-200 disabled:opacity-45"
+          class="btn btn-primary w-full mt-5"
           :disabled="!name.trim()"
         >儲存</button>
       </template>

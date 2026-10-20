@@ -19,6 +19,7 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-vue-next": "^1.0.0",
+    "motion-v": "^2.8.0",
     "nuxt": "^4.4.2",
     "shadcn-nuxt": "^2.5.3",
     "tailwind-merge": "^3.5.0",

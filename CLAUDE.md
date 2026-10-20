@@ -58,28 +58,34 @@ scripts/
 
 | Route | Purpose |
 |---|---|
-| `/` | Home |
+| `/` | Forwards to `/build` (meta refresh + client redirect) |
 | `/armor` | Armor browser |
 | `/armor/[slug]` | Armor detail |
 | `/weapons` | Weapon type index |
 | `/weapons/[type]` | Weapon list by type |
 | `/weapons/[type]/[slug]` | Weapon detail |
-| `/skills` | Skill reference |
+| `/skills` | Skill reference; `?tab=driftstones` shows the driftstone browser |
 | `/skills/[slug]` | Skill detail |
-| `/driftstones` | Driftstone skill browser |
-| `/build` | Build simulator |
+| `/driftstones` | Forwards to `/skills?tab=driftstones` |
+| `/build` | Build simulator (empty state doubles as the intro) |
+| `/my-builds` | 我的配裝: saved builds in localStorage, export/import |
 
 ### Pinia Stores
 
 - **`useBuildStore`** (`stores/build.ts`) — Central build state: selected weapon + 5 armor slots + per-slot driftstone skills. Handles URL serialization (short param keys: `w`, `h`, `c`, `a`, `wa`, `l` for equipment; `dh`, `dc`, `da`, `dw`, `dl` for driftstones), localStorage persistence (`mhn-builder-current-build`), and build sharing via `toShareUrl()`.
 - **`useEquipmentStore`** (`stores/equipment.ts`) — Loads and indexes all armor/weapon data from `/data` JSON files.
 - **`useSkillStore`** (`stores/skill.ts`) — Skill metadata lookup.
-- **`useAutoBuildStore`** (`stores/autoBuild.ts`) — Drives the auto-build UI, delegates to the algorithm.
+- **`useAutoBuildStore`** (`stores/autoBuild.ts`) — Drives the auto-build UI (target skills, weapon type, locks, driftstone switch; settings persisted in `mhn-builder-auto-build`), runs the algorithm in `lib/autoBuild.worker.ts`.
+- **`useSavedBuildsStore`** (`stores/savedBuilds.ts`) — 我的配裝 (`mhn-builder-saved-builds`, max 50), logic in `lib/savedBuilds.ts`.
 - **`useMaterialStore`** (`stores/material.ts`) — Material data.
 
 ### Auto-Build Algorithm (`app/lib/autoBuildAlgorithm.ts`)
 
-Pure TypeScript (no Vue/Pinia). Strategy: K=8 greedy filter per armor slot → enumerate all K^5 combos (~32,768 max) → score by skill coverage/shortage/overflow → optionally greedy-assign driftstone slots → return top-N results.
+Pure TypeScript (no Vue/Pinia). Strategy: K=8 greedy filter per armor slot and for the weapon (within one weapon type, or the locked weapon) → enumerate all combos (K^6 ≈ 262k max) → score by skill coverage/shortage/overflow → optionally greedy-assign driftstone slots → rank by skill score, then attack, then defense → top-N. Covered by `tests/autoBuildAlgorithm.test.ts`.
+
+### Visual system
+
+`DESIGN.md` (with `.impeccable/design.json`) is the source of truth: black/white field kit, one black pill per screen, Noto Sans TC 900 headings, Inter numerals (`.stamp`), skill category colours only on level pips/dots (`lib/skillColors.ts`, `data/skill-colors.json` for per-skill overrides), motion on transform/opacity only (motion-v springs, View Transitions). Shared pieces: `.btn` / `.btn-primary` / `.btn-secondary` / `.card` in `assets/css/tailwind.css`, `SheetDialog`, `AppToast` + `useToast()`, `FilterTabs`, `SegmentedControl`, `TemperBar` (level pips).
 
 ### Data Schema
 

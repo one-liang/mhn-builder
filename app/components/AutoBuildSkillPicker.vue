@@ -74,12 +74,12 @@ function isBlocked(skillId: string): boolean {
 
 function chipClass(skillId: string): string {
   if (toRemoveIds.value.has(skillId))
-    return 'bg-panel border-danger text-danger line-through'
+    return 'bg-panel text-danger line-through ring-2 ring-inset ring-danger'
   if (isSelected(skillId))
-    return 'bg-shell border-shell text-shell-ink font-bold'
+    return 'bg-shell text-shell-ink font-bold'
   if (isBlocked(skillId))
-    return 'bg-panel border-rule text-ink-3 opacity-60'
-  return 'bg-panel border-rule text-ink hover:border-ink-2'
+    return 'bg-panel text-ink-3 opacity-60'
+  return 'bg-panel text-ink hover:bg-inset'
 }
 
 function confirmClose() {
@@ -127,14 +127,14 @@ function toggleCategory(catId: string) {
     @update:open="(v) => { if (!v) cancelClose() }"
   >
     <template #title-extra>
-      <span class="stamp text-[18px] font-bold leading-none text-shell-ink" aria-live="polite">
-        {{ totalSelected }}<span class="text-shell-ink-2">/{{ MAX_SKILLS }}</span>
+      <span class="stamp mr-2 text-[18px] font-bold leading-none" aria-live="polite">
+        {{ totalSelected }}<span class="text-ink-2">/{{ MAX_SKILLS }}</span>
         <span class="sr-only">已選技能數</span>
       </span>
     </template>
 
     <template #controls>
-      <div class="px-4 py-3">
+      <div class="px-5 pb-3">
         <SearchField v-model="search" label="搜尋技能" placeholder="搜尋技能名稱" autofocus />
       </div>
     </template>
@@ -145,7 +145,7 @@ function toggleCategory(catId: string) {
           v-for="skill in searchResults"
           :key="skill.id"
           type="button"
-          class="flex items-center gap-1.5 min-h-12 px-3 py-2 rounded-sm border text-[14px] text-left leading-snug transition-colors duration-150"
+          class="pick flex items-center gap-1.5 min-h-12 px-4 py-2 rounded-[14px] text-[14px] text-left leading-snug"
           :class="chipClass(skill.id)"
           :aria-pressed="isSelected(skill.id)"
           :aria-disabled="isBlocked(skill.id) || undefined"
@@ -165,7 +165,7 @@ function toggleCategory(catId: string) {
         <h3>
           <button
             type="button"
-            class="w-full flex items-center justify-between h-10 border-b-2 border-ink text-[15px] font-bold"
+            class="w-full flex items-center justify-between h-10 text-[18px] font-black"
             :aria-expanded="!collapsedCats.has(cat.id)"
             @click="toggleCategory(cat.id)"
           >
@@ -173,7 +173,7 @@ function toggleCategory(catId: string) {
             <ChevronDown
               :size="18"
               :stroke-width="2"
-              class="text-ink-2 transition-transform duration-200"
+              class="text-ink-2 chevron"
               :class="collapsedCats.has(cat.id) ? '-rotate-90' : ''"
               aria-hidden="true"
             />
@@ -184,7 +184,7 @@ function toggleCategory(catId: string) {
             v-for="skill in skillsPerCategory[cat.id]"
             :key="skill.id"
             type="button"
-            class="flex items-center gap-1.5 min-h-12 px-3 py-2 rounded-sm border text-[14px] text-left leading-snug transition-colors duration-150"
+            class="pick flex items-center gap-1.5 min-h-12 px-4 py-2 rounded-[14px] text-[14px] text-left leading-snug"
             :class="chipClass(skill.id)"
             :aria-pressed="isSelected(skill.id)"
             :aria-disabled="isBlocked(skill.id) || undefined"
@@ -201,15 +201,27 @@ function toggleCategory(catId: string) {
       <div class="flex gap-3">
         <button
           type="button"
-          class="flex-[2] h-12 rounded-sm border border-rule-strong text-[15px] font-bold text-ink hover:bg-inset transition-colors duration-200"
+          class="btn btn-secondary flex-[2]"
           @click="cancelClose"
         >取消</button>
         <button
           type="button"
-          class="flex-[3] h-12 rounded-sm bg-shell text-shell-ink text-[15px] font-bold hover:bg-shell-raised transition-colors duration-200"
+          class="btn btn-primary flex-[3]"
           @click="confirmClose"
         >{{ hasChanges ? '套用選擇' : '完成' }}</button>
       </div>
     </template>
   </SheetDialog>
 </template>
+
+<style scoped>
+.pick {
+  transition: transform 160ms var(--ease-out-quint);
+}
+.pick:active {
+  transform: scale(0.95);
+}
+.chevron {
+  transition: transform 260ms var(--ease-spring);
+}
+</style>
