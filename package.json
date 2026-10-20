@@ -7,7 +7,9 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "sync:data": "node scripts/sync/index.mjs",
+    "validate:data": "node scripts/validate-data.mjs"
   },
   "dependencies": {
     "@pinia/nuxt": "^0.11.3",

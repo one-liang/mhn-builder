@@ -6,7 +6,7 @@
       "prime": false,
       "skillIds": [
         "fire-attack",
-        "steadfast",
+        "head-on-fight",
         "partbreaker",
         "brute-force",
         "blast-attack",
@@ -22,6 +22,7 @@
         "fortify",
         "artful-dodger",
         "group-hunt-attack",
+        "group-hunt-defense",
         "fire-resistance",
         "water-resistance",
         "thunder-resistance",
@@ -42,6 +43,7 @@
         "water-attack",
         "focus",
         "charge-master",
+        "just-charge",
         "poison-attack",
         "slugger",
         "aggressive-dodger",
@@ -55,6 +57,7 @@
         "fortify",
         "artful-dodger",
         "group-hunt-attack",
+        "group-hunt-defense",
         "fire-resistance",
         "water-resistance",
         "thunder-resistance",
@@ -74,6 +77,7 @@
       "skillIds": [
         "dragon-attack",
         "status-sneak-attack",
+        "perfect-evade-ailments-attack-boost",
         "coalescence",
         "resentment",
         "sneak-attack",
@@ -88,6 +92,7 @@
         "fortify",
         "artful-dodger",
         "group-hunt-attack",
+        "group-hunt-defense",
         "fire-resistance",
         "water-resistance",
         "thunder-resistance",
@@ -111,7 +116,8 @@
         "latent-power",
         "sp-meter-boost",
         "sp-meter-boost-dodge",
-        "guard-up",
+        "guard-sp-charge",
+        "counter-attack-sp-charge",
         "special-insurance",
         "attack-boost",
         "defense-boost",
@@ -122,6 +128,7 @@
         "fortify",
         "artful-dodger",
         "group-hunt-attack",
+        "group-hunt-defense",
         "fire-resistance",
         "water-resistance",
         "thunder-resistance",
@@ -156,6 +163,7 @@
         "fortify",
         "artful-dodger",
         "group-hunt-attack",
+        "group-hunt-defense",
         "fire-resistance",
         "water-resistance",
         "thunder-resistance",
@@ -190,6 +198,7 @@
         "fortify",
         "artful-dodger",
         "group-hunt-attack",
+        "group-hunt-defense",
         "fire-resistance",
         "water-resistance",
         "thunder-resistance",
@@ -311,7 +320,7 @@
       "name": "漂流純石【反彈】",
       "prime": true,
       "skillIds": [
-        "guard-up"
+        "guard-reflect"
       ]
     },
     {
@@ -319,7 +328,7 @@
       "name": "漂流純石【屹立不倒】",
       "prime": true,
       "skillIds": [
-        "steadfast"
+        "head-on-fight"
       ]
     },
     {
@@ -335,7 +344,7 @@
       "name": "漂流純石【完美蓄力解放】",
       "prime": true,
       "skillIds": [
-        "charge-master"
+        "just-charge"
       ]
     },
     {
@@ -375,7 +384,7 @@
       "name": "漂流純石【完美巧擊【狀態異常】】",
       "prime": true,
       "skillIds": [
-        "status-sneak-attack"
+        "perfect-evade-ailments-attack-boost"
       ]
     },
     {
@@ -417,6 +426,38 @@
       "skillIds": [
         "weakness-exploit"
       ]
+    },
+    {
+      "id": "morph-boost-prime",
+      "name": "漂流純石【變形強化】",
+      "prime": true,
+      "skillIds": [
+        "morph-boost"
+      ]
+    },
+    {
+      "id": "counter-attack-strength-prime",
+      "name": "漂流純石【以牙還牙】",
+      "prime": true,
+      "skillIds": [
+        "counter-attack-strength"
+      ]
+    },
+    {
+      "id": "heavy-blow-prime",
+      "name": "漂流純石【雙重打擊】",
+      "prime": true,
+      "skillIds": [
+        "heavy-blow"
+      ]
+    },
+    {
+      "id": "break-attack-boost-prime",
+      "name": "漂流純石【追擊】",
+      "prime": true,
+      "skillIds": [
+        "follow-up"
+      ]
     }
   ],
   "achievableSkillIds": [
@@ -431,6 +472,8 @@
     "burst",
     "charge-master",
     "coalescence",
+    "counter-attack-sp-charge",
+    "counter-attack-strength",
     "critical-boost",
     "critical-eye",
     "critical-range-boost",
@@ -446,23 +489,31 @@
     "fire-resistance",
     "firm-foothold",
     "focus",
+    "follow-up",
     "fortify",
     "group-hunt-attack",
+    "group-hunt-defense",
     "guard",
-    "guard-up",
+    "guard-reflect",
+    "guard-sp-charge",
     "guts",
+    "head-on-fight",
     "health-boost",
+    "heavy-blow",
     "heroics",
     "ice-attack",
     "ice-resistance",
+    "just-charge",
     "last-stand-guard",
     "latent-power",
+    "morph-boost",
     "offensive-dodger",
     "offensive-guard",
     "paralysis-attack",
     "paralysis-resistance",
     "partbreaker",
     "peak-performance",
+    "perfect-evade-ailments-attack-boost",
     "poison-attack",
     "poison-resistance",
     "power-prolonger",
@@ -479,7 +530,6 @@
     "special-insurance",
     "special-partbreaker",
     "status-sneak-attack",
-    "steadfast",
     "thunder-attack",
     "thunder-resistance",
     "tremor-resistance",

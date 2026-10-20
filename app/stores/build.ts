@@ -2,6 +2,7 @@ import { defineStore } from 'pinia'
 import type { Armor, Weapon } from './equipment'
 import { useEquipmentStore } from './equipment'
 import { useSkillStore } from './skill'
+import driftstoneData from '../../data/driftstone-skills.json'
 
 export type ArmorSlot = 'head' | 'chest' | 'arms' | 'waist' | 'legs'
 export type BuildSlot = 'weapon' | ArmorSlot
@@ -24,6 +25,8 @@ export interface SkillSummaryEntry {
 }
 
 const STORAGE_KEY = 'mhn-builder-current-build'
+
+const ACHIEVABLE_DRIFTSTONE_IDS = new Set<string>(driftstoneData.achievableSkillIds)
 
 const ARMOR_SLOTS: ArmorSlot[] = ['head', 'chest', 'arms', 'waist', 'legs']
 
@@ -185,9 +188,13 @@ export const useBuildStore = defineStore('build', () => {
       const found = equipmentStore.getArmorByPart(slot).find(a => a.id === id) ?? null
       slots[slot].value = found
 
+      // Saved builds may predate a data sync: drop skills no driftstone offers any more
+      // and slots beyond what the armor piece has (0 if the piece no longer exists)
       const dParam = params[DRIFTSTONE_PARAM_MAP[slot]]
       if (dParam) {
-        driftstoneSkills[slot] = dParam.split(',').map(v => v || null)
+        driftstoneSkills[slot] = dParam.split(',')
+          .slice(0, found?.driftstoneSlots ?? 0)
+          .map(v => (v && ACHIEVABLE_DRIFTSTONE_IDS.has(v) ? v : null))
       } else {
         driftstoneSkills[slot] = []
       }

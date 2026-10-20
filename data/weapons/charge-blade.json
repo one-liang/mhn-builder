@@ -2,7 +2,7 @@
   {
     "id": "ore_chargeblade",
     "name": "調查團試作盾斧",
-    "nameEn": "",
+    "nameEn": "Proto Commission Axe",
     "type": "charge-blade",
     "attack": 1912,
     "element": null,
@@ -10,7 +10,7 @@
     "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
     "skills": [
       {
-        "skillId": "poison_resistance",
+        "skillId": "poison-resistance",
         "level": 2
       }
     ],
@@ -23,18 +23,18 @@
   {
     "id": "greatjagras_chargeblade",
     "name": "凶豺龍兵裝",
-    "nameEn": "",
+    "nameEn": "Jagras Strongarm",
     "type": "charge-blade",
-    "attack": 1373,
+    "attack": 1644,
     "element": {
       "type": "water",
-      "value": 38
+      "value": 754
     },
     "affinity": 0,
     "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
     "skills": [
       {
-        "skillId": "health_boost",
+        "skillId": "health-boost",
         "level": 2
       }
     ],
@@ -47,18 +47,18 @@
   {
     "id": "greatgirros_chargeblade",
     "name": "凶顎龍兵裝",
-    "nameEn": "",
+    "nameEn": "Girros Strongarm",
     "type": "charge-blade",
-    "attack": 1596,
+    "attack": 1912,
     "element": {
       "type": "paralysis",
-      "value": 100
+      "value": 417
     },
     "affinity": 0,
     "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
     "skills": [
       {
-        "skillId": "sneak_attack",
+        "skillId": "sneak-attack",
         "level": 1
       }
     ],
@@ -71,18 +71,18 @@
   {
     "id": "tobikadachi_chargeblade",
     "name": "脈衝兵裝",
-    "nameEn": "",
+    "nameEn": "Pulsar Strongarm",
     "type": "charge-blade",
-    "attack": 1293,
+    "attack": 1549,
     "element": {
       "type": "thunder",
-      "value": 47
+      "value": 1131
     },
     "affinity": 0,
     "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
     "skills": [
       {
-        "skillId": "evade_extender",
+        "skillId": "evade-extender",
         "level": 1
       }
     ],
@@ -95,18 +95,22 @@
   {
     "id": "viper_tobikadachi_chargeblade",
     "name": "朱赤毒之腕",
-    "nameEn": "",
+    "nameEn": "Viper's Venom",
     "type": "charge-blade",
-    "attack": 1776,
+    "attack": 2127,
     "element": {
       "type": "poison",
-      "value": 201
+      "value": 364
     },
     "affinity": 10,
     "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
     "skills": [
       {
-        "skillId": "burst_secret",
+        "skillId": "burst",
+        "level": 1
+      },
+      {
+        "skillId": "burst-peak",
         "level": 1
       }
     ],
@@ -119,18 +123,18 @@
   {
     "id": "jyuratodus_chargeblade",
     "name": "泥流盾斧",
-    "nameEn": "",
+    "nameEn": "Mudslide Blade",
     "type": "charge-blade",
-    "attack": 1293,
+    "attack": 1549,
     "element": {
       "type": "water",
-      "value": 75
+      "value": 1131
     },
     "affinity": 0,
     "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
     "skills": [
       {
-        "skillId": "last_stand",
+        "skillId": "last-stand-guard",
         "level": 1
       }
     ],
@@ -143,18 +147,18 @@
   {
     "id": "rathian_chargeblade",
     "name": "焰火盾斧",
-    "nameEn": "",
+    "nameEn": "Dear Lutemis",
     "type": "charge-blade",
-    "attack": 1516,
+    "attack": 1817,
     "element": {
       "type": "poison",
-      "value": 236
+      "value": 516
     },
     "affinity": 0,
     "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
     "skills": [
       {
-        "skillId": "health_boost",
+        "skillId": "health-boost",
         "level": 2
       }
     ],
@@ -167,18 +171,18 @@
   {
     "id": "pink_rathian_chargeblade",
     "name": "櫻火盾斧",
-    "nameEn": "",
+    "nameEn": "Dear Hecatel",
     "type": "charge-blade",
-    "attack": 1756,
+    "attack": 2103,
     "element": {
       "type": "poison",
-      "value": 188
+      "value": 312
     },
     "affinity": 0,
     "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
     "skills": [
       {
-        "skillId": "evade_extender",
+        "skillId": "evade-extender",
         "level": 1
       }
     ],
@@ -191,18 +195,18 @@
   {
     "id": "gold_rathian_chargeblade",
     "name": "月神金盾",
-    "nameEn": "",
+    "nameEn": "Luna Eostre",
     "type": "charge-blade",
-    "attack": 1675,
+    "attack": 2007,
     "element": {
       "type": "poison",
-      "value": 273
+      "value": 416
     },
-    "affinity": 20,
+    "affinity": 30,
     "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
     "skills": [
       {
-        "skillId": "pursuit_poison",
+        "skillId": "follow-up-poison",
         "level": 2
       }
     ],
@@ -215,18 +219,18 @@
   {
     "id": "legiana_chargeblade",
     "name": "冰結盾斧",
-    "nameEn": "",
+    "nameEn": "Everfrost Blade",
     "type": "charge-blade",
-    "attack": 1420,
+    "attack": 1463,
     "element": {
       "type": "ice",
-      "value": 232
+      "value": 1420
     },
     "affinity": 0,
     "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
     "skills": [
       {
-        "skillId": "divine_blessing",
+        "skillId": "divine-blessing",
         "level": 2
       }
     ],
@@ -239,7 +243,7 @@
   {
     "id": "diablos_chargeblade",
     "name": "爆鎚盾牆",
-    "nameEn": "",
+    "nameEn": "Diablos Wall",
     "type": "charge-blade",
     "attack": 2371,
     "element": null,
@@ -260,7 +264,7 @@
   {
     "id": "black_diablos_chargeblade",
     "name": "命運武力",
-    "nameEn": "",
+    "nameEn": "Thanatos Force",
     "type": "charge-blade",
     "attack": 2658,
     "element": null,
@@ -281,12 +285,12 @@
   {
     "id": "rathalos_chargeblade",
     "name": "火龍盾斧",
-    "nameEn": "",
+    "nameEn": "Rathsblade",
     "type": "charge-blade",
-    "attack": 1420,
+    "attack": 1463,
     "element": {
       "type": "fire",
-      "value": 232
+      "value": 1420
     },
     "affinity": 0,
     "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
@@ -305,19 +309,24 @@
   {
     "id": "azure_rathalos_chargeblade",
     "name": "魂魄斬蒼炎斧",
-    "nameEn": "",
+    "nameEn": "Azure Soulbrand",
     "type": "charge-blade",
-    "attack": 1682,
+    "attack": 2015,
     "element": {
       "type": "fire",
-      "value": 134
+      "value": 752
     },
     "affinity": 0,
     "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
     "skills": [
       {
-        "skillId": "special_boost",
+        "skillId": "special-boost",
         "level": 1
+      },
+      {
+        "skillId": "special-boost-peak",
+        "level": 1,
+        "requiredCustomEnhancementLevel": 10
       }
     ],
     "image": "/images/weapons/azure_rathalos_chargeblade.webp",
@@ -329,18 +338,18 @@
   {
     "id": "silver_rathalos_chargeblade",
     "name": "業火斧獄雷",
-    "nameEn": "",
+    "nameEn": "Hellsire Blade",
     "type": "charge-blade",
-    "attack": 1345,
+    "attack": 1507,
     "element": {
       "type": "fire",
-      "value": 277
+      "value": 1345
     },
-    "affinity": 20,
+    "affinity": 30,
     "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
     "skills": [
       {
-        "skillId": "critical_element",
+        "skillId": "critical-element",
         "level": 2
       }
     ],
@@ -353,18 +362,18 @@
   {
     "id": "barioth_chargeblade",
     "name": "純白騎士",
-    "nameEn": "",
+    "nameEn": "Weissritter",
     "type": "charge-blade",
-    "attack": 1191,
+    "attack": 1426,
     "element": {
       "type": "ice",
-      "value": 117
+      "value": 1131
     },
-    "affinity": 5,
+    "affinity": 20,
     "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
     "skills": [
       {
-        "skillId": "evade_extender",
+        "skillId": "evade-extender",
         "level": 1
       }
     ],
@@ -377,18 +386,18 @@
   {
     "id": "zinogre_chargeblade",
     "name": "王盾斧雷紋",
-    "nameEn": "",
+    "nameEn": "Usurper's Lightning",
     "type": "charge-blade",
-    "attack": 1420,
+    "attack": 1463,
     "element": {
       "type": "thunder",
-      "value": 232
+      "value": 1420
     },
     "affinity": 0,
     "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
     "skills": [
       {
-        "skillId": "artful_dodger",
+        "skillId": "artful-dodger",
         "level": 1
       }
     ],
@@ -401,15 +410,15 @@
   {
     "id": "odogaron_chargeblade",
     "name": "慘爪兵裝",
-    "nameEn": "",
+    "nameEn": "Garon Strongarm",
     "type": "charge-blade",
     "attack": 2059,
     "element": null,
-    "affinity": 5,
+    "affinity": 20,
     "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
     "skills": [
       {
-        "skillId": "perfect_evade_sp_charge",
+        "skillId": "sp-meter-boost-dodge",
         "level": 1
       }
     ],
@@ -422,18 +431,18 @@
   {
     "id": "ebony_odogaron_chargeblade",
     "name": "冥府之炎",
-    "nameEn": "",
+    "nameEn": "Nether Candle",
     "type": "charge-blade",
-    "attack": 1436,
+    "attack": 1363,
     "element": {
       "type": "dragon",
-      "value": 230
+      "value": 1436
     },
-    "affinity": 10,
+    "affinity": 20,
     "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
     "skills": [
       {
-        "skillId": "critical_boost",
+        "skillId": "critical-boost",
         "level": 1
       }
     ],
@@ -446,18 +455,18 @@
   {
     "id": "deviljho_chargeblade",
     "name": "暴虐的盾斧",
-    "nameEn": "",
+    "nameEn": "Tyrant's Charge Blade",
     "type": "charge-blade",
-    "attack": 1568,
+    "attack": 1579,
     "element": {
       "type": "dragon",
-      "value": 292
+      "value": 1568
     },
     "affinity": -30,
     "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
     "skills": [
       {
-        "skillId": "latent_power",
+        "skillId": "latent-power",
         "level": 1
       }
     ],
@@ -470,12 +479,12 @@
   {
     "id": "basarios_chargeblade",
     "name": "巨人兵裝",
-    "nameEn": "",
+    "nameEn": "Giga Grips",
     "type": "charge-blade",
-    "attack": 1671,
+    "attack": 2002,
     "element": {
       "type": "poison",
-      "value": 98
+      "value": 357
     },
     "affinity": -15,
     "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
@@ -494,16 +503,20 @@
   {
     "id": "kushaladaora_chargeblade",
     "name": "鋼龍幻夢",
-    "nameEn": "",
+    "nameEn": "Daora's Thwartoise",
     "type": "charge-blade",
-    "attack": 1553,
+    "attack": 1861,
     "element": {
       "type": "ice",
-      "value": 238
+      "value": 1210
     },
     "affinity": 0,
     "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
     "skills": [
+      {
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
       {
         "skillId": "windproof",
         "level": 2
@@ -518,18 +531,18 @@
   {
     "id": "mizutsune_chargeblade",
     "name": "狐衣斧鏡花水月央",
-    "nameEn": "",
+    "nameEn": "Mizuniya Drill",
     "type": "charge-blade",
-    "attack": 1436,
+    "attack": 1363,
     "element": {
       "type": "water",
-      "value": 230
+      "value": 1436
     },
-    "affinity": 10,
+    "affinity": 20,
     "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
     "skills": [
       {
-        "skillId": "artful_dodger",
+        "skillId": "artful-dodger",
         "level": 1
       }
     ],
@@ -542,16 +555,20 @@
   {
     "id": "teostra_chargeblade",
     "name": "炎王新星",
-    "nameEn": "",
+    "nameEn": "Teostra's Nova",
     "type": "charge-blade",
-    "attack": 1684,
+    "attack": 2017,
     "element": {
       "type": "blast",
-      "value": 345
+      "value": 522
     },
     "affinity": 0,
     "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
     "skills": [
+      {
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
       {
         "skillId": "heroics",
         "level": 2
@@ -566,12 +583,12 @@
   {
     "id": "magnamalo_chargeblade",
     "name": "禍鉞【封】",
-    "nameEn": "",
+    "nameEn": "Sinister Slasher",
     "type": "charge-blade",
-    "attack": 1516,
+    "attack": 1817,
     "element": {
       "type": "blast",
-      "value": 236
+      "value": 516
     },
     "affinity": 0,
     "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
@@ -590,18 +607,18 @@
   {
     "id": "rajang_chargeblade",
     "name": "金剛盾斧",
-    "nameEn": "",
+    "nameEn": "Undying Blade",
     "type": "charge-blade",
-    "attack": 1568,
+    "attack": 1579,
     "element": {
       "type": "thunder",
-      "value": 292
+      "value": 1568
     },
     "affinity": -30,
     "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
     "skills": [
       {
-        "skillId": "feat_of_agility",
+        "skillId": "quick-work",
         "level": 1
       }
     ],
@@ -614,16 +631,20 @@
   {
     "id": "nergigante_chargeblade",
     "name": "壞滅一束",
-    "nameEn": "",
+    "nameEn": "Devastation's Thorns",
     "type": "charge-blade",
-    "attack": 1553,
+    "attack": 1861,
     "element": {
       "type": "dragon",
-      "value": 238
+      "value": 1210
     },
     "affinity": 0,
     "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
     "skills": [
+      {
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
       {
         "skillId": "partbreaker",
         "level": 2
@@ -638,18 +659,18 @@
   {
     "id": "volvidon_chargeblade",
     "name": "圓舞車輪",
-    "nameEn": "",
+    "nameEn": "Rough Roller",
     "type": "charge-blade",
-    "attack": 1516,
+    "attack": 1817,
     "element": {
       "type": "paralysis",
-      "value": 176
+      "value": 516
     },
     "affinity": 0,
     "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
     "skills": [
       {
-        "skillId": "evade_extender",
+        "skillId": "evade-extender",
         "level": 1
       }
     ],
@@ -662,18 +683,18 @@
   {
     "id": "somnacanth_chargeblade",
     "name": "人魚呻吟",
-    "nameEn": "",
+    "nameEn": "Bellowing Blow",
     "type": "charge-blade",
-    "attack": 1567,
+    "attack": 1878,
     "element": {
       "type": "sleep",
-      "value": 236
+      "value": 516
     },
     "affinity": -15,
     "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
     "skills": [
       {
-        "skillId": "evade_extender",
+        "skillId": "evade-extender",
         "level": 1
       }
     ],
@@ -686,7 +707,7 @@
   {
     "id": "tigrex_chargeblade",
     "name": "轟龍兵裝",
-    "nameEn": "",
+    "nameEn": "Rex Arms",
     "type": "charge-blade",
     "attack": 2633,
     "element": null,
@@ -694,7 +715,7 @@
     "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
     "skills": [
       {
-        "skillId": "brutal_strike",
+        "skillId": "maximum-might",
         "level": 1
       }
     ],
@@ -707,7 +728,7 @@
   {
     "id": "brute_tigrex_chargeblade",
     "name": "劫難兵裝",
-    "nameEn": "",
+    "nameEn": "Accursed Arms",
     "type": "charge-blade",
     "attack": 2633,
     "element": null,
@@ -715,7 +736,7 @@
     "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
     "skills": [
       {
-        "skillId": "evasive_reload",
+        "skillId": "dodge-load",
         "level": 5
       }
     ],
@@ -728,7 +749,7 @@
   {
     "id": "chatacabra_chargeblade",
     "name": "纏蛙兵裝",
-    "nameEn": "",
+    "nameEn": "Chata Strongarm",
     "type": "charge-blade",
     "attack": 2197,
     "element": null,
@@ -736,7 +757,7 @@
     "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
     "skills": [
       {
-        "skillId": "armor_up",
+        "skillId": "defense-ready",
         "level": 1
       }
     ],
@@ -749,18 +770,18 @@
   {
     "id": "glavenus_chargeblade",
     "name": "灼炎之索求者",
-    "nameEn": "",
+    "nameEn": "Scorching Demander",
     "type": "charge-blade",
-    "attack": 1568,
+    "attack": 1579,
     "element": {
       "type": "fire",
-      "value": 292
+      "value": 1568
     },
     "affinity": -30,
     "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
     "skills": [
       {
-        "skillId": "brutal_strike",
+        "skillId": "maximum-might",
         "level": 1
       }
     ],
@@ -773,18 +794,22 @@
   {
     "id": "chameleos_chargeblade",
     "name": "幻想神諭",
-    "nameEn": "",
+    "nameEn": "Etherward",
     "type": "charge-blade",
-    "attack": 1741,
+    "attack": 2086,
     "element": {
       "type": "poison",
-      "value": 347
+      "value": 526
     },
     "affinity": 0,
     "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
     "skills": [
       {
-        "skillId": "abnormal_status_enhancement",
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
+      {
+        "skillId": "status-sneak-attack",
         "level": 2
       }
     ],
@@ -797,18 +822,18 @@
   {
     "id": "beotodus_chargeblade",
     "name": "深沉霜雪",
-    "nameEn": "",
+    "nameEn": "Deep Schnegel",
     "type": "charge-blade",
-    "attack": 1293,
+    "attack": 1549,
     "element": {
       "type": "ice",
-      "value": 117
+      "value": 1131
     },
     "affinity": 0,
     "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
     "skills": [
       {
-        "skillId": "bravery",
+        "skillId": "valor",
         "level": 1
       }
     ],
@@ -821,11 +846,11 @@
   {
     "id": "nargacuga_chargeblade",
     "name": "隱密守護者",
-    "nameEn": "",
+    "nameEn": "Hidden Guardian",
     "type": "charge-blade",
     "attack": 2082,
     "element": null,
-    "affinity": 25,
+    "affinity": 40,
     "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
     "skills": [
       {
@@ -842,18 +867,22 @@
   {
     "id": "namielle_chargeblade",
     "name": "水蛇悠遠",
-    "nameEn": "",
+    "nameEn": "Hydros Kardia",
     "type": "charge-blade",
-    "attack": 1335,
+    "attack": 1591,
     "element": {
       "type": "water",
-      "value": 276
+      "value": 1335
     },
-    "affinity": 15,
+    "affinity": 20,
     "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
     "skills": [
       {
-        "skillId": "weakness_exploit",
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
+      {
+        "skillId": "weakness-exploit",
         "level": 1
       }
     ],
@@ -866,7 +895,7 @@
   {
     "id": "garangolm_chargeblade",
     "name": "剛纏獸之心",
-    "nameEn": "",
+    "nameEn": "Golm Heart",
     "type": "charge-blade",
     "attack": 2371,
     "element": null,
@@ -874,7 +903,7 @@
     "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
     "skills": [
       {
-        "skillId": "disable_perfect_evade",
+        "skillId": "resolute",
         "level": 1
       }
     ],
@@ -887,18 +916,18 @@
   {
     "id": "lunagaron_chargeblade",
     "name": "冷月之充能斧",
-    "nameEn": "",
+    "nameEn": "Frostmoon Icecutioner",
     "type": "charge-blade",
-    "attack": 1458,
+    "attack": 1222,
     "element": {
       "type": "ice",
-      "value": 164
+      "value": 1458
     },
     "affinity": 0,
     "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
     "skills": [
       {
-        "skillId": "high_performance_ice",
+        "skillId": "hi-ice",
         "level": 1
       }
     ],
@@ -911,18 +940,18 @@
   {
     "id": "espinas_chargeblade",
     "name": "薔薇之痛",
-    "nameEn": "",
+    "nameEn": "Rosenrupe",
     "type": "charge-blade",
-    "attack": 1756,
+    "attack": 2103,
     "element": {
       "type": "poison",
-      "value": 183
+      "value": 294
     },
-    "affinity": 10,
+    "affinity": 20,
     "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
     "skills": [
       {
-        "skillId": "part_break_special_boost",
+        "skillId": "special-partbreaker",
         "level": 2
       }
     ],
@@ -935,18 +964,22 @@
   {
     "id": "malzeno_chargeblade",
     "name": "紅翼之血鷹",
-    "nameEn": "",
+    "nameEn": "Bloodeagle Adler",
     "type": "charge-blade",
-    "attack": 1622,
+    "attack": 1444,
     "element": {
       "type": "dragon",
-      "value": 334
+      "value": 1622
     },
     "affinity": 0,
     "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
     "skills": [
       {
-        "skillId": "high_performance_dragon",
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
+      {
+        "skillId": "hi-dragon",
         "level": 1
       }
     ],
@@ -959,18 +992,18 @@
   {
     "id": "gossharag_chargeblade",
     "name": "雪鬼獸充能斧",
-    "nameEn": "",
+    "nameEn": "Surprise Axe",
     "type": "charge-blade",
-    "attack": 1492,
+    "attack": 1570,
     "element": {
       "type": "ice",
-      "value": 147
+      "value": 1492
     },
     "affinity": -30,
     "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
     "skills": [
       {
-        "skillId": "brutal_strike",
+        "skillId": "maximum-might",
         "level": 1
       }
     ],
@@ -983,18 +1016,18 @@
   {
     "id": "astalos_chargeblade",
     "name": "電閃斧翠綠海克力士",
-    "nameEn": "",
+    "nameEn": "Vajraklex Blade",
     "type": "charge-blade",
-    "attack": 1436,
+    "attack": 1363,
     "element": {
       "type": "thunder",
-      "value": 230
+      "value": 1436
     },
-    "affinity": 10,
+    "affinity": 20,
     "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
     "skills": [
       {
-        "skillId": "thunder_attack",
+        "skillId": "thunder-attack",
         "level": 1
       }
     ],
@@ -1007,15 +1040,15 @@
   {
     "id": "seregios_chargeblade",
     "name": "神魔觜宿一",
-    "nameEn": "",
+    "nameEn": "Aslat Charger",
     "type": "charge-blade",
     "attack": 2335,
     "element": null,
-    "affinity": 15,
+    "affinity": 30,
     "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
     "skills": [
       {
-        "skillId": "powerhouse",
+        "skillId": "attack-activation",
         "level": 1
       }
     ],
@@ -1028,7 +1061,7 @@
   {
     "id": "bone_chargeblade",
     "name": "骨製兵裝",
-    "nameEn": "",
+    "nameEn": "Bone Strongarm",
     "type": "charge-blade",
     "attack": 1912,
     "element": null,
@@ -1036,11 +1069,164 @@
     "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
     "skills": [
       {
-        "skillId": "concentration",
+        "skillId": "sp-meter-boost",
         "level": 1
       }
     ],
     "image": "/images/weapons/bone_chargeblade.webp",
+    "phial": {
+      "name": "榴彈瓶",
+      "description": "於擊中位置引發帶有昏厥效果的爆炸"
+    }
+  },
+  {
+    "id": "barroth_chargeblade",
+    "name": "土砂龍充能斧",
+    "nameEn": "Barroth Anchor",
+    "type": "charge-blade",
+    "attack": 2103,
+    "element": null,
+    "affinity": 0,
+    "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
+    "skills": [
+      {
+        "skillId": "defense-boost",
+        "level": 2
+      }
+    ],
+    "image": "/images/weapons/barroth_chargeblade.webp",
+    "phial": {
+      "name": "榴彈瓶",
+      "description": "於擊中位置引發帶有昏厥效果的爆炸"
+    }
+  },
+  {
+    "id": "stygian_zinogre_chargeblade",
+    "name": "獄盾斧龍拳",
+    "nameEn": "Brimstren Drakeclaw",
+    "type": "charge-blade",
+    "attack": 1506,
+    "element": {
+      "type": "dragon",
+      "value": 1506
+    },
+    "affinity": 0,
+    "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
+    "skills": [
+      {
+        "skillId": "dragon-attack",
+        "level": 1
+      },
+      {
+        "skillId": "dragon-attack-peak",
+        "level": 1
+      }
+    ],
+    "image": "/images/weapons/stygian_zinogre_chargeblade.webp",
+    "phial": {
+      "name": "榴彈瓶",
+      "description": "於擊中位置引發帶有昏厥效果的爆炸"
+    }
+  },
+  {
+    "id": "aurora_somnacanth_chargeblade",
+    "name": "雪花之瓊妃呻吟",
+    "nameEn": "Bloom Snow Wail",
+    "type": "charge-blade",
+    "attack": 1450,
+    "element": {
+      "type": "ice",
+      "value": 1614
+    },
+    "affinity": -20,
+    "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
+    "skills": [
+      {
+        "skillId": "sp-overdrive",
+        "level": 1
+      }
+    ],
+    "image": "/images/weapons/aurora_somnacanth_chargeblade.webp",
+    "phial": {
+      "name": "強屬性瓶",
+      "description": "於擊中位置引發與武器相同屬性的爆炸"
+    }
+  },
+  {
+    "id": "shogunceanataur_chargeblade",
+    "name": "刀鋒衛兵",
+    "nameEn": "Guardian Blade",
+    "type": "charge-blade",
+    "attack": 2015,
+    "element": {
+      "type": "water",
+      "value": 752
+    },
+    "affinity": 0,
+    "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
+    "skills": [
+      {
+        "skillId": "follow-up",
+        "level": 1
+      }
+    ],
+    "image": "/images/weapons/shogunceanataur_chargeblade.webp",
+    "phial": {
+      "name": "榴彈瓶",
+      "description": "於擊中位置引發帶有昏厥效果的爆炸"
+    }
+  },
+  {
+    "id": "velkhana_chargeblade",
+    "name": "冰臣壁壘",
+    "nameEn": "Regal Daruq",
+    "type": "charge-blade",
+    "attack": 1444,
+    "element": {
+      "type": "ice",
+      "value": 1622
+    },
+    "affinity": 0,
+    "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
+    "skills": [
+      {
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
+      {
+        "skillId": "ice-attack",
+        "level": 1
+      },
+      {
+        "skillId": "ice-attack-peak",
+        "level": 1
+      }
+    ],
+    "image": "/images/weapons/velkhana_chargeblade.webp",
+    "phial": {
+      "name": "強屬性瓶",
+      "description": "於擊中位置引發與武器相同屬性的爆炸"
+    }
+  },
+  {
+    "id": "brachydios_chargeblade",
+    "name": "碎龍兵裝",
+    "nameEn": "Dios Strongarm",
+    "type": "charge-blade",
+    "attack": 2007,
+    "element": {
+      "type": "blast",
+      "value": 416
+    },
+    "affinity": 10,
+    "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
+    "skills": [
+      {
+        "skillId": "follow-up-blast",
+        "level": 1
+      }
+    ],
+    "image": "/images/weapons/brachydios_chargeblade.webp",
     "phial": {
       "name": "榴彈瓶",
       "description": "於擊中位置引發帶有昏厥效果的爆炸"

@@ -2,7 +2,7 @@
   {
     "id": "ore_bow",
     "name": "鐵弓",
-    "nameEn": "",
+    "nameEn": "Iron Bow",
     "type": "bow",
     "attack": 1912,
     "element": null,
@@ -10,7 +10,7 @@
     "spSkill": "【SP】龍之箭 Lv3",
     "skills": [
       {
-        "skillId": "poison_resistance",
+        "skillId": "poison-resistance",
         "level": 2
       }
     ],
@@ -26,11 +26,11 @@
   {
     "id": "kuluyaku_bow",
     "name": "搔鳥弓",
-    "nameEn": "",
+    "nameEn": "Kulu Arrow",
     "type": "bow",
     "attack": 1912,
     "element": null,
-    "affinity": 5,
+    "affinity": 30,
     "spSkill": "【SP】龍之箭 Lv3",
     "skills": [
       {
@@ -50,18 +50,18 @@
   {
     "id": "pukeipukei_bow",
     "name": "花朵弓",
-    "nameEn": "",
+    "nameEn": "Blooming Arch",
     "type": "bow",
-    "attack": 1596,
+    "attack": 1912,
     "element": {
       "type": "poison",
-      "value": 50
+      "value": 417
     },
     "affinity": 0,
     "spSkill": "【SP】龍之箭 Lv3",
     "skills": [
       {
-        "skillId": "sneak_attack",
+        "skillId": "sneak-attack",
         "level": 1
       }
     ],
@@ -77,12 +77,12 @@
   {
     "id": "coral_pukeipukei_bow",
     "name": "潟湖射手",
-    "nameEn": "",
+    "nameEn": "Laguna Shot",
     "type": "bow",
-    "attack": 1420,
+    "attack": 1463,
     "element": {
       "type": "water",
-      "value": 232
+      "value": 1420
     },
     "affinity": 0,
     "spSkill": "【SP】龍之箭 Lv3",
@@ -104,18 +104,18 @@
   {
     "id": "tobikadachi_bow",
     "name": "脈衝弓",
-    "nameEn": "",
+    "nameEn": "Pulsar Bow",
     "type": "bow",
-    "attack": 1293,
+    "attack": 1549,
     "element": {
       "type": "thunder",
-      "value": 47
+      "value": 1131
     },
     "affinity": 0,
     "spSkill": "【SP】龍之箭 Lv3",
     "skills": [
       {
-        "skillId": "evade_extender",
+        "skillId": "evade-extender",
         "level": 1
       }
     ],
@@ -131,18 +131,22 @@
   {
     "id": "viper_tobikadachi_bow",
     "name": "飛毒弓朱嵐",
-    "nameEn": "",
+    "nameEn": "Fellbow Crimson Hail",
     "type": "bow",
-    "attack": 1776,
+    "attack": 2127,
     "element": {
       "type": "paralysis",
-      "value": 201
+      "value": 364
     },
     "affinity": 10,
     "spSkill": "【SP】龍之箭 Lv3",
     "skills": [
       {
-        "skillId": "burst_secret",
+        "skillId": "burst",
+        "level": 1
+      },
+      {
+        "skillId": "burst-peak",
         "level": 1
       }
     ],
@@ -158,18 +162,18 @@
   {
     "id": "nightshade_paolumu_bow",
     "name": "夢魘弓",
-    "nameEn": "",
+    "nameEn": "Nightmare String",
     "type": "bow",
-    "attack": 1756,
+    "attack": 2103,
     "element": {
       "type": "sleep",
-      "value": 188
+      "value": 312
     },
     "affinity": 0,
     "spSkill": "【SP】龍之箭 Lv3",
     "skills": [
       {
-        "skillId": "sneak_attack",
+        "skillId": "sneak-attack",
         "level": 1
       }
     ],
@@ -185,18 +189,18 @@
   {
     "id": "jyuratodus_bow",
     "name": "水流弓",
-    "nameEn": "",
+    "nameEn": "Aqua Arrow",
     "type": "bow",
-    "attack": 1293,
+    "attack": 1549,
     "element": {
       "type": "water",
-      "value": 75
+      "value": 1131
     },
     "affinity": 0,
     "spSkill": "【SP】龍之箭 Lv3",
     "skills": [
       {
-        "skillId": "last_stand",
+        "skillId": "last-stand-guard",
         "level": 1
       }
     ],
@@ -212,18 +216,18 @@
   {
     "id": "anjanath_bow",
     "name": "火焰弓",
-    "nameEn": "",
+    "nameEn": "Blazing Bow",
     "type": "bow",
-    "attack": 1293,
+    "attack": 1549,
     "element": {
       "type": "fire",
-      "value": 117
+      "value": 1131
     },
     "affinity": 0,
     "spSkill": "【SP】龍之箭 Lv3",
     "skills": [
       {
-        "skillId": "rising_tide",
+        "skillId": "battle-temper",
         "level": 1
       }
     ],
@@ -239,18 +243,18 @@
   {
     "id": "fulgur_anjanath_bow",
     "name": "風色雷顎",
-    "nameEn": "",
+    "nameEn": "Fulguring Bow",
     "type": "bow",
     "attack": 1434,
     "element": {
       "type": "thunder",
-      "value": 230
+      "value": 1434
     },
-    "affinity": 10,
+    "affinity": 20,
     "spSkill": "【SP】龍之箭 Lv3",
     "skills": [
       {
-        "skillId": "critical_element",
+        "skillId": "critical-element",
         "level": 1
       }
     ],
@@ -266,18 +270,18 @@
   {
     "id": "rathian_bow",
     "name": "公主弓矢",
-    "nameEn": "",
+    "nameEn": "Princess Arrow",
     "type": "bow",
-    "attack": 1516,
+    "attack": 1817,
     "element": {
       "type": "poison",
-      "value": 236
+      "value": 516
     },
     "affinity": 0,
     "spSkill": "【SP】龍之箭 Lv3",
     "skills": [
       {
-        "skillId": "health_boost",
+        "skillId": "health-boost",
         "level": 2
       }
     ],
@@ -293,18 +297,18 @@
   {
     "id": "pink_rathian_bow",
     "name": "薔薇弓",
-    "nameEn": "",
+    "nameEn": "Rosen Arrow",
     "type": "bow",
-    "attack": 1293,
+    "attack": 1549,
     "element": {
       "type": "dragon",
-      "value": 181
+      "value": 1131
     },
     "affinity": 0,
     "spSkill": "【SP】龍之箭 Lv3",
     "skills": [
       {
-        "skillId": "evade_extender",
+        "skillId": "evade-extender",
         "level": 1
       }
     ],
@@ -320,18 +324,18 @@
   {
     "id": "gold_rathian_bow",
     "name": "瘋狂弓",
-    "nameEn": "",
+    "nameEn": "Lunatic Arrow",
     "type": "bow",
-    "attack": 1345,
+    "attack": 1507,
     "element": {
       "type": "dragon",
-      "value": 277
+      "value": 1345
     },
-    "affinity": 20,
+    "affinity": 30,
     "spSkill": "【SP】龍之箭 Lv3",
     "skills": [
       {
-        "skillId": "pursuit_poison",
+        "skillId": "follow-up-poison",
         "level": 2
       }
     ],
@@ -347,18 +351,18 @@
   {
     "id": "legiana_bow",
     "name": "優雅長弓",
-    "nameEn": "",
+    "nameEn": "Glacial Arrow",
     "type": "bow",
-    "attack": 1420,
+    "attack": 1463,
     "element": {
       "type": "ice",
-      "value": 232
+      "value": 1420
     },
     "affinity": 0,
     "spSkill": "【SP】龍之箭 Lv3",
     "skills": [
       {
-        "skillId": "divine_blessing",
+        "skillId": "divine-blessing",
         "level": 2
       }
     ],
@@ -374,7 +378,7 @@
   {
     "id": "diablos_bow",
     "name": "角龍大弓",
-    "nameEn": "",
+    "nameEn": "Diablos Bow",
     "type": "bow",
     "attack": 2371,
     "element": null,
@@ -398,7 +402,7 @@
   {
     "id": "black_diablos_bow",
     "name": "疾風角弓",
-    "nameEn": "",
+    "nameEn": "Galebender",
     "type": "bow",
     "attack": 2658,
     "element": null,
@@ -422,12 +426,12 @@
   {
     "id": "rathalos_bow",
     "name": "火龍強弓",
-    "nameEn": "",
+    "nameEn": "Rathslinger",
     "type": "bow",
-    "attack": 1420,
+    "attack": 1463,
     "element": {
       "type": "fire",
-      "value": 232
+      "value": 1420
     },
     "affinity": 0,
     "spSkill": "【SP】龍之箭 Lv3",
@@ -449,19 +453,24 @@
   {
     "id": "azure_rathalos_bow",
     "name": "蒼火龍剛弓",
-    "nameEn": "",
+    "nameEn": "Azure Mightbow",
     "type": "bow",
-    "attack": 1682,
+    "attack": 2015,
     "element": {
       "type": "fire",
-      "value": 134
+      "value": 752
     },
     "affinity": 0,
     "spSkill": "【SP】龍之箭 Lv3",
     "skills": [
       {
-        "skillId": "special_boost",
+        "skillId": "special-boost",
         "level": 1
+      },
+      {
+        "skillId": "special-boost-peak",
+        "level": 1,
+        "requiredCustomEnhancementLevel": 10
       }
     ],
     "image": "/images/weapons/azure_rathalos_bow.webp",
@@ -476,18 +485,18 @@
   {
     "id": "silver_rathalos_bow",
     "name": "銀火龍烈弓",
-    "nameEn": "",
+    "nameEn": "Silver Wrathbow",
     "type": "bow",
-    "attack": 1345,
+    "attack": 1507,
     "element": {
       "type": "fire",
-      "value": 277
+      "value": 1345
     },
-    "affinity": 20,
+    "affinity": 30,
     "spSkill": "【SP】龍之箭 Lv3",
     "skills": [
       {
-        "skillId": "critical_element",
+        "skillId": "critical-element",
         "level": 2
       }
     ],
@@ -503,7 +512,7 @@
   {
     "id": "banbaro_bow",
     "name": "巨牛大弓",
-    "nameEn": "",
+    "nameEn": "Mammoth Greatbow",
     "type": "bow",
     "attack": 2113,
     "element": null,
@@ -511,7 +520,7 @@
     "spSkill": "【SP】龍之箭 Lv3",
     "skills": [
       {
-        "skillId": "firm_foothold",
+        "skillId": "firm-foothold",
         "level": 2
       }
     ],
@@ -527,18 +536,18 @@
   {
     "id": "barioth_bow",
     "name": "冰尖暴風",
-    "nameEn": "",
+    "nameEn": "Icicle Blizzard",
     "type": "bow",
-    "attack": 1191,
+    "attack": 1426,
     "element": {
       "type": "ice",
-      "value": 117
+      "value": 1131
     },
-    "affinity": 5,
+    "affinity": 20,
     "spSkill": "【SP】龍之箭 Lv3",
     "skills": [
       {
-        "skillId": "evade_extender",
+        "skillId": "evade-extender",
         "level": 1
       }
     ],
@@ -554,18 +563,18 @@
   {
     "id": "zinogre_bow",
     "name": "王弓遠雷",
-    "nameEn": "",
+    "nameEn": "Usurper's Rumble",
     "type": "bow",
-    "attack": 1420,
+    "attack": 1463,
     "element": {
       "type": "thunder",
-      "value": 232
+      "value": 1420
     },
     "affinity": 0,
     "spSkill": "【SP】龍之箭 Lv3",
     "skills": [
       {
-        "skillId": "artful_dodger",
+        "skillId": "artful-dodger",
         "level": 1
       }
     ],
@@ -581,18 +590,18 @@
   {
     "id": "deviljho_bow",
     "name": "暴徒的凶弓",
-    "nameEn": "",
+    "nameEn": "Insurgent's Bow",
     "type": "bow",
-    "attack": 1568,
+    "attack": 1579,
     "element": {
       "type": "dragon",
-      "value": 292
+      "value": 1568
     },
     "affinity": -30,
     "spSkill": "【SP】龍之箭 Lv3",
     "skills": [
       {
-        "skillId": "peak_performance",
+        "skillId": "peak-performance",
         "level": 2
       }
     ],
@@ -608,18 +617,18 @@
   {
     "id": "khezu_bow",
     "name": "奇怪龍弓",
-    "nameEn": "",
+    "nameEn": "Khezu Bow",
     "type": "bow",
-    "attack": 1194,
+    "attack": 1429,
     "element": {
       "type": "thunder",
-      "value": 120
+      "value": 1134
     },
-    "affinity": 5,
+    "affinity": 20,
     "spSkill": "【SP】龍之箭 Lv3",
     "skills": [
       {
-        "skillId": "peak_performance",
+        "skillId": "peak-performance",
         "level": 1
       }
     ],
@@ -635,16 +644,20 @@
   {
     "id": "kushaladaora_bow",
     "name": "鋼龍強弓",
-    "nameEn": "",
+    "nameEn": "Daora's Sagittarii",
     "type": "bow",
-    "attack": 1553,
+    "attack": 1861,
     "element": {
       "type": "ice",
-      "value": 238
+      "value": 1210
     },
     "affinity": 0,
     "spSkill": "【SP】龍之箭 Lv3",
     "skills": [
+      {
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
       {
         "skillId": "windproof",
         "level": 2
@@ -662,18 +675,18 @@
   {
     "id": "mizutsune_bow",
     "name": "狐弓露珠亂世情",
-    "nameEn": "",
+    "nameEn": "Blessed Rain",
     "type": "bow",
-    "attack": 1436,
+    "attack": 1363,
     "element": {
       "type": "water",
-      "value": 230
+      "value": 1436
     },
-    "affinity": 10,
+    "affinity": 20,
     "spSkill": "【SP】龍之箭 Lv3",
     "skills": [
       {
-        "skillId": "artful_dodger",
+        "skillId": "artful-dodger",
         "level": 1
       }
     ],
@@ -689,16 +702,20 @@
   {
     "id": "teostra_bow",
     "name": "勇猛與光明的淒烈弓",
-    "nameEn": "",
+    "nameEn": "Bow of Light & Courage",
     "type": "bow",
-    "attack": 1684,
+    "attack": 2017,
     "element": {
       "type": "blast",
-      "value": 345
+      "value": 522
     },
     "affinity": 0,
     "spSkill": "【SP】龍之箭 Lv3",
     "skills": [
+      {
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
       {
         "skillId": "heroics",
         "level": 2
@@ -716,12 +733,12 @@
   {
     "id": "magnamalo_bow",
     "name": "禍弓【封】",
-    "nameEn": "",
+    "nameEn": "Sinister Bow",
     "type": "bow",
-    "attack": 1516,
+    "attack": 1817,
     "element": {
       "type": "blast",
-      "value": 236
+      "value": 516
     },
     "affinity": 0,
     "spSkill": "【SP】龍之箭 Lv3",
@@ -743,18 +760,18 @@
   {
     "id": "rajang_bow",
     "name": "雷弓【獸王】",
-    "nameEn": "",
+    "nameEn": "Beast Thunderbow",
     "type": "bow",
-    "attack": 1568,
+    "attack": 1579,
     "element": {
       "type": "thunder",
-      "value": 292
+      "value": 1568
     },
     "affinity": -30,
     "spSkill": "【SP】龍之箭 Lv3",
     "skills": [
       {
-        "skillId": "rising_tide",
+        "skillId": "battle-temper",
         "level": 2
       }
     ],
@@ -770,16 +787,20 @@
   {
     "id": "nergigante_bow",
     "name": "必滅一矢",
-    "nameEn": "",
+    "nameEn": "Doom's Shaft",
     "type": "bow",
-    "attack": 1553,
+    "attack": 1861,
     "element": {
       "type": "dragon",
-      "value": 238
+      "value": 1210
     },
     "affinity": 0,
     "spSkill": "【SP】龍之箭 Lv3",
     "skills": [
+      {
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
       {
         "skillId": "partbreaker",
         "level": 2
@@ -797,7 +818,7 @@
   {
     "id": "tigrex_bow",
     "name": "轟龍弓",
-    "nameEn": "",
+    "nameEn": "Rex Bow",
     "type": "bow",
     "attack": 2633,
     "element": null,
@@ -805,7 +826,7 @@
     "spSkill": "【SP】龍之箭 Lv3",
     "skills": [
       {
-        "skillId": "brutal_strike",
+        "skillId": "maximum-might",
         "level": 1
       }
     ],
@@ -821,18 +842,18 @@
   {
     "id": "brute_tigrex_bow",
     "name": "劫難弧弓",
-    "nameEn": "",
+    "nameEn": "Accursed Arc",
     "type": "bow",
-    "attack": 1734,
+    "attack": 2077,
     "element": {
       "type": "blast",
-      "value": 250
+      "value": 417
     },
     "affinity": -10,
     "spSkill": "【SP】龍之箭 Lv3",
     "skills": [
       {
-        "skillId": "ballistic",
+        "skillId": "ballistics",
         "level": 3
       }
     ],
@@ -848,7 +869,7 @@
   {
     "id": "arzuros_bow",
     "name": "青熊弓",
-    "nameEn": "",
+    "nameEn": "Arzuros Bow",
     "type": "bow",
     "attack": 2361,
     "element": null,
@@ -856,7 +877,7 @@
     "spSkill": "【SP】龍之箭 Lv3",
     "skills": [
       {
-        "skillId": "special_boost",
+        "skillId": "special-boost",
         "level": 2
       }
     ],
@@ -872,18 +893,18 @@
   {
     "id": "glavenus_bow",
     "name": "斬龍弓",
-    "nameEn": "",
+    "nameEn": "Glavenus Arrow",
     "type": "bow",
-    "attack": 1568,
+    "attack": 1579,
     "element": {
       "type": "fire",
-      "value": 292
+      "value": 1568
     },
     "affinity": -30,
     "spSkill": "【SP】龍之箭 Lv3",
     "skills": [
       {
-        "skillId": "brutal_strike",
+        "skillId": "maximum-might",
         "level": 1
       }
     ],
@@ -899,18 +920,22 @@
   {
     "id": "chameleos_bow",
     "name": "魔導弓魂之谷",
-    "nameEn": "",
+    "nameEn": "Demon's Guidance",
     "type": "bow",
-    "attack": 1741,
+    "attack": 2086,
     "element": {
       "type": "poison",
-      "value": 347
+      "value": 526
     },
     "affinity": 0,
     "spSkill": "【SP】龍之箭 Lv3",
     "skills": [
       {
-        "skillId": "abnormal_status_enhancement",
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
+      {
+        "skillId": "status-sneak-attack",
         "level": 2
       }
     ],
@@ -926,12 +951,12 @@
   {
     "id": "greatwroggi_bow",
     "name": "毒狗龍左輪",
-    "nameEn": "",
+    "nameEn": "Wroggi Revolver",
     "type": "bow",
-    "attack": 1647,
+    "attack": 1973,
     "element": {
       "type": "poison",
-      "value": 66
+      "value": 319
     },
     "affinity": 10,
     "spSkill": "【SP】龍之箭 Lv3",
@@ -953,18 +978,18 @@
   {
     "id": "bishaten_bow",
     "name": "天具･光背弓",
-    "nameEn": "",
+    "nameEn": "Dawn Ray Bow",
     "type": "bow",
-    "attack": 1516,
+    "attack": 1817,
     "element": {
       "type": "paralysis",
-      "value": 176
+      "value": 516
     },
     "affinity": 0,
     "spSkill": "【SP】龍之箭 Lv3",
     "skills": [
       {
-        "skillId": "multi_attack_boost",
+        "skillId": "group-hunt-attack",
         "level": 2
       }
     ],
@@ -980,11 +1005,11 @@
   {
     "id": "nargacuga_bow",
     "name": "隱密長弓",
-    "nameEn": "",
+    "nameEn": "Hidden Bow",
     "type": "bow",
     "attack": 2082,
     "element": null,
-    "affinity": 25,
+    "affinity": 40,
     "spSkill": "【SP】龍之箭 Lv3",
     "skills": [
       {
@@ -1004,18 +1029,22 @@
   {
     "id": "namielle_bow",
     "name": "暴君‧浮浪",
-    "nameEn": "",
+    "nameEn": "Black Planula",
     "type": "bow",
-    "attack": 1335,
+    "attack": 1591,
     "element": {
       "type": "water",
-      "value": 276
+      "value": 1335
     },
-    "affinity": 15,
+    "affinity": 20,
     "spSkill": "【SP】龍之箭 Lv3",
     "skills": [
       {
-        "skillId": "weakness_exploit",
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
+      {
+        "skillId": "weakness-exploit",
         "level": 1
       }
     ],
@@ -1031,7 +1060,7 @@
   {
     "id": "garangolm_bow",
     "name": "剛纏獸之弓",
-    "nameEn": "",
+    "nameEn": "Golm Bone Bow",
     "type": "bow",
     "attack": 2371,
     "element": null,
@@ -1039,7 +1068,7 @@
     "spSkill": "【SP】龍之箭 Lv3",
     "skills": [
       {
-        "skillId": "disable_perfect_evade",
+        "skillId": "resolute",
         "level": 1
       }
     ],
@@ -1055,18 +1084,18 @@
   {
     "id": "lunagaron_bow",
     "name": "冷月之狼弓",
-    "nameEn": "",
+    "nameEn": "Frostmoon Crescentbow",
     "type": "bow",
-    "attack": 1458,
+    "attack": 1222,
     "element": {
       "type": "ice",
-      "value": 164
+      "value": 1458
     },
     "affinity": 0,
     "spSkill": "【SP】龍之箭 Lv3",
     "skills": [
       {
-        "skillId": "high_performance_ice",
+        "skillId": "hi-ice",
         "level": 1
       }
     ],
@@ -1082,18 +1111,18 @@
   {
     "id": "espinas_bow",
     "name": "薔薇弧弓",
-    "nameEn": "",
+    "nameEn": "Rosenbogen",
     "type": "bow",
     "attack": 1434,
     "element": {
       "type": "fire",
-      "value": 230
+      "value": 1434
     },
-    "affinity": 10,
+    "affinity": 20,
     "spSkill": "【SP】龍之箭 Lv3",
     "skills": [
       {
-        "skillId": "part_break_special_boost",
+        "skillId": "special-partbreaker",
         "level": 2
       }
     ],
@@ -1109,18 +1138,22 @@
   {
     "id": "malzeno_bow",
     "name": "渴望之吸血鬼",
-    "nameEn": "",
+    "nameEn": "Ravenous Vampire",
     "type": "bow",
-    "attack": 1622,
+    "attack": 1444,
     "element": {
       "type": "dragon",
-      "value": 334
+      "value": 1622
     },
     "affinity": 0,
     "spSkill": "【SP】龍之箭 Lv3",
     "skills": [
       {
-        "skillId": "high_performance_dragon",
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
+      {
+        "skillId": "hi-dragon",
         "level": 1
       }
     ],
@@ -1136,18 +1169,18 @@
   {
     "id": "quematrice_bow",
     "name": "炎尾弓",
-    "nameEn": "",
+    "nameEn": "Quematrice Arco",
     "type": "bow",
-    "attack": 1458,
+    "attack": 1222,
     "element": {
       "type": "fire",
-      "value": 68
+      "value": 1458
     },
     "affinity": 0,
     "spSkill": "【SP】龍之箭 Lv3",
     "skills": [
       {
-        "skillId": "bravery",
+        "skillId": "valor",
         "level": 1
       }
     ],
@@ -1163,18 +1196,18 @@
   {
     "id": "astalos_bow",
     "name": "雷擊弓雷鳴",
-    "nameEn": "",
+    "nameEn": "Thunderstroke Tonnerre",
     "type": "bow",
-    "attack": 1436,
+    "attack": 1363,
     "element": {
       "type": "thunder",
-      "value": 230
+      "value": 1436
     },
-    "affinity": 10,
+    "affinity": 20,
     "spSkill": "【SP】龍之箭 Lv3",
     "skills": [
       {
-        "skillId": "thunder_attack",
+        "skillId": "thunder-attack",
         "level": 1
       }
     ],
@@ -1190,18 +1223,18 @@
   {
     "id": "almudron_bow",
     "name": "泥翁射擊弓",
-    "nameEn": "",
+    "nameEn": "Mud Shot",
     "type": "bow",
-    "attack": 1458,
+    "attack": 1222,
     "element": {
       "type": "water",
-      "value": 164
+      "value": 1458
     },
     "affinity": 0,
     "spSkill": "【SP】龍之箭 Lv3",
     "skills": [
       {
-        "skillId": "water_attack",
+        "skillId": "water-attack",
         "level": 1
       }
     ],
@@ -1217,15 +1250,15 @@
   {
     "id": "seregios_bow",
     "name": "銳弓箕宿一",
-    "nameEn": "",
+    "nameEn": "Shalya Bow",
     "type": "bow",
     "attack": 2335,
     "element": null,
-    "affinity": 15,
+    "affinity": 30,
     "spSkill": "【SP】龍之箭 Lv3",
     "skills": [
       {
-        "skillId": "powerhouse",
+        "skillId": "attack-activation",
         "level": 1
       }
     ],
@@ -1241,7 +1274,7 @@
   {
     "id": "bone_bow",
     "name": "獵弓",
-    "nameEn": "",
+    "nameEn": "Hunter's Bow",
     "type": "bow",
     "attack": 1912,
     "element": null,
@@ -1249,7 +1282,7 @@
     "spSkill": "【SP】龍之箭 Lv3",
     "skills": [
       {
-        "skillId": "concentration",
+        "skillId": "sp-meter-boost",
         "level": 1
       }
     ],
@@ -1261,5 +1294,125 @@
       "連射箭 lv4"
     ],
     "bottleType": "無"
+  },
+  {
+    "id": "stygian_zinogre_bow",
+    "name": "獄弓龍岩",
+    "nameEn": "Brimstren Drakesight",
+    "type": "bow",
+    "attack": 1506,
+    "element": {
+      "type": "dragon",
+      "value": 1506
+    },
+    "affinity": 0,
+    "spSkill": "【SP】龍之箭 Lv3",
+    "skills": [
+      {
+        "skillId": "dragon-attack",
+        "level": 1
+      },
+      {
+        "skillId": "dragon-attack-peak",
+        "level": 1
+      }
+    ],
+    "image": "/images/weapons/stygian_zinogre_bow.webp",
+    "chargingShots": [
+      "連射箭 lv1",
+      "連射箭 lv1",
+      "連射箭 lv4",
+      "擴散箭 lv4"
+    ],
+    "bottleType": "無"
+  },
+  {
+    "id": "shogunceanataur_bow",
+    "name": "藍刃弓",
+    "nameEn": "Bear Blade Bow",
+    "type": "bow",
+    "attack": 2015,
+    "element": {
+      "type": "water",
+      "value": 752
+    },
+    "affinity": 0,
+    "spSkill": "【SP】龍之箭 Lv3",
+    "skills": [
+      {
+        "skillId": "follow-up",
+        "level": 1
+      }
+    ],
+    "image": "/images/weapons/shogunceanataur_bow.webp",
+    "chargingShots": [
+      "貫通箭 lv1",
+      "貫通箭 lv2",
+      "貫通箭 lv3",
+      "貫通箭 lv4"
+    ],
+    "bottleType": "無"
+  },
+  {
+    "id": "velkhana_bow",
+    "name": "冰妖豔射",
+    "nameEn": "Alluring Evelia",
+    "type": "bow",
+    "attack": 1444,
+    "element": {
+      "type": "ice",
+      "value": 1622
+    },
+    "affinity": 0,
+    "spSkill": "【SP】龍之箭 Lv3",
+    "skills": [
+      {
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
+      {
+        "skillId": "ice-attack",
+        "level": 1
+      },
+      {
+        "skillId": "ice-attack-peak",
+        "level": 1
+      }
+    ],
+    "image": "/images/weapons/velkhana_bow.webp",
+    "chargingShots": [
+      "連射箭 lv1",
+      "擴散箭 lv2",
+      "連射箭 lv4",
+      "擴散箭 lv4"
+    ],
+    "bottleType": "無"
+  },
+  {
+    "id": "brachydios_bow",
+    "name": "碎龍弓",
+    "nameEn": "Dios Flier",
+    "type": "bow",
+    "attack": 2007,
+    "element": {
+      "type": "blast",
+      "value": 416
+    },
+    "affinity": 10,
+    "spSkill": "【SP】龍之箭 Lv3",
+    "skills": [
+      {
+        "skillId": "follow-up-blast",
+        "level": 1
+      }
+    ],
+    "image": "/images/weapons/brachydios_bow.webp",
+    "chargingShots": [
+      "擴散箭 lv1",
+      "擴散箭 lv1",
+      "連射箭 lv4",
+      "連射箭 lv4"
+    ],
+    "bottleType": "爆破瓶"
   }
 ]

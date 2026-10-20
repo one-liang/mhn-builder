@@ -2,7 +2,7 @@
   {
     "id": "ore_lightbowgun",
     "name": "迅擊鍊弩",
-    "nameEn": "",
+    "nameEn": "Chain Blitz",
     "type": "light-bowgun",
     "attack": 1912,
     "element": null,
@@ -10,7 +10,7 @@
     "spSkill": "【SP】反擊龍彈 Lv3",
     "skills": [
       {
-        "skillId": "poison_resistance",
+        "skillId": "poison-resistance",
         "level": 2
       }
     ],
@@ -33,18 +33,18 @@
   {
     "id": "greatjagras_lightbowgun",
     "name": "凶豺龍迅擊弩",
-    "nameEn": "",
+    "nameEn": "Jagras Blitz",
     "type": "light-bowgun",
-    "attack": 1373,
+    "attack": 1644,
     "element": {
       "type": "water",
-      "value": 25
+      "value": 754
     },
     "affinity": 0,
     "spSkill": "【SP】反擊龍彈 Lv3",
     "skills": [
       {
-        "skillId": "health_boost",
+        "skillId": "health-boost",
         "level": 2
       }
     ],
@@ -67,12 +67,12 @@
   {
     "id": "coral_pukeipukei_lightbowgun",
     "name": "潟湖迅擊弩",
-    "nameEn": "",
+    "nameEn": "Laguna Blitz",
     "type": "light-bowgun",
-    "attack": 1420,
+    "attack": 1463,
     "element": {
       "type": "water",
-      "value": 232
+      "value": 1420
     },
     "affinity": 0,
     "spSkill": "【SP】反擊龍彈 Lv3",
@@ -95,13 +95,19 @@
         "capacity": 4,
         "recoil": "大",
         "reload": "稍微慢"
+      },
+      {
+        "name": "水冷徹甲榴彈",
+        "capacity": 4,
+        "recoil": "特大",
+        "reload": "慢"
       }
     ]
   },
   {
     "id": "barroth_lightbowgun",
     "name": "土砂龍步槍",
-    "nameEn": "",
+    "nameEn": "Carapace Rifle",
     "type": "light-bowgun",
     "attack": 2103,
     "element": null,
@@ -109,7 +115,7 @@
     "spSkill": "【SP】反擊龍彈 Lv3",
     "skills": [
       {
-        "skillId": "defense_boost",
+        "skillId": "defense-boost",
         "level": 2
       }
     ],
@@ -132,18 +138,18 @@
   {
     "id": "tobikadachi_lightbowgun",
     "name": "閃電迅擊弩",
-    "nameEn": "",
+    "nameEn": "Thunder Blitz",
     "type": "light-bowgun",
-    "attack": 1293,
+    "attack": 1549,
     "element": {
       "type": "thunder",
-      "value": 47
+      "value": 1131
     },
     "affinity": 0,
     "spSkill": "【SP】反擊龍彈 Lv3",
     "skills": [
       {
-        "skillId": "evade_extender",
+        "skillId": "evade-extender",
         "level": 1
       }
     ],
@@ -166,7 +172,7 @@
   {
     "id": "paolumu_lightbowgun",
     "name": "浮空龍迅擊弩",
-    "nameEn": "",
+    "nameEn": "Lumu Blitz",
     "type": "light-bowgun",
     "attack": 2113,
     "element": null,
@@ -174,7 +180,7 @@
     "spSkill": "【SP】反擊龍彈 Lv3",
     "skills": [
       {
-        "skillId": "divine_blessing",
+        "skillId": "divine-blessing",
         "level": 2
       }
     ],
@@ -191,13 +197,19 @@
         "capacity": 4,
         "recoil": "大",
         "reload": "稍微慢"
+      },
+      {
+        "name": "LV1 貫通彈",
+        "capacity": 4,
+        "recoil": "大",
+        "reload": "稍微慢"
       }
     ]
   },
   {
     "id": "nightshade_paolumu_lightbowgun",
     "name": "夢魘種子",
-    "nameEn": "",
+    "nameEn": "Nightmare's Seed",
     "type": "light-bowgun",
     "attack": 2371,
     "element": null,
@@ -205,7 +217,7 @@
     "spSkill": "【SP】反擊龍彈 Lv3",
     "skills": [
       {
-        "skillId": "sneak_attack",
+        "skillId": "sneak-attack",
         "level": 1
       }
     ],
@@ -216,24 +228,36 @@
         "capacity": 3,
         "recoil": "大",
         "reload": "稍微慢"
+      },
+      {
+        "name": "LV1 徹甲榴彈",
+        "capacity": 3,
+        "recoil": "特大",
+        "reload": "稍微慢"
+      },
+      {
+        "name": "LV1 貫通彈",
+        "capacity": 4,
+        "recoil": "大",
+        "reload": "稍微慢"
       }
     ]
   },
   {
     "id": "jyuratodus_lightbowgun",
     "name": "泥岩步槍",
-    "nameEn": "",
+    "nameEn": "Madness Rifle",
     "type": "light-bowgun",
-    "attack": 1293,
+    "attack": 1549,
     "element": {
       "type": "water",
-      "value": 75
+      "value": 1131
     },
     "affinity": 0,
     "spSkill": "【SP】反擊龍彈 Lv3",
     "skills": [
       {
-        "skillId": "last_stand",
+        "skillId": "last-stand-guard",
         "level": 1
       }
     ],
@@ -250,24 +274,30 @@
         "capacity": 4,
         "recoil": "大",
         "reload": "稍微慢"
+      },
+      {
+        "name": "水冷徹甲榴彈",
+        "capacity": 2,
+        "recoil": "特大",
+        "reload": "稍微慢"
       }
     ]
   },
   {
     "id": "anjanath_lightbowgun",
     "name": "火焰步槍",
-    "nameEn": "",
+    "nameEn": "Blazing Rifle",
     "type": "light-bowgun",
-    "attack": 1293,
+    "attack": 1549,
     "element": {
       "type": "fire",
-      "value": 117
+      "value": 1131
     },
     "affinity": 0,
     "spSkill": "【SP】反擊龍彈 Lv3",
     "skills": [
       {
-        "skillId": "rising_tide",
+        "skillId": "battle-temper",
         "level": 1
       }
     ],
@@ -290,18 +320,18 @@
   {
     "id": "fulgur_anjanath_lightbowgun",
     "name": "晃射雷顎",
-    "nameEn": "",
+    "nameEn": "Fulgurshot",
     "type": "light-bowgun",
-    "attack": 1588,
+    "attack": 1442,
     "element": {
       "type": "thunder",
-      "value": 294
+      "value": 1588
     },
     "affinity": -40,
     "spSkill": "【SP】反擊龍彈 Lv3",
     "skills": [
       {
-        "skillId": "brutal_strike",
+        "skillId": "maximum-might",
         "level": 1
       }
     ],
@@ -310,6 +340,12 @@
       {
         "name": "電擊散彈",
         "capacity": 3,
+        "recoil": "大",
+        "reload": "稍微慢"
+      },
+      {
+        "name": "電擊散彈",
+        "capacity": 4,
         "recoil": "大",
         "reload": "稍微慢"
       },
@@ -324,15 +360,15 @@
   {
     "id": "gold_rathian_lightbowgun",
     "name": "黃金女武神",
-    "nameEn": "",
+    "nameEn": "Gold Valkyrie",
     "type": "light-bowgun",
     "attack": 2388,
     "element": null,
-    "affinity": 20,
+    "affinity": 30,
     "spSkill": "【SP】反擊龍彈 Lv3",
     "skills": [
       {
-        "skillId": "pursuit_poison",
+        "skillId": "follow-up-poison",
         "level": 2
       }
     ],
@@ -343,24 +379,36 @@
         "capacity": 4,
         "recoil": "大",
         "reload": "稍微慢"
+      },
+      {
+        "name": "LV1 散彈",
+        "capacity": 5,
+        "recoil": "大",
+        "reload": "稍微慢"
+      },
+      {
+        "name": "LV1 徹甲榴彈",
+        "capacity": 3,
+        "recoil": "特大",
+        "reload": "稍微慢"
       }
     ]
   },
   {
     "id": "legiana_lightbowgun",
     "name": "冰雪迅擊弩",
-    "nameEn": "",
+    "nameEn": "Snow Blitz",
     "type": "light-bowgun",
-    "attack": 1420,
+    "attack": 1463,
     "element": {
       "type": "ice",
-      "value": 232
+      "value": 1420
     },
     "affinity": 0,
     "spSkill": "【SP】反擊龍彈 Lv3",
     "skills": [
       {
-        "skillId": "divine_blessing",
+        "skillId": "divine-blessing",
         "level": 2
       }
     ],
@@ -377,18 +425,24 @@
         "capacity": 4,
         "recoil": "大",
         "reload": "稍微慢"
+      },
+      {
+        "name": "斬裂冰結彈",
+        "capacity": 3,
+        "recoil": "特大",
+        "reload": "稍微慢"
       }
     ]
   },
   {
     "id": "rathalos_lightbowgun",
     "name": "火焰迅擊弩",
-    "nameEn": "",
+    "nameEn": "Flame Blitz",
     "type": "light-bowgun",
-    "attack": 1420,
+    "attack": 1463,
     "element": {
       "type": "fire",
-      "value": 232
+      "value": 1420
     },
     "affinity": 0,
     "spSkill": "【SP】反擊龍彈 Lv3",
@@ -411,25 +465,36 @@
         "capacity": 4,
         "recoil": "大",
         "reload": "稍微慢"
+      },
+      {
+        "name": "斬裂火炎彈",
+        "capacity": 3,
+        "recoil": "特大",
+        "reload": "稍微慢"
       }
     ]
   },
   {
     "id": "azure_rathalos_lightbowgun",
     "name": "魂魄砲蒼炎弩",
-    "nameEn": "",
+    "nameEn": "Azure Soulscorcher",
     "type": "light-bowgun",
-    "attack": 1682,
+    "attack": 2015,
     "element": {
       "type": "fire",
-      "value": 134
+      "value": 752
     },
     "affinity": 0,
     "spSkill": "【SP】反擊龍彈 Lv3",
     "skills": [
       {
-        "skillId": "special_boost",
+        "skillId": "special-boost",
         "level": 1
+      },
+      {
+        "skillId": "special-boost-peak",
+        "level": 1,
+        "requiredCustomEnhancementLevel": 10
       }
     ],
     "image": "/images/weapons/azure_rathalos_lightbowgun.webp",
@@ -445,24 +510,30 @@
         "capacity": 4,
         "recoil": "大",
         "reload": "稍微慢"
+      },
+      {
+        "name": "火炎徹甲榴彈",
+        "capacity": 2,
+        "recoil": "特大",
+        "reload": "稍微慢"
       }
     ]
   },
   {
     "id": "silver_rathalos_lightbowgun",
     "name": "銀光煌龍弩",
-    "nameEn": "",
+    "nameEn": "Argent Ray",
     "type": "light-bowgun",
-    "attack": 1345,
+    "attack": 1507,
     "element": {
       "type": "fire",
-      "value": 277
+      "value": 1345
     },
-    "affinity": 20,
+    "affinity": 30,
     "spSkill": "【SP】反擊龍彈 Lv3",
     "skills": [
       {
-        "skillId": "critical_element",
+        "skillId": "critical-element",
         "level": 2
       }
     ],
@@ -473,13 +544,25 @@
         "capacity": 4,
         "recoil": "大",
         "reload": "稍微慢"
+      },
+      {
+        "name": "斬裂火炎彈",
+        "capacity": 3,
+        "recoil": "特大",
+        "reload": "稍微慢"
+      },
+      {
+        "name": "LV1毒彈",
+        "capacity": 3,
+        "recoil": "大",
+        "reload": "稍微慢"
       }
     ]
   },
   {
     "id": "banbaro_lightbowgun",
     "name": "巨牛大弩",
-    "nameEn": "",
+    "nameEn": "Mammoth Bowgun",
     "type": "light-bowgun",
     "attack": 2113,
     "element": null,
@@ -487,7 +570,7 @@
     "spSkill": "【SP】反擊龍彈 Lv3",
     "skills": [
       {
-        "skillId": "firm_foothold",
+        "skillId": "firm-foothold",
         "level": 2
       }
     ],
@@ -504,24 +587,30 @@
         "capacity": 3,
         "recoil": "大",
         "reload": "稍微慢"
+      },
+      {
+        "name": "LV1 徹甲榴彈",
+        "capacity": 2,
+        "recoil": "特大",
+        "reload": "稍微慢"
       }
     ]
   },
   {
     "id": "barioth_lightbowgun",
     "name": "暴風加農",
-    "nameEn": "",
+    "nameEn": "Blizzard Cannon",
     "type": "light-bowgun",
-    "attack": 1191,
+    "attack": 1426,
     "element": {
       "type": "ice",
-      "value": 117
+      "value": 1131
     },
-    "affinity": 5,
+    "affinity": 20,
     "spSkill": "【SP】反擊龍彈 Lv3",
     "skills": [
       {
-        "skillId": "evade_extender",
+        "skillId": "evade-extender",
         "level": 1
       }
     ],
@@ -532,24 +621,30 @@
         "capacity": 3,
         "recoil": "大",
         "reload": "稍微慢"
+      },
+      {
+        "name": "貫通冰結彈",
+        "capacity": 3,
+        "recoil": "大",
+        "reload": "稍微慢"
       }
     ]
   },
   {
     "id": "zinogre_lightbowgun",
     "name": "王弩雷管",
-    "nameEn": "",
+    "nameEn": "Usurper's Crime",
     "type": "light-bowgun",
-    "attack": 1420,
+    "attack": 1463,
     "element": {
       "type": "thunder",
-      "value": 232
+      "value": 1420
     },
     "affinity": 0,
     "spSkill": "【SP】反擊龍彈 Lv3",
     "skills": [
       {
-        "skillId": "artful_dodger",
+        "skillId": "artful-dodger",
         "level": 1
       }
     ],
@@ -566,21 +661,27 @@
         "capacity": 4,
         "recoil": "大",
         "reload": "稍微慢"
+      },
+      {
+        "name": "電擊徹甲榴彈",
+        "capacity": 2,
+        "recoil": "特大",
+        "reload": "稍微慢"
       }
     ]
   },
   {
     "id": "odogaron_lightbowgun",
     "name": "慘爪步槍",
-    "nameEn": "",
+    "nameEn": "Garon Rifle",
     "type": "light-bowgun",
     "attack": 2059,
     "element": null,
-    "affinity": 5,
+    "affinity": 20,
     "spSkill": "【SP】反擊龍彈 Lv3",
     "skills": [
       {
-        "skillId": "perfect_evade_sp_charge",
+        "skillId": "sp-meter-boost-dodge",
         "level": 1
       }
     ],
@@ -603,18 +704,18 @@
   {
     "id": "ebony_odogaron_lightbowgun",
     "name": "冥府銃火",
-    "nameEn": "",
+    "nameEn": "Nether Salvo",
     "type": "light-bowgun",
-    "attack": 1436,
+    "attack": 1363,
     "element": {
       "type": "dragon",
-      "value": 230
+      "value": 1436
     },
-    "affinity": 10,
+    "affinity": 20,
     "spSkill": "【SP】反擊龍彈 Lv3",
     "skills": [
       {
-        "skillId": "critical_boost",
+        "skillId": "critical-boost",
         "level": 1
       }
     ],
@@ -637,18 +738,18 @@
   {
     "id": "deviljho_lightbowgun",
     "name": "恐怖機械",
-    "nameEn": "",
+    "nameEn": "Devil's Grin",
     "type": "light-bowgun",
-    "attack": 1568,
+    "attack": 1579,
     "element": {
       "type": "dragon",
-      "value": 292
+      "value": 1568
     },
     "affinity": -30,
     "spSkill": "【SP】反擊龍彈 Lv3",
     "skills": [
       {
-        "skillId": "rising_tide",
+        "skillId": "battle-temper",
         "level": 2
       }
     ],
@@ -665,18 +766,24 @@
         "capacity": 3,
         "recoil": "特大",
         "reload": "稍微慢"
+      },
+      {
+        "name": "滅龍徹甲榴彈",
+        "capacity": 2,
+        "recoil": "特大",
+        "reload": "稍微慢"
       }
     ]
   },
   {
     "id": "basarios_lightbowgun",
     "name": "榴彈弩槍",
-    "nameEn": "",
+    "nameEn": "Grenade Launcher",
     "type": "light-bowgun",
-    "attack": 1666,
+    "attack": 1995,
     "element": {
       "type": "fire",
-      "value": 39
+      "value": 655
     },
     "affinity": -15,
     "spSkill": "【SP】反擊龍彈 Lv3",
@@ -705,18 +812,18 @@
   {
     "id": "khezu_lightbowgun",
     "name": "緊繃繃注射器",
-    "nameEn": "",
+    "nameEn": "Khezu Syringe",
     "type": "light-bowgun",
-    "attack": 1194,
+    "attack": 1429,
     "element": {
       "type": "thunder",
-      "value": 120
+      "value": 1134
     },
-    "affinity": 5,
+    "affinity": 20,
     "spSkill": "【SP】反擊龍彈 Lv3",
     "skills": [
       {
-        "skillId": "peak_performance",
+        "skillId": "peak-performance",
         "level": 1
       }
     ],
@@ -727,22 +834,32 @@
         "capacity": 3,
         "recoil": "大",
         "reload": "稍微慢"
+      },
+      {
+        "name": "貫通電擊彈",
+        "capacity": 3,
+        "recoil": "大",
+        "reload": "稍微慢"
       }
     ]
   },
   {
     "id": "kushaladaora_lightbowgun",
     "name": "鋼龍冰蜂弩",
-    "nameEn": "",
+    "nameEn": "Daora's Hornet",
     "type": "light-bowgun",
-    "attack": 1553,
+    "attack": 1861,
     "element": {
       "type": "ice",
-      "value": 238
+      "value": 1210
     },
     "affinity": 0,
     "spSkill": "【SP】反擊龍彈 Lv3",
     "skills": [
+      {
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
       {
         "skillId": "windproof",
         "level": 2
@@ -761,24 +878,30 @@
         "capacity": 4,
         "recoil": "中",
         "reload": "稍微慢"
+      },
+      {
+        "name": "斬裂冰結彈",
+        "capacity": 3,
+        "recoil": "特大",
+        "reload": "稍微慢"
       }
     ]
   },
   {
     "id": "mizutsune_lightbowgun",
     "name": "狐水槍滴水映浮生",
-    "nameEn": "",
+    "nameEn": "Desolate Mist",
     "type": "light-bowgun",
-    "attack": 1436,
+    "attack": 1363,
     "element": {
       "type": "water",
-      "value": 230
+      "value": 1436
     },
-    "affinity": 10,
+    "affinity": 20,
     "spSkill": "【SP】反擊龍彈 Lv3",
     "skills": [
       {
-        "skillId": "artful_dodger",
+        "skillId": "artful-dodger",
         "level": 1
       }
     ],
@@ -795,22 +918,32 @@
         "capacity": 3,
         "recoil": "特大",
         "reload": "稍微慢"
+      },
+      {
+        "name": "斬裂水冷彈",
+        "capacity": 3,
+        "recoil": "特大",
+        "reload": "稍微慢"
       }
     ]
   },
   {
     "id": "teostra_lightbowgun",
     "name": "炎王焰弩【烈火】",
-    "nameEn": "",
+    "nameEn": "Teostra's Flamebolt",
     "type": "light-bowgun",
-    "attack": 1553,
+    "attack": 1861,
     "element": {
       "type": "fire",
-      "value": 238
+      "value": 1210
     },
     "affinity": 0,
     "spSkill": "【SP】反擊龍彈 Lv3",
     "skills": [
+      {
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
       {
         "skillId": "heroics",
         "level": 2
@@ -829,13 +962,19 @@
         "capacity": 4,
         "recoil": "中",
         "reload": "稍微慢"
+      },
+      {
+        "name": "火炎徹甲榴彈",
+        "capacity": 3,
+        "recoil": "特大",
+        "reload": "稍微慢"
       }
     ]
   },
   {
     "id": "magnamalo_lightbowgun",
     "name": "禍弩【封】",
-    "nameEn": "",
+    "nameEn": "Sinister Bowgun",
     "type": "light-bowgun",
     "attack": 2251,
     "element": null,
@@ -860,18 +999,24 @@
         "capacity": 3,
         "recoil": "特大",
         "reload": "稍微慢"
+      },
+      {
+        "name": "LV1擴散彈",
+        "capacity": 2,
+        "recoil": "特大",
+        "reload": "稍微慢"
       }
     ]
   },
   {
     "id": "rajang_lightbowgun",
     "name": "金獅子弩",
-    "nameEn": "",
+    "nameEn": "Rajang Barrage",
     "type": "light-bowgun",
-    "attack": 1568,
+    "attack": 1579,
     "element": {
       "type": "thunder",
-      "value": 292
+      "value": 1568
     },
     "affinity": -30,
     "spSkill": "【SP】反擊龍彈 Lv3",
@@ -894,22 +1039,32 @@
         "capacity": 5,
         "recoil": "大",
         "reload": "稍微慢"
+      },
+      {
+        "name": "電擊徹甲榴彈",
+        "capacity": 3,
+        "recoil": "特大",
+        "reload": "稍微慢"
       }
     ]
   },
   {
     "id": "nergigante_lightbowgun",
     "name": "毀滅的契機",
-    "nameEn": "",
+    "nameEn": "Cataclysm's Trigger",
     "type": "light-bowgun",
-    "attack": 1553,
+    "attack": 1861,
     "element": {
       "type": "dragon",
-      "value": 238
+      "value": 1210
     },
     "affinity": 0,
     "spSkill": "【SP】反擊龍彈 Lv3",
     "skills": [
+      {
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
       {
         "skillId": "partbreaker",
         "level": 2
@@ -928,13 +1083,19 @@
         "capacity": 4,
         "recoil": "中",
         "reload": "稍微慢"
+      },
+      {
+        "name": "滅龍徹甲榴彈",
+        "capacity": 3,
+        "recoil": "特大",
+        "reload": "稍微慢"
       }
     ]
   },
   {
     "id": "tigrex_lightbowgun",
     "name": "轟龍火砲",
-    "nameEn": "",
+    "nameEn": "Rex Fusillade",
     "type": "light-bowgun",
     "attack": 2633,
     "element": null,
@@ -942,7 +1103,7 @@
     "spSkill": "【SP】反擊龍彈 Lv3",
     "skills": [
       {
-        "skillId": "brutal_strike",
+        "skillId": "maximum-might",
         "level": 1
       }
     ],
@@ -953,13 +1114,25 @@
         "capacity": 4,
         "recoil": "大",
         "reload": "稍微慢"
+      },
+      {
+        "name": "LV1 貫通彈",
+        "capacity": 4,
+        "recoil": "大",
+        "reload": "稍微慢"
+      },
+      {
+        "name": "LV1 通常彈",
+        "capacity": 4,
+        "recoil": "中",
+        "reload": "普通"
       }
     ]
   },
   {
     "id": "brute_tigrex_lightbowgun",
     "name": "劫難火砲",
-    "nameEn": "",
+    "nameEn": "Accursed Fire",
     "type": "light-bowgun",
     "attack": 2633,
     "element": null,
@@ -967,7 +1140,7 @@
     "spSkill": "【SP】反擊龍彈 Lv3",
     "skills": [
       {
-        "skillId": "ballistic",
+        "skillId": "ballistics",
         "level": 3
       }
     ],
@@ -978,24 +1151,34 @@
         "capacity": 3,
         "recoil": "大",
         "reload": "稍微慢"
+      },
+      {
+        "name": "LV1 貫通彈",
+        "capacity": 3,
+        "recoil": "大",
+        "reload": "稍微慢"
       }
     ]
   },
   {
     "id": "kirin_lightbowgun",
     "name": "麒麟筒",
-    "nameEn": "",
+    "nameEn": "Mythical Three-Horn",
     "type": "light-bowgun",
-    "attack": 1622,
+    "attack": 1444,
     "element": {
       "type": "thunder",
-      "value": 334
+      "value": 1622
     },
     "affinity": 0,
     "spSkill": "【SP】反擊龍彈 Lv3",
     "skills": [
       {
-        "skillId": "latent_power",
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
+      {
+        "skillId": "latent-power",
         "level": 1
       }
     ],
@@ -1006,24 +1189,30 @@
         "capacity": 5,
         "recoil": "大",
         "reload": "普通"
+      },
+      {
+        "name": "LV1麻痺彈",
+        "capacity": 3,
+        "recoil": "大",
+        "reload": "普通"
       }
     ]
   },
   {
     "id": "bazelgeuse_lightbowgun",
     "name": "爆鱗龍颱風砲",
-    "nameEn": "",
+    "nameEn": "Bazel Typhoon",
     "type": "light-bowgun",
-    "attack": 1568,
+    "attack": 1579,
     "element": {
       "type": "fire",
-      "value": 292
+      "value": 1568
     },
     "affinity": -30,
     "spSkill": "【SP】反擊龍彈 Lv3",
     "skills": [
       {
-        "skillId": "evasive_reload",
+        "skillId": "dodge-load",
         "level": 2
       }
     ],
@@ -1040,24 +1229,30 @@
         "capacity": 2,
         "recoil": "特大",
         "reload": "稍微慢"
+      },
+      {
+        "name": "擴散火炎彈",
+        "capacity": 2,
+        "recoil": "特大",
+        "reload": "稍微慢"
       }
     ]
   },
   {
     "id": "glavenus_lightbowgun",
     "name": "斬龍迅擊弩",
-    "nameEn": "",
+    "nameEn": "Glavenus Blitz",
     "type": "light-bowgun",
-    "attack": 1568,
+    "attack": 1579,
     "element": {
       "type": "fire",
-      "value": 292
+      "value": 1568
     },
     "affinity": -30,
     "spSkill": "【SP】反擊龍彈 Lv3",
     "skills": [
       {
-        "skillId": "brutal_strike",
+        "skillId": "maximum-might",
         "level": 1
       }
     ],
@@ -1068,13 +1263,19 @@
         "capacity": 3,
         "recoil": "大",
         "reload": "稍微慢"
+      },
+      {
+        "name": "斬裂火炎彈",
+        "capacity": 3,
+        "recoil": "特大",
+        "reload": "稍微慢"
       }
     ]
   },
   {
     "id": "chameleos_lightbowgun",
     "name": "魔咒燈",
-    "nameEn": "",
+    "nameEn": "Cursed Lamp",
     "type": "light-bowgun",
     "attack": 2446,
     "element": null,
@@ -1082,7 +1283,11 @@
     "spSkill": "【SP】反擊龍彈 Lv3",
     "skills": [
       {
-        "skillId": "sneak_attack",
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
+      {
+        "skillId": "sneak-attack",
         "level": 2
       }
     ],
@@ -1093,13 +1298,25 @@
         "capacity": 6,
         "recoil": "大",
         "reload": "稍微慢"
+      },
+      {
+        "name": "LV1 貫通彈",
+        "capacity": 5,
+        "recoil": "大",
+        "reload": "稍微慢"
+      },
+      {
+        "name": "LV1 徹甲榴彈",
+        "capacity": 3,
+        "recoil": "特大",
+        "reload": "稍微慢"
       }
     ]
   },
   {
     "id": "bishaten_lightbowgun",
     "name": "天具･常花之銃",
-    "nameEn": "",
+    "nameEn": "Lotus Bowgun",
     "type": "light-bowgun",
     "attack": 2113,
     "element": null,
@@ -1107,7 +1324,7 @@
     "spSkill": "【SP】反擊龍彈 Lv3",
     "skills": [
       {
-        "skillId": "multi_attack_boost",
+        "skillId": "group-hunt-attack",
         "level": 2
       }
     ],
@@ -1118,24 +1335,30 @@
         "capacity": 3,
         "recoil": "大",
         "reload": "普通"
+      },
+      {
+        "name": "LV1 散彈",
+        "capacity": 4,
+        "recoil": "大",
+        "reload": "稍微慢"
       }
     ]
   },
   {
     "id": "beotodus_lightbowgun",
     "name": "冰魚龍發射器",
-    "nameEn": "",
+    "nameEn": "Beo Shooter",
     "type": "light-bowgun",
-    "attack": 1293,
+    "attack": 1549,
     "element": {
       "type": "ice",
-      "value": 117
+      "value": 1131
     },
     "affinity": 0,
     "spSkill": "【SP】反擊龍彈 Lv3",
     "skills": [
       {
-        "skillId": "bravery",
+        "skillId": "valor",
         "level": 1
       }
     ],
@@ -1158,11 +1381,11 @@
   {
     "id": "nargacuga_lightbowgun",
     "name": "隱密輕弩",
-    "nameEn": "",
+    "nameEn": "Hidden Bullet",
     "type": "light-bowgun",
     "attack": 2082,
     "element": null,
-    "affinity": 25,
+    "affinity": 40,
     "spSkill": "【SP】反擊龍彈 Lv3",
     "skills": [
       {
@@ -1177,24 +1400,34 @@
         "capacity": 3,
         "recoil": "大",
         "reload": "稍微慢"
+      },
+      {
+        "name": "斬裂彈",
+        "capacity": 3,
+        "recoil": "特大",
+        "reload": "稍微慢"
       }
     ]
   },
   {
     "id": "namielle_lightbowgun",
     "name": "暴君‧刺胞",
-    "nameEn": "",
+    "nameEn": "Black Actinula",
     "type": "light-bowgun",
-    "attack": 1335,
+    "attack": 1591,
     "element": {
       "type": "water",
-      "value": 276
+      "value": 1335
     },
-    "affinity": 15,
+    "affinity": 20,
     "spSkill": "【SP】反擊龍彈 Lv3",
     "skills": [
       {
-        "skillId": "weakness_exploit",
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
+      {
+        "skillId": "weakness-exploit",
         "level": 1
       }
     ],
@@ -1205,13 +1438,25 @@
         "capacity": 3,
         "recoil": "大",
         "reload": "普通"
+      },
+      {
+        "name": "LV1麻痺彈",
+        "capacity": 3,
+        "recoil": "大",
+        "reload": "普通"
+      },
+      {
+        "name": "水冷散彈",
+        "capacity": 4,
+        "recoil": "大",
+        "reload": "普通"
       }
     ]
   },
   {
     "id": "garangolm_lightbowgun",
     "name": "剛纏獸之弩",
-    "nameEn": "",
+    "nameEn": "Golm Assaulter",
     "type": "light-bowgun",
     "attack": 2371,
     "element": null,
@@ -1219,7 +1464,7 @@
     "spSkill": "【SP】反擊龍彈 Lv3",
     "skills": [
       {
-        "skillId": "disable_perfect_evade",
+        "skillId": "resolute",
         "level": 1
       }
     ],
@@ -1230,24 +1475,30 @@
         "capacity": 6,
         "recoil": "中",
         "reload": "稍微慢"
+      },
+      {
+        "name": "LV1 貫通彈",
+        "capacity": 6,
+        "recoil": "大",
+        "reload": "慢"
       }
     ]
   },
   {
     "id": "lunagaron_lightbowgun",
     "name": "冷月之狼弩",
-    "nameEn": "",
+    "nameEn": "Frostbiter",
     "type": "light-bowgun",
-    "attack": 1458,
+    "attack": 1222,
     "element": {
       "type": "ice",
-      "value": 164
+      "value": 1458
     },
     "affinity": 0,
     "spSkill": "【SP】反擊龍彈 Lv3",
     "skills": [
       {
-        "skillId": "high_performance_ice",
+        "skillId": "hi-ice",
         "level": 1
       }
     ],
@@ -1264,24 +1515,30 @@
         "capacity": 3,
         "recoil": "大",
         "reload": "稍微慢"
+      },
+      {
+        "name": "貫通冰結彈",
+        "capacity": 4,
+        "recoil": "大",
+        "reload": "稍微慢"
       }
     ]
   },
   {
     "id": "espinas_lightbowgun",
     "name": "薔薇步槍",
-    "nameEn": "",
+    "nameEn": "Rosengewehr",
     "type": "light-bowgun",
     "attack": 1434,
     "element": {
       "type": "fire",
-      "value": 230
+      "value": 1434
     },
-    "affinity": 10,
+    "affinity": 20,
     "spSkill": "【SP】反擊龍彈 Lv3",
     "skills": [
       {
-        "skillId": "part_break_special_boost",
+        "skillId": "special-partbreaker",
         "level": 2
       }
     ],
@@ -1292,24 +1549,40 @@
         "capacity": 3,
         "recoil": "大",
         "reload": "稍微慢"
+      },
+      {
+        "name": "LV1麻痺彈",
+        "capacity": 3,
+        "recoil": "大",
+        "reload": "普通"
+      },
+      {
+        "name": "火炎散彈",
+        "capacity": 4,
+        "recoil": "大",
+        "reload": "稍微慢"
       }
     ]
   },
   {
     "id": "malzeno_lightbowgun",
     "name": "奪命之銀彈",
-    "nameEn": "",
+    "nameEn": "Vigil Kugel",
     "type": "light-bowgun",
-    "attack": 1622,
+    "attack": 1444,
     "element": {
       "type": "dragon",
-      "value": 334
+      "value": 1622
     },
     "affinity": 0,
     "spSkill": "【SP】反擊龍彈 Lv3",
     "skills": [
       {
-        "skillId": "high_performance_dragon",
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
+      {
+        "skillId": "hi-dragon",
         "level": 1
       }
     ],
@@ -1320,24 +1593,36 @@
         "capacity": 5,
         "recoil": "小",
         "reload": "普通"
+      },
+      {
+        "name": "貫通滅龍彈",
+        "capacity": 4,
+        "recoil": "大",
+        "reload": "普通"
+      },
+      {
+        "name": "貫通滅龍彈",
+        "capacity": 3,
+        "recoil": "大",
+        "reload": "普通"
       }
     ]
   },
   {
     "id": "gossharag_lightbowgun",
     "name": "雪鬼獸輕弩",
-    "nameEn": "",
+    "nameEn": "Gossgun",
     "type": "light-bowgun",
-    "attack": 1492,
+    "attack": 1570,
     "element": {
       "type": "ice",
-      "value": 147
+      "value": 1492
     },
     "affinity": -30,
     "spSkill": "【SP】反擊龍彈 Lv3",
     "skills": [
       {
-        "skillId": "brutal_strike",
+        "skillId": "maximum-might",
         "level": 1
       }
     ],
@@ -1354,24 +1639,30 @@
         "capacity": 3,
         "recoil": "大",
         "reload": "稍微慢"
+      },
+      {
+        "name": "冰結散彈",
+        "capacity": 4,
+        "recoil": "大",
+        "reload": "稍微慢"
       }
     ]
   },
   {
     "id": "astalos_lightbowgun",
     "name": "奔騰電龍砲【翠電】",
-    "nameEn": "",
+    "nameEn": "Astalos Joltrender",
     "type": "light-bowgun",
-    "attack": 1436,
+    "attack": 1363,
     "element": {
       "type": "thunder",
-      "value": 230
+      "value": 1436
     },
-    "affinity": 10,
+    "affinity": 20,
     "spSkill": "【SP】反擊龍彈 Lv3",
     "skills": [
       {
-        "skillId": "thunder_attack",
+        "skillId": "thunder-attack",
         "level": 1
       }
     ],
@@ -1382,24 +1673,30 @@
         "capacity": 4,
         "recoil": "大",
         "reload": "普通"
+      },
+      {
+        "name": "電擊彈",
+        "capacity": 4,
+        "recoil": "中",
+        "reload": "快"
       }
     ]
   },
   {
     "id": "almudron_lightbowgun",
     "name": "泥翁岩輕弩",
-    "nameEn": "",
+    "nameEn": "Almudron Bowgun",
     "type": "light-bowgun",
-    "attack": 1458,
+    "attack": 1222,
     "element": {
       "type": "water",
-      "value": 164
+      "value": 1458
     },
     "affinity": 0,
     "spSkill": "【SP】反擊龍彈 Lv3",
     "skills": [
       {
-        "skillId": "water_attack",
+        "skillId": "water-attack",
         "level": 1
       }
     ],
@@ -1410,21 +1707,27 @@
         "capacity": 5,
         "recoil": "中",
         "reload": "普通"
+      },
+      {
+        "name": "貫通水冷彈",
+        "capacity": 3,
+        "recoil": "大",
+        "reload": "普通"
       }
     ]
   },
   {
     "id": "seregios_lightbowgun",
     "name": "強彈尾宿八",
-    "nameEn": "",
+    "nameEn": "Rasasa Bowgun",
     "type": "light-bowgun",
     "attack": 2335,
     "element": null,
-    "affinity": 15,
+    "affinity": 30,
     "spSkill": "【SP】反擊龍彈 Lv3",
     "skills": [
       {
-        "skillId": "powerhouse",
+        "skillId": "attack-activation",
         "level": 1
       }
     ],
@@ -1435,13 +1738,19 @@
         "capacity": 5,
         "recoil": "中",
         "reload": "普通"
+      },
+      {
+        "name": "LV1 貫通彈",
+        "capacity": 2,
+        "recoil": "大",
+        "reload": "普通"
       }
     ]
   },
   {
     "id": "bone_lightbowgun",
     "name": "獵人步槍",
-    "nameEn": "",
+    "nameEn": "Hunter's Rifle",
     "type": "light-bowgun",
     "attack": 1912,
     "element": null,
@@ -1449,7 +1758,7 @@
     "spSkill": "【SP】反擊龍彈 Lv3",
     "skills": [
       {
-        "skillId": "concentration",
+        "skillId": "sp-meter-boost",
         "level": 1
       }
     ],
@@ -1465,6 +1774,148 @@
         "name": "LV1 徹甲榴彈",
         "capacity": 2,
         "recoil": "特大",
+        "reload": "稍微慢"
+      }
+    ]
+  },
+  {
+    "id": "rathian_lightbowgun",
+    "name": "女武神之火",
+    "nameEn": "Valkyrie Fire",
+    "type": "light-bowgun",
+    "attack": 2251,
+    "element": null,
+    "affinity": 0,
+    "spSkill": "【SP】反擊龍彈 Lv3",
+    "skills": [
+      {
+        "skillId": "health-boost",
+        "level": 2
+      }
+    ],
+    "image": "/images/weapons/rathian_lightbowgun.webp",
+    "ammo": [
+      {
+        "name": "LV1毒彈",
+        "capacity": 3,
+        "recoil": "大",
+        "reload": "普通"
+      },
+      {
+        "name": "LV1 通常彈",
+        "capacity": 5,
+        "recoil": "中",
+        "reload": "普通"
+      }
+    ]
+  },
+  {
+    "id": "stygian_zinogre_lightbowgun",
+    "name": "獄弩龍心",
+    "nameEn": "Brimstren Drakekiss",
+    "type": "light-bowgun",
+    "attack": 1506,
+    "element": {
+      "type": "dragon",
+      "value": 1506
+    },
+    "affinity": 0,
+    "spSkill": "【SP】反擊龍彈 Lv3",
+    "skills": [
+      {
+        "skillId": "dragon-attack",
+        "level": 1
+      },
+      {
+        "skillId": "dragon-attack-peak",
+        "level": 1
+      }
+    ],
+    "image": "/images/weapons/stygian_zinogre_lightbowgun.webp",
+    "ammo": [
+      {
+        "name": "貫通滅龍彈",
+        "capacity": 4,
+        "recoil": "大",
+        "reload": "稍微慢"
+      },
+      {
+        "name": "斬裂滅龍彈",
+        "capacity": 3,
+        "recoil": "特大",
+        "reload": "稍微慢"
+      }
+    ]
+  },
+  {
+    "id": "velkhana_lightbowgun",
+    "name": "冰姬隼擊",
+    "nameEn": "Graceful Almaria",
+    "type": "light-bowgun",
+    "attack": 1444,
+    "element": {
+      "type": "ice",
+      "value": 1622
+    },
+    "affinity": 0,
+    "spSkill": "【SP】反擊龍彈 Lv3",
+    "skills": [
+      {
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
+      {
+        "skillId": "ice-attack",
+        "level": 1
+      },
+      {
+        "skillId": "ice-attack-peak",
+        "level": 1
+      }
+    ],
+    "image": "/images/weapons/velkhana_lightbowgun.webp",
+    "ammo": [
+      {
+        "name": "冰結散彈",
+        "capacity": 4,
+        "recoil": "大",
+        "reload": "普通"
+      },
+      {
+        "name": "冰結彈",
+        "capacity": 6,
+        "recoil": "中",
+        "reload": "普通"
+      }
+    ]
+  },
+  {
+    "id": "brachydios_lightbowgun",
+    "name": "碎龍射手",
+    "nameEn": "Brachydios Shot",
+    "type": "light-bowgun",
+    "attack": 2510,
+    "element": null,
+    "affinity": 0,
+    "spSkill": "【SP】反擊龍彈 Lv3",
+    "skills": [
+      {
+        "skillId": "artillery",
+        "level": 1
+      }
+    ],
+    "image": "/images/weapons/brachydios_lightbowgun.webp",
+    "ammo": [
+      {
+        "name": "LV1 徹甲榴彈",
+        "capacity": 3,
+        "recoil": "特大",
+        "reload": "稍微慢"
+      },
+      {
+        "name": "LV1 散彈",
+        "capacity": 4,
+        "recoil": "大",
         "reload": "稍微慢"
       }
     ]

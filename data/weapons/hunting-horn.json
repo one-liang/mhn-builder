@@ -2,7 +2,7 @@
   {
     "id": "ore_huntinghorn",
     "name": "金屬風笛",
-    "nameEn": "",
+    "nameEn": "Metal Bagpipe",
     "type": "hunting-horn",
     "attack": 1912,
     "element": null,
@@ -10,7 +10,7 @@
     "spSkill": "【SP】三音演奏 Lv3",
     "skills": [
       {
-        "skillId": "poison_resistance",
+        "skillId": "poison-resistance",
         "level": 2
       }
     ],
@@ -33,11 +33,11 @@
   {
     "id": "kuluyaku_huntinghorn",
     "name": "搔鳥風笛",
-    "nameEn": "",
+    "nameEn": "Kulu Duda",
     "type": "hunting-horn",
     "attack": 1912,
     "element": null,
-    "affinity": 10,
+    "affinity": 30,
     "spSkill": "【SP】三音演奏 Lv3",
     "skills": [
       {
@@ -64,18 +64,18 @@
   {
     "id": "pukeipukei_huntinghorn",
     "name": "花朵號角",
-    "nameEn": "",
+    "nameEn": "Blooming Horn",
     "type": "hunting-horn",
-    "attack": 1596,
+    "attack": 1912,
     "element": {
       "type": "poison",
-      "value": 100
+      "value": 417
     },
     "affinity": 0,
     "spSkill": "【SP】三音演奏 Lv3",
     "skills": [
       {
-        "skillId": "sneak_attack",
+        "skillId": "sneak-attack",
         "level": 1
       }
     ],
@@ -98,12 +98,12 @@
   {
     "id": "coral_pukeipukei_huntinghorn",
     "name": "潟湖鼓",
-    "nameEn": "",
+    "nameEn": "Laguna Drum",
     "type": "hunting-horn",
-    "attack": 1420,
+    "attack": 1463,
     "element": {
       "type": "water",
-      "value": 232
+      "value": 1420
     },
     "affinity": 0,
     "spSkill": "【SP】三音演奏 Lv3",
@@ -132,7 +132,7 @@
   {
     "id": "barroth_huntinghorn",
     "name": "土砂笙【戰之音】",
-    "nameEn": "",
+    "nameEn": "Sandpipe",
     "type": "hunting-horn",
     "attack": 2103,
     "element": null,
@@ -140,7 +140,7 @@
     "spSkill": "【SP】三音演奏 Lv3",
     "skills": [
       {
-        "skillId": "defense_boost",
+        "skillId": "defense-boost",
         "level": 2
       }
     ],
@@ -163,18 +163,18 @@
   {
     "id": "tobikadachi_huntinghorn",
     "name": "閃電風笛",
-    "nameEn": "",
+    "nameEn": "Thunder Gaida",
     "type": "hunting-horn",
-    "attack": 1293,
+    "attack": 1549,
     "element": {
       "type": "thunder",
-      "value": 47
+      "value": 1131
     },
     "affinity": 0,
     "spSkill": "【SP】三音演奏 Lv3",
     "skills": [
       {
-        "skillId": "evade_extender",
+        "skillId": "evade-extender",
         "level": 1
       }
     ],
@@ -197,7 +197,7 @@
   {
     "id": "paolumu_huntinghorn",
     "name": "浮空龍號角",
-    "nameEn": "",
+    "nameEn": "Lumu Horn",
     "type": "hunting-horn",
     "attack": 2113,
     "element": null,
@@ -205,7 +205,7 @@
     "spSkill": "【SP】三音演奏 Lv3",
     "skills": [
       {
-        "skillId": "divine_blessing",
+        "skillId": "divine-blessing",
         "level": 2
       }
     ],
@@ -228,18 +228,18 @@
   {
     "id": "nightshade_paolumu_huntinghorn",
     "name": "夜神長號",
-    "nameEn": "",
+    "nameEn": "Nyx Barone",
     "type": "hunting-horn",
-    "attack": 1756,
+    "attack": 2103,
     "element": {
       "type": "sleep",
-      "value": 188
+      "value": 312
     },
     "affinity": 0,
     "spSkill": "【SP】三音演奏 Lv3",
     "skills": [
       {
-        "skillId": "sneak_attack",
+        "skillId": "sneak-attack",
         "level": 1
       }
     ],
@@ -262,18 +262,18 @@
   {
     "id": "jyuratodus_huntinghorn",
     "name": "水流風笛",
-    "nameEn": "",
+    "nameEn": "Aqua Bagpipe",
     "type": "hunting-horn",
-    "attack": 1293,
+    "attack": 1549,
     "element": {
       "type": "water",
-      "value": 75
+      "value": 1131
     },
     "affinity": 0,
     "spSkill": "【SP】三音演奏 Lv3",
     "skills": [
       {
-        "skillId": "last_stand",
+        "skillId": "last-stand-guard",
         "level": 1
       }
     ],
@@ -296,18 +296,18 @@
   {
     "id": "anjanath_huntinghorn",
     "name": "火焰號角",
-    "nameEn": "",
+    "nameEn": "Blazing Horn",
     "type": "hunting-horn",
-    "attack": 1293,
+    "attack": 1549,
     "element": {
       "type": "fire",
-      "value": 117
+      "value": 1131
     },
     "affinity": 0,
     "spSkill": "【SP】三音演奏 Lv3",
     "skills": [
       {
-        "skillId": "rising_tide",
+        "skillId": "battle-temper",
         "level": 1
       }
     ],
@@ -330,18 +330,18 @@
   {
     "id": "fulgur_anjanath_huntinghorn",
     "name": "管樂雷顎",
-    "nameEn": "",
+    "nameEn": "Fulguring Horn",
     "type": "hunting-horn",
     "attack": 1434,
     "element": {
       "type": "thunder",
-      "value": 230
+      "value": 1434
     },
-    "affinity": 10,
+    "affinity": 20,
     "spSkill": "【SP】三音演奏 Lv3",
     "skills": [
       {
-        "skillId": "critical_element",
+        "skillId": "critical-element",
         "level": 1
       }
     ],
@@ -364,18 +364,18 @@
   {
     "id": "rathian_huntinghorn",
     "name": "女武神戰鈴",
-    "nameEn": "",
+    "nameEn": "Valkyrie Chordmaker",
     "type": "hunting-horn",
-    "attack": 1516,
+    "attack": 1817,
     "element": {
       "type": "poison",
-      "value": 236
+      "value": 516
     },
     "affinity": 0,
     "spSkill": "【SP】三音演奏 Lv3",
     "skills": [
       {
-        "skillId": "health_boost",
+        "skillId": "health-boost",
         "level": 2
       }
     ],
@@ -398,18 +398,18 @@
   {
     "id": "pink_rathian_huntinghorn",
     "name": "櫻戰鈴",
-    "nameEn": "",
+    "nameEn": "Coral Chordmaker",
     "type": "hunting-horn",
-    "attack": 1682,
+    "attack": 2015,
     "element": {
       "type": "fire",
-      "value": 134
+      "value": 752
     },
     "affinity": 0,
     "spSkill": "【SP】三音演奏 Lv3",
     "skills": [
       {
-        "skillId": "evade_extender",
+        "skillId": "evade-extender",
         "level": 1
       }
     ],
@@ -432,18 +432,18 @@
   {
     "id": "gold_rathian_huntinghorn",
     "name": "金獵笛",
-    "nameEn": "",
+    "nameEn": "Gold Chordmaker",
     "type": "hunting-horn",
-    "attack": 1345,
+    "attack": 1507,
     "element": {
       "type": "fire",
-      "value": 277
+      "value": 1345
     },
-    "affinity": 20,
+    "affinity": 30,
     "spSkill": "【SP】三音演奏 Lv3",
     "skills": [
       {
-        "skillId": "critical_element",
+        "skillId": "critical-element",
         "level": 2
       }
     ],
@@ -466,18 +466,18 @@
   {
     "id": "legiana_huntinghorn",
     "name": "優雅風笛",
-    "nameEn": "",
+    "nameEn": "Glacial Bagpipe",
     "type": "hunting-horn",
-    "attack": 1420,
+    "attack": 1463,
     "element": {
       "type": "ice",
-      "value": 232
+      "value": 1420
     },
     "affinity": 0,
     "spSkill": "【SP】三音演奏 Lv3",
     "skills": [
       {
-        "skillId": "divine_blessing",
+        "skillId": "divine-blessing",
         "level": 2
       }
     ],
@@ -500,7 +500,7 @@
   {
     "id": "diablos_huntinghorn",
     "name": "雙重號角",
-    "nameEn": "",
+    "nameEn": "Duo Horn",
     "type": "hunting-horn",
     "attack": 2371,
     "element": null,
@@ -531,12 +531,12 @@
   {
     "id": "rathalos_huntinghorn",
     "name": "火羽狩獵笛",
-    "nameEn": "",
+    "nameEn": "Flame Feroce",
     "type": "hunting-horn",
-    "attack": 1420,
+    "attack": 1463,
     "element": {
       "type": "fire",
-      "value": 232
+      "value": 1420
     },
     "affinity": 0,
     "spSkill": "【SP】三音演奏 Lv3",
@@ -565,18 +565,18 @@
   {
     "id": "radobaan_huntinghorn",
     "name": "尖刺號角",
-    "nameEn": "",
+    "nameEn": "Spiked Horn",
     "type": "hunting-horn",
-    "attack": 1596,
+    "attack": 1912,
     "element": {
       "type": "sleep",
-      "value": 100
+      "value": 417
     },
     "affinity": 0,
     "spSkill": "【SP】三音演奏 Lv3",
     "skills": [
       {
-        "skillId": "defense_boost",
+        "skillId": "defense-boost",
         "level": 2
       }
     ],
@@ -599,18 +599,18 @@
   {
     "id": "barioth_huntinghorn",
     "name": "冰尖號角",
-    "nameEn": "",
+    "nameEn": "Icicle Horn",
     "type": "hunting-horn",
-    "attack": 1191,
+    "attack": 1426,
     "element": {
       "type": "ice",
-      "value": 117
+      "value": 1131
     },
-    "affinity": 5,
+    "affinity": 20,
     "spSkill": "【SP】三音演奏 Lv3",
     "skills": [
       {
-        "skillId": "evade_extender",
+        "skillId": "evade-extender",
         "level": 1
       }
     ],
@@ -633,18 +633,18 @@
   {
     "id": "zinogre_huntinghorn",
     "name": "王琴轟雷",
-    "nameEn": "",
+    "nameEn": "Usurper's Growl",
     "type": "hunting-horn",
-    "attack": 1420,
+    "attack": 1463,
     "element": {
       "type": "thunder",
-      "value": 232
+      "value": 1420
     },
     "affinity": 0,
     "spSkill": "【SP】三音演奏 Lv3",
     "skills": [
       {
-        "skillId": "artful_dodger",
+        "skillId": "artful-dodger",
         "level": 1
       }
     ],
@@ -667,18 +667,18 @@
   {
     "id": "deviljho_huntinghorn",
     "name": "鎖縛的暴龍",
-    "nameEn": "",
+    "nameEn": "Devil's Maestro",
     "type": "hunting-horn",
-    "attack": 1568,
+    "attack": 1579,
     "element": {
       "type": "dragon",
-      "value": 292
+      "value": 1568
     },
     "affinity": -30,
     "spSkill": "【SP】三音演奏 Lv3",
     "skills": [
       {
-        "skillId": "power_prolonger",
+        "skillId": "power-prolonger",
         "level": 1
       }
     ],
@@ -701,12 +701,12 @@
   {
     "id": "basarios_huntinghorn",
     "name": "岩龍貝斯",
-    "nameEn": "",
+    "nameEn": "Basarios Rock",
     "type": "hunting-horn",
-    "attack": 1666,
+    "attack": 1995,
     "element": {
       "type": "fire",
-      "value": 39
+      "value": 655
     },
     "affinity": -15,
     "spSkill": "【SP】三音演奏 Lv3",
@@ -735,18 +735,18 @@
   {
     "id": "khezu_huntinghorn",
     "name": "奇怪龍號角",
-    "nameEn": "",
+    "nameEn": "Khezu Horn",
     "type": "hunting-horn",
-    "attack": 1194,
+    "attack": 1429,
     "element": {
       "type": "thunder",
-      "value": 120
+      "value": 1134
     },
-    "affinity": 5,
+    "affinity": 20,
     "spSkill": "【SP】三音演奏 Lv3",
     "skills": [
       {
-        "skillId": "peak_performance",
+        "skillId": "peak-performance",
         "level": 1
       }
     ],
@@ -769,16 +769,20 @@
   {
     "id": "kushaladaora_huntinghorn",
     "name": "鋼龍巴風特笛",
-    "nameEn": "",
+    "nameEn": "Daora's Baphophone",
     "type": "hunting-horn",
-    "attack": 1553,
+    "attack": 1861,
     "element": {
       "type": "ice",
-      "value": 238
+      "value": 1210
     },
     "affinity": 0,
     "spSkill": "【SP】三音演奏 Lv3",
     "skills": [
+      {
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
       {
         "skillId": "windproof",
         "level": 2
@@ -796,25 +800,25 @@
       },
       {
         "name": "高頻衝擊波【散】",
-        "description": "在自身周圍發出高頻率噪音衝擊波造成傷害，解除爆破異常和鬼火纏身狀態"
+        "description": "在自身周圍發出高頻率噪音衝擊波造成傷害，解除自己陷入的爆破異常、強爆破異常和鬼火纏身狀態"
       }
     ]
   },
   {
     "id": "mizutsune_huntinghorn",
     "name": "狐鈴無語亦無聲",
-    "nameEn": "",
+    "nameEn": "Poetic Bell",
     "type": "hunting-horn",
-    "attack": 1436,
+    "attack": 1363,
     "element": {
       "type": "water",
-      "value": 230
+      "value": 1436
     },
-    "affinity": 10,
+    "affinity": 20,
     "spSkill": "【SP】三音演奏 Lv3",
     "skills": [
       {
-        "skillId": "artful_dodger",
+        "skillId": "artful-dodger",
         "level": 1
       }
     ],
@@ -837,16 +841,20 @@
   {
     "id": "teostra_huntinghorn",
     "name": "炎王豎琴",
-    "nameEn": "",
+    "nameEn": "Teostra's Orphée",
     "type": "hunting-horn",
-    "attack": 1684,
+    "attack": 2017,
     "element": {
       "type": "blast",
-      "value": 345
+      "value": 522
     },
     "affinity": 0,
     "spSkill": "【SP】三音演奏 Lv3",
     "skills": [
+      {
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
       {
         "skillId": "heroics",
         "level": 2
@@ -871,12 +879,12 @@
   {
     "id": "magnamalo_huntinghorn",
     "name": "禍琵琶【封】",
-    "nameEn": "",
+    "nameEn": "Sinister Strum",
     "type": "hunting-horn",
-    "attack": 1516,
+    "attack": 1817,
     "element": {
       "type": "blast",
-      "value": 236
+      "value": 516
     },
     "affinity": 0,
     "spSkill": "【SP】三音演奏 Lv3",
@@ -905,18 +913,18 @@
   {
     "id": "rajang_huntinghorn",
     "name": "電電太鼓",
-    "nameEn": "",
+    "nameEn": "Denden Daiko",
     "type": "hunting-horn",
-    "attack": 1568,
+    "attack": 1579,
     "element": {
       "type": "thunder",
-      "value": 292
+      "value": 1568
     },
     "affinity": -30,
     "spSkill": "【SP】三音演奏 Lv3",
     "skills": [
       {
-        "skillId": "attack_up_critical_down",
+        "skillId": "brute-force",
         "level": 1
       }
     ],
@@ -939,16 +947,20 @@
   {
     "id": "nergigante_huntinghorn",
     "name": "寂滅的章節",
-    "nameEn": "",
+    "nameEn": "Desolation's Overture",
     "type": "hunting-horn",
-    "attack": 1553,
+    "attack": 1861,
     "element": {
       "type": "dragon",
-      "value": 238
+      "value": 1210
     },
     "affinity": 0,
     "spSkill": "【SP】三音演奏 Lv3",
     "skills": [
+      {
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
       {
         "skillId": "partbreaker",
         "level": 2
@@ -973,18 +985,18 @@
   {
     "id": "somnacanth_huntinghorn",
     "name": "人魚援手",
-    "nameEn": "",
+    "nameEn": "Frilled Flute",
     "type": "hunting-horn",
-    "attack": 1567,
+    "attack": 1878,
     "element": {
       "type": "sleep",
-      "value": 236
+      "value": 516
     },
     "affinity": -15,
     "spSkill": "【SP】三音演奏 Lv3",
     "skills": [
       {
-        "skillId": "evade_extender",
+        "skillId": "evade-extender",
         "level": 1
       }
     ],
@@ -1007,7 +1019,7 @@
   {
     "id": "tigrex_huntinghorn",
     "name": "轟龍紋笛",
-    "nameEn": "",
+    "nameEn": "Striped Dragonga",
     "type": "hunting-horn",
     "attack": 2633,
     "element": null,
@@ -1015,7 +1027,7 @@
     "spSkill": "【SP】三音演奏 Lv3",
     "skills": [
       {
-        "skillId": "brutal_strike",
+        "skillId": "maximum-might",
         "level": 1
       }
     ],
@@ -1038,7 +1050,7 @@
   {
     "id": "brute_tigrex_huntinghorn",
     "name": "劫難紋笛",
-    "nameEn": "",
+    "nameEn": "Accursed Wail",
     "type": "hunting-horn",
     "attack": 2633,
     "element": null,
@@ -1046,7 +1058,7 @@
     "spSkill": "【SP】三音演奏 Lv3",
     "skills": [
       {
-        "skillId": "power_prolonger",
+        "skillId": "power-prolonger",
         "level": 3
       }
     ],
@@ -1069,18 +1081,22 @@
   {
     "id": "kirin_huntinghorn",
     "name": "雷鳴笛",
-    "nameEn": "",
+    "nameEn": "Thundercry Horn",
     "type": "hunting-horn",
-    "attack": 1622,
+    "attack": 1444,
     "element": {
       "type": "thunder",
-      "value": 334
+      "value": 1622
     },
     "affinity": 0,
     "spSkill": "【SP】三音演奏 Lv3",
     "skills": [
       {
-        "skillId": "latent_power",
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
+      {
+        "skillId": "latent-power",
         "level": 1
       }
     ],
@@ -1103,12 +1119,12 @@
   {
     "id": "bazelgeuse_huntinghorn",
     "name": "爆鱗太鼓",
-    "nameEn": "",
+    "nameEn": "Rookslayer Drum",
     "type": "hunting-horn",
-    "attack": 1942,
+    "attack": 2327,
     "element": {
       "type": "blast",
-      "value": 201
+      "value": 309
     },
     "affinity": -30,
     "spSkill": "【SP】三音演奏 Lv3",
@@ -1137,7 +1153,7 @@
   {
     "id": "arzuros_huntinghorn",
     "name": "青熊笛【壹式】",
-    "nameEn": "",
+    "nameEn": "Zurogong Primo",
     "type": "hunting-horn",
     "attack": 2361,
     "element": null,
@@ -1145,7 +1161,7 @@
     "spSkill": "【SP】三音演奏 Lv3",
     "skills": [
       {
-        "skillId": "special_boost",
+        "skillId": "special-boost",
         "level": 2
       }
     ],
@@ -1168,18 +1184,18 @@
   {
     "id": "glavenus_huntinghorn",
     "name": "灼炎之火靈",
-    "nameEn": "",
+    "nameEn": "Hell Horn",
     "type": "hunting-horn",
-    "attack": 1568,
+    "attack": 1579,
     "element": {
       "type": "fire",
-      "value": 292
+      "value": 1568
     },
     "affinity": -30,
     "spSkill": "【SP】三音演奏 Lv3",
     "skills": [
       {
-        "skillId": "brutal_strike",
+        "skillId": "maximum-might",
         "level": 1
       }
     ],
@@ -1202,18 +1218,22 @@
   {
     "id": "chameleos_huntinghorn",
     "name": "咒語陶笛",
-    "nameEn": "",
+    "nameEn": "Cursed Ocarina",
     "type": "hunting-horn",
-    "attack": 1741,
+    "attack": 2086,
     "element": {
       "type": "poison",
-      "value": 347
+      "value": 526
     },
     "affinity": 0,
     "spSkill": "【SP】三音演奏 Lv3",
     "skills": [
       {
-        "skillId": "abnormal_status_enhancement",
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
+      {
+        "skillId": "status-sneak-attack",
         "level": 2
       }
     ],
@@ -1236,11 +1256,11 @@
   {
     "id": "nargacuga_huntinghorn",
     "name": "隱密音調",
-    "nameEn": "",
+    "nameEn": "Hidden Harmonic",
     "type": "hunting-horn",
     "attack": 2082,
     "element": null,
-    "affinity": 25,
+    "affinity": 40,
     "spSkill": "【SP】三音演奏 Lv3",
     "skills": [
       {
@@ -1267,18 +1287,22 @@
   {
     "id": "namielle_huntinghorn",
     "name": "水蛇號角",
-    "nameEn": "",
+    "nameEn": "Hydros Horn",
     "type": "hunting-horn",
-    "attack": 1335,
+    "attack": 1591,
     "element": {
       "type": "water",
-      "value": 276
+      "value": 1335
     },
-    "affinity": 15,
+    "affinity": 20,
     "spSkill": "【SP】三音演奏 Lv3",
     "skills": [
       {
-        "skillId": "weakness_exploit",
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
+      {
+        "skillId": "weakness-exploit",
         "level": 1
       }
     ],
@@ -1301,7 +1325,7 @@
   {
     "id": "garangolm_huntinghorn",
     "name": "剛纏獸之鼓",
-    "nameEn": "",
+    "nameEn": "Golm Drum",
     "type": "hunting-horn",
     "attack": 2371,
     "element": null,
@@ -1309,7 +1333,7 @@
     "spSkill": "【SP】三音演奏 Lv3",
     "skills": [
       {
-        "skillId": "disable_perfect_evade",
+        "skillId": "resolute",
         "level": 1
       }
     ],
@@ -1332,18 +1356,18 @@
   {
     "id": "lunagaron_huntinghorn",
     "name": "冷月之弦樂器",
-    "nameEn": "",
+    "nameEn": "Frostmoon Wailer",
     "type": "hunting-horn",
-    "attack": 1458,
+    "attack": 1222,
     "element": {
       "type": "ice",
-      "value": 164
+      "value": 1458
     },
     "affinity": 0,
     "spSkill": "【SP】三音演奏 Lv3",
     "skills": [
       {
-        "skillId": "high_performance_ice",
+        "skillId": "hi-ice",
         "level": 1
       }
     ],
@@ -1366,18 +1390,18 @@
   {
     "id": "espinas_huntinghorn",
     "name": "薔薇吉他",
-    "nameEn": "",
+    "nameEn": "Rosengitarre",
     "type": "hunting-horn",
-    "attack": 1756,
+    "attack": 2103,
     "element": {
       "type": "poison",
-      "value": 183
+      "value": 294
     },
-    "affinity": 10,
+    "affinity": 20,
     "spSkill": "【SP】三音演奏 Lv3",
     "skills": [
       {
-        "skillId": "part_break_special_boost",
+        "skillId": "special-partbreaker",
         "level": 2
       }
     ],
@@ -1400,18 +1424,22 @@
   {
     "id": "malzeno_huntinghorn",
     "name": "魔奏之悲鳴",
-    "nameEn": "",
+    "nameEn": "Magician's Allure",
     "type": "hunting-horn",
-    "attack": 1622,
+    "attack": 1444,
     "element": {
       "type": "dragon",
-      "value": 334
+      "value": 1622
     },
     "affinity": 0,
     "spSkill": "【SP】三音演奏 Lv3",
     "skills": [
       {
-        "skillId": "high_performance_dragon",
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
+      {
+        "skillId": "hi-dragon",
         "level": 1
       }
     ],
@@ -1434,18 +1462,18 @@
   {
     "id": "astalos_huntinghorn",
     "name": "綠雷狩笛",
-    "nameEn": "",
+    "nameEn": "Grundner Flap",
     "type": "hunting-horn",
-    "attack": 1436,
+    "attack": 1363,
     "element": {
       "type": "thunder",
-      "value": 230
+      "value": 1436
     },
-    "affinity": 10,
+    "affinity": 20,
     "spSkill": "【SP】三音演奏 Lv3",
     "skills": [
       {
-        "skillId": "thunder_attack",
+        "skillId": "thunder-attack",
         "level": 1
       }
     ],
@@ -1468,15 +1496,15 @@
   {
     "id": "seregios_huntinghorn",
     "name": "音笛參宿七",
-    "nameEn": "",
+    "nameEn": "Vadya Muse",
     "type": "hunting-horn",
     "attack": 2335,
     "element": null,
-    "affinity": 15,
+    "affinity": 30,
     "spSkill": "【SP】三音演奏 Lv3",
     "skills": [
       {
-        "skillId": "powerhouse",
+        "skillId": "attack-activation",
         "level": 1
       }
     ],
@@ -1499,7 +1527,7 @@
   {
     "id": "bone_huntinghorn",
     "name": "骨製號角",
-    "nameEn": "",
+    "nameEn": "Bone Horn",
     "type": "hunting-horn",
     "attack": 1912,
     "element": null,
@@ -1507,7 +1535,7 @@
     "spSkill": "【SP】三音演奏 Lv3",
     "skills": [
       {
-        "skillId": "concentration",
+        "skillId": "sp-meter-boost",
         "level": 1
       }
     ],
@@ -1520,6 +1548,154 @@
       {
         "name": "聽覺保護【小】",
         "description": "在一定時間內，不會受到咆哮【小】影響"
+      },
+      {
+        "name": "攻擊力UP【大】",
+        "description": "在一段時間內，大幅提升攻擊力"
+      }
+    ]
+  },
+  {
+    "id": "stygian_zinogre_huntinghorn",
+    "name": "獄琴龍背",
+    "nameEn": "Brimstren Drakesong",
+    "type": "hunting-horn",
+    "attack": 1506,
+    "element": {
+      "type": "dragon",
+      "value": 1506
+    },
+    "affinity": 0,
+    "spSkill": "【SP】三音演奏 Lv3",
+    "skills": [
+      {
+        "skillId": "dragon-attack",
+        "level": 1
+      },
+      {
+        "skillId": "dragon-attack-peak",
+        "level": 1
+      }
+    ],
+    "image": "/images/weapons/stygian_zinogre_huntinghorn.webp",
+    "melodies": [
+      {
+        "name": "SP計量表加速【小】",
+        "description": "在一段時間內，SP計量表的增加量小幅提升"
+      },
+      {
+        "name": "迴避距離UP",
+        "description": "在一段時間內，增加迴避距離"
+      },
+      {
+        "name": "龍屬性攻擊力UP",
+        "description": "在一段時間內，大幅提升龍屬性武器的屬性值"
+      }
+    ]
+  },
+  {
+    "id": "aurora_somnacanth_huntinghorn",
+    "name": "雪花之瓊妃援手",
+    "nameEn": "Bloom Snow Flute",
+    "type": "hunting-horn",
+    "attack": 1450,
+    "element": {
+      "type": "ice",
+      "value": 1614
+    },
+    "affinity": -20,
+    "spSkill": "【SP】三音演奏 Lv3",
+    "skills": [
+      {
+        "skillId": "sp-overdrive",
+        "level": 1
+      }
+    ],
+    "image": "/images/weapons/aurora_somnacanth_huntinghorn.webp",
+    "melodies": [
+      {
+        "name": "震動無效",
+        "description": "在一定時間內，不會受到地面震動影響"
+      },
+      {
+        "name": "聽覺保護【大】",
+        "description": "在一定時間內，不會受到咆哮【小】和咆哮【大】影響"
+      },
+      {
+        "name": "高頻衝擊波",
+        "description": "在自身周圍發出高頻率噪音衝擊波造成傷害"
+      }
+    ]
+  },
+  {
+    "id": "velkhana_huntinghorn",
+    "name": "冰琴凍土",
+    "nameEn": "Sonorous Eisfyl",
+    "type": "hunting-horn",
+    "attack": 1444,
+    "element": {
+      "type": "ice",
+      "value": 1622
+    },
+    "affinity": 0,
+    "spSkill": "【SP】三音演奏 Lv3",
+    "skills": [
+      {
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
+      {
+        "skillId": "ice-attack",
+        "level": 1
+      },
+      {
+        "skillId": "ice-attack-peak",
+        "level": 1
+      }
+    ],
+    "image": "/images/weapons/velkhana_huntinghorn.webp",
+    "melodies": [
+      {
+        "name": "防禦力UP",
+        "description": "在一段時間內，大幅提升防禦力"
+      },
+      {
+        "name": "後仰無效",
+        "description": "在一定時間內，受到攻擊不會後仰"
+      },
+      {
+        "name": "冰屬性攻擊力UP",
+        "description": "在一段時間內，大幅提升冰屬性武器的屬性值"
+      }
+    ]
+  },
+  {
+    "id": "brachydios_huntinghorn",
+    "name": "碎龍號角",
+    "nameEn": "Brachydios Horn",
+    "type": "hunting-horn",
+    "attack": 2007,
+    "element": {
+      "type": "blast",
+      "value": 416
+    },
+    "affinity": 10,
+    "spSkill": "【SP】三音演奏 Lv3",
+    "skills": [
+      {
+        "skillId": "follow-up-blast",
+        "level": 1
+      }
+    ],
+    "image": "/images/weapons/brachydios_huntinghorn.webp",
+    "melodies": [
+      {
+        "name": "防禦力UP",
+        "description": "在一段時間內，大幅提升防禦力"
+      },
+      {
+        "name": "風壓耐性",
+        "description": "在一定時間內，不會受到風壓【小】的影響並擁有對風壓【大】的耐性"
       },
       {
         "name": "攻擊力UP【大】",

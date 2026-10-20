@@ -1,4 +1,5 @@
 import { defineStore } from 'pinia'
+import armorMonsterMap from '../../data/armor-monsters.json'
 
 interface ArmorSkill {
   skillId: string
@@ -224,75 +225,9 @@ export function getWeaponTypeIconName(type: string): string {
   return map[type] || `weapon_${type.replace(/-/g, '_')}`
 }
 
-// Maps armor set ID prefix → monster url_key (used for monster icon filenames)
-const ARMOR_MONSTER_MAP: Record<string, string> = {
-  leather: 'ore',
-  alloy: 'alloy',
-  jagras: 'greatjagras',
-  kulu: 'kuluyaku',
-  pukei: 'pukeipukei',
-  'coral-pukei': 'coral_pukeipukei',
-  barroth: 'barroth',
-  girros: 'greatgirros',
-  kadachi: 'tobikadachi',
-  'viper-kadachi': 'viper_tobikadachi',
-  paolumu: 'paolumu',
-  'nightshade-paolumu': 'nightshade_paolumu',
-  jyuratodus: 'jyuratodus',
-  anjanath: 'anjanath',
-  'fulgur-anjanath': 'fulgur_anjanath',
-  rathian: 'rathian',
-  'pink-rathian': 'pink_rathian',
-  'gold-rathian': 'gold_rathian',
-  legiana: 'legiana',
-  diablos: 'diablos',
-  'black-diablos': 'black_diablos',
-  rathalos: 'rathalos',
-  'azure-rathalos': 'azure_rathalos',
-  'silver-rathalos': 'silver_rathalos',
-  zinogre: 'zinogre',
-  tzitzi: 'tzitziyaku',
-  odogaron: 'odogaron',
-  'ebony-odogaron': 'ebony_odogaron',
-  vangis: 'deviljho',
-  basarios: 'basarios',
-  khezu: 'khezu',
-  kushala: 'kushaladaora',
-  mizutsune: 'mizutsune',
-  kaiser: 'teostra',
-  aknosom: 'aknosom',
-  sinister: 'magnamalo',
-  rajang: 'rajang',
-  nergigante: 'nergigante',
-  lagombi: 'lagombi',
-  volvidon: 'volvidon',
-  somnacanth: 'somnacanth',
-  tigrex: 'tigrex',
-  'brute-tigrex': 'brute_tigrex',
-  kirin: 'kirin',
-  bazelgeuse: 'bazelgeuse',
-  chatacabra: 'chatacabra',
-  arzuros: 'arzuros',
-  glavenus: 'glavenus',
-  chameleos: 'chameleos',
-  wroggi: 'greatwroggi',
-  bishaten: 'bishaten',
-  beotodus: 'beotodus',
-  nargacuga: 'nargacuga',
-  namielle: 'namielle',
-  garangolm: 'garangolm',
-  lunagaron: 'lunagaron',
-  espinas: 'espinas',
-  malzeno: 'malzeno',
-  quematrice: 'quematrice',
-  gossharag: 'gossharag',
-  astalos: 'astalos',
-  almudron: 'almudron',
-  seregios: 'seregios',
-  radobaan: 'radobaan',
-  banbaro: 'banbaro',
-  barioth: 'barioth',
-}
+// Maps armor set ID prefix → monster icon key (public/images/monsters/<key>.webp).
+// Maintained by the data sync (scripts/sync/armor.mjs).
+const ARMOR_MONSTER_MAP: Record<string, string> = armorMonsterMap
 
 const ARMOR_PARTS = ['head', 'chest', 'arms', 'waist', 'legs'] as const
 

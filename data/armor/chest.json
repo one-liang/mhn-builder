@@ -2,11 +2,11 @@
   {
     "id": "leather-chest",
     "name": "皮製服飾",
-    "nameEn": "",
-    "setName": "無",
-    "setNameEn": "",
+    "nameEn": "Leather Mail",
+    "setName": "皮製",
+    "setNameEn": "Leather",
     "part": "chest",
-    "defense": 182,
+    "defense": 197,
     "skills": [
       {
         "skillId": "attack-boost",
@@ -23,11 +23,11 @@
   {
     "id": "alloy-chest",
     "name": "合金鎧甲",
-    "nameEn": "",
-    "setName": "無",
-    "setNameEn": "",
+    "nameEn": "Alloy Mail",
+    "setName": "合金",
+    "setNameEn": "Alloy",
     "part": "chest",
-    "defense": 182,
+    "defense": 197,
     "skills": [
       {
         "skillId": "tremor-resistance",
@@ -40,11 +40,11 @@
   {
     "id": "jagras-chest",
     "name": "凶豺龍鎧甲",
-    "nameEn": "",
-    "setName": "",
-    "setNameEn": "",
+    "nameEn": "Jagras Mail",
+    "setName": "凶豺龍",
+    "setNameEn": "Jagras",
     "part": "chest",
-    "defense": 182,
+    "defense": 197,
     "skills": [
       {
         "skillId": "battle-temper",
@@ -57,11 +57,11 @@
   {
     "id": "kulu-chest",
     "name": "搔鳥鎧甲",
-    "nameEn": "",
-    "setName": "",
-    "setNameEn": "",
+    "nameEn": "Kulu Mail",
+    "setName": "搔鳥",
+    "setNameEn": "Kulu",
     "part": "chest",
-    "defense": 182,
+    "defense": 197,
     "skills": [
       {
         "skillId": "guts",
@@ -74,11 +74,11 @@
   {
     "id": "pukei-chest",
     "name": "毒妖鳥鎧甲",
-    "nameEn": "",
-    "setName": "",
-    "setNameEn": "",
+    "nameEn": "Pukei Mail",
+    "setName": "毒妖鳥",
+    "setNameEn": "Pukei",
     "part": "chest",
-    "defense": 182,
+    "defense": 197,
     "skills": [
       {
         "skillId": "poison-resistance",
@@ -86,7 +86,7 @@
       },
       {
         "skillId": "focus",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 1,
@@ -95,11 +95,11 @@
   {
     "id": "coral-pukei-chest",
     "name": "妖水鎧甲",
-    "nameEn": "",
-    "setName": "",
-    "setNameEn": "",
+    "nameEn": "Pukei Lagoon Mail",
+    "setName": "妖水",
+    "setNameEn": "Coral Pukei",
     "part": "chest",
-    "defense": 182,
+    "defense": 197,
     "skills": [
       {
         "skillId": "power-prolonger",
@@ -116,11 +116,11 @@
   {
     "id": "barroth-chest",
     "name": "土砂龍鎧甲",
-    "nameEn": "",
-    "setName": "",
-    "setNameEn": "",
+    "nameEn": "Barroth Mail",
+    "setName": "土砂龍",
+    "setNameEn": "Barroth",
     "part": "chest",
-    "defense": 182,
+    "defense": 197,
     "skills": [
       {
         "skillId": "offensive-guard",
@@ -133,11 +133,11 @@
   {
     "id": "girros-chest",
     "name": "凶顎龍鎧甲",
-    "nameEn": "",
-    "setName": "",
-    "setNameEn": "",
+    "nameEn": "Girros Mail",
+    "setName": "凶顎龍",
+    "setNameEn": "Girros",
     "part": "chest",
-    "defense": 182,
+    "defense": 197,
     "skills": [
       {
         "skillId": "paralysis-resistance",
@@ -145,7 +145,7 @@
       },
       {
         "skillId": "sneak-attack",
-        "level": 1
+        "level": 2
       }
     ],
     "driftstoneSlots": 1,
@@ -154,11 +154,11 @@
   {
     "id": "kadachi-chest",
     "name": "飛雷龍鎧甲",
-    "nameEn": "",
-    "setName": "",
-    "setNameEn": "",
+    "nameEn": "Kadachi Mail",
+    "setName": "飛雷龍",
+    "setNameEn": "Kadachi",
     "part": "chest",
-    "defense": 182,
+    "defense": 197,
     "skills": [
       {
         "skillId": "evade-extender",
@@ -175,11 +175,11 @@
   {
     "id": "viper-kadachi-chest",
     "name": "朱毒鎧甲",
-    "nameEn": "",
-    "setName": "",
-    "setNameEn": "",
+    "nameEn": "Viper Kadachi Mail",
+    "setName": "朱毒",
+    "setNameEn": "Viper Kadachi",
     "part": "chest",
-    "defense": 182,
+    "defense": 197,
     "skills": [
       {
         "skillId": "true-ability",
@@ -192,15 +192,19 @@
   {
     "id": "paolumu-chest",
     "name": "浮空龍鎧甲",
-    "nameEn": "",
-    "setName": "",
-    "setNameEn": "",
+    "nameEn": "Lumu Mail",
+    "setName": "浮空龍",
+    "setNameEn": "Paolumu",
     "part": "chest",
-    "defense": 182,
+    "defense": 197,
     "skills": [
       {
         "skillId": "recoil-down",
         "level": 2
+      },
+      {
+        "skillId": "windproof",
+        "level": 1
       }
     ],
     "driftstoneSlots": 1,
@@ -209,11 +213,11 @@
   {
     "id": "nightshade-paolumu-chest",
     "name": "浮夢鎧甲",
-    "nameEn": "",
-    "setName": "",
-    "setNameEn": "",
+    "nameEn": "Lumu Phantasm Mail",
+    "setName": "浮夢",
+    "setNameEn": "Nightshade Paolumu",
     "part": "chest",
-    "defense": 182,
+    "defense": 197,
     "skills": [
       {
         "skillId": "focus",
@@ -230,11 +234,11 @@
   {
     "id": "jyuratodus-chest",
     "name": "泥魚龍鎧甲",
-    "nameEn": "",
-    "setName": "",
-    "setNameEn": "",
+    "nameEn": "Jyura Mail",
+    "setName": "泥魚龍",
+    "setNameEn": "Jyuratodus",
     "part": "chest",
-    "defense": 182,
+    "defense": 197,
     "skills": [
       {
         "skillId": "water-attack",
@@ -251,11 +255,11 @@
   {
     "id": "anjanath-chest",
     "name": "蠻顎龍鎧甲",
-    "nameEn": "",
-    "setName": "",
-    "setNameEn": "",
+    "nameEn": "Anja Mail",
+    "setName": "蠻顎龍",
+    "setNameEn": "Anjanath",
     "part": "chest",
-    "defense": 182,
+    "defense": 197,
     "skills": [
       {
         "skillId": "special-boost",
@@ -268,11 +272,11 @@
   {
     "id": "fulgur-anjanath-chest",
     "name": "雷顎鎧甲",
-    "nameEn": "",
-    "setName": "",
-    "setNameEn": "",
+    "nameEn": "Fulgur Mail",
+    "setName": "雷顎",
+    "setNameEn": "Fulgur",
     "part": "chest",
-    "defense": 182,
+    "defense": 197,
     "skills": [
       {
         "skillId": "hi-thunder",
@@ -289,11 +293,11 @@
   {
     "id": "rathian-chest",
     "name": "雌火龍鎧甲",
-    "nameEn": "",
-    "setName": "",
-    "setNameEn": "",
+    "nameEn": "Rathian Mail",
+    "setName": "雌火龍",
+    "setNameEn": "Rathian",
     "part": "chest",
-    "defense": 182,
+    "defense": 197,
     "skills": [
       {
         "skillId": "poison-attack",
@@ -306,11 +310,11 @@
   {
     "id": "pink-rathian-chest",
     "name": "火龍心鎧甲",
-    "nameEn": "",
-    "setName": "",
-    "setNameEn": "",
+    "nameEn": "Rath Heart Mail",
+    "setName": "火龍心",
+    "setNameEn": "Pink Rathian",
     "part": "chest",
-    "defense": 182,
+    "defense": 197,
     "skills": [
       {
         "skillId": "dragon-attack",
@@ -327,11 +331,11 @@
   {
     "id": "gold-rathian-chest",
     "name": "金黃澄月鎧甲",
-    "nameEn": "",
-    "setName": "",
-    "setNameEn": "",
+    "nameEn": "Golden Lunemail",
+    "setName": "金黃澄月",
+    "setNameEn": "Golden Lune",
     "part": "chest",
-    "defense": 182,
+    "defense": 197,
     "skills": [
       {
         "skillId": "partbreaker",
@@ -344,11 +348,11 @@
   {
     "id": "legiana-chest",
     "name": "風漂龍鎧甲",
-    "nameEn": "",
-    "setName": "",
-    "setNameEn": "",
+    "nameEn": "Legiana Mail",
+    "setName": "風漂龍",
+    "setNameEn": "Legiana",
     "part": "chest",
-    "defense": 182,
+    "defense": 197,
     "skills": [
       {
         "skillId": "divine-blessing",
@@ -365,15 +369,15 @@
   {
     "id": "diablos-chest",
     "name": "角龍鎧甲",
-    "nameEn": "",
-    "setName": "",
-    "setNameEn": "",
+    "nameEn": "Diablos Mail",
+    "setName": "角龍",
+    "setNameEn": "Diablos",
     "part": "chest",
-    "defense": 182,
+    "defense": 197,
     "skills": [
       {
         "skillId": "slugger",
-        "level": 1
+        "level": 3
       },
       {
         "skillId": "heroics",
@@ -386,11 +390,11 @@
   {
     "id": "black-diablos-chest",
     "name": "暴君角龍鎧甲",
-    "nameEn": "",
-    "setName": "",
-    "setNameEn": "",
+    "nameEn": "Diablos Nero Mail",
+    "setName": "暴君角龍",
+    "setNameEn": "Black Diablos",
     "part": "chest",
-    "defense": 182,
+    "defense": 197,
     "skills": [
       {
         "skillId": "resentment",
@@ -407,11 +411,11 @@
   {
     "id": "rathalos-chest",
     "name": "火龍鎧甲",
-    "nameEn": "",
-    "setName": "",
-    "setNameEn": "",
+    "nameEn": "Rathalos Mail",
+    "setName": "火龍",
+    "setNameEn": "Rathalos",
     "part": "chest",
-    "defense": 182,
+    "defense": 197,
     "skills": [
       {
         "skillId": "weakness-exploit",
@@ -424,11 +428,11 @@
   {
     "id": "azure-rathalos-chest",
     "name": "火龍魂鎧甲",
-    "nameEn": "",
-    "setName": "",
-    "setNameEn": "",
+    "nameEn": "Rath Soul Mail",
+    "setName": "火龍魂",
+    "setNameEn": "Azure Rathalos",
     "part": "chest",
-    "defense": 182,
+    "defense": 197,
     "skills": [
       {
         "skillId": "earplugs",
@@ -445,11 +449,11 @@
   {
     "id": "silver-rathalos-chest",
     "name": "銀白耀日鎧甲",
-    "nameEn": "",
-    "setName": "",
-    "setNameEn": "",
+    "nameEn": "Silver Solmail",
+    "setName": "銀白耀日",
+    "setNameEn": "Silver Sol",
     "part": "chest",
-    "defense": 182,
+    "defense": 197,
     "skills": [
       {
         "skillId": "fire-attack",
@@ -466,11 +470,11 @@
   {
     "id": "zinogre-chest",
     "name": "雷狼龍鎧甲",
-    "nameEn": "",
-    "setName": "",
-    "setNameEn": "",
+    "nameEn": "Zinogre Mail",
+    "setName": "雷狼龍",
+    "setNameEn": "Zinogre",
     "part": "chest",
-    "defense": 182,
+    "defense": 197,
     "skills": [
       {
         "skillId": "sp-meter-boost-dodge",
@@ -487,11 +491,11 @@
   {
     "id": "tzitzi-chest",
     "name": "眩鳥鎧甲",
-    "nameEn": "",
-    "setName": "",
-    "setNameEn": "",
+    "nameEn": "Tzitzi Mail",
+    "setName": "眩鳥",
+    "setNameEn": "Tzitzi",
     "part": "chest",
-    "defense": 182,
+    "defense": 197,
     "skills": [
       {
         "skillId": "status-sneak-attack",
@@ -508,11 +512,11 @@
   {
     "id": "odogaron-chest",
     "name": "慘爪龍鎧甲",
-    "nameEn": "",
-    "setName": "",
-    "setNameEn": "",
+    "nameEn": "Odogaron Mail",
+    "setName": "慘爪龍",
+    "setNameEn": "Odogaron",
     "part": "chest",
-    "defense": 182,
+    "defense": 197,
     "skills": [
       {
         "skillId": "critical-eye",
@@ -529,11 +533,11 @@
   {
     "id": "ebony-odogaron-chest",
     "name": "亡爪鎧甲",
-    "nameEn": "",
-    "setName": "",
-    "setNameEn": "",
+    "nameEn": "Death Garon Mail",
+    "setName": "亡爪",
+    "setNameEn": "Death Garon",
     "part": "chest",
-    "defense": 182,
+    "defense": 197,
     "skills": [
       {
         "skillId": "latent-power",
@@ -550,11 +554,11 @@
   {
     "id": "vangis-chest",
     "name": "恐暴龍鎧甲",
-    "nameEn": "",
-    "setName": "",
-    "setNameEn": "",
+    "nameEn": "Vangis Mail",
+    "setName": "恐暴龍",
+    "setNameEn": "Deviljho",
     "part": "chest",
-    "defense": 182,
+    "defense": 197,
     "skills": [
       {
         "skillId": "latent-power",
@@ -567,11 +571,11 @@
   {
     "id": "basarios-chest",
     "name": "岩龍鎧甲",
-    "nameEn": "",
-    "setName": "",
-    "setNameEn": "",
+    "nameEn": "Basarios Mail",
+    "setName": "岩龍",
+    "setNameEn": "Basarios",
     "part": "chest",
-    "defense": 182,
+    "defense": 197,
     "skills": [
       {
         "skillId": "artillery",
@@ -584,11 +588,11 @@
   {
     "id": "khezu-chest",
     "name": "奇怪龍鎧甲",
-    "nameEn": "",
-    "setName": "",
-    "setNameEn": "",
+    "nameEn": "Khezu Mail",
+    "setName": "奇怪龍",
+    "setNameEn": "Khezu",
     "part": "chest",
-    "defense": 182,
+    "defense": 197,
     "skills": [
       {
         "skillId": "thunder-attack",
@@ -601,11 +605,11 @@
   {
     "id": "kushala-chest",
     "name": "鋼龍恐懼",
-    "nameEn": "",
-    "setName": "",
-    "setNameEn": "",
+    "nameEn": "Kushala Cista",
+    "setName": "鋼龍",
+    "setNameEn": "Kushala",
     "part": "chest",
-    "defense": 182,
+    "defense": 197,
     "skills": [
       {
         "skillId": "kushala-frostwind",
@@ -620,17 +624,17 @@
         "level": 1
       }
     ],
-    "driftstoneSlots": 1,
+    "driftstoneSlots": 2,
     "image": "/images/armor/kushala-chest.webp"
   },
   {
     "id": "mizutsune-chest",
     "name": "泡狐龍鎧甲",
-    "nameEn": "",
-    "setName": "",
-    "setNameEn": "",
+    "nameEn": "Mizutsune Mail",
+    "setName": "泡狐龍",
+    "setNameEn": "Mizutsune",
     "part": "chest",
-    "defense": 182,
+    "defense": 197,
     "skills": [
       {
         "skillId": "bubbly-dance",
@@ -643,11 +647,11 @@
   {
     "id": "kaiser-chest",
     "name": "帝王鎧甲",
-    "nameEn": "",
-    "setName": "",
-    "setNameEn": "",
+    "nameEn": "Kaiser Mail",
+    "setName": "帝王",
+    "setNameEn": "Kaiser",
     "part": "chest",
-    "defense": 182,
+    "defense": 197,
     "skills": [
       {
         "skillId": "teostra-blastpowder",
@@ -655,7 +659,7 @@
       },
       {
         "skillId": "critical-eye",
-        "level": 1
+        "level": 2
       },
       {
         "skillId": "artful-dodger",
@@ -668,11 +672,11 @@
   {
     "id": "aknosom-chest",
     "name": "傘鳥鎧甲",
-    "nameEn": "",
-    "setName": "",
-    "setNameEn": "",
+    "nameEn": "Aknosom Mail",
+    "setName": "傘鳥",
+    "setNameEn": "Aknosom",
     "part": "chest",
-    "defense": 182,
+    "defense": 197,
     "skills": [
       {
         "skillId": "load-guard",
@@ -689,11 +693,11 @@
   {
     "id": "sinister-chest",
     "name": "禍鎧【胸甲】",
-    "nameEn": "",
-    "setName": "",
-    "setNameEn": "",
+    "nameEn": "Sinister Garb",
+    "setName": "禍鎧",
+    "setNameEn": "Sinister",
     "part": "chest",
-    "defense": 182,
+    "defense": 197,
     "skills": [
       {
         "skillId": "reload-speed",
@@ -710,11 +714,11 @@
   {
     "id": "rajang-chest",
     "name": "金色羽織",
-    "nameEn": "",
-    "setName": "",
-    "setNameEn": "",
+    "nameEn": "Golden Haori",
+    "setName": "金色",
+    "setNameEn": "Golden",
     "part": "chest",
-    "defense": 182,
+    "defense": 197,
     "skills": [
       {
         "skillId": "fighting-spirit",
@@ -731,11 +735,11 @@
   {
     "id": "nergigante-chest",
     "name": "戰紋鎧甲",
-    "nameEn": "",
-    "setName": "",
-    "setNameEn": "",
+    "nameEn": "Nergigante Mail",
+    "setName": "戰紋",
+    "setNameEn": "Nergigante",
     "part": "chest",
-    "defense": 182,
+    "defense": 197,
     "skills": [
       {
         "skillId": "nergigante-hunger",
@@ -743,7 +747,7 @@
       },
       {
         "skillId": "sneak-attack",
-        "level": 1
+        "level": 2
       },
       {
         "skillId": "evade-extender",
@@ -756,11 +760,11 @@
   {
     "id": "lagombi-chest",
     "name": "白兔獸鎧甲",
-    "nameEn": "",
-    "setName": "",
-    "setNameEn": "",
+    "nameEn": "Lagombi Mail",
+    "setName": "白兔獸",
+    "setNameEn": "Lagombi",
     "part": "chest",
-    "defense": 182,
+    "defense": 197,
     "skills": [
       {
         "skillId": "attack-boost",
@@ -773,11 +777,11 @@
   {
     "id": "volvidon-chest",
     "name": "赤甲獸鎧甲",
-    "nameEn": "",
-    "setName": "",
-    "setNameEn": "",
+    "nameEn": "Volvidon Mail",
+    "setName": "赤甲獸",
+    "setNameEn": "Volvidon",
     "part": "chest",
-    "defense": 182,
+    "defense": 197,
     "skills": [
       {
         "skillId": "paralysis-attack",
@@ -790,11 +794,11 @@
   {
     "id": "somnacanth-chest",
     "name": "人魚龍鎧甲",
-    "nameEn": "",
-    "setName": "",
-    "setNameEn": "",
+    "nameEn": "Somnacanth Mail",
+    "setName": "人魚龍",
+    "setNameEn": "Somnacanth",
     "part": "chest",
-    "defense": 182,
+    "defense": 197,
     "skills": [
       {
         "skillId": "skyward-striker",
@@ -807,11 +811,11 @@
   {
     "id": "tigrex-chest",
     "name": "轟龍鎧甲",
-    "nameEn": "",
-    "setName": "",
-    "setNameEn": "",
+    "nameEn": "Tigrex Mail",
+    "setName": "轟龍",
+    "setNameEn": "Tigrex",
     "part": "chest",
-    "defense": 182,
+    "defense": 197,
     "skills": [
       {
         "skillId": "heroics",
@@ -828,11 +832,11 @@
   {
     "id": "brute-tigrex-chest",
     "name": "轟吼鎧甲",
-    "nameEn": "",
-    "setName": "",
-    "setNameEn": "",
+    "nameEn": "Rex Roar Mail",
+    "setName": "轟吼",
+    "setNameEn": "Rex Roar",
     "part": "chest",
-    "defense": 182,
+    "defense": 197,
     "skills": [
       {
         "skillId": "attack-boost-peak",
@@ -853,11 +857,11 @@
   {
     "id": "kirin-chest",
     "name": "麒麟服飾",
-    "nameEn": "",
-    "setName": "",
-    "setNameEn": "",
+    "nameEn": "Kirin Jacket",
+    "setName": "麒麟",
+    "setNameEn": "Kirin",
     "part": "chest",
-    "defense": 182,
+    "defense": 197,
     "skills": [
       {
         "skillId": "rajang-thunderclap",
@@ -878,11 +882,11 @@
   {
     "id": "bazelgeuse-chest",
     "name": "爆鱗龍鎧甲",
-    "nameEn": "",
-    "setName": "",
-    "setNameEn": "",
+    "nameEn": "Bazelgeuse Mail",
+    "setName": "爆鱗龍",
+    "setNameEn": "Bazelgeuse",
     "part": "chest",
-    "defense": 182,
+    "defense": 197,
     "skills": [
       {
         "skillId": "valor",
@@ -895,11 +899,11 @@
   {
     "id": "chatacabra-chest",
     "name": "纏蛙鎧甲",
-    "nameEn": "",
-    "setName": "",
-    "setNameEn": "",
+    "nameEn": "Chatacabra Mail",
+    "setName": "纏蛙",
+    "setNameEn": "Chatacabra",
     "part": "chest",
-    "defense": 182,
+    "defense": 197,
     "skills": [
       {
         "skillId": "defense-ready",
@@ -916,11 +920,11 @@
   {
     "id": "arzuros-chest",
     "name": "青熊獸鎧甲",
-    "nameEn": "",
-    "setName": "",
-    "setNameEn": "",
+    "nameEn": "Arzuros Mail",
+    "setName": "青熊獸",
+    "setNameEn": "Arzuros",
     "part": "chest",
-    "defense": 182,
+    "defense": 197,
     "skills": [
       {
         "skillId": "group-hunt-attack",
@@ -933,11 +937,11 @@
   {
     "id": "glavenus-chest",
     "name": "斬龍鎧甲",
-    "nameEn": "",
-    "setName": "",
-    "setNameEn": "",
+    "nameEn": "Glavenus Mail",
+    "setName": "斬龍",
+    "setNameEn": "Glavenus",
     "part": "chest",
-    "defense": 182,
+    "defense": 197,
     "skills": [
       {
         "skillId": "lock-on",
@@ -954,11 +958,11 @@
   {
     "id": "chameleos-chest",
     "name": "霞龍劍裝【胸甲】",
-    "nameEn": "",
-    "setName": "",
-    "setNameEn": "",
+    "nameEn": "Mizuha Guards",
+    "setName": "霞龍",
+    "setNameEn": "Mizuha",
     "part": "chest",
-    "defense": 182,
+    "defense": 197,
     "skills": [
       {
         "skillId": "chameleos-miasma",
@@ -975,11 +979,11 @@
   {
     "id": "wroggi-chest",
     "name": "毒狗龍鎧甲",
-    "nameEn": "",
-    "setName": "",
-    "setNameEn": "",
+    "nameEn": "Wroggi Mail",
+    "setName": "毒狗龍",
+    "setNameEn": "Wroggi",
     "part": "chest",
-    "defense": 182,
+    "defense": 197,
     "skills": [
       {
         "skillId": "final-shot",
@@ -996,11 +1000,11 @@
   {
     "id": "bishaten-chest",
     "name": "天狗獸鎧甲",
-    "nameEn": "",
-    "setName": "",
-    "setNameEn": "",
+    "nameEn": "Bishaten Mail",
+    "setName": "天狗獸",
+    "setNameEn": "Bishaten",
     "part": "chest",
-    "defense": 182,
+    "defense": 197,
     "skills": [
       {
         "skillId": "reload-speed",
@@ -1017,11 +1021,11 @@
   {
     "id": "beotodus-chest",
     "name": "冰魚龍鎧甲",
-    "nameEn": "",
-    "setName": "",
-    "setNameEn": "",
+    "nameEn": "Beotodus Mail",
+    "setName": "冰魚龍",
+    "setNameEn": "Beotodus",
     "part": "chest",
-    "defense": 182,
+    "defense": 197,
     "skills": [
       {
         "skillId": "charge-shockwave-boost",
@@ -1038,11 +1042,11 @@
   {
     "id": "nargacuga-chest",
     "name": "迅龍鎧甲",
-    "nameEn": "",
-    "setName": "",
-    "setNameEn": "",
+    "nameEn": "Nargacuga Mail",
+    "setName": "迅龍",
+    "setNameEn": "Nargacuga",
     "part": "chest",
-    "defense": 182,
+    "defense": 197,
     "skills": [
       {
         "skillId": "critical-boost",
@@ -1059,11 +1063,11 @@
   {
     "id": "namielle-chest",
     "name": "觸角鎧甲",
-    "nameEn": "",
-    "setName": "",
-    "setNameEn": "",
+    "nameEn": "Tentacle Cloak",
+    "setName": "觸角",
+    "setNameEn": "Tentacle",
     "part": "chest",
-    "defense": 182,
+    "defense": 197,
     "skills": [
       {
         "skillId": "namielle-thunderwave",
@@ -1084,11 +1088,11 @@
   {
     "id": "garangolm-chest",
     "name": "剛纏獸鎧甲",
-    "nameEn": "",
-    "setName": "",
-    "setNameEn": "",
+    "nameEn": "Golm Mail",
+    "setName": "剛纏獸",
+    "setNameEn": "Garangolm",
     "part": "chest",
-    "defense": 182,
+    "defense": 197,
     "skills": [
       {
         "skillId": "guard-up",
@@ -1105,11 +1109,11 @@
   {
     "id": "lunagaron-chest",
     "name": "冰狼龍鎧甲",
-    "nameEn": "",
-    "setName": "",
-    "setNameEn": "",
+    "nameEn": "Lunagaron Mail",
+    "setName": "冰狼龍",
+    "setNameEn": "Lunagaron",
     "part": "chest",
-    "defense": 182,
+    "defense": 197,
     "skills": [
       {
         "skillId": "hi-ice",
@@ -1122,11 +1126,11 @@
   {
     "id": "espinas-chest",
     "name": "棘龍肌肉",
-    "nameEn": "",
-    "setName": "",
-    "setNameEn": "",
+    "nameEn": "Espinas Muscle",
+    "setName": "棘龍",
+    "setNameEn": "Espinas",
     "part": "chest",
-    "defense": 182,
+    "defense": 197,
     "skills": [
       {
         "skillId": "follow-up",
@@ -1139,11 +1143,11 @@
   {
     "id": "malzeno-chest",
     "name": "爵銀龍鎧甲",
-    "nameEn": "",
-    "setName": "",
-    "setNameEn": "",
+    "nameEn": "Malzeno Mail",
+    "setName": "爵銀龍",
+    "setNameEn": "Malzeno",
     "part": "chest",
-    "defense": 182,
+    "defense": 197,
     "skills": [
       {
         "skillId": "valstrax-bloodspray",
@@ -1160,11 +1164,11 @@
   {
     "id": "quematrice-chest",
     "name": "炎尾龍鎧甲",
-    "nameEn": "",
-    "setName": "",
-    "setNameEn": "",
+    "nameEn": "Quematrice Mail",
+    "setName": "炎尾龍",
+    "setNameEn": "Quematrice",
     "part": "chest",
-    "defense": 182,
+    "defense": 197,
     "skills": [
       {
         "skillId": "normal-shots-boost",
@@ -1181,11 +1185,11 @@
   {
     "id": "gossharag-chest",
     "name": "雪鬼獸鎧甲",
-    "nameEn": "",
-    "setName": "",
-    "setNameEn": "",
+    "nameEn": "Goss Harag Mail",
+    "setName": "雪鬼獸",
+    "setNameEn": "Goss Harag",
     "part": "chest",
-    "defense": 182,
+    "defense": 197,
     "skills": [
       {
         "skillId": "ice-attack-peak",
@@ -1202,11 +1206,11 @@
   {
     "id": "astalos-chest",
     "name": "電龍鎧甲",
-    "nameEn": "",
-    "setName": "",
-    "setNameEn": "",
+    "nameEn": "Astalos Mail",
+    "setName": "電龍",
+    "setNameEn": "Astalos",
     "part": "chest",
-    "defense": 182,
+    "defense": 197,
     "skills": [
       {
         "skillId": "thunder-attack-peak",
@@ -1223,11 +1227,11 @@
   {
     "id": "almudron-chest",
     "name": "泥翁龍鎧甲",
-    "nameEn": "",
-    "setName": "",
-    "setNameEn": "",
+    "nameEn": "Almudron Mail",
+    "setName": "泥翁龍",
+    "setNameEn": "Almudron",
     "part": "chest",
-    "defense": 182,
+    "defense": 197,
     "skills": [
       {
         "skillId": "water-attack-peak",
@@ -1244,11 +1248,11 @@
   {
     "id": "seregios-chest",
     "name": "千刃龍鎧甲",
-    "nameEn": "",
-    "setName": "",
-    "setNameEn": "",
+    "nameEn": "Regios Mail",
+    "setName": "千刃龍",
+    "setNameEn": "Regios",
     "part": "chest",
-    "defense": 182,
+    "defense": 197,
     "skills": [
       {
         "skillId": "attack-activation",
@@ -1265,11 +1269,11 @@
   {
     "id": "radobaan-chest",
     "name": "骨鎚龍鎧甲",
-    "nameEn": "",
-    "setName": "",
-    "setNameEn": "",
+    "nameEn": "Baan Mail",
+    "setName": "骨鎚龍",
+    "setNameEn": "Radobaan",
     "part": "chest",
-    "defense": 182,
+    "defense": 197,
     "skills": [
       {
         "skillId": "sleep-attack",
@@ -1286,11 +1290,11 @@
   {
     "id": "banbaro-chest",
     "name": "猛牛龍鎧甲",
-    "nameEn": "",
-    "setName": "",
-    "setNameEn": "",
+    "nameEn": "Banbaro Mail",
+    "setName": "猛牛龍",
+    "setNameEn": "Banbaro",
     "part": "chest",
-    "defense": 182,
+    "defense": 197,
     "skills": [
       {
         "skillId": "sp-meter-boost",
@@ -1307,11 +1311,11 @@
   {
     "id": "barioth-chest",
     "name": "冰牙龍鎧甲",
-    "nameEn": "",
-    "setName": "",
-    "setNameEn": "",
+    "nameEn": "Barioth Mail",
+    "setName": "冰牙龍",
+    "setNameEn": "Barioth",
     "part": "chest",
-    "defense": 182,
+    "defense": 197,
     "skills": [
       {
         "skillId": "ice-resistance",
@@ -1324,5 +1328,114 @@
     ],
     "driftstoneSlots": 1,
     "image": "/images/armor/barioth-chest.webp"
+  },
+  {
+    "id": "shogunceanataur-chest",
+    "name": "將軍蟹鎧甲",
+    "nameEn": "Ceanataur Mail",
+    "setName": "將軍蟹",
+    "setNameEn": "Ceanataur",
+    "part": "chest",
+    "defense": 197,
+    "skills": [
+      {
+        "skillId": "enhancement-slicing-ammo",
+        "level": 1
+      },
+      {
+        "skillId": "recoil-down",
+        "level": 2
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": "/images/armor/shogunceanataur-chest.webp"
+  },
+  {
+    "id": "stygian-zinogre-chest",
+    "name": "獄狼龍鎧甲",
+    "nameEn": "Stygian Mail",
+    "setName": "獄狼龍",
+    "setNameEn": "Stygian",
+    "part": "chest",
+    "defense": 197,
+    "skills": [
+      {
+        "skillId": "dragon-attack-peak",
+        "level": 1
+      },
+      {
+        "skillId": "sp-overdrive",
+        "level": 2
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": "/images/armor/stygian-zinogre-chest.webp"
+  },
+  {
+    "id": "velkhana-chest",
+    "name": "雪崩鎧甲",
+    "nameEn": "Rimeguard Mail",
+    "setName": "雪崩",
+    "setNameEn": "Rimeguard",
+    "part": "chest",
+    "defense": 197,
+    "skills": [
+      {
+        "skillId": "velkhana-armor",
+        "level": 1
+      },
+      {
+        "skillId": "sp-undercurrent",
+        "level": 2
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": "/images/armor/velkhana-chest.webp"
+  },
+  {
+    "id": "brachydios-chest",
+    "name": "碎龍鎧甲",
+    "nameEn": "Brachydios Mail",
+    "setName": "碎龍",
+    "setNameEn": "Brachydios",
+    "part": "chest",
+    "defense": 197,
+    "skills": [
+      {
+        "skillId": "artillery-peak",
+        "level": 1
+      },
+      {
+        "skillId": "attack-activation",
+        "level": 1
+      },
+      {
+        "skillId": "fighting-spirit",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": "/images/armor/brachydios-chest.webp"
+  },
+  {
+    "id": "aurora-somnacanth-chest",
+    "name": "人魚龍U鎧甲",
+    "nameEn": "Somnacanth U Mail",
+    "setName": "人魚龍U",
+    "setNameEn": "Somnacanth U",
+    "part": "chest",
+    "defense": 197,
+    "skills": [
+      {
+        "skillId": "charge-stock",
+        "level": 1
+      },
+      {
+        "skillId": "charge-master",
+        "level": 2
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": "/images/armor/aurora-somnacanth-chest.webp"
   }
 ]
