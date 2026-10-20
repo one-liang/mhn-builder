@@ -29,11 +29,12 @@ A Traditional-Chinese MHN builder where the build simulator, including auto-buil
 
 ## Capabilities and Constraints
 
-- Routes: home, build simulator, weapons (type index → list → detail), armor (list → detail), skills (list → detail), driftstones.
+- Routes: build simulator (the root forwards to it), weapons (type index → list → detail), armor (list → detail), skills with a 技能｜漂流石 switch (list → detail), 我的配裝 (saved builds); site-wide search in the header.
 - Build state: weapon + head/chest/arms/waist/legs, per-armor driftstone slots (each contributes Lv1), URL params and localStorage persistence, share URL.
-- Auto-build: target skills with levels, per-slot locks, ranked results.
+- Auto-build: target skills with levels, a weapon type (or a locked weapon), per-slot locks, a driftstone on/off switch, ranked results; runs in a Web Worker.
+- Saved builds (我的配裝) live in this browser's localStorage with JSON export/import; any build or auto-build plan can be copied as a PNG card.
 - Data is static JSON in `data/`; Nuxt 4 + Tailwind 4 + shadcn-nuxt + Pinia; `nuxt generate` for static output.
-- Light and dark modes with the user's choice persisted in the `mhn-theme` cookie.
+- Light and dark modes follow the system; the header switch overrides it and is remembered in the `mhn-theme-choice` cookie.
 - Equipment data carries no rarity field. Weapon element type and value exist and are currently shown as text.
 
 ## Brand Commitments

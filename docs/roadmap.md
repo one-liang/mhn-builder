@@ -1,6 +1,8 @@
 # 改版與功能規劃
 
-2026-10-21 與維護者逐題確認的決策（Q1–Q35），作為各階段實作與驗收的依據。每個階段開一條 `feature/*` 分支，完成後 `git merge --no-ff` 合回 `develop`；要發佈時再走 `release/<版本>` 合到 `main`。
+2026-10-21 與維護者逐題確認的決策（Q1–Q35），作為各階段實作與驗收的依據。
+
+**狀態（2026-10-21）**：階段 1–6 與活動裝備補充資料的程式皆已完成並合併到 `develop`。待維護者提供：活動裝備的實際數值（`scripts/sync/config/extra-gear.json`）、遊戲內技能顏色截圖（覆寫 `data/skill-colors.json`）、魔物搜尋別名（`data/monsters.json` 的 `aliases`）。每個階段開一條 `feature/*` 分支，完成後 `git merge --no-ff` 合回 `develop`；要發佈時再走 `release/<版本>` 合到 `main`。
 
 ## 階段總覽
 
