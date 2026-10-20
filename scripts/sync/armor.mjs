@@ -8,7 +8,8 @@
  */
 import { existsSync } from 'node:fs'
 import { join } from 'node:path'
-import { applyOverrides, mergeRecords } from './lib/diff.mjs'
+import { applyOverrides } from './lib/diff.mjs'
+import { mergeWithManual } from './lib/extra-gear.mjs'
 import { extractIsland, stripGradeSuffix, translator } from './lib/html.mjs'
 import { ARMOR_PARTS, ROOT, jsonEqual } from './lib/io.mjs'
 
@@ -39,7 +40,7 @@ function assertImageUrl(url, officialId) {
 }
 
 export async function syncArmor(ctx) {
-  const { http, current, maps, skillIds, overrides = {}, log = () => {}, options = {} } = ctx
+  const { http, current, maps, skillIds, overrides = {}, extraGear = { armor: [] }, log = () => {}, options = {} } = ctx
   const warnings = []
   const newIds = []
 
@@ -154,13 +155,25 @@ export async function syncArmor(ctx) {
   const added = []
   const changed = []
   const keptMissingUpstream = []
+  const manual = []
+  const removedManual = []
   for (const part of ARMOR_PARTS) {
-    const merged = mergeRecords(current.armor[part], officialRecords.filter(r => r.part === part))
+    const merged = mergeWithManual(
+      current.armor[part],
+      officialRecords.filter(r => r.part === part),
+      extraGear.armor.filter(r => r.part === part),
+      'armor',
+    )
     files.push({ path: `data/armor/${part}.json`, data: merged.list })
     added.push(...merged.added.map(r => `${r.id} ${r.name}`))
     changed.push(...merged.changed)
     keptMissingUpstream.push(...merged.keptMissingUpstream.map(r => `${r.id} ${r.name}`))
+    manual.push(...merged.manual)
+    removedManual.push(...merged.removedManual)
+    warnings.push(...merged.warnings)
   }
+  const strayManual = extraGear.armor.filter(r => !ARMOR_PARTS.includes(r.part))
+  if (strayManual.length) throw new Error(`extra-gear.json: armor ${strayManual.map(r => r.id).join(', ')} has no valid "part"`)
 
   // --- images for pieces that have no file yet ---
   const images = []
@@ -213,6 +226,9 @@ export async function syncArmor(ctx) {
   const summary = [
     `${official.length} official pieces in ${sets.size} sets (current ${currentTotal}): ${added.length} added, ${changedIds.size} changed (${changed.length} field changes), ${keptMissingUpstream.length} kept (missing upstream)`,
   ]
+  if (manual.length || removedManual.length) {
+    summary.push(`manual (extra-gear.json): ${manual.length} pieces${removedManual.length ? `, removed ${removedManual.join(', ')}` : ''}`)
+  }
   if (iconAdded.length) summary.push(`armor-monsters.json: ${iconAdded.length} new set icon entries (${iconAdded.join(', ')})`)
   if (images.length) summary.push(`${images.length} images to download`)
   log(`armor: ${summary.join('; ')}`)

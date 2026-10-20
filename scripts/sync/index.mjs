@@ -15,6 +15,7 @@ import { tmpdir } from 'node:os'
 import { dirname, join, relative, resolve } from 'node:path'
 import { validateData } from '../validate-data.mjs'
 import { syncArmor } from './armor.mjs'
+import { loadExtraGear } from './lib/extra-gear.mjs'
 import { syncMonsters } from './monsters.mjs'
 import { createHttp } from './lib/http.mjs'
 import { ROOT, formatJson, jsonEqual, loadData, readJson } from './lib/io.mjs'
@@ -189,6 +190,7 @@ async function run(opts, state) {
     maps,
     skillIds: createSkillIdResolver(maps),
     overrides,
+    extraGear: loadExtraGear(),
     log,
     options: { allowShrink: opts.allowShrink },
   }

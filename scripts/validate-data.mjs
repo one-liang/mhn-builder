@@ -26,7 +26,7 @@ const ICON_KEY = /^[a-z0-9_-]+$/
 
 /** Canonical key order of each record type (the sync writes keys in this order). */
 const SKILL_FIELDS = ['id', 'name', 'nameEn', 'description', 'maxLevel', 'category', 'levels']
-const ARMOR_FIELDS = ['id', 'name', 'nameEn', 'setName', 'setNameEn', 'part', 'defense', 'skills', 'driftstoneSlots', 'image']
+const ARMOR_FIELDS = ['id', 'name', 'nameEn', 'setName', 'setNameEn', 'part', 'defense', 'skills', 'driftstoneSlots', 'image', 'source']
 const WEAPON_FIELDS = ['id', 'name', 'nameEn', 'type', 'attack', 'element', 'affinity', 'spSkill', 'skills', 'image']
 const STONE_FIELDS = ['id', 'name', 'prime', 'skillIds']
 
@@ -141,6 +141,16 @@ export function validateData({ dataDir = join(ROOT, 'data'), publicDir = join(RO
 
   const label = (rec, i) => (isObj(rec) && isText(rec.id) ? rec.id : `[${i}]`)
 
+  /** Optional "source": only "manual" (extra-gear.json), whose ids carry the ev- / ev_ prefix. */
+  function checkSource(rec, file, id, prefix) {
+    if (!('source' in rec)) {
+      if (isStr(rec.id) && rec.id.startsWith(prefix)) warn('MANUAL_PREFIX', file, id, `id starts with "${prefix}" (reserved for extra-gear.json) but the record has no source "manual"`)
+      return
+    }
+    if (rec.source !== 'manual') return error('FIELD_INVALID', file, id, `"source" must be "manual", got ${show(rec.source)}`)
+    if (isStr(rec.id) && !rec.id.startsWith(prefix)) error('MANUAL_PREFIX', file, id, `hand-entered gear id must start with "${prefix}"`)
+  }
+
   /** Required field check: reports missing/invalid and returns whether the value is valid. */
   function need(rec, key, ok, file, id, expected) {
     if (!(key in rec)) {
@@ -183,12 +193,16 @@ export function validateData({ dataDir = join(ROOT, 'data'), publicDir = join(RO
   }
 
   const referencedImages = new Set()
-  /** Armor/weapon image: must be exactly /images/<dir>/<id>.webp and a valid WebP file. */
+  /**
+   * Armor/weapon image: must be exactly /images/<dir>/<id>.webp and a valid WebP file.
+   * Hand-entered gear (source "manual", from extra-gear.json) may use any image under /images/.
+   */
   function checkRecordImage(rec, dir, file, id, idOk) {
     if (!need(rec, 'image', isStr, file, id, 'a string')) return
     referencedImages.add(rec.image)
     if (!idOk) return
-    const expected = `/images/${dir}/${rec.id}.webp`
+    const manual = rec.source === 'manual'
+    const expected = manual && /^\/images\/[\w/.-]+\.webp$/.test(rec.image) ? rec.image : `/images/${dir}/${rec.id}.webp`
     if (rec.image !== expected) {
       error('IMAGE_PATH', file, id, `image is ${show(rec.image)}, expected "${expected}"`)
       return
@@ -320,6 +334,7 @@ export function validateData({ dataDir = join(ROOT, 'data'), publicDir = join(RO
       need(a, 'defense', v => isInt(v) && v > 0, file, id, 'a positive integer')
       need(a, 'driftstoneSlots', v => isInt(v) && v >= 0 && v <= 3, file, id, 'an integer 0..3')
       checkSkillRefs(a, 'armor', file, id)
+      checkSource(a, file, id, 'ev-')
       checkRecordImage(a, 'armor', file, id, idOk)
       if (idOk) {
         const prefix = a.id.slice(0, -(part.length + 1))
@@ -342,6 +357,7 @@ export function validateData({ dataDir = join(ROOT, 'data'), publicDir = join(RO
     if (!monsters) continue
     const key = monsters[prefix]
     if (key === undefined) {
+      if (prefix.startsWith('ev-')) continue  // hand-entered sets have no synced set icon
       warn('MONSTER_MISSING', MONSTERS_FILE, prefix, `no monster icon entry for armor set "${prefix}"`)
     } else if (isStr(key) && ICON_KEY.test(key)) {
       const rel = `/images/monsters/${key}.webp`
@@ -360,7 +376,7 @@ export function validateData({ dataDir = join(ROOT, 'data'), publicDir = join(RO
   const weaponIds = new Map()
   const weaponCounts = {}
   let weaponsComplete = true
-  const weaponFields = [...WEAPON_FIELDS, ...Object.keys(WEAPON_EXTRAS)]
+  const weaponFields = [...WEAPON_FIELDS, ...Object.keys(WEAPON_EXTRAS), 'source']
   for (const type of WEAPON_TYPES) {
     const file = `data/weapons/${type}.json`
     const list = load(`weapons/${type}.json`, 'array')
@@ -390,6 +406,7 @@ export function validateData({ dataDir = join(ROOT, 'data'), publicDir = join(RO
       need(w, 'affinity', isInt, file, id, 'an integer')
       need(w, 'spSkill', v => v === null || isStr(v), file, id, 'null or a string')
       checkSkillRefs(w, 'weapons', file, id)
+      checkSource(w, file, id, 'ev_')
       checkRecordImage(w, 'weapons', file, id, idOk)
       for (const [key, [types, ok]] of Object.entries(WEAPON_EXTRAS)) {
         const expected = types.includes(type)

@@ -24,7 +24,8 @@
  */
 import { existsSync } from 'node:fs'
 import { join } from 'node:path'
-import { applyOverrides, mergeRecords } from './lib/diff.mjs'
+import { applyOverrides } from './lib/diff.mjs'
+import { mergeWithManual } from './lib/extra-gear.mjs'
 import { extractIsland, htmlToText, stripGradeSuffix, translator } from './lib/html.mjs'
 import { ROOT, WEAPON_TYPES, jsonEqual } from './lib/io.mjs'
 
@@ -275,7 +276,7 @@ function detailLabels(w, d, zh, warn) {
 // ---- sync -------------------------------------------------------------------
 
 export async function syncWeapons(ctx) {
-  const { http, current, skillIds, overrides = {}, log = () => {}, options = {} } = ctx
+  const { http, current, skillIds, overrides = {}, extraGear = { weapons: [] }, log = () => {}, options = {} } = ctx
   const warnings = createWarnings()
   const warn = warnings.add
 
@@ -595,13 +596,25 @@ export async function syncWeapons(ctx) {
   const added = []
   const changed = []
   const keptMissingUpstream = []
+  const manual = []
+  const removedManual = []
   for (const type of WEAPON_TYPES) {
-    const merged = mergeRecords(current.weapons[type], officialRecords.filter(r => r.type === type))
+    const merged = mergeWithManual(
+      current.weapons[type],
+      officialRecords.filter(r => r.type === type),
+      extraGear.weapons.filter(r => r.type === type),
+      'weapon',
+    )
     files.push({ path: `data/weapons/${type}.json`, data: merged.list })
     added.push(...merged.added.map(r => `${r.id} ${r.name}`))
     changed.push(...merged.changed)
     keptMissingUpstream.push(...merged.keptMissingUpstream.map(r => `${r.id} ${r.name}`))
+    manual.push(...merged.manual)
+    removedManual.push(...merged.removedManual)
+    for (const w of merged.warnings) warnings.add('manual', w)
   }
+  const strayManual = extraGear.weapons.filter(r => !WEAPON_TYPES.includes(r.type))
+  if (strayManual.length) throw new Error(`extra-gear.json: weapon ${strayManual.map(r => r.id).join(', ')} has no valid "type"`)
 
   // ---- grade-1 images for weapons that have no file yet ----
   const images = []
@@ -620,6 +633,9 @@ export async function syncWeapons(ctx) {
     `${officialRecords.length} official weapons in ${categories.length} types${disabled ? ` (${disabled} disabled skipped)` : ''} (current ${currentTotal}): ${added.length} added, ${changedIds.size} changed (${changed.length} field changes), ${keptMissingUpstream.length} kept (missing upstream)`,
     `detail pages: ${parsed}/${weapons.length} parsed, ${incomplete.size} weapons used fallback text, ${warnings.count() - warnings.count('fallback')} cross-check warnings`,
   ]
+  if (manual.length || removedManual.length) {
+    summary.push(`manual (extra-gear.json): ${manual.length} weapons${removedManual.length ? `, removed ${removedManual.join(', ')}` : ''}`)
+  }
   if (fieldCounts.size) summary.push(`changed fields: ${[...fieldCounts].sort((a, b) => b[1] - a[1]).map(([f, n]) => `${f} ${n}`).join(', ')}`)
   if (images.length) summary.push(`${images.length} images to download`)
   log(`weapons: ${summary.join('; ')}`)
