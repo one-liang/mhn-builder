@@ -12,10 +12,10 @@
 #   e-mails the owner — and no PR is opened. data/ is only changed after the sync validated it.
 # - When nothing changed upstream, no new PR is opened.
 # - Every run rebuilds chore/data-sync from main and force-pushes it (create-pull-request resets the
-#   branch), so never commit to that branch by hand: put fixes (e.g. skill descriptions) on main, or
-#   merge the PR first. If the open PR has commits this workflow did not make, the run fails before
-#   updating the PR instead of dropping them; merge the PR (or move the commits to main), or close
-#   the PR to discard them, then re-run.
+#   branch), so never commit to that branch by hand: put fixes (normally config/overrides.json) on
+#   main, or merge the PR first. If the open PR has commits this workflow did not make, the run
+#   fails before updating the PR instead of dropping them; merge the PR (or move the commits to
+#   main), or close the PR to discard them, then re-run.
 # - Schedules run from the default branch's copy of this file. GitHub pauses scheduled workflows
 #   in public repos after 60 days without repository activity; re-enable it in the Actions tab.
 

@@ -7,7 +7,6 @@
 export const REPORT_LIMIT = 60000
 
 const DATASET_LABEL = { skills: '技能／漂流石', armor: '防具', weapons: '武器' }
-const NEEDS_DESCRIPTION = /: needs a hand-written description$/
 const IMAGE_MODE = { downloaded: '已下載', pending: '待下載（dry-run）', skipped: '已略過（--skip-images）' }
 
 /** Successively smaller limits, tried until the report fits. */
@@ -69,12 +68,6 @@ function groupBy(list, keyFn) {
   return map
 }
 
-/** Skills whose (merged) record still has an empty description. */
-function skillsNeedingDescription(results) {
-  const file = results.find(r => r.name === 'skills')?.files.find(f => f.path === 'data/skills.json')
-  return Array.isArray(file?.data) ? file.data.filter(s => !s.description).map(s => `${s.id} ${s.name}`) : []
-}
-
 function datasetStats(r) {
   return {
     official: r.counts?.official ?? 0,
@@ -88,9 +81,8 @@ function datasetStats(r) {
 
 function render(input, lim) {
   const { startedAt, durationMs, dryRun, results, validation, written, images, http } = input
-  const needsDescription = skillsNeedingDescription(results)
   const tagged = (key, transform = x => x) => results.flatMap(r => r.report[key].map(x => `[${r.name}] ${transform(x)}`))
-  const warnings = results.flatMap(r => r.report.warnings.filter(w => !NEEDS_DESCRIPTION.test(w)).map(w => `[${r.name}] ${w}`))
+  const warnings = results.flatMap(r => r.report.warnings.map(w => `[${r.name}] ${w}`))
   const L = []
 
   // ---- header ----
@@ -121,11 +113,6 @@ function render(input, lim) {
   L.push('## 需要人工確認', '')
   L.push('### 新 ID（依預設規則產生，發佈後即寫入分享網址，請確認命名）', '')
   L.push(...bullets(tagged('newIds'), lim.items), '')
-  L.push('### 需要補寫說明的技能（skills.json `description` 為空）', '')
-  L.push(...bullets(needsDescription, lim.items, idLine), '')
-  if (needsDescription.length) {
-    L.push('補寫方式：合併後在 `main` 的 `data/skills.json` 填入 `description`（同步會保留），或在 `main` 的 `scripts/sync/config/overrides.json` 寫入 `skills.<id>.description`。**不要提交到 `chore/data-sync` 分支**：每次自動同步都會從 `main` 重建該分支。', '')
-  }
   L.push('### 官方已不再列出的紀錄（依規則保留、未刪除）', '')
   L.push(...bullets(tagged('keptMissingUpstream'), lim.items), '')
   L.push('### 已套用的手動覆寫（config/overrides.json）', '')

@@ -42,11 +42,16 @@ function mapCategory(official, zhName, kind) {
   return category === 'defense' && RESISTANCE_NAME.test(zhName) ? 'resistance' : category
 }
 
-/** Fill a level template; throws on any placeholder it cannot resolve. */
-function renderEffect(template, lv, label) {
+const amount = (lv, kind, n) => (kind === 'effect' ? lv.effectAmount : lv.conditionAmount)?.[n - 1]
+
+/**
+ * Fill a template's {effect_amount_N}/{condition_amount_N} placeholders with `valueOf(kind, n)`;
+ * throws on any placeholder it cannot resolve.
+ */
+function renderTemplate(template, valueOf, label) {
   const text = template
     .replace(/\{(effect|condition)_amount_(\d+)\}/g, (all, kind, n) => {
-      const value = (kind === 'effect' ? lv.effectAmount : lv.conditionAmount)?.[Number(n) - 1]
+      const value = valueOf(kind, Number(n))
       if (value === undefined || value === null) throw new Error(`skills: ${label}: unresolved placeholder ${all} in "${template}"`)
       return String(value)
     })
@@ -56,6 +61,27 @@ function renderEffect(template, lv, label) {
   const leftover = text.match(/\{[^{}]*\}/)
   if (leftover) throw new Error(`skills: ${label}: unresolved placeholder ${leftover[0]} in "${template}"`)
   return text
+}
+
+function renderEffect(template, lv, label) {
+  return renderTemplate(template, (kind, n) => amount(lv, kind, n), label)
+}
+
+/**
+ * One-line description built only from the official level text (the site has no separate
+ * summary): when every level uses the same template, numbers that grow are shown as a
+ * Lv1～max range ("攻擊力+50～300"); otherwise the wording itself changes between levels
+ * ("極小幅…" → "極大幅…") and the Lv1 text is used as is.
+ */
+function describeSkill(s, zhT, effects) {
+  const first = s.levels[0]
+  const last = s.levels.at(-1)
+  if (s.levels.some(lv => lv.description !== first.description)) return effects[0]
+  return renderTemplate(zhT(first.description), (kind, n) => {
+    const a = amount(first, kind, n)
+    const b = amount(last, kind, n)
+    return a === b || b === undefined || b === null ? a : `${a}～${b}`
+  }, `${s.kind} description`)
 }
 
 function guardShrink(label, official, current, allowShrink) {
@@ -120,17 +146,18 @@ function buildSkills({ zh, en, current, skillIds, warnings }) {
     }
     if (!cur && holder) warnings.push(`${id} ${name}: new official skill shares its zh name with current skill ${holder.id} — check skillIds in config/id-maps.json`)
 
+    const levels = s.levels.map(lv => {
+      if (!Number.isInteger(lv.level)) throw new Error(`skills: ${s.kind} has a non-integer level ${JSON.stringify(lv.level)}`)
+      return { level: lv.level, effect: renderEffect(zhT(lv.description), lv, `${s.kind} Lv${lv.level}`) }
+    })
     records.push({
       id,
       name,
       nameEn: enT(en.skills[s.kind].name),
-      description: cur?.description ?? '',
+      description: describeSkill(s, zhT, levels.map(l => l.effect)),
       maxLevel: s.maxLevel,
       category: mapCategory(s.category, name, s.kind),
-      levels: s.levels.map(lv => {
-        if (!Number.isInteger(lv.level)) throw new Error(`skills: ${s.kind} has a non-integer level ${JSON.stringify(lv.level)}`)
-        return { level: lv.level, effect: renderEffect(zhT(lv.description), lv, `${s.kind} Lv${lv.level}`) }
-      }),
+      levels,
     })
   }
 
@@ -223,7 +250,7 @@ export async function syncSkills(ctx) {
   const overridesApplied = applyOverrides(records, overrides?.skills)
   const skills = mergeRecords(current.skills, records)
   for (const s of skills.list) {
-    if (!s.description) warnings.push(`${s.id} ${s.name}: needs a hand-written description`)
+    if (!s.description) warnings.push(`${s.id} ${s.name}: description is empty`)
   }
 
   // ---- driftstone-skills.json ----------------------------------------------
