@@ -9,19 +9,19 @@ defineProps<{
 </script>
 
 <template>
-  <header class="px-4 md:px-0 pt-4 pb-4">
+  <header class="px-4 md:px-0 pt-5 md:pt-8 pb-5">
     <NuxtLink
       v-if="backTo"
       :to="backTo"
-      class="inline-flex items-center gap-1 h-11 -ml-1 pr-2 -mb-1 text-[13px] text-ink-2 hover:text-ink transition-colors duration-150"
+      class="inline-flex items-center gap-1.5 h-10 -ml-3 pl-3 pr-4 mb-2 rounded-full text-[14px] font-medium text-ink-2 hover:text-ink hover:bg-inset"
     >
-      <ArrowLeft :size="16" :stroke-width="2" aria-hidden="true" />
+      <ArrowLeft :size="16" :stroke-width="2.25" aria-hidden="true" />
       {{ backLabel }}
     </NuxtLink>
-    <div class="flex items-end justify-between gap-3" :class="backTo ? '' : 'pt-1'">
+    <div class="flex items-end justify-between gap-4">
       <div class="min-w-0">
-        <h1 class="text-[26px] leading-tight font-black tracking-[0.04em]">{{ title }}</h1>
-        <p v-if="$slots.default" class="mt-1 text-[13px] text-ink-2">
+        <h1 class="text-[34px] md:text-[44px] leading-[1.1] font-black tracking-[0.01em]">{{ title }}</h1>
+        <p v-if="$slots.default" class="mt-2 text-[14px] text-ink-2">
           <slot />
         </p>
       </div>

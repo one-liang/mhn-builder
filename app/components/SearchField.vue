@@ -13,7 +13,7 @@ const model = defineModel<string>({ required: true })
 <template>
   <label class="relative flex items-center">
     <span class="sr-only">{{ label }}</span>
-    <Search :size="18" :stroke-width="2" class="absolute left-3 text-ink-3 pointer-events-none" aria-hidden="true" />
+    <Search :size="18" :stroke-width="2.25" class="absolute left-4 text-ink pointer-events-none" aria-hidden="true" />
     <input
       v-model="model"
       type="search"
@@ -22,16 +22,16 @@ const model = defineModel<string>({ required: true })
       autocomplete="off"
       :placeholder="placeholder"
       :data-autofocus="autofocus ? '' : undefined"
-      class="w-full h-11 pl-10 pr-10 rounded-sm bg-inset border border-rule text-[15px] text-ink outline-none transition-colors duration-200 focus:border-focus focus:bg-panel [&::-webkit-search-cancel-button]:hidden"
+      class="w-full h-12 pl-11 pr-11 rounded-full bg-inset text-[16px] text-ink outline-none focus:ring-2 focus:ring-ink [&::-webkit-search-cancel-button]:hidden"
     />
     <button
       v-if="model"
       type="button"
-      class="absolute right-0 flex items-center justify-center size-11 text-ink-3 hover:text-ink"
+      class="absolute right-1 flex items-center justify-center size-10 rounded-full text-ink-2 hover:text-ink"
       aria-label="清除搜尋"
       @click="model = ''"
     >
-      <X :size="16" :stroke-width="2" aria-hidden="true" />
+      <X :size="16" :stroke-width="2.25" aria-hidden="true" />
     </button>
   </label>
 </template>

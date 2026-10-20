@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import { BookmarkPlus, Camera, ChevronDown, Link2, Trash2, WandSparkles } from 'lucide-vue-next'
+import { AnimatePresence, motion } from 'motion-v'
+import { skillColor } from '~/lib/skillColors'
 import type { Armor, Weapon } from '~/stores/equipment'
 import { getPartName } from '~/stores/equipment'
 import { useBuildStore, type BuildSlot, type ArmorSlot } from '~/stores/build'
@@ -48,6 +50,9 @@ function applyShareParams() {
 const nuxtApp = useNuxtApp()
 const autoOpen = ref(autoBuildStore.targetSkills.length > 0 || autoBuildStore.hasRun)
 let restored = !(import.meta.client && nuxtApp.isHydrating)
+// Until the saved build is restored the page shows skeletons, not a misleading empty build
+// (the prerendered HTML included: the server never knows this browser's build)
+const ready = ref(import.meta.client && restored)
 if (restored) {
   await buildStore.hydrate(queryParams.value)
   autoBuildStore.restoreSettings()
@@ -58,6 +63,7 @@ if (restored) {
     applyShareParams()
     autoBuildStore.restoreSettings()
     if (autoBuildStore.targetSkills.length) autoOpen.value = true
+    ready.value = true
   })
 }
 watch(() => route.fullPath, () => { if (import.meta.client && restored) applyShareParams() })
@@ -168,6 +174,15 @@ async function shareBuild() {
 const saveOpen = ref(false)
 const { busy: shotBusy, shootCurrent } = useBuildShot()
 
+function startAutoBuild() {
+  autoOpen.value = true
+  nextTick(() => document.getElementById('auto-h')?.scrollIntoView({ behavior: 'smooth', block: 'start' }))
+}
+
+// Legend for the pip colours: the five official skill categories
+const CATEGORY_LEGEND = ([['攻擊', 'attack'], ['屬性', 'element'], ['動作', 'utility'], ['防禦', 'defense'], ['耐性', 'resistance']] as const)
+  .map(([name, category]) => ({ name, color: skillColor({ id: '', category }) }))
+
 function resetBuild() {
   const snapshot = buildStore.serialize()
   buildStore.clearAll()
@@ -176,105 +191,122 @@ function resetBuild() {
 </script>
 
 <template>
-  <div class="max-w-6xl mx-auto md:px-6 lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(0,27rem)] lg:gap-8 lg:items-start">
+  <div class="max-w-5xl mx-auto px-4 md:px-6 pb-6 lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(0,25rem)] lg:gap-10 lg:items-start">
     <!-- Gear column -->
     <div>
-      <header class="flex items-center justify-between gap-3 px-4 md:px-0 pt-3 pb-3">
-        <div class="min-w-0 flex items-baseline gap-3">
-          <h1 class="text-[20px] leading-none font-black tracking-[0.04em] flex-shrink-0">配裝</h1>
-          <p class="text-[13px] text-ink-2 truncate">
-            <span class="stamp text-[15px] font-bold text-ink">{{ equippedCount }}/6</span> 件
-            <span class="mx-1 text-rule-strong" aria-hidden="true">|</span>
-            技能 <span class="stamp text-[15px] font-bold text-ink">{{ skillCount }}</span>
+      <header class="pt-5 md:pt-8 pb-5 flex items-end justify-between gap-4">
+        <div class="min-w-0">
+          <h1 class="text-[34px] md:text-[44px] leading-[1.1] font-black">配裝</h1>
+          <p v-if="ready" class="mt-2 text-[14px] text-ink-2">
+            <span class="stamp font-bold text-ink">{{ equippedCount }}/6</span> 件
+            <span class="mx-1.5" aria-hidden="true">·</span>
+            技能 <span class="stamp font-bold text-ink">{{ skillCount }}</span>
             <template v-if="skillCount">
-              <span class="mx-1 text-rule-strong" aria-hidden="true">|</span>
-              滿級 <span class="stamp text-[15px] font-bold text-ink">{{ maxedCount }}</span>
+              <span class="mx-1.5" aria-hidden="true">·</span>
+              滿級 <span class="stamp font-bold text-ink">{{ maxedCount }}</span>
             </template>
           </p>
+          <p v-else class="mt-2 h-[22px] w-40 skeleton rounded-full" aria-hidden="true" />
         </div>
-        <div class="flex items-center gap-2 flex-shrink-0">
-          <button
-            v-if="!buildStore.isEmpty"
-            type="button"
-            class="flex items-center gap-1.5 h-11 px-3 -mr-1 rounded-sm text-[14px] font-medium text-ink-2 hover:text-danger hover:bg-inset transition-colors duration-200"
-            @click="resetBuild"
-          >
-            <Trash2 :size="15" :stroke-width="2" aria-hidden="true" />
-            清除
-          </button>
-          <button
-            type="button"
-            class="hidden lg:flex items-center gap-2 h-11 px-4 rounded-sm border border-rule-strong text-[14px] font-bold text-ink hover:bg-inset transition-colors duration-200 disabled:opacity-45"
-            :disabled="buildStore.isEmpty"
-            @click="saveOpen = true"
-          >
-            <BookmarkPlus :size="16" :stroke-width="2.25" aria-hidden="true" />
-            儲存
-          </button>
-          <button
-            type="button"
-            class="hidden lg:flex items-center gap-2 h-11 px-4 rounded-sm border border-rule-strong text-[14px] font-bold text-ink hover:bg-inset transition-colors duration-200 disabled:opacity-45"
-            :disabled="buildStore.isEmpty || shotBusy"
-            title="把配裝畫成圖片並複製，可直接貼到聊天室"
-            @click="shootCurrent"
-          >
-            <Camera :size="16" :stroke-width="2.25" aria-hidden="true" />
-            截圖
-          </button>
-          <button
-            type="button"
-            class="hidden lg:flex items-center gap-2 h-11 px-4 rounded-sm bg-forge text-forge-ink text-[14px] font-bold hover:bg-forge-hover transition-colors duration-200 disabled:opacity-45"
-            :disabled="buildStore.isEmpty"
-            @click="shareBuild"
-          >
-            <Link2 :size="16" :stroke-width="2.25" aria-hidden="true" />
-            複製分享連結
-          </button>
-        </div>
+        <button
+          v-if="ready && !buildStore.isEmpty"
+          type="button"
+          class="btn btn-sm px-3 -mr-3 flex-shrink-0 text-ink-2 hover:text-danger"
+          @click="resetBuild"
+        >
+          <Trash2 :size="16" :stroke-width="2.25" aria-hidden="true" />
+          清除
+        </button>
       </header>
 
+      <!-- Wide screens: the actions sit under the title instead of in a bottom dock -->
+      <div v-if="ready && !buildStore.isEmpty" class="hidden lg:flex gap-2 pb-5 -mt-1">
+        <button type="button" class="btn btn-primary" @click="shareBuild">
+          <Link2 :size="18" :stroke-width="2.25" aria-hidden="true" />分享連結
+        </button>
+        <button
+          type="button"
+          class="btn btn-secondary"
+          :disabled="shotBusy"
+          title="把配裝畫成圖片並複製，可直接貼到聊天室"
+          @click="shootCurrent"
+        >
+          <Camera :size="18" :stroke-width="2.25" aria-hidden="true" />截圖
+        </button>
+        <button type="button" class="btn btn-secondary" @click="saveOpen = true">
+          <BookmarkPlus :size="18" :stroke-width="2.25" aria-hidden="true" />儲存
+        </button>
+      </div>
+
+      <!-- First visit: what this is, and the two ways in -->
+      <section v-if="ready && buildStore.isEmpty" aria-labelledby="intro-h" class="card p-6 mb-4">
+        <h2 id="intro-h" class="text-[26px] leading-tight font-black">從想要的技能開始</h2>
+        <p class="mt-2 text-[15px] text-ink-2 max-w-[34em]">
+          魔物獵人 Now 繁體中文配裝模擬器。挑武器與五件防具、補上漂流石，技能等級即時算好；也能指定想要的技能，讓自動配裝找出武器與防具組合。
+        </p>
+        <div class="mt-5 flex flex-wrap gap-2">
+          <button type="button" class="btn btn-primary" @click="startAutoBuild">
+            <WandSparkles :size="18" :stroke-width="2.25" aria-hidden="true" />自動配裝
+          </button>
+          <button type="button" class="btn btn-secondary" @click="openSelector('weapon')">自己挑裝備</button>
+        </div>
+      </section>
+
       <!-- Auto-build -->
-      <section aria-labelledby="auto-h" class="px-4 md:px-0 mb-3">
+      <section aria-labelledby="auto-h" class="card mb-4 scroll-mt-20 overflow-hidden">
         <h2 id="auto-h">
           <button
             type="button"
-            class="w-full flex items-center gap-3 h-12 px-3 rounded-md border transition-colors duration-200"
-            :class="autoOpen ? 'border-shell bg-shell text-shell-ink rounded-b-none' : 'border-rule-strong bg-panel hover:border-ink-2'"
+            class="w-full flex items-center gap-3 min-h-[72px] px-4 text-left hover:bg-inset"
             :aria-expanded="autoOpen"
             aria-controls="auto-panel"
             @click="autoOpen = !autoOpen"
           >
-            <WandSparkles :size="18" :stroke-width="2" aria-hidden="true" />
-            <span class="text-[15px] font-bold">自動配裝</span>
-            <span class="text-[13px] font-normal truncate" :class="autoOpen ? 'text-shell-ink-2' : 'text-ink-2'">
-              <template v-if="autoBuildStore.targetSkills.length">已設 {{ autoBuildStore.targetSkills.length }} 項目標技能</template>
-              <template v-else>選技能，自動找出武器與防具組合</template>
+            <span class="flex items-center justify-center size-10 rounded-full bg-shell text-shell-ink flex-shrink-0">
+              <WandSparkles :size="18" :stroke-width="2.25" aria-hidden="true" />
+            </span>
+            <span class="flex-1 min-w-0">
+              <span class="block text-[17px] font-bold leading-snug">自動配裝</span>
+              <span class="block text-[13px] text-ink-2 truncate">
+                <template v-if="autoBuildStore.targetSkills.length">已設 {{ autoBuildStore.targetSkills.length }} 項目標技能</template>
+                <template v-else>選技能，自動找出武器與防具組合</template>
+              </span>
             </span>
             <ChevronDown
-              :size="18"
-              :stroke-width="2"
-              class="ml-auto flex-shrink-0 transition-transform duration-200"
+              :size="20"
+              :stroke-width="2.25"
+              class="flex-shrink-0 chevron"
               :class="autoOpen ? 'rotate-180' : ''"
               aria-hidden="true"
             />
           </button>
         </h2>
-        <div v-show="autoOpen" id="auto-panel" class="[&>div:first-child]:rounded-t-none [&>div:first-child]:border-t-0">
-          <AutoBuildPanel @search-complete="onAutoBuildSearchComplete" />
-        </div>
+        <AnimatePresence :initial="false">
+          <motion.div
+            v-if="autoOpen"
+            id="auto-panel"
+            :initial="{ opacity: 0, y: -8 }"
+            :animate="{ opacity: 1, y: 0 }"
+            :exit="{ opacity: 0, y: -8, transition: { duration: 0.12 } }"
+            :transition="{ type: 'spring', stiffness: 500, damping: 40 }"
+          >
+            <AutoBuildPanel @search-complete="onAutoBuildSearchComplete" />
+          </motion.div>
+        </AnimatePresence>
       </section>
 
       <!-- Gear -->
-      <section aria-labelledby="gear-h" class="md:mb-8">
-        <div class="flex items-baseline justify-between px-4 md:px-0 pb-2">
-          <h2 id="gear-h" class="text-[15px] font-bold">裝備</h2>
-          <p v-if="socketCount" class="text-[13px] text-ink-2">
+      <section aria-labelledby="gear-h" class="mb-6">
+        <div class="flex items-baseline justify-between pb-3 pt-2">
+          <h2 id="gear-h" class="text-[22px] font-black">裝備</h2>
+          <p v-if="ready && socketCount" class="text-[13px] text-ink-2">
             漂流石槽 <span class="stamp text-[15px] font-bold text-ink">{{ filledSocketCount }}/{{ socketCount }}</span>
           </p>
         </div>
         <ol
+          v-if="ready"
           id="gear-list"
-          class="bg-panel border-y md:border md:rounded-md border-rule divide-y divide-rule scroll-mt-20"
+          class="card overflow-hidden divide-y divide-rule scroll-mt-20"
         >
           <BuildSlot
             v-for="s in SLOTS"
@@ -288,54 +320,53 @@ function resetBuild() {
             @open-socket="(i) => openDriftstoneSkill(s as ArmorSlot, i)"
           />
         </ol>
+        <ol v-else class="card divide-y divide-rule" aria-hidden="true">
+          <li v-for="i in 6" :key="i" class="flex items-center gap-3 px-4 h-[84px]">
+            <span class="skeleton size-14 rounded-[14px]" />
+            <span class="flex-1 grid gap-2">
+              <span class="skeleton h-3 w-12 rounded-full" />
+              <span class="skeleton h-4 w-40 rounded-full" />
+            </span>
+          </li>
+        </ol>
       </section>
     </div>
 
-    <!-- Ledger column -->
-    <section aria-labelledby="ledger-h" class="px-4 md:px-0 pt-6 lg:pt-3 lg:sticky lg:top-[72px] pb-6">
-      <div class="flex items-baseline justify-between pb-2">
-        <h2 id="ledger-h" class="text-[15px] font-bold">技能</h2>
-        <p class="flex items-center gap-2 text-[12px] text-ink-2" aria-hidden="true">
-          <span>起步</span>
-          <span class="grid grid-cols-5 gap-[2px] w-14 h-2">
-            <span class="bg-t1" /><span class="bg-t2" /><span class="bg-t3" /><span class="bg-t4" /><span class="bg-t5" />
+    <!-- Skill board -->
+    <section aria-labelledby="ledger-h" class="pb-6 lg:pt-8 lg:sticky lg:top-16">
+      <div class="flex items-baseline justify-between gap-3 pb-3 pt-2">
+        <h2 id="ledger-h" class="text-[22px] font-black">技能</h2>
+        <p class="flex flex-wrap justify-end items-center gap-x-2.5 gap-y-1 text-[12px] text-ink-2" aria-hidden="true">
+          <span v-for="c in CATEGORY_LEGEND" :key="c.name" class="inline-flex items-center gap-1">
+            <span class="size-2 rounded-full" :style="{ backgroundColor: c.color }" />{{ c.name }}
           </span>
-          <span>滿級</span>
         </p>
       </div>
-      <SkillLedger />
+      <SkillLedger v-if="ready" />
+      <div v-else class="card divide-y divide-rule" aria-hidden="true">
+        <div v-for="i in 4" :key="i" class="flex items-center gap-3 px-4 h-[60px]">
+          <span class="skeleton h-4 w-24 rounded-full" />
+          <span class="ml-auto skeleton h-2 w-28 rounded-full" />
+        </div>
+      </div>
     </section>
 
-    <!-- Share dock (phones and tablets) -->
+    <!-- Action dock (phones and tablets): the one primary action is the share link -->
     <div
-      class="lg:hidden sticky z-30 px-4 md:px-0 py-3 bg-ground/95 backdrop-blur-[2px] border-t border-rule"
-      style="bottom: calc(60px + env(safe-area-inset-bottom, 0px))"
+      v-if="ready && !buildStore.isEmpty"
+      class="lg:hidden sticky z-30 -mx-4 md:-mx-6 px-4 md:px-6 pt-3 pb-3 bg-ground border-t border-rule"
+      style="bottom: calc(64px + env(safe-area-inset-bottom, 0px))"
     >
       <div class="flex gap-2">
-        <button
-          type="button"
-          class="flex items-center justify-center gap-1.5 h-12 px-4 rounded-sm border border-rule-strong bg-panel text-[15px] font-bold text-ink hover:bg-inset transition-colors duration-200 disabled:opacity-45"
-          :disabled="buildStore.isEmpty"
-          @click="saveOpen = true"
-        >
+        <button type="button" class="btn btn-secondary px-4" aria-label="儲存到我的配裝" @click="saveOpen = true">
           <BookmarkPlus :size="18" :stroke-width="2.25" aria-hidden="true" />
-          儲存
+          <span class="max-[380px]:sr-only" aria-hidden="true">儲存</span>
         </button>
-        <button
-          type="button"
-          class="flex items-center justify-center gap-1.5 h-12 px-4 rounded-sm border border-rule-strong bg-panel text-[15px] font-bold text-ink hover:bg-inset transition-colors duration-200 disabled:opacity-45"
-          :disabled="buildStore.isEmpty || shotBusy"
-          @click="shootCurrent"
-        >
+        <button type="button" class="btn btn-secondary px-4" aria-label="截圖並複製" :disabled="shotBusy" @click="shootCurrent">
           <Camera :size="18" :stroke-width="2.25" aria-hidden="true" />
-          截圖
+          <span class="max-[380px]:sr-only" aria-hidden="true">截圖</span>
         </button>
-        <button
-          type="button"
-          class="flex-1 flex items-center justify-center gap-2 h-12 rounded-sm bg-forge text-forge-ink text-[16px] font-bold hover:bg-forge-hover transition-colors duration-200 disabled:opacity-45"
-          :disabled="buildStore.isEmpty"
-          @click="shareBuild"
-        >
+        <button type="button" class="btn btn-primary flex-1" @click="shareBuild">
           <Link2 :size="18" :stroke-width="2.25" aria-hidden="true" />
           分享連結
         </button>
@@ -356,6 +387,11 @@ function resetBuild() {
       :slot-label="activeDriftstoneLabel"
       @select="onDriftstoneSkillSelect"
     />
-
   </div>
 </template>
+
+<style scoped>
+.chevron {
+  transition: transform 260ms var(--ease-spring);
+}
+</style>

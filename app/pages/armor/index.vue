@@ -52,24 +52,23 @@ function resolveSkillName(skillId: string) {
 </script>
 
 <template>
-  <div class="max-w-3xl mx-auto md:px-6 pb-8">
+  <div class="max-w-3xl mx-auto md:px-6 pb-10">
     <PageHead title="防具">
-      共 <span class="stamp text-[15px] font-bold text-ink">{{ equipmentStore.allArmor.length }}</span> 件，
-      目前顯示 <span class="stamp text-[15px] font-bold text-ink">{{ filteredArmor.length }}</span> 件
+      共 <span class="stamp font-bold text-ink">{{ equipmentStore.allArmor.length }}</span> 件<template v-if="filteredArmor.length !== equipmentStore.allArmor.length">，顯示 <span class="stamp font-bold text-ink">{{ filteredArmor.length }}</span> 件</template>
     </PageHead>
 
-    <div class="sticky top-14 z-20 bg-ground border-b border-rule md:border-0">
-      <div class="px-4 md:px-0 pb-1">
+    <div class="sticky top-14 md:top-16 z-20 bg-ground pb-3">
+      <div class="px-4 md:px-0 pb-2">
         <SearchField v-model="search" label="搜尋防具" placeholder="搜尋防具、套裝或魔物，例如「銀火」" />
       </div>
-      <FilterTabs v-model="activePart" :items="parts" label="防具部位" class="md:px-0 md:-mx-3">
+      <FilterTabs v-model="activePart" :items="parts" label="防具部位">
         <template #icon="{ item }">
           <ArmorPartIcon v-if="item.id !== 'all'" :part="item.id" class="size-4" aria-hidden="true" />
         </template>
       </FilterTabs>
     </div>
 
-    <ul class="bg-panel border-b md:border md:rounded-md md:mt-3 border-rule divide-y divide-rule">
+    <ul v-if="filteredArmor.length" class="card mx-4 md:mx-0 overflow-hidden divide-y divide-rule">
       <li v-for="item in filteredArmor" :key="item.id">
         <EquipmentCard
           :id="item.id"
@@ -86,7 +85,7 @@ function resolveSkillName(skillId: string) {
       </li>
     </ul>
 
-    <p v-if="!filteredArmor.length" class="px-4 py-12 text-center text-[14px] text-ink-2">
+    <p v-else class="card mx-4 md:mx-0 px-4 py-12 text-center text-[14px] text-ink-2">
       找不到符合「{{ search.trim() }}」的防具
     </p>
   </div>

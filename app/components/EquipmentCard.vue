@@ -32,9 +32,9 @@ const { imageUrl } = useImageUrl()
 <template>
   <NuxtLink
     :to="to"
-    class="flex items-center gap-3 pl-4 pr-3 py-3 min-h-[76px] transition-colors duration-150 hover:bg-inset"
+    class="flex items-center gap-3.5 pl-4 pr-3 py-3.5 min-h-[84px] hover:bg-inset"
   >
-    <span class="relative plate flex items-center justify-center size-14 flex-shrink-0">
+    <span class="relative flex items-center justify-center size-14 flex-shrink-0 rounded-[14px] bg-ground">
       <img
         v-if="image"
         :src="imageUrl(image)"
@@ -54,7 +54,7 @@ const { imageUrl } = useImageUrl()
         :title="monsterName"
         width="26"
         height="26"
-        class="absolute -right-1.5 -bottom-1.5 size-[26px] rounded-full bg-panel border border-rule object-contain p-px"
+        class="absolute -right-1.5 -bottom-1.5 size-7 rounded-full bg-ground ring-2 ring-panel object-contain p-0.5"
         loading="lazy"
         @error="($event.target as HTMLImageElement).style.display = 'none'"
       />
@@ -62,10 +62,10 @@ const { imageUrl } = useImageUrl()
 
     <span class="flex-1 min-w-0">
       <span class="flex items-center gap-1.5 min-w-0">
-        <span class="text-[16px] font-bold leading-snug truncate">{{ name }}</span>
-        <span v-if="unofficial" class="flex-shrink-0 px-1.5 py-px rounded-sm border border-rule-strong text-[11px] text-ink-2" title="官方網站沒有列出，依遊戲內資訊手動輸入">非官方資料</span>
+        <span class="text-[17px] font-bold leading-snug truncate">{{ name }}</span>
+        <span v-if="unofficial" class="flex-shrink-0 px-2 py-0.5 rounded-full bg-inset text-[11px] font-medium text-ink-2" title="官方網站沒有列出，依遊戲內資訊手動輸入">非官方資料</span>
       </span>
-      <span v-if="stats?.length || setName || monsterName" class="flex flex-wrap items-baseline gap-x-3 text-[12px] text-ink-2 leading-snug">
+      <span v-if="stats?.length || setName || monsterName" class="flex flex-wrap items-baseline gap-x-3 text-[13px] text-ink-2 leading-snug">
         <span v-if="setName">{{ setName }}</span>
         <span v-else-if="monsterName">{{ monsterName }}</span>
         <span v-for="[k, v] in stats" :key="k" class="whitespace-nowrap">

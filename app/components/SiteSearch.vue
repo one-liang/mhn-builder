@@ -68,17 +68,17 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
 <template>
   <button
     type="button"
-    class="flex items-center justify-center size-11 rounded-sm text-shell-ink-2 hover:text-shell-ink hover:bg-shell-raised transition-colors duration-200"
+    class="flex items-center justify-center size-11 rounded-full text-ink hover:bg-inset"
     aria-label="搜尋武器、防具、技能或魔物"
     title="搜尋（/）"
     @click="show"
   >
-    <Search :size="20" :stroke-width="1.75" aria-hidden="true" />
+    <Search :size="20" :stroke-width="2" aria-hidden="true" />
   </button>
 
   <SheetDialog v-model:open="open" title="搜尋">
     <template #controls>
-      <div class="px-4 py-3">
+      <div class="px-5 pb-3">
         <SearchField v-model="query" label="搜尋武器、防具、技能或魔物" placeholder="例如「銀火」「攻擊」「雷狼」" autofocus />
       </div>
     </template>
@@ -93,7 +93,7 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
           <li v-for="m in monsters" :key="m.id" class="flex-shrink-0">
             <button
               type="button"
-              class="flex flex-col items-center gap-1 w-[72px] py-2 rounded-sm hover:bg-inset transition-colors duration-150"
+              class="flex flex-col items-center gap-1 w-[76px] py-2 rounded-[16px] hover:bg-inset"
               @click="go(`/weapons?q=${encodeURIComponent(m.name)}`)"
             >
               <img :src="imageUrl(m.icon)" alt="" width="44" height="44" class="size-11 object-contain" />
@@ -110,7 +110,7 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
         </h3>
         <ul class="divide-y divide-rule">
           <li v-for="w in weapons.slice(0, LIMIT)" :key="w.id">
-            <button type="button" class="w-full flex items-center gap-3 px-4 py-2 min-h-[56px] text-left hover:bg-inset transition-colors duration-150" @click="go(`/weapons/${w.type}/${w.id}`)">
+            <button type="button" class="w-full flex items-center gap-3 px-4 py-2 min-h-[56px] text-left hover:bg-inset" @click="go(`/weapons/${w.type}/${w.id}`)">
               <span class="relative plate flex items-center justify-center size-10 flex-shrink-0">
                 <img :src="imageUrl(w.image)" alt="" width="40" height="40" class="size-full object-contain" loading="lazy" />
               </span>
@@ -131,7 +131,7 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
         </h3>
         <ul class="divide-y divide-rule">
           <li v-for="a in armor.slice(0, LIMIT)" :key="a.id">
-            <button type="button" class="w-full flex items-center gap-3 px-4 py-2 min-h-[56px] text-left hover:bg-inset transition-colors duration-150" @click="go(`/armor/${a.id}`)">
+            <button type="button" class="w-full flex items-center gap-3 px-4 py-2 min-h-[56px] text-left hover:bg-inset" @click="go(`/armor/${a.id}`)">
               <span class="plate flex items-center justify-center size-10 flex-shrink-0">
                 <img :src="imageUrl(a.image)" alt="" width="40" height="40" class="size-full object-contain" loading="lazy" />
               </span>
@@ -152,7 +152,7 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
         </h3>
         <ul class="divide-y divide-rule">
           <li v-for="s in skills.slice(0, LIMIT)" :key="s.id">
-            <button type="button" class="w-full flex items-center gap-3 px-4 py-2 min-h-[52px] text-left hover:bg-inset transition-colors duration-150" @click="go(`/skills/${s.id}`)">
+            <button type="button" class="w-full flex items-center gap-3 px-4 py-2 min-h-[52px] text-left hover:bg-inset" @click="go(`/skills/${s.id}`)">
               <span class="flex-1 min-w-0">
                 <span class="block text-[15px] font-bold truncate">{{ s.name }}</span>
                 <span class="block text-[12px] text-ink-2 truncate">{{ s.description }}</span>

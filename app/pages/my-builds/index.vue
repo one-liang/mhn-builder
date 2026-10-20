@@ -97,13 +97,13 @@ async function importBuilds(e: Event) {
   <div class="max-w-3xl mx-auto md:px-6 pb-10">
     <PageHead title="我的配裝">
       存在這台裝置，最多 {{ SAVED_BUILDS_LIMIT }} 組
-      <template v-if="ready">・目前 <span class="stamp text-[15px] font-bold text-ink">{{ savedStore.builds.length }}</span> 組</template>
+      <template v-if="ready">・目前 <span class="stamp font-bold text-ink">{{ savedStore.builds.length }}</span> 組</template>
     </PageHead>
 
     <div class="flex gap-2 px-4 md:px-0 pb-4">
       <button
         type="button"
-        class="flex-1 flex items-center justify-center gap-1.5 h-11 rounded-sm border border-rule-strong text-[14px] font-bold hover:bg-inset transition-colors duration-200 disabled:opacity-45"
+        class="btn btn-secondary btn-sm flex-1"
         :disabled="!ready || !savedStore.builds.length"
         @click="exportBuilds"
       >
@@ -111,7 +111,7 @@ async function importBuilds(e: Event) {
       </button>
       <button
         type="button"
-        class="flex-1 flex items-center justify-center gap-1.5 h-11 rounded-sm border border-rule-strong text-[14px] font-bold hover:bg-inset transition-colors duration-200"
+        class="btn btn-secondary btn-sm flex-1"
         @click="fileInput?.click()"
       >
         <Upload :size="16" :stroke-width="2.25" aria-hidden="true" />匯入備份
@@ -123,18 +123,18 @@ async function importBuilds(e: Event) {
 
     <!-- Loading placeholder until storage is read -->
     <ul v-if="!ready" class="grid gap-3 px-4 md:px-0" aria-hidden="true">
-      <li v-for="i in 3" :key="i" class="skeleton h-[132px] rounded-md" />
+      <li v-for="i in 3" :key="i" class="skeleton h-[172px] rounded-[20px]" />
     </ul>
 
-    <div v-else-if="!savedStore.builds.length" class="mx-4 md:mx-0 px-4 py-10 rounded-md border border-dashed border-rule-strong text-center">
-      <p class="text-[16px] font-bold">還沒有存下的配裝</p>
+    <div v-else-if="!savedStore.builds.length" class="card mx-4 md:mx-0 px-6 py-12 text-center">
+      <p class="text-[20px] font-black">還沒有存下的配裝</p>
       <p class="mt-1 text-[14px] text-ink-2">在配裝頁按「儲存」，配裝就會出現在這裡。</p>
-      <NuxtLink to="/build" class="mt-4 inline-flex items-center justify-center h-11 px-5 rounded-sm bg-shell text-shell-ink text-[15px] font-bold hover:bg-shell-raised transition-colors duration-200">去配裝</NuxtLink>
+      <NuxtLink to="/build" class="btn btn-primary mt-5">去配裝</NuxtLink>
     </div>
 
     <TransitionGroup v-else tag="ul" name="list" class="relative grid gap-3 px-4 md:px-0">
-      <li v-for="build in savedStore.builds" :key="build.id" class="bg-panel border border-rule rounded-md">
-        <div class="flex items-start gap-2 pl-4 pr-1 pt-3">
+      <li v-for="build in savedStore.builds" :key="build.id" class="card">
+        <div class="flex items-start gap-1 pl-5 pr-2 pt-4">
           <div class="flex-1 min-w-0">
             <form v-if="editingId === build.id" @submit.prevent="commitRename">
               <label :for="`rename-${build.id}`" class="sr-only">配裝名稱</label>
@@ -143,17 +143,17 @@ async function importBuilds(e: Event) {
                 v-model="editName"
                 type="text"
                 maxlength="40"
-                class="w-full h-10 px-2 -ml-2 rounded-sm bg-inset border border-focus text-[16px] font-bold outline-none"
+                class="w-full h-11 px-3 -ml-3 rounded-[12px] bg-ground ring-2 ring-ink text-[17px] font-bold outline-none"
                 @blur="commitRename"
                 @keydown.esc="editingId = null"
               />
             </form>
-            <h2 v-else class="text-[17px] font-bold leading-snug break-all">{{ build.name }}</h2>
-            <p class="text-[12px] text-ink-2">{{ dateFormat.format(build.updatedAt) }}</p>
+            <h2 v-else class="text-[19px] font-black leading-snug break-all">{{ build.name }}</h2>
+            <p class="mt-0.5 text-[13px] text-ink-2">{{ dateFormat.format(build.updatedAt) }}</p>
           </div>
           <button
             type="button"
-            class="flex items-center justify-center size-11 rounded-sm text-ink-2 hover:text-ink hover:bg-inset transition-colors duration-150"
+            class="flex items-center justify-center size-11 rounded-full text-ink-2 hover:text-ink hover:bg-inset"
             :aria-label="`重新命名「${build.name}」`"
             @click="startRename(build)"
           >
@@ -161,7 +161,7 @@ async function importBuilds(e: Event) {
           </button>
           <button
             type="button"
-            class="flex items-center justify-center size-11 rounded-sm text-ink-2 hover:text-danger hover:bg-inset transition-colors duration-150"
+            class="flex items-center justify-center size-11 rounded-full text-ink-2 hover:text-danger hover:bg-inset"
             :aria-label="`刪除「${build.name}」`"
             @click="removeBuild(build)"
           >
@@ -169,12 +169,12 @@ async function importBuilds(e: Event) {
           </button>
         </div>
 
-        <ul class="grid grid-cols-6 gap-1.5 px-4 pt-2 max-w-[400px]">
+        <ul class="grid grid-cols-6 gap-2 px-5 pt-3 max-w-[420px]">
           <li
             v-for="p in piecesOf(build)"
             :key="p.slot"
-            class="aspect-square rounded-sm overflow-hidden flex items-center justify-center"
-            :class="p.item ? 'plate' : 'border border-dashed border-rule-strong text-ink-3'"
+            class="aspect-square rounded-[12px] overflow-hidden flex items-center justify-center"
+            :class="p.item ? 'bg-ground' : 'border-2 border-dashed border-rule-strong text-ink-3'"
             :title="p.item?.name"
           >
             <img v-if="p.item" :src="imageUrl(p.item.image)" :alt="p.item.name" class="size-full object-contain" loading="lazy" />
@@ -183,15 +183,15 @@ async function importBuilds(e: Event) {
           </li>
         </ul>
 
-        <p v-if="savedStore.stalePartsOf(build).length" class="flex items-start gap-1.5 px-4 pt-2 text-[13px] text-danger">
+        <p v-if="savedStore.stalePartsOf(build).length" class="flex items-start gap-1.5 px-5 pt-3 text-[13px] text-danger">
           <AlertTriangle :size="15" :stroke-width="2" class="mt-0.5 flex-shrink-0" aria-hidden="true" />
           部分裝備已失效（{{ savedStore.stalePartsOf(build).join('、') }}），載入時會略過
         </p>
 
-        <div class="p-3 pt-3">
+        <div class="p-4">
           <button
             type="button"
-            class="w-full h-11 rounded-sm bg-shell text-shell-ink text-[15px] font-bold hover:bg-shell-raised transition-colors duration-200"
+            class="btn btn-primary w-full"
             @click="openBuild(build)"
           >載入這組配裝</button>
         </div>

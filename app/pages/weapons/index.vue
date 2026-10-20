@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { ChevronRight } from 'lucide-vue-next'
 import { useEquipmentStore, getWeaponTypeName } from '~/stores/equipment'
 import { useSkillStore } from '~/stores/skill'
 import { monsterOfWeapon, monsterTermsOf } from '~/lib/monsters'
@@ -35,13 +34,12 @@ function resolveSkillName(skillId: string) {
 </script>
 
 <template>
-  <div class="max-w-3xl mx-auto md:px-6 pb-8">
+  <div class="max-w-3xl mx-auto md:px-6 pb-10">
     <PageHead title="武器">
-      <span class="stamp text-[15px] font-bold text-ink">{{ equipmentStore.weaponTypes.length }}</span> 種武器，
-      共 <span class="stamp text-[15px] font-bold text-ink">{{ total }}</span> 把
+      <span class="stamp font-bold text-ink">{{ equipmentStore.weaponTypes.length }}</span> 種武器，共 <span class="stamp font-bold text-ink">{{ total }}</span> 把
     </PageHead>
 
-    <div class="px-4 md:px-0 pb-3">
+    <div class="sticky top-14 md:top-16 z-20 bg-ground px-4 md:px-0 pb-4">
       <SearchField v-model="search" label="搜尋所有武器" placeholder="搜尋武器或魔物，例如「銀火」" />
     </div>
 
@@ -49,7 +47,7 @@ function resolveSkillName(skillId: string) {
       <p class="px-4 md:px-0 pb-2 text-[13px] text-ink-2">
         找到 <span class="stamp text-[15px] font-bold text-ink">{{ results.length }}</span> 把
       </p>
-      <ul v-if="results.length" class="bg-panel border-y md:border md:rounded-md border-rule divide-y divide-rule">
+      <ul v-if="results.length" class="card mx-4 md:mx-0 overflow-hidden divide-y divide-rule">
         <li v-for="weapon in results" :key="weapon.id">
           <EquipmentCard
             :id="weapon.id"
@@ -66,24 +64,33 @@ function resolveSkillName(skillId: string) {
           />
         </li>
       </ul>
-      <p v-else class="px-4 py-12 text-center text-[14px] text-ink-2">找不到符合「{{ search.trim() }}」的武器</p>
+      <p v-else class="card mx-4 md:mx-0 px-4 py-12 text-center text-[14px] text-ink-2">找不到符合「{{ search.trim() }}」的武器</p>
     </template>
 
-    <ul v-else class="grid sm:grid-cols-2 bg-panel border-y md:border md:rounded-md border-rule divide-y divide-rule sm:divide-y-0 sm:gap-px sm:bg-rule overflow-hidden">
-      <li v-for="wt in equipmentStore.weaponTypes" :key="wt.type" class="bg-panel">
+    <ul v-else class="grid grid-cols-2 sm:grid-cols-3 gap-2.5 px-4 md:px-0">
+      <li v-for="wt in equipmentStore.weaponTypes" :key="wt.type">
         <NuxtLink
           :to="`/weapons/${wt.type}`"
-          class="flex items-center gap-4 pl-4 pr-3 h-[68px] transition-colors duration-150 hover:bg-inset"
+          class="tile card flex flex-col justify-between gap-6 p-4 h-full min-h-[132px] hover:bg-inset"
         >
-          <span class="flex items-center justify-center size-11 rounded-md bg-shell text-shell-ink flex-shrink-0">
+          <span class="flex items-center justify-center size-11 rounded-full bg-shell text-shell-ink">
             <WeaponTypeIcon :type="wt.type" class="size-6" aria-hidden="true" />
           </span>
-          <span class="flex-1 min-w-0 text-[17px] font-bold">{{ wt.name }}</span>
-          <span class="stamp text-[22px] font-extrabold leading-none">{{ wt.count }}</span>
-          <span class="text-[12px] text-ink-2 -ml-2">把</span>
-          <ChevronRight :size="18" :stroke-width="2" class="text-ink-3" aria-hidden="true" />
+          <span class="flex items-end justify-between gap-2">
+            <span class="text-[18px] font-black leading-tight">{{ wt.name }}</span>
+            <span class="text-[12px] text-ink-2 whitespace-nowrap"><span class="stamp text-[17px] font-bold text-ink">{{ wt.count }}</span> 把</span>
+          </span>
         </NuxtLink>
       </li>
     </ul>
   </div>
 </template>
+
+<style scoped>
+.tile {
+  transition: transform 180ms var(--ease-out-quint);
+}
+.tile:active {
+  transform: scale(0.97);
+}
+</style>
