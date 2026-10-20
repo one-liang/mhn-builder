@@ -221,7 +221,7 @@ function resetBuild() {
 
       <!-- Wide screens: the actions sit under the title instead of in a bottom dock -->
       <div v-if="ready && !buildStore.isEmpty" class="hidden lg:flex gap-2 pb-5 -mt-1">
-        <button type="button" class="btn btn-primary" @click="shareBuild">
+        <button type="button" class="btn" :class="autoOpen ? 'btn-secondary' : 'btn-primary'" @click="shareBuild">
           <Link2 :size="18" :stroke-width="2.25" aria-hidden="true" />分享連結
         </button>
         <button
@@ -351,7 +351,8 @@ function resetBuild() {
       </div>
     </section>
 
-    <!-- Action dock (phones and tablets): the one primary action is the share link -->
+    <!-- Action dock (phones and tablets): the share link is the primary action, except while the
+         auto-build panel is open, when 開始搜尋 takes that role -->
     <div
       v-if="ready && !buildStore.isEmpty"
       class="lg:hidden sticky z-30 -mx-4 md:-mx-6 px-4 md:px-6 pt-3 pb-3 bg-ground border-t border-rule"
@@ -366,7 +367,7 @@ function resetBuild() {
           <Camera :size="18" :stroke-width="2.25" aria-hidden="true" />
           <span class="max-[380px]:sr-only" aria-hidden="true">截圖</span>
         </button>
-        <button type="button" class="btn btn-primary flex-1" @click="shareBuild">
+        <button type="button" class="btn flex-1" :class="autoOpen ? 'btn-secondary' : 'btn-primary'" @click="shareBuild">
           <Link2 :size="18" :stroke-width="2.25" aria-hidden="true" />
           分享連結
         </button>
