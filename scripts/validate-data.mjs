@@ -13,6 +13,7 @@ import { closeSync, fstatSync, openSync, readdirSync, readFileSync, readSync, re
 import { join, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { ARMOR_PARTS, ROOT, WEAPON_TYPES, formatJson } from './sync/lib/io.mjs'
+import { MONSTER_FIELDS } from './sync/monsters.mjs'
 
 export const SKILL_CATEGORIES = ['attack', 'element', 'defense', 'resistance', 'utility', 'other']
 export const ELEMENT_TYPES = ['fire', 'water', 'thunder', 'ice', 'dragon', 'poison', 'paralysis', 'sleep', 'blast']
@@ -402,6 +403,47 @@ export function validateData({ dataDir = join(ROOT, 'data'), publicDir = join(RO
     })
   }
 
+  // ── monsters.json (monster names, crests and which gear belongs to whom) ──
+  const MONSTER_DATA_FILE = 'data/monsters.json'
+  const monsterData = load('monsters.json', 'object')
+  const monsterStats = { monsters: 0, armorSets: 0, weapons: 0 }
+  if (monsterData) {
+    checkKeys(monsterData, ['monsters', 'armorSets', 'weapons'], MONSTER_DATA_FILE, null)
+    const monsterIds = new Set()
+    if (need(monsterData, 'monsters', Array.isArray, MONSTER_DATA_FILE, null, 'an array')) {
+      monsterData.monsters.forEach((m, i) => {
+        const id = label(m, i)
+        if (!isObj(m)) return error('RECORD_SHAPE', MONSTER_DATA_FILE, id, `record must be an object, got ${typeName(m)}`)
+        monsterStats.monsters++
+        checkKeys(m, MONSTER_FIELDS, MONSTER_DATA_FILE, id)
+        if (need(m, 'id', v => isStr(v) && /^[a-z0-9]+$/.test(v), MONSTER_DATA_FILE, id, 'a lowercase alphanumeric string')) {
+          if (monsterIds.has(m.id)) error('ID_DUPLICATE', MONSTER_DATA_FILE, id, 'duplicate monster id')
+          monsterIds.add(m.id)
+        }
+        need(m, 'name', isText, MONSTER_DATA_FILE, id, 'a non-empty string')
+        if (need(m, 'nameEn', isStr, MONSTER_DATA_FILE, id, 'a string') && !isText(m.nameEn)) warn('NAME_EN_EMPTY', MONSTER_DATA_FILE, id, 'nameEn is empty')
+        need(m, 'aliases', v => Array.isArray(v) && v.every(isText), MONSTER_DATA_FILE, id, 'an array of non-empty strings')
+        if (need(m, 'icon', isStr, MONSTER_DATA_FILE, id, 'a string') && isStr(m.id)) {
+          const expected = `/images/monster-crests/${m.id}.webp`
+          if (m.icon !== expected) error('IMAGE_PATH', MONSTER_DATA_FILE, id, `icon is ${show(m.icon)}, expected "${expected}"`)
+          else {
+            const problem = checkImage(expected)
+            if (problem === 'missing') error('IMAGE_MISSING', MONSTER_DATA_FILE, id, `public${expected} does not exist`)
+            else if (problem) error('IMAGE_INVALID', MONSTER_DATA_FILE, id, `public${expected} ${problem}`)
+          }
+        }
+      })
+    }
+    for (const [key, owners, complete, what] of [['armorSets', sets, armorComplete, 'armor set prefix'], ['weapons', weaponIds, weaponsComplete, 'weapon id']]) {
+      if (!need(monsterData, key, isObj, MONSTER_DATA_FILE, key, 'an object')) continue
+      for (const [ref, monster] of Object.entries(monsterData[key])) {
+        monsterStats[key]++
+        if (!monsterIds.has(monster)) error('MONSTER_REF_UNKNOWN', MONSTER_DATA_FILE, `${key}.${ref}`, `monster ${show(monster)} is not in monsters`)
+        if (complete && !owners.has(ref)) warn('MONSTER_LINK_UNUSED', MONSTER_DATA_FILE, `${key}.${ref}`, `not a current ${what}`)
+      }
+    }
+  }
+
   // ── driftstone-skills.json ──
   const DRIFT_FILE = 'data/driftstone-skills.json'
   const drift = load('driftstone-skills.json', 'object')
@@ -519,6 +561,7 @@ export function validateData({ dataDir = join(ROOT, 'data'), publicDir = join(RO
     weapons: { total: sum(weaponCounts), types: weaponCounts },
     driftstones: stoneCounts,
     armorMonsters: monsters ? Object.keys(monsters).length : 0,
+    monsters: monsterStats,
     skillRefs: refStats,
     images: imageStats,
     errorsByCode: byCode(errors),

@@ -2,6 +2,7 @@
 import { ArrowLeft, ChevronRight, Gem } from 'lucide-vue-next'
 import { useEquipmentStore, getPartName, getMonsterIconKey, getArmorSetPrefix } from '~/stores/equipment'
 import { useSkillStore } from '~/stores/skill'
+import { monsterOfArmor } from '~/lib/monsters'
 
 const route = useRoute()
 const slug = route.params.slug as string
@@ -13,6 +14,13 @@ await Promise.all([equipmentStore.load(), skillStore.load()])
 
 const armor = computed(() => equipmentStore.getArmorById(slug))
 const { imageUrl } = useImageUrl()
+
+const monster = computed(() => (armor.value ? monsterOfArmor(armor.value.id) : null))
+const setIcon = computed(() => {
+  if (monster.value) return monster.value.icon
+  const key = armor.value && getMonsterIconKey(armor.value.id)
+  return key ? `/images/monsters/${key}.webp` : null
+})
 
 const setPieces = computed(() => {
   if (!armor.value) return []
@@ -58,15 +66,20 @@ useSeoMeta({
           <h1 class="text-[24px] leading-tight font-black tracking-[0.03em]">{{ armor.name }}</h1>
           <p class="mt-1 flex items-center gap-1.5 text-[13px] text-ink-2">
             <img
-              v-if="getMonsterIconKey(armor.id)"
-              :src="imageUrl(`/images/monsters/${getMonsterIconKey(armor.id)}.webp`)"
+              v-if="setIcon"
+              :src="imageUrl(setIcon)"
               alt=""
-              width="16"
-              height="16"
-              class="size-4 object-contain"
+              width="20"
+              height="20"
+              class="size-5 object-contain"
               @error="($event.target as HTMLImageElement).style.display = 'none'"
             />
             {{ [armor.setName, getPartName(armor.part)].filter(Boolean).join('・') }}
+            <NuxtLink
+              v-if="monster"
+              :to="`/weapons?q=${encodeURIComponent(monster.name)}`"
+              class="ml-1 underline underline-offset-4 decoration-rule-strong hover:text-ink"
+            >{{ monster.name }}的武器</NuxtLink>
           </p>
         </div>
       </header>

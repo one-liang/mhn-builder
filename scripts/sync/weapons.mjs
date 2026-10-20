@@ -629,6 +629,7 @@ export async function syncWeapons(ctx) {
     files,
     images,
     officialSkills: zh.skills,
+    monsterInput: { weaponSeries: weapons.map(w => [w.id.toLowerCase(), w.series]) },
     counts: { official: officialRecords.length, current: currentTotal },
     report: { summary, added, changed, keptMissingUpstream, newIds: [], overridesApplied, warnings: warnings.lines() },
   }

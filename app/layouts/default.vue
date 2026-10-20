@@ -25,6 +25,8 @@ onMounted(() => init())
 
         <BottomNav variant="top" class="mr-auto" />
 
+        <SiteSearch />
+
         <button
           type="button"
           class="flex items-center justify-center size-11 rounded-sm text-shell-ink-2 hover:text-shell-ink hover:bg-shell-raised transition-colors duration-200"

@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { useEquipmentStore, getPartName, getMonsterIconKey } from '~/stores/equipment'
 import { useSkillStore } from '~/stores/skill'
+import { monsterOfArmor, monsterTermsOf } from '~/lib/monsters'
+import { searchList } from '~/lib/search'
 
 useSeoMeta({
   title: '防具一覽 | 最強獵人 - MHN 配裝模擬器',
@@ -15,7 +17,7 @@ const skillStore = useSkillStore()
 await Promise.all([equipmentStore.load(), skillStore.load()])
 
 const activePart = ref<string>('all')
-const search = ref('')
+const search = useQuerySearch()
 
 const parts = [
   { id: 'all', name: '全部' },
@@ -30,14 +32,19 @@ const filteredArmor = computed(() => {
   const list = activePart.value === 'all'
     ? equipmentStore.allArmor
     : equipmentStore.getArmorByPart(activePart.value as any)
-  const q = search.value.trim().toLowerCase()
-  if (!q) return list
-  return list.filter(a =>
-    a.name.toLowerCase().includes(q) ||
-    (a.setName ?? '').toLowerCase().includes(q) ||
-    (a.nameEn ?? '').toLowerCase().includes(q)
-  )
+  return searchList(list, search.value, a => ({
+    primary: a.name,
+    others: [a.nameEn, a.setName, a.setNameEn, ...monsterTermsOf(monsterOfArmor(a.id))],
+  }))
 })
+
+/** The monster's crest, or the set icon for material sets with no monster. */
+function armorIcon(id: string) {
+  const monster = monsterOfArmor(id)
+  if (monster) return { icon: monster.icon, name: monster.name }
+  const key = getMonsterIconKey(id)
+  return { icon: key ? `/images/monsters/${key}.webp` : undefined, name: undefined }
+}
 
 function resolveSkillName(skillId: string) {
   return skillStore.getById(skillId)?.name || skillId
@@ -53,7 +60,7 @@ function resolveSkillName(skillId: string) {
 
     <div class="sticky top-14 z-20 bg-ground border-b border-rule md:border-0">
       <div class="px-4 md:px-0 pb-1">
-        <SearchField v-model="search" label="搜尋防具" placeholder="搜尋防具或套裝名稱" />
+        <SearchField v-model="search" label="搜尋防具" placeholder="搜尋防具、套裝或魔物，例如「銀火」" />
       </div>
       <FilterTabs v-model="activePart" :items="parts" label="防具部位" class="md:px-0 md:-mx-3">
         <template #icon="{ item }">
@@ -73,13 +80,13 @@ function resolveSkillName(skillId: string) {
           :to="`/armor/${item.id}`"
           :set-name="[item.setName, getPartName(item.part)].filter(Boolean).join('・')"
           :stats="[['防禦', String(item.defense)], ...(item.driftstoneSlots ? [['漂流石槽', String(item.driftstoneSlots)] as [string, string]] : [])]"
-          :monster-icon-key="getMonsterIconKey(item.id)"
+          :monster-icon="armorIcon(item.id).icon"
         />
       </li>
     </ul>
 
     <p v-if="!filteredArmor.length" class="px-4 py-12 text-center text-[14px] text-ink-2">
-      找不到符合的防具
+      找不到符合「{{ search.trim() }}」的防具
     </p>
   </div>
 </template>

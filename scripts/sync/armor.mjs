@@ -136,7 +136,7 @@ export async function syncArmor(ctx) {
     if (!record.name) throw new Error(`armor: ${a.id} has an empty zh name`)
     official.push({ record, source: a })
 
-    if (!sets.has(setKey)) sets.set(setKey, { prefix, setName: record.setName, pieces: {} })
+    if (!sets.has(setKey)) sets.set(setKey, { prefix, setName: record.setName, series: a.series, pieces: {} })
     sets.get(setKey).pieces[part] = a
   }
 
@@ -222,6 +222,7 @@ export async function syncArmor(ctx) {
     files,
     images,
     officialSkills: zh.skills,
+    monsterInput: { monsters: zh.monsters, zhT, enT, sets: [...sets.values()].map(s => [s.prefix, s.series]) },
     counts: { official: official.length, current: currentTotal },
     report: { summary, added, changed, keptMissingUpstream, newIds, overridesApplied, warnings },
   }

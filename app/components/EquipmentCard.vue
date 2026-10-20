@@ -19,7 +19,9 @@ defineProps<{
   /** Short facts shown as label/value pairs, e.g. [['攻擊', '1200']] */
   stats?: [string, string][]
   setName?: string
-  monsterIconKey?: string
+  /** Crest of the monster the piece is made from (or a set icon), shown on the art's corner. */
+  monsterIcon?: string
+  monsterName?: string
 }>()
 
 const { imageUrl } = useImageUrl()
@@ -30,7 +32,7 @@ const { imageUrl } = useImageUrl()
     :to="to"
     class="flex items-center gap-3 pl-4 pr-3 py-3 min-h-[76px] transition-colors duration-150 hover:bg-inset"
   >
-    <span class="plate flex items-center justify-center size-14 flex-shrink-0 overflow-hidden">
+    <span class="relative plate flex items-center justify-center size-14 flex-shrink-0">
       <img
         v-if="image"
         :src="imageUrl(image)"
@@ -43,24 +45,26 @@ const { imageUrl } = useImageUrl()
       />
       <WeaponTypeIcon v-else-if="weaponType" :type="weaponType" class="size-7 text-ink-2" />
       <ArmorPartIcon v-else-if="armorPart" :part="armorPart" class="size-7 text-ink-2" />
+      <img
+        v-if="monsterIcon"
+        :src="imageUrl(monsterIcon)"
+        :alt="monsterName ?? ''"
+        :title="monsterName"
+        width="26"
+        height="26"
+        class="absolute -right-1.5 -bottom-1.5 size-[26px] rounded-full bg-panel border border-rule object-contain p-px"
+        loading="lazy"
+        @error="($event.target as HTMLImageElement).style.display = 'none'"
+      />
     </span>
 
     <span class="flex-1 min-w-0">
       <span class="flex items-center gap-1.5 min-w-0">
-        <img
-          v-if="monsterIconKey"
-          :src="imageUrl(`/images/monsters/${monsterIconKey}.webp`)"
-          alt=""
-          width="16"
-          height="16"
-          class="size-4 flex-shrink-0 object-contain"
-          loading="lazy"
-          @error="($event.target as HTMLImageElement).style.display = 'none'"
-        />
         <span class="text-[16px] font-bold leading-snug truncate">{{ name }}</span>
       </span>
-      <span v-if="stats?.length || setName" class="flex flex-wrap items-baseline gap-x-3 text-[12px] text-ink-2 leading-snug">
+      <span v-if="stats?.length || setName || monsterName" class="flex flex-wrap items-baseline gap-x-3 text-[12px] text-ink-2 leading-snug">
         <span v-if="setName">{{ setName }}</span>
+        <span v-else-if="monsterName">{{ monsterName }}</span>
         <span v-for="[k, v] in stats" :key="k" class="whitespace-nowrap">
           {{ k }} <span class="stamp text-[15px] font-bold text-ink">{{ v }}</span>
         </span>
