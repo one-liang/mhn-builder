@@ -15,9 +15,10 @@ npm run generate   # Static site generation
 npm run preview    # Preview production build
 npm run sync:data      # Re-fetch official data and rewrite data/ (see "Data Sync"; `-- --help` for flags)
 npm run validate:data  # Check data/ invariants and referenced images (exit 1 on errors)
+npm test               # Vitest unit tests for the pure logic in app/lib (tests/)
 ```
 
-No test or lint scripts are configured — TypeScript type-checking is via Nuxt's built-in integration. `validate:data` is the closest thing to a data test; run it after editing anything in `data/`.
+No lint script is configured — TypeScript type-checking is via Nuxt's built-in integration. Tests cover `app/lib/` only; UI is verified in the browser. Run `validate:data` after editing anything in `data/`. The plan for the ongoing redesign and features lives in `docs/roadmap.md`.
 
 ## Tech Stack
 
