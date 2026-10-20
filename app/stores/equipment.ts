@@ -6,6 +6,11 @@ interface ArmorSkill {
   level: number
 }
 
+interface WeaponSkill extends ArmorSkill {
+  /** The skill only appears once the weapon reaches this custom enhancement level. */
+  requiredCustomEnhancementLevel?: number
+}
+
 export interface Armor {
   id: string
   name: string
@@ -58,7 +63,7 @@ export interface Weapon {
   element: WeaponElement | null
   affinity: number
   spSkill: string | null
-  skills: ArmorSkill[]
+  skills: WeaponSkill[]
   image: string
   ammo?: WeaponAmmo[]
   chargingShots?: string[]
@@ -71,7 +76,7 @@ export interface Weapon {
 
 type ArmorPart = 'head' | 'chest' | 'arms' | 'waist' | 'legs'
 
-const WEAPON_TYPES = [
+export const WEAPON_TYPES = [
   'great-sword',
   'long-sword',
   'sword-and-shield',

@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { runAutoBuild } from '~/lib/autoBuildAlgorithm'
-import type { Armor } from '~/stores/equipment'
+import type { Armor, Weapon } from '~/stores/equipment'
 
 type Part = Armor['part']
 const PARTS: Part[] = ['head', 'chest', 'arms', 'waist', 'legs']
@@ -16,6 +16,21 @@ function armor(id: string, part: Part, skills: [string, number][], driftstoneSlo
     defense,
     skills: skills.map(([skillId, level]) => ({ skillId, level })),
     driftstoneSlots,
+    image: '',
+  }
+}
+
+function weapon(id: string, skills: [string, number][], attack = 1000): Weapon {
+  return {
+    id,
+    name: id,
+    nameEn: id,
+    type: 'long-sword',
+    attack,
+    element: null,
+    affinity: 0,
+    spSkill: null,
+    skills: skills.map(([skillId, level]) => ({ skillId, level })),
     image: '',
   }
 }
@@ -91,5 +106,48 @@ describe('runAutoBuild', () => {
     expect(builds).toHaveLength(2)
     expect(builds.map(b => b.rank)).toEqual([1, 2])
     expect(builds[0]!.score).toBeGreaterThanOrEqual(builds[1]!.score)
+  })
+
+  it('picks the weapon whose skills close the gap', () => {
+    const all = emptyArmor()
+    for (const p of PARTS) all[p].push(armor('atk', p, [['attack-boost', 1]]))
+    const weapons = [
+      weapon('plain', [], 2000),
+      weapon('we', [['weakness-exploit', 3]], 1500),
+    ]
+    const { builds } = runAutoBuild(
+      { targetSkills: [{ skillId: 'attack-boost', desiredLevel: 5 }, { skillId: 'weakness-exploit', desiredLevel: 3 }], weapons },
+      all,
+      skillMap,
+    )
+    expect(builds[0]!.weapon!.id).toBe('we')
+    expect(builds[0]!.coveragePercent).toBe(100)
+  })
+
+  it('breaks skill ties by attack', () => {
+    const all = emptyArmor()
+    for (const p of PARTS) all[p].push(armor('atk', p, [['attack-boost', 1]]))
+    const weapons = [weapon('weak', [], 1000), weapon('strong', [], 2000)]
+    const { builds } = runAutoBuild(
+      { targetSkills: [{ skillId: 'attack-boost', desiredLevel: 5 }], weapons },
+      all,
+      skillMap,
+    )
+    expect(builds.map(b => b.weapon!.id)).toEqual(['strong', 'weak'])
+  })
+
+  it('keeps a locked weapon and leaves the weapon empty without a pool', () => {
+    const all = emptyArmor()
+    for (const p of PARTS) all[p].push(armor('atk', p, [['attack-boost', 1]]))
+    const locked = weapon('locked', [])
+    const withLock = runAutoBuild(
+      { targetSkills: [{ skillId: 'attack-boost', desiredLevel: 5 }], lockedWeapon: locked, weapons: [weapon('other', [['attack-boost', 2]])] },
+      all,
+      skillMap,
+    )
+    expect(withLock.builds[0]!.weapon!.id).toBe('locked')
+
+    const noPool = runAutoBuild({ targetSkills: [{ skillId: 'attack-boost', desiredLevel: 5 }] }, all, skillMap)
+    expect(noPool.builds[0]!.weapon).toBeNull()
   })
 })

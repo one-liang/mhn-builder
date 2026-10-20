@@ -128,14 +128,14 @@ export const useBuildStore = defineStore('build', () => {
   }
 
   function setSlot(slot: BuildSlot, item: Weapon | Armor | null) {
-    switch (slot) {
-      case 'weapon': weapon.value = item as Weapon | null; break
-      case 'head': head.value = item as Armor | null; if (!item) clearDriftstoneSkills('head'); break
-      case 'chest': chest.value = item as Armor | null; if (!item) clearDriftstoneSkills('chest'); break
-      case 'arms': arms.value = item as Armor | null; if (!item) clearDriftstoneSkills('arms'); break
-      case 'waist': waist.value = item as Armor | null; if (!item) clearDriftstoneSkills('waist'); break
-      case 'legs': legs.value = item as Armor | null; if (!item) clearDriftstoneSkills('legs'); break
+    if (slot === 'weapon') {
+      weapon.value = item as Weapon | null
+      return
     }
+    const piece = item as Armor | null
+    slots[slot].value = piece
+    // Driftstones beyond the new piece's slots (all of them when emptied) fall off
+    driftstoneSkills[slot] = driftstoneSkills[slot].slice(0, piece?.driftstoneSlots ?? 0)
   }
 
   function clearSlot(slot: BuildSlot) {
