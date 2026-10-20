@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Lock, Plus, Search, SlidersHorizontal, X } from 'lucide-vue-next'
+import { Camera, Lock, Plus, Search, SlidersHorizontal, X } from 'lucide-vue-next'
 import { useAutoBuildStore } from '~/stores/autoBuild'
 import { useSkillStore } from '~/stores/skill'
 import { getPartName, getWeaponTypeName, WEAPON_TYPES } from '~/stores/equipment'
@@ -66,6 +66,8 @@ function swapsFromBest(r: BuildResult): { part: string; name: string }[] {
   if (r.weapon?.id !== best.weapon?.id) swaps.unshift({ part: '武器', name: r.weapon?.name ?? '不裝備' })
   return swaps
 }
+
+const { busy: shotBusy, shootResult } = useBuildShot()
 
 const weaponTypes = WEAPON_TYPES.map(type => ({ type, name: getWeaponTypeName(type) }))
 
@@ -156,6 +158,18 @@ const enhancementNotes = computed(() => {
             </button>
           </div>
         </fieldset>
+
+        <div v-if="appliedResult" class="px-4 pb-3">
+          <button
+            type="button"
+            class="w-full flex items-center justify-center gap-2 h-11 rounded-sm border border-rule-strong text-[14px] font-bold text-ink hover:bg-inset transition-colors duration-200 disabled:opacity-45"
+            :disabled="shotBusy"
+            @click="shootResult(appliedResult)"
+          >
+            <Camera :size="16" :stroke-width="2.25" aria-hidden="true" />
+            截圖方案 {{ appliedResult.rank }}，貼到聊天室
+          </button>
+        </div>
 
         <div v-if="appliedResult?.weapon" class="px-4 pb-3 text-[14px]">
           <p>

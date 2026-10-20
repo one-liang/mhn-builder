@@ -1,0 +1,11 @@
+{
+  "categories": {
+    "attack": "#E5484D",
+    "element": "#3E63DD",
+    "utility": "#F5A524",
+    "defense": "#30A46C",
+    "resistance": "#8B8D98",
+    "other": "#8B8D98"
+  },
+  "skills": {}
+}

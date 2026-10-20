@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { BookmarkPlus, ChevronDown, Link2, Trash2, WandSparkles } from 'lucide-vue-next'
+import { BookmarkPlus, Camera, ChevronDown, Link2, Trash2, WandSparkles } from 'lucide-vue-next'
 import type { Armor, Weapon } from '~/stores/equipment'
 import { getPartName } from '~/stores/equipment'
 import { useBuildStore, type BuildSlot, type ArmorSlot } from '~/stores/build'
@@ -166,6 +166,7 @@ async function shareBuild() {
 }
 
 const saveOpen = ref(false)
+const { busy: shotBusy, shootCurrent } = useBuildShot()
 
 function resetBuild() {
   const snapshot = buildStore.serialize()
@@ -209,6 +210,16 @@ function resetBuild() {
           >
             <BookmarkPlus :size="16" :stroke-width="2.25" aria-hidden="true" />
             儲存
+          </button>
+          <button
+            type="button"
+            class="hidden lg:flex items-center gap-2 h-11 px-4 rounded-sm border border-rule-strong text-[14px] font-bold text-ink hover:bg-inset transition-colors duration-200 disabled:opacity-45"
+            :disabled="buildStore.isEmpty || shotBusy"
+            title="把配裝畫成圖片並複製，可直接貼到聊天室"
+            @click="shootCurrent"
+          >
+            <Camera :size="16" :stroke-width="2.25" aria-hidden="true" />
+            截圖
           </button>
           <button
             type="button"
@@ -312,12 +323,21 @@ function resetBuild() {
         </button>
         <button
           type="button"
+          class="flex items-center justify-center gap-1.5 h-12 px-4 rounded-sm border border-rule-strong bg-panel text-[15px] font-bold text-ink hover:bg-inset transition-colors duration-200 disabled:opacity-45"
+          :disabled="buildStore.isEmpty || shotBusy"
+          @click="shootCurrent"
+        >
+          <Camera :size="18" :stroke-width="2.25" aria-hidden="true" />
+          截圖
+        </button>
+        <button
+          type="button"
           class="flex-1 flex items-center justify-center gap-2 h-12 rounded-sm bg-forge text-forge-ink text-[16px] font-bold hover:bg-forge-hover transition-colors duration-200 disabled:opacity-45"
           :disabled="buildStore.isEmpty"
           @click="shareBuild"
         >
           <Link2 :size="18" :stroke-width="2.25" aria-hidden="true" />
-          複製分享連結
+          分享連結
         </button>
       </div>
     </div>

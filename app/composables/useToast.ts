@@ -1,8 +1,14 @@
-/** One app-wide toast (rendered by AppToast in the layout), optionally with an undo. */
+/** One app-wide toast (rendered by AppToast in the layout), optionally with an undo or another action. */
+export interface ToastAction {
+  label: string
+  run: () => void
+  icon?: 'undo' | 'download'
+}
+
 export interface Toast {
   id: number
   message: string
-  undo?: () => void
+  action?: ToastAction
 }
 
 let timer: ReturnType<typeof setTimeout> | null = null
@@ -17,11 +23,16 @@ export function useToast() {
     timer = null
   }
 
-  function show(message: string, undo?: () => void) {
-    toast.value = { id: ++nextId, message, undo }
+  function showAction(message: string, action?: ToastAction) {
+    toast.value = { id: ++nextId, message, action }
     if (timer) clearTimeout(timer)
-    timer = setTimeout(dismiss, undo ? 5000 : 2400)
+    timer = setTimeout(dismiss, action ? 5000 : 2400)
   }
 
-  return { toast, show, dismiss }
+  /** A message, with 復原 when `undo` is given. */
+  function show(message: string, undo?: () => void) {
+    showAction(message, undo ? { label: '復原', run: undo, icon: 'undo' } : undefined)
+  }
+
+  return { toast, show, showAction, dismiss }
 }

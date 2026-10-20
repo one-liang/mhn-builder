@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { RotateCcw } from 'lucide-vue-next'
+import { Download, RotateCcw } from 'lucide-vue-next'
 
 const { toast, dismiss } = useToast()
 
-function undo() {
-  toast.value?.undo?.()
+function runAction() {
+  toast.value?.action?.run()
   dismiss()
 }
 </script>
@@ -21,12 +21,14 @@ function undo() {
       >
         <span class="pr-2 truncate">{{ toast.message }}</span>
         <button
-          v-if="toast.undo"
+          v-if="toast.action"
           type="button"
           class="flex items-center gap-1.5 h-11 px-3 rounded-sm text-shell-ink font-bold hover:bg-shell-raised flex-shrink-0"
-          @click="undo"
+          @click="runAction"
         >
-          <RotateCcw :size="15" :stroke-width="2.25" aria-hidden="true" />復原
+          <RotateCcw v-if="toast.action.icon === 'undo'" :size="15" :stroke-width="2.25" aria-hidden="true" />
+          <Download v-else-if="toast.action.icon === 'download'" :size="15" :stroke-width="2.25" aria-hidden="true" />
+          {{ toast.action.label }}
         </button>
       </div>
     </Transition>
