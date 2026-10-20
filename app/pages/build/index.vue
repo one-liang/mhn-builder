@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ChevronDown, Link2, RotateCcw, Trash2, WandSparkles } from 'lucide-vue-next'
+import { BookmarkPlus, ChevronDown, Link2, Trash2, WandSparkles } from 'lucide-vue-next'
 import type { Armor, Weapon } from '~/stores/equipment'
 import { getPartName } from '~/stores/equipment'
 import { useBuildStore, type BuildSlot, type ArmorSlot } from '~/stores/build'
@@ -140,14 +140,7 @@ function onAutoBuildSearchComplete() {
 }
 
 // ── Toast ─────────────────────────────────────────────────────────────
-const toast = ref<{ message: string; undo?: () => void } | null>(null)
-let toastTimer: ReturnType<typeof setTimeout> | null = null
-
-function showToast(message: string, undo?: () => void) {
-  toast.value = { message, undo }
-  if (toastTimer) clearTimeout(toastTimer)
-  toastTimer = setTimeout(() => { toast.value = null }, undo ? 5000 : 2400)
-}
+const { show: showToast } = useToast()
 
 async function shareBuild() {
   if (typeof window === 'undefined') return
@@ -172,13 +165,12 @@ async function shareBuild() {
   }
 }
 
+const saveOpen = ref(false)
+
 function resetBuild() {
   const snapshot = buildStore.serialize()
   buildStore.clearAll()
-  showToast('已清除配裝', () => {
-    buildStore.deserialize(snapshot)
-    toast.value = null
-  })
+  showToast('已清除配裝', () => buildStore.deserialize(snapshot))
 }
 </script>
 
@@ -208,6 +200,15 @@ function resetBuild() {
           >
             <Trash2 :size="15" :stroke-width="2" aria-hidden="true" />
             清除
+          </button>
+          <button
+            type="button"
+            class="hidden lg:flex items-center gap-2 h-11 px-4 rounded-sm border border-rule-strong text-[14px] font-bold text-ink hover:bg-inset transition-colors duration-200 disabled:opacity-45"
+            :disabled="buildStore.isEmpty"
+            @click="saveOpen = true"
+          >
+            <BookmarkPlus :size="16" :stroke-width="2.25" aria-hidden="true" />
+            儲存
           </button>
           <button
             type="button"
@@ -299,16 +300,29 @@ function resetBuild() {
       class="lg:hidden sticky z-30 px-4 md:px-0 py-3 bg-ground/95 backdrop-blur-[2px] border-t border-rule"
       style="bottom: calc(60px + env(safe-area-inset-bottom, 0px))"
     >
-      <button
-        type="button"
-        class="w-full flex items-center justify-center gap-2 h-12 rounded-sm bg-forge text-forge-ink text-[16px] font-bold hover:bg-forge-hover transition-colors duration-200 disabled:opacity-45"
-        :disabled="buildStore.isEmpty"
-        @click="shareBuild"
-      >
-        <Link2 :size="18" :stroke-width="2.25" aria-hidden="true" />
-        複製分享連結
-      </button>
+      <div class="flex gap-2">
+        <button
+          type="button"
+          class="flex items-center justify-center gap-1.5 h-12 px-4 rounded-sm border border-rule-strong bg-panel text-[15px] font-bold text-ink hover:bg-inset transition-colors duration-200 disabled:opacity-45"
+          :disabled="buildStore.isEmpty"
+          @click="saveOpen = true"
+        >
+          <BookmarkPlus :size="18" :stroke-width="2.25" aria-hidden="true" />
+          儲存
+        </button>
+        <button
+          type="button"
+          class="flex-1 flex items-center justify-center gap-2 h-12 rounded-sm bg-forge text-forge-ink text-[16px] font-bold hover:bg-forge-hover transition-colors duration-200 disabled:opacity-45"
+          :disabled="buildStore.isEmpty"
+          @click="shareBuild"
+        >
+          <Link2 :size="18" :stroke-width="2.25" aria-hidden="true" />
+          複製分享連結
+        </button>
+      </div>
     </div>
+
+    <SaveBuildDialog v-model:open="saveOpen" />
 
     <EquipmentSelector
       v-model:open="selectorOpen"
@@ -323,37 +337,5 @@ function resetBuild() {
       @select="onDriftstoneSkillSelect"
     />
 
-    <Teleport to="body">
-      <Transition name="toast">
-        <div
-          v-if="toast"
-          class="fixed z-[110] left-1/2 -translate-x-1/2 bottom-[calc(140px+env(safe-area-inset-bottom,0px))] lg:bottom-8 flex items-center gap-1 pl-4 pr-0.5 h-12 rounded-sm bg-shell text-shell-ink text-[14px] font-medium"
-          style="box-shadow: var(--pop-shadow)"
-          role="status"
-        >
-          <span class="pr-2">{{ toast.message }}</span>
-          <button
-            v-if="toast.undo"
-            type="button"
-            class="flex items-center gap-1.5 h-11 px-3 rounded-sm text-shell-ink font-bold hover:bg-shell-raised"
-            @click="toast.undo()"
-          >
-            <RotateCcw :size="15" :stroke-width="2.25" aria-hidden="true" />復原
-          </button>
-        </div>
-      </Transition>
-    </Teleport>
   </div>
 </template>
-
-<style scoped>
-.toast-enter-active,
-.toast-leave-active {
-  transition: opacity 240ms var(--ease-out-quint), transform 240ms var(--ease-out-quint);
-}
-.toast-enter-from,
-.toast-leave-to {
-  opacity: 0;
-  transform: translate(-50%, 10px);
-}
-</style>

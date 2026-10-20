@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Anvil, Gem, Hexagon } from 'lucide-vue-next'
+import { Anvil, Bookmark, Gem, Hexagon } from 'lucide-vue-next'
 
 // One navigation model, two placements: inline in the top band on wide screens,
 // a thumb bar along the bottom edge on phones.
@@ -15,6 +15,7 @@ const tabs = [
   { name: '防具', path: '/armor', icon: 'armor' },
   { name: '技能', path: '/skills', icon: 'skill' },
   { name: '漂流石', path: '/driftstones', icon: 'gem' },
+  { name: '我的配裝', path: '/my-builds', icon: 'saved' },
 ] as const
 
 function isActive(path: string) {
@@ -29,7 +30,7 @@ function isActive(path: string) {
     style="padding-bottom: env(safe-area-inset-bottom, 0px)"
     aria-label="主要導覽"
   >
-    <ul class="grid grid-cols-5 h-[60px] max-w-xl mx-auto">
+    <ul class="grid grid-cols-6 h-[60px] max-w-xl mx-auto">
       <li v-for="tab in tabs" :key="tab.path" class="contents">
         <NuxtLink
           :to="tab.path"
@@ -46,7 +47,8 @@ function isActive(path: string) {
           <WeaponTypeIcon v-else-if="tab.icon === 'weapon'" type="great-sword" class="size-[22px]" aria-hidden="true" />
           <ArmorPartIcon v-else-if="tab.icon === 'armor'" part="head" class="size-[22px]" aria-hidden="true" />
           <Hexagon v-else-if="tab.icon === 'skill'" :size="22" :stroke-width="1.75" aria-hidden="true" />
-          <Gem v-else :size="22" :stroke-width="1.75" aria-hidden="true" />
+          <Gem v-else-if="tab.icon === 'gem'" :size="22" :stroke-width="1.75" aria-hidden="true" />
+          <Bookmark v-else :size="22" :stroke-width="1.75" aria-hidden="true" />
           <span class="text-[12px] leading-none font-medium">{{ tab.name }}</span>
         </NuxtLink>
       </li>
@@ -66,7 +68,8 @@ function isActive(path: string) {
           <WeaponTypeIcon v-else-if="tab.icon === 'weapon'" type="great-sword" class="size-[18px]" aria-hidden="true" />
           <ArmorPartIcon v-else-if="tab.icon === 'armor'" part="head" class="size-[18px]" aria-hidden="true" />
           <Hexagon v-else-if="tab.icon === 'skill'" :size="18" :stroke-width="1.75" aria-hidden="true" />
-          <Gem v-else :size="18" :stroke-width="1.75" aria-hidden="true" />
+          <Gem v-else-if="tab.icon === 'gem'" :size="18" :stroke-width="1.75" aria-hidden="true" />
+          <Bookmark v-else :size="18" :stroke-width="1.75" aria-hidden="true" />
           {{ tab.name }}
           <span
             v-if="isActive(tab.path)"

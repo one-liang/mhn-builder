@@ -45,5 +45,7 @@ onMounted(() => init())
     </main>
 
     <BottomNav variant="bottom" />
+
+    <AppToast />
   </div>
 </template>

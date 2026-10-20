@@ -8,6 +8,8 @@ import { X } from 'lucide-vue-next'
 const props = defineProps<{
   open: boolean
   title: string
+  /** Size to the content (short forms) instead of a near-full-height sheet. */
+  compact?: boolean
 }>()
 
 const emit = defineEmits<{
@@ -68,7 +70,8 @@ onBeforeUnmount(() => {
           aria-modal="true"
           :aria-labelledby="titleId"
           tabindex="-1"
-          class="sheet-panel relative flex flex-col w-full md:max-w-xl md:mx-6 h-[92dvh] md:h-[82dvh] bg-panel rounded-t-[6px] md:rounded-md overflow-hidden outline-none"
+          class="sheet-panel relative flex flex-col w-full md:max-w-xl md:mx-6 bg-panel rounded-t-[6px] md:rounded-md overflow-hidden outline-none"
+          :class="compact ? 'max-h-[92dvh] md:max-w-md' : 'h-[92dvh] md:h-[82dvh]'"
           style="box-shadow: var(--sheet-shadow)"
         >
           <div class="flex items-center gap-2 h-14 pl-4 pr-1.5 bg-shell text-shell-ink flex-shrink-0">
