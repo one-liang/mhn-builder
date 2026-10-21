@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useEquipmentStore, getPartName, getMonsterIconKey } from '~/stores/equipment'
 import { useSkillStore } from '~/stores/skill'
-import { monsterOfArmor, monsterTermsOf } from '~/lib/monsters'
+import { countByMonster, getMonster, monsterOfArmor, monstersWithArmor, monsterTermsOf } from '~/lib/monsters'
 import { searchList } from '~/lib/search'
 
 useSeoMeta({
@@ -18,6 +18,11 @@ await Promise.all([equipmentStore.load(), skillStore.load()])
 
 const activePart = ref<string>('all')
 const search = useQuerySearch()
+const monsterFilter = useQuerySearch('monster')
+
+const monsterOptions = monstersWithArmor()
+const monsterCounts = computed(() => countByMonster(equipmentStore.allArmor, a => monsterOfArmor(a.id)))
+const selectedMonster = computed(() => getMonster(monsterFilter.value))
 
 const parts = [
   { id: 'all', name: '全部' },
@@ -29,9 +34,10 @@ const parts = [
 ]
 
 const filteredArmor = computed(() => {
-  const list = activePart.value === 'all'
+  let list = activePart.value === 'all'
     ? equipmentStore.allArmor
     : equipmentStore.getArmorByPart(activePart.value as any)
+  if (selectedMonster.value) list = list.filter(a => monsterOfArmor(a.id)?.id === selectedMonster.value!.id)
   return searchList(list, search.value, a => ({
     primary: a.name,
     others: [a.nameEn, a.setName, a.setNameEn, ...monsterTermsOf(monsterOfArmor(a.id))],
@@ -62,11 +68,21 @@ function resolveSkillName(skillId: string) {
         <SearchField v-model="search" label="搜尋防具" placeholder="搜尋防具、套裝或魔物，例如「銀火」" />
       </div>
       <FilterTabs v-model="activePart" :items="parts" label="防具部位">
+        <template #before>
+          <MonsterFilter v-model="monsterFilter" :monsters="monsterOptions" :counts="monsterCounts" unit="件" />
+        </template>
         <template #icon="{ item }">
           <ArmorPartIcon v-if="item.id !== 'all'" :part="item.id" class="size-4" aria-hidden="true" />
         </template>
       </FilterTabs>
     </div>
+
+    <MonsterCard
+      v-if="selectedMonster"
+      :monster="selectedMonster"
+      :summary="`防具 ${monsterCounts[selectedMonster.id] ?? 0} 件`"
+      :link="{ to: `/weapons?monster=${selectedMonster.id}`, label: '武器' }"
+    />
 
     <ul v-if="filteredArmor.length" class="card mx-4 md:mx-0 overflow-hidden divide-y divide-rule">
       <li v-for="item in filteredArmor" :key="item.id">

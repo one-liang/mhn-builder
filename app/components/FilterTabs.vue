@@ -18,6 +18,10 @@ const model = defineModel<string>({ required: true })
     role="group"
     :aria-label="label"
   >
+    <template v-if="$slots.before">
+      <slot name="before" />
+      <span class="flex-shrink-0 w-px my-2 bg-rule" aria-hidden="true" />
+    </template>
     <button
       v-for="item in items"
       :key="item.id"

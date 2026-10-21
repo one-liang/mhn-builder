@@ -42,3 +42,19 @@ export function monstersOfWeapons(weaponIds: string[]): Monster[] {
 export function monsterTermsOf(m: Monster | null): string[] {
   return m ? [m.name, m.nameEn, ...m.aliases] : []
 }
+
+/** Monsters in official order that have an armor set. */
+export function monstersWithArmor(): Monster[] {
+  const ids = new Set(Object.values(ARMOR_SETS))
+  return MONSTERS.filter(m => ids.has(m.id))
+}
+
+/** How many of the given items belong to each monster (items with no monster are skipped). */
+export function countByMonster<T>(items: T[], monsterOf: (item: T) => Monster | null): Record<string, number> {
+  const counts: Record<string, number> = {}
+  for (const item of items) {
+    const m = monsterOf(item)
+    if (m) counts[m.id] = (counts[m.id] ?? 0) + 1
+  }
+  return counts
+}
