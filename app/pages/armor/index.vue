@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { useEquipmentStore, getPartName, getMonsterIconKey } from '~/stores/equipment'
+import { useEquipmentStore, getPartName } from '~/stores/equipment'
 import { useSkillStore } from '~/stores/skill'
-import { countByMonster, getMonster, monsterOfArmor, monstersWithArmor, monsterTermsOf } from '~/lib/monsters'
+import { countByMonster, gearBadge, getMonster, monsterOfArmor, monstersWithArmor, monsterTermsOf } from '~/lib/monsters'
 import { searchList } from '~/lib/search'
 
 useSeoMeta({
@@ -45,12 +45,7 @@ const filteredArmor = computed(() => {
 })
 
 /** The monster's crest, or the set icon for material sets with no monster. */
-function armorIcon(id: string) {
-  const monster = monsterOfArmor(id)
-  if (monster) return { icon: monster.icon, name: monster.name }
-  const key = getMonsterIconKey(id)
-  return { icon: key ? `/images/monsters/${key}.webp` : undefined, name: undefined }
-}
+const armorIcon = (id: string) => gearBadge({ id }, 'armor')
 
 function resolveSkillName(skillId: string) {
   return skillStore.getById(skillId)?.name || skillId
@@ -96,7 +91,7 @@ function resolveSkillName(skillId: string) {
           :to="`/armor/${item.id}`"
           :set-name="[item.setName, getPartName(item.part)].filter(Boolean).join('・')"
           :stats="[['防禦', String(item.defense)], ...(item.driftstoneSlots ? [['漂流石槽', String(item.driftstoneSlots)] as [string, string]] : [])]"
-          :monster-icon="armorIcon(item.id).icon"
+          :monster-icon="armorIcon(item.id)?.icon"
         />
       </li>
     </ul>
