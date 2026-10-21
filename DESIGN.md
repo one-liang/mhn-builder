@@ -216,14 +216,14 @@ A pure neutral system with an inverse surface for action and selection, plus fiv
 - **Black Pill** (forge; white at night): the one primary action on a screen, such as 分享連結 on the build page, 開始搜尋 while the auto-build panel is open (分享連結 then drops to grey), 載入這組配裝 and 儲存 in their own views. Hover lifts to a soft charcoal (forge-hover).
 
 ### Secondary
-- **Inverse Surface** (shell / shell-ink, inverted at night): every selected, filled or locked state: the selected filter chip, the selected target level, a filled driftstone socket, a locked slot, the applied auto-build plan, the active header nav pill, the icon disc on the auto-build card and weapon-type tiles, and the toast.
+- **Inverse Surface** (shell / shell-ink, inverted at night): every selected or locked state: the selected filter chip, the selected target level, a locked slot, the applied auto-build plan, the active header nav pill, the icon disc on the auto-build card and weapon-type tiles, and the toast.
 
 ### Tertiary
 - **Skill Category Hues** (skill-attack, skill-element, skill-utility, skill-defense, skill-resistance): level pips, the dot before a skill name, and the five-dot legend above the skill board. Per-skill overrides live in `data/skill-colors.json` for colours later picked from the game.
 - **Danger** (danger / danger-night): a status, not data: 還差 (unmet levels), 超出上限 overflow counts, negative affinity, and the hover of destructive controls.
 
 ### Neutral
-- **Ground** (ground): the page, the header, the tab bar, sheets, and art tiles inside cards.
+- **Ground** (ground): the page, the header, the tab bar, sheets, and art tiles and filled driftstone sockets inside cards.
 - **Panel** (panel): every card and list container.
 - **Inset** (inset): search fields, secondary pills, idle chips, row hover, art plates on white.
 - **Rule** (rule): hairline list dividers and the header/tab-bar edges.
@@ -273,7 +273,7 @@ Flat. Depth is tonal: ground, then panel, then inset. Shadows exist only on thin
 
 ## Shapes
 
-Generous, consistent rounding: 20px cards, 28px sheets (top corners on phones), 14–16px art tiles, plan cards and weapon-type tiles, 12px driftstone sockets, and fully round pills, chips, toggles, pips and nav indicators. Borders are rare: hairline dividers inside cards, and dashed 2px outlines to mean "empty, add something".
+Generous, consistent rounding: 20px cards, 28px sheets (top corners on phones), 14–16px art tiles, plan cards and weapon-type tiles, and fully round pills, chips, driftstone sockets, toggles, pips and nav indicators. Borders are rare: hairline dividers inside cards, and dashed 2px outlines to mean "empty, add something".
 
 ## Components
 
@@ -299,6 +299,9 @@ Generous, consistent rounding: 20px cards, 28px sheets (top corners on phones), 
 ### Navigation
 - **Phones:** bottom tab bar on the ground colour with a hairline top; the active tab is ink and bold with its icon on an inset pill, inactive tabs are ink-3.
 - **Wide screens:** header nav pills; the active page is an inverted pill.
+
+### Gear Row
+One row per piece in the build page's gear card: a 56px art tile with the monster's crest (or the material set's icon) as a 28px round badge on its bottom-right corner, then the slot label, the name (17px bold) and its skills (13px, names wrap at `<wbr>` hints with the level glued to the last line), and the lock toggle on the right. Driftstone sockets get their own line under the skills, aligned with the name: 36px pills (44px touch target) that wrap, a filled one on the ground colour with a gem icon and the skill name (truncated, never squeezing the row), an empty one dashed with 「＋ 漂流石」. Hovering the piece lights the whole row. The same corner badge sits on gear thumbnails in 我的配裝 and on the plates of the shared PNG card.
 
 ### Skill Board (signature)
 Rows of skill name, level pips and an Inter total ("5/5"). Pips are 18×8px round bars in the skill's category colour; empty pips are the unlit grey, overflow pips are hatched after a 1px stop. New pips pop in on a spring. Rows open to list the pieces that supply each skill.

@@ -12,6 +12,7 @@ export interface BuildCardPiece {
   label: string          // 太刀 / 頭部 …
   name: string | null    // null = empty slot
   image: string | null   // URL, already resolved against the app base
+  badge: string | null   // monster crest (or set icon) URL for the plate's corner
   skills: string[]       // "攻擊 Lv3"
   driftstones: string[]  // skill names; empty string = empty slot
 }
@@ -86,9 +87,26 @@ export function cardHeight(data: BuildCardData): number {
   return PAD + 150 + data.pieces.length * ROW_H + 96 + skillRows * SKILL_ROW_H + 72 + QR_SIZE + 48 + PAD
 }
 
+/** Corner badge on a plate: a round crest cut out of the card by a white ring. */
+function drawBadge(ctx: CanvasRenderingContext2D, img: HTMLImageElement, cx: number, cy: number, r: number) {
+  ctx.fillStyle = '#FFFFFF'
+  ctx.beginPath()
+  ctx.arc(cx, cy, r + 5, 0, Math.PI * 2)
+  ctx.fill()
+  ctx.fillStyle = PLATE
+  ctx.beginPath()
+  ctx.arc(cx, cy, r, 0, Math.PI * 2)
+  ctx.fill()
+  ctx.save()
+  ctx.clip()
+  const inner = r * 2 - 6
+  drawContained(ctx, img, cx - inner / 2, cy - inner / 2, inner)
+  ctx.restore()
+}
+
 /**
- * Render the card. `images` maps piece image URLs to loaded images; a missing or
- * failed image leaves the plate empty.
+ * Render the card. `images` maps image URLs (pieces and badges) to loaded images;
+ * a missing or failed image leaves its plate or badge out.
  */
 export function drawBuildCard(data: BuildCardData, images: Map<string, HTMLImageElement>): HTMLCanvasElement {
   const canvas = document.createElement('canvas')
@@ -122,6 +140,8 @@ export function drawBuildCard(data: BuildCardData, images: Map<string, HTMLImage
     ctx.fill()
     const img = piece.image ? images.get(piece.image) : undefined
     if (img) drawContained(ctx, img, PAD + 6, top + 6, plate - 12)
+    const badge = piece.badge ? images.get(piece.badge) : undefined
+    if (badge) drawBadge(ctx, badge, PAD + plate - 10, top + plate - 10, 26)
 
     // Text block: label, name, skills, driftstones — centred as a block in the row
     const textW = W - PAD - textX

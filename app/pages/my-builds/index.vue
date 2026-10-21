@@ -3,6 +3,7 @@ import { AlertTriangle, Download, Pencil, Trash2, Upload } from 'lucide-vue-next
 import { useEquipmentStore, type Armor, type Weapon } from '~/stores/equipment'
 import { useSavedBuildsStore, type SavedBuild } from '~/stores/savedBuilds'
 import { SAVED_BUILDS_LIMIT } from '~/lib/savedBuilds'
+import { gearBadge } from '~/lib/monsters'
 
 useSeoMeta({
   title: '我的配裝 | 最強獵人 - MHN 配裝模擬器',
@@ -32,7 +33,7 @@ function piecesOf(build: SavedBuild) {
     let item: Weapon | Armor | undefined
     if (id && slot === 'weapon') item = Object.values(equipmentStore.weapons).flat().find(w => w.id === id)
     else if (id && slot !== 'weapon') item = equipmentStore.getArmorByPart(slot).find(a => a.id === id)
-    return { slot, item }
+    return { slot, item, badge: item ? gearBadge(item, slot === 'weapon' ? 'weapon' : 'armor') : null }
   })
 }
 
@@ -173,13 +174,26 @@ async function importBuilds(e: Event) {
           <li
             v-for="p in piecesOf(build)"
             :key="p.slot"
-            class="aspect-square rounded-[12px] overflow-hidden flex items-center justify-center"
+            class="relative aspect-square rounded-[12px] flex items-center justify-center"
             :class="p.item ? 'bg-ground' : 'border-2 border-dashed border-rule-strong text-ink-3'"
             :title="p.item?.name"
           >
             <img v-if="p.item" :src="imageUrl(p.item.image)" :alt="p.item.name" class="size-full object-contain" loading="lazy" />
-            <ArmorPartIcon v-else-if="p.slot !== 'weapon'" :part="p.slot" class="size-4" aria-hidden="true" />
-            <WeaponTypeIcon v-else type="sword-and-shield" class="size-4" aria-hidden="true" />
+            <img
+              v-if="p.badge"
+              :src="imageUrl(p.badge.icon)"
+              :alt="p.badge.name ?? ''"
+              :title="p.badge.name"
+              width="20"
+              height="20"
+              class="absolute -right-1 -bottom-1 size-5 rounded-full bg-ground ring-2 ring-panel object-contain p-px"
+              loading="lazy"
+              @error="($event.target as HTMLImageElement).style.display = 'none'"
+            />
+            <template v-else-if="!p.item">
+              <ArmorPartIcon v-if="p.slot !== 'weapon'" :part="p.slot" class="size-4" aria-hidden="true" />
+              <WeaponTypeIcon v-else type="sword-and-shield" class="size-4" aria-hidden="true" />
+            </template>
           </li>
         </ul>
 

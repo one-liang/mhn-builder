@@ -195,6 +195,12 @@
     letter-spacing: -0.01em;
   }
 
+  /* CJK names: wrap only at <wbr> hints (lib/skillNames.ts), or anywhere if a phrase alone overflows */
+  .wrap-phrase {
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+  }
+
   /* Pills. One .btn-primary per screen; everything else is secondary or quiet.
      Only transform and opacity animate (press scale); colours switch instantly. */
   .btn {
