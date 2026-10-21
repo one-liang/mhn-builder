@@ -5,6 +5,8 @@ import tailwindcss from '@tailwindcss/vite'
 // the player's saved choice if any, otherwise the system setting.
 const themeBootstrap = `(function(){try{var m=document.cookie.match(/(?:^|; )mhn-theme-choice=([^;]*)/);var t=m?decodeURIComponent(m[1]):null;var d=t?t==='dark':window.matchMedia('(prefers-color-scheme: dark)').matches;document.documentElement.classList.toggle('dark',d);var tc=document.querySelector('meta[name=theme-color]');if(tc)tc.setAttribute('content',d?'#000000':'#FFFFFF');}catch(e){}})()`
 
+const baseURL = process.env.NUXT_APP_BASE_URL || '/'
+
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
@@ -14,8 +16,9 @@ export default defineNuxtConfig({
     viewTransition: true,
   },
   app: {
-    baseURL: process.env.NUXT_APP_BASE_URL || '/',
-    viewTransition: true,
+    baseURL,
+    // Enabled per navigation by plugins/view-transition-first-load.client.ts (not on first load)
+    viewTransition: false,
     head: {
       htmlAttrs: { lang: 'zh-Hant-TW' },
       meta: [
@@ -23,6 +26,8 @@ export default defineNuxtConfig({
         { name: 'theme-color', content: '#FFFFFF' },
       ],
       link: [
+        // Under the GitHub Pages base path the browser's default /favicon.ico misses
+        { rel: 'icon', type: 'image/x-icon', href: `${baseURL}favicon.ico` },
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
         {
