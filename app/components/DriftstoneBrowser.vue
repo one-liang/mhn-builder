@@ -1,53 +1,81 @@
 <script setup lang="ts">
-import { ChevronRight, Sparkle } from 'lucide-vue-next'
-import { useSkillStore } from '~/stores/skill'
+import { useSkillStore, type Skill } from '~/stores/skill'
 import { searchList } from '~/lib/search'
+import { orderBySkillFamily } from '~/lib/skillFamilies'
+import { groupDriftstones } from '~/lib/driftstones'
 import driftstoneData from '../../data/driftstone-skills.json'
 
-// Skills a driftstone can roll, filtered by stone colour. Lives under the 技能 tab.
+/**
+ * What each driftstone can roll, organised the way the pools work: one shared pool
+ * every colour stone has, a few skills of each colour's own, and prime stones that
+ * each give a single skill. Skills appear once per group as plain pills, so the only
+ * colour on screen is the stone swatch that heads each group.
+ */
 const skillStore = useSkillStore()
 await skillStore.load()
 
 const activeStone = ref('all')
 const searchQuery = useQuerySearch()
 
-const colourStones = driftstoneData.stones.filter(s => !s.prime)
-const stoneName = (name: string) => name.replace(/^漂流石【(.+)】$/, '$1')
-
+const groups = groupDriftstones(driftstoneData.stones)
 const STONE_FILTERS = [
   { id: 'all', name: '全部' },
-  ...colourStones.map(s => ({ id: s.id, name: stoneName(s.name) })),
+  ...groups.colour.map(c => ({ id: c.id, name: c.short })),
   { id: 'prime', name: '純石' },
 ]
 
-const ACHIEVABLE_IDS = new Set(driftstoneData.achievableSkillIds)
-const STONE_SKILL_MAP = new Map(driftstoneData.stones.map(s => [s.id, new Set(s.skillIds)]))
-const primeSkillIds = new Set(driftstoneData.stones.filter(s => s.prime).flatMap(s => s.skillIds))
+// Skills matching the search box (all of them when it is empty)
+const matching = computed(() => {
+  const list = searchList(skillStore.skills, searchQuery.value, s => ({ primary: s.name, others: [s.nameEn] }))
+  return new Set(list.map(s => s.id))
+})
 
-// skillId → colour stones that can roll it
-const skillColourStones = new Map<string, { id: string; name: string }[]>()
-for (const stone of colourStones) {
-  for (const skillId of stone.skillIds) {
-    if (!skillColourStones.has(skillId)) skillColourStones.set(skillId, [])
-    skillColourStones.get(skillId)!.push({ id: stone.id, name: stoneName(stone.name) })
-  }
+function skillsOf(ids: string[]): Skill[] {
+  const list = ids.map(id => skillStore.getById(id)).filter((s): s is Skill => !!s && matching.value.has(s.id))
+  return orderBySkillFamily(list, skillStore.skills)
 }
 
-const filteredSkills = computed(() => {
-  let list = skillStore.skills.filter(s => ACHIEVABLE_IDS.has(s.id))
-  if (activeStone.value === 'prime') list = list.filter(s => primeSkillIds.has(s.id))
-  else if (activeStone.value !== 'all') {
-    const ids = STONE_SKILL_MAP.get(activeStone.value)
-    if (ids) list = list.filter(s => ids.has(s.id))
+interface Section {
+  id: string
+  title: string
+  note: string
+  swatches: string[]
+  skills: Skill[]
+}
+
+const sections = computed<Section[]>(() => {
+  const stone = activeStone.value
+  const out: Section[] = []
+  if (stone !== 'prime') {
+    out.push({
+      id: 'shared',
+      title: '共通技能',
+      note: `${groups.colour.length} 種顏色的漂流石都能鍊出`,
+      swatches: groups.colour.map(c => c.id),
+      skills: skillsOf(groups.shared),
+    })
   }
-  return searchList(list, searchQuery.value, s => ({ primary: s.name, others: [s.nameEn] }))
+  for (const c of groups.colour) {
+    if (stone !== 'all' && stone !== c.id) continue
+    out.push({ id: c.id, title: c.name, note: '這個顏色專屬', swatches: [c.id], skills: skillsOf(c.exclusive) })
+  }
+  if (stone === 'all' || stone === 'prime') {
+    out.push({
+      id: 'prime',
+      title: '漂流純石',
+      note: '每顆固定鍊出一項技能',
+      swatches: ['prime'],
+      skills: skillsOf(groups.prime.map(p => p.skillId)),
+    })
+  }
+  return out.filter(s => s.skills.length)
 })
 </script>
 
 <template>
   <div>
-    <p class="px-4 md:px-0 pb-3 text-[14px] text-ink-2">
-      可鍊成 <span class="stamp font-bold text-ink">{{ ACHIEVABLE_IDS.size }}</span> 項技能，每個漂流石槽提供 Lv1。
+    <p class="px-4 md:px-0 pb-4 text-[14px] text-ink-2 max-w-[38em]">
+      每個漂流石槽提供 Lv1。六種顏色共用一組共通技能，各自再加上幾項專屬技能；漂流純石則固定鍊出一項。
     </p>
 
     <div class="sticky top-14 md:top-16 z-20 bg-ground pb-3">
@@ -61,35 +89,40 @@ const filteredSkills = computed(() => {
       </FilterTabs>
     </div>
 
-    <ul v-if="filteredSkills.length" class="card mx-4 md:mx-0 overflow-hidden divide-y divide-rule">
-      <li v-for="skill in filteredSkills" :key="skill.id">
-        <NuxtLink
-          :to="`/skills/${skill.id}`"
-          class="grid grid-cols-[minmax(0,1fr)_auto_1rem] items-center gap-x-3 px-4 py-3.5 min-h-[68px] hover:bg-inset"
-        >
-          <span class="min-w-0">
-            <span class="flex items-center gap-2">
-              <SkillDot :skill-id="skill.id" />
-              <span class="text-[16px] font-bold leading-snug">{{ skill.name }}</span>
-              <span
-                v-if="primeSkillIds.has(skill.id)"
-                class="inline-flex items-center gap-1 h-6 px-2 rounded-full bg-shell text-shell-ink text-[11px] font-bold leading-none"
-              >
-                <Sparkle :size="11" :stroke-width="2.5" aria-hidden="true" />純石
+    <div v-if="sections.length" class="grid gap-3 px-4 md:px-0">
+      <section v-for="sec in sections" :key="sec.id" class="card p-4" :aria-labelledby="`ds-${sec.id}`">
+        <header class="pb-3">
+          <div class="flex items-center justify-between gap-3">
+            <h3 :id="`ds-${sec.id}`" class="flex items-center gap-2.5 min-w-0 text-[17px] font-black leading-snug">
+              <span class="flex items-center gap-1.5 flex-shrink-0" aria-hidden="true">
+                <StoneSwatch v-for="sw in sec.swatches" :key="sw" :stone="sw" />
               </span>
-            </span>
-            <span v-if="skillColourStones.get(skill.id)?.length" class="flex flex-wrap gap-x-3 gap-y-1 mt-1.5 pl-[18px] text-[12px] text-ink-2">
-              <span v-for="stone in skillColourStones.get(skill.id)" :key="stone.id" class="inline-flex items-center gap-1.5">
-                <StoneSwatch :stone="stone.id" />{{ stone.name }}
-              </span>
-            </span>
-          </span>
-          <span class="text-[12px] text-ink-2 whitespace-nowrap">最高 <span class="stamp text-[15px] font-bold text-ink">Lv{{ skill.maxLevel }}</span></span>
-          <ChevronRight :size="16" :stroke-width="2" class="text-ink-3" aria-hidden="true" />
-        </NuxtLink>
-      </li>
-    </ul>
+              <span class="truncate">{{ sec.title }}</span>
+            </h3>
+            <span class="stamp text-[18px] font-bold flex-shrink-0">{{ sec.skills.length }}<span class="text-[13px] font-medium text-ink-2"> 項</span></span>
+          </div>
+          <p class="mt-0.5 text-[13px] text-ink-2">{{ sec.note }}</p>
+        </header>
+        <ul class="flex flex-wrap gap-2">
+          <li v-for="skill in sec.skills" :key="skill.id">
+            <NuxtLink
+              :to="`/skills/${skill.id}`"
+              class="pill inline-flex items-center h-10 px-4 rounded-full bg-ground text-[14px] font-medium hover:bg-inset"
+            >{{ skill.name }}</NuxtLink>
+          </li>
+        </ul>
+      </section>
+    </div>
 
     <p v-else class="mx-4 md:mx-0 px-4 py-12 card text-center text-[14px] text-ink-2">找不到符合的漂流石技能</p>
   </div>
 </template>
+
+<style scoped>
+.pill {
+  transition: transform 160ms var(--ease-out-quint);
+}
+.pill:active {
+  transform: scale(0.95);
+}
+</style>

@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import { Sparkle } from 'lucide-vue-next'
-import { useSkillStore } from '~/stores/skill'
+import { useSkillStore, type Skill } from '~/stores/skill'
 import { searchList } from '~/lib/search'
+import { orderBySkillFamily } from '~/lib/skillFamilies'
+import { groupDriftstones } from '~/lib/driftstones'
 import driftstoneData from '../../data/driftstone-skills.json'
 
 const props = defineProps<{
@@ -19,26 +20,13 @@ const skillStore = useSkillStore()
 const search = ref('')
 const activeStone = ref('all')
 
-// 全部 + each colour stone + 純石
+// Same grouping as the 技能｜漂流石 browser: the shared pool, each colour's own skills, prime stones
+const groups = groupDriftstones(driftstoneData.stones)
 const STONE_FILTERS = [
   { id: 'all', name: '全部' },
-  ...driftstoneData.stones
-    .filter(s => !s.prime)
-    .map(s => ({ id: s.id, name: s.name.replace(/^漂流石【(.+)】$/, '$1') })),
+  ...groups.colour.map(c => ({ id: c.id, name: c.short })),
   { id: 'prime', name: '純石' },
 ]
-
-const ACHIEVABLE_IDS = new Set(driftstoneData.achievableSkillIds)
-
-const STONE_SKILL_MAP = new Map<string, Set<string>>()
-for (const stone of driftstoneData.stones) {
-  if (!STONE_SKILL_MAP.has(stone.id)) {
-    STONE_SKILL_MAP.set(stone.id, new Set(stone.skillIds))
-  }
-}
-const primeSkillIds = new Set(
-  driftstoneData.stones.filter(s => s.prime).flatMap(s => s.skillIds)
-)
 
 watch(
   () => props.open,
@@ -50,19 +38,24 @@ watch(
   }
 )
 
-const filteredSkills = computed(() => {
-  let list = skillStore.skills.filter(s => ACHIEVABLE_IDS.has(s.id))
+const matching = computed(() =>
+  new Set(searchList(skillStore.skills, search.value, s => ({ primary: s.name, others: [s.nameEn] })).map(s => s.id)),
+)
 
-  if (activeStone.value !== 'all') {
-    if (activeStone.value === 'prime') {
-      list = list.filter(s => primeSkillIds.has(s.id))
-    } else {
-      const stoneIds = STONE_SKILL_MAP.get(activeStone.value)
-      if (stoneIds) list = list.filter(s => stoneIds.has(s.id))
-    }
+function skillsOf(ids: string[]): Skill[] {
+  const list = ids.map(id => skillStore.getById(id)).filter((s): s is Skill => !!s && matching.value.has(s.id))
+  return orderBySkillFamily(list, skillStore.skills)
+}
+
+const sections = computed(() => {
+  const stone = activeStone.value
+  const out: { id: string; title: string; swatches: string[]; skills: Skill[] }[] = []
+  if (stone !== 'prime') out.push({ id: 'shared', title: '共通技能', swatches: groups.colour.map(c => c.id), skills: skillsOf(groups.shared) })
+  for (const c of groups.colour) {
+    if (stone === 'all' || stone === c.id) out.push({ id: c.id, title: `${c.short}色專屬`, swatches: [c.id], skills: skillsOf(c.exclusive) })
   }
-
-  return searchList(list, search.value, s => ({ primary: s.name, others: [s.nameEn] }))
+  if (stone === 'all' || stone === 'prime') out.push({ id: 'prime', title: '漂流純石', swatches: ['prime'], skills: skillsOf(groups.prime.map(p => p.skillId)) })
+  return out.filter(sec => sec.skills.length)
 })
 
 function close() {
@@ -97,35 +90,34 @@ function onClear() {
       </FilterTabs>
     </template>
 
-    <p class="px-4 pt-3 text-[13px] text-ink-2">每個漂流石槽固定提供 Lv1。</p>
+    <p class="px-5 pt-1 text-[13px] text-ink-2">每個漂流石槽固定提供 Lv1。</p>
 
-    <div class="grid grid-cols-2 gap-2 p-4">
-      <button
-        v-for="skill in filteredSkills"
-        :key="skill.id"
-        type="button"
-        class="pick flex items-center justify-between gap-2 min-h-12 px-4 py-2 rounded-[14px] text-left text-[14px] leading-snug"
-        :class="currentSkillId === skill.id
-          ? 'bg-shell text-shell-ink font-bold'
-          : 'bg-panel hover:bg-inset'"
-        :aria-pressed="currentSkillId === skill.id"
-        @click="onSelect(skill.id)"
-      >
-        <span class="min-w-0 flex items-center gap-2"><SkillDot :skill-id="skill.id" :size="8" />{{ skill.name }}</span>
-        <Sparkle
-          v-if="primeSkillIds.has(skill.id)"
-          :size="14"
-          :stroke-width="2"
-          class="flex-shrink-0"
-          :class="currentSkillId === skill.id ? '' : 'text-ink-2'"
-          aria-label="有純石"
-        />
-      </button>
-    </div>
+    <section v-for="sec in sections" :key="sec.id" class="px-4 pt-4" :aria-labelledby="`dsp-${sec.id}`">
+      <h3 :id="`dsp-${sec.id}`" class="flex items-center gap-2 pb-2 text-[15px] font-black">
+        <span class="flex items-center gap-1" aria-hidden="true">
+          <StoneSwatch v-for="sw in sec.swatches" :key="sw" :stone="sw" />
+        </span>
+        {{ sec.title }}
+      </h3>
+      <div class="grid grid-cols-2 gap-2">
+        <button
+          v-for="skill in sec.skills"
+          :key="skill.id"
+          type="button"
+          class="pick flex items-center min-h-12 px-4 py-2 rounded-[14px] text-left text-[14px] leading-snug"
+          :class="currentSkillId === skill.id
+            ? 'bg-shell text-shell-ink font-bold'
+            : 'bg-panel hover:bg-inset'"
+          :aria-pressed="currentSkillId === skill.id"
+          @click="onSelect(skill.id)"
+        >{{ skill.name }}</button>
+      </div>
+    </section>
 
-    <p v-if="!filteredSkills.length" class="px-4 pb-12 text-center text-[14px] text-ink-2">
+    <p v-if="!sections.length" class="px-4 py-12 text-center text-[14px] text-ink-2">
       找不到符合的漂流石技能
     </p>
+    <div class="h-4" aria-hidden="true" />
 
     <template v-if="currentSkillId" #footer>
       <button

@@ -109,7 +109,7 @@ const enhancementNotes = computed(() => {
       </div>
 
       <template v-else>
-        <fieldset>
+        <fieldset class="min-w-0">
           <legend class="sr-only">搜尋結果</legend>
           <p class="text-[13px] text-ink-2 mb-2">點選方案即套用到下方裝備。</p>
           <div class="grid gap-2" :class="autoBuildStore.results.length > 1 ? 'grid-cols-3' : 'grid-cols-1'">
@@ -247,7 +247,7 @@ const enhancementNotes = computed(() => {
           <span class="text-ink-2">武器已鎖定</span>
           <span class="font-bold truncate">{{ buildStore.weapon?.name ?? '不裝備武器' }}</span>
         </div>
-        <fieldset v-else>
+        <fieldset v-else class="min-w-0">
           <legend class="text-[15px] font-bold">武器類型</legend>
           <div class="strip -mx-4 px-4 mt-2 flex gap-2 overflow-x-auto md:mx-0 md:px-0 md:grid md:grid-cols-7 md:overflow-visible">
             <button
