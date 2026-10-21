@@ -2,6 +2,7 @@
 import { ChevronRight } from 'lucide-vue-next'
 import { useSkillStore } from '~/stores/skill'
 import { searchList } from '~/lib/search'
+import { orderBySkillFamily } from '~/lib/skillFamilies'
 
 useSeoMeta({
   title: '技能與漂流石 | 最強獵人 - MHN 配裝模擬器',
@@ -27,11 +28,15 @@ const VIEWS = [
 const activeCategory = ref('all')
 const searchQuery = useQuerySearch()
 
+// Variants follow their base skill (攻擊 then 攻擊．境界)
 const filteredSkills = computed(() =>
-  searchList(skillStore.getByCategory(activeCategory.value), searchQuery.value, s => ({
-    primary: s.name,
-    others: [s.nameEn, s.description],
-  }))
+  orderBySkillFamily(
+    searchList(skillStore.getByCategory(activeCategory.value), searchQuery.value, s => ({
+      primary: s.name,
+      others: [s.nameEn, s.description],
+    })),
+    skillStore.skills,
+  )
 )
 </script>
 
