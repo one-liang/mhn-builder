@@ -93,6 +93,14 @@
       "css": ".ds-tabs { display: grid; grid-template-columns: repeat(5, 1fr); height: 64px; background: var(--ground, #fff); border-top: 1px solid var(--rule, #E2E2E2); } .ds-tabs a { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; color: var(--ink-3, #6B6B6B); font: 500 11px 'Noto Sans TC', sans-serif; text-decoration: none; } .ds-tabs a span { display: flex; align-items: center; justify-content: center; width: 48px; height: 28px; border-radius: 9999px; } .ds-tabs a span::after { content: ''; width: 18px; height: 18px; border: 2px solid currentColor; border-radius: 6px; } .ds-tabs a.is-on { color: var(--ink, #000); font-weight: 700; } .ds-tabs a.is-on span { background: var(--inset, #EBEBEB); }"
     },
     {
+      "name": "Gear Row",
+      "kind": "custom",
+      "refersTo": "card",
+      "description": "A build piece: art tile with the monster crest badge, name and skills, lock; driftstone sockets on their own wrapping line under the skills.",
+      "html": "<div class=\"ds-gear\"><div class=\"ds-gear-main\"><span class=\"ds-plate\"><i class=\"ds-crest\"></i></span><span class=\"ds-gear-text\"><small>腰部</small><b>亡爪腰甲</b><span>超會心 <em>Lv2</em>　SP計量表加速【完美迴避】 <em>Lv1</em></span></span></div><div class=\"ds-sockets\"><span class=\"ds-socket on\">SP計量表加速【借力使力】</span><span class=\"ds-socket\">＋ 漂流石</span></div></div>",
+      "css": ".ds-gear { background: var(--panel, #F6F6F6); border-radius: 20px; padding: 12px 16px 14px; } .ds-gear-main { display: flex; gap: 12px; align-items: center; } .ds-plate { position: relative; flex: none; width: 56px; height: 56px; border-radius: 14px; background: var(--ground, #FFF); } .ds-crest { position: absolute; right: -6px; bottom: -6px; width: 28px; height: 28px; border-radius: 9999px; background: var(--ground, #FFF); box-shadow: 0 0 0 2px var(--panel, #F6F6F6); } .ds-gear-text { display: grid; min-width: 0; font: 400 13px/1.375 'Noto Sans TC', sans-serif; color: var(--ink-2, #5E5E5E); } .ds-gear-text small { font-size: 12px; font-weight: 500; } .ds-gear-text b { font-size: 17px; font-weight: 700; color: var(--ink, #000); } .ds-gear-text em { font: 700 14px Inter, sans-serif; font-style: normal; color: var(--ink, #000); } .ds-sockets { display: flex; flex-wrap: wrap; gap: 8px; padding-left: 68px; margin-top: 8px; } .ds-socket { display: inline-flex; align-items: center; height: 36px; padding: 0 14px 0 10px; border-radius: 9999px; border: 1.5px dashed var(--rule-strong, #AFAFAF); font: 400 13px 'Noto Sans TC', sans-serif; color: var(--ink-2, #5E5E5E); } .ds-socket.on { border: 0; background: var(--ground, #FFF); color: var(--ink, #000); font-weight: 500; }"
+    },
+    {
       "name": "Skill Board Row",
       "kind": "custom",
       "refersTo": "level-pip",
