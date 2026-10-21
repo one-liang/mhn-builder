@@ -1,5 +1,5 @@
 <script setup lang="ts" generic="T extends { id: string; name: string }">
-// A row of filter chips. Scrolls sideways on phones, wraps on wide screens.
+// A row of filter chips. Scrolls sideways (ScrollStrip: swipe, wheel or edge arrows); `wrap` wraps it on wide screens.
 defineProps<{
   items: T[]
   label: string
@@ -12,11 +12,12 @@ const model = defineModel<string>({ required: true })
 </script>
 
 <template>
-  <div
-    class="strip flex gap-2 overflow-x-auto"
+  <ScrollStrip
+    class="flex gap-2 overflow-x-auto"
     :class="[inSheet ? 'px-5' : 'px-4 md:px-0', wrap ? 'md:flex-wrap md:overflow-visible' : '']"
     role="group"
     :aria-label="label"
+    :active="model"
   >
     <template v-if="$slots.before">
       <slot name="before" />
@@ -34,7 +35,7 @@ const model = defineModel<string>({ required: true })
       <slot name="icon" :item="item" />
       {{ item.name }}
     </button>
-  </div>
+  </ScrollStrip>
 </template>
 
 <style scoped>

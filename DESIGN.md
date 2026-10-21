@@ -286,6 +286,7 @@ Generous, consistent rounding: 20px cards, 28px sheets (top corners on phones), 
 ### Chips
 - **Style:** 40px round pills on inset grey.
 - **State:** selected inverts to the shell surface with bold text.
+- **Rows that overflow** (filter chips, weapon types, search monsters) all scroll through `ScrollStrip`: touch swipes, a mouse wheel scrolls the row sideways, and with a mouse or trackpad a 40px round grey arrow sits at each edge that has more, lined up with the content edge. The edge with more fades out (40px on touch, longer under an arrow), and the selected chip scrolls into view. Never hide part of a row without one of these ways in.
 
 ### Cards / Containers
 - **Corner Style:** 20px.
