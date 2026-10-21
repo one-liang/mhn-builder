@@ -4,6 +4,7 @@ import type { Armor, Weapon } from '~/stores/equipment'
 import { getPartName, getWeaponTypeName } from '~/stores/equipment'
 import type { BuildSlot } from '~/stores/build'
 import { useSkillStore } from '~/stores/skill'
+import { gearBadge } from '~/lib/monsters'
 
 type SlotItem = Weapon | Armor | null
 
@@ -25,6 +26,7 @@ const skillStore = useSkillStore()
 const { imageUrl } = useImageUrl()
 
 const isWeapon = computed(() => props.slotType === 'weapon')
+const badge = computed(() => (props.item ? gearBadge(props.item, isWeapon.value ? 'weapon' : 'armor') : null))
 const slotLabel = computed(() => (isWeapon.value ? '武器' : getPartName(props.slotType)))
 
 const subLabel = computed(() => {
@@ -61,7 +63,7 @@ const skills = computed(() => {
       @click="emit('open')"
     >
       <span
-        class="relative flex items-center justify-center size-14 flex-shrink-0 rounded-[14px] overflow-hidden"
+        class="relative flex items-center justify-center size-14 flex-shrink-0 rounded-[14px]"
         :class="item ? 'bg-ground' : 'border-2 border-dashed border-rule-strong text-ink-3'"
       >
         <img
@@ -74,7 +76,18 @@ const skills = computed(() => {
           loading="lazy"
           @error="($event.target as HTMLImageElement).style.visibility = 'hidden'"
         />
-        <template v-else>
+        <img
+          v-if="badge"
+          :src="imageUrl(badge.icon)"
+          :alt="badge.name ?? ''"
+          :title="badge.name"
+          width="28"
+          height="28"
+          class="absolute -right-1.5 -bottom-1.5 size-7 rounded-full bg-ground ring-2 ring-panel object-contain p-0.5"
+          loading="lazy"
+          @error="($event.target as HTMLImageElement).style.display = 'none'"
+        />
+        <template v-else-if="!item">
           <WeaponTypeIcon v-if="isWeapon" type="sword-and-shield" class="size-6" aria-hidden="true" />
           <ArmorPartIcon v-else :part="slotType" class="size-6" aria-hidden="true" />
         </template>
