@@ -2,6 +2,7 @@
 import { Sparkle } from 'lucide-vue-next'
 import { useSkillStore } from '~/stores/skill'
 import { searchList } from '~/lib/search'
+import { orderBySkillFamily } from '~/lib/skillFamilies'
 import driftstoneData from '../../data/driftstone-skills.json'
 
 const props = defineProps<{
@@ -62,7 +63,7 @@ const filteredSkills = computed(() => {
     }
   }
 
-  return searchList(list, search.value, s => ({ primary: s.name, others: [s.nameEn] }))
+  return orderBySkillFamily(searchList(list, search.value, s => ({ primary: s.name, others: [s.nameEn] })), skillStore.skills)
 })
 
 function close() {
