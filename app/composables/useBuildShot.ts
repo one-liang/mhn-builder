@@ -5,6 +5,7 @@ import { useSkillStore } from '~/stores/skill'
 import type { BuildResult } from '~/lib/autoBuildAlgorithm'
 import { cardText, drawBuildCard, type BuildCardData, type BuildCardPiece } from '~/lib/buildCard'
 import { skillColor } from '~/lib/skillColors'
+import { gearBadge } from '~/lib/monsters'
 
 const ARMOR_SLOTS: ArmorSlot[] = ['head', 'chest', 'arms', 'waist', 'legs']
 const ARMOR_PARAM: Record<ArmorSlot, [string, string]> = {
@@ -33,6 +34,10 @@ export function useBuildShot() {
   const busy = ref(false)
 
   const skillName = (id: string) => skillStore.getById(id)?.name ?? id
+  const badgeUrl = (item: Weapon | Armor | null, kind: 'weapon' | 'armor') => {
+    const badge = item ? gearBadge(item, kind) : null
+    return badge ? imageUrl(badge.icon) : null
+  }
 
   function shareUrl(params: Record<string, string>) {
     const base = config.app.baseURL.replace(/\/$/, '')
@@ -59,6 +64,7 @@ export function useBuildShot() {
       label: src.weapon ? getWeaponTypeName(src.weapon.type) : '武器',
       name: src.weapon?.name ?? null,
       image: src.weapon ? imageUrl(src.weapon.image) : null,
+      badge: badgeUrl(src.weapon, 'weapon'),
       skills: (src.weapon?.skills ?? []).map(s => `${skillName(s.skillId)} Lv${s.level}`),
       driftstones: [],
     }]
@@ -68,6 +74,7 @@ export function useBuildShot() {
         label: getPartName(slot),
         name: piece?.name ?? null,
         image: piece ? imageUrl(piece.image) : null,
+        badge: badgeUrl(piece, 'armor'),
         skills: (piece?.skills ?? []).map(s => `${skillName(s.skillId)} Lv${s.level}`),
         driftstones: piece
           ? Array.from({ length: piece.driftstoneSlots }, (_, i) => {
@@ -110,7 +117,7 @@ export function useBuildShot() {
       document.fonts.load('700 36px "Noto Sans TC"', text),
       document.fonts.load('900 60px "Noto Sans TC"', text),
     ]).catch(() => {})
-    const urls = data.pieces.map(p => p.image).filter((u): u is string => !!u)
+    const urls = [...new Set(data.pieces.flatMap(p => [p.image, p.badge]).filter((u): u is string => !!u))]
     const loaded = await Promise.all(urls.map(loadImage))
     const images = new Map<string, HTMLImageElement>()
     urls.forEach((u, i) => { if (loaded[i]) images.set(u, loaded[i]!) })

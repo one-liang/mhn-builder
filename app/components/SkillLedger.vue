@@ -3,6 +3,7 @@ import { ChevronDown } from 'lucide-vue-next'
 import { useBuildStore, type ArmorSlot } from '~/stores/build'
 import { useSkillStore } from '~/stores/skill'
 import { getPartName } from '~/stores/equipment'
+import { namePhrases } from '~/lib/skillNames'
 
 /**
  * The skill ledger: a fixed-column table that updates in place. Rows keep the
@@ -93,7 +94,7 @@ function toggle(id: string) {
             @click="toggle(entry.id)"
           >
             <span class="min-w-0">
-              <span class="block text-[15px] font-bold leading-snug">{{ entry.name }}</span>
+              <span class="block text-[15px] font-bold leading-snug wrap-phrase"><template v-for="(part, i) in namePhrases(entry.name)" :key="i"><wbr v-if="i">{{ part }}</template></span>
               <span v-if="entry.overflow" class="block text-[12px] font-bold text-danger leading-tight">
                 超出上限 {{ entry.total - entry.max }} 級
               </span>
