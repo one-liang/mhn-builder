@@ -13,6 +13,7 @@ import { closeSync, fstatSync, openSync, readdirSync, readFileSync, readSync, re
 import { join, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { ARMOR_PARTS, ROOT, WEAPON_TYPES, formatJson } from './sync/lib/io.mjs'
+import { MONSTER_FIELDS } from './sync/monsters.mjs'
 
 export const SKILL_CATEGORIES = ['attack', 'element', 'defense', 'resistance', 'utility', 'other']
 export const ELEMENT_TYPES = ['fire', 'water', 'thunder', 'ice', 'dragon', 'poison', 'paralysis', 'sleep', 'blast']
@@ -25,7 +26,7 @@ const ICON_KEY = /^[a-z0-9_-]+$/
 
 /** Canonical key order of each record type (the sync writes keys in this order). */
 const SKILL_FIELDS = ['id', 'name', 'nameEn', 'description', 'maxLevel', 'category', 'levels']
-const ARMOR_FIELDS = ['id', 'name', 'nameEn', 'setName', 'setNameEn', 'part', 'defense', 'skills', 'driftstoneSlots', 'image']
+const ARMOR_FIELDS = ['id', 'name', 'nameEn', 'setName', 'setNameEn', 'part', 'defense', 'skills', 'driftstoneSlots', 'image', 'source']
 const WEAPON_FIELDS = ['id', 'name', 'nameEn', 'type', 'attack', 'element', 'affinity', 'spSkill', 'skills', 'image']
 const STONE_FIELDS = ['id', 'name', 'prime', 'skillIds']
 
@@ -140,6 +141,16 @@ export function validateData({ dataDir = join(ROOT, 'data'), publicDir = join(RO
 
   const label = (rec, i) => (isObj(rec) && isText(rec.id) ? rec.id : `[${i}]`)
 
+  /** Optional "source": only "manual" (extra-gear.json), whose ids carry the ev- / ev_ prefix. */
+  function checkSource(rec, file, id, prefix) {
+    if (!('source' in rec)) {
+      if (isStr(rec.id) && rec.id.startsWith(prefix)) warn('MANUAL_PREFIX', file, id, `id starts with "${prefix}" (reserved for extra-gear.json) but the record has no source "manual"`)
+      return
+    }
+    if (rec.source !== 'manual') return error('FIELD_INVALID', file, id, `"source" must be "manual", got ${show(rec.source)}`)
+    if (isStr(rec.id) && !rec.id.startsWith(prefix)) error('MANUAL_PREFIX', file, id, `hand-entered gear id must start with "${prefix}"`)
+  }
+
   /** Required field check: reports missing/invalid and returns whether the value is valid. */
   function need(rec, key, ok, file, id, expected) {
     if (!(key in rec)) {
@@ -182,12 +193,16 @@ export function validateData({ dataDir = join(ROOT, 'data'), publicDir = join(RO
   }
 
   const referencedImages = new Set()
-  /** Armor/weapon image: must be exactly /images/<dir>/<id>.webp and a valid WebP file. */
+  /**
+   * Armor/weapon image: must be exactly /images/<dir>/<id>.webp and a valid WebP file.
+   * Hand-entered gear (source "manual", from extra-gear.json) may use any image under /images/.
+   */
   function checkRecordImage(rec, dir, file, id, idOk) {
     if (!need(rec, 'image', isStr, file, id, 'a string')) return
     referencedImages.add(rec.image)
     if (!idOk) return
-    const expected = `/images/${dir}/${rec.id}.webp`
+    const manual = rec.source === 'manual'
+    const expected = manual && /^\/images\/[\w/.-]+\.webp$/.test(rec.image) ? rec.image : `/images/${dir}/${rec.id}.webp`
     if (rec.image !== expected) {
       error('IMAGE_PATH', file, id, `image is ${show(rec.image)}, expected "${expected}"`)
       return
@@ -319,6 +334,7 @@ export function validateData({ dataDir = join(ROOT, 'data'), publicDir = join(RO
       need(a, 'defense', v => isInt(v) && v > 0, file, id, 'a positive integer')
       need(a, 'driftstoneSlots', v => isInt(v) && v >= 0 && v <= 3, file, id, 'an integer 0..3')
       checkSkillRefs(a, 'armor', file, id)
+      checkSource(a, file, id, 'ev-')
       checkRecordImage(a, 'armor', file, id, idOk)
       if (idOk) {
         const prefix = a.id.slice(0, -(part.length + 1))
@@ -341,6 +357,7 @@ export function validateData({ dataDir = join(ROOT, 'data'), publicDir = join(RO
     if (!monsters) continue
     const key = monsters[prefix]
     if (key === undefined) {
+      if (prefix.startsWith('ev-')) continue  // hand-entered sets have no synced set icon
       warn('MONSTER_MISSING', MONSTERS_FILE, prefix, `no monster icon entry for armor set "${prefix}"`)
     } else if (isStr(key) && ICON_KEY.test(key)) {
       const rel = `/images/monsters/${key}.webp`
@@ -359,7 +376,7 @@ export function validateData({ dataDir = join(ROOT, 'data'), publicDir = join(RO
   const weaponIds = new Map()
   const weaponCounts = {}
   let weaponsComplete = true
-  const weaponFields = [...WEAPON_FIELDS, ...Object.keys(WEAPON_EXTRAS)]
+  const weaponFields = [...WEAPON_FIELDS, ...Object.keys(WEAPON_EXTRAS), 'source']
   for (const type of WEAPON_TYPES) {
     const file = `data/weapons/${type}.json`
     const list = load(`weapons/${type}.json`, 'array')
@@ -389,6 +406,7 @@ export function validateData({ dataDir = join(ROOT, 'data'), publicDir = join(RO
       need(w, 'affinity', isInt, file, id, 'an integer')
       need(w, 'spSkill', v => v === null || isStr(v), file, id, 'null or a string')
       checkSkillRefs(w, 'weapons', file, id)
+      checkSource(w, file, id, 'ev_')
       checkRecordImage(w, 'weapons', file, id, idOk)
       for (const [key, [types, ok]] of Object.entries(WEAPON_EXTRAS)) {
         const expected = types.includes(type)
@@ -400,6 +418,47 @@ export function validateData({ dataDir = join(ROOT, 'data'), publicDir = join(RO
         if (!ok(w[key])) error('FIELD_INVALID', file, id, `"${key}" has an invalid shape: ${show(w[key])}`)
       }
     })
+  }
+
+  // ── monsters.json (monster names, crests and which gear belongs to whom) ──
+  const MONSTER_DATA_FILE = 'data/monsters.json'
+  const monsterData = load('monsters.json', 'object')
+  const monsterStats = { monsters: 0, armorSets: 0, weapons: 0 }
+  if (monsterData) {
+    checkKeys(monsterData, ['monsters', 'armorSets', 'weapons'], MONSTER_DATA_FILE, null)
+    const monsterIds = new Set()
+    if (need(monsterData, 'monsters', Array.isArray, MONSTER_DATA_FILE, null, 'an array')) {
+      monsterData.monsters.forEach((m, i) => {
+        const id = label(m, i)
+        if (!isObj(m)) return error('RECORD_SHAPE', MONSTER_DATA_FILE, id, `record must be an object, got ${typeName(m)}`)
+        monsterStats.monsters++
+        checkKeys(m, MONSTER_FIELDS, MONSTER_DATA_FILE, id)
+        if (need(m, 'id', v => isStr(v) && /^[a-z0-9]+$/.test(v), MONSTER_DATA_FILE, id, 'a lowercase alphanumeric string')) {
+          if (monsterIds.has(m.id)) error('ID_DUPLICATE', MONSTER_DATA_FILE, id, 'duplicate monster id')
+          monsterIds.add(m.id)
+        }
+        need(m, 'name', isText, MONSTER_DATA_FILE, id, 'a non-empty string')
+        if (need(m, 'nameEn', isStr, MONSTER_DATA_FILE, id, 'a string') && !isText(m.nameEn)) warn('NAME_EN_EMPTY', MONSTER_DATA_FILE, id, 'nameEn is empty')
+        need(m, 'aliases', v => Array.isArray(v) && v.every(isText), MONSTER_DATA_FILE, id, 'an array of non-empty strings')
+        if (need(m, 'icon', isStr, MONSTER_DATA_FILE, id, 'a string') && isStr(m.id)) {
+          const expected = `/images/monster-crests/${m.id}.webp`
+          if (m.icon !== expected) error('IMAGE_PATH', MONSTER_DATA_FILE, id, `icon is ${show(m.icon)}, expected "${expected}"`)
+          else {
+            const problem = checkImage(expected)
+            if (problem === 'missing') error('IMAGE_MISSING', MONSTER_DATA_FILE, id, `public${expected} does not exist`)
+            else if (problem) error('IMAGE_INVALID', MONSTER_DATA_FILE, id, `public${expected} ${problem}`)
+          }
+        }
+      })
+    }
+    for (const [key, owners, complete, what] of [['armorSets', sets, armorComplete, 'armor set prefix'], ['weapons', weaponIds, weaponsComplete, 'weapon id']]) {
+      if (!need(monsterData, key, isObj, MONSTER_DATA_FILE, key, 'an object')) continue
+      for (const [ref, monster] of Object.entries(monsterData[key])) {
+        monsterStats[key]++
+        if (!monsterIds.has(monster)) error('MONSTER_REF_UNKNOWN', MONSTER_DATA_FILE, `${key}.${ref}`, `monster ${show(monster)} is not in monsters`)
+        if (complete && !owners.has(ref)) warn('MONSTER_LINK_UNUSED', MONSTER_DATA_FILE, `${key}.${ref}`, `not a current ${what}`)
+      }
+    }
   }
 
   // ── driftstone-skills.json ──
@@ -519,6 +578,7 @@ export function validateData({ dataDir = join(ROOT, 'data'), publicDir = join(RO
     weapons: { total: sum(weaponCounts), types: weaponCounts },
     driftstones: stoneCounts,
     armorMonsters: monsters ? Object.keys(monsters).length : 0,
+    monsters: monsterStats,
     skillRefs: refStats,
     images: imageStats,
     errorsByCode: byCode(errors),

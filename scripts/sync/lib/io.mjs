@@ -1,4 +1,4 @@
-import { mkdirSync, readFileSync, writeFileSync } from 'node:fs'
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { dirname, join, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
@@ -34,6 +34,9 @@ export function loadData(dataDir = join(ROOT, 'data')) {
     skills: readJson(join(dataDir, 'skills.json')),
     driftstones: readJson(join(dataDir, 'driftstone-skills.json')),
     armorMonsters: readJson(join(dataDir, 'armor-monsters.json')),
+    monsters: existsSync(join(dataDir, 'monsters.json'))
+      ? readJson(join(dataDir, 'monsters.json'))
+      : { monsters: [], armorSets: {}, weapons: {} },
   }
 }
 

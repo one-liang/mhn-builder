@@ -11,6 +11,7 @@ import { getPartName } from '~/stores/equipment'
  */
 const buildStore = useBuildStore()
 const skillStore = useSkillStore()
+const colorOf = useSkillColor()
 
 const ARMOR_SLOTS: ArmorSlot[] = ['head', 'chest', 'arms', 'waist', 'legs']
 
@@ -70,10 +71,10 @@ function toggle(id: string) {
   <div>
     <div
       v-if="!entries.length"
-      class="px-4 py-10 text-center border border-dashed border-rule-strong rounded-md"
+      class="card px-6 py-10 text-center"
     >
-      <p class="text-[15px] font-bold">還沒有任何技能</p>
-      <p class="mt-1 text-[14px] text-ink-2">裝上武器或防具，技能等級會依序在這裡回火成形。</p>
+      <p class="text-[17px] font-bold">還沒有任何技能</p>
+      <p class="mt-1 text-[14px] text-ink-2">裝上武器或防具，技能等級會出現在這裡。</p>
     </div>
 
     <template v-else>
@@ -81,18 +82,18 @@ function toggle(id: string) {
       <TransitionGroup
         tag="ul"
         name="ledger"
-        class="relative bg-panel border border-rule rounded-md divide-y divide-rule overflow-hidden"
+        class="relative card divide-y divide-rule overflow-hidden"
       >
         <li v-for="entry in entries" :key="entry.id">
           <button
             type="button"
-            class="w-full grid grid-cols-[minmax(0,1fr)_minmax(6.5rem,auto)_3.25rem_1rem] items-center gap-x-2.5 pl-4 pr-3 min-h-[52px] py-2 text-left transition-colors duration-150 hover:bg-inset"
+            class="w-full grid grid-cols-[minmax(0,1fr)_auto_3.5rem_1rem] items-center gap-x-3 px-4 min-h-[60px] py-2.5 text-left hover:bg-inset"
             :aria-expanded="open.has(entry.id)"
             :aria-controls="`src-${entry.id}`"
             @click="toggle(entry.id)"
           >
             <span class="min-w-0">
-              <span class="block text-[15px] font-medium leading-snug">{{ entry.name }}</span>
+              <span class="block text-[15px] font-bold leading-snug">{{ entry.name }}</span>
               <span v-if="entry.overflow" class="block text-[12px] font-bold text-danger leading-tight">
                 超出上限 {{ entry.total - entry.max }} 級
               </span>
@@ -100,17 +101,18 @@ function toggle(id: string) {
             <TemperBar
               :total="entry.total"
               :max="entry.max"
+              :color="colorOf(entry.id)"
               :heat-on-mount="!!initialIds && !initialIds.has(entry.id)"
               :label="`${entry.name} 等級 ${entry.total}，上限 ${entry.max}`"
             />
             <span class="stamp text-right leading-none whitespace-nowrap">
               <span class="text-[22px] font-extrabold" :class="entry.overflow ? 'text-danger' : ''">{{ entry.total }}</span>
-              <span class="text-[15px] font-semibold text-ink-2">/{{ entry.max }}</span>
+              <span class="text-[14px] font-semibold text-ink-2">/{{ entry.max }}</span>
             </span>
             <ChevronDown
               :size="16"
-              :stroke-width="2"
-              class="text-ink-3 transition-transform duration-200"
+              :stroke-width="2.25"
+              class="text-ink-3 chevron"
               :class="open.has(entry.id) ? 'rotate-180' : ''"
               aria-hidden="true"
             />
@@ -118,7 +120,7 @@ function toggle(id: string) {
           <ul
             v-show="open.has(entry.id)"
             :id="`src-${entry.id}`"
-            class="pl-4 pr-4 pb-3 -mt-0.5 grid gap-1 text-[13px]"
+            class="px-4 pb-3 -mt-0.5 grid gap-1 text-[13px]"
           >
             <li
               v-for="(src, i) in sources.get(entry.id) ?? []"
@@ -139,18 +141,21 @@ function toggle(id: string) {
 <style scoped>
 .ledger-enter-active,
 .ledger-leave-active {
-  transition: opacity 280ms var(--ease-out-quint), transform 280ms var(--ease-out-quint);
+  transition: opacity 280ms var(--ease-out-quint), transform 360ms var(--ease-spring);
 }
 .ledger-enter-from,
 .ledger-leave-to {
   opacity: 0;
-  transform: translateX(-8px);
+  transform: translateY(-6px) scale(0.98);
 }
 .ledger-move {
-  transition: transform 280ms var(--ease-out-quint);
+  transition: transform 360ms var(--ease-spring);
 }
 .ledger-leave-active {
   position: absolute;
   inset-inline: 0;
+}
+.chevron {
+  transition: transform 260ms var(--ease-spring);
 }
 </style>

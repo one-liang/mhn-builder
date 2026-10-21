@@ -4,6 +4,8 @@ import type { Armor, Weapon } from '~/stores/equipment'
 import { useEquipmentStore, getPartName } from '~/stores/equipment'
 import { useSkillStore } from '~/stores/skill'
 import { useBuildStore, type BuildSlot } from '~/stores/build'
+import { monsterOfArmor, monsterOfWeapon, monsterTermsOf } from '~/lib/monsters'
+import { searchList } from '~/lib/search'
 
 type SelectableItem = Weapon | Armor
 
@@ -92,15 +94,20 @@ const items = computed<SelectableItem[]>(() => {
   return equipmentStore.getArmorByPart(activeArmorSlot.value as Armor['part'])
 })
 
-const filteredItems = computed(() => {
-  const q = search.value.trim().toLowerCase()
-  if (!q) return items.value
-  return items.value.filter((item) => {
-    const name = item.name.toLowerCase()
-    const nameEn = (item.nameEn || '').toLowerCase()
-    return name.includes(q) || nameEn.includes(q)
-  })
-})
+function monsterOf(item: SelectableItem) {
+  return isWeaponSlot.value ? monsterOfWeapon(item.id) : monsterOfArmor(item.id)
+}
+
+const filteredItems = computed(() =>
+  searchList(items.value, search.value, item => ({
+    primary: item.name,
+    others: [
+      item.nameEn,
+      ...('setName' in item ? [item.setName, item.setNameEn] : []),
+      ...monsterTermsOf(monsterOf(item)),
+    ],
+  }))
+)
 
 function itemSkills(item: SelectableItem): { id: string; name: string; level: number }[] {
   return item.skills.map((s) => ({
@@ -134,15 +141,16 @@ function onClear() {
     @update:open="emit('update:open', $event)"
   >
     <template #controls>
-      <div class="px-4 pt-3 pb-1">
+      <div class="px-5 pb-2">
         <SearchField
           v-model="search"
           :label="`搜尋${slotLabel}`"
-          :placeholder="`搜尋${slotLabel}名稱`"
+          :placeholder="`搜尋${slotLabel}或魔物名稱`"
           autofocus
         />
       </div>
       <FilterTabs
+        in-sheet
         v-if="isWeaponSlot"
         v-model="activeWeaponType"
         :items="WEAPON_TYPES"
@@ -153,6 +161,7 @@ function onClear() {
         </template>
       </FilterTabs>
       <FilterTabs
+        in-sheet
         v-else
         v-model="activeArmorSlot"
         :items="ARMOR_SLOTS"
@@ -168,12 +177,12 @@ function onClear() {
       <li v-for="item in filteredItems" :key="item.id">
         <button
           type="button"
-          class="w-full flex items-center gap-3 px-4 py-2.5 min-h-[68px] text-left transition-colors duration-150 hover:bg-inset"
+          class="w-full flex items-center gap-3.5 px-5 py-3 min-h-[76px] text-left hover:bg-inset"
           :class="current?.id === item.id ? 'bg-inset' : ''"
           :aria-current="current?.id === item.id ? 'true' : undefined"
           @click="onSelect(item)"
         >
-          <span class="plate flex items-center justify-center size-12 flex-shrink-0 overflow-hidden">
+          <span class="relative plate flex items-center justify-center size-12 flex-shrink-0">
             <img
               :src="imageUrl(item.image)"
               :alt="item.name"
@@ -183,9 +192,18 @@ function onClear() {
               loading="lazy"
               @error="($event.target as HTMLImageElement).style.visibility = 'hidden'"
             />
+            <img
+              v-if="monsterOf(item)"
+              :src="imageUrl(monsterOf(item)!.icon)"
+              :alt="monsterOf(item)!.name"
+              width="22"
+              height="22"
+              class="absolute -right-1 -bottom-1 size-6 rounded-full bg-ground ring-2 ring-ground object-contain p-px"
+              loading="lazy"
+            />
           </span>
           <span class="flex-1 min-w-0">
-            <span class="block text-[15px] font-bold leading-snug truncate">{{ item.name }}</span>
+            <span class="block text-[16px] font-bold leading-snug truncate">{{ item.name }}</span>
             <span class="flex flex-wrap gap-x-3 gap-y-0.5 mt-0.5 text-[13px] text-ink-2">
               <SkillBadge v-for="s in itemSkills(item)" :key="s.id" :name="s.name" :level="s.level" />
               <span
@@ -208,14 +226,14 @@ function onClear() {
     </ul>
 
     <p v-if="!filteredItems.length" class="px-4 py-12 text-center text-[14px] text-ink-2">
-      <template v-if="search.trim()">找不到名稱含「{{ search.trim() }}」的{{ slotLabel }}</template>
+      <template v-if="search.trim()">找不到符合「{{ search.trim() }}」的{{ slotLabel }}</template>
       <template v-else>這個分類目前沒有{{ slotLabel }}資料</template>
     </p>
 
     <template v-if="current" #footer>
       <button
         type="button"
-        class="w-full h-11 rounded-sm border border-rule-strong text-[14px] font-bold text-ink hover:bg-inset transition-colors duration-200"
+        class="btn btn-secondary w-full"
         @click="onClear"
       >
         卸下目前的{{ slotLabel }}

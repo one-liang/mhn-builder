@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { Sparkle } from 'lucide-vue-next'
 import { useSkillStore } from '~/stores/skill'
+import { searchList } from '~/lib/search'
 import driftstoneData from '../../data/driftstone-skills.json'
 
 const props = defineProps<{
@@ -61,13 +62,7 @@ const filteredSkills = computed(() => {
     }
   }
 
-  const q = search.value.trim().toLowerCase()
-  if (q) {
-    list = list.filter(s =>
-      s.name.toLowerCase().includes(q) || (s.nameEn ?? '').toLowerCase().includes(q)
-    )
-  }
-  return list
+  return searchList(list, search.value, s => ({ primary: s.name, others: [s.nameEn] }))
 })
 
 function close() {
@@ -92,10 +87,10 @@ function onClear() {
     @update:open="emit('update:open', $event)"
   >
     <template #controls>
-      <div class="px-4 pt-3 pb-1">
+      <div class="px-5 pb-2">
         <SearchField v-model="search" label="搜尋漂流石技能" placeholder="搜尋技能名稱" autofocus />
       </div>
-      <FilterTabs v-model="activeStone" :items="STONE_FILTERS" label="漂流石種類">
+      <FilterTabs in-sheet v-model="activeStone" :items="STONE_FILTERS" label="漂流石種類">
         <template #icon="{ item }">
           <StoneSwatch v-if="item.id !== 'all'" :stone="item.id" />
         </template>
@@ -109,14 +104,14 @@ function onClear() {
         v-for="skill in filteredSkills"
         :key="skill.id"
         type="button"
-        class="flex items-center justify-between gap-2 min-h-12 px-3 py-2 rounded-sm border text-left text-[14px] leading-snug transition-colors duration-150"
+        class="pick flex items-center justify-between gap-2 min-h-12 px-4 py-2 rounded-[14px] text-left text-[14px] leading-snug"
         :class="currentSkillId === skill.id
-          ? 'bg-shell text-shell-ink border-shell font-bold'
-          : 'bg-panel border-rule hover:border-ink-2'"
+          ? 'bg-shell text-shell-ink font-bold'
+          : 'bg-panel hover:bg-inset'"
         :aria-pressed="currentSkillId === skill.id"
         @click="onSelect(skill.id)"
       >
-        <span class="min-w-0">{{ skill.name }}</span>
+        <span class="min-w-0 flex items-center gap-2"><SkillDot :skill-id="skill.id" :size="8" />{{ skill.name }}</span>
         <Sparkle
           v-if="primeSkillIds.has(skill.id)"
           :size="14"
@@ -135,7 +130,7 @@ function onClear() {
     <template v-if="currentSkillId" #footer>
       <button
         type="button"
-        class="w-full h-11 rounded-sm border border-rule-strong text-[14px] font-bold text-ink hover:bg-inset transition-colors duration-200"
+        class="btn btn-secondary w-full"
         @click="onClear"
       >
         清空這個漂流石槽
@@ -143,3 +138,12 @@ function onClear() {
     </template>
   </SheetDialog>
 </template>
+
+<style scoped>
+.pick {
+  transition: transform 160ms var(--ease-out-quint);
+}
+.pick:active {
+  transform: scale(0.95);
+}
+</style>

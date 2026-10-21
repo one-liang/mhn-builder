@@ -6,6 +6,11 @@ interface ArmorSkill {
   level: number
 }
 
+interface WeaponSkill extends ArmorSkill {
+  /** The skill only appears once the weapon reaches this custom enhancement level. */
+  requiredCustomEnhancementLevel?: number
+}
+
 export interface Armor {
   id: string
   name: string
@@ -17,6 +22,8 @@ export interface Armor {
   skills: ArmorSkill[]
   driftstoneSlots: number
   image: string
+  /** "manual": hand-entered event gear from scripts/sync/config/extra-gear.json, not official data. */
+  source?: 'manual'
 }
 
 interface WeaponElement {
@@ -58,7 +65,7 @@ export interface Weapon {
   element: WeaponElement | null
   affinity: number
   spSkill: string | null
-  skills: ArmorSkill[]
+  skills: WeaponSkill[]
   image: string
   ammo?: WeaponAmmo[]
   chargingShots?: string[]
@@ -67,11 +74,13 @@ export interface Weapon {
   shellingType?: WeaponPhial | null
   melodies?: WeaponMelody[]
   kinsect?: WeaponKinsect | null
+  /** "manual": hand-entered event gear from scripts/sync/config/extra-gear.json, not official data. */
+  source?: 'manual'
 }
 
 type ArmorPart = 'head' | 'chest' | 'arms' | 'waist' | 'legs'
 
-const WEAPON_TYPES = [
+export const WEAPON_TYPES = [
   'great-sword',
   'long-sword',
   'sword-and-shield',

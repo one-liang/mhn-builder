@@ -5,7 +5,8 @@
  *   node scripts/sync/index.mjs [--dry-run] [--report FILE] [--cache-dir DIR] [--concurrency N]
  *                               [--allow-shrink] [--skip-images]
  *
- * Flow: skills (assigns ids for new skill kinds) -> armor + weapons in parallel -> cross-checks
+ * Flow: skills (assigns ids for new skill kinds) -> armor + weapons in parallel -> monsters
+ * (from the armor/weapon islands) -> cross-checks
  * -> download new images -> validate the result in a temp copy of data/ -> write data/ and
  * config/id-maps.json -> Markdown report. Any failure before the write step leaves data/ untouched.
  */
@@ -14,6 +15,8 @@ import { tmpdir } from 'node:os'
 import { dirname, join, relative, resolve } from 'node:path'
 import { validateData } from '../validate-data.mjs'
 import { syncArmor } from './armor.mjs'
+import { loadExtraGear } from './lib/extra-gear.mjs'
+import { syncMonsters } from './monsters.mjs'
 import { createHttp } from './lib/http.mjs'
 import { ROOT, formatJson, jsonEqual, loadData, readJson } from './lib/io.mjs'
 import { buildReport, consoleSummary } from './lib/report.mjs'
@@ -102,7 +105,7 @@ function writeAtomic(abs, content) {
 
 /** Cross-checks that need every dataset (each module also guards its own input). */
 function crossCheck(results, { allowShrink }) {
-  const [first, ...rest] = results
+  const [first, ...rest] = results.filter(r => r.officialSkills)
   const ref = JSON.stringify(canonical(first.officialSkills))
   for (const r of rest) {
     if (JSON.stringify(canonical(r.officialSkills)) !== ref) {
@@ -187,6 +190,7 @@ async function run(opts, state) {
     maps,
     skillIds: createSkillIdResolver(maps),
     overrides,
+    extraGear: loadExtraGear(),
     log,
     options: { allowShrink: opts.allowShrink },
   }
@@ -194,7 +198,8 @@ async function run(opts, state) {
   log(`同步官方資料${opts.dryRun ? '（dry-run）' : ''}${opts.cacheDir ? `，快取：${opts.cacheDir}` : ''}`)
   const skills = await syncSkills(ctx)
   const [armor, weapons] = await Promise.all([syncArmor(ctx), syncWeapons(ctx)])
-  const results = [skills, armor, weapons]
+  const monsters = syncMonsters({ current, armor: armor.monsterInput, weapons: weapons.monsterInput, log })
+  const results = [skills, armor, weapons, monsters]
   crossCheck(results, opts)
 
   const files = results.flatMap(r => r.files.map(f => ({ ...f, path: safePath(f.path, 'data/', r.name) })))

@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { useEquipmentStore, getWeaponTypeName } from '~/stores/equipment'
 import { useSkillStore } from '~/stores/skill'
+import { monsterOfWeapon, monstersOfWeapons, monsterTermsOf } from '~/lib/monsters'
+import { searchList } from '~/lib/search'
 
 const route = useRoute()
 const type = route.params.type as string
@@ -15,9 +17,35 @@ useSeoMeta({
 
 const equipmentStore = useEquipmentStore()
 const skillStore = useSkillStore()
+const { imageUrl } = useImageUrl()
 await Promise.all([equipmentStore.load(), skillStore.load()])
 
-const weapons = computed(() => equipmentStore.getWeaponsByType(type))
+const allOfType = computed(() => equipmentStore.getWeaponsByType(type))
+const search = useQuerySearch()
+const monsterFilter = useQuerySearch('monster')
+
+// Monsters that have a weapon of this type, for the crest filter strip
+const monsters = computed(() => monstersOfWeapons(allOfType.value.map(w => w.id)))
+
+const weapons = computed(() => {
+  const list = monsterFilter.value
+    ? allOfType.value.filter(w => monsterOfWeapon(w.id)?.id === monsterFilter.value)
+    : allOfType.value
+  return searchList(list, search.value, w => ({
+    primary: w.name,
+    others: [w.nameEn, ...monsterTermsOf(monsterOfWeapon(w.id))],
+  }))
+})
+
+function toggleMonster(id: string) {
+  monsterFilter.value = monsterFilter.value === id ? '' : id
+}
+
+// On phones the strip scrolls sideways: bring a preselected crest (from a link) into view
+const strip = ref<HTMLElement | null>(null)
+watch(monsterFilter, () => {
+  strip.value?.querySelector('[aria-pressed="true"]')?.scrollIntoView({ inline: 'center', block: 'nearest' })
+}, { flush: 'post' })
 
 const elementNames: Record<string, string> = {
   fire: '火', water: '水', thunder: '雷', ice: '冰', dragon: '龍',
@@ -37,30 +65,64 @@ function resolveSkillName(skillId: string) {
 </script>
 
 <template>
-  <div class="max-w-3xl mx-auto md:px-6 pb-8">
+  <div class="max-w-3xl mx-auto md:px-6 pb-10">
     <PageHead :title="typeName" back-to="/weapons" back-label="所有武器">
-      共 <span class="stamp text-[15px] font-bold text-ink">{{ weapons.length }}</span> 把
+      共 <span class="stamp font-bold text-ink">{{ allOfType.length }}</span> 把<template v-if="weapons.length !== allOfType.length">，顯示 <span class="stamp font-bold text-ink">{{ weapons.length }}</span> 把</template>
       <template #aside>
-        <span class="flex items-center justify-center size-12 rounded-md bg-shell text-shell-ink flex-shrink-0">
+        <span class="flex items-center justify-center size-14 rounded-full bg-shell text-shell-ink flex-shrink-0">
           <WeaponTypeIcon :type="type" class="size-7" aria-hidden="true" />
         </span>
       </template>
     </PageHead>
 
-    <ul class="bg-panel border-y md:border md:rounded-md border-rule divide-y divide-rule">
+    <div class="sticky top-14 md:top-16 z-20 bg-ground px-4 md:px-0 pb-3">
+      <SearchField v-model="search" :label="`搜尋${typeName}`" placeholder="搜尋武器或魔物，例如「銀火」" />
+    </div>
+    <div class="pb-4">
+      <div ref="strip" class="strip flex gap-1 overflow-x-auto px-4 md:px-0 md:flex-wrap md:overflow-visible" role="group" aria-label="依魔物篩選">
+        <button
+          v-for="m in monsters"
+          :key="m.id"
+          type="button"
+          class="crest flex-shrink-0 flex flex-col items-center gap-1 w-16 pt-1.5 pb-1 rounded-[16px]"
+          :class="monsterFilter === m.id ? 'bg-inset ring-2 ring-ink ring-inset' : 'hover:bg-inset'"
+          :aria-pressed="monsterFilter === m.id"
+          @click="toggleMonster(m.id)"
+        >
+          <img :src="imageUrl(m.icon)" alt="" width="36" height="36" class="size-9 object-contain" loading="lazy" />
+          <span class="w-full truncate text-center text-[11px] leading-tight" :class="monsterFilter === m.id ? 'font-bold text-ink' : 'text-ink-2'">{{ m.name }}</span>
+        </button>
+      </div>
+    </div>
+
+    <ul v-if="weapons.length" class="card mx-4 md:mx-0 overflow-hidden divide-y divide-rule">
       <li v-for="weapon in weapons" :key="weapon.id">
         <EquipmentCard
           :id="weapon.id"
           :name="weapon.name"
+          :unofficial="weapon.source === 'manual'"
           :skills="weapon.skills.map(s => ({ ...s, name: resolveSkillName(s.skillId) }))"
           :image="weapon.image"
           :weapon-type="type"
           :to="`/weapons/${type}/${weapon.id}`"
           :stats="statsFor(weapon)"
+          :monster-icon="monsterOfWeapon(weapon.id)?.icon"
+          :monster-name="monsterOfWeapon(weapon.id)?.name"
         />
       </li>
     </ul>
 
-    <p v-if="!weapons.length" class="px-4 py-12 text-center text-[14px] text-ink-2">這個武器類型目前沒有資料</p>
+    <p v-else class="card mx-4 md:mx-0 px-4 py-12 text-center text-[14px] text-ink-2">
+      {{ allOfType.length ? '找不到符合條件的武器' : '這個武器類型目前沒有資料' }}
+    </p>
   </div>
 </template>
+
+<style scoped>
+.crest {
+  transition: transform 180ms var(--ease-out-quint);
+}
+.crest:active {
+  transform: scale(0.94);
+}
+</style>
