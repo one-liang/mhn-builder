@@ -85,7 +85,7 @@ Pure TypeScript (no Vue/Pinia). Strategy: K=8 greedy filter per armor slot and f
 
 ### Visual system
 
-`DESIGN.md` (with `.impeccable/design.json`) is the source of truth: black/white field kit, one black pill per screen, Noto Sans TC 900 headings, Inter numerals (`.stamp`), skill category colours only on level pips/dots (`lib/skillColors.ts`, `data/skill-colors.json` for per-skill overrides), motion on transform/opacity only (motion-v springs, View Transitions). Shared pieces: `.btn` / `.btn-primary` / `.btn-secondary` / `.card` in `assets/css/tailwind.css`, `SheetDialog`, `AppToast` + `useToast()`, `FilterTabs`, `SegmentedControl`, `TemperBar` (level pips).
+`DESIGN.md` (with `.impeccable/design.json`) is the source of truth: black/white field kit, one black pill per screen, Noto Sans TC 900 headings, Inter numerals (`.stamp`), skill category colours only on level pips/dots (`lib/skillColors.ts`, `data/skill-colors.json` for per-skill overrides), motion on transform/opacity only (motion-v springs, View Transitions). Shared pieces: `.btn` / `.btn-primary` / `.btn-secondary` / `.card` in `assets/css/tailwind.css`, `SheetDialog`, `AppToast` + `useToast()`, `FilterTabs`, `ScrollStrip` (every sideways-scrolling row: wheel + edge arrows for mouse users), `SegmentedControl`, `TemperBar` (level pips).
 
 ### Data Schema
 

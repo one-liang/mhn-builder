@@ -249,7 +249,10 @@ const enhancementNotes = computed(() => {
         </div>
         <fieldset v-else class="min-w-0">
           <legend class="text-[15px] font-bold">武器類型</legend>
-          <div class="strip -mx-4 px-4 mt-2 flex gap-2 overflow-x-auto md:mx-0 md:px-0 md:grid md:grid-cols-7 md:overflow-visible">
+          <ScrollStrip
+            class="-mx-4 px-4 mt-2 flex gap-2 overflow-x-auto md:mx-0 md:px-0 md:grid md:grid-cols-7 md:overflow-visible"
+            :active="autoBuildStore.weaponType"
+          >
             <button
               v-for="wt in weaponTypes"
               :key="wt.type"
@@ -264,7 +267,7 @@ const enhancementNotes = computed(() => {
               <WeaponTypeIcon :type="wt.type" class="size-6" aria-hidden="true" />
               {{ wt.name }}
             </button>
-          </div>
+          </ScrollStrip>
         </fieldset>
 
         <div class="flex items-center justify-between gap-4">
