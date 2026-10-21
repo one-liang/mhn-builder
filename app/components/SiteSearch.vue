@@ -89,7 +89,7 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
     <template v-else>
       <section v-if="monsters.length" aria-labelledby="ss-monsters" class="pt-3">
         <h3 id="ss-monsters" class="px-4 pb-2 text-[13px] font-bold text-ink-2">魔物</h3>
-        <ul class="strip flex gap-2 overflow-x-auto px-4 pb-1">
+        <ScrollStrip tag="ul" class="flex gap-2 overflow-x-auto px-4 pb-1">
           <li v-for="m in monsters" :key="m.id" class="flex-shrink-0">
             <button
               type="button"
@@ -100,7 +100,7 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
               <span class="w-full truncate text-center text-[12px] font-bold">{{ m.name }}</span>
             </button>
           </li>
-        </ul>
+        </ScrollStrip>
       </section>
 
       <section v-if="weapons.length" aria-labelledby="ss-weapons" class="pt-3">
