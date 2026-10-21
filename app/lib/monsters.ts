@@ -3,6 +3,7 @@
  * (synced from the official site; `aliases` is hand-maintained there).
  */
 import monsterData from '../../data/monsters.json'
+import armorSetIcons from '../../data/armor-monsters.json'
 import type { MonsterTerms } from './search'
 
 export interface Monster extends MonsterTerms {
@@ -57,4 +58,22 @@ export function countByMonster<T>(items: T[], monsterOf: (item: T) => Monster | 
     if (m) counts[m.id] = (counts[m.id] ?? 0) + 1
   }
   return counts
+}
+
+export interface GearBadge {
+  icon: string
+  /** The monster's name; absent for a material set's icon */
+  name?: string
+}
+
+const SET_ICONS: Record<string, string> = armorSetIcons
+
+/** Corner badge for a piece of gear: its monster's crest, else (armor) its set icon. */
+export function gearBadge(item: { id: string }, kind: 'weapon' | 'armor'): GearBadge | null {
+  const monster = kind === 'weapon' ? monsterOfWeapon(item.id) : monsterOfArmor(item.id)
+  if (monster) return { icon: monster.icon, name: monster.name }
+  if (kind === 'weapon') return null
+  const part = ARMOR_PARTS.find(p => item.id.endsWith(`-${p}`))
+  const key = SET_ICONS[part ? item.id.slice(0, -(part.length + 1)) : item.id]
+  return key ? { icon: `/images/monsters/${key}.webp` } : null
 }
