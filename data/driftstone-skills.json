@@ -458,11 +458,28 @@
       "skillIds": [
         "follow-up"
       ]
+    },
+    {
+      "id": "artillery-prime",
+      "name": "漂流純石【砲術】",
+      "prime": true,
+      "skillIds": [
+        "artillery"
+      ]
+    },
+    {
+      "id": "buildup-boost-prime",
+      "name": "漂流純石【累積狀態異常時威力UP】",
+      "prime": true,
+      "skillIds": [
+        "status-hit-boost"
+      ]
     }
   ],
   "achievableSkillIds": [
     "aggressive-dodger",
     "artful-dodger",
+    "artillery",
     "attack-boost",
     "battle-temper",
     "blast-attack",
@@ -529,6 +546,7 @@
     "special-boost",
     "special-insurance",
     "special-partbreaker",
+    "status-hit-boost",
     "status-sneak-attack",
     "thunder-attack",
     "thunder-resistance",

@@ -240,6 +240,11 @@
       {
         "skillId": "partbreaker",
         "level": 1
+      },
+      {
+        "skillId": "part-breaker-secret",
+        "level": 1,
+        "requiredCustomEnhancementLevel": 10
       }
     ],
     "image": "/images/weapons/black_diablos_hammer.webp"
