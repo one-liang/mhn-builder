@@ -141,7 +141,8 @@
     "sp_overdrive": "sp-overdrive",
     "guard_sp_charge": "guard-sp-charge",
     "counter_attack_sp_charge": "counter-attack-sp-charge",
-    "charge_stock": "charge-stock"
+    "charge_stock": "charge-stock",
+    "part_breaker_secret": "part-breaker-secret"
   },
   "armorSetPrefix": {
     "ore": "leather",

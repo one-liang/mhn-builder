@@ -3432,5 +3432,23 @@
         "effect": "除了Lv1的效果外，透過蓄力攻擊造成的傷害增加25%"
       }
     ]
+  },
+  {
+    "id": "part-breaker-secret",
+    "name": "破壞王．境地",
+    "nameEn": "Advanced Partbreaker",
+    "description": "發動Lv5或以上的技能「破壞王」時，攻擊可破壞的部位時，累積傷害+20～40%",
+    "maxLevel": 2,
+    "category": "attack",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "發動Lv5或以上的技能「破壞王」時，攻擊可破壞的部位時，累積傷害+20%"
+      },
+      {
+        "level": 2,
+        "effect": "發動Lv5或以上的技能「破壞王」時，攻擊可破壞的部位時，累積傷害+40%"
+      }
+    ]
   }
 ]
