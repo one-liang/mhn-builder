@@ -1449,5 +1449,30 @@
     ],
     "driftstoneSlots": 1,
     "image": "/images/armor/aurora-somnacanth-waist.webp"
+  },
+  {
+    "id": "amatsu-waist",
+    "name": "荒天【帶】",
+    "nameEn": "Tempest Obi",
+    "setName": "荒天",
+    "setNameEn": "Tempest",
+    "part": "waist",
+    "defense": 197,
+    "skills": [
+      {
+        "skillId": "amatsu-conversion",
+        "level": 1
+      },
+      {
+        "skillId": "latent-power-secret",
+        "level": 1
+      },
+      {
+        "skillId": "latent-power",
+        "level": 2
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": "/images/armor/amatsu-waist.webp"
   }
 ]

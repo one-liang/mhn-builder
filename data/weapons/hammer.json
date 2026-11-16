@@ -240,6 +240,11 @@
       {
         "skillId": "partbreaker",
         "level": 1
+      },
+      {
+        "skillId": "part-breaker-secret",
+        "level": 1,
+        "requiredCustomEnhancementLevel": 10
       }
     ],
     "image": "/images/weapons/black_diablos_hammer.webp"
@@ -727,7 +732,7 @@
     "name": "隱密破擊者",
     "nameEn": "Hidden Breaker",
     "type": "hammer",
-    "attack": 2082,
+    "attack": 2186,
     "element": null,
     "affinity": 40,
     "spSkill": "【SP】迴轉攻擊 Lv3",
@@ -1025,5 +1030,29 @@
       }
     ],
     "image": "/images/weapons/brachydios_hammer.webp"
+  },
+  {
+    "id": "amatsu_hammer",
+    "name": "凶鏡【妖雲】",
+    "nameEn": "Incubus Hammer",
+    "type": "hammer",
+    "attack": 2200,
+    "element": {
+      "type": "water",
+      "value": 1380
+    },
+    "affinity": -20,
+    "spSkill": "【SP】迴轉攻擊 Lv3",
+    "skills": [
+      {
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
+      {
+        "skillId": "amatsu-storm-edge",
+        "level": 1
+      }
+    ],
+    "image": "/images/weapons/amatsu_hammer.webp"
   }
 ]

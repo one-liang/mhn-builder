@@ -1258,7 +1258,7 @@
     "name": "隱密音調",
     "nameEn": "Hidden Harmonic",
     "type": "hunting-horn",
-    "attack": 2082,
+    "attack": 2186,
     "element": null,
     "affinity": 40,
     "spSkill": "【SP】三音演奏 Lv3",
@@ -1696,6 +1696,44 @@
       {
         "name": "風壓耐性",
         "description": "在一定時間內，不會受到風壓【小】的影響並擁有對風壓【大】的耐性"
+      },
+      {
+        "name": "攻擊力UP【大】",
+        "description": "在一段時間內，大幅提升攻擊力"
+      }
+    ]
+  },
+  {
+    "id": "amatsu_huntinghorn",
+    "name": "凶琴【秋嵐】",
+    "nameEn": "Autumn Lute",
+    "type": "hunting-horn",
+    "attack": 2200,
+    "element": {
+      "type": "water",
+      "value": 1380
+    },
+    "affinity": -20,
+    "spSkill": "【SP】三音演奏 Lv3",
+    "skills": [
+      {
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
+      {
+        "skillId": "amatsu-storm-edge",
+        "level": 1
+      }
+    ],
+    "image": "/images/weapons/amatsu_huntinghorn.webp",
+    "melodies": [
+      {
+        "name": "防禦力UP",
+        "description": "在一段時間內，大幅提升防禦力"
+      },
+      {
+        "name": "SP計量表加速【大】",
+        "description": "在一段時間內，SP計量表的累積量大幅提升"
       },
       {
         "name": "攻擊力UP【大】",

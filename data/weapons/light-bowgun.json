@@ -1383,7 +1383,7 @@
     "name": "隱密輕弩",
     "nameEn": "Hidden Bullet",
     "type": "light-bowgun",
-    "attack": 2082,
+    "attack": 2186,
     "element": null,
     "affinity": 40,
     "spSkill": "【SP】反擊龍彈 Lv3",
@@ -1917,6 +1917,44 @@
         "capacity": 4,
         "recoil": "大",
         "reload": "稍微慢"
+      }
+    ]
+  },
+  {
+    "id": "amatsu_lightbowgun",
+    "name": "凶針【水禍】",
+    "nameEn": "Wicked Needle",
+    "type": "light-bowgun",
+    "attack": 2200,
+    "element": {
+      "type": "water",
+      "value": 1380
+    },
+    "affinity": -20,
+    "spSkill": "【SP】反擊龍彈 Lv3",
+    "skills": [
+      {
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
+      {
+        "skillId": "amatsu-storm-edge",
+        "level": 1
+      }
+    ],
+    "image": "/images/weapons/amatsu_lightbowgun.webp",
+    "ammo": [
+      {
+        "name": "貫通水冷彈",
+        "capacity": 4,
+        "recoil": "大",
+        "reload": "普通"
+      },
+      {
+        "name": "斬裂水冷彈",
+        "capacity": 3,
+        "recoil": "特大",
+        "reload": "普通"
       }
     ]
   }

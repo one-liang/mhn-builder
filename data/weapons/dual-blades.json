@@ -187,6 +187,11 @@
       {
         "skillId": "partbreaker",
         "level": 1
+      },
+      {
+        "skillId": "part-breaker-secret",
+        "level": 1,
+        "requiredCustomEnhancementLevel": 10
       }
     ],
     "image": "/images/weapons/black_diablos_dualblades.webp"
@@ -745,7 +750,7 @@
     "name": "隱密直柄斧",
     "nameEn": "Hidden Tomahawk",
     "type": "dual-blades",
-    "attack": 2082,
+    "attack": 2186,
     "element": null,
     "affinity": 40,
     "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
@@ -1043,5 +1048,29 @@
       }
     ],
     "image": "/images/weapons/brachydios_dualblades.webp"
+  },
+  {
+    "id": "amatsu_dualblades",
+    "name": "凶扇【黑風白雨】",
+    "nameEn": "Stormwind Fans",
+    "type": "dual-blades",
+    "attack": 2200,
+    "element": {
+      "type": "water",
+      "value": 1380
+    },
+    "affinity": -20,
+    "spSkill": "【SP】空中迴轉亂舞．天 Lv3",
+    "skills": [
+      {
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
+      {
+        "skillId": "amatsu-storm-edge",
+        "level": 1
+      }
+    ],
+    "image": "/images/weapons/amatsu_dualblades.webp"
   }
 ]

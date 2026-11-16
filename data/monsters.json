@@ -482,6 +482,13 @@
       "nameEn": "Brachydios",
       "aliases": [],
       "icon": "/images/monster-crests/brachydios.webp"
+    },
+    {
+      "id": "amatsu",
+      "name": "嵐龍",
+      "nameEn": "Amatsu",
+      "aliases": [],
+      "icon": "/images/monster-crests/amatsu.webp"
     }
   ],
   "armorSets": {
@@ -553,7 +560,8 @@
     "stygian-zinogre": "stygianzinogre",
     "velkhana": "velkhana",
     "brachydios": "brachydios",
-    "aurora-somnacanth": "aurorasomnacanth"
+    "aurora-somnacanth": "aurorasomnacanth",
+    "amatsu": "amatsu"
   },
   "weapons": {
     "greatjagras_swordshield": "greatjagras",
@@ -1248,6 +1256,20 @@
     "seregios_bow": "seregios",
     "shogunceanataur_bow": "shogunceanataur",
     "velkhana_bow": "velkhana",
-    "brachydios_bow": "brachydios"
+    "brachydios_bow": "brachydios",
+    "amatsu_swordshield": "amatsu",
+    "amatsu_dualblades": "amatsu",
+    "amatsu_greatsword": "amatsu",
+    "amatsu_longsword": "amatsu",
+    "amatsu_hammer": "amatsu",
+    "amatsu_huntinghorn": "amatsu",
+    "amatsu_lance": "amatsu",
+    "amatsu_gunlance": "amatsu",
+    "amatsu_switchaxe": "amatsu",
+    "amatsu_chargeblade": "amatsu",
+    "amatsu_insectglaive": "amatsu",
+    "amatsu_lightbowgun": "amatsu",
+    "amatsu_heavybowgun": "amatsu",
+    "amatsu_bow": "amatsu"
   }
 }

@@ -3432,5 +3432,77 @@
         "effect": "除了Lv1的效果外，透過蓄力攻擊造成的傷害增加25%"
       }
     ]
+  },
+  {
+    "id": "amatsu-storm-edge",
+    "name": "嵐龍的嵐渦刃",
+    "nameEn": "Amatsu Stormblade",
+    "description": "在SP技能最先命中位置做出多次切斷傷害",
+    "maxLevel": 1,
+    "category": "attack",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "在SP技能最先命中位置做出多次切斷傷害"
+      }
+    ]
+  },
+  {
+    "id": "latent-power-secret",
+    "name": "力量解放．境界",
+    "nameEn": "Advanced Latent Power",
+    "description": "技能「力量解放」達Lv5或以上時，效果會變得容易發動",
+    "maxLevel": 2,
+    "category": "attack",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "技能「力量解放」達Lv5或以上時，效果會變得容易發動"
+      },
+      {
+        "level": 2,
+        "effect": "技能「力量解放」達Lv5或以上時，效果會變得更容易發動"
+      }
+    ]
+  },
+  {
+    "id": "part-breaker-secret",
+    "name": "破壞王．境地",
+    "nameEn": "Advanced Partbreaker",
+    "description": "發動Lv5或以上的技能「破壞王」時，攻擊可破壞的部位時，累積傷害+20～40%",
+    "maxLevel": 2,
+    "category": "attack",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "發動Lv5或以上的技能「破壞王」時，攻擊可破壞的部位時，累積傷害+20%"
+      },
+      {
+        "level": 2,
+        "effect": "發動Lv5或以上的技能「破壞王」時，攻擊可破壞的部位時，累積傷害+40%"
+      }
+    ]
+  },
+  {
+    "id": "amatsu-conversion",
+    "name": "嵐龍的驟天",
+    "nameEn": "Amatsu Squall",
+    "description": "增加武器屬性攻擊力，幅度為武器攻擊力的10～35%",
+    "maxLevel": 3,
+    "category": "element",
+    "levels": [
+      {
+        "level": 1,
+        "effect": "增加武器屬性攻擊力，幅度為武器攻擊力的10%"
+      },
+      {
+        "level": 2,
+        "effect": "增加武器屬性攻擊力，幅度為武器攻擊力的20%"
+      },
+      {
+        "level": 3,
+        "effect": "增加武器屬性攻擊力，幅度為武器攻擊力的35%"
+      }
+    ]
   }
 ]

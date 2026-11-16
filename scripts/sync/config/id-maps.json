@@ -141,7 +141,11 @@
     "sp_overdrive": "sp-overdrive",
     "guard_sp_charge": "guard-sp-charge",
     "counter_attack_sp_charge": "counter-attack-sp-charge",
-    "charge_stock": "charge-stock"
+    "charge_stock": "charge-stock",
+    "amatsu_storm_edge": "amatsu-storm-edge",
+    "latent_power_secret": "latent-power-secret",
+    "part_breaker_secret": "part-breaker-secret",
+    "amatsu_conversion": "amatsu-conversion"
   },
   "armorSetPrefix": {
     "ore": "leather",
@@ -214,7 +218,8 @@
     "stygian_zinogre": "stygian-zinogre",
     "velkhana": "velkhana",
     "brachydios": "brachydios",
-    "aurora_somnacanth": "aurora-somnacanth"
+    "aurora_somnacanth": "aurora-somnacanth",
+    "amatsu": "amatsu"
   },
   "excludedSkillKinds": [
     "carnival_2024"
