@@ -761,7 +761,7 @@
     "name": "隱密銳劍",
     "nameEn": "Hidden Edge",
     "type": "sword-and-shield",
-    "attack": 2082,
+    "attack": 2186,
     "element": null,
     "affinity": 40,
     "spSkill": "【SP】精準突擊連擊 Lv3",
@@ -1043,5 +1043,29 @@
       }
     ],
     "image": "/images/weapons/brachydios_swordshield.webp"
+  },
+  {
+    "id": "amatsu_swordshield",
+    "name": "凶寶【翠嵐】",
+    "nameEn": "Ominous Treasure",
+    "type": "sword-and-shield",
+    "attack": 2200,
+    "element": {
+      "type": "water",
+      "value": 1380
+    },
+    "affinity": -20,
+    "spSkill": "【SP】精準突擊連擊 Lv3",
+    "skills": [
+      {
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
+      {
+        "skillId": "amatsu-storm-edge",
+        "level": 1
+      }
+    ],
+    "image": "/images/weapons/amatsu_swordshield.webp"
   }
 ]

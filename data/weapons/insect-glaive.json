@@ -358,6 +358,11 @@
       {
         "skillId": "partbreaker",
         "level": 1
+      },
+      {
+        "skillId": "part-breaker-secret",
+        "level": 1,
+        "requiredCustomEnhancementLevel": 10
       }
     ],
     "image": "/images/weapons/black_diablos_insectglaive.webp",
@@ -1441,6 +1446,37 @@
       "performanceType": "力量",
       "attackSystem": "打擊",
       "bonus": "全力共鬥攻擊"
+    }
+  },
+  {
+    "id": "amatsu_insectglaive",
+    "name": "凶輪【雲霓】",
+    "nameEn": "Stratus Arc",
+    "type": "insect-glaive",
+    "attack": 2200,
+    "element": {
+      "type": "water",
+      "value": 1380
+    },
+    "affinity": -20,
+    "spSkill": "【SP】急襲突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
+      {
+        "skillId": "amatsu-storm-edge",
+        "level": 1
+      }
+    ],
+    "image": "/images/weapons/amatsu_insectglaive.webp",
+    "kinsect": {
+      "name": "西納托紅楓蟲",
+      "type": "飛翔型",
+      "performanceType": "力量",
+      "attackSystem": "切斷",
+      "bonus": "制空"
     }
   }
 ]

@@ -412,6 +412,11 @@
       {
         "skillId": "partbreaker",
         "level": 1
+      },
+      {
+        "skillId": "part-breaker-secret",
+        "level": 1,
+        "requiredCustomEnhancementLevel": 10
       }
     ],
     "image": "/images/weapons/black_diablos_bow.webp",
@@ -1007,7 +1012,7 @@
     "name": "隱密長弓",
     "nameEn": "Hidden Bow",
     "type": "bow",
-    "attack": 2082,
+    "attack": 2186,
     "element": null,
     "affinity": 40,
     "spSkill": "【SP】龍之箭 Lv3",
@@ -1414,5 +1419,36 @@
       "連射箭 lv4"
     ],
     "bottleType": "爆破瓶"
+  },
+  {
+    "id": "amatsu_bow",
+    "name": "凶弓【小夜嵐】",
+    "nameEn": "Tempest Nightbow",
+    "type": "bow",
+    "attack": 2200,
+    "element": {
+      "type": "water",
+      "value": 1380
+    },
+    "affinity": -20,
+    "spSkill": "【SP】龍之箭 Lv3",
+    "skills": [
+      {
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
+      {
+        "skillId": "amatsu-storm-edge",
+        "level": 1
+      }
+    ],
+    "image": "/images/weapons/amatsu_bow.webp",
+    "chargingShots": [
+      "連射箭 lv1",
+      "貫通箭 lv2",
+      "貫通箭 lv4",
+      "連射箭 lv4"
+    ],
+    "bottleType": "無"
   }
 ]

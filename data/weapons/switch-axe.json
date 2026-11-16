@@ -360,6 +360,11 @@
       {
         "skillId": "partbreaker",
         "level": 1
+      },
+      {
+        "skillId": "part-breaker-secret",
+        "level": 1,
+        "requiredCustomEnhancementLevel": 10
       }
     ],
     "image": "/images/weapons/black_diablos_switchaxe.webp",
@@ -983,7 +988,7 @@
     "name": "隱密戰斧",
     "nameEn": "Hidden Axe",
     "type": "switch-axe",
-    "attack": 2082,
+    "attack": 2186,
     "element": null,
     "affinity": 40,
     "spSkill": "【SP】零距離解放突刺 Lv3",
@@ -1293,6 +1298,34 @@
       }
     ],
     "image": "/images/weapons/brachydios_switchaxe.webp",
+    "phial": {
+      "name": "強擊瓶",
+      "description": "劍模式時的攻擊力上升"
+    }
+  },
+  {
+    "id": "amatsu_switchaxe",
+    "name": "凶劍斧【白雨】",
+    "nameEn": "Cloudburst Axe",
+    "type": "switch-axe",
+    "attack": 2200,
+    "element": {
+      "type": "water",
+      "value": 1380
+    },
+    "affinity": -20,
+    "spSkill": "【SP】零距離解放突刺 Lv3",
+    "skills": [
+      {
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
+      {
+        "skillId": "amatsu-storm-edge",
+        "level": 1
+      }
+    ],
+    "image": "/images/weapons/amatsu_switchaxe.webp",
     "phial": {
       "name": "強擊瓶",
       "description": "劍模式時的攻擊力上升"

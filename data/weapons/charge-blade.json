@@ -274,6 +274,11 @@
       {
         "skillId": "partbreaker",
         "level": 1
+      },
+      {
+        "skillId": "part-breaker-secret",
+        "level": 1,
+        "requiredCustomEnhancementLevel": 10
       }
     ],
     "image": "/images/weapons/black_diablos_chargeblade.webp",
@@ -848,7 +853,7 @@
     "name": "隱密守護者",
     "nameEn": "Hidden Guardian",
     "type": "charge-blade",
-    "attack": 2082,
+    "attack": 2186,
     "element": null,
     "affinity": 40,
     "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
@@ -1227,6 +1232,34 @@
       }
     ],
     "image": "/images/weapons/brachydios_chargeblade.webp",
+    "phial": {
+      "name": "榴彈瓶",
+      "description": "於擊中位置引發帶有昏厥效果的爆炸"
+    }
+  },
+  {
+    "id": "amatsu_chargeblade",
+    "name": "凶華【朧雲】",
+    "nameEn": "Altostratus Blade",
+    "type": "charge-blade",
+    "attack": 2200,
+    "element": {
+      "type": "water",
+      "value": 1380
+    },
+    "affinity": -20,
+    "spSkill": "【SP】超高輸出屬性解放斬 Lv3",
+    "skills": [
+      {
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
+      {
+        "skillId": "amatsu-storm-edge",
+        "level": 1
+      }
+    ],
+    "image": "/images/weapons/amatsu_chargeblade.webp",
     "phial": {
       "name": "榴彈瓶",
       "description": "於擊中位置引發帶有昏厥效果的爆炸"

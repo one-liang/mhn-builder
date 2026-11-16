@@ -1445,5 +1445,30 @@
     ],
     "driftstoneSlots": 1,
     "image": "/images/armor/aurora-somnacanth-legs.webp"
+  },
+  {
+    "id": "amatsu-legs",
+    "name": "荒天【下裳】",
+    "nameEn": "Tempest Hakama",
+    "setName": "荒天",
+    "setNameEn": "Tempest",
+    "part": "legs",
+    "defense": 197,
+    "skills": [
+      {
+        "skillId": "amatsu-conversion",
+        "level": 1
+      },
+      {
+        "skillId": "latent-power-secret",
+        "level": 1
+      },
+      {
+        "skillId": "hi-water",
+        "level": 2
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": "/images/armor/amatsu-legs.webp"
   }
 ]

@@ -1437,5 +1437,34 @@
     ],
     "driftstoneSlots": 1,
     "image": "/images/armor/aurora-somnacanth-arms.webp"
+  },
+  {
+    "id": "amatsu-arms",
+    "name": "荒天【袖】",
+    "nameEn": "Tempest Sleeves",
+    "setName": "荒天",
+    "setNameEn": "Tempest",
+    "part": "arms",
+    "defense": 197,
+    "skills": [
+      {
+        "skillId": "amatsu-conversion",
+        "level": 1
+      },
+      {
+        "skillId": "latent-power-secret",
+        "level": 1
+      },
+      {
+        "skillId": "lock-on",
+        "level": 1
+      },
+      {
+        "skillId": "attack-activation",
+        "level": 1
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": "/images/armor/amatsu-arms.webp"
   }
 ]

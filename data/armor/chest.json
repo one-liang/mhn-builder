@@ -1437,5 +1437,26 @@
     ],
     "driftstoneSlots": 1,
     "image": "/images/armor/aurora-somnacanth-chest.webp"
+  },
+  {
+    "id": "amatsu-chest",
+    "name": "荒天【衣】",
+    "nameEn": "Tempest Robe",
+    "setName": "荒天",
+    "setNameEn": "Tempest",
+    "part": "chest",
+    "defense": 197,
+    "skills": [
+      {
+        "skillId": "amatsu-conversion",
+        "level": 1
+      },
+      {
+        "skillId": "maximum-might",
+        "level": 2
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": "/images/armor/amatsu-chest.webp"
   }
 ]

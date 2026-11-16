@@ -731,7 +731,7 @@
     "name": "隱密配劍",
     "nameEn": "Hidden Saber",
     "type": "long-sword",
-    "attack": 2082,
+    "attack": 2186,
     "element": null,
     "affinity": 40,
     "spSkill": "【SP】氣刃兜割 Lv3",
@@ -1070,5 +1070,29 @@
       }
     ],
     "image": "/images/weapons/brachydios_longsword.webp"
+  },
+  {
+    "id": "amatsu_longsword",
+    "name": "凶刀【催花雨】",
+    "nameEn": "Ominous Spring",
+    "type": "long-sword",
+    "attack": 2200,
+    "element": {
+      "type": "water",
+      "value": 1380
+    },
+    "affinity": -20,
+    "spSkill": "【SP】氣刃兜割 Lv3",
+    "skills": [
+      {
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
+      {
+        "skillId": "amatsu-storm-edge",
+        "level": 1
+      }
+    ],
+    "image": "/images/weapons/amatsu_longsword.webp"
   }
 ]

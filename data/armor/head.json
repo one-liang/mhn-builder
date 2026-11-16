@@ -1449,5 +1449,30 @@
     ],
     "driftstoneSlots": 1,
     "image": "/images/armor/aurora-somnacanth-head.webp"
+  },
+  {
+    "id": "amatsu-head",
+    "name": "荒天【冠】",
+    "nameEn": "Tempest Crown",
+    "setName": "荒天",
+    "setNameEn": "Tempest",
+    "part": "head",
+    "defense": 197,
+    "skills": [
+      {
+        "skillId": "amatsu-conversion",
+        "level": 1
+      },
+      {
+        "skillId": "latent-power-secret",
+        "level": 1
+      },
+      {
+        "skillId": "sp-undercurrent",
+        "level": 2
+      }
+    ],
+    "driftstoneSlots": 1,
+    "image": "/images/armor/amatsu-head.webp"
   }
 ]

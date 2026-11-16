@@ -751,7 +751,7 @@
     "name": "隱密鉤斬劍",
     "nameEn": "Hidden Blade",
     "type": "great-sword",
-    "attack": 2082,
+    "attack": 2186,
     "element": null,
     "affinity": 40,
     "spSkill": "【SP】真‧蓄力斬 Lv3",
@@ -1069,5 +1069,29 @@
       }
     ],
     "image": "/images/weapons/brachydios_greatsword.webp"
+  },
+  {
+    "id": "amatsu_greatsword",
+    "name": "凶劍【叢雲】",
+    "nameEn": "Roilcloud Sword",
+    "type": "great-sword",
+    "attack": 2200,
+    "element": {
+      "type": "water",
+      "value": 1380
+    },
+    "affinity": -20,
+    "spSkill": "【SP】真‧蓄力斬 Lv3",
+    "skills": [
+      {
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
+      {
+        "skillId": "amatsu-storm-edge",
+        "level": 1
+      }
+    ],
+    "image": "/images/weapons/amatsu_greatsword.webp"
   }
 ]

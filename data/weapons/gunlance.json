@@ -847,7 +847,7 @@
     "name": "隱密加農砲",
     "nameEn": "Hidden Cannon",
     "type": "gunlance",
-    "attack": 2082,
+    "attack": 2186,
     "element": null,
     "affinity": 40,
     "spSkill": "【SP】龍擊砲 Lv3",
@@ -1208,6 +1208,34 @@
     "shellingType": {
       "name": "通常型",
       "description": "裝填數多，全彈發射的威力高"
+    }
+  },
+  {
+    "id": "amatsu_gunlance",
+    "name": "凶銃槍【瑞雨】",
+    "nameEn": "Ominous Monsoon",
+    "type": "gunlance",
+    "attack": 2200,
+    "element": {
+      "type": "water",
+      "value": 1380
+    },
+    "affinity": -20,
+    "spSkill": "【SP】龍擊砲 Lv3",
+    "skills": [
+      {
+        "skillId": "elder-dragon-resonance",
+        "level": 1
+      },
+      {
+        "skillId": "amatsu-storm-edge",
+        "level": 1
+      }
+    ],
+    "image": "/images/weapons/amatsu_gunlance.webp",
+    "shellingType": {
+      "name": "放射型",
+      "description": "前方攻擊範圍廣，蓄力的威力高"
     }
   }
 ]
